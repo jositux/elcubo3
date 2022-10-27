@@ -1,0 +1,74 @@
+// ===========================================================================
+// *** Media query breakpoints
+// ===========================================================================
+
+// Currently a duplicate of BS4 package breakpoint variables.
+
+$screen-xs-min: 576px; // 480px !default;
+// Small screen / tablet
+$screen-sm-min: 768px !default;
+// Medium screen / desktop
+$screen-md-min: 992px !default;
+// Large screen / wide desktop
+$screen-lg-min: 1200px !default;
+// Widescreen
+$screen-xl-min: 1480px !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xxs-max: ($screen-xs-min - 1) !default;
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-md-max: ($screen-lg-min - 1) !default;
+$screen-lg-max: ($screen-xl-min - 1) !default;
+
+// ===========================================================================
+// *** Custom breakpoint mixins | JCU
+// ===========================================================================
+
+// Create breakpoint shortcuts, similar to BS4 utilities, but rebuilt without
+// SCSS maps to allow for older CSS implementation. Adds ability to generate
+// custom breakpoints.
+
+@mixin breakpoint-up($breakpoint-name) {
+  $breakpoint-min-width: 0;
+
+  // Mimic behavior of SCSS maps, due to older SCSS version.
+  @if $breakpoint-name == "xs" {
+    $breakpoint-min-width: $screen-xs-min;
+  } @else if $breakpoint-name == "sm" {
+    $breakpoint-min-width: $screen-sm-min;
+  } @else if $breakpoint-name == "md" {
+    $breakpoint-min-width: $screen-md-min;
+  } @else if $breakpoint-name == "lg" {
+    $breakpoint-min-width: $screen-lg-min;
+  } @else if $breakpoint-name == "xl" {
+    $breakpoint-min-width: $screen-xl-min;
+  } @else if type-of($breakpoint-name) == "number" {
+    $breakpoint-min-width: $breakpoint-name; // Can pass custom breakpoints (e.g.`560px`)
+  }
+
+  @media screen and (min-width: $breakpoint-min-width) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($breakpoint-name) {
+  $breakpoint-max-width: $screen-xxs-max;
+
+  // Mimic behavior of SCSS maps, due to older SCSS version.
+  @if $breakpoint-name == "xs" {
+    $breakpoint-max-width: $screen-xs-max;
+  } @else if $breakpoint-name == "sm" {
+    $breakpoint-max-width: $screen-sm-max;
+  } @else if $breakpoint-name == "md" {
+    $breakpoint-max-width: $screen-md-max;
+  } @else if $breakpoint-name == "lg" {
+    $breakpoint-max-width: $screen-lg-max;
+  } @else if type-of($breakpoint-name) == "number" {
+    $breakpoint-max-width: $breakpoint-name; // Can pass custom breakpoints (e.g.`560px`)
+  }
+
+  @media screen and (max-width: $breakpoint-max-width) {
+    @content;
+  }
+}

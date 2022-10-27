@@ -1,0 +1,94 @@
+.Card {
+  height: auto;
+  width: 100%;
+}
+
+.CardContent {
+  position: relative;
+  background-color: $cod-gray;
+  width: 175px;
+  height: 115px;
+  overflow: hidden;
+  border-radius: 10px;
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  img {
+    width: 100%;
+  }
+  span {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    bottom: 20px;
+  }
+  &:before {
+    background: linear-gradient(transparent 60%, rgba(0, 0, 0, 0.75));
+    content: '';
+    font-size: 0;
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+}
+
+.paragraph {
+  display: none;
+}
+
+.skeleton {
+  display: none; //block
+  background-color: $cod-gray;
+  height: 6px;
+  margin-bottom: 8px;
+  &:nth-child(2) {
+    width: 80%;
+  }
+  &:nth-child(3) {
+    width: 70%;
+  }
+  &:nth-child(4) {
+    width: 80%;
+  }
+  &:hover {
+    box-shadow: none;
+    cursor: auto;
+  }
+}
+
+.card_hover {
+  &:hover {
+    box-shadow: rgba(255, 255, 255, 0.5) 0px 8px 25px;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .Card {
+    .CardContent {
+      width: auto;
+      min-height: 100px;
+      height: auto;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+div.fullScreenVideo {  
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+}

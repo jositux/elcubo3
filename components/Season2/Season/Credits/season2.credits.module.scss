@@ -1,0 +1,113 @@
+.CreditsContent {
+  transition: max-height 1s ease; // note that we're transitioning max-height, not height!
+}
+
+.CreditsContent {
+  width: 100%;
+  div {
+    margin-bottom: 50px;
+  }
+  ul {
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    list-style-type: none;
+    li {
+      font-size: 14px;
+      margin-top: 10px;
+      a {
+        color: white;
+        font-size: 14px;
+        svg {
+          margin-left: 5px;
+        }
+      }
+      img {
+        display: block;
+        clear: both;
+        margin-top: 7px;
+      }
+    }
+  }
+}
+
+li.SoundCredits {
+  margin-top: 20px !important;
+}
+
+.CreditsContent {
+  @media only screen and (max-width: 480px) {
+    column-count: 1;
+  }
+  @media only screen and (min-width: 481px) and (max-width: 620px) {
+    column-count: 2;
+  }
+  @media only screen and (min-width: 621px) and (max-width: 1023px) {
+    column-count: 3;
+  }
+  @media only screen and (min-width: 1024px) {
+    column-count: 3;
+  }
+  column-gap: 50px;
+  div {
+    display: inline-block;
+  }
+}
+
+.ColumnFinal {
+  width: 100% !important;
+  margin-top: 20px;
+  text-align: center;
+  font-style: italic;
+}
+
+.Credits {
+  max-width: 1113px;
+  margin: auto;
+  margin-top: 160px;
+  margin-bottom: 160px;
+  background: url(/images/season2/line-credits.svg) no-repeat top center;
+  @media (max-width: 1113px) {
+    padding: 0 30px;
+  }
+  @media (max-width: 768px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  div.ToggleTrigger {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    float: left;
+    font-size: 20px;
+    height: 68px;
+    padding-top: 15px;
+    position: relative;
+    z-index: 1;
+    span {
+      margin-top: 5px;
+    }
+  }
+  h2 {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  em {
+    color: #949494;
+    font-size: 13px;
+  }
+}
+
+.CreditsMinticTitle {
+  font-family: 'Dosis';
+  line-height: 1.2em;
+  font-size: 15px;
+  font-weight: 400;
+  float: left;
+  margin-top: 40px;
+}
+
+.CreditsMinticImg {
+  width: 240px;
+}

@@ -1,0 +1,17 @@
+.iMessage {
+  font-size: 30px;
+  font-weight: normal;
+  position: absolute;
+  z-index: 1;
+  width: 600px;
+  text-align: center;
+  left: 50%;
+  top: 45%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.back-to-season {
+  font-style: italic;
+}
+/*# sourceMappingURL=lineal.module.css.map */

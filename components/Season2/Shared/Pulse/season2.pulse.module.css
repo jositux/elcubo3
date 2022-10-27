@@ -1,0 +1,118 @@
+/* Pulse */
+.coverSelector {
+  position: absolute;
+  z-index: 100;
+  width: 130px;
+  margin-left: -65px;
+}
+
+.coverPulse {
+  position: absolute;
+  left: 60px;
+  z-index: 10;
+}
+
+.coverSelector:hover .pulseText {
+  color: white;
+}
+
+.pulseText {
+  position: absolute;
+  color: #9cf5ff;
+  margin-top: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+.pulse {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 22px;
+  background: #9cf5ff;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 0 #9cf5ff;
+  box-shadow: 0 0 0 #9cf5ff;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
+}
+
+.coverPulse {
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.coverPulse:hover,
+.coverPulse.selected {
+  /*animation: none;*/
+  /*animation: pulse-white 1s infinite;*/
+  /* IE 9 */
+  -webkit-transform: scale(2);
+  /* Safari 3-8 */
+  transform: scale(2);
+}
+
+.coverPulse:hover .pulse,
+.coverPulse.selected .pulse {
+  -webkit-animation: pulse-white 1s infinite;
+  animation: pulse-white 1s infinite;
+  background: white;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(156, 245, 255, 0.4);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(156, 245, 255, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(156, 245, 255, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(156, 245, 255, 0.4);
+    box-shadow: 0 0 0 0 rgba(156, 245, 255, 0.4);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 80px rgba(156, 245, 255, 0);
+    box-shadow: 0 0 0 80px rgba(156, 245, 255, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(156, 245, 255, 0);
+    box-shadow: 0 0 0 0 rgba(156, 245, 255, 0);
+  }
+}
+
+@-webkit-keyframes pulse-white {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes pulse-white {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 80px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 80px rgba(255, 255, 255, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+/*# sourceMappingURL=season2.pulse.module.css.map */

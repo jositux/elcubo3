@@ -1,0 +1,95 @@
+.homePageHeader {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1277px;
+  margin: 20px auto;
+  font-family: $elcubo2_font;
+  color: $white;
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
+  -moz-animation: fadeIn ease 5s;
+  -o-animation: fadeIn ease 5s;
+  -ms-animation: fadeIn ease 5s;
+  p {
+    margin-top: 10px;
+  }
+  @media (max-width: 1113px) {
+    margin: 0px auto;
+    width: 90%;
+    padding: 0 20px;
+  }
+  @media (max-width: 768px) {
+    p {
+      margin-top: 10px;
+    }
+  }
+}
+
+.backToSeason {
+  color: white;
+  font-style: italic;
+  text-decoration: unset;
+  img {
+    float: left;
+  }
+  span {
+    float: left;
+    opacity: 0;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  &:hover {
+    span {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,232 @@
+.new,
+.win {
+  display: none;
+}
+
+.intro-memory {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background: url(/images/season2/memory1.jpg) center no-repeat;
+  background-size: cover;
+  font-family: 'Playfair Display', serif;
+}
+
+.intro-memory.intro-858 {
+  background: url(/images/season2/memory2.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.content-intro {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, #000000 100%);
+  height: 100vh;
+  width: 100%;
+}
+
+.intro-buttons {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.game {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  background: url(/images/season2/memory1.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.game.game-858 {
+  background: url(/images/season2/memory2.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.game-inner {
+  background: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  div.game-row:nth-child(1) {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div.game-row:nth-child(2) {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media only screen and (max-width: 920px) {
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+  }
+  div.game-row:nth-child(3) {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+
+    
+      button:not(.button-negative) {
+        @media only screen and (max-width: 920px) {
+          position: relative;
+          z-index: 2;
+          margin-top: -180px;
+          background: black;
+        }
+      }
+   
+
+  }
+}
+
+.game-buttons {
+  width: 100%;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+}
+
+.grid-card {
+  position: relative;
+  z-index: 2;
+  &::after {
+    content: '';
+    position: absolute;
+    cursor: pointer;
+    background: url(/images/season2/memory-card-texture.jpg);
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(0) perspective(100px);
+    transition: 0.4s;
+    backface-visibility: hidden;
+  }
+}
+
+.cards {
+  display: grid;
+  gap: 12px;
+  max-width: 840px;
+  margin: auto;
+  grid-template-columns: repeat(4, 1fr);
+  @media only screen and (max-width: 920px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.grid-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  overflow: hidden;
+  object-position: center;
+  transform: rotateY(180deg) perspective(100px);
+  transition: 0.4s;
+  backface-visibility: hidden;
+}
+
+.grid-card-show {
+  &::after {
+    transform: rotateY(180deg) perspective(100px);
+  }
+  .grid-img {
+    transform: rotateY(0) perspective(100px);
+  }
+}
+
+.grid-card-finished {
+  opacity: 1;
+}
+
+.button-negative {
+  margin: auto;
+  margin-top: 10px;
+  background: url('/images/season2/arrow-button.svg') bottom right no-repeat transparent;
+  padding-right: 40px;
+  font-size: 18px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  border: 0;
+  color: white;
+  cursor: pointer;
+}
+
+.text-win {
+  font-size: 30px;
+  text-align: center;
+  font-weight: normal;
+  position: absolute;
+  z-index: 1;
+  width: 600px;
+  @media only screen and (max-width: 920px) {
+    font-size: 20px;
+    width: 400px;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn ease 1.5s;
+  -webkit-animation: fadeIn ease 1.5s;
+  -moz-animation: fadeIn ease 1.5s;
+  -o-animation: fadeIn ease 1.5s;
+  -ms-animation: fadeIn ease 1.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

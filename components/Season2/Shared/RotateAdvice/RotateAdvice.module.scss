@@ -1,0 +1,60 @@
+.containerAdvice {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 125;
+  text-align: center;
+  img.iconSmart {
+    width: 50%;
+    margin: auto;
+  }
+  p {
+    text-align: center;
+    font-size: 22px;
+    padding: 40px;
+  }
+}
+
+.backToSeason {
+  color: white;
+  font-style: italic;
+  text-decoration: unset;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  img {
+    float: left;
+  }
+  span {
+    float: left;
+    //opacity: 0;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  &:hover {
+    span {
+      opacity: 1;
+    }
+  }
+}
+
+@media only screen and (min-width: 1023px) {
+  .containerAdvice {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (orientation:landscape) {
+  .containerAdvice {
+    display: none;
+  }
+}

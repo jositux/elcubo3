@@ -1,0 +1,121 @@
+/* Pulse */
+
+.coverSelector {
+  position: absolute;
+  z-index: 100;
+  width: 130px;
+  margin-left: -65px;
+  // opacity: 0;
+
+  &:hover {
+    // opacity: 1;
+  }
+}
+
+.coverPulse {
+  position: absolute;
+  left: 60px;
+  z-index: 10;
+  @media only screen and (max-width: 960px) {
+    top: 20vh;
+   }
+}
+
+.coverSelector:hover .pulseText {
+  color: white;
+}
+
+.pulseText {
+  position: absolute;
+  color: #9cf5ff;
+  margin-top: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+.pulse {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 22px;
+  background: #9cf5ff;
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(156, 245, 255, 30);
+  animation: pulse 2s infinite;
+}
+
+.coverPulse {
+  transition: transform 0.2s;
+}
+
+.coverPulse:hover,
+.coverPulse.selected {
+  /*animation: none;*/
+  /*animation: pulse-white 1s infinite;*/
+  -ms-transform: scale(2);
+  /* IE 9 */
+  -webkit-transform: scale(2);
+  /* Safari 3-8 */
+  transform: scale(2);
+}
+
+.coverPulse:hover .pulse,
+.coverPulse.selected .pulse {
+  animation: pulse-white 1s infinite;
+  background: white;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(156, 245, 255, 0.4);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(156, 245, 255, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(156, 245, 255, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(156, 245, 255, 0.4);
+    box-shadow: 0 0 0 0 rgba(156, 245, 255, 0.4);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 80px rgba(156, 245, 255, 0);
+    box-shadow: 0 0 0 80px rgba(156, 245, 255, 0);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(156, 245, 255, 0);
+    box-shadow: 0 0 0 0 rgba(156, 245, 255, 0);
+  }
+}
+
+@-webkit-keyframes pulse-white {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes pulse-white {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 80px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 80px rgba(255, 255, 255, 0);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}

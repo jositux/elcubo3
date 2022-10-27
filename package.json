@@ -1,0 +1,47 @@
+{
+  "name": "el-cubo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "./node_modules/next/dist/bin/next dev -p 3005",
+    "build": "next build",
+    "start": "./node_modules/next/dist/bin/next start -p 3005"
+  },
+  "dependencies": {
+    "@ramonak/react-progress-bar": "^4.2.0",
+    "axios": "^0.21.1",
+    "custom-pointer-react": "^0.0.4",
+    "disable-scroll": "^0.6.0",
+    "hls.js": "^0.14.16",
+    "html-react-parser": "^1.4.8",
+    "js-cookie": "^2.2.1",
+    "next": "12.0.7",
+    "plyr": "3.6.4",
+    "plyr-react": "^3.2.1",
+    "prop-types": "^15.7.2",
+    "react": "17.0.2",
+    "react-circular-progressbar": "^2.0.4",
+    "react-cursor-spotlight": "^0.1.0",
+    "react-dom": "17.0.1",
+    "react-facebook": "^8.1.4",
+    "react-is": "^17.0.2",
+    "react-modal-video": "^1.2.8",
+    "react-redux": "^7.2.6",
+    "react-slick": "0.28.1",
+    "redux": "^4.1.2",
+    "sass": "^1.43.4",
+    "styled-components": "^5.2.1",
+    "swr": "^0.3.9",
+    "typewriter-effect": "^2.18.2",
+    "use-sound": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.7",
+    "@types/react": "^16.9.56",
+    "@types/styled-components": "^5.1.4",
+    "eslint": "^7.13.0",
+    "eslint-plugin-react": "^7.21.5",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.5"
+  }
+}

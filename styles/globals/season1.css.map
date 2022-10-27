@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAC;EACH,WAAW,EAAE,0BAA0B;CACxC",
+    "sources": [
+        "season1.scss"
+    ],
+    "names": [],
+    "file": "season1.css"
+}

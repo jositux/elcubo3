@@ -1,0 +1,87 @@
+.CursorSpotlight {
+  position: relative;
+  overflow: hidden;
+  &__view {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(circle, transparent 10px, rgba(0, 0, 0, 0.9) 260px);
+  }
+}
+
+.coverCountdown {
+  margin-top: 90px;
+  @media only screen and (max-width: 920px) {
+    margin-top: -10px;
+  }
+}
+
+.spotlight {
+  font-family: $elcubo2_font;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  @media only screen and (max-width: 920px) {
+    padding-top: 50px;
+  }
+  @media only screen and (min-width: 960px) {
+    background-image: radial-gradient(circle, transparent 10px, rgba(0, 0, 0, 0.9) 260px);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn ease 1.5s;
+  -webkit-animation: fadeIn ease 1.5s;
+  -moz-animation: fadeIn ease 1.5s;
+  -o-animation: fadeIn ease 1.5s;
+  -ms-animation: fadeIn ease 1.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,16 @@
+.ButtonTrivia {
+  width: 400px;
+  margin: 10px 0;
+  padding: 20px;
+  cursor: pointer;
+  color: white;
+  background: rgba(194, 194, 194, .1);
+  border: 0;
+  border-radius: 6px;
+  font-size: 22px;
+  font-family: $elcubo2_font;
+  &:hover {
+    background: white;
+    color: black;
+  }
+}

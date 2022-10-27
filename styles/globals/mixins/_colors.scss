@@ -1,0 +1,32 @@
+// ===========================================================================
+// *** Colors
+// ===========================================================================
+// As you add more colors here, create a new UI Kit color swatch.
+//
+// For color naming, use http://chir.ag/projects/name-that-color/
+// Binary
+$black: #000;
+$white: #fff;
+$red: #ff3a30;
+// El Cubo 2
+$elcubo2_bg: #030303;
+$cod-gray: #121212;
+$bg-video: #B8B8B8;
+
+// Next
+$next-blue: #0070f3;
+// Map for color utility classes. Add new colors below, using example format.
+$project-colors: ( '$black': $black, '$white': $white, '$next-blue': $next-blue, );
+// Generate all color utility classes: `.bg--[color-name]`
+@mixin create-color-bg-classes($project-colors) {
+  @each $color-name,
+  $hex-value in $project-colors {
+    // Create helper class
+    $new-color-name: str-slice($color-name, 2); // Remove first char: "$"
+    .bg--#{$new-color-name} {
+      background-color: $hex-value;
+    }
+  }
+}
+
+@include create-color-bg-classes($project-colors);

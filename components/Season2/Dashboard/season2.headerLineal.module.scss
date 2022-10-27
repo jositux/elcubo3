@@ -1,0 +1,33 @@
+.HeaderLinear {
+    background: url("/images/season2/bg-header-dashboard.png") top center no-repeat;
+    @media only screen and (max-width: 480px) {
+        background-position: top center;
+    }
+    section {
+        max-width: 810px;
+        margin: auto;
+        @media only screen and (max-width: 480px) {
+            text-align: center;
+        }
+        div {
+            padding: 40px;
+            p {
+                width: 270px;
+                color: white;
+                font-size: 15px;
+                margin-bottom: 35px;
+                @media only screen and (max-width: 480px) {
+                    font-size: 16px;
+                    width: 100%;
+                    text-align: left;
+                }
+            }
+            a {
+                @media only screen and (max-width: 480px) {
+                    font-size: 16px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,116 @@
+/* 01. CSS3 Ripple Loading Animation Effects */
+.coverSelector {
+  position: absolute;
+  z-index: 100;
+  margin-left: -150px;
+  margin-bottom: -150px;
+}
+
+.coverRibble {
+  position: relative;
+  z-index: 10;
+}
+
+.loading {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.loading .box {
+  width: 300px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.loading .box span {
+  opacity: 0.1;
+}
+
+.loading:hover span {
+  opacity: 1;
+  border: 1px solid orange !important;
+}
+
+.loading .box span:nth-child(1) {
+  position: absolute;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  -webkit-animation: animate 3s linear infinite;
+  animation: animate 3s linear infinite;
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+
+.loading .box span:nth-child(2) {
+  position: absolute;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  -webkit-animation: animate 3s linear infinite;
+  animation: animate 3s linear infinite;
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+.loading .box span:nth-child(3) {
+  position: absolute;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  -webkit-animation: animate 3s linear infinite;
+  animation: animate 3s linear infinite;
+  -webkit-animation-delay: -1.5s;
+  animation-delay: -1.5s;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    width: 400px;
+    height: 400px;
+    opacity: 0;
+  }
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    width: 400px;
+    height: 400px;
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=season2.ribble.module.css.map */

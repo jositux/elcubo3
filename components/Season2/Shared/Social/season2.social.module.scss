@@ -1,0 +1,53 @@
+.socialContainer {
+  position: relative;
+  button {
+    padding: 0;
+    background: transparent;
+    border: 0;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Dosis';
+    line-height: 2em;
+    cursor: pointer;
+    svg {
+      margin-right: 8px;
+    }
+  }
+}
+
+.contentFloatingButtons {
+  border: 1px solid #555;
+  background: #222;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 #000;
+  position: absolute;
+  display: none;
+  z-index: 99;
+  top: -50px;
+  left: 20px;
+  opacity: 1;
+  -webkit-transform: translateY(10px);
+  transform: translateY(10px);
+  transition: all .5s ease-in-out;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    white-space: nowrap;
+    line-height: 1em;
+    li {
+      display: inline-block;
+      margin: 0 !important;
+      line-height: 1em;
+      a {
+        line-height: 1em !important;
+        padding: 4px;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.activeButtons {
+  display: block !important;
+}

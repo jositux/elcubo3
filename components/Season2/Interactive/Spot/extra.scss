@@ -1,0 +1,66 @@
+/*@media only screen and (min-width: 960px) {
+    #id_356, //Yeso
+    #id_387, // Mesa hospital
+    #id_1431, // Gato celular
+    #id_1635, // Chica celular
+    #id_2997, // Aura cartera
+    #id_3460 // Lucia oficina Almanza
+    {
+        opacity: 0 !important;
+    }
+    #id_356:hover,
+    #id_387:hover,
+    #id_1431:hover,
+    #id_1635:hover,
+    #id_2997:hover,
+    #id_3460:hover
+    {
+        opacity: 1 !important;
+    }
+}*/
+
+
+@media only screen and (min-width: 960px) {
+    #id_356, // Yeso
+    #id_387, // Mesa hospital
+    #id_1431, // Celu el gato
+    #id_1635, // Celu la chica
+    #id_2997, // Cartera Aura
+    #id_2396, //vistima
+    #id_3460, // Lucia en oficina
+    #id_5280, // Carpeta Rugeles
+    #id_5042, // Regalo microfono
+    #id_5718,// Telefono almanza
+    #id_2136, // Mancha aceite
+    #id_6519 // Pantalla computador
+     {
+        opacity: 0 !important;
+    }
+    #id_356:hover, // Yeso
+    #id_387:hover, // Mesa hospital
+    #id_1431:hover, // Celu el gato
+    #id_1635:hover, // Celu la chica
+    #id_2997:hover, // Cartera Aura
+    #id_2396:hover, // vistima
+    #id_3460:hover, // Lucia en oficina
+    #id_5280:hover, // Carpeta Rugeles
+    #id_5042:hover, // Regalo microfono
+    #id_5718:hover, // Telefono almanza
+    #id_2136:hover, // Mancha aceite
+    #id_6519:hover // Pantalla computador
+     {
+        opacity: 1 !important;
+    }
+}
+
+// Hide controls on Interactive
+.hide-controls .plyr--video .plyr__controls,
+.hide-controls .plyr--video .plyr__extra_controls {
+    opacity: 0;
+}
+
+// Hide cursor
+/*
+* {
+    cursor: none !important;
+}*/

@@ -1,0 +1,58 @@
+.ButtonPrimary {
+  padding: 10px 30px;
+  clear: both;
+  color: white;
+  background: transparent;
+  text-decoration: none;
+  font-style: italic;
+  border: 1px solid white;
+  font-family: $elcubo2_font;
+  cursor: pointer;
+}
+
+.ButtonPrimary:hover {
+  box-shadow: rgba(255, 255, 255, 0.8) 0px 0px 25px;
+}
+
+.ButtonBig {
+  padding: 10px 50px 12px 50px;
+  background: transparent;
+  margin: 0 auto;
+  clear: both;
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  line-height: 1.2em;
+  font-style: italic;
+  border: 1px solid white;
+  font-family: $elcubo2_font;
+}
+
+.ButtonBig:hover {
+  box-shadow: rgba(255, 255, 255, 0.8) 0px 0px 25px;
+  cursor: pointer;
+}
+
+.Button {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  font-style: italic;
+  border: 0;
+  background: unset;
+  font-family: $elcubo2_font;
+}
+
+.LinkNormal {
+  background: transparent;
+  margin: 0 auto;
+  clear: both;
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  line-height: 1.2em;
+  font-style: italic;
+  font-family: $elcubo2_font;
+  text-align: center;
+  padding: 10px 50px 12px 50px;
+}

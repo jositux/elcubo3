@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import '../components/Season2/Interactive/Memory/styles.scss';
+@import '../components/Season2/Interactive/Spot/extra.scss';
+@import '../components/Season2/Shared/Modal/YoutubeModal.scss';
+:root {
+  /* Base font size */
+  /* Full grid area variable */
+  --fullGrid: 1 / 1 / -1 / -1;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  color: white;
+  overflow-x: hidden;
+}
+
+div.slick-slider {
+  button.slick-next {
+    z-index: 10;
+    right: 30px;
+  }
+  button.slick-prev {
+    z-index: 10;
+    left: 30px;
+  }
+}
+
+div.slick-list {
+  img {
+    cursor: pointer;
+  }
+  overflow: visible;
+  div.slick-track div.slick-slide.slick-active.slick-center.slick-current {
+    img {
+      transition: all 1s ease-out;
+      -ms-transform: scale(1.5);
+      transform: scale(1.5);
+    }
+  }
+}

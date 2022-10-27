@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACT,MAAM,EAAE,MAAM;EACd,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,CAAC;CACX;;AAED,AAAA,WAAW,AAAA,OAAO;AAClB,WAAW,AAAA,OAAO,CAAC;EACjB,KAAK,EAAE,IAAI;CACZ",
+    "sources": [
+        "season2.slider.module.scss"
+    ],
+    "names": [],
+    "file": "season2.slider.module.css"
+}

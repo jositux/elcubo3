@@ -1,0 +1,54 @@
+.Hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 0px);
+  padding: 1em;
+  box-sizing: border-box;
+  color: white;
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+  @media (max-width: 480px) and (orientation: portrait) {
+    height: calc(100vh - 160px);
+  }
+}
+
+.CharactersImg {
+  position: absolute;
+  left: 50%;
+  margin-left: -515px;
+  z-index: 1;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.HeroFooter {
+  display: flex;
+  margin-bottom: 30vh;
+  justify-content: center;
+  z-index: 1;
+  @media (max-width: 480px) and (orientation: portrait) {
+    margin-bottom: 15vh !important;
+  }
+  @media (max-width: 580px) {
+    margin-bottom: 45vh;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    li {
+      margin-bottom: 30px;
+    }
+  }
+  .ButtonArrow {
+    position: absolute;
+    margin-left: -80px;
+    @media (max-width: 580px) {
+      display: none;
+    }
+  }
+}
