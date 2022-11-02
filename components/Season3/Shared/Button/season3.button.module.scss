@@ -1,0 +1,22 @@
+.ButtonHome {
+  padding: 25px 30px 25px 30px;
+  background-color: #402A04;
+  margin: 0 auto;
+  clear: both;
+  color: white;
+  font-size: 35px;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 1.2em;
+  border: 1px solid #402A04;
+  font-family: $elcubo3_font_subtitle;
+  @include breakpoint-down('sm') {
+    font-size: 15px;
+    padding: 15px 20px 15px 20px;
+  }
+}
+
+.ButtonHome:hover {
+  box-shadow: rgba(255, 255, 255, 0.8) 0px 0px 25px;
+  cursor: pointer;
+}

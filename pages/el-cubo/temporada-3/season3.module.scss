@@ -1,0 +1,121 @@
+.homePageContainer {
+  padding-top: 80px;
+  color: $white;
+  width: 100%;
+  margin: auto;
+  @include breakpoint-down('sm') {
+    padding-top: 57px;
+  }
+}
+
+.SliderContainer {
+  position: relative;
+  height: auto;
+}
+
+.SliderImage {
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -1;
+}
+
+.textSlider1 {
+  position: absolute;
+  width: 135%;
+  height: 80%;
+  color: #3C2807;
+  top: 67rem;
+  right: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  h1 {
+    font-family: $elcubo3_font_title;
+    font-size: 60px;
+    line-height: 110%;
+    display: block;
+    width: 37%;
+    @include breakpoint-down('sm') {
+      display: none;
+    }
+    h2 {
+      font-family: $elcubo3_font_subtitle;
+      font-size: 40px !important;
+      line-height: 135%;
+      font-weight: initial;
+    }
+  }
+}
+
+.textSlider2 {
+  position: absolute;
+  width: 135%;
+  height: 80%;
+  color: #3C2807;
+  top: 140rem;
+  right: 64rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  h1 {
+    font-family: $elcubo3_font_title;
+    font-size: 60px;
+    line-height: 110%;
+    display: block;
+    width: 25%;
+    @include breakpoint-down('sm') {
+      display: none;
+    }
+    h2 {
+      font-family: $elcubo3_font_subtitle;
+      font-size: 40px !important;
+      line-height: 135%;
+      font-weight: initial;
+    }
+  }
+}
+
+.textSlider3 {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  color: #3C2807;
+  top: 215rem;
+  left: 58rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  h1 {
+    font-family: $elcubo3_font_title;
+    font-size: 60px;
+    line-height: 110%;
+    display: block;
+    width: 30%;
+    @include breakpoint-down('sm') {
+      display: none;
+    }
+    h2 {
+      font-family: $elcubo3_font_subtitle;
+      font-size: 40px !important;
+      line-height: 135%;
+      font-weight: initial;
+    }
+  }
+}
+
+
+.ButtonContainerBottom {
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  top: 327rem;
+  left: 46rem;
+  @include breakpoint-down('sm') {
+    top: 139rem;
+    left: 25%;
+  }
+  a {
+    background: #402A04;
+  }
+}
