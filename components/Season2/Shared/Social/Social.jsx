@@ -93,6 +93,36 @@ const Social = ({ season }) => {
         </div>
       }
 
+      {season === "3" &&
+        <div>
+          <button className="socialButton" onClick={ToggleClass}><Share />Compartir</button>
+          <div className={`${styles.contentFloatingButtons} ${isActive ? styles.activeButtons : ""}`} >
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.elcubo.rtvcplay.co/el-cubo/temporada-3" target="_blank" rel="noopener noreferrer">
+                  <Facebook />
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/intent/tweet?source=https://www.elcubo.rtvcplay.co/el-cubo/temporada-3&amp;text=Caminos de Jordán https://www.elcubo.rtvcplay.co/el-cubo/temporada-3" target="_blank" rel="noopener noreferrer">
+                  <Twitter />
+                </a>
+              </li>
+              <li>
+                <a href="whatsapp://send?text=Caminos de Jordán https://www.elcubo.rtvcplay.co/el-cubo/temporada-3">
+                  <Wsp />
+                </a>
+              </li>
+              <li>
+                <a href="mailto:?subject=Caminos de Jordan&amp;body=Andrés, un joven escritor es llamado a trabajar en la sección judicial del tabloide “El Inquisidor”. https://www.elcubo.rtvcplay.co/el-cubo/temporada-3">
+                  <Mail />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      }
+
     </div >
   );
 };
