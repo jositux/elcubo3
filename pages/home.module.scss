@@ -65,10 +65,12 @@
 
 .cardsContainer {
   display: grid;
-  max-width: 1200px;
+  //max-width: 1200px;
   margin: auto;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px;
+  padding-left: 4%;
+  padding-right: 4%;
   color: white;
   font-family: $elcubo2_font_home;
   .imageText {

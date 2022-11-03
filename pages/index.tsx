@@ -6,6 +6,7 @@ import Social from 'components/Season2/Shared/Social/Social';
 //import MyList from 'components/Season2/Shared/MyList/MyList';
 import YoutubeModal from 'components/Season2/Shared/Modal/YoutubeModal';
 import styles from './home.module.scss';
+import { RTVCGlobalStyles } from 'styles/rtvc.style';
 
 const Home = () => {
 
@@ -27,7 +28,7 @@ const Home = () => {
         <meta name="description" content="✅ El Cubo la única serie online interactiva, ⭐ entra ahora y sumérgete en las mejores historias tridimensionales de la televisión online gratuita" />
         <meta property="og:image" content="/images/season2/season2-teaser.jpg" />
       </Head>
-      <Header />
+      <RTVCGlobalStyles />
       <div className={styles.homePageContainer}>
         <div className={`${styles.homeLogo} ${styles.fadeIn}`}>
           <img className={styles.elcuboLogo} src="/images/logo2021.png" />
