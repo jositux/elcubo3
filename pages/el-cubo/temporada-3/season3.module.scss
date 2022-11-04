@@ -1,10 +1,9 @@
 .homePageContainer {
-  padding-top: 80px;
   color: $white;
   width: 100%;
   margin: auto;
   @include breakpoint-down('sm') {
-    padding-top: 57px;
+    padding-top: 0;
   }
 }
 
