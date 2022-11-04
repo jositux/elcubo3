@@ -1,0 +1,39 @@
+.LoginRegister {
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  margin-top: 10px;
+  @media (max-width: 768px) {
+    font-size: 11px;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: bold;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  em {
+    font-size: 18px;
+  }
+}
+
+.menuContainer {
+  display: flex;
+  position: relative;
+  top: 0;
+  left: 5%;
+}
+
+.separadorLoginRegister {
+  border-left: 1px solid white;
+  height: 30px;
+  margin: 7px 15px 0px 15px;
+  @include breakpoint-down('sm') {
+    height: 20px;
+    margin: 7px
+  }
+}

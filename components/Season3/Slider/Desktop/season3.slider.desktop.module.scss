@@ -1,14 +1,4 @@
-.homePageContainer {
-  padding-top: 80px;
-  color: $white;
-  width: 100%;
-  margin: auto;
-  @include breakpoint-down('sm') {
-    padding-top: 57px;
-  }
-}
-
-/* .SliderContainer {
+.SliderContainer {
   position: relative;
   height: auto;
 }
@@ -36,9 +26,6 @@
     line-height: 110%;
     display: block;
     width: 37%;
-    @include breakpoint-down('sm') {
-      display: none;
-    }
     h2 {
       font-family: $elcubo3_font_subtitle;
       font-size: 40px !important;
@@ -64,9 +51,6 @@
     line-height: 110%;
     display: block;
     width: 25%;
-    @include breakpoint-down('sm') {
-      display: none;
-    }
     h2 {
       font-family: $elcubo3_font_subtitle;
       font-size: 40px !important;
@@ -92,9 +76,6 @@
     line-height: 110%;
     display: block;
     width: 30%;
-    @include breakpoint-down('sm') {
-      display: none;
-    }
     h2 {
       font-family: $elcubo3_font_subtitle;
       font-size: 40px !important;
@@ -111,11 +92,7 @@
   position: relative;
   top: -23rem;
   left: 0;
-  @include breakpoint-down('sm') {
-    top: -85px;
-    left: 0;
-  }
   a {
     background: #402A04;
   }
-} */
+}

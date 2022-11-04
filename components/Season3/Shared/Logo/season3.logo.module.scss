@@ -1,0 +1,10 @@
+.elcuboLogo {
+  width: 55px;
+  height: 55px;
+  @include breakpoint-down('sm') {
+    width: 35px;
+    height: 35px;
+    margin-top: 2px;
+  }
+}
+

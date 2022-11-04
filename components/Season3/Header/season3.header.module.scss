@@ -1,0 +1,22 @@
+.logosContainer {
+  display: flex;
+}
+
+.separadorLogos {
+  border-left: 1px solid white;
+  height: 50px;
+  margin: 0px 15px;
+  @include breakpoint-down('sm') {
+    display: none;
+  }
+}
+
+.logoRTVCplay {
+  height: auto;
+  width: 190px;
+  @include breakpoint-down('sm') {
+    width: 95px;
+    margin-top: 3px;
+    margin-left: -5px;
+  }
+}
