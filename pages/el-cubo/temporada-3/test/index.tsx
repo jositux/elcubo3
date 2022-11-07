@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import VideoPlayer from 'components/Season2/VideoPlayer/VideoPlayer';
-import DashboardLinealModal from 'components/Season2/Shared/Modal/DashboardLinealModal';
+import VideoPlayer from 'components/Season3/VideoPlayer/VideoPlayer';
+import DashboardLinealModal from 'components/Season3/Modal/DashboardLinealModal';
 import UrlUtils from 'utils/Url';
 import styles from './lineal.module.scss'
 
@@ -83,6 +83,7 @@ const Lineal = () => {
                 showNextButton={false}
                 setPlayer={setPlayer}
                 fullscreen={true}
+                timeMarker={40}
                 //showDashboardLineal
                 //onClickDashboardLineal={handleOnClickDashboardLineal}
             />
