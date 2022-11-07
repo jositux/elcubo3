@@ -44,7 +44,7 @@ const Home = () => {
         <section className={`${styles.cardsContainer} ${styles.fadeIn}`}>
         <article className={styles.Cards}>
             <div className={styles.imageText}>
-              <a title="Ir a la temporada 3" href="/el-cubo/temporada-1">
+              <a title="Ir a la temporada 3" href="/el-cubo/temporada-3">
                 <img src="/images/0-season3.jpg" />
                 <div>
                   <h3>+14 - TEMPORADA 3</h3>
@@ -70,13 +70,13 @@ Jordán Sube. </p>
 
           <article className={styles.Cards}>
             <div className={styles.imageText}>
-              <a title="Ir a la temporada 1" href="/el-cubo/temporada-1">
+              <a title="Ir a la temporada 2" href="/el-cubo/temporada-2">
                 <img src="/images/1-season2.jpg" />
                 <div>
                   <h3>ADULTOS - TEMPORADA 2</h3>
                   <h1>EL INQUISIDOR</h1>
                   <span>Periodismo, Crónica roja, Asesinatos</span>
-                  <a href="/el-cubo/temporada-1" className={styles.buttonBig}>INICIAR EXPERIENCIA</a>
+                  <a href="/el-cubo/temporada-2" className={styles.buttonBig}>INICIAR EXPERIENCIA</a>
                 </div>
               </a>
             </div>
@@ -84,10 +84,10 @@ Jordán Sube. </p>
               <p>Andrés, un joven escritor es llamado a trabajar en la sección judicial del tabloide “El Inquisidor”.</p>
               <ul>
                 <li>
-                  {<YoutubeModal videoId="2oxfBiKm-II" />}
+                  {<YoutubeModal videoId="bmzwzAX4FqI" />}
                 </li>
                 <li>
-                  <Social season="1" />
+                  <Social season="2" />
                 </li>
               </ul>
             </div>

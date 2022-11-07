@@ -1,0 +1,74 @@
+.iMessage {
+  font-size: 30px;
+  font-weight: normal;
+  position: absolute;
+  z-index: 1;
+  width: 600px;
+  text-align: center;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+}
+
+.back-to-season {
+  font-style: italic;
+}
+
+
+.steal {
+  position: absolute;
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.steal {
+  img {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    animation: zoomOut 60s infinite ;
+  }
+
+  @media only screen and (max-width: 960px) {
+    img.stealDesktop {
+      display: none;
+    }
+    img.stealMobile {
+      display: block;
+    }
+  }
+
+  @media only screen and (min-width: 960px) {
+    img.stealMobile {
+      display: none;
+    }
+    img.stealDesktop {
+      display: block;
+    }
+  }
+
+}
+
+@keyframes zoomOut {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.2);
+  }
+  100% {
+      transform: scale(1.4);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
