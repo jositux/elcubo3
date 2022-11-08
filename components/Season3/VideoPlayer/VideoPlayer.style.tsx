@@ -250,10 +250,11 @@ export const VideoPlayerWrapper = styled.div`
   opacity: 1;
 }
 
+/*
 .plyr__progress input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   opacity: 0; 
-}
+}*/
 
 .plyr__progress__buffer {
   z-index: 0 ;

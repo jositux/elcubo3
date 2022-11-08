@@ -75,7 +75,7 @@ const Lineal = () => {
             </div>
             <VideoPlayer
                 showBackButton
-                backButtonLink={"/el-cubo/temporada-3/"}
+                backButtonLink={""}
                 backButtonText={"Volver"}
                 title={""}
                 source={srcVideo}
