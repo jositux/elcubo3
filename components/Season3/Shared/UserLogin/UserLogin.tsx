@@ -15,11 +15,11 @@ const UserLogin = () => {
             Hola,<a href={Links.profile} > {user ? user.full_name.split(' ')[0] : null}</a> | <a href={Links.logoutTemp2}>Salir</a>
           </>
         : <div className={styles.menuContainer}>
-            <a className={styles.LoginRegister} href={Links.registerTemp2}>
-              Ingresar
+            <a className={styles.LoginRegister} href={Links.registerCharacters}>
+              Ingreso
             </a>
             <div className={styles.separadorLoginRegister}></div>
-            <a className={styles.LoginRegister} href={Links.registerTemp2}>
+            <a className={styles.LoginRegister} href={Links.registerCharacters}>
               Registro
             </a>
           </div>

@@ -27,19 +27,13 @@ const Season3 = () => {
 
       <Header />
 
-      <div className={styles.homePageContainer}>
-
-        {/* <SubeComponent /> */}
-
         {
           isMobile 
             ? <SlidersMobile isLoggedIn={isLoggedIn} />
             : <SlidersDesktop isLoggedIn={isLoggedIn} />
         }
                 
-        <Credits />
-      </div>
-
+      <Credits />
       <Footer />
       
     </Fragment>

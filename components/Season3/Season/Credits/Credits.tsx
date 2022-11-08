@@ -6,8 +6,6 @@ const Credits = () => {
   return (
     <Fragment>
       <div className={styles.CreditsContainer}>
-        <img className={styles.SliderImage} src="/images/season3/slider/home_slider_04.jpg" />
-
         <div className={styles.Credits}>
           <div className={styles.CreditsContent}>
             <div className={styles.Column1}>
