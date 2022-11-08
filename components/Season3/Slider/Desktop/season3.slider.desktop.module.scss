@@ -1,0 +1,120 @@
+.SlidersContainer {
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.images {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.images:nth-child(1) {
+  height: 176vh;
+  background-image: url("/images/season3/slider/home_slider_01.jpg");
+  background-attachment:scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .content {
+    color: #3C2807;
+    width: 685px;
+    position: relative;
+    top: 18%;
+    left: 15%;
+
+    h1 {
+      font-family: $elcubo3_font_title;
+      font-size: 60px;
+      line-height: 110%;
+      padding: 0;
+      margin: 10px 0 0 0;
+    }
+    p {
+      font-family: $elcubo3_font_subtitle;
+      font-size: 40px !important;
+      line-height: 135%;
+      font-weight: initial;
+      margin: 10px 0 0 0;
+      padding: 0;
+    }
+  }
+}
+
+.images:nth-child(2) {
+  height: 109vh;
+  background-image: url("/images/season3/slider/home_slider_02.jpg");
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .content {
+    color: #3C2807;
+    width: 600px;
+    position: relative;
+    right: 20%;
+    top: 0;
+
+    h1 {
+      font-family: $elcubo3_font_title;
+      font-size: 60px;
+      line-height: 110%;
+      padding: 0;
+      margin: 10px 0 0 0;
+    }
+    p {
+      font-family: $elcubo3_font_subtitle;
+      font-size: 40px !important;
+      line-height: 135%;
+      font-weight: initial;
+      margin: 10px 0 0 0;
+      padding: 0;
+    }
+  }
+}
+
+.images:nth-child(3) {
+  height: 270vh;
+  background-image: url("/images/season3/slider/home_slider_03.jpg");
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+
+  .content {
+    color: #3C2807;
+    width: 200px;
+    position: relative;
+    width: 700px;
+    left: 55%;
+    top: 15%;
+
+    h1 {
+      font-family: $elcubo3_font_title;
+      font-size: 60px;
+      line-height: 110%;
+      padding: 0;
+      margin: 10px 0 0 0;
+    }
+    p {
+      font-family: $elcubo3_font_subtitle;
+      font-size: 40px !important;
+      line-height: 135%;
+      font-weight: initial;
+      margin: 10px 0 0 0;
+      padding: 0;
+    }
+  }
+
+  .ButtonContainerBottom {
+    position: relative;
+    top: 67%;
+    left: 40%;
+  }
+
+}
