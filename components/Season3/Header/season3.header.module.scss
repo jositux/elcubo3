@@ -38,11 +38,11 @@
 
 .logosContainer {
   display: flex;
-  padding-left: 20px;
+  padding-left: 30px;
 }
 
 .separadorLogos {
-  border-left: 2px solid white;
+  border-left: 1px solid white;
   height: 50px;
   margin: 4px 15px 0px 15px;
   @include breakpoint-down('sm') {

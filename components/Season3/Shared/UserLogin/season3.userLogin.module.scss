@@ -1,17 +1,22 @@
 .LoginRegister {
-  font-size: 20px;
-  font-weight: bold;
-  font-style: normal;
   margin-top: 10px;
+  font-family: 'Roboto Condensed';
+  
   @media (max-width: 768px) {
-    font-size: 15px;
-    padding-right: 10px;
+    font-size: 16px;
   }
   a {
     color: white;
     text-decoration: none;
-    font-style: normal;
-    font-weight: bold;
+    font-weight: inherit;
+    text-transform: uppercase;
+    font-size: 20px;
+    
+    @media (max-width: 768px) {
+      font-size: 17px;
+      transform: scale(0.99);
+      margin-top: 8px;
+    }
     &:hover {
       text-decoration: underline;
     }
@@ -26,14 +31,16 @@
   position: relative;
   top: 0;
   left: 5%;
+  margin-right: 25px;
 }
 
 .separadorLoginRegister {
-  border-left: 2px solid white;
-  height: 30px;
-  margin: 7px 15px 0px 15px;
+  border-left: 1px solid white;
+  height: 15px;
+  margin: 14px 15px 0px 15px;
   @include breakpoint-down('sm') {
-    height: 18px;
-    margin: 9px 10px 0 0px;
+    height: 12px;
+    margin: 12px 10px 0 10px;
   }
 }
+

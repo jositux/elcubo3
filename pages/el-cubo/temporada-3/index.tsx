@@ -1,20 +1,34 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import Head from 'next/head';
 import Footer from 'components/Footer/Footer';
 import styles from './season3.module.scss';
 import useDetectDevice from 'hooks/useDetectDevice';
 import AuthService from 'services/Auth';
+import disableScroll from 'disable-scroll';
+
 import Credits from 'components/Season3/Season/Credits/Credits';
 import { SlidersDesktop } from 'components/Season3/Slider/Desktop/Sliders';
 import { SlidersMobile } from 'components/Season3/Slider/Mobile/Sliders';
 import Header from 'components/Season3/Header/Header';
-
+import PaneLogin from 'components/Season3/Shared/PaneLogin/PaneLogin';
 
 
 const Season3 = () => {
 
   const isLoggedIn = AuthService.isLoggedIn();
   const { isMobile } = useDetectDevice();
+  const [showLogin, setShowLogin] = useState(false);
+
+
+  const onGuest = () => {
+    setShowLogin(true);
+    disableScroll.on();
+  };
+
+  const closePanelLogin = () => {
+    setShowLogin(false);
+    disableScroll.off();
+  }
 
   return (
     <Fragment>
@@ -25,14 +39,18 @@ const Season3 = () => {
         <meta property="og:image" content="" />
       </Head>
 
-      <Header />
+      <PaneLogin 
+        isActive={showLogin}
+        onClose={() => closePanelLogin()}
+        isMobile={isMobile}
+      />
 
+      <Header />
         {
           isMobile 
-            ? <SlidersMobile isLoggedIn={isLoggedIn} />
-            : <SlidersDesktop isLoggedIn={isLoggedIn} />
-        }
-                
+            ? <SlidersMobile isLoggedIn={isLoggedIn} onGuest={onGuest} />
+            : <SlidersDesktop isLoggedIn={isLoggedIn} onGuest={onGuest} />
+        }     
       <Credits />
       <Footer />
       
