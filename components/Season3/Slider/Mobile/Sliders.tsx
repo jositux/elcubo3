@@ -10,7 +10,7 @@ export const SlidersMobile = ({ isLoggedIn, onGuest }) => {
     <Fragment>
       <div className={styles.VideoContainer}>
         <div className={styles.LogoTeaser}>
-          <img src="/images/season3/logo-test.png" />
+          <img src="/images/season3/logo-caminos-de-jordan.png" />
         </div>
         <a className={styles.ButtonTeaser} href="#" data-video="">
           <span>Ver teaser</span>
