@@ -4,14 +4,14 @@
   margin: 0;
 }
 
-.images {
+.Images {
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.images:nth-child(1) {
+.Images:nth-child(1) {
   height: 176vh;
   background-image: url("/images/season3/slider/home_slider_01.jpg");
   background-attachment:scroll;
@@ -19,12 +19,13 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  .content {
+  .TextContent {
     color: #3C2807;
     width: 685px;
     position: relative;
-    top: 18%;
-    left: 15%;
+    top: 30%;
+    left: 18%;
+    transition: opacity 1.5s;
 
     h1 {
       font-family: $elcubo3_font_title;
@@ -44,7 +45,7 @@
   }
 }
 
-.images:nth-child(2) {
+.Images:nth-child(2) {
   height: 109vh;
   background-image: url("/images/season3/slider/home_slider_02.jpg");
   background-attachment: scroll;
@@ -52,12 +53,12 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  .content {
+  .TextContent {
     color: #3C2807;
     width: 600px;
     position: relative;
     right: 20%;
-    top: 0;
+    top: 5%;
 
     h1 {
       font-family: $elcubo3_font_title;
@@ -77,16 +78,16 @@
   }
 }
 
-.images:nth-child(3) {
+.Images:nth-child(3) {
   height: 270vh;
   background-image: url("/images/season3/slider/home_slider_03.jpg");
   background-attachment: scroll;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   display: inline-block;
 
-  .content {
+  .TextContent {
     color: #3C2807;
     width: 200px;
     position: relative;
@@ -116,5 +117,26 @@
     top: 67%;
     left: 40%;
   }
-
 }
+
+
+.VideoContainer {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  z-index: 999;
+  background-color: gray;
+  height: 100%;
+  width: 100%;
+  transform: scale(1);
+  transition: top 0.2s ,transform 0.8s;
+
+  .LogoTeaser {
+    position: relative;
+    top: 37rem;
+    left: 5rem;
+    transition: top 1s;
+  }
+}
+
+

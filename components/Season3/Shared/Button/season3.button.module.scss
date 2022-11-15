@@ -11,12 +11,54 @@
   border: 1px solid #402A04;
   font-family: $elcubo3_font_subtitle;
   @include breakpoint-down('sm') {
-    font-size: 15px;
-    padding: 15px 20px 15px 20px;
+    font-size: 20px;
+    padding: 15px 70px 15px 70px;
+    position: relative;
+    left: 0;
+    top: 0;
   }
 }
 
 .ButtonHome:hover {
   box-shadow: rgba(255, 255, 255, 0.8) 0px 0px 25px;
   cursor: pointer;
+}
+
+.LinkModal {
+  background: transparent;
+  margin: 0 auto;
+  color: white;
+  text-decoration: none;
+  border: 2px solid #ffffff;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 1.2em;
+  font-family: $elcubo3_font_subtitle;
+  text-align: center;
+  padding: 13px 30px 12px 30px;
+  @include breakpoint-down('sm') {
+    font-size: 15px!important;
+    border: 2px solid #402A04;
+    color: #402A04;
+  }
+}
+
+.ButtonModal {
+  padding: 15px 40px 15px 40px;
+  background-color: #402A04;
+  margin-right: 20px;
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 1.2em;
+  border: 1px solid #402A04;
+  font-family: $elcubo3_font_subtitle;
+  @include breakpoint-down('sm') {
+    font-size: 20px;
+    padding: 15px 70px 15px 70px;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
 }
