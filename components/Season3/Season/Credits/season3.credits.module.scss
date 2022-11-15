@@ -10,8 +10,10 @@
 
 
 .Credits {
-  max-width: 1113px;
+  padding: 0 100px;
   margin: auto;
+  font-family: $elcubo3_font_subtitle;
+  font-weight: 300;
   @media (max-width: 1113px) {
     padding: 0 50px;
   }
@@ -20,13 +22,14 @@
     margin-bottom: 0px;
   }
   h2 {
-    font-weight: 400;
-    font-size: 18px;
+    font-size: 25px;
+    font-weight: 300;
+    text-transform: uppercase;
     margin-bottom: 10px;
   }
   em {
     color: #949494;
-    font-size: 13px;
+    font-style: normal;
   }
 }
 
@@ -43,11 +46,10 @@
     padding: 0;
     list-style-type: none;
     li {
-      font-size: 14px;
+      font-size: 19px;
       margin-top: 10px;
       a {
         color: white;
-        font-size: 14px;
         svg {
           margin-left: 5px;
         }
@@ -73,6 +75,7 @@
   }
   @media only screen and (min-width: 1024px) {
     column-count: 3;
+    column-gap: 100px;
   }
   column-gap: 50px;
   div {
