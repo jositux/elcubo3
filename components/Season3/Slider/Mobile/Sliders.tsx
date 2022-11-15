@@ -14,7 +14,6 @@ export const SlidersMobile = ({ isLoggedIn, onGuest }) => {
         </div>
         <a className={styles.ButtonTeaser} href="#" data-video="">
           <span>Ver teaser</span>
-          <img src="/images/season3/icon-play-teaser-mobile.png" />
         </a>
       </div> 
 

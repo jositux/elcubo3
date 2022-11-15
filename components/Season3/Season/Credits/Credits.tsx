@@ -97,7 +97,7 @@ const Credits = () => {
             </div>
 
             <div className={styles.Column3}>
-              <h2>Fotogragía y luces</h2>
+              <h2>Fotografía y luces</h2>
               <ul>
                 <li>Rubén Fernández – <em>Director de Fotografía</em></li>
                 <li>Rubén Fernández – <em>Gaffer</em></li>

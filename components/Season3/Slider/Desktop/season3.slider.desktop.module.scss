@@ -4,6 +4,11 @@
   margin: 0;
 }
 
+.VideoContainer {
+  background-image: url("/images/season3/steals/0-home-steal-desktop.jpg");
+  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.45));
+}
+
 .Images {
   width: 100vw;
   display: flex;
@@ -115,7 +120,7 @@
   .ButtonContainerBottom {
     position: relative;
     top: 67%;
-    left: 40%;
+    text-align: center;
   }
 }
 

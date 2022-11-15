@@ -1,8 +1,8 @@
 .elcuboLogo {
-  width: 55px;
+  width: auto;
   height: 55px;
   @include breakpoint-down('sm') {
-    width: 35px;
+    width: auto;
     height: 35px;
     margin-top: 2px;
   }
