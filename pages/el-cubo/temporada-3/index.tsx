@@ -51,8 +51,8 @@ const Season3 = () => {
             ? <SlidersMobile isLoggedIn={isLoggedIn} onGuest={onGuest} />
             : <SlidersDesktop isLoggedIn={isLoggedIn} onGuest={onGuest} />
         }     
-      <Credits />
-      <Footer />
+      
+      
       
     </Fragment>
   )
