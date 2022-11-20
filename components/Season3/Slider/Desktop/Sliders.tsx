@@ -113,7 +113,7 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
         <div id='Texto0' className={`${styles.TextContent } ${styles.TextContentRight}`}>
           <article>
             <h1>Jordán Sube es el pueblo Colombiano con la menor cantidad de almas del país.</h1>
-            <p>¿Qué sucedió en Jordán para pasar de la prosperidad a ser un pueblo fantasma?</p>
+            <p>¿Qué sucedió en <strong>Jordán</strong> para pasar de la <br />prosperidad a ser un pueblo fantasma?</p>
           </article>
         </div>
        
@@ -124,8 +124,8 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
         <img id='ImgBG1' src="/images/season3/slider/home_slider_02.jpg" className={styles.ImgBG1} />
           <div id='Texto1' className={`${styles.TextContent } ${styles.TextContentLeft}`}>
             <article>
-              <h1>Cinco personajes buscan superar los fantasmas que se apoderaron de Jordán Sube.</h1>
-              <p>¿Cómo hacerlo cuando el pueblo vive bajo una maldición?</p>
+              <h1>Cinco personajes buscan superar los fantasmas que se apoderaron de <br />Jordán Sube.</h1>
+              <p>¿Cómo hacerlo cuando el pueblo<br /> vive bajo una maldición?</p>
             </article>
           </div>
         </div>
@@ -133,8 +133,8 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
         <img id='ImgBG2' src="/images/season3/slider/home_slider_03.jpg" className={styles.ImgBG1} />
           <div id='Texto2' className={`${styles.TextContent } ${styles.TextContentRight}`}>
             <article>
-              <h1>¿Puede un pueblo sobrevivir estancado en el tiempo?.</h1>
-              <p>Jordán Sube se encuentra ubicadoen el fondo del Cañón del Chicamocha, pero su aislamiento no impide que su habitantes sigan adelante.</p>
+              <h1>¿Puede un pueblo sobrevivir estancado  <br />en el tiempo?</h1>
+              <p>Jordán Sube se encuentra ubicado en el fondo del Cañón del Chicamocha, pero su aislamiento no impide que su habitantes sigan adelante.</p>
             </article>
           </div>
           <div className={styles.ButtonContainerBottom}>
