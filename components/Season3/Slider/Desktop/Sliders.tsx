@@ -9,21 +9,28 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
 
   useEffect(() => {
     const videoContainer = document.querySelector('#VideoContainer') as HTMLElement;
+    const ImgBG0 = document.querySelector('#ImgBG0') as HTMLElement;
+    const Texto0 = document.querySelector('#Texto0') as HTMLElement;
     const contentResizable = document.querySelector('#ContentResizable') as HTMLElement;
     const logoTeaser = document.querySelector('#LogoTeaser') as HTMLElement;
     const headerHeigth = 90;
     const incrementTop = 1;
 
     const slider1 = document.querySelector('#slider1') as HTMLElement;
-    const textContent1 = document.querySelector('#textContent1') as HTMLElement;
+    const ImgBG1 = document.querySelector('#ImgBG1') as HTMLElement;
+    const Texto1 = document.querySelector('#Texto1') as HTMLElement;
     const height1 = videoContainer.offsetHeight + headerHeigth;
 
     const slider2 = document.querySelector('#slider2') as HTMLElement;
-    const textContent2 = document.querySelector('#textContent2') as HTMLElement;
+    const ImgBG2 = document.querySelector('#ImgBG2') as HTMLElement;
+    const Texto2 = document.querySelector('#Texto2') as HTMLElement;
     const height2 = height1 + slider1.offsetHeight;
 
     const slider3 = document.querySelector('#slider3') as HTMLElement;
     const height3 = height2 + slider2.offsetHeight;
+
+    const credits = document.querySelector('#Credits') as HTMLElement;
+    const height4 = height3 + credits.offsetHeight;
 
     const whitespace = document.querySelector('#whitespace') as HTMLElement;
 
@@ -37,7 +44,27 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
         contentResizable.style.top =  window.scrollY * incrementTop + 'px';
       }
 
+      if(window.scrollY <= height1) {
+        ImgBG0.style.opacity = '' + (window.scrollY * 2) / height1;
+        Texto0.style.opacity = '' + (window.scrollY * 2) / height1;
+      }
+
+      console.log('scroll %', window.scrollY);
+      console.log('height1 %', height1);
+      console.log('height2 %', height2);
+      console.log('opacity 1 %', ((window.scrollY * 2) / height1));
+      console.log('opacity 2 %', ((window.scrollY * 2) / height2));
+      console.log('opacity 3 %', ((window.scrollY * 2) / height3));
+     
+
+      ImgBG1.style.opacity = '' + (window.scrollY ) / (height1);
+      Texto1.style.opacity = '' + (window.scrollY ) / (height1);
       
+      ImgBG2.style.opacity = '' + (window.scrollY ) / (height2);
+      Texto2.style.opacity = '' + (window.scrollY ) / (height2);
+
+      credits.style.opacity = '' + (window.scrollY ) / (height4);
+
       if(window.scrollY >= height1 ) {
         slider1.style.position = 'relative';
       }
@@ -82,17 +109,20 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
           </div>
           </div>
         </div>
-        <div className={`${styles.TextContent } ${styles.TextContentRight}`}>
+        <img id='ImgBG0' src="/images/season3/slider/home_slider_01.jpg" className={styles.ImgBG0} />
+        <div id='Texto0' className={`${styles.TextContent } ${styles.TextContentRight}`}>
           <article>
             <h1>Jordán Sube es el pueblo Colombiano con la menor cantidad de almas del país.</h1>
             <p>¿Qué sucedió en Jordán para pasar de la prosperidad a ser un pueblo fantasma?</p>
           </article>
         </div>
+       
       </div>
 
       <div className={styles.SlidersContainer}>
         <div id='slider1' className={styles.Images}>
-          <div id='textContent1' className={`${styles.TextContent } ${styles.TextContentLeft}`}>
+        <img id='ImgBG1' src="/images/season3/slider/home_slider_02.jpg" className={styles.ImgBG1} />
+          <div id='Texto1' className={`${styles.TextContent } ${styles.TextContentLeft}`}>
             <article>
               <h1>Cinco personajes buscan superar los fantasmas que se apoderaron de Jordán Sube.</h1>
               <p>¿Cómo hacerlo cuando el pueblo vive bajo una maldición?</p>
@@ -100,7 +130,8 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
           </div>
         </div>
         <div id='slider2' className={styles.Images}>
-          <div id='textContent2' className={`${styles.TextContent } ${styles.TextContentRight}`}>
+        <img id='ImgBG2' src="/images/season3/slider/home_slider_03.jpg" className={styles.ImgBG1} />
+          <div id='Texto2' className={`${styles.TextContent } ${styles.TextContentRight}`}>
             <article>
               <h1>¿Puede un pueblo sobrevivir estancado en el tiempo?.</h1>
               <p>Jordán Sube se encuentra ubicadoen el fondo del Cañón del Chicamocha, pero su aislamiento no impide que su habitantes sigan adelante.</p>
@@ -114,7 +145,11 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
           </div>
         </div>
         <div id='slider3' className={styles.Images}>
-          <Credits />
+          
+          <div id="Credits">
+            <Credits />
+          </div>
+         
           <Footer />
         </div>
         
