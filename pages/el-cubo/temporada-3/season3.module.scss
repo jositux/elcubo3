@@ -1,5 +1,29 @@
+.HomeDesktop {
+  //margin-top: -90px;
+}
+
+@mixin inline-fade-animation($duration) {
+  $name: inline-#{unique-id()};
+
+  @keyframes #{$name} {
+    @content;
+  }
+
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
 
 
-
-
-
+.Home{
+  background: black;
+  @include inline-fade-animation(3s) {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

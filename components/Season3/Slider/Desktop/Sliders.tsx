@@ -14,7 +14,7 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
     const contentResizable = document.querySelector('#ContentResizable') as HTMLElement;
     const logoTeaser = document.querySelector('#LogoTeaser') as HTMLElement;
     const headerHeigth = 90;
-    const incrementTop = 1;
+    const incrementTop = 1.5;
 
     const slider1 = document.querySelector('#slider1') as HTMLElement;
     const ImgBG1 = document.querySelector('#ImgBG1') as HTMLElement;
@@ -48,13 +48,6 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
         ImgBG0.style.opacity = '' + (window.scrollY * 2) / height1;
         Texto0.style.opacity = '' + (window.scrollY * 2) / height1;
       }
-
-      console.log('scroll %', window.scrollY);
-      console.log('height1 %', height1);
-      console.log('height2 %', height2);
-      console.log('opacity 1 %', ((window.scrollY * 2) / height1));
-      console.log('opacity 2 %', ((window.scrollY * 2) / height2));
-      console.log('opacity 3 %', ((window.scrollY * 2) / height3));
      
 
       ImgBG1.style.opacity = '' + (window.scrollY ) / (height1);
