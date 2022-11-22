@@ -28,7 +28,7 @@ const VideoIntro = ({url}) => {
       <div id="container_intro" className={styles.Container}>
         <div className={`${styles.intro} ${styles.fadeIn}`}>
           
-          <video ref={videoRef} controls={false} muted={!soundActive} autoPlay playsInline loop>
+          <video ref={videoRef} controls={false} className={styles.Video} muted={!soundActive} autoPlay playsInline loop>
             <source src={url} type="video/mp4" />
           </video>
 

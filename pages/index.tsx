@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import Header from 'components/Header/Header';
+//import Header from 'components/Header/Header';
+import Header from 'components/Season3/Header/Header';
 import Footer from 'components/Footer/Footer';
 import Social from 'components/Season2/Shared/Social/Social';
 //import MyList from 'components/Season2/Shared/MyList/MyList';
@@ -29,6 +30,7 @@ const Home = () => {
         <meta property="og:image" content="/images/season2/season2-teaser.jpg" />
       </Head>
       <RTVCGlobalStyles />
+      <Header />
       <div className={styles.homePageContainer}>
         <div className={`${styles.homeLogo} ${styles.fadeIn}`}>
           <img className={styles.elcuboLogo} src="/images/logo2021.png" />

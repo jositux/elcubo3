@@ -219,25 +219,22 @@ export const VideoPlayerWrapper = styled.div`
   width: 15px;
   height: 15px;
   margin-top: 6px;
-  left: -15px;
+  left: 45px;
   border-radius: 50%;
   background: #E2B857;
   position: absolute;
   opacity: 1;
 }
 
-.marker:hover::before {
-  background: red;
-}
-
-.marker{
+.marker 
+ {
   transform-origin: top left;
   transform: rotate(-90deg);
 }
 
 .marker span {
-  margin-left: 50px;
-  opacity: 0;
+  margin-left: 70px;
+  //opacity: 0;
   animation: fadeIn 5s;
 }
 

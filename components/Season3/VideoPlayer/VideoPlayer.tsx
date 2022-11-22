@@ -219,7 +219,7 @@ const VideoPlayer = ({
       controls.insertAdjacentHTML(
         'afterend',
         `<div class="link-to-dashboard-lineal" title="Ir al dashboard">
-        <img src="/images/season2/icon-dashboard-lineal.svg" />
+        <img src="/images/season3/icon-dashboard.svg" />
         </div>`,
       );
       const linkToDashboardLineal = container.getElementsByClassName('link-to-dashboard-lineal')[0];
@@ -327,32 +327,34 @@ const VideoPlayer = ({
   React.useEffect(() => {
     let video_duration = 1800;
 
-    const createPoint = (pClass) => {
-      let percent = 10;
+    const createPoint = (pPercent, pText) => {
+      let percent = pPercent;
       let point = document.createElement('div');
       let content = document.createElement('span');
-      let text = document.createTextNode("Texto prueba");
+      let text = document.createTextNode(pText);
       content.appendChild(text);
       point.appendChild(content);
-      point.setAttribute('class', pClass);
+      point.setAttribute('class', 'marker');
       point.setAttribute('style', 'left: ' + percent + '%;');
       return point;
     };
 
-    const addMarker = (pClass) => {
-      const controls = document.querySelector(pClass);
-      if (document.querySelector('.marker') == null) {
-        controls.appendChild(createPoint('marker'));
+    const addMarker = (pClass, pPercent, pText) => {
+      const controls = document.querySelector('.plyr__progress');
+      if (document.querySelector(pClass) == null) {
+        controls.appendChild(createPoint(pPercent, pText));
         //updateMarker(document.querySelector('.marker'));
-      }
-      else {
+      //}
+      //else {
         //updateMarker(document.querySelector('.marker'));
       }
     }
 
     if (timeMarker && video_duration > 0) {
       //setTime(timeMarker);
-      addMarker('.plyr__progress');
+      addMarker('marker', '10', 'Violencia en Mogotes');
+      addMarker('marker', '40', 'Sin Parroco');
+      addMarker('marker', '60', 'Sin cementerio');
     }
 
   }, [timeMarker]);

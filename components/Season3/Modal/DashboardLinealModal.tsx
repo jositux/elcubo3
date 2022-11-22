@@ -1,6 +1,6 @@
 import React from "react";
-import DashboardLineal from 'components/Season2/Dashboard/DashboardLineal';
-import styles from './season2.dashboardLinealModal.module.scss';
+import DashboardLineal from 'components/Season3/Dashboard/DashboardLineal';
+import styles from './season3.dashboardLinealModal.module.scss';
 
 const DashboardLinealModal = ({ showModal, onCloseDashboard }) => {
 
