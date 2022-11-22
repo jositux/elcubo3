@@ -45,15 +45,18 @@ const Season3 = () => {
         isMobile={isMobile}
       />
 
+      <div className={styles.Home}>
       <Header />
+     
+      
         {
           isMobile 
-            ? <SlidersMobile isLoggedIn={isLoggedIn} onGuest={onGuest} />
-            : <SlidersDesktop isLoggedIn={isLoggedIn} onGuest={onGuest} />
+            ? <div className={styles.HomeMobile}><SlidersMobile isLoggedIn={isLoggedIn} onGuest={onGuest} /></div>
+            : <div className={styles.HomeDesktop}><SlidersDesktop isLoggedIn={isLoggedIn} onGuest={onGuest} /></div>
         }     
       
       
-      
+      </div>
     </Fragment>
   )
 }

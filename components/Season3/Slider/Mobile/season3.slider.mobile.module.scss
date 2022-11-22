@@ -1,29 +1,36 @@
 .SlidersContainer {
-  overflow-x: hidden;
+  //overflow-x: hidden;
   padding: 0;
   margin: 0;
+  /*overflow-y: scroll;
+  scroll-behavior: smooth;*/
 }
 
 .VideoContainer {
   width: 100%;
-  height: 300px;
-  background-color: gray;
-  background-image: url("/images/season3/steals/0-home-steal-desktop.jpg");
-  background-size: cover;
-  background-position: center;
-  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.45));
+  height: 30vh;
   position: relative;
-  top: 0;
+  //background-color: gray;
+  background-image: url("/images/season3/steals/0-home-steal-mobile.jpg");
+  background-size: cover;
+  //background-position: center;
+  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.45));
+
+  @media screen and (max-width: 1024px) and (orientation: landscape) {
+    height: 30vh;
+  }
+ // position: relative;
+  /*top: 0;
   bottom:0;
   overflow-y:scroll;
   overflow-x:hidden;
-  z-index: 998;
+  z-index: 998;*/
 }
 
 .LogoTeaser {
-  position: relative;
-  top: 2rem;
-  left: 2rem;
+  position: absolute;
+  left: 20px;
+  top: 20px;
 
   img {
     width: 120px;
@@ -68,29 +75,29 @@
 
 .Images:nth-child(1) {
   background-image: url("/images/season3/slider/mobile/home_mobile_slider_01.png");
-  background-attachment: scroll ;
+  //background-attachment: scroll ;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: inline-block;
-  height: 65vh;
+  height: calc(70vh - 55px);
+
+  @media screen and (max-width: 1024px) and (orientation: landscape) {
+    height: 100vh;
+  }
 
   .ButtonContainerTop {
-    position: relative;
-    top: 3rem;
-    left: 2rem;
+    text-align: center;
+    margin-top: 30px;
+    padding: 0 30px;
     a {
       font-size: 20px;
       padding: 15px 75px 15px 75px;
     }
   }
   .TextContent {
+    padding: 30px;
     color: #3C2807;
-    width: 400px;
-    justify-content: center;
-    position: relative;
-    top: 6rem;
-    left: 2rem;
 
     h1 {
       font-family: $elcubo3_font_title;
@@ -107,26 +114,23 @@
     }
   }
   .IconArrowBottom {
-    position: relative;
-    top: 19rem;
-    left: 11rem;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
   }
 }
 
 .Images:nth-child(2) {
   background-image: url("/images/season3/slider/mobile/home_mobile_slider_02.png");
-  background-attachment: scroll;
+  /*background-attachment: scroll;*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
   .TextContent {
-    color: #3C2807;
-    justify-content: center;
-    width: 300px;
-    position: relative;
-    top: 7rem;
-    left: 3rem;
+    color: #0E290E;
+    padding: 70px 30px;
   
     h1 {
       font-family: $elcubo3_font_title;
@@ -151,20 +155,16 @@
 
 .Images:nth-child(3) {
   background-image: url("/images/season3/slider/mobile/home_mobile_slider_03.png");
-  background-attachment: scroll;
+  //background-attachment: scroll;
+  position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: inline-block;
   
   .TextContent {
-    color: #3C2807;
-    color: #3C2807;
-    justify-content: center;
-    width: 300px;
-    position: relative;
-    top: 3rem;
-    left: 3rem;
+    color: #0E290E;
+    padding: 70px 30px;
   
     h1 {
       font-family: $elcubo3_font_title;
@@ -181,19 +181,19 @@
     }
   }
   .ButtonContainerBottom {
-    position: relative;
-    top: 30rem;
-    left: 2.2rem;
+    text-align: center;
+    margin-top: 40vh;
+    padding: 0 30px;
+    @media screen and (max-width: 1024px) and (orientation: landscape) {
+      margin-top: 0;
+    }
+
     a {
       font-size: 20px;
       padding: 15px 75px 15px 75px;
     }
   }
-  .IconArrowBottom {
-    position: relative;
-    top: 38rem;
-    left: 11rem;
-  }
+ 
 }
 
 

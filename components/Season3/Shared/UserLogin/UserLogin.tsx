@@ -8,7 +8,7 @@ const UserLogin = () => {
   const { user } = useSelector(state => state);
 
   return (
-    <p className={styles.LoginRegister}>
+    <div className={styles.LoginRegister}>
       {user 
         ?
           <>
@@ -24,7 +24,7 @@ const UserLogin = () => {
             </a>
           </div>
       }
-    </p>
+    </div>
   );
 };
 
