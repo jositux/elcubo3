@@ -43,7 +43,7 @@ const Lineal = () => {
       }
     }, [steal.current, player]);
 
-    let srcVideo = UrlUtils.getVideoUrl('470809');
+    let srcVideo = UrlUtils.getVideoUrl('475352');
 
     const handlePlayVideo = (playVideo) => {
         if (playVideo) {
@@ -77,14 +77,14 @@ const Lineal = () => {
                 showBackButton
                 backButtonLink={""}
                 backButtonText={"Volver"}
-                title={"Juan de Jesús"}
+                title={""}
                 source={srcVideo}
                 showPrevButton={false}
                 showNextButton={false}
                 setPlayer={setPlayer}
                 fullscreen={true}
                 timeMarker={40}
-                showDashboardLineal
+                showDashboardLineal={false}
                 onClickDashboardLineal={handleOnClickDashboardLineal}
             />
         </div>
