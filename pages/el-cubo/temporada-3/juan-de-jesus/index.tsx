@@ -84,8 +84,8 @@ const Lineal = () => {
                 setPlayer={setPlayer}
                 fullscreen={true}
                 timeMarker={40}
-                //showDashboardLineal
-                //onClickDashboardLineal={handleOnClickDashboardLineal}
+                showDashboardLineal
+                onClickDashboardLineal={handleOnClickDashboardLineal}
             />
         </div>
     );

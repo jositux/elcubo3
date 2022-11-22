@@ -48,9 +48,13 @@
     display: none;
   }
 
+  .video {
+    width: 100%;
+  }
+
   .LogoTeaser {
     position: absolute;   
-    z-index: 2;
+    z-index: 10;
     bottom: 80px;
     left: 50px;
     img {
@@ -108,7 +112,6 @@
 }
 
 .Images:nth-child(1) {
-  //background-image: url("/images/season3/slider/home_slider_02.jpg");
   background: black;
   background-position: center;
   background-repeat: no-repeat;

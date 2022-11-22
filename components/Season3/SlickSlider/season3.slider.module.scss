@@ -1,0 +1,10 @@
+.Container {
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.slick-next:before,
+.slick-prev:before {
+  color: #000;
+}
