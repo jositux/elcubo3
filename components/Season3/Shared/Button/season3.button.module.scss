@@ -13,6 +13,10 @@
   font-weight: 300;
   @include breakpoint-down('sm') {
     font-size: 20px;
+    @media screen and (orientation: portrait) {
+      width: 100%;
+    }
+    
     padding: 15px 70px 15px 70px;
     position: relative;
     left: 0;

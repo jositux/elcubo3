@@ -1,6 +1,4 @@
-.HomeDesktop {
-  //margin-top: -90px;
-}
+
 
 @mixin inline-fade-animation($duration) {
   $name: inline-#{unique-id()};

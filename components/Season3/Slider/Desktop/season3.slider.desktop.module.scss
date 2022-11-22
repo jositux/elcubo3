@@ -16,6 +16,12 @@
     position: relative;
     z-index: 1;
   }
+  button {
+    position:absolute;
+    bottom: 40px;
+    right: 40px;
+    z-index: 10;
+  }
 }
 
 .ImgBG0, .ImgBG1, .ImgBG2 {
@@ -27,14 +33,21 @@
   opacity: 0;
 }
 
+.ImgBG0 {
+  opacity: 1;
+}
+
 .VideoContent {
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh);
   overflow: hidden;
   position: relative;
+  z-index: 10;  
   .StealTeaser {
     width: 100%;
+    display: none;
   }
+
   .LogoTeaser {
     position: absolute;   
     z-index: 2;
@@ -47,11 +60,12 @@
 }
 
 .ContentResizable {
-  width: 100%;
-  position: absolute;
+  /*width: 100%;
+  position: fixed;
   z-index: 2;
-  left: 50%;
-  transform: translate(-50%);
+  left: 50%;*/
+  margin: 40px 80px;
+  //transform: translate(-50%);
   filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.45));
 }
 

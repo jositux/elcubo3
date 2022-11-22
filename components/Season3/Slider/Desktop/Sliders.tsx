@@ -1,9 +1,11 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react';
 import ButtonHome from 'components/Season3/Shared/Button/ButtonHome';
+import VideoIntro from 'components/Season3/VideoIntro/VideoIntro';
 import styles from './season3.slider.desktop.module.scss';
 import Credits from 'components/Season3/Season/Credits/Credits';
 import Links from 'constants/Links';
 import Footer from 'components/Footer/Footer';
+import { isAbsolute } from 'path';
 
 export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
 
@@ -19,7 +21,7 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
     const slider1 = document.querySelector('#slider1') as HTMLElement;
     const ImgBG1 = document.querySelector('#ImgBG1') as HTMLElement;
     const Texto1 = document.querySelector('#Texto1') as HTMLElement;
-    const height1 = videoContainer.offsetHeight + headerHeigth;
+    const height1 = videoContainer.offsetHeight + headerHeigth ;
 
     const slider2 = document.querySelector('#slider2') as HTMLElement;
     const ImgBG2 = document.querySelector('#ImgBG2') as HTMLElement;
@@ -34,19 +36,22 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
 
     const whitespace = document.querySelector('#whitespace') as HTMLElement;
 
-    console.log(window.scrollY);
+
     const getPosY = () => {
+      console.log('scroll' + window.scrollY);
+      console.log(headerHeigth);
 
       if (window.scrollY <= headerHeigth) {
         /* 100 equivale al 100% del ancho */
-        contentResizable.style.width = 100 - window.scrollY / 5 + '%';
+        //contentResizable.style.width = 100 - window.scrollY / 5 + '%';
         /* incrementTop es el grado de margen superior mientras se hace scroll */
-        contentResizable.style.top =  window.scrollY * incrementTop + 'px';
+        //contentResizable.style.top =  window.scrollY * incrementTop + 'px';
       }
+      
 
       if(window.scrollY <= height1) {
-        ImgBG0.style.opacity = '' + (window.scrollY * 2) / height1;
-        Texto0.style.opacity = '' + (window.scrollY * 2) / height1;
+        //ImgBG0.style.opacity = '' + (window.scrollY * 2 ) / (height1);
+        //Texto0.style.opacity = '' + (window.scrollY * 2 ) / (height1);
       }
      
 
@@ -87,6 +92,10 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
     return () => {
       window.removeEventListener('scroll', getPosY);
     }
+
+
+
+    
   }, [])
 
 
@@ -96,10 +105,16 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
       <div id='VideoContainer' className={ styles.VideoContainer }>
         <div id='VideoContent' className={ styles.VideoContent }>
           <div id="ContentResizable" className={ styles.ContentResizable }>
+          <VideoIntro url={"/videos/season3.mp4"} />
           <img src="/images/season3/steals/0-home-steal-desktop.jpg" className={styles.StealTeaser} />
           <div id='LogoTeaser' className={styles.LogoTeaser}>
             <img src="/images/season3/logo-caminos-de-jordan.png" />
           </div>
+
+          {isLoggedIn 
+              ? <ButtonHome url={Links.registerTemp2} text="Iniciar experiencia" />
+              : <ButtonHome type="button" onClick={onGuest} text="Iniciar experiencia" />
+            }
           </div>
         </div>
         <img id='ImgBG0' src="/images/season3/slider/home_slider_01.jpg" className={styles.ImgBG0} />
