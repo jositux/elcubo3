@@ -4,28 +4,28 @@ import styles from './season3.popup.module.scss';
 const ubications = [
   {
     name: 'soledad', 
-    top: '365px', 
-    left: '790px', 
+    top: '30%', 
+    left: '40%', 
   },
   {
     name: 'diego', 
-    top: '540px', 
-    left: '886px',
+    top: '44%', 
+    left: '47%',
   },
   {
     name: 'juandejesus', 
-    top: '690px', 
-    left: '1050px',
+    top: '60%', 
+    left: '60%',
   },
   {
     name: 'jenny', 
-    top: '135px', 
-    left: '1420px',
+    top: '5%', 
+    left: '83%',
   },
   {
     name: 'guillermo', 
-    top: '895px', 
-    left: '1080px',
+    top: '80%', 
+    left: '61%',
   },
 ]
 

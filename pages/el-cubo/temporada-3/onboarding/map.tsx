@@ -81,6 +81,7 @@ const map = () => {
         }
       </div>
       <div className={styles.MapContainer}>
+        <img className={styles.MapImage} src="/images/season3/map/jordan-map-bg.png" />
         <div className={styles.CharacterBackground}>
           
           <Popup characters={characters} />
