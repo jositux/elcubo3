@@ -36,11 +36,6 @@ const PaneLogin = ({ isActive, onClose, isMobile }) => {
           onClick={onClose}
           className={`${styles.icon} ${styles.close}`}
         >
-          {
-            isMobile
-              ? <img src="/images/season3/pane-close-mobile.png" />
-              : <img src="/images/pane-close.svg" />
-          }
         </button>
 
         <div className={styles.PaneContent}>
