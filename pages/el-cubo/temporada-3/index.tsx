@@ -5,8 +5,6 @@ import styles from './season3.module.scss';
 import useDetectDevice from 'hooks/useDetectDevice';
 import AuthService from 'services/Auth';
 import disableScroll from 'disable-scroll';
-
-import Credits from 'components/Season3/Season/Credits/Credits';
 import { SlidersDesktop } from 'components/Season3/Slider/Desktop/Sliders';
 import { SlidersMobile } from 'components/Season3/Slider/Mobile/Sliders';
 import Header from 'components/Season3/Header/Header';
@@ -49,13 +47,16 @@ const Season3 = () => {
       <Header />
      
       
-        {
-          isMobile 
+        {/*
+        isMobile 
             ? <div className={styles.HomeMobile}><SlidersMobile isLoggedIn={isLoggedIn} onGuest={onGuest} /></div>
             : <div className={styles.HomeDesktop}><SlidersDesktop isLoggedIn={isLoggedIn} onGuest={onGuest} /></div>
-        }     
+        */}     
       
-      
+
+      <div className={styles.HomeMobile}><SlidersMobile isLoggedIn={isLoggedIn} onGuest={onGuest} /></div>
+      <div className={styles.HomeDesktop}><SlidersDesktop isLoggedIn={isLoggedIn} onGuest={onGuest} /></div>
+         
       </div>
     </Fragment>
   )

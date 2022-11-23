@@ -25,3 +25,24 @@
     }
   }
 }
+
+
+@media (max-width: 960px) {
+  .HomeDesktop {
+    display: none;
+  }
+
+  .HomeMobile {
+    display: block;
+  }
+}
+
+@media (min-width: 960px) {
+  .HomeDesktop {
+    display: block;
+  }
+
+  .HomeMobile {
+    display: none;
+  }
+}

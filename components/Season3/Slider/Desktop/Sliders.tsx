@@ -128,7 +128,7 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
       </div>
 
       <div className={styles.SlidersContainer}>
-        <div id='slider1' className={styles.Images}>
+        <div id='slider1' className={styles.ImagesDesktop}>
         <img id='ImgBG1' src="/images/season3/slider/home_slider_02.jpg" className={styles.ImgBG1} />
           <div id='Texto1' className={`${styles.TextContent } ${styles.TextContentLeft}`}>
             <article>
@@ -137,7 +137,7 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
             </article>
           </div>
         </div>
-        <div id='slider2' className={styles.Images}>
+        <div id='slider2' className={styles.ImagesDesktop}>
         <img id='ImgBG2' src="/images/season3/slider/home_slider_03.jpg" className={styles.ImgBG1} />
           <div id='Texto2' className={`${styles.TextContent } ${styles.TextContentRight}`}>
             <article>
@@ -152,7 +152,7 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
             }
           </div>
         </div>
-        <div id='slider3' className={styles.Images}>
+        <div id='slider3' className={styles.ImagesDesktop}>
           
           <div id="Credits">
             <Credits />
