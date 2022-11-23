@@ -39,7 +39,7 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
 
     const getPosY = () => {
       console.log('scroll' + window.scrollY);
-      console.log(headerHeigth);
+      console.log(height1);
 
       if (window.scrollY <= headerHeigth) {
         /* 100 equivale al 100% del ancho */
