@@ -15,23 +15,23 @@ export const SlidersMobile = ({ isLoggedIn, onGuest }) => {
 
 
   useEffect(() => {
-    const videoContainer = document.querySelector('#VideoContainer') as HTMLElement;
+    //const videoContainer = document.querySelector('#VideoContainer') as HTMLElement;
     //const ImgBG0 = document.querySelector('#ImgBG0') as HTMLElement;
     //const Texto0 = document.querySelector('#Texto0') as HTMLElement;
     //const contentResizable = document.querySelector('#ContentResizable') as HTMLElement;
     //const logoTeaser = document.querySelector('#LogoTeaser') as HTMLElement;
-    const headerHeigth = 55;
+    //const headerHeigth = 55;
    // const incrementTop = 1.5;
 
-    const slider1 = document.querySelector('#Slider1') as HTMLElement;
+    //const slider1 = document.querySelector('#Slider1') as HTMLElement;
     //const ImgBG1 = document.querySelector('#ImgBG1') as HTMLElement;
     //const Texto1 = document.querySelector('#Texto1') as HTMLElement;
-    const height1 = videoContainer.offsetHeight + slider1.offsetHeight + headerHeigth;
+    //const height1 = videoContainer.offsetHeight + slider1.offsetHeight + headerHeigth;
 
-    const slider2 = document.querySelector('#Slider2') as HTMLElement;
+   // const slider2 = document.querySelector('#Slider2') as HTMLElement;
     //const ImgBG2 = document.querySelector('#ImgBG2') as HTMLElement;
     //const Texto2 = document.querySelector('#Texto2') as HTMLElement;
-    const height2 = height1 + slider2.offsetHeight;
+    //const height2 = height1 + slider2.offsetHeight;
 
     //const slider3 = document.querySelector('#slider3') as HTMLElement;
     //const height3 = height2 + slider2.offsetHeight;
@@ -39,25 +39,25 @@ export const SlidersMobile = ({ isLoggedIn, onGuest }) => {
     //const credits = document.querySelector('#Credits') as HTMLElement;
     //const height4 = height3 + credits.offsetHeight;
 
-    const whitespace = document.querySelector('#whitespace') as HTMLElement;
+    //const whitespace = document.querySelector('#whitespace') as HTMLElement;
 
 
-    const getPosY = () => {
-      console.log('scroll' + window.scrollY);
-      console.log(headerHeigth);
+    //const getPosY = () => {
+      //console.log('scroll' + window.scrollY);
+      //console.log(headerHeigth);
 
-      if (window.scrollY <= headerHeigth) {
+      //if (window.scrollY <= headerHeigth) {
         /* 100 equivale al 100% del ancho */
         //contentResizable.style.width = 100 - window.scrollY / 5 + '%';
         /* incrementTop es el grado de margen superior mientras se hace scroll */
         //contentResizable.style.top =  window.scrollY * incrementTop + 'px';
-      }
+      //}
       
 
-      if(window.scrollY <= height1) {
+      //if(window.scrollY <= height1) {
         //ImgBG0.style.opacity = '' + (window.scrollY * 2 ) / (height1);
         //Texto0.style.opacity = '' + (window.scrollY * 2 ) / (height1);
-      }
+      //}
      
 
       //ImgBG1.style.opacity = '' + (window.scrollY ) / (height1);
@@ -75,12 +75,12 @@ export const SlidersMobile = ({ isLoggedIn, onGuest }) => {
         slider1.style.position = 'fixed';
       }*/
 
-      if(window.scrollY >= height2 ) {
-        slider2.style.position = 'relative';
-      }
-      else {
+      //if(window.scrollY >= height2 ) {
+        //slider2.style.position = 'relative';
+      //}
+      //else {
         //slider2.style.position = 'fixed';
-      }
+     // }
 
       /*if(window.scrollY >= height3 ) {
         slider3.style.position = 'relative';
@@ -91,12 +91,13 @@ export const SlidersMobile = ({ isLoggedIn, onGuest }) => {
         whitespace.style.display = 'block';
       }*/
 
-    }
+    // }
     
-    window.addEventListener('scroll', getPosY);
-    return () => {
-      window.removeEventListener('scroll', getPosY);
-    }
+    //window.addEventListener('scroll', getPosY);
+    //return () => {
+     
+    //window.removeEventListener('scroll', getPosY);
+    //}
 
 
 
@@ -106,7 +107,7 @@ export const SlidersMobile = ({ isLoggedIn, onGuest }) => {
   return (
     <Fragment>
       
-      <div id="VideoContainer" className={styles.VideoContainer}>
+      <div id="VideoContainerMobile" className={styles.VideoContainer}>
         <div id='LogoTeaser' className={styles.LogoTeaser}>
               <img src="/images/season3/logo-caminos-de-jordan.png" />
         </div>
