@@ -11,27 +11,27 @@ const characters = [
   {
     name:'soledad', 
     realName: 'Soledad', 
-    description: 'Los cambios siempre dan miedo, pero hay que hacerlos con miedos y todo',
+    description: '“Los cambios siempre dan miedo, pero hay que hacerlos con miedos y todo“',
   },
   {
     name:'diego', 
     realName: 'Diego', 
-    description: 'Para lograr las cosas primero hay que soñarlas',
+    description: '“Para lograr las cosas primero hay que soñarlas“',
   },
   {
     name:'juandejesus', 
     realName: 'Juan de Jesús', 
-    description: 'Uno busca su misión en la vida, pero a veces es la propia misión la que a uno lo encuentra',
+    description: '“Uno busca su misión en la vida, pero a veces es la propia misión la que a uno lo encuentra“',
   },
   {
     name:'jenny', 
     realName: 'Jenny', 
-    description: 'Viajando se conoce la libertad',
+    description: '“Viajando se conoce la libertad“',
   },
   {
     name:'guillermo', 
     realName: 'Guillermo', 
-    description: 'Y si algún día me separo de María, espero encontrarla del otro lado',
+    description: '“Y si algún día me separo de María, espero encontrarla del otro lado“',
   },
 ];
 
@@ -75,13 +75,13 @@ const map = () => {
 
       <Header />
 
-      <div className={styles.overlay} id='overlay'></div>
+      <div className={styles.overlay} id='overlay'>
+        {
+          isShowCards ? <Cards closeCards={closeCards} /> : ''
+        }
+      </div>
       <div className={styles.MapContainer}>
         <div className={styles.CharacterBackground}>
-          
-          {
-            isShowCards ? <Cards closeCards={closeCards} /> : ''
-          }
           
           <Popup characters={characters} />
 

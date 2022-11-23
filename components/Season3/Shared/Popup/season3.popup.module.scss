@@ -1,27 +1,106 @@
-.PopupContainer{
+.PopupContainer {
+  display: flex;
+}
 
+.Popup {
+  width: 80px;
+}
+
+.soledad-g {
+  top: 290px!important;
+  left: 730px!important;
+
+  img {
+    width: 190px;
+  }
+}
+
+
+/* .diego-g {
+  top: 485px!important;
+  left: 830px!important;
+
+  img {
+    width: 190px;
+  }
+} */
+
+/* .juandejesus-g {
+  top: 625px !important;
+  left: 990px !important;
+
+  img {
+    width: 190px;
+  }
+} */
+
+
+/* .guillermo-g {
+  top: 830px !important;
+  left: 1030px !important;
+
+  img {
+    width: 190px;
+  }
+}  */
+
+
+/* .jenny-g {
+  top: 75px !important;
+  left: 1360px !important;
   
+  img {
+    width: 190px;
+  }
+}  */
 
-  
 
-/*   top: 320px;  //1
-  left: 790px; */
 
-/*   top: 512px;  //2
-  left: 886px; */
+.titleImage {
+  h2 {
+    margin: 0 0 -6px 0;
+    font-weight: initial;
+    text-align: center;
+  }
+}
 
-/* top: 655px;  //3
-  left: 1050px; */
 
-/*   top: 865px;  //4
-  left: 1075px; */
+.textContent {
+  width: 255px;
+  height: 160px;
+  text-align: left;
+  justify-content: center;
+  position: relative;
+  top: 40px;
+  left: 0;
+  display: none;
 
-/*   top: 95px;  //5
-  left: 1420px; */
+  h1 {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+  }
 
-  .Popup {
-    width: 80px;
+  p {
+    width: 250px;
+    font-size: 16px;
+    text-align: justify;
+    font-weight: 300;
+    font-family: $elcubo3_font_subtitle;
+    line-height: 130%;
+    margin: 15px 0;
+  }
+
+  button {
+    width: 200px;
+    height: 45px;
+    background-color: #E2B857;
+    border: none;
+
+    span {
+      text-transform: uppercase;
+      color: #402A04;
+    }
   }
 
 }
-
