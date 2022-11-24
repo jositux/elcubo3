@@ -9,8 +9,6 @@ export const Cards = ({ closeCards }) => {
 
   const [card, setCard] = useState(1)
 
-  
-
   const nextButtonChange = () => {
     //fade
     setCard(card + 1);
