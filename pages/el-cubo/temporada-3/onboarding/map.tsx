@@ -74,13 +74,15 @@ const map = () => {
       </Head>
 
       <Header />
-
       <div className={styles.overlay} id='overlay'>
         {
           isShowCards ? <Cards closeCards={closeCards} /> : ''
         }
       </div>
       <div className={styles.MapContainer}>
+      <div id="LogoSeason" className={styles.LogoSeason}>
+        <img src="/images/season3/logo-caminos-de-jordan.png" />
+      </div>
         <img className={styles.MapImage} src="/images/season3/map/jordan-map-bg.png" />
         <div className={styles.CharacterBackground}>
           

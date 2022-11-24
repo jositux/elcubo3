@@ -8,6 +8,10 @@
   left: 25rem;
   font-family: $elcubo3_font_subtitle;
   font-weight: normal;
+  animation: fadeInAnimation ease 1s;
+  //animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+    
 
   .TextContent {
     padding: 4px; 
@@ -24,6 +28,7 @@
     p {
       font-size: 16px;
       margin-bottom: 14px;
+      font-weight: 300;
     }
   }
   
@@ -62,6 +67,9 @@
   left: 25rem;
   font-family: $elcubo3_font_subtitle;
   font-weight: normal;
+  animation: fadeInAnimation ease 2s;
+  //animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 
   .TextContent {
     padding: 4px; 
@@ -79,6 +87,7 @@
       font-size: 16px;
       margin-bottom: 14px;
       margin-right: 40px;
+      font-weight: 300;
     }
   }
   
@@ -155,6 +164,9 @@
   left: 25rem;
   font-family: $elcubo3_font_subtitle;
   font-weight: normal;
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 
   .TextContent {
     padding: 4px; 
@@ -171,6 +183,7 @@
     p {
       font-size: 16px;
       margin: 0 35px 0 0;
+      font-weight: 300;
     }
   }
   
@@ -245,7 +258,17 @@
 .CloseIconCards{
   position: relative;
   z-index: 2;
-  left: 335px;
-  top: 130px;
+  left: 280px;
+  top: 170px;
   cursor: pointer;
+}
+
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }

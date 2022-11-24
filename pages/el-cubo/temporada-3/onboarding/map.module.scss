@@ -1,3 +1,14 @@
+
+.LogoSeason {
+  position: absolute;
+  left: 80px;
+  top: 80px;
+  width: 160px;
+  img {
+    width: 100%;
+  }
+}
+
 .MapContainer {
   //background: url('/images/season3/map/jordan-map-bg.png');
   background-repeat: no-repeat;
@@ -5,6 +16,10 @@
   background-size: 100%;
   position: relative;
   height: calc(100vh - 90px);
+  font-family: $elcubo3_font_subtitle;
+  font-weight: normal;
+  animation: fadeInAnimation ease 1s;
+
   @media screen and (max-width:960px) {
     height: calc(100vh - 55px);
   }
@@ -31,8 +46,6 @@
 }
 
 .CharacterBackground {
-  //width: 100%;
-  //height: 100%;
   background-color: transparent;
 }
 
@@ -48,3 +61,16 @@
   background-color: rgba(0,0,0,0.5);
   z-index: 1;
 }
+
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+
+
