@@ -3,7 +3,7 @@
 }
 
 .Popup {
-  width: 60px;
+  width: 5vw;
 }
 
 .soledad-g {
@@ -118,42 +118,39 @@
 
 
 
-
-
-
   .Popup{
   opacity: 0;
   animation-name: bounceIn;
   animation-duration: 450ms;
   animation-timing-function: linear;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards;  
   }
 
 
 
   .PopupContainer:nth-child(1){
     .Popup {
-    animation-delay: 1s;
+    animation-delay: 11s;
     }
   }
   .PopupContainer:nth-child(2){
     .Popup{
-      animation-delay: 1.5s;
+      animation-delay: 11.2s;
     }
   }
   .PopupContainer:nth-child(3){
     .Popup{
-      animation-delay: 2s;
+      animation-delay: 11.4s;
     }
   }
   .PopupContainer:nth-child(4){
     .Popup{
-      animation-delay: 2.5s;
+      animation-delay: 11.6s;
     }
   }
   .PopupContainer:nth-child(5){
     .Popup{
-      animation-delay: 3s;
+      animation-delay: 11.8s;
     }
   }
 
