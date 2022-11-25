@@ -74,6 +74,9 @@ const map = () => {
       </Head>
 
       <Header />
+      <video className={styles.VideoOverlay} autoPlay loop playsInline muted>
+          <source src="/videos/intro_season3c.mp4" type="video/mp4" />
+        </video>  
       <div className={styles.overlay} id='overlay'>
         {
           isShowCards ? <Cards closeCards={closeCards} /> : ''
@@ -84,6 +87,7 @@ const map = () => {
         <img src="/images/season3/logo-caminos-de-jordan.png" />
       </div>
         <img className={styles.MapImage} src="/images/season3/map/jordan-map-bg.png" />
+      
         <div className={styles.CharacterBackground}>
           
           <Popup characters={characters} />

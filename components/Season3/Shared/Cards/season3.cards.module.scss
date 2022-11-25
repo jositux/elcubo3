@@ -4,14 +4,18 @@
   background-color: #6B5F43;
   position: absolute;
   z-index: 2;
-  top: 8rem;
-  left: 25rem;
+  top: 170px;
+  left: 340px;
   font-family: $elcubo3_font_subtitle;
   font-weight: normal;
-  animation: fadeInAnimation ease 1s;
-  //animation-iteration-count: 1;
+  opacity: 0;
+  animation-delay: 14000ms;
+  //-webkit-animation: fadeOut 2s;
+  //animation: fadeOut 2s;
+  animation-name: fadeInAnimation;
+  animation-duration: 1s;
+  animation-timing-function: linear;
   animation-fill-mode: forwards;
-    
 
   .TextContent {
     padding: 4px; 
@@ -63,8 +67,8 @@
   background-color: #6B5F43;
   position: absolute;
   z-index: 2;
-  top: 8rem;
-  left: 25rem;
+  top: 170px;
+  left: 340px;
   font-family: $elcubo3_font_subtitle;
   font-weight: normal;
   animation: fadeInAnimation ease 2s;
@@ -160,11 +164,11 @@
   background-color: #6B5F43;
   position: absolute;
   z-index: 2;
-  top: 8rem;
-  left: 25rem;
+  top: 170px;
+  left: 340px;
   font-family: $elcubo3_font_subtitle;
   font-weight: normal;
-  animation: fadeInAnimation ease 2s;
+  animation: fadeInAnimation ease 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 
@@ -261,6 +265,14 @@
   left: 280px;
   top: 170px;
   cursor: pointer;
+  opacity: 0;
+  animation-delay: 14000ms;
+  //-webkit-animation: fadeOut 2s;
+  //animation: fadeOut 2s;
+  animation-name: fadeInAnimation;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 
 
