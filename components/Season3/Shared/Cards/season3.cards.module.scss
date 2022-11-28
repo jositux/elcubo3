@@ -9,11 +9,11 @@
   font-family: $elcubo3_font_subtitle;
   font-weight: normal;
   opacity: 0;
-  animation-delay: 14000ms;
+  //animation-delay: 14000ms;
   //-webkit-animation: fadeOut 2s;
   //animation: fadeOut 2s;
   animation-name: fadeInAnimation;
-  animation-duration: 1s;
+  animation-duration: .5s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 

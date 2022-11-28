@@ -2,7 +2,6 @@ import React, { Fragment, useState, useRef } from 'react';
 import HeaderLineal from 'components/Season3/Dashboard/HeaderLineal';
 import Slider from 'components/Season3/SlickSlider/SlickSlider';
 import VideoModal from 'components/Season2/Shared/Modal/VideoModal';
-import ReactAudioPlayer from 'react-audio-player';
 import styles from './dashboardLineal.module.scss';
 
 const DashboardLineal = () => {
@@ -48,11 +47,7 @@ const DashboardLineal = () => {
       {/* <HeaderLineal /> */}  
 
         <div className={styles.TitleSlides}>
-          <h2>Audio</h2>
-          <audio>
-            <source src="/images/season3/hitos/2/hito2.mp3" type="audio/mpeg" />
-          </audio>
-        
+         
         <div className={styles.fullScreenVideo}>
 
       <a href="/el-cubo/temporada-3/test-2do-nivel">
@@ -62,10 +57,8 @@ const DashboardLineal = () => {
        
         </div>
       
-          <ReactAudioPlayer
-  src="/images/season3/hitos/2/hito2.mp3"
-  controls
-/>
+      
+
         </div>
 
         <section className={styles.SlidesContainer}>

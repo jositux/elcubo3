@@ -456,7 +456,7 @@ const Interactive = ({ episodeJson, interactiveItemsJson, ranking }) => {
     }
   };
 
-  const handleOnLevel2VideoEnd = () => {
+  const handleOnLevel2VideoEnd = (field_ec_description) => {
     setShowLevel2VideoModal(false);
     handleContinueExperience();
     setInteractiveViewed(true);

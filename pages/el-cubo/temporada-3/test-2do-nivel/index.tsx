@@ -62,6 +62,8 @@ const Lineal = () => {
         handlePlayVideo(true);
     };
 
+    const markers =[];
+
 
     return (
         <div>
@@ -83,7 +85,7 @@ const Lineal = () => {
                 showNextButton={false}
                 setPlayer={setPlayer}
                 fullscreen={true}
-                timeMarker={40}
+                markers={markers}
                 showDashboardLineal={false}
                 onClickDashboardLineal={handleOnClickDashboardLineal}
             />

@@ -2,7 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import VideoPlayer from 'components/Season3/VideoPlayer/VideoPlayer';
 import DashboardLinealModal from 'components/Season3/Modal/DashboardLinealModal';
 import UrlUtils from 'utils/Url';
+import VideoModal from 'components/Season3/Modal/VideoModal';
 import styles from './lineal.module.scss'
+
 
 const Lineal = () => {
     // FIXME: Remove/refactor
@@ -43,7 +45,7 @@ const Lineal = () => {
       }
     }, [steal.current, player]);
 
-    let srcVideo = UrlUtils.getVideoUrl('470809');
+    let srcVideo = UrlUtils.getVideoUrl("470809");
 
     const handlePlayVideo = (playVideo) => {
         if (playVideo) {
@@ -62,6 +64,32 @@ const Lineal = () => {
         handlePlayVideo(true);
     };
 
+    const markers = [
+      {
+        time: 10, 
+        text: 'Violencia en Mogotes', 
+      },
+      {
+        time: 40, 
+        text: 'Sin Parroco',      
+      },
+      {
+        time: 60, 
+        text: 'Sin cementerio',    
+      },
+    ];
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleOnPlayVideo = () => {
+      setIsOpen(true) 
+      handlePlayVideo(false);
+    };
+  
+    const handleOnDashboardVideoEnd = () => {
+      setIsOpen(false);
+      handlePlayVideo(true);
+    };
 
     return (
         <div>
@@ -83,10 +111,22 @@ const Lineal = () => {
                 showNextButton={false}
                 setPlayer={setPlayer}
                 fullscreen={true}
-                timeMarker={40}
                 showDashboardLineal
-                onClickDashboardLineal={handleOnClickDashboardLineal}
+                markers = {markers}
+                onClickDashboardLineal={handleOnClickDashboardLineal}   
             />
+
+      <span className={styles.Video2level} onClick={handleOnPlayVideo}>Abrir Video 2 level</span>
+
+      {isOpen &&
+        <div className={styles.fullScreenVideo}>
+          <VideoModal
+            videoId={"475352"}
+            showModal={isOpen}
+            setShowModal={setIsOpen}
+            onVideoEnded={handleOnDashboardVideoEnd} />
+        </div>
+      }
         </div>
     );
 };

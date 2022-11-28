@@ -29,13 +29,13 @@ const ubications = [
   },
 ]
 
-export const Popup = (props:any) => {
+export const Popup = ({...props}) => {
 
-  const {characters} = props;
+  const char = props.characters;
   const [popupSizes, setPopupSizes] = useState(false);
 
   useEffect(() => {
-    characters.forEach( character => {
+    char.forEach( character => {
       ubications.forEach( ubication => {
         if (ubication.name === character.name || ubication.name === character.realName) {
           const popup = document.querySelector(`#${character.name}`) as HTMLElement;
@@ -47,19 +47,25 @@ export const Popup = (props:any) => {
     });
   }, [])
 
-  
   const clickPopupCharacter = () => {
 
   }
 
+  function openPersonajesModal() {
+    props.onClickPersonajesModal();
+  }
+
+  function updatePersonaje(bg: string, name: string, description: string, icon: string) {
+    props.updatePersonaje(bg, name, description, icon);
+  }
+
   return (
     <Fragment>
-      {
-        characters.map( (c, index) => (
+      { 
+        props.characters.map( (c, index) => (
           <div className={`${styles.PopupContainer} ${styles[c.name+`-g`]}`} id={`${c.name}`} key={index}>
-            <div className={styles.titleImage}>
-              <h2>{c.realName}</h2>
-              <img src={`/images/season3/map/popups/popup-${c.name}.png`} className={styles.Popup}  />
+            <div onClick={ () => { updatePersonaje(`${c.background}`, `${c.realName}`, `${c.description}`, `${c.icon}`); openPersonajesModal(); } } className={styles.titleImage}>
+              <img src={c.icon}   className={styles.Popup}  />
             </div>
             <div className={styles.textContent }>
               <h1>{c.realName}</h1>
@@ -74,3 +80,4 @@ export const Popup = (props:any) => {
     </Fragment>
   )
 }
+
