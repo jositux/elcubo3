@@ -6,6 +6,10 @@ import useDetectDevice from 'hooks/useDetectDevice';
 import styles from './map.module.scss';
 import { Cards } from 'components/Season3/Shared/Cards/Cards';
 import { Popup } from 'components/Season3/Shared/Popup/Popup';
+import CloseIconCards from 'components/Season3/Svg/CloseIconCards';
+import HelpIcon from 'components/Season3/Svg/HelpIcon';
+
+
 
 const characters = [
   {
@@ -49,21 +53,40 @@ const map = () => {
   }, [])
   
   
-
   const handleCards = () => {
     const overlay = document.querySelector('#overlay') as HTMLElement;
     overlay.style.display = 'block';
-
+    const scroll = document.querySelector('html,body') as HTMLElement;
+    scroll.style.overflow = 'hidden';
     setIsShowCards(true);
   }
 
   const closeCards = () => {
     const overlay = document.querySelector('#overlay') as HTMLElement;
     overlay.style.display = 'none';
-
+    const scroll = document.querySelector('html,body') as HTMLElement;
+    scroll.style.overflow = 'auto';
     setIsShowCards(false);
   }
 
+  const handleCharacterBackground = (pathBgCharacter = '') => {
+    const characterBackground = document.querySelector('#CharacterBackground') as HTMLElement;
+    const overlay = document.querySelector('#overlay') as HTMLElement;
+
+    if (pathBgCharacter !== '') {
+      characterBackground.style.background = `url(${pathBgCharacter})`;
+      characterBackground.style.zIndex = '3';
+      overlay.style.display = 'block';
+      overlay.style.zIndex = '4';
+    } else {
+      characterBackground.style.background = 'transparent';
+      characterBackground.style.zIndex = '1';
+      overlay.style.display = 'none';
+      overlay.style.zIndex = '3';
+    }
+  }
+
+  
   return (
     <Fragment>
       <Head>
@@ -75,17 +98,30 @@ const map = () => {
 
       <Header />
 
-      <div className={styles.overlay} id='overlay'>
-        {
-          isShowCards ? <Cards closeCards={closeCards} /> : ''
-        }
-      </div>
+      <div className={styles.overlay} id='overlay'></div>
+      {
+        isShowCards 
+          ? ( <>
+                <div className={styles.CloseIconCards} onClick={closeCards}>
+                  <CloseIconCards />
+                </div>
+                <Cards closeCards={closeCards} />
+              </> ) 
+          : ( <>
+                <div className={styles.HelpIcon} onClick={handleCards}>
+                  <HelpIcon />
+                </div>
+              </> )  
+      }
       <div className={styles.MapContainer}>
-        <div className={styles.CharacterBackground}>
-          
-          <Popup characters={characters} />
+        <div className={styles.CharacterBackground} id='CharacterBackground'></div>
+          <img src="/images/season3/logo-caminos-de-jordan.png" alt="logo-mapa" className={styles.logoMap}/>
 
-        </div>
+          <Popup 
+            characters={characters} 
+            handleCharacterBackground={handleCharacterBackground} 
+          />
+        
       </div>
 
       <Footer />

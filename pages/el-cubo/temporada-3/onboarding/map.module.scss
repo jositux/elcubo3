@@ -3,15 +3,18 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: calc(89vw - 638px);
-  margin-top: 0px;
+  height: calc(89vw - 650px);
+  margin-top: -40px;
   padding: 0;
 }
 
 .CharacterBackground {
   width: 100%;
-  height: 100%;
-  background-color: transparent;
+  height: calc(89vw - 650px);
+  background-repeat: no-repeat;
+  background: transparent;
+  position: absolute;
+  z-index: 1;
 }
 
 .overlay {
@@ -24,5 +27,31 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0,0,0,0.5);
-  z-index: 1;
+  z-index: 3;
+}
+
+.CloseIconCards{
+  position: relative;
+  z-index: 3;
+  left: 24.8vw;
+  top: 5.5vh;
+  cursor: pointer;
+  width: 45px;
+}
+
+.HelpIcon {
+  position: relative;
+  z-index: 3;
+  left: 24.8vw;
+  top: 5.5vh;
+  cursor: pointer;
+  width: 45px;
+}
+
+.logoMap {
+  width: 180px;
+  position: absolute;
+  top: 13.5vh;
+  left: 14.5vw;
+  z-index: 2;
 }

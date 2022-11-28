@@ -9,8 +9,8 @@ const Header = () => {
   return (
     <Fragment>
       <RTVCGlobalStyles />
-      <header id="mainMenu" className="flrEJCS3">
-        <div className="resizecontainer OrHeader__Menu-sc-1x6b4le-2 gJJULp">
+      <header>
+        <div className="resizecontainer OrHeader__Menu-sc-1x6b4le-2 gJJULpS3">
           <div className={styles.logosContainer}>
             <a className={styles.logoRTVCplay} href="https://www.rtvcplay.co/">
               <img

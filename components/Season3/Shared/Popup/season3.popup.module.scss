@@ -6,7 +6,7 @@
   width: 80px;
 }
 
-.soledad-g {
+.soledadPopupBig {
   top: 290px!important;
   left: 730px!important;
 
@@ -15,46 +15,41 @@
   }
 }
 
-
-/* .diego-g {
+.diegoPopupBig {
   top: 485px!important;
   left: 830px!important;
 
   img {
     width: 190px;
   }
-} */
+}
 
-/* .juandejesus-g {
+.juandejesusPopupBig {
   top: 625px !important;
   left: 990px !important;
 
   img {
     width: 190px;
   }
-} */
+}
 
-
-/* .guillermo-g {
+.guillermoPopupBig {
   top: 830px !important;
   left: 1030px !important;
 
   img {
     width: 190px;
   }
-}  */
+}
 
-
-/* .jenny-g {
-  top: 75px !important;
+.jennyPopupBig {
+  top: 105px !important;
   left: 1360px !important;
   
   img {
     width: 190px;
   }
-}  */
-
-
+} 
 
 .titleImage {
   h2 {
@@ -63,7 +58,6 @@
     text-align: center;
   }
 }
-
 
 .textContent {
   width: 255px;
@@ -88,19 +82,46 @@
     font-weight: 300;
     font-family: $elcubo3_font_subtitle;
     line-height: 130%;
-    margin: 15px 0;
+    margin: 15px 0 30px 0;
   }
 
-  button {
+  a {
     width: 200px;
     height: 45px;
     background-color: #E2B857;
     border: none;
+    padding: 12px 24px;
+    text-decoration: none;
 
     span {
       text-transform: uppercase;
       color: #402A04;
     }
   }
+}
 
+.btnCloseBackgroundCharacter {
+  position: absolute;
+  top: 15vh;
+  left: 16vw;
+  display: none;
+  width: 150px;
+  height: 45px;
+  background: transparent;
+  border: none;
+  justify-content: center;
+  z-index: 5;
+  cursor: pointer;
+
+  p {
+    font-size: 20px;
+    justify-content: center;
+    width: 60px;
+    margin: 9px 0 0 4px;
+    color: #ffffff;
+    font-family: $elcubo3_font_subtitle;
+    font-weight: 100;
+    line-height: 130%;
+    letter-spacing: 0.24%;
+  }
 }

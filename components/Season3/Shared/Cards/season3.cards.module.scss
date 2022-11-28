@@ -3,9 +3,9 @@
   height: 155px;
   background-color: #6B5F43;
   position: absolute;
-  z-index: 2;
-  top: 8rem;
-  left: 25rem;
+  z-index: 3;
+  top: 14vh;
+  left: 28vw;
   font-family: $elcubo3_font_subtitle;
   font-weight: normal;
 
@@ -57,9 +57,9 @@
   height: 180px;
   background-color: #6B5F43;
   position: absolute;
-  z-index: 2;
-  top: 8rem;
-  left: 25rem;
+  z-index: 3;
+  top: 14vh;
+  left: 28vw;
   font-family: $elcubo3_font_subtitle;
   font-weight: normal;
 
@@ -150,11 +150,12 @@
   height: 570px;
   background-color: #6B5F43;
   position: absolute;
-  z-index: 2;
-  top: 8rem;
-  left: 25rem;
+  z-index: 3;
+  top: 14vh;
+  left: 28vw;
   font-family: $elcubo3_font_subtitle;
   font-weight: normal;
+
 
   .TextContent {
     padding: 4px; 
@@ -242,10 +243,3 @@
   }
 }
 
-.CloseIconCards{
-  position: relative;
-  z-index: 2;
-  left: 335px;
-  top: 130px;
-  cursor: pointer;
-}

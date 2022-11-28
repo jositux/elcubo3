@@ -23,10 +23,6 @@ export const Cards = ({ closeCards }) => {
 
   return (
     <Fragment>
-      <div className={styles.CloseIconCards} onClick={closeCards}>
-        <CloseIconCards />
-      </div>
-      
       {
         card == 1 
           ? (

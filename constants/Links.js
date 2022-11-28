@@ -16,6 +16,7 @@ const profile = `${base_url}/mi-perfil`;
 const guest = '/el-cubo/temporada-1/guest';
 const characters = '/el-cubo/temporada-1/personajes';
 const notFound = `/el-cubo/404`;
+const testVideo = `/el-cubo/temporada-3/test`;
 
 const cronoReward = (character) => {
     const charName = NameUtils.getCharacterName(character);
@@ -37,5 +38,6 @@ export default {
     logoutTemp2,
     logoutCharacters,
     logoutSelector,
-    profile
+    profile,
+    testVideo
 };
