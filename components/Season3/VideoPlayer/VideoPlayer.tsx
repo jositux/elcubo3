@@ -18,7 +18,7 @@ const VideoPlayer = ({
   autoPlay,
   showDashboard = false,
   showDashboardLineal = false,
-  timeMarker,
+  markers,
   onClickDashboard,
   onClickDashboardLineal,
   showPrevButton = true,
@@ -324,6 +324,7 @@ const VideoPlayer = ({
   }, [title]);
 
 
+  // Add Markers
   React.useEffect(() => {
     let video_duration = 1800;
 
@@ -350,14 +351,13 @@ const VideoPlayer = ({
       }
     }
 
-    if (timeMarker && video_duration > 0) {
-      //setTime(timeMarker);
-      addMarker('marker', '10', 'Violencia en Mogotes');
-      addMarker('marker', '40', 'Sin Parroco');
-      addMarker('marker', '60', 'Sin cementerio');
-    }
 
-  }, [timeMarker]);
+    /* Add markers */
+    markers.map( (c, index) => (
+      addMarker('marker', c.time, c.text)
+    ))
+
+  }, [markers]);
 
 
   React.useEffect(() => {

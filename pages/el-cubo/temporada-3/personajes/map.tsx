@@ -4,41 +4,62 @@ import Header from 'components/Season3/Header/Header';
 import Footer from 'components/Footer/Footer';
 import useDetectDevice from 'hooks/useDetectDevice';
 import styles from './map.module.scss';
+import PersonajesModal from 'components/Season3/Modal/Personajes/PersonajesModal';
 import { Cards } from 'components/Season3/Shared/Cards/Cards';
-import { Popup } from 'components/Season3/Shared/Popup/Popup';
+import { Popup } from 'components/Season3/Shared/PersonajeSelector/Popup';
+import CloseIconCards from 'components/Season3/Svg/CloseIconCards';
+import Help from 'components/Season3/Svg/Help';
+import cx from 'classnames';
 
 const characters = [
   {
     name:'soledad', 
     realName: 'Soledad', 
     description: '“Los cambios siempre dan miedo, pero hay que hacerlos con miedos y todo“',
+    background: '/images/season3/steals/personaje-soledad.jpg',
+    icon :'/images/season3/map/popups/popup-soledad.png',
   },
   {
     name:'diego', 
     realName: 'Diego', 
     description: '“Para lograr las cosas primero hay que soñarlas“',
+    background: '/images/season3/steals/personaje-diego.jpg',
+    icon :'/images/season3/map/popups/popup-diego.png',
   },
   {
     name:'juandejesus', 
     realName: 'Juan de Jesús', 
     description: '“Uno busca su misión en la vida, pero a veces es la propia misión la que a uno lo encuentra“',
+    background: '/images/season3/steals/personaje-juan.jpg',
+    icon :'/images/season3/map/popups/popup-juandejesus.png',
   },
   {
     name:'jenny', 
     realName: 'Jenny', 
     description: '“Viajando se conoce la libertad“',
+    background: '/images/season3/steals/personaje-jenny.jpg',
+    icon :'/images/season3/map/popups/popup-jenny.png',
   },
   {
     name:'guillermo', 
     realName: 'Guillermo', 
     description: '“Y si algún día me separo de María, espero encontrarla del otro lado“',
+    background: '/images/season3/steals/personaje-guillermo.jpg',
+    icon :'/images/season3/map/popups/popup-guillermo.png',
   },
 ];
 
 const map = () => {
 
   const { isMobile } = useDetectDevice();
-  const [isShowCards, setIsShowCards] = useState(true);
+  const [isShowCards, setIsShowCards] = useState(false);
+
+  const [showPersonajesModal, setShowPersonajesModal] = useState(false);
+  const [background, setBackground] = useState('/images/season3/steals/0-home-steal-desktop.jpg');
+  const [name, setName] = useState('');
+  const [description, setDescription] = useState('');
+  const [icon, setIcon] = useState('');
+
 
   useEffect(() => {
 
@@ -48,21 +69,59 @@ const map = () => {
     
   }, [])
   
-  
-
   const handleCards = () => {
     const overlay = document.querySelector('#overlay') as HTMLElement;
     overlay.style.display = 'block';
-
     setIsShowCards(true);
   }
 
   const closeCards = () => {
     const overlay = document.querySelector('#overlay') as HTMLElement;
     overlay.style.display = 'none';
-
+    
     setIsShowCards(false);
+    fadeOutEffect(overlay);
   }
+
+  const toggleCards = () => { 
+    if(!isShowCards) {
+      handleCards();
+    }
+    else {
+      closeCards();
+    }
+  }
+
+  const handleOnClickPersonajesModal = () => {
+    setShowPersonajesModal(true);
+  };
+
+  const handleOnClosePersonajesModal = () => {
+    setShowPersonajesModal(false);
+  };
+
+  function updatePersonaje(background, name, description, icon) {
+    setBackground(background);
+    setName(name);
+    setDescription(description);
+    setIcon(icon);
+    console.log(icon);
+  }
+
+
+  function fadeOutEffect(el) {
+    var fadeEffect = setInterval(function () {
+        if (!el.style.opacity) {
+            el.style.opacity = 1;
+        }
+        if (el.style.opacity > 0) {
+            el.style.opacity -= 0.1;
+        } else {
+            clearInterval(fadeEffect);
+        }
+    }, 2000);
+}
+
 
   return (
     <Fragment>
@@ -74,9 +133,18 @@ const map = () => {
       </Head>
 
       <Header />
+      <PersonajesModal
+            background={background}
+            name = {name}
+            description = {description}
+            icon = {icon}
+            showPersonajesModal={showPersonajesModal}
+            onClosePersonajesModal={handleOnClosePersonajesModal}
+      />
+      
       <video className={styles.VideoOverlay} autoPlay loop playsInline muted>
           <source src="/videos/intro_season3c.mp4" type="video/mp4" />
-        </video>  
+      </video>  
       <div className={styles.overlay} id='overlay'>
         {
           isShowCards ? <Cards closeCards={closeCards} /> : ''
@@ -86,14 +154,20 @@ const map = () => {
       <div id="LogoSeason" className={styles.LogoSeason}>
         <img src="/images/season3/logo-caminos-de-jordan.png" />
       </div>
+      
+      <div className={`${!isShowCards ? cx(styles.HelpIcon) : cx(styles.HelpIcon)}` } onClick={toggleCards}>
+      {
+      isShowCards ? <CloseIconCards /> : <Help />
+      }
+      </div>
         <img className={styles.MapImage} src="/images/season3/map/jordan-map-bg.png" />
       
         <div className={styles.CharacterBackground}>
           
-          <Popup characters={characters} />
+          <Popup characters={characters} onClickPersonajesModal={ handleOnClickPersonajesModal } updatePersonaje={ updatePersonaje }  />
 
         </div>
-      </div>
+      </div>  
 
       <Footer />
     </Fragment>

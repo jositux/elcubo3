@@ -4,7 +4,6 @@ import ArrowNext from 'components/Season3/Svg/ArrowNext';
 import ArrowPrevious from 'components/Season3/Svg/ArrowPrevious';
 import CloseIconCards from 'components/Season3/Svg/CloseIconCards';
 
-
 export const Cards = ({ closeCards }) => {
 
   const [card, setCard] = useState(1)
@@ -21,9 +20,9 @@ export const Cards = ({ closeCards }) => {
 
   return (
     <Fragment>
-      <div className={styles.CloseIconCards} onClick={closeCards}>
+      {/*<div className={styles.CloseIconCards} onClick={closeCards}>
         <CloseIconCards />
-      </div>
+  </div>*/}
       
       {
         card == 1 
