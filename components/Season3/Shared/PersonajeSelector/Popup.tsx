@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react';
 import styles from './season3.popup.module.scss';
+import cx from 'classnames';
 
 const ubications = [
   {
@@ -34,7 +35,20 @@ export const Popup = ({...props}) => {
   const char = props.characters;
   const [popupSizes, setPopupSizes] = useState(false);
 
+  const [isViewed, setViewed] = useState(false);
+
+
+  console.log(props.refered)
+
   useEffect(() => {
+
+    if (props.refered == "viewed") {
+      setViewed(true);
+    }
+    else {
+      setViewed(false);
+    }
+
     char.forEach( character => {
       ubications.forEach( ubication => {
         if (ubication.name === character.name || ubication.name === character.realName) {
@@ -63,7 +77,7 @@ export const Popup = ({...props}) => {
     <Fragment>
       { 
         props.characters.map( (c, index) => (
-          <div className={`${styles.PopupContainer} ${styles[c.name+`-g`]}`} id={`${c.name}`} key={index}>
+          <div className={`${styles.PopupContainer} ${styles[c.name+`-g`]} ${!isViewed ? cx(styles.FirstTime) : cx(styles.Viewed)}`} id={`${c.name}`} key={index}>
             <div 
             onMouseEnter={ () => { updatePersonaje(`${c.background}`, `${c.realName}`, `${c.description}`, `${c.icon}`); openPersonajesModal(); }} 
             onClick={ () => { updatePersonaje(`${c.background}`, `${c.realName}`, `${c.description}`, `${c.icon}`); openPersonajesModal(); } } 
