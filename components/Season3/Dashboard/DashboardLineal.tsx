@@ -1,38 +1,17 @@
 import React, { Fragment, useState, useRef } from 'react';
-import HeaderLineal from 'components/Season3/Dashboard/HeaderLineal';
-import Slider from 'components/Season3/SlickSlider/SlickSlider';
-import VideoModal from 'components/Season2/Shared/Modal/VideoModal';
+import VideoModal from 'components/Season3/Modal/VideoModal';
 import styles from './dashboardLineal.module.scss';
 
 const DashboardLineal = () => {
-
-  const slides = [
-    {
-      title: 'Slide 0',
-      image: '/images/season3/hitos/2/0.jpg'
-    },
-    {
-      title: 'Slide 1',
-      image: '/images/season3/hitos/2/1.jpg'
-    },
-    {
-      title: 'Slide 2',
-      image: '/images/season3/hitos/2/2.jpg'
-    },
-    {
-      title: 'Slide 3',
-      image: '/images/season3/hitos/2/3.jpg'
-    }
-  ];
-
   const ref = useRef();
 
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOnPlayVideo = () => {
-    if (ref && ref.current ) {
+
+    //if (ref && ref.current ) {
       setIsOpen(true)
-    }
+    //}
   };
 
   const handleOnDashboardVideoEnd = () => {
@@ -46,27 +25,19 @@ const DashboardLineal = () => {
 
       {/* <HeaderLineal /> */}  
 
-        <div className={styles.TitleSlides}>
-         
-        <div className={styles.fullScreenVideo}>
-
-      <a href="/el-cubo/temporada-3/test-2do-nivel">
-        <span>ABRIR Video 2do nivel</span>
-      </a>
-
-       
-        </div>
-      
-      
-
-        </div>
-
-        <section className={styles.SlidesContainer}>
-          <Slider slides={slides} />
-        </section>
+       <img onClick={handleOnPlayVideo} className={styles.ImgSimulate} src="/images/season3/map/grupo.png" />
 
       </div>
 
+      {isOpen &&
+        <div className={styles.fullScreenVideo}>
+          <VideoModal
+            videoId={"475352"}
+            showModal={isOpen}
+            setShowModal={setIsOpen}
+            onVideoEnded={handleOnDashboardVideoEnd} />
+        </div>
+      }
 
 
     </>

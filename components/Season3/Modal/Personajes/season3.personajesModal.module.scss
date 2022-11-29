@@ -92,9 +92,9 @@
 
 .ContainerCharacter {
   position: absolute;
-  width: 480px;
-  left: 50%;
-  top: 10%;
+  width: 300px;
+  right: 38%;
+  top: 40%;
   z-index: 2;
   display: flex;
   gap: 0px;
@@ -115,6 +115,7 @@
     font-weight: 300;
     font-size: 22px;
     text-transform: uppercase;
+    text-decoration: none;
     color: #402A04;
     background: #E2B857;
     padding: 15px 40px 15px 16px;
@@ -126,7 +127,7 @@
       right: 5px;
     }
   }
-  .column:nth-child(1) {
+  /*.column:nth-child(1) {
     width: 40%;
     img {
       width: 97%;
@@ -134,7 +135,7 @@
   }
   .column:nth-child(2) {
     width: 60%;
-  }
+  }*/
 }
 
 .t_close:after,

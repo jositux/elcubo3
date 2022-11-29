@@ -105,7 +105,6 @@ const map = () => {
     setName(name);
     setDescription(description);
     setIcon(icon);
-    console.log(icon);
   }
 
 
@@ -160,7 +159,7 @@ const map = () => {
       isShowCards ? <CloseIconCards /> : <Help />
       }
       </div>
-        <img className={styles.MapImage} src="/images/season3/map/jordan-map-bg.png" />
+        <img className={styles.MapImage} src="/images/season3/map/jordan-map-bg.jpg" />
       
         <div className={styles.CharacterBackground}>
           

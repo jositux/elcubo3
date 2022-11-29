@@ -1,9 +1,13 @@
 .PopupContainer {
   display: flex;
+  cursor: pointer;  
 }
 
 .Popup {
   width: 5vw;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .soledad-g {

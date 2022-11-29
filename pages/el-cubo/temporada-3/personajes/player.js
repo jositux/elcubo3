@@ -114,7 +114,7 @@ const player = () => {
           // ...
         ]}
       />
-      {/*<AudioWave audio="/audios/season3/hito2.mp3" />*/}
+      <AudioWave audio="/audios/season3/hito2.mp3" />
       <Swiper
         effect={"cards"}
         grabCursor={true}
@@ -150,7 +150,7 @@ const player = () => {
       </Swiper>
      
 
-    {/*<div className="slide-container">
+    <div className="slide-container">
       <Fade {...fadeOutProperties}>
         {fadeImages.map((fadeImage, index) => (
           <div className="each-fade" key={index}>
@@ -161,7 +161,7 @@ const player = () => {
           </div>
         ))}
         </Fade>
-        </div>*/}
+      </div>
 
       <Footer />
     </Fragment>
