@@ -34,13 +34,13 @@ const PersonajesModal = ({ ...props }) => {
           </p>
           <img className={styles.imgCover} src={props.background} />
           <div className={styles.ContainerCharacter}>
-            <div className={styles.column}>
+            {/*<div className={styles.column}>
             <img src={props.icon}  />
-            </div>
+  </div>*/}
             <div className={styles.column}>
               <h2>{props.name}</h2>
               <p>{props.description}</p>
-              <a>INICIAR EXPERIENCIA
+              <a href="/el-cubo/temporada-3/juan-de-jesus">INICIAR EXPERIENCIA
                 <PersonajeArrow />
               </a>
             </div>

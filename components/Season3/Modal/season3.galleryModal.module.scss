@@ -1,26 +1,64 @@
 .containerCover {
-  width: 100%;
+  /*width: 100%;
   height: 100vh;
   max-width: 100%;
   overflow-x: hidden;
   display: flex;
   font-family: $elcubo3_font_title;
   background: rgba(0, 0, 0, 0.7);
-  background: url(/images/season3/steals/0-dashboard.jpg) top center no-repeat black;
   position: absolute;
   top: 0;
-  right: 0; //opacity: 0;
+  right: 100; //opacity: 0;*/
 }
+
+.imgGallery {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+}
+
+.ContainerContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  .Content {
+    display: flex;
+    position: relative;
+    padding: 180px 80px;
+    .Column:nth-child(1){
+      width: 30%;
+      h2 {
+        font-family: $elcubo3_font_title;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 34px;
+      }
+      p {
+        font-family: $elcubo3_font_subtitle;
+        font-weight: 300;
+        font-size: 18px;
+      }
+    }
+    .Column:nth-child(2){
+      width: 70%;
+    }
+  }
+}
+
+
+
 
 .containerCover .container {
   position: absolute;
-  top: 0;
   right: 0;
   z-index: 100;
-  height: 100vh;
-  overflow: scroll;
+  height: calc(100vh - 50px);
+  overflow: hidden;
   width: 100%;
-  right: -100%;
+  bottom: -100%;
   transition: 0.8s all ease;
   @media screen and (max-width: 960px) {
     width: 100%;
@@ -32,7 +70,7 @@
 }
 
 .containerCover.open .container {
-  right: 0;
+  bottom: 0;
 }
 
 .child {
@@ -83,36 +121,25 @@
 }
 
 .t_close {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
+  display: flex;
+  position: absolute;
   z-index: 99;
   height: 60px;
-  width: 60px;
-  right: 20px;
-  top: 20px;
+  width: 100%;
+  top: 0px;
   padding: 0;
   margin: 0;
-  transform: rotate(45deg);
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  /* gradient */
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.332812) 42.71%, rgba(0, 0, 0, 0) 100%);
+  mix-blend-mode: luminosity;
 }
 
-.t_close:after,
-.t_close:before {
-  content: '';
-  display: block;
+.OpenZoom {
   position: absolute;
-  background-color: white;
-  border-radius: 3px;
-}
-
-.t_close:after {
-  width: 2px;
-  height: 32px;
-}
-
-.t_close:before {
-  width: 32px;
-  height: 2px;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
 }

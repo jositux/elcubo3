@@ -1,8 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import VideoPlayer from 'components/Season3/VideoPlayer/VideoPlayer';
 import DashboardLinealModal from 'components/Season3/Modal/DashboardLinealModal';
-import UrlUtils from 'utils/Url';
+import GalleryModal from 'components/Season3/Modal/GalleryModal';
+import AudioModal from 'components/Season3/Modal/AudioModal';
 import VideoModal from 'components/Season3/Modal/VideoModal';
+import Pulse from 'components/Season3/Shared/Pulse/Pulse';
+import UrlUtils from 'utils/Url';
 import styles from './lineal.module.scss'
 
 
@@ -91,15 +94,41 @@ const Lineal = () => {
       handlePlayVideo(true);
     };
 
+    const [isOpenGallery, setIsOpenGallery] = useState(false);
+
+    const handleOnOpenGalleryModal = () => {
+      setIsOpenGallery(true);
+      handlePlayVideo(false);
+    };
+
+    const handleOnCloseGalleryModal = () => {
+      setIsOpenGallery(false);
+      handlePlayVideo(true);
+    };
+
+
+    const [isOpenAudio, setIsOpenAudio] = useState(false);
+
+    const handleOnOpenAudioModal = () => {
+      setIsOpenAudio(true);
+      handlePlayVideo(false);
+    };
+
+    const handleOnCloseAudioModal = () => {
+      setIsOpenAudio(false);
+      handlePlayVideo(true);
+    };
+  
+
     return (
-        <div>
+        <div className={styles.NodeContainer}>
             <DashboardLinealModal
                 showModal={showDashboardModal}
                 onCloseDashboard={handleOnCloseDashboardLineal}
             />
             <div ref={steal} className={styles.steal}>
-                <img className={styles.stealDesktop} src="/images/season3/steals/0-juan-desktop.jpg" />
-                <img className={styles.stealMobile} src="/images/season3/steals/0-juan-mobile.jpg" />
+                <img className={styles.stealDesktop} src="/images/season3/steals/personaje-juan.jpg" />
+                <img className={styles.stealMobile} src="/images/season3/steals/personaje-juan.jpg" />
             </div>
             <VideoPlayer
                 showBackButton
@@ -118,6 +147,19 @@ const Lineal = () => {
 
       <span className={styles.Video2level} onClick={handleOnPlayVideo}>Abrir Video 2 level</span>
 
+      <span className={styles.Gallery2level} onClick={handleOnOpenGalleryModal}>Abrir Gallery 2 level</span>
+
+      <span className={styles.Audio2level} onClick={handleOnOpenAudioModal}>Abrir Audio 2 level</span>
+
+      <Pulse 
+            onClick={() => alert('Enlace a otro personaje')}
+            x={80}
+            y={50}
+            xMobile={80}
+            yMobile={50}
+            text={'Texto'}
+      />
+
       {isOpen &&
         <div className={styles.fullScreenVideo}>
           <VideoModal
@@ -127,7 +169,19 @@ const Lineal = () => {
             onVideoEnded={handleOnDashboardVideoEnd} />
         </div>
       }
-        </div>
+
+      
+        <GalleryModal
+            showGalleryModal={isOpenGallery}
+            onCloseGalleryModal={handleOnCloseGalleryModal} 
+            />
+
+          <AudioModal
+            showAudioModal={isOpenAudio}
+            onCloseAudioModal={handleOnCloseAudioModal} 
+            />
+      
+    </div>
     );
 };
 

@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
+import styles from './season3.audiowave.module.scss';
 
 const formWaveSurferOptions = (ref) => ({
   container: ref,
-  waveColor: "green",
-  progressColor: "#0178FF",
-  cursorColor: "OrangeRed",
+  waveColor: "#FFFFFF",
+  progressColor: "#4F3C17",
+  cursorColor: "#4F3C17",
   barWidth: 1,
   barGap: 2,
   barRadius: 3,
@@ -49,10 +50,12 @@ const AudioWave = ({audio = "default.mp3"}) => {
   };
 
   return (
-    <div>
-      <div id="waveform" ref={waveformRef} />
-      <div className="controls">
-        <div onClick={handlePlayPause}>{!playing ? "paus" : "play"}</div>
+    <div className={styles.WaveContainer}>
+      <div className={styles.Content}>
+        <div className="controls">
+          <div className={styles.Play} onClick={handlePlayPause}>{!playing ? "paus" : "play"}</div>
+        </div>
+        <div id="waveform" ref={waveformRef} />
       </div>
     </div>
   );

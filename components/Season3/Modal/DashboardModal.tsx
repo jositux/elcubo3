@@ -1,6 +1,6 @@
 import React from "react";
 import Dashboard from 'components/Season2/Dashboard/Dashboard';
-import styles from './season2.dashboardModal.module.scss';
+import styles from './season3.dashboardModal.module.scss';
 
 const DashboardModal = ({ showModal, onCloseDashboard }) => {
 

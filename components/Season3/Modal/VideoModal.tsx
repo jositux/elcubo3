@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
-import VideoPlayer from 'components/Season2/VideoPlayer/VideoPlayer';
+import VideoPlayer from 'components/Season3/VideoPlayer/VideoPlayer';
 import UrlUtils from 'utils/Url';
 import disableScroll from 'disable-scroll';
-import styles from './season2.videoModal.module.scss';
+import styles from './season3.videoModal.module.scss';
+
 
 const VideoModal = ({ videoId, showModal, setShowModal, onVideoEnded, autoPlay }) => {
 
   const [player, setPlayer] = useState(null);
   const srcVideo = UrlUtils.getVideoUrl(videoId);
+
+  const markers = [];
 
   useEffect(() => {
     disableScroll.on();
@@ -24,17 +27,19 @@ const VideoModal = ({ videoId, showModal, setShowModal, onVideoEnded, autoPlay }
   }
 
   return (
-    <div className={`${styles.containerCover} ${styles.containerVideoModal} ${showModal ? styles.open : ""}`}>
-      <div className={`${styles.container} ${styles.fadeIn}`}>
+
+    <div id="container" className={`${styles.containerCover} ${showModal ? styles.open : ""}`}>
+      <div className={styles.container}>
         <div className={styles.child}>
-          <p className={styles.t_close} onClick={() => handleCloseVideo()}>
+          <p className={styles.t_close} onClick={handleCloseVideo}>
           </p>
           <VideoPlayer
             title={""}
             source={srcVideo}
             showPrevButton={false}
             showNextButton={false}
-            setPlayer={setPlayer}
+            setPlayer={setPlayer} 
+            markers = {markers}
             onVideoEnded={onVideoEnded}
             fullscreen={false}
             autoPlay={autoPlay}
@@ -42,6 +47,7 @@ const VideoModal = ({ videoId, showModal, setShowModal, onVideoEnded, autoPlay }
         </div>
       </div>
     </div>
+    
   );
 };
 

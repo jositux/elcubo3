@@ -64,7 +64,12 @@ export const Popup = ({...props}) => {
       { 
         props.characters.map( (c, index) => (
           <div className={`${styles.PopupContainer} ${styles[c.name+`-g`]}`} id={`${c.name}`} key={index}>
-            <div onClick={ () => { updatePersonaje(`${c.background}`, `${c.realName}`, `${c.description}`, `${c.icon}`); openPersonajesModal(); } } className={styles.titleImage}>
+            <div 
+            onMouseEnter={ () => { updatePersonaje(`${c.background}`, `${c.realName}`, `${c.description}`, `${c.icon}`); openPersonajesModal(); }} 
+            onClick={ () => { updatePersonaje(`${c.background}`, `${c.realName}`, `${c.description}`, `${c.icon}`); openPersonajesModal(); } } 
+            className={styles.titleImage}
+            style={{cursor:"pointer"}}
+            >
               <img src={c.icon}   className={styles.Popup}  />
             </div>
             <div className={styles.textContent }>

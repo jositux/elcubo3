@@ -122,13 +122,13 @@ export const VideoPlayerWrapper = styled.div`
 
   .plyr__portal__title {
     color: white;
-    font-family: Inter;
+    font-family: "Roboto Serif", serif;
     font-size: 2.3rem;
     letter-spacing: -1px;
     font-weight: 500;
     position: absolute;
-    left: 20px;
-    top: 10vh;
+    left: 25px;
+    top: 5vh;
     z-index: 100;
   }
 
@@ -230,6 +230,9 @@ export const VideoPlayerWrapper = styled.div`
  {
   transform-origin: top left;
   transform: rotate(-90deg);
+  font-family: 'Roboto Condensed', serif;
+  text-transform: uppercase;
+  font-weight: 300; 
 }
 
 .marker span {
