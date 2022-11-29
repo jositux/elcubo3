@@ -132,28 +132,28 @@
 
 
 
-  .PopupContainer:nth-child(1){
+  .PopupContainer.FirstTime:nth-child(1){
     .Popup {
     animation-delay: 11s;
     }
   }
-  .PopupContainer:nth-child(2){
+  .PopupContainer.FirstTime:nth-child(2){
     .Popup{
       animation-delay: 11.2s;
     }
   }
-  .PopupContainer:nth-child(3){
+  .PopupContainer.FirstTime:nth-child(3){
     .Popup{
       animation-delay: 11.4s;
     }
   }
-  .PopupContainer:nth-child(4){
-    .Popup{
+  .PopupContainer.FirstTime:nth-child(4){
+    .Popup {
       animation-delay: 11.6s;
     }
   }
-  .PopupContainer:nth-child(5){
-    .Popup{
+  .PopupContainer.FirstTime:nth-child(5){
+    .Popup {
       animation-delay: 11.8s;
     }
   }

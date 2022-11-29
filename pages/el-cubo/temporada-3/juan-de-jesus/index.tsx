@@ -46,6 +46,7 @@ const Lineal = () => {
       if (steal?.current && player) {
         onLoadFadeout();
       }
+
     }, [steal.current, player]);
 
     let srcVideo = UrlUtils.getVideoUrl("470809");
@@ -119,6 +120,7 @@ const Lineal = () => {
       handlePlayVideo(true);
     };
   
+    
 
     return (
         <div className={styles.NodeContainer}>
@@ -132,7 +134,7 @@ const Lineal = () => {
             </div>
             <VideoPlayer
                 showBackButton
-                backButtonLink={""}
+                backButtonLink={"/el-cubo/temporada-3/personajes/map?ref=view"}
                 backButtonText={"Volver"}
                 title={"Juan de Jesús"}
                 source={srcVideo}

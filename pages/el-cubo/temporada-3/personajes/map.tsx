@@ -9,6 +9,7 @@ import { Cards } from 'components/Season3/Shared/Cards/Cards';
 import { Popup } from 'components/Season3/Shared/PersonajeSelector/Popup';
 import CloseIconCards from 'components/Season3/Svg/CloseIconCards';
 import Help from 'components/Season3/Svg/Help';
+import { useRouter } from "next/router";
 import cx from 'classnames';
 
 const characters = [
@@ -60,6 +61,7 @@ const map = () => {
   const [description, setDescription] = useState('');
   const [icon, setIcon] = useState('');
 
+  const { query } = useRouter(); 
 
   useEffect(() => {
 
@@ -141,9 +143,12 @@ const map = () => {
             onClosePersonajesModal={handleOnClosePersonajesModal}
       />
       
+      { 
+      !query.ref && 
       <video className={styles.VideoOverlay} autoPlay loop playsInline muted>
           <source src="/videos/intro_season3c.mp4" type="video/mp4" />
-      </video>  
+      </video>
+      }
       <div className={styles.overlay} id='overlay'>
         {
           isShowCards ? <Cards closeCards={closeCards} /> : ''
@@ -163,7 +168,7 @@ const map = () => {
       
         <div className={styles.CharacterBackground}>
           
-          <Popup characters={characters} onClickPersonajesModal={ handleOnClickPersonajesModal } updatePersonaje={ updatePersonaje }  />
+          <Popup characters={characters} onClickPersonajesModal={ handleOnClickPersonajesModal } updatePersonaje={ updatePersonaje } refered={!query.ref ? "first" : "viewed" } />
 
         </div>
       </div>  
