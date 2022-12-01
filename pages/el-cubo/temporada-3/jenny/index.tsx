@@ -13,6 +13,8 @@ const Lineal = () => {
     // FIXME: Remove/refactor
     const [showDashboardModal, setShowDashboardModal] = useState(false);
 
+    //const [showAudioModal, setShowAudioModal] = useState(false);
+
     const [player, setPlayer] = useState(null);
 
     const steal = useRef(null);
@@ -49,7 +51,7 @@ const Lineal = () => {
 
     }, [steal.current, player]);
 
-    let srcVideo = UrlUtils.getVideoUrl("470809");
+    let srcVideo = UrlUtils.getVideoUrl("477146");
 
     const handlePlayVideo = (playVideo) => {
         if (playVideo) {
@@ -70,24 +72,20 @@ const Lineal = () => {
 
     const markers = [
       {
-        time: 1163, 
-        text: 'Violencia en Mogotes', 
+        time: 500, 
+        text: 'Origen de la familia Delgado', 
       },
       {
-        time: 709, 
-        text: 'Jordan Sin Parroco',      
+        time: 400, 
+        text: 'Educación en la ruralidad',      
       },
       {
-        time: 566, 
-        text: 'Jordan Sin cementerio',    
+        time: 300, 
+        text: 'Las personas en el campo',    
       },
       {
-        time: 323, 
-        text: 'Una misa solo',    
-      },
-      {
-        time: 60, 
-        text: 'Santa Rosa, Patrona de Jordan',    
+        time: 100, 
+        text: 'Las señoritas',    
       },
     ];
 
@@ -137,14 +135,14 @@ const Lineal = () => {
                 onCloseDashboard={handleOnCloseDashboardLineal}
             />
             <div ref={steal} className={styles.steal}>
-                <img className={styles.stealDesktop} src="/images/season3/steals/personaje-juan.jpg" />
-                <img className={styles.stealMobile} src="/images/season3/steals/personaje-juan.jpg" />
+                <img className={styles.stealDesktop} src="/images/season3/steals/personaje-jenny.jpg" />
+                <img className={styles.stealMobile} src="/images/season3/steals/personaje-jenny.jpg" />
             </div>
             <VideoPlayer
                 showBackButton
                 backButtonLink={"/el-cubo/temporada-3/personajes/map?ref=view"}
                 backButtonText={"Volver"}
-                title={"Juan de Jesús"}
+                title={"Jenny"}
                 source={srcVideo}
                 showPrevButton={false}
                 showNextButton={false}

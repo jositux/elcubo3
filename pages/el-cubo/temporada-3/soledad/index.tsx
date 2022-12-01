@@ -10,8 +10,12 @@ import styles from './lineal.module.scss'
 
 
 const Lineal = () => {
+
+    let srcVideo = UrlUtils.getVideoUrl("477154");
     // FIXME: Remove/refactor
     const [showDashboardModal, setShowDashboardModal] = useState(false);
+
+    //const [showAudioModal, setShowAudioModal] = useState(false);
 
     const [player, setPlayer] = useState(null);
 
@@ -49,8 +53,6 @@ const Lineal = () => {
 
     }, [steal.current, player]);
 
-    let srcVideo = UrlUtils.getVideoUrl("470809");
-
     const handlePlayVideo = (playVideo) => {
         if (playVideo) {
             player.play();
@@ -70,24 +72,20 @@ const Lineal = () => {
 
     const markers = [
       {
-        time: 1163, 
-        text: 'Violencia en Mogotes', 
+        time: 800, 
+        text: 'Condiciones de la mujer rural', 
       },
       {
-        time: 709, 
-        text: 'Jordan Sin Parroco',      
+        time: 600, 
+        text: 'Violencia en el matrimonio',      
       },
       {
-        time: 566, 
-        text: 'Jordan Sin cementerio',    
+        time: 400, 
+        text: 'Campaña al concejo de Soledad',    
       },
       {
-        time: 323, 
-        text: 'Una misa solo',    
-      },
-      {
-        time: 60, 
-        text: 'Santa Rosa, Patrona de Jordan',    
+        time: 200, 
+        text: 'La familia Silva en la política',    
       },
     ];
 
@@ -137,14 +135,14 @@ const Lineal = () => {
                 onCloseDashboard={handleOnCloseDashboardLineal}
             />
             <div ref={steal} className={styles.steal}>
-                <img className={styles.stealDesktop} src="/images/season3/steals/personaje-juan.jpg" />
-                <img className={styles.stealMobile} src="/images/season3/steals/personaje-juan.jpg" />
+                <img className={styles.stealDesktop} src="/images/season3/steals/personaje-soledad.jpg" />
+                <img className={styles.stealMobile} src="/images/season3/steals/personaje-soledad.jpg" />
             </div>
             <VideoPlayer
                 showBackButton
                 backButtonLink={"/el-cubo/temporada-3/personajes/map?ref=view"}
                 backButtonText={"Volver"}
-                title={"Juan de Jesús"}
+                title={"Soledad"}
                 source={srcVideo}
                 showPrevButton={false}
                 showNextButton={false}

@@ -1,4 +1,3 @@
-import { ListChronoCover } from 'components/PlayerChronology/PlayerChronology.style';
 import styled from 'styled-components';
 
 export const VideoPlayerWrapper = styled.div`
@@ -47,10 +46,6 @@ export const VideoPlayerWrapper = styled.div`
   &.in-fullscreen {
     .back-to-season {
       top: 30px;
-    }
-
-    ${ListChronoCover} {
-      top: 50%;
     }
   }
 

@@ -40,7 +40,7 @@ const PersonajesModal = ({ ...props }) => {
             <div className={styles.column}>
               <h2>{props.name}</h2>
               <p>{props.description}</p>
-              <a href="/el-cubo/temporada-3/juan-de-jesus">INICIAR EXPERIENCIA
+              <a href={props.link}>INICIAR EXPERIENCIA
                 <PersonajeArrow />
               </a>
             </div>

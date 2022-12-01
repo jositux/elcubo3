@@ -123,18 +123,16 @@
 
 
   .Popup{
-  opacity: 0;
-  animation-name: bounceIn;
-  animation-duration: 450ms;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;  
+    opacity: 0;
+    animation-name: bounceIn;
+    animation-duration: 450ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;  
   }
-
-
 
   .PopupContainer.FirstTime:nth-child(1){
     .Popup {
-    animation-delay: 11s;
+      animation-delay: 11s;
     }
   }
   .PopupContainer.FirstTime:nth-child(2){
