@@ -51,6 +51,7 @@ const GalleryModal = ({ showGalleryModal, onCloseGalleryModal }) => {
           <ArrowDown width={30} height={30} />
           </div>
           <img className={styles.imgGallery} src="/images/season3/slider/galeria_background.jpg" />
+          {showGalleryModal &&
           <Lightbox
         open={open}
         close={() => setOpen(false)}
@@ -115,7 +116,7 @@ const GalleryModal = ({ showGalleryModal, onCloseGalleryModal }) => {
           },
           // ...
         ]}
-      />
+      />}
     <div className={styles.ContainerContent}>
       <div className={styles.Content}>
     <div className={styles.Column}>
@@ -124,6 +125,7 @@ const GalleryModal = ({ showGalleryModal, onCloseGalleryModal }) => {
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi efficitur fermentum neque in luctus. Sed iaculis ultrices sem.</p>
     </div>
     <div className={styles.Column}>
+    
     <Swiper
         effect={"cards"}
         grabCursor={true}

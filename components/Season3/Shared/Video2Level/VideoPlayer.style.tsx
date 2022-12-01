@@ -79,7 +79,7 @@ export const VideoPlayerWrapper = styled.div`
   }
 
   .plyr--full-ui input[type='range'] {
-    color: #E2B857;
+    color: #801C16;
   }
 
   /* Custom play */
@@ -258,10 +258,6 @@ export const VideoPlayerWrapper = styled.div`
 
 .plyr__progress__buffer {
   z-index: 0 ;
-}
-
-.plyr__progress .plyr__tooltip {
-  display: none;
 }
 
 `;

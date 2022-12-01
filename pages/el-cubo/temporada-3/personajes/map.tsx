@@ -19,6 +19,7 @@ const characters = [
     description: '“Los cambios siempre dan miedo, pero hay que hacerlos con miedos y todo“',
     background: '/images/season3/steals/personaje-soledad.jpg',
     icon :'/images/season3/map/popups/popup-soledad.png',
+    link: '../soledad',
   },
   {
     name:'diego', 
@@ -26,6 +27,7 @@ const characters = [
     description: '“Para lograr las cosas primero hay que soñarlas“',
     background: '/images/season3/steals/personaje-diego.jpg',
     icon :'/images/season3/map/popups/popup-diego.png',
+    link: '../diego',
   },
   {
     name:'juandejesus', 
@@ -33,6 +35,7 @@ const characters = [
     description: '“Uno busca su misión en la vida, pero a veces es la propia misión la que a uno lo encuentra“',
     background: '/images/season3/steals/personaje-juan.jpg',
     icon :'/images/season3/map/popups/popup-juandejesus.png',
+    link: '../juan-de-jesus',
   },
   {
     name:'jenny', 
@@ -40,13 +43,15 @@ const characters = [
     description: '“Viajando se conoce la libertad“',
     background: '/images/season3/steals/personaje-jenny.jpg',
     icon :'/images/season3/map/popups/popup-jenny.png',
+    link: '../jenny',
   },
   {
     name:'guillermo', 
-    realName: 'Guillermo', 
+    realName: 'Don Guillermo', 
     description: '“Y si algún día me separo de María, espero encontrarla del otro lado“',
     background: '/images/season3/steals/personaje-guillermo.jpg',
     icon :'/images/season3/map/popups/popup-guillermo.png',
+    link: '../guillermo',
   },
 ];
 
@@ -60,6 +65,7 @@ const map = () => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [icon, setIcon] = useState('');
+  const [link, setLink] = useState('');
 
   const { query } = useRouter(); 
 
@@ -102,11 +108,12 @@ const map = () => {
     setShowPersonajesModal(false);
   };
 
-  function updatePersonaje(background, name, description, icon) {
+  function updatePersonaje(background, name, description, icon, link) {
     setBackground(background);
     setName(name);
     setDescription(description);
     setIcon(icon);
+    setLink(link);
   }
 
 
@@ -139,6 +146,7 @@ const map = () => {
             name = {name}
             description = {description}
             icon = {icon}
+            link = {link}
             showPersonajesModal={showPersonajesModal}
             onClosePersonajesModal={handleOnClosePersonajesModal}
       />

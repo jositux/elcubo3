@@ -18,14 +18,10 @@ const VideoPlayer = ({
   autoPlay,
   showDashboard = false,
   showDashboardLineal = false,
-  markers,
   onClickDashboard,
   onClickDashboardLineal,
   showPrevButton = true,
   showNextButton = true,
-  onBackClick,
-  onNextClick,
-  onChaptersClick,
   onVideoEnded,
   onControlsHidden,
   onControlsShown,
@@ -33,7 +29,6 @@ const VideoPlayer = ({
   onVideoPlaying,
   setPlayer,
   children,
-  continueOnTime,
   seekControls
 }) => {
   const wrapperRef = React.useRef();
@@ -145,14 +140,6 @@ const VideoPlayer = ({
           container.addEventListener('click', container._clickListener);
         }
       }
-
-      /*
-      playerRef.current.on('ended', function () {
-        document.getElementsByClassName('plyr__control--overlaid')[0].remove();
-        document.getElementsByClassName('plyr__controls')[0].classList.add('hide');
-        document.getElementsByClassName('plyr__extra_controls')[0].classList.add('hide');
-      });*/
-
 
     }
     const container: HTMLElement = wrapperRef.current;
@@ -277,7 +264,6 @@ const VideoPlayer = ({
     if (portal) {
       ReactDOM.render(children, portal);
     }
-
   }, [children]);
 
 
@@ -314,48 +300,6 @@ const VideoPlayer = ({
       controls.insertAdjacentHTML('afterend', `<h2 class="plyr__portal__title">${title}</h2>`);
     }
   }, [title]);
-
-
-  // Add Markers
-  React.useEffect(() => {
-    let video_duration = playerRef.current.duration;
-
-    setTimeout(() => { 
-      video_duration = playerRef.current.duration;
-
-      if (markers.length !== 0) {
-        markers.map( (c, index) => (
-          addMarker('marker', c.time, c.text)
-      ))
-      }
-    
-     }, 4000);
-
-    const calculatePercent = (num1, total) => {
-      return (num1 / total) * 100;
-    };
-
-    const createPoint = (pSeconds, pText) => {
-      let percent = calculatePercent(pSeconds, video_duration);
-      let point = document.createElement('div');
-      let content = document.createElement('span');
-      let text = document.createTextNode(pText);
-      content.appendChild(text);
-      point.appendChild(content);
-      point.setAttribute('class', 'marker');
-      point.setAttribute('style', 'left: ' + percent + '%;');
-      return point;
-    }
-
-    const addMarker = (pClass, pPercent, pText) => {
-      const controls = document.querySelector('.plyr__progress');
-      if (controls && document.querySelector(pClass) == null) {
-        controls.appendChild(createPoint(pPercent, pText));
-      }
-    }
-
-  }, [markers, playerRef.current]);
-
 
   React.useEffect(() => {
     if (videoRef.current && onVideoEnded) {

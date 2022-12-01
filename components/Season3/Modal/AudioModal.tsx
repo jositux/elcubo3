@@ -5,8 +5,6 @@ import styles from './season3.audioModal.module.scss';
 
 const AudioModal = ({ showAudioModal, onCloseAudioModal }) => {
 
-  const [open, setOpen] = React.useState(false);
-
   React.useEffect(() => {
 
     window.onclick = function (e) {
@@ -33,15 +31,18 @@ const AudioModal = ({ showAudioModal, onCloseAudioModal }) => {
           </div>
           <img className={styles.imgGallery} src="/images/season3/slider/audio_background.jpg" />
           <div className={styles.Content}>
-          <h2>Título del Audio</h2>
           
-          {
-          showAudioModal &&
+          
+          {showAudioModal &&
+          <div>
+          <h2>Título del Audio</h2>
             <div className={styles.fullScreenVideo}>
               <AudioWave audio="/audios/season3/hito2.mp3" />
             </div>
-          }
+            </div>
+            }
           
+
           </div>
         </div>
       </div>

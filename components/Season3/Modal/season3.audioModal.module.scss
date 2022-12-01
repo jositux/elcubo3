@@ -127,3 +127,11 @@
 .OpenZoom {
   position: absolute;
 }
+
+.openIt {
+  animation: fade-in 8000ms forwards;
+}
+
+.closeIt {
+  animation: fade-out 8000ms forwards;
+}

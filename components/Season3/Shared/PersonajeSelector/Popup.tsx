@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react';
 import styles from './season3.popup.module.scss';
+import Link from 'next/link'
 import cx from 'classnames';
 
 const ubications = [
@@ -69,8 +70,8 @@ export const Popup = ({...props}) => {
     props.onClickPersonajesModal();
   }
 
-  function updatePersonaje(bg: string, name: string, description: string, icon: string) {
-    props.updatePersonaje(bg, name, description, icon);
+  function updatePersonaje(bg: string, name: string, description: string, icon: string, link: string) {
+    props.updatePersonaje(bg, name, description, icon, link);
   }
 
   return (
@@ -79,8 +80,8 @@ export const Popup = ({...props}) => {
         props.characters.map( (c, index) => (
           <div className={`${styles.PopupContainer} ${styles[c.name+`-g`]} ${!isViewed ? cx(styles.FirstTime) : cx(styles.Viewed)}`} id={`${c.name}`} key={index}>
             <div 
-            onMouseEnter={ () => { updatePersonaje(`${c.background}`, `${c.realName}`, `${c.description}`, `${c.icon}`); openPersonajesModal(); }} 
-            onClick={ () => { updatePersonaje(`${c.background}`, `${c.realName}`, `${c.description}`, `${c.icon}`); openPersonajesModal(); } } 
+            onMouseEnter={ () => { updatePersonaje(`${c.background}`, `${c.realName}`, `${c.description}`, `${c.icon}`, `${c.link}`); openPersonajesModal(); }} 
+            onClick={ () => { updatePersonaje(`${c.background}`, `${c.realName}`, `${c.description}`, `${c.icon}`, `${c.link}`); openPersonajesModal(); } } 
             className={styles.titleImage}
             style={{cursor:"pointer"}}
             >
@@ -89,9 +90,11 @@ export const Popup = ({...props}) => {
             <div className={styles.textContent }>
               <h1>{c.realName}</h1>
               <p>{c.description}</p>
-              <button>
-                <span>iniciar experiencia</span>
+
+              <button>     
+                <span>Iniciar Experiencia</span>
               </button>
+              
             </div>
           </div>
         ))
