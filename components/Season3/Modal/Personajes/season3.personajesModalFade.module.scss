@@ -1,0 +1,158 @@
+
+.Back {
+  position: absolute;
+  z-index: 2;
+  left: 75px;
+  top: 30px;
+  font-family: $elcubo3_font_subtitle;
+  font-weight: 300;
+  cursor: pointer;
+  svg {
+    position: absolute;
+  }
+  span {
+    float: left;
+    padding-top: 14px;
+    padding-left: 50px;
+  }
+}
+.containerCover {
+  width: 100%;
+  height: calc(100vh - 90px);
+  max-width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  font-family: $elcubo3_font_title;
+  //background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  right: 0; //opacity: 0;
+}
+
+.containerCover .container {
+  position: absolute;
+  right: 0;
+  z-index: 100;
+  height: calc(100vh - 90px);
+  overflow: hidden;
+  width: 100%;
+  right: -100%;
+  transition: 0.8s all ease;
+  @media screen and (max-width: 960px) {
+    width: 100%;
+  }
+}
+
+.containerCover.open {
+  z-index: 2; //transition: opacity .2s linear;
+}
+
+.containerCover.open .container {
+  right: 0;
+}
+
+.child {
+  width: 100%;
+  position: relative;
+}
+
+
+.containerCover.open .t_close {
+  display: flex;
+}
+
+.t_close {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 99;
+  height: 60px;
+  width: 60px;
+  right: 20px;
+  top: 20px;
+  padding: 0;
+  margin: 0;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.coverBG {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+}
+
+.imgCover {
+  object-fit: cover;
+  width: 100%;
+}
+
+.ContainerCharacter {
+  position: absolute;
+  width: 300px;
+  right: 38%;
+  top: 40%;
+  z-index: 2;
+  display: flex;
+  gap: 0px;
+  h2 {
+    font-family: $elcubo3_font_title;
+    font-size: 30px;
+    font-weight: 300;
+    margin: 16px 0 0px 0;
+  }
+  p {
+    font-family: $elcubo3_font_subtitle;
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  a {
+    font-family: $elcubo3_font_subtitle;
+    font-weight: 300;
+    font-size: 22px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #402A04;
+    background: #E2B857;
+    padding: 15px 40px 15px 16px;
+    position: relative;
+    float: left;
+    svg {
+      position: absolute;
+      top: 12px;
+      right: 5px;
+    }
+  }
+  /*.column:nth-child(1) {
+    width: 40%;
+    img {
+      width: 97%;
+    }
+  }
+  .column:nth-child(2) {
+    width: 60%;
+  }*/
+}
+
+.t_close:after,
+.t_close:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.t_close:after {
+  width: 2px;
+  height: 32px;
+}
+
+.t_close:before {
+  width: 32px;
+  height: 2px;
+}
+
