@@ -88,7 +88,7 @@ const Fader = ({ text }) => {
   useEffect(() => {
     const handleEsc = (event) => {
        if (event.keyCode === 27) {
-        handleOnClosePersonajesModal();
+        clickear()
       }
     };
     window.addEventListener('keydown', handleEsc);

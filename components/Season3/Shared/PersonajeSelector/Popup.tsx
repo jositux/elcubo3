@@ -1,6 +1,5 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react';
 import styles from './season3.popup.module.scss';
-import Link from 'next/link'
 import cx from 'classnames';
 
 const ubications = [
