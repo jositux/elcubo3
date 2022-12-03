@@ -88,7 +88,7 @@ const Fader = ({ text }) => {
   useEffect(() => {
     const handleEsc = (event) => {
        if (event.keyCode === 27) {
-        clickear()
+        setIsShowCards(false)
       }
     };
     window.addEventListener('keydown', handleEsc);
