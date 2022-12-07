@@ -10,7 +10,7 @@ const YoutubeModal = ({ videoId }) => {
   return (
     <div>
       <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={videoId} onClose={() => setOpen(false)} />
-      <button className="btn-primary" onClick={() => setOpen(true)}><PlayHome /> Ver Trailer</button>
+      <button className="btn-primary" onClick={() => setOpen(true)}><PlayHome /> Ver 360</button>
     </div>
   );
 

@@ -141,7 +141,7 @@ export const VideoPlayerWrapper = styled.div`
 }
 
 .plyr__video-wrapper {
-    height: auto !important;
+    height: 100vh !important;
 }
 
 /* Hide cursor */
@@ -209,11 +209,12 @@ export const VideoPlayerWrapper = styled.div`
 
 
 .marker {
-  top: 2px;
+  top: -40px;
   position: absolute;
   z-index: 10;
 }
 
+/*
 .marker::before {
   content: "";
   width: 15px;
@@ -224,8 +225,9 @@ export const VideoPlayerWrapper = styled.div`
   background: #E2B857;
   position: absolute;
   opacity: 1;
-}
+}*/
 
+/*
 .marker 
  {
   transform-origin: top left;
@@ -237,7 +239,7 @@ export const VideoPlayerWrapper = styled.div`
 
 .marker span {
   margin-left: 70px;
-  //opacity: 0;
+  position: absolute;
   animation: fadeIn 5s;
 }
 

@@ -12,6 +12,7 @@ import styles from './lineal.module.scss'
 const Lineal = () => {
 
     let srcVideo = UrlUtils.getVideoUrl("477154");
+    let duration = 955;
     // FIXME: Remove/refactor
     const [showDashboardModal, setShowDashboardModal] = useState(false);
 
@@ -72,19 +73,23 @@ const Lineal = () => {
 
     const markers = [
       {
-        time: 800, 
+        time: 800,
+        url: '/images/season3/hitos/icons/0.jpg',
         text: 'Condiciones de la mujer rural', 
       },
       {
-        time: 600, 
+        time: 600,
+        url: '/images/season3/hitos/icons/0.jpg', 
         text: 'Violencia en el matrimonio',      
       },
       {
-        time: 400, 
+        time: 400,
+        url: '/images/season3/hitos/icons/0.jpg', 
         text: 'Campaña al concejo de Soledad',    
       },
       {
-        time: 200, 
+        time: 200,
+        url: '/images/season3/hitos/icons/0.jpg', 
         text: 'La familia Silva en la política',    
       },
     ];
@@ -131,6 +136,7 @@ const Lineal = () => {
     return (
         <div className={styles.NodeContainer}>
             <DashboardLinealModal
+                char = 'soledad'
                 showModal={showDashboardModal}
                 onCloseDashboard={handleOnCloseDashboardLineal}
             />
@@ -147,9 +153,10 @@ const Lineal = () => {
                 showPrevButton={false}
                 showNextButton={false}
                 setPlayer={setPlayer}
-                fullscreen={true}
+                fullscreen={false}
                 showDashboardLineal
                 markers = {markers}
+                duration = {duration}
                 onClickDashboardLineal={handleOnClickDashboardLineal}   
             />
 

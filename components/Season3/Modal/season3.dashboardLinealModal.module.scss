@@ -5,8 +5,7 @@
   overflow-x: hidden;
   display: flex;
   font-family: $elcubo3_font_title;
-  background: rgba(0, 0, 0, 0.7);
-  background: url(/images/season3/steals/0-dashboard.jpg) top center no-repeat black;
+  //background: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 0;
   right: 0; //opacity: 0;
@@ -22,6 +21,7 @@
   width: 100%;
   right: -100%;
   transition: 0.8s all ease;
+  background: url(/images/season3/steals/0-dashboard.jpg) top center no-repeat black;
   @media screen and (max-width: 960px) {
     width: 100%;
   }
@@ -38,44 +38,6 @@
 .child {
   width: 100%;
   position: relative;
-}
-
-.copy {
-  padding: 30px 20px 40px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  h1 {
-    font-size: 45px;
-    font-weight: 500;
-  }
-  p {
-    font-size: 24px;
-    text-align: left;
-  }
-}
-
-.copy h1 {
-  font-size: 45px;
-  letter-spacing: -0.26px;
-}
-
-.copy h1 {
-  font-size: 45px;
-  letter-spacing: -0.26px;
-}
-
-.copy h1,
-.copy p {
-  margin: 0;
-}
-
-.button {
-  color: white;
-  font-style: italic;
-  text-decoration: unset;
-  margin-top: 30px;
 }
 
 .containerCover.open .t_close {

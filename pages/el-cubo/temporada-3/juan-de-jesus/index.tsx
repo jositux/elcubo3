@@ -10,6 +10,9 @@ import styles from './lineal.module.scss'
 
 
 const Lineal = () => {
+
+    let srcVideo = UrlUtils.getVideoUrl("470809");
+    let duration = 1983;
     // FIXME: Remove/refactor
     const [showDashboardModal, setShowDashboardModal] = useState(false);
 
@@ -49,8 +52,6 @@ const Lineal = () => {
 
     }, [steal.current, player]);
 
-    let srcVideo = UrlUtils.getVideoUrl("470809");
-
     const handlePlayVideo = (playVideo) => {
         if (playVideo) {
             player.play();
@@ -71,22 +72,27 @@ const Lineal = () => {
     const markers = [
       {
         time: 1163, 
+        url: '/images/season3/hitos/icons/0.jpg',
         text: 'Violencia en Mogotes', 
       },
       {
         time: 709, 
+        url: '/images/season3/hitos/icons/0.jpg',
         text: 'Jordan Sin Parroco',      
       },
       {
         time: 566, 
+        url: '/images/season3/hitos/icons/0.jpg',
         text: 'Jordan Sin cementerio',    
       },
       {
         time: 323, 
+        url: '/images/season3/hitos/icons/0.jpg',
         text: 'Una misa solo',    
       },
       {
         time: 60, 
+        url: '/images/season3/hitos/icons/0.jpg',
         text: 'Santa Rosa, Patrona de Jordan',    
       },
     ];
@@ -133,6 +139,7 @@ const Lineal = () => {
     return (
         <div className={styles.NodeContainer}>
             <DashboardLinealModal
+                char="juandejesus"
                 showModal={showDashboardModal}
                 onCloseDashboard={handleOnCloseDashboardLineal}
             />
@@ -149,9 +156,10 @@ const Lineal = () => {
                 showPrevButton={false}
                 showNextButton={false}
                 setPlayer={setPlayer}
-                fullscreen={true}
+                fullscreen={false}
                 showDashboardLineal
                 markers = {markers}
+                duration = {duration}
                 onClickDashboardLineal={handleOnClickDashboardLineal}   
             />
 
