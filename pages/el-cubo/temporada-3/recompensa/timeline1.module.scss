@@ -1,0 +1,2244 @@
+.TimelineContainer {
+  position: relative;
+  width: 100vw;
+  height: 1112vh;
+  padding: 0 0 50px 0;
+  background-color: #e4d7b7;
+  background-attachment: fixed;
+  background-size: cover;
+
+  @media only screen and (max-width: 768px) {
+    height: 945vh;
+  }
+}
+
+.Timeline {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: #e4d7b7;
+}
+
+.Timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  height: 1120vh;
+  margin-left:0 25px;
+  margin-top: 15rem;
+  margin-bottom: 15rem;
+  background: #3C2807;
+  z-index: 1;
+  
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .Clows {
+    display: none!important;
+  }
+}
+
+.ItemContent:nth-child(1) {
+  width: 100%;
+  display: flex;
+  position: relative;
+
+  .SitePicture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 85vw;
+
+    @media only screen and (max-width: 768px) {
+      width: 125vw;
+    }
+  }
+
+  .TextContent {
+    position: absolute;
+    top: 25rem;
+    right: calc(100vw - 80%);
+    width: 470px;
+    text-align: left;
+    z-index: 1;
+
+    .Title {
+      color: #3C2807;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      font-size: 50px;
+      letter-spacing: -3px;
+      line-height: 130%;
+      font-size: 70px;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    .Subtitle {
+      color: #3C2807;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      font-size: 31px;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    .Description {
+      color: #3C2807;
+      font-size: 20px;
+      width: 600px;
+      letter-spacing: 0px;
+      line-height: 130%;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    @media only screen and (max-width: 768px) {
+      top: 21vh;
+      right: 0;
+      left: 0;
+      margin-left: 15px;
+
+      .Title {
+        font-size: 50px!important;
+      }
+      .Subtitle {
+        font-size: 22px;
+      }
+      .Description {
+        font-size: 14px;
+        width: 360px;
+      }
+    }
+  }
+
+  .LinksContent {
+    position: absolute;
+    top: 35rem;
+    left: calc(100vw - 80%);
+    width: 500px;
+    height: 195px;
+    text-align: right;
+    color: #3C2807;
+    background-color: #F1E7CE;
+    opacity: 0.8;
+    z-index: 1;
+
+    .LinkItem {
+      width: 100%;
+    	position: relative;
+      cursor: pointer;
+    }
+
+    .Link {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      text-decoration: none;
+    }
+
+    .LinkText {
+      margin-right: 10px;
+      color: #3C2807;
+      font-family: $elcubo3_font_subtitle;
+      font-weight: bold;
+    }
+
+    .LinkItem:nth-child(1) {
+      a {
+        top: 5px;
+        right: 20px;
+      }
+      p {
+        text-transform: uppercase;
+      }
+    }
+
+    .LinkItem:nth-child(2) {
+      a {
+        top: 55px;
+        right: 20px;
+      }
+      span {
+        font-size: 13.5px;
+        font-weight: normal;
+      }
+    }
+
+    .LinkItem:nth-child(3) {
+      a {
+        top: 120px;
+        right: 21px;
+      }
+      span {
+        font-size: 13.5px;
+        font-weight: normal;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      top: 54vh;
+      right: 0;
+      left: 0;
+      margin-left: 15px;
+      width: 360px;
+      height: 150px;
+      text-align: left;
+
+      .LinkText {
+        margin-right: 0px;
+        margin-left: 12px;
+        font-size: 12px;
+      }
+
+      .LinkItem:nth-child(1) {
+        a {
+          top: 5px;
+          left: 0px;
+        }
+        p {
+          text-transform: uppercase;
+          width: 20rem;
+        }
+        svg {
+          width: 30px!important;
+          height: 30px!important;
+        }
+      }
+      
+      .LinkItem:nth-child(2) {
+        a {
+          top: 45px;
+          left: 0px;
+        }
+        p {
+          width: 20rem;
+        }
+        span {
+          font-size: 13px;
+          font-weight: normal;
+        }
+        svg {
+          width: 30px!important;
+          height: 30px!important;
+        }
+      }
+      
+      .LinkItem:nth-child(3) {
+        a {
+          top: 100px;
+          left: 0px;
+        }
+        p {
+          width: 20rem;
+        }
+        span {
+          font-size: 12px;
+          font-weight: normal;
+        }
+        svg {
+          width: 30px!important;
+        height: 30px!important;
+        }
+      }
+    }
+  }
+}
+
+.ItemContent:nth-child(2) {
+  width: 100%;
+  display: flex;
+  position: relative;
+
+  .Clows {
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .SitePicture {
+    position: absolute;
+    top: 45rem;
+    right: 0;
+    width: 70vw;
+
+    @media only screen and (max-width: 768px) {
+      width: 155vw;
+      top: 62vh;
+    }
+  }
+  
+  .TextContent {
+    position: absolute;
+    top: 75rem;
+    left: calc(100vw - 85.5%);
+    width: 600px;
+    text-align: right;
+
+    .Title {
+      color: #3C2807;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      font-size: 50px;
+      letter-spacing: -3px;
+      line-height: 130%;
+      font-size: 70px;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    .Subtitle {
+      color: #3C2807;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      font-size: 31px;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    .Description {
+      color: #3C2807;
+      font-size: 20px;
+      margin-left: -75px;
+      letter-spacing: 0px;
+      line-height: 130%;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    @media only screen and (max-width: 768px) {
+      top: 109vh;
+      right: 0;
+      left: 0;
+      margin-left: 15px;
+      text-align: left;
+
+      .Title {
+        font-size: 50px!important;
+      }
+      .Subtitle {
+        font-size: 22px;
+        width: 210px;
+      }
+      .Description {
+        font-size: 14px;
+        width: 360px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .LinksContent {
+    position: absolute;
+    top: 96rem;
+    right: calc(100vw - 82%);
+    width: 500px;
+    height: 60px;
+    text-align: right;
+    color: #3C2807;
+    background-color: #F1E7CE;
+    opacity: 0.8;
+    z-index: 1;
+
+    .LinkItem {
+      width: 100%;
+    	position: relative;
+      cursor: pointer;
+
+      a {
+        top: 5px;
+        left: 20px;
+      }
+    }
+
+    .Link {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      text-decoration: none;
+    }
+
+    .LinkText {
+      margin-left: 10px;
+      color: #3C2807;
+      font-family: $elcubo3_font_subtitle;
+      font-weight: bold;
+    }
+
+    @media only screen and (max-width: 768px) {
+      position: absolute;
+      top: 143vh;
+      right: 0;
+      left: 0;
+      margin-left: 15px;
+      width: 365px;
+      height: 50px;
+      text-align: right;
+
+      .LinkItem {
+        a {
+          top: 7px;
+          left: 12px;
+        }
+        p {
+          font-size: 12px;
+          position: relative;
+          right: 56px;
+          width: 316px;
+        }
+        svg {
+          width: 30px!important;
+          height: 30px!important;
+          position: relative;
+          left: 310px;
+        }
+      }
+    }
+  }
+}
+
+.ItemContent:nth-child(3) {
+  width: 100%;
+  display: flex;
+  position: relative;
+
+  .Clows {
+    position: absolute;
+    top: 80rem;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .SitePicture {
+    position: absolute;
+    top: 100rem;
+    left: 0;
+
+    @media only screen and (max-width: 768px) {
+      top: 146vh;
+      width: 150vw;
+    }
+  }
+
+  .TextContent {
+    position: absolute;
+    top: 140rem;
+    right: calc(100vw - 87%);
+    width: 600px;
+    text-align: left;
+
+    .Title {
+      color: #3C2807;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      font-size: 50px;
+      letter-spacing: -3px;
+      line-height: 130%;
+      font-size: 70px;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    .Subtitle {
+      color: #3C2807;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      font-size: 31px;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    .Description {
+      color: #3C2807;
+      font-size: 20px;
+      width: 600px;
+      letter-spacing: 0px;
+      line-height: 130%;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    @media only screen and (max-width: 768px) {
+      top: 182vh;
+      right: 0;
+      left: 0;
+      margin-left: 15px;
+
+      .Title {
+        font-size: 50px!important;
+      }
+      .Subtitle {
+        font-size: 22px;
+      }
+      .Description {
+        font-size: 14px;
+        width: 360px;
+      }
+    }
+  }
+
+  .LinksContent {
+    position: absolute;
+    top: 156rem;
+    left: calc(100vw - 83%);
+    width: 570px;
+    height: 270px;
+    text-align: right;
+    color: #3C2807;
+    background-color: #F1E7CE;
+    opacity: 0.8;
+    z-index: 1;
+
+    .Link {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      text-decoration: none;
+    }
+
+    .LinkText {
+      margin-right: 10px;
+      color: #3C2807;
+      font-family: $elcubo3_font_subtitle;
+      font-weight: bold;
+      width: 100%;
+    }
+
+    .LinkItem:nth-child(1) {
+      a {
+        top: 5px;
+        right: 20px;
+      }
+      p {
+        text-transform: uppercase;
+        width: 115px;
+      }
+    }
+
+    .LinkItem:nth-child(2) {
+      a {
+        top: 55px;
+        right: 20px;
+      }
+      p {
+        width: 405px;
+      }
+      span {
+        font-size: 13.5px;
+        font-weight: normal;
+      }
+    }
+
+    .LinkItem:nth-child(3) {
+      a {
+        top: 165px;
+        right: 21px;
+      }
+      p {
+        width: 370px;
+      }
+      span {
+        font-size: 13.5px;
+        font-weight: normal;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      top: 234vh;
+      right: 0;
+      left: 0;
+      margin-left: 15px;
+      width: 360px;
+      height: 265px;
+      text-align: left;
+
+      .LinkItem:nth-child(1) {
+        a {
+          top: 5px;
+          left: 12px;
+        }
+        p {
+          text-transform: uppercase;
+          width: 20rem;
+          font-size: 15px;
+        }
+        svg {
+          width: 30px!important;
+          height: 30px!important;
+        }
+      }
+      .LinkItem:nth-child(2) {
+        a {
+          top: 40px;
+          left: 12px;
+        }
+        p {
+          width: 20rem;
+          font-size: 15px;
+        }
+        span {
+          font-size: 12px;
+          font-weight: normal;
+        }
+        svg {
+          width: 30px!important;
+          height: 30px!important;
+        }
+      }
+      .LinkItem:nth-child(3) {
+        a {
+          top: 148px;
+          left: 12px;
+        }
+        p {
+          width: 20rem;
+          font-size: 15px;
+        }
+        span {
+          font-size: 12px;
+          font-weight: normal;
+        }
+        svg {
+          width: 30px!important;
+          height: 30px!important;
+        }
+      }
+    }
+  }
+}
+
+.ItemContent:nth-child(4) {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  position: relative;
+
+  .Clows {
+    position: absolute;
+    top: 145rem;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .SitePicture {
+    position: absolute;
+    top: 150rem;
+    right: 0;
+    width: 100%;
+    object-fit: cover;
+
+    @media only screen and (max-width: 768px) {
+      width: 155vw;
+      top: 247vh;
+    }
+  }
+
+  .TextContent {
+    position: absolute;
+    top: 202rem;
+    left: calc(100vw - 85%);
+    width: 600px;
+    text-align: right;
+
+    .Title {
+      color: #3C2807;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      font-size: 50px;
+      letter-spacing: -3px;
+      line-height: 130%;
+      font-size: 70px;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    .Subtitle {
+      color: #3C2807;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      font-size: 31px;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    .Description {
+      color: #3C2807;
+      font-size: 20px;
+      width: 510px;
+      margin-left: 90px;
+      letter-spacing: 0px;
+      line-height: 130%;
+      margin-bottom: 0;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    @media only screen and (max-width: 768px) {
+      top: 301vh;
+      right: 0;
+      left: 0;
+      margin-left: 15px;
+      text-align: left;
+
+      .Title {
+        font-size: 50px!important;
+      }
+      .Subtitle {
+        font-size: 22px;
+        width: 250px;
+      }
+      .Description {
+        font-size: 14px;
+        width: 360px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .LinksContent {
+    position: absolute;
+    top: 210rem;
+    right: calc(100vw - 86%);
+    width: 570px;
+    height: 280px;
+    text-align: left;
+    color: #3C2807;
+    background-color: #F1E7CE;
+    opacity: 0.8;
+    z-index: 1;
+
+    .Link {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      text-decoration: none;
+    }
+
+    .LinkText {
+      margin-right: 10px;
+      color: #3C2807;
+      font-family: $elcubo3_font_subtitle;
+      font-weight: bold;
+      width: 100%;
+    }
+
+    .LinkItem:nth-child(1) {
+      a {
+        top: 5px;
+        left: 23px;
+      }
+      p {
+        margin-left: 15px;
+        width: 265px;
+      }
+    }
+
+    .LinkItem:nth-child(2) {
+      a {
+        top: 55px;
+        left: 22px;
+      }
+      p {
+        margin-left: 10px;
+        width: 310px;
+      }
+      span {
+        font-size: 13.5px;
+        font-weight: normal;
+      }
+    }
+
+    .LinkItem:nth-child(3) {
+      a {
+        top: 114px;
+        left: 22px;
+      }
+      p {
+        margin-left: 10px;
+        width: 450px;
+      }
+      span {
+        font-size: 13.5px;
+        font-weight: normal;
+      }
+    }
+
+    .LinkItem:nth-child(4) {
+      a {
+        bottom: 0px;
+        left: 23px;
+      }
+      p {
+        margin-left: 15px;
+      }
+      span {
+        font-size: 13.5px;
+        font-weight: normal;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      position: absolute;
+      top: 335vh;
+      right: 0;
+      left: 0;
+      margin-left: 15px;
+      width: 365px;
+      height: 275px;
+      text-align: left;
+
+      .LinkItem:nth-child(1) {
+        a {
+          top: 5px;
+          left: 12px;
+        }
+        p {
+          font-size: 13px;
+          position: relative;
+          right: 40px;
+          width: 300px;
+          margin-left: 10px;
+        }
+        svg {
+          width: 30px!important;
+          height: 30px!important;
+          position: relative;
+          left: 310px;
+        }
+      }
+      .LinkItem:nth-child(2) {
+        a {
+          top: 50px;
+          left: 12px;
+        }
+        p {
+          font-size: 13px;
+          position: relative;
+          right: 40px;
+          margin-left: 10px;
+          width: 300px;
+        }
+        svg {
+          width: 30px !important;
+          height: 30px !important;
+          position: relative;
+          left: 310px;
+        }
+      }
+      .LinkItem:nth-child(3) {
+        a {
+          top: 105px;
+          left: 12px;
+        }
+        p {
+          font-size: 13px;
+          position: relative;
+          right: 40px;
+          margin-left: 10px;
+          width: 310px;
+        }
+        span {
+          font-size: 12px;
+        }
+        svg {
+          width: 30px !important;
+          height: 30px !important;
+          position: relative;
+          left: 310px;
+        }
+      }
+      .LinkItem:nth-child(4) {
+        a {
+          bottom: 0px;
+          left: 12px;
+        }
+        p {
+          font-size: 13px;
+          position: relative;
+          right: 40px;
+          margin-left: 10px;
+          width: 300px;
+        }
+        svg {
+          width: 30px !important;
+          height: 30px !important;
+          position: relative;
+          left: 310px;
+        }
+      }
+    }
+  }
+}
+
+.ItemContent:nth-child(5) {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  position: relative;
+
+  .Clows {
+    position: absolute;
+    top: 220rem;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .SitePicture {
+    position: absolute;
+    top: 190rem;
+    right: 0;
+    width: 100%;
+    object-fit: cover;
+
+    @media only screen and (max-width: 768px) {
+      top: 297vh;
+      left: 0;
+      width: 160vw;
+    }
+  }
+
+  .TextContent {
+    position: absolute;
+    top: 245rem;
+    right: calc(100vw - 87%);
+    width: 600px;
+    text-align: left;
+
+    .Title {
+      color: #3C2807;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      font-size: 50px;
+      letter-spacing: -3px;
+      line-height: 130%;
+      font-size: 70px;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    .Subtitle {
+      color: #3C2807;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      font-size: 31px;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    .Description {
+      color: #3C2807;
+      font-size: 20px;
+      width: 510px;
+      letter-spacing: 0px;
+      line-height: 130%;
+      margin-bottom: 0;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    @media only screen and (max-width: 768px) {
+      top: 352vh;
+      right: 0;
+      left: 0;
+      margin-left: 15px;
+
+      .Title {
+        font-size: 50px!important;
+      }
+      .Subtitle {
+        font-size: 22px;
+      }
+      .Description {
+        font-size: 14px;
+        width: 360px;
+      }
+    }
+  }
+
+  .LinksContent {
+    position: absolute;
+    top: 243rem;
+    left: calc(100vw - 84%);
+    width: 570px;
+    height: 295px;
+    text-align: right;
+    color: #3C2807;
+    background-color: #F1E7CE;
+    opacity: 0.8;
+    z-index: 1;
+
+    .Link {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      text-decoration: none;
+    }
+
+    .LinkText {
+      margin-right: 10px;
+      color: #3C2807;
+      font-family: $elcubo3_font_subtitle;
+      font-weight: bold;
+      width: 100%;
+    }
+
+    .LinkItem:nth-child(1) {
+      a {
+        top: 5px;
+        right: 23px;
+      }
+      p {
+        margin-left: 11px;
+        width: 265px;
+        text-transform: uppercase;
+      }
+    }
+
+    .LinkItem:nth-child(2) {
+      a {
+        top: 52px;
+        right: 22px;
+      }
+      p {
+        margin-left: 10px;
+        width: 310px;
+      }
+      span {
+        font-size: 13.5px;
+        font-weight: normal;
+      }
+    }
+
+    .LinkItem:nth-child(3) {
+      a {
+        top: 115px;
+        right: 22px;
+      }
+      p {
+        margin-left: 10px;
+        width: 450px;
+      }
+      span {
+        font-size: 13.5px;
+        font-weight: normal;
+      }
+    }
+
+    .LinkItem:nth-child(4) {
+      a {
+        bottom: 0px;
+        right: 23px;
+      }
+      p {
+        margin-left: 15px;
+        width: 425px;
+      }
+      span {
+        font-size: 13.5px;
+        font-weight: normal;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      top: 376vh;
+      right: 0;
+      left: 0;
+      margin-left: 15px;
+      width: 360px;
+      height: 270px;
+      text-align: left;
+
+      .LinkText {
+        margin-right: 0px;
+        margin-left: 12px;
+        font-size: 12px;
+      }
+
+      .LinkItem:nth-child(1) {
+        a {
+          top: 5px;
+          left: 0px;
+        }
+        p {
+          text-transform: uppercase;
+          width: 20rem;
+        }
+        svg {
+          width: 30px!important;
+          height: 30px!important;
+        }
+      }
+      .LinkItem:nth-child(2) {
+        a {
+          top: 45px;
+          left: 0px;
+        }
+        p {
+          width: 20rem;
+        }
+        svg {
+          width: 30px!important;
+          height: 30px!important;
+        }
+      }
+      .LinkItem:nth-child(3) {
+        a {
+          top: 95px;
+          left: 0px;
+        }
+        p {
+          width: 20rem;
+        }
+        svg {
+          width: 30px!important;
+          height: 30px!important;
+        }
+      }
+      .LinkItem:nth-child(4) {
+        a {
+          bottom: 0px;
+          left: 0px;
+        }
+        p {
+          width: 18.5rem;
+          margin-left: 10px;
+          margin-right: 8px;
+          span{
+            font-size: 13px;
+          }
+        }
+        svg {
+          width: 30px!important;
+          height: 30px!important;
+        }
+      }
+    }
+  }
+}
+
+.ItemContent:nth-child(6) {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  position: relative;
+
+  .SitePicture {
+    position: absolute;
+    top: 235rem;
+    right: 0;
+    width: 100%;
+    object-fit: cover;
+
+    @media only screen and (max-width: 768px) {
+      width: 155vw;
+      top: 340vh;
+    }
+  }
+
+  .TextContent {
+    position: absolute;
+    top: 287rem;
+    left: calc(100vw - 85%);
+    width: 600px;
+    text-align: right;
+
+    .Title {
+      color: #3C2807;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      font-size: 50px;
+      letter-spacing: -3px;
+      line-height: 130%;
+      font-size: 70px;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    .Subtitle {
+      color: #3C2807;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      font-size: 31px;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    .Description {
+      color: #3C2807;
+      font-size: 20px;
+      width: 480px;
+      margin-left: 120px;
+      letter-spacing: 0px;
+      line-height: 130%;
+      margin-bottom: 0;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    @media only screen and (max-width: 768px) {
+      top: 380vh;
+      right: 0;
+      left: 0;
+      margin-left: 15px;
+      text-align: left;
+
+      .Title {
+        font-size: 50px!important;
+      }
+      .Subtitle {
+        font-size: 22px;
+        width: 250px;
+      }
+      .Description {
+        font-size: 14px;
+        width: 360px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .LinksContent {
+    position: absolute;
+    top: 280rem;
+    right: calc(100vw - 87%);
+    width: 600px;
+    height: 390px;
+    text-align: left;
+    color: #3C2807;
+    background-color: #F1E7CE;
+    opacity: 0.8;
+    z-index: 1;
+
+    .Link {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      text-decoration: none;
+    }
+
+    .LinkText {
+      margin-right: 10px;
+      color: #3C2807;
+      font-family: $elcubo3_font_subtitle;
+      font-weight: bold;
+      width: 100%;
+    }
+
+    .LinkItem:nth-child(1) {
+      a {
+        top: 5px;
+        left: 23px;
+      }
+      p {
+        margin-left: 15px;
+        width: 265px;
+        text-transform: uppercase;
+      }
+    }
+
+    .LinkItem:nth-child(2) {
+      a {
+        top: 50px;
+        left: 22px;
+      }
+      p {
+        margin-left: 15px;
+        width: 425px;
+      }
+      span {
+        font-size: 13.5px;
+        font-weight: normal;
+      }
+    }
+
+    .LinkItem:nth-child(3) {
+      a {
+        top: 135px;
+        left: 22px;
+      }
+      p {
+        margin-left: 15px;
+        width: 450px;
+      }
+      span {
+        font-size: 13.5px;
+        font-weight: normal;
+      }
+    }
+
+    .LinkItem:nth-child(4) {
+      a {
+        top: 190px;
+        left: 23px;
+      }
+      p {
+        margin-left: 15px;
+        width: 485px;
+      }
+      span {
+        font-size: 13.5px;
+        font-weight: normal;
+      }
+    }
+
+    .LinkItem:nth-child(5) {
+      a {
+        bottom: 0px;
+        left: 23px;
+      }
+      p {
+        margin-left: 15px;
+        width: 485px;
+      }
+      span {
+        font-size: 13.5px;
+        font-weight: normal;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      position: absolute;
+      top: 405vh;
+      right: 0;
+      left: 0;
+      margin-left: 15px;
+      width: 365px;
+      height: 355px;
+      text-align: left;
+
+      .LinkItem:nth-child(1) {
+        a {
+          top: 5px;
+          left: 12px;
+        }
+        p {
+          font-size: 13px;
+          position: relative;
+          right: 40px;
+          width: 300px;
+          margin-left: 10px;
+        }
+        svg {
+          width: 30px!important;
+          height: 30px!important;
+          position: relative;
+          left: 310px;
+        }
+      }
+      .LinkItem:nth-child(2) {
+        a {
+          top: 45px;
+          left: 12px;
+        }
+        p {
+          font-size: 13px;
+          position: relative;
+          right: 40px;
+          margin-left: 10px;
+          width: 300px;
+        }
+        svg {
+          width: 30px !important;
+          height: 30px !important;
+          position: relative;
+          left: 310px;
+        }
+      }
+      .LinkItem:nth-child(3) {
+        a {
+          top: 110px;
+          left: 12px;
+        }
+        p {
+          font-size: 13px;
+          position: relative;
+          right: 40px;
+          margin-left: 10px;
+          width: 310px;
+        }
+        span {
+          font-size: 12px;
+        }
+        svg {
+          width: 30px !important;
+          height: 30px !important;
+          position: relative;
+          left: 310px;
+        }
+      }
+      .LinkItem:nth-child(4) {
+        a {
+          top: 160px;
+          left: 12px;
+        }
+        p {
+          font-size: 13px;
+          position: relative;
+          right: 40px;
+          margin-left: 10px;
+          width: 310px;
+        }
+        span {
+          font-size: 12px;
+        }
+        svg {
+          width: 30px !important;
+          height: 30px !important;
+          position: relative;
+          left: 310px;
+        }
+      }
+      .LinkItem:nth-child(5) {
+        a {
+          bottom: 0px;
+          left: 12px;
+        }
+        p {
+          font-size: 13px;
+          position: relative;
+          right: 40px;
+          margin-left: 10px;
+          width: 300px;
+        }
+        span {
+          font-size: 12px;
+        }
+        svg {
+          width: 30px !important;
+          height: 30px !important;
+          position: relative;
+          left: 310px;
+        }
+      }
+    }
+  }
+}
+
+.ItemContent:nth-child(7) {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  position: relative;
+
+  .Clows {
+    position: absolute;
+    top: 285rem;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .SitePicture {
+    position: absolute;
+    top: 270rem;
+    left: 0;
+    width: 70%;
+    object-fit: cover;
+
+    @media only screen and (max-width: 768px) {
+      top: 375vh;
+      left: 0;
+      width: 155vw;
+    }
+  }
+
+  .TextContent {
+    position: absolute;
+    top: 297rem;
+    right: calc(100vw - 87%);
+    width: 600px;
+    text-align: left;
+
+    .Title {
+      color: #3C2807;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      font-size: 50px;
+      letter-spacing: -3px;
+      line-height: 130%;
+      font-size: 70px;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    .Subtitle {
+      color: #3C2807;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      font-size: 31px;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    .Description {
+      color: #3C2807;
+      font-size: 20px;
+      width: 545px;
+      letter-spacing: 0px;
+      line-height: 130%;
+      margin-bottom: 0;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    @media only screen and (max-width: 768px) {
+      top: 425vh;
+      right: 0;
+      left: 0;
+      margin-left: 15px;
+
+      .Title {
+        font-size: 50px!important;
+      }
+      .Subtitle {
+        font-size: 22px;
+      }
+      .Description {
+        font-size: 14px;
+        width: 360px;
+      }
+    }
+  }
+
+  .LinksContent {
+    position: absolute;
+    top: 319rem;
+    left: calc(100vw - 72%);
+    width: 360px;
+    height: 125px;
+    text-align: right;
+    color: #3C2807;
+    background-color: #F1E7CE;
+    opacity: 0.8;
+    z-index: 1;
+
+    .Link {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      text-decoration: none;
+    }
+
+    .LinkText {
+      margin-right: 10px;
+      color: #3C2807;
+      font-family: $elcubo3_font_subtitle;
+      font-weight: bold;
+      width: 100%;
+    }
+
+    .LinkItem:nth-child(1) {
+      a {
+        top: 5px;
+        right: 23px;
+      }
+      p {
+        margin-left: 11px;
+        width: 265px;
+        text-transform: uppercase;
+      }
+    }
+
+    .LinkItem:nth-child(2) {
+      a {
+        bottom: 0px;
+        right: 22px;
+      }
+      p {
+        margin-left: 10px;
+        width: 310px;
+      }
+      span {
+        font-size: 13.5px;
+        font-weight: normal;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      top: 469vh;
+      right: 0;
+      left: 0;
+      margin-left: 15px;
+      width: 360px;
+      height: 110px;
+      text-align: left;
+
+      .LinkText {
+        margin-right: 0px;
+        margin-left: 12px;
+        font-size: 12px;
+      }
+
+      .LinkItem:nth-child(1) {
+        a {
+          top: 5px;
+          left: 0px;
+        }
+        p {
+          text-transform: uppercase;
+          width: 20rem;
+        }
+        svg {
+          width: 30px!important;
+          height: 30px!important;
+        }
+      }
+
+      .LinkItem:nth-child(2) {
+        a {
+          bottom: 0px;
+          left: 0px;
+        }
+        p {
+          width: 18.5rem;
+          margin-left: 10px;
+          margin-right: 8px;
+
+          span{
+            font-size: 13px;
+          }
+        }
+        svg {
+          width: 30px!important;
+          height: 30px!important;
+        }
+      }
+    }
+  }
+}
+
+.ItemContent:nth-child(8) {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  position: relative;
+
+  .SitePicture {
+    position: absolute;
+    top: 317rem;
+    right: 0;
+    width: 55%;
+    object-fit: cover;
+
+    @media only screen and (max-width: 768px) {
+      width: 130vw;
+      top: 422vh;
+    }
+  }
+
+  .TextContent {
+    position: absolute;
+    top: 337rem;
+    left: calc(100vw - 85%);
+    width: 600px;
+    text-align: right;
+
+    .Title {
+      color: #3C2807;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      font-size: 50px;
+      letter-spacing: -3px;
+      line-height: 130%;
+      font-size: 70px;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    .Subtitle {
+      color: #3C2807;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      font-size: 31px;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    .Description {
+      color: #3C2807;
+      font-size: 20px;
+      width: 480px;
+      margin-left: 120px;
+      letter-spacing: 0px;
+      line-height: 130%;
+      margin-bottom: 0;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    @media only screen and (max-width: 768px) {
+      top: 460vh;
+      right: 0;
+      left: 0;
+      margin-left: 15px;
+      text-align: left;
+
+      .Title {
+        font-size: 50px!important;
+      }
+      .Subtitle {
+        font-size: 22px;
+        width: 250px;
+      }
+      .Description {
+        font-size: 14px;
+        width: 360px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .LinksContent {
+    position: absolute;
+    top: 356rem;
+    right: calc(100vw - 88%);
+    width: 600px;
+    height: 150px;
+    text-align: left;
+    color: #3C2807;
+    background-color: #F1E7CE;
+    opacity: 0.8;
+    z-index: 1;
+
+    .Link {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      text-decoration: none;
+    }
+
+    .LinkText {
+      margin-right: 10px;
+      color: #3C2807;
+      font-family: $elcubo3_font_subtitle;
+      font-weight: bold;
+      width: 100%;
+    }
+
+    .LinkItem:nth-child(1) {
+      a {
+        top: 5px;
+        left: 23px;
+      }
+      p {
+        margin-left: 15px;
+        width: 325px;
+        text-transform: uppercase;
+      }
+    }
+
+    .LinkItem:nth-child(2) {
+      a {
+        top: 50px;
+        left: 22px;
+      }
+      p {
+        margin-left: 15px;
+        width: 440px;
+      }
+      span {
+        font-size: 13.5px;
+        font-weight: normal;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      position: absolute;
+      top: 500vh;
+      right: 0;
+      left: 0;
+      margin-left: 15px;
+      width: 365px;
+      height: 130px;
+      text-align: left;
+      
+      .LinkItem:nth-child(1) {
+        a {
+          top: 5px;
+          left: 12px;
+        }
+        p {
+          font-size: 13px;
+          position: relative;
+          right: 40px;
+          width: 300px;
+          margin-left: 10px;
+        }
+        svg {
+          width: 30px!important;
+          height: 30px!important;
+          position: relative;
+          left: 310px;
+        }
+      }
+      .LinkItem:nth-child(2) {
+        a {
+          bottom: 0px;
+          left: 12px;
+        }
+        p {
+          font-size: 13px;
+          position: relative;
+          right: 40px;
+          margin-left: 10px;
+          width: 300px;
+        }
+        span {
+          font-size: 12px;
+        }
+        svg {
+          width: 30px !important;
+          height: 30px !important;
+          position: relative;
+          left: 310px;
+        }
+      }
+    }
+  }
+}
+
+.ItemContent:nth-child(9) {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  position: relative;
+
+  .Clows {
+    position: absolute;
+    top: 348rem;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .TextContent {
+    position: absolute;
+    top: 355rem;
+    right: calc(100vw - 88%);
+    width: 600px;
+    text-align: left;
+
+    .Title {
+      color: #3C2807;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      font-size: 50px;
+      letter-spacing: -3px;
+      line-height: 130%;
+      font-size: 70px;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    .Subtitle {
+      color: #3C2807;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      font-size: 31px;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    .Description {
+      color: #3C2807;
+      font-size: 20px;
+      width: 480px;
+      letter-spacing: 0px;
+      line-height: 130%;
+      margin-bottom: 0;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    @media only screen and (max-width: 768px) {
+      top: 462vh;
+      right: 0;
+      left: 0;
+      margin-left: 15px;
+
+      .Title {
+        font-size: 50px!important;
+      }
+      .Subtitle {
+        font-size: 22px;
+      }
+      .Description {
+        font-size: 14px;
+        width: 360px;
+      }
+    }
+  }
+
+  .LinksContent {
+    position: absolute;
+    top: 358rem;
+    left: calc(100vw - 84%);
+    width: 570px;
+    height: 355px;
+    text-align: right;
+    color: #3C2807;
+    background-color: #F1E7CE;
+    opacity: 0.8;
+    z-index: 1;
+
+    .Link {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      text-decoration: none;
+    }
+
+    .LinkText {
+      margin-right: 10px;
+      color: #3C2807;
+      font-family: $elcubo3_font_subtitle;
+      font-weight: bold;
+      width: 100%;
+    }
+
+    .LinkItem:nth-child(1) {
+      a {
+        top: 5px;
+        right: 23px;
+      }
+      p {
+        margin-left: 11px;
+        width: 265px;
+        text-transform: uppercase;
+      }
+    }
+
+    .LinkItem:nth-child(2) {
+      a {
+        top: 45px;
+        right: 22px;
+      }
+      p {
+        margin-left: 10px;
+        width: 445px;
+      }
+      span {
+        font-size: 13.5px;
+        font-weight: normal;
+      }
+    }
+
+    .LinkItem:nth-child(3) {
+      a {
+        top: 165px;
+        right: 22px;
+      }
+      p {
+        margin-left: 10px;
+        width: 450px;
+      }
+      span {
+        font-size: 13.5px;
+        font-weight: normal;
+      }
+    }
+
+    .LinkItem:nth-child(4) {
+      a {
+        top: 225px;
+        right: 23px;
+      }
+      p {
+        margin-left: 15px;
+        width: 425px;
+      }
+      span {
+        font-size: 13.5px;
+        font-weight: normal;
+      }
+    }
+
+    .LinkItem:nth-child(5) {
+      a {
+        bottom: 0px;
+        right: 23px;
+      }
+      p {
+        margin-left: 15px;
+        width: 425px;
+      }
+      span {
+        font-size: 13.5px;
+        font-weight: normal;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      top: 498vh;
+      right: 0;
+      left: 0;
+      margin-left: 15px;
+      width: 360px;
+      height: 330px;
+      text-align: left;
+
+      .LinkText {
+        margin-right: 0px;
+        margin-left: 12px;
+        font-size: 12px;
+      }
+
+      .LinkItem:nth-child(1) {
+        a {
+          top: 5px;
+          left: 0px;
+        }
+        p {
+          text-transform: uppercase;
+          width: 20rem;
+        }
+        svg {
+          width: 30px!important;
+          height: 30px!important;
+        }
+      }
+
+      .LinkItem:nth-child(2) {
+        a {
+          top: 40px;
+          left: 0px;
+        }
+        p {
+          width: 20rem;
+        }
+        svg {
+          width: 30px!important;
+          height: 30px!important;
+        }
+      }
+
+      .LinkItem:nth-child(3) {
+        a {
+          top: 150px;
+          left: 0px;
+        }
+        p {
+          width: 19.5rem;
+          font-size: 12px;
+        }
+        svg {
+          width: 30px!important;
+          height: 30px!important;
+        }
+      }
+
+      .LinkItem:nth-child(4) {
+        a {
+          top: 212px;
+          left: 0;
+        }
+        p {
+          width: 18.5rem;
+          margin-left: 10px;
+          margin-right: 8px;
+        }
+        svg {
+          width: 30px!important;
+          height: 30px!important;
+        }
+      }
+
+      .LinkItem:nth-child(5) {
+        a {
+          bottom: 0px;
+          left: 0px;
+        }
+        p {
+          width: 18.5rem;
+          margin-left: 10px;
+          margin-right: 8px;
+
+          span{
+            font-size: 13px;
+          }
+        }
+        svg {
+          width: 30px!important;
+          height: 30px!important;
+        }
+      }
+    }
+
+  }
+}
+
+.ItemContent:nth-child(10) {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  position: relative;
+
+  .SitePicture {
+    position: absolute;
+    top: 365rem;
+    right: 0;
+    width: 100%;
+    object-fit: cover;
+
+    @media only screen and (max-width: 768px) {
+      width: 130vw;
+      top: 530vh;
+    }
+  }
+
+  .TextContent {
+    position: absolute;
+    top: 375rem;
+    left: calc(100vw - 85%);
+    width: 600px;
+    text-align: right;
+
+    .Title {
+      color: #3C2807;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      font-size: 50px;
+      letter-spacing: -3px;
+      line-height: 130%;
+      font-size: 70px;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    .Subtitle {
+      color: #3C2807;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      font-size: 31px;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    .Description {
+      color: #3C2807;
+      font-size: 20px;
+      width: 480px;
+      margin-left: 120px;
+      letter-spacing: 0px;
+      line-height: 130%;
+      margin-bottom: 0;
+      font-family: $elcubo3_font_subtitle;
+    }
+
+    @media only screen and (max-width: 768px) {
+      top: 485vh;
+      right: 0;
+      left: 0;
+      margin-left: 15px;
+      text-align: left;
+
+      .Title {
+        font-size: 50px!important;
+      }
+      .Subtitle {
+        font-size: 22px;
+        width: 250px;
+      }
+      .Description {
+        font-size: 14px;
+        width: 360px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .LinksContent {
+    position: absolute;
+    top: 394rem;
+    right: calc(100vw - 80%);
+    width: 460px;
+    height: 60px;
+    text-align: left;
+    color: #3C2807;
+    background-color: #F1E7CE;
+    opacity: 0.8;
+    z-index: 1;
+
+    .Link {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      text-decoration: none;
+    }
+
+    .LinkText {
+      margin-right: 10px;
+      color: #3C2807;
+      font-family: $elcubo3_font_subtitle;
+      font-weight: bold;
+      width: 100%;
+    }
+
+    .LinkItem:nth-child(1) {
+      a {
+        top: 5px;
+        left: 23px;
+      }
+      p {
+        margin-left: 15px;
+        width: 325px;
+        text-transform: uppercase;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      position: absolute;
+      top: 517vh;
+      right: 0;
+      left: 0;
+      margin-left: 15px;
+      width: 365px;
+      height: 47px;
+      text-align: left;
+    
+      .LinkItem:nth-child(1) {
+        a {
+          top: 5px;
+          left: 12px;
+        }
+        p {
+          font-size: 13px;
+          position: relative;
+          right: 40px;
+          width: 300px;
+          margin-left: 10px;
+        }
+        svg {
+          width: 30px!important;
+          height: 30px!important;
+          position: relative;
+          left: 310px;
+        }
+      }
+    }
+  }
+}
+
+.VideoContainer {
+  position: relative;
+  top: 390rem;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
+  width: 70%;
+  height: 700px;
+
+  @media only screen and (max-width: 768px) {
+    top: 480vh;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    height: 200px;
+  }
+}
