@@ -12,6 +12,7 @@ import styles from './lineal.module.scss'
 const Lineal = () => {
 
     let srcVideo = UrlUtils.getVideoUrl("477144");
+    let duration =  1164;
     // FIXME: Remove/refactor
     const [showDashboardModal, setShowDashboardModal] = useState(false);
 
@@ -73,22 +74,27 @@ const Lineal = () => {
     const markers = [
       {
         time: 800, 
+        url: '/images/season3/hitos/icons/0.jpg',
         text: 'Violencia bipartidista', 
       },
       {
         time: 600, 
+        url: '/images/season3/hitos/icons/0.jpg',
         text: 'Historia de amor de Guillermo y María',      
       },
       {
         time: 400, 
+        url: '/images/season3/hitos/icons/0.jpg',
         text: 'La posesión de tierra en Colombia',    
       },
       {
         time: 200, 
+        url: '/images/season3/hitos/icons/0.jpg',
         text: 'Guillermo Sale de Jordán',    
       },
       {
         time: 100, 
+        url: '/images/season3/hitos/icons/0.jpg',
         text: 'Guillermo se encontró a Santa Rosa. ',    
       },
     ];
@@ -135,6 +141,7 @@ const Lineal = () => {
     return (
         <div className={styles.NodeContainer}>
             <DashboardLinealModal
+                char = 'guillermo'
                 showModal={showDashboardModal}
                 onCloseDashboard={handleOnCloseDashboardLineal}
             />
@@ -151,9 +158,10 @@ const Lineal = () => {
                 showPrevButton={false}
                 showNextButton={false}
                 setPlayer={setPlayer}
-                fullscreen={true}
+                fullscreen={false}
                 showDashboardLineal
                 markers = {markers}
+                duration = {duration}
                 onClickDashboardLineal={handleOnClickDashboardLineal}   
             />
 

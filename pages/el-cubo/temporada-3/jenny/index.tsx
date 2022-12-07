@@ -10,6 +10,8 @@ import styles from './lineal.module.scss'
 
 
 const Lineal = () => {
+    let srcVideo = UrlUtils.getVideoUrl("477146");
+    let duration = 744;
     // FIXME: Remove/refactor
     const [showDashboardModal, setShowDashboardModal] = useState(false);
 
@@ -51,8 +53,6 @@ const Lineal = () => {
 
     }, [steal.current, player]);
 
-    let srcVideo = UrlUtils.getVideoUrl("477146");
-
     const handlePlayVideo = (playVideo) => {
         if (playVideo) {
             player.play();
@@ -73,18 +73,22 @@ const Lineal = () => {
     const markers = [
       {
         time: 500, 
+        url: '/images/season3/hitos/icons/0.jpg',
         text: 'Origen de la familia Delgado', 
       },
       {
         time: 400, 
+        url: '/images/season3/hitos/icons/0.jpg',
         text: 'Educación en la ruralidad',      
       },
       {
-        time: 300, 
+        time: 300,
+        url: '/images/season3/hitos/icons/0.jpg',
         text: 'Las personas en el campo',    
       },
       {
-        time: 100, 
+        time: 100,
+        url: '/images/season3/hitos/icons/0.jpg',
         text: 'Las señoritas',    
       },
     ];
@@ -131,6 +135,7 @@ const Lineal = () => {
     return (
         <div className={styles.NodeContainer}>
             <DashboardLinealModal
+                char = 'jenny'
                 showModal={showDashboardModal}
                 onCloseDashboard={handleOnCloseDashboardLineal}
             />
@@ -147,9 +152,10 @@ const Lineal = () => {
                 showPrevButton={false}
                 showNextButton={false}
                 setPlayer={setPlayer}
-                fullscreen={true}
+                fullscreen={false}
                 showDashboardLineal
                 markers = {markers}
+                duration = {duration}
                 onClickDashboardLineal={handleOnClickDashboardLineal}   
             />
 

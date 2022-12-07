@@ -66,11 +66,15 @@ export const Popup = ({...props}) => {
   }
 
   function openPersonajesModal() {
-    props.onClickPersonajesModal();
+    if (props.onClickPersonajesModal) {
+      props.onClickPersonajesModal();
+    }
   }
 
   function updatePersonaje(bg: string, name: string, description: string, icon: string, link: string) {
-    props.updatePersonaje(bg, name, description, icon, link);
+    if(props.updatePersonaje) {
+      props.updatePersonaje(bg, name, description, icon, link);
+    }
   }
 
   return (

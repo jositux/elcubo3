@@ -12,6 +12,7 @@ import styles from './lineal.module.scss'
 const Lineal = () => {
 
     let srcVideo = UrlUtils.getVideoUrl("477142");
+    let duration = 1001;
     // FIXME: Remove/refactor
     const [showDashboardModal, setShowDashboardModal] = useState(false);
 
@@ -73,18 +74,22 @@ const Lineal = () => {
     const markers = [
       {
         time: 800, 
+        url: '/images/season3/hitos/icons/0.jpg',
         text: 'La carranga', 
       },
       {
-        time: 600, 
+        time: 600,
+        url: '/images/season3/hitos/icons/0.jpg', 
         text: 'Dificultades para los músicos',      
       },
       {
         time: 400, 
+        url: '/images/season3/hitos/icons/0.jpg',
         text: 'La carretera Bucaramanga',    
       },
       {
         time: 200, 
+        url: '/images/season3/hitos/icons/0.jpg',
         text: 'Los niños',    
       },
     ];
@@ -131,6 +136,7 @@ const Lineal = () => {
     return (
         <div className={styles.NodeContainer}>
             <DashboardLinealModal
+                char = 'diego'
                 showModal={showDashboardModal}
                 onCloseDashboard={handleOnCloseDashboardLineal}
             />
@@ -147,9 +153,10 @@ const Lineal = () => {
                 showPrevButton={false}
                 showNextButton={false}
                 setPlayer={setPlayer}
-                fullscreen={true}
+                fullscreen={false}
                 showDashboardLineal
                 markers = {markers}
+                duration = {duration}
                 onClickDashboardLineal={handleOnClickDashboardLineal}   
             />
 

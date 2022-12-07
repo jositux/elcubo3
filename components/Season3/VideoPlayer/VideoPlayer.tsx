@@ -18,6 +18,7 @@ const VideoPlayer = ({
   autoPlay,
   showDashboard = false,
   showDashboardLineal = false,
+  duration,
   markers,
   onClickDashboard,
   onClickDashboardLineal,
@@ -193,7 +194,7 @@ const VideoPlayer = ({
       controls.insertAdjacentHTML(
         'afterend',
         `<div class="link-to-dashboard" title="Ir al dashboard">
-        <img src="/images/season2/icon-dashboard2.svg" />
+        <img src="/images/season3/icon-dashboard.svg" />
         </div>`,
       );
       const linkToDashboard = container.getElementsByClassName('link-to-dashboard')[0];
@@ -316,11 +317,31 @@ const VideoPlayer = ({
   }, [title]);
 
 
+  React.useEffect(() => {
+  playerRef.current.on('play', (event) => {
+
+    setInterval(() => {
+      console.log(parseInt(playerRef.current.currentTime, 10));
+
+      markers.map( (c, index) => (
+      c.time == parseInt(playerRef.current.currentTime, 10) ? alert(c.text):  console.log('')
+      
+      ));
+
+    }, 1000);
+
+
+    });
+}, [playerRef.current, markers]);
+
+
   // Add Markers
   React.useEffect(() => {
-    let video_duration = playerRef.current.duration;
+    //let video_duration = playerRef.current.duration;
 
-    setTimeout(() => { 
+    let video_duration = duration;
+
+    /*setTimeout(() => { 
       video_duration = playerRef.current.duration;
 
       if (markers.length !== 0) {
@@ -329,32 +350,48 @@ const VideoPlayer = ({
       ))
       }
     
-     }, 4000);
+     }, 10000);*/
 
     const calculatePercent = (num1, total) => {
       return (num1 / total) * 100;
     };
 
-    const createPoint = (pSeconds, pText) => {
+    const createPoint = (pClassElement, pSeconds, pUrl, pText) => {
       let percent = calculatePercent(pSeconds, video_duration);
       let point = document.createElement('div');
-      let content = document.createElement('span');
-      let text = document.createTextNode(pText);
-      content.appendChild(text);
-      point.appendChild(content);
-      point.setAttribute('class', 'marker');
+      //let content = document.createElement('span');
+      //let text = document.createTextNode(pText);
+
+      let img = new Image();
+      img.src = pUrl;
+
+      //content.appendChild(text);
+      //content.appendChild(img);
+
+      console.log(document.querySelector('.' + pClassElement));
+      point.appendChild(img);
+      //point.appendChild(text);
+      point.setAttribute('class', 'marker '+ pClassElement);
       point.setAttribute('style', 'left: ' + percent + '%;');
       return point;
     }
 
-    const addMarker = (pClass, pPercent, pText) => {
+    const addMarker = (pClass, pClassElement, pPercent, pUrl, pText) => {
       const controls = document.querySelector('.plyr__progress');
-      if (controls && document.querySelector(pClass) == null) {
-        controls.appendChild(createPoint(pPercent, pText));
+      if (controls && document.querySelector(pClass) == null)
+      { 
+          controls.appendChild(createPoint(pClassElement, pPercent, pUrl, pText));
       }
+      
     }
 
-  }, [markers, playerRef.current]);
+    if (markers.length !== 0) {
+      markers.map( (c, index) => (
+        addMarker('marker', 'marker-'+index, c.time, c.url, c.text)
+    ))
+    }
+
+  }, [markers, duration, playerRef.current]);
 
 
   React.useEffect(() => {

@@ -2,7 +2,7 @@ import React from "react";
 import DashboardLineal from 'components/Season3/Dashboard/DashboardLineal';
 import styles from './season3.dashboardLinealModal.module.scss';
 
-const DashboardLinealModal = ({ showModal, onCloseDashboard }) => {
+const DashboardLinealModal = ({ char, showModal, onCloseDashboard }) => {
 
   React.useEffect(() => {
 
@@ -26,7 +26,7 @@ const DashboardLinealModal = ({ showModal, onCloseDashboard }) => {
         <div className={styles.child}>
           <p className={styles.t_close} onClick={onCloseDashboard}>
           </p>
-          <DashboardLineal />
+          <DashboardLineal char={char} />
         </div>
       </div>
     </div>
