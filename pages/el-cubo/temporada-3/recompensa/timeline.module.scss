@@ -1,21 +1,20 @@
 .TimelineContainer {
   position: relative;
   width: 100vw;
-  height: 1112vh;
+  height: 600rem;
   padding: 0 0 50px 0;
   background-color: #e4d7b7;
   background-attachment: fixed;
   background-size: cover;
 
   @media only screen and (max-width: 768px) {
-    height: 945vh;
+    height: 860vh;
   }
 }
 
 .Timeline {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   margin: 0 auto;
   background-color: #e4d7b7;
@@ -26,7 +25,7 @@
   position: absolute;
   left: 50%;
   width: 1px;
-  height: 1120vh;
+  height: calc(100vh + 530rem);
   margin-left:0 25px;
   margin-top: 15rem;
   margin-bottom: 15rem;
@@ -44,27 +43,83 @@
   }
 }
 
+
 .ItemContent:nth-child(1) {
-  width: 100%;
   display: flex;
   position: relative;
+  margin: auto;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  height: 80vh;
+
+  @media only screen and (max-width: 768px) {
+    width: 100vw!important;
+    height: 70vh!important;
+  }
 
   .SitePicture {
     position: absolute;
     top: 0;
     left: 0;
-    width: 85vw;
+    width: 100%;
+    height: auto;
 
     @media only screen and (max-width: 768px) {
       width: 125vw;
     }
   }
 
+  .ColumnsContainer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding-top: 440px;
+    padding-bottom: 100px;
+    width: 100%;
+    //flex-direction: row-reverse;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+      width: 95vw;
+    }
+  }
+
+  .columnLink {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0 15px 0 15px;
+
+    @media only screen and (max-width: 768px) {
+      width: 90vw;
+      position: relative;
+      top: 110px;
+      right: auto;
+      left: auto;
+      margin: 0;
+      justify-content: center;
+    }
+  }
+
+  .columnText {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0 15px 0 15px;
+
+    @media only screen and (max-width: 768px) {
+      width: 100vw;
+      position: relative;
+      top: 110px;
+      left: 0;
+      margin: 0 auto;
+    }
+  }
+
   .TextContent {
-    position: absolute;
-    top: 25rem;
-    right: calc(100vw - 80%);
-    width: 470px;
+    max-width: 600px;
     text-align: left;
     z-index: 1;
 
@@ -92,14 +147,15 @@
     .Description {
       color: #3C2807;
       font-size: 20px;
-      width: 600px;
+      max-width: 600px;
       letter-spacing: 0px;
       line-height: 130%;
+      width: 40vw;
       font-family: $elcubo3_font_subtitle;
     }
 
     @media only screen and (max-width: 768px) {
-      top: 21vh;
+      top: 0;
       right: 0;
       left: 0;
       margin-left: 15px;
@@ -112,33 +168,46 @@
       }
       .Description {
         font-size: 14px;
-        width: 360px;
+        width: 90%;
       }
     }
   }
 
   .LinksContent {
-    position: absolute;
-    top: 35rem;
-    left: calc(100vw - 80%);
-    width: 500px;
-    height: 195px;
+    max-width: 495px;
+    width: 100%;
+    min-height: 195px;
+    height: auto;
     text-align: right;
     color: #3C2807;
     background-color: #F1E7CE;
     opacity: 0.8;
+    display: flex;
     z-index: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px;
 
     .LinkItem {
-      width: 100%;
-    	position: relative;
+      position: relative;
       cursor: pointer;
+
+      a {
+        align-items: center;
+        text-decoration: none;
+        display: flex;
+        //flex-direction: row-reverse;
+      }
+
+      span {
+        font-size: 13.5px;
+        font-weight: normal;
+      }
     }
 
     .Link {
       display: flex;
       align-items: center;
-      position: absolute;
       text-decoration: none;
     }
 
@@ -150,44 +219,19 @@
     }
 
     .LinkItem:nth-child(1) {
-      a {
-        top: 5px;
-        right: 20px;
-      }
       p {
         text-transform: uppercase;
       }
     }
 
-    .LinkItem:nth-child(2) {
-      a {
-        top: 55px;
-        right: 20px;
-      }
-      span {
-        font-size: 13.5px;
-        font-weight: normal;
-      }
-    }
-
-    .LinkItem:nth-child(3) {
-      a {
-        top: 120px;
-        right: 21px;
-      }
-      span {
-        font-size: 13.5px;
-        font-weight: normal;
-      }
-    }
-
     @media only screen and (max-width: 768px) {
-      top: 54vh;
-      right: 0;
+      top: 0;
+      right: 0px;
       left: 0;
       margin-left: 15px;
-      width: 360px;
+      width: 383px;
       height: 150px;
+      max-height: 150px;
       text-align: left;
 
       .LinkText {
@@ -251,36 +295,95 @@
 }
 
 .ItemContent:nth-child(2) {
-  width: 100%;
   display: flex;
   position: relative;
+  margin: auto;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  height: 80vh;
+
+  @media only screen and (max-width: 768px) {
+    width: 100vw!important;
+    height: 100vh!important;
+  }
 
   .Clows {
     position: absolute;
-    top: 10rem;
+    top: -2rem;
     left: 0;
-    width: 100%;
+    width: 100vw;
+    height: 50%;
     z-index: 0;
   }
 
   .SitePicture {
     position: absolute;
-    top: 45rem;
+    top: 0;
     right: 0;
     width: 70vw;
 
     @media only screen and (max-width: 768px) {
-      width: 155vw;
-      top: 62vh;
+      width: 145vw;
+      height: 80vh;
+      top: -100px;
     }
   }
   
+  .ColumnsContainer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding-top: 440px;
+    padding-bottom: 100px;
+    width: 100%;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+      width: 95vw;
+    }
+  }
+
+  .columnLink {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 225px 15px 0 15px;
+
+    @media only screen and (max-width: 768px) {
+      width: 60%;
+      position: relative;
+      top: calc((251vw - 153rem) / 2.5);
+      right: 15px;
+      margin: 0 auto;
+    }
+  }
+
+  .columnText {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0 15px 0 15px;
+
+    @media only screen and (max-width: 768px) {
+      width: 90vw;
+      position: relative;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      justify-content: flex-start;
+    }
+  }
+
   .TextContent {
-    position: absolute;
-    top: 75rem;
-    left: calc(100vw - 85.5%);
-    width: 600px;
+    max-width: 600px;
     text-align: right;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
     .Title {
       color: #3C2807;
@@ -298,7 +401,6 @@
       color: #3C2807;
       font-weight: bold;
       margin: 0;
-      padding: 0;
       font-size: 31px;
       font-family: $elcubo3_font_subtitle;
     }
@@ -306,66 +408,72 @@
     .Description {
       color: #3C2807;
       font-size: 20px;
-      margin-left: -75px;
+      max-width: 600px;
       letter-spacing: 0px;
       line-height: 130%;
+      width: 100%;
       font-family: $elcubo3_font_subtitle;
     }
 
     @media only screen and (max-width: 768px) {
-      top: 109vh;
+      top: 0;
       right: 0;
       left: 0;
-      margin-left: 15px;
       text-align: left;
+      margin-left: 0;
 
       .Title {
         font-size: 50px!important;
       }
       .Subtitle {
         font-size: 22px;
-        width: 210px;
+        width: 50vw;
+        padding: 0;
       }
       .Description {
         font-size: 14px;
-        width: 360px;
-        margin-left: 0;
+        width: 100%;
+        margin-right: 0;
+        position: relative;
+        left: 0;
       }
     }
   }
 
   .LinksContent {
-    position: absolute;
-    top: 96rem;
-    right: calc(100vw - 82%);
-    width: 500px;
-    height: 60px;
+    max-width: 495px;
+    width: 100%;
+    min-height: 45px;
+    height: auto;
     text-align: right;
     color: #3C2807;
     background-color: #F1E7CE;
     opacity: 0.8;
+    display: flex;
     z-index: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
 
     .LinkItem {
-      width: 100%;
     	position: relative;
       cursor: pointer;
 
       a {
-        top: 5px;
-        left: 20px;
+        align-items: center;
+        text-decoration: none;
       }
     }
 
     .Link {
       display: flex;
       align-items: center;
-      position: absolute;
       text-decoration: none;
     }
 
     .LinkText {
       margin-left: 10px;
+      text-align: left;
       color: #3C2807;
       font-family: $elcubo3_font_subtitle;
       font-weight: bold;
@@ -376,7 +484,7 @@
       top: 143vh;
       right: 0;
       left: 0;
-      margin-left: 15px;
+      margin-left: 0px; 
       width: 365px;
       height: 50px;
       text-align: right;
@@ -404,13 +512,17 @@
 }
 
 .ItemContent:nth-child(3) {
-  width: 100%;
   display: flex;
   position: relative;
+  margin: auto;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  height: 80vh;
 
   .Clows {
     position: absolute;
-    top: 80rem;
+    top: -560px;
     left: 0;
     width: 100%;
     z-index: 0;
@@ -418,21 +530,64 @@
 
   .SitePicture {
     position: absolute;
-    top: 100rem;
+    top: 0;
     left: 0;
+    width: 100vw;
 
     @media only screen and (max-width: 768px) {
-      top: 146vh;
+      top: 48rem;
       width: 150vw;
     }
   }
 
+  .ColumnsContainer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding-top: 440px;
+    padding-bottom: 100px;
+    width: 100%;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .columnLink {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    width: 100%;
+    margin: 0 15px 0 15px;
+    
+    @media only screen and (max-width: 768px) {
+      width: 60%;
+      position: relative;
+      top: calc((251vw + 108rem) / 2.5);
+      right: 15px;
+      margin: 0 auto;
+    }
+  } 
+
+  .columnText {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0 15px 0 15px;
+
+    @media only screen and (max-width: 768px) {
+      width: 60%;
+      position: relative;
+      top: calc((251vw + 107rem) / 2.5);
+      right: 15px;
+      margin: 0 auto;
+    }
+  } 
+
   .TextContent {
-    position: absolute;
-    top: 140rem;
-    right: calc(100vw - 87%);
-    width: 600px;
+    max-width: 600px;
     text-align: left;
+    z-index: 1;
 
     .Title {
       color: #3C2807;
@@ -461,6 +616,7 @@
       width: 600px;
       letter-spacing: 0px;
       line-height: 130%;
+      width: 40vw;
       font-family: $elcubo3_font_subtitle;
     }
 
@@ -484,21 +640,40 @@
   }
 
   .LinksContent {
-    position: absolute;
-    top: 156rem;
-    left: calc(100vw - 83%);
-    width: 570px;
-    height: 270px;
+    max-width: 495px;
+    width: 100%;
+    min-height: 195px;
+    height: auto;
     text-align: right;
     color: #3C2807;
     background-color: #F1E7CE;
     opacity: 0.8;
+    display: flex;
     z-index: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px;
+    margin-bottom: 25px;
+
+    .LinkItem {
+      position: relative;
+      cursor: pointer;
+
+      a {
+        align-items: center;
+        text-decoration: none;
+        display: flex;
+      }
+
+      span {
+        font-size: 13.5px;
+        font-weight: normal;
+      }
+    }
 
     .Link {
       display: flex;
       align-items: center;
-      position: absolute;
       text-decoration: none;
     }
 
@@ -507,47 +682,14 @@
       color: #3C2807;
       font-family: $elcubo3_font_subtitle;
       font-weight: bold;
-      width: 100%;
     }
 
     .LinkItem:nth-child(1) {
-      a {
-        top: 5px;
-        right: 20px;
-      }
       p {
         text-transform: uppercase;
-        width: 115px;
       }
     }
 
-    .LinkItem:nth-child(2) {
-      a {
-        top: 55px;
-        right: 20px;
-      }
-      p {
-        width: 405px;
-      }
-      span {
-        font-size: 13.5px;
-        font-weight: normal;
-      }
-    }
-
-    .LinkItem:nth-child(3) {
-      a {
-        top: 165px;
-        right: 21px;
-      }
-      p {
-        width: 370px;
-      }
-      span {
-        font-size: 13.5px;
-        font-weight: normal;
-      }
-    }
 
     @media only screen and (max-width: 768px) {
       top: 234vh;
@@ -557,6 +699,12 @@
       width: 360px;
       height: 265px;
       text-align: left;
+
+      .LinkText {
+        margin-right: 0px;
+        margin-left: 12px;
+        font-size: 12px;
+      }
 
       .LinkItem:nth-child(1) {
         a {
@@ -618,6 +766,9 @@
   height: 500px;
   display: flex;
   position: relative;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
 
   .Clows {
     position: absolute;
@@ -629,23 +780,64 @@
 
   .SitePicture {
     position: absolute;
-    top: 150rem;
+    top: 65rem;
     right: 0;
-    width: 100%;
-    object-fit: cover;
-
+    width: 100vw;
+    
     @media only screen and (max-width: 768px) {
       width: 155vw;
-      top: 247vh;
+      top: 60rem;
+    }
+  }
+
+  .ColumnsContainer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .columnLink {
+    display:flex;
+    justify-content: flex-start;
+    width: 45%;
+    margin-left: 30px;
+    position: relative;
+    top: calc((100vw + 177rem) / 2.5);
+
+    @media only screen and (max-width: 768px) {
+      width: 60%;
+      position: relative;
+      top: calc((251vw - 325rem) / 2.5);
+      right: 15px;
+      margin: 0 auto;
+    }
+  }
+
+  .columnText {
+    display: flex;
+    justify-content: flex-end;
+    width: 45%;
+    margin-right: 30px;
+    position: relative;
+    top: calc((100vw + 160rem) / 2.5);
+
+    @media only screen and (max-width: 768px) {
+      width: 60%;
+      position: relative;
+      top: calc((251vw + 140rem) / 2.5);
+      right: 15px;
+      margin: 0 auto;
     }
   }
 
   .TextContent {
-    position: absolute;
-    top: 202rem;
-    left: calc(100vw - 85%);
     width: 600px;
     text-align: right;
+    z-index: 1;
 
     .Title {
       color: #3C2807;
@@ -676,6 +868,9 @@
       letter-spacing: 0px;
       line-height: 130%;
       margin-bottom: 0;
+      width: 40vw;
+      position: absolute;
+      right: 0;
       font-family: $elcubo3_font_subtitle;
     }
 
@@ -683,7 +878,7 @@
       top: 301vh;
       right: 0;
       left: 0;
-      margin-left: 15px;
+      margin-left: 0px;
       text-align: left;
 
       .Title {
@@ -702,9 +897,6 @@
   }
 
   .LinksContent {
-    position: absolute;
-    top: 210rem;
-    right: calc(100vw - 86%);
     width: 570px;
     height: 280px;
     text-align: left;
@@ -788,7 +980,7 @@
       top: 335vh;
       right: 0;
       left: 0;
-      margin-left: 15px;
+      margin-left: 0px;
       width: 365px;
       height: 275px;
       text-align: left;
@@ -881,6 +1073,9 @@
   height: 500px;
   display: flex;
   position: relative;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
 
   .Clows {
     position: absolute;
@@ -892,24 +1087,65 @@
 
   .SitePicture {
     position: absolute;
-    top: 190rem;
+    top: 100rem;
     right: 0;
-    width: 100%;
-    object-fit: cover;
+    width: 100vw;
 
     @media only screen and (max-width: 768px) {
-      top: 297vh;
+      top: 95rem;
       left: 0;
       width: 160vw;
     }
   }
 
+  .ColumnsContainer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .columnLink {
+    display:flex;
+    justify-content: flex-end;
+    width: 45%;
+    margin-right: 30px; 
+    position: relative;
+    top: calc((100vw + 253rem) / 2.5);
+
+    @media only screen and (max-width: 768px) {
+      width: 60%;
+      position: relative;
+      top: calc((251vw + 245rem) / 2.5);
+      right: 15px;
+      margin: 0 auto;
+    }
+  } 
+
+  .columnText {
+    display: flex;
+    justify-content: flex-start;
+    width: 45%;
+    margin-left: 30px; 
+    position: relative;
+    top: calc((100vw + 253rem) / 2.5);
+
+    @media only screen and (max-width: 768px) {
+      width: 60%;
+      position: relative;
+      top: calc((251vw + 245rem) / 2.5);
+      right: 15px;
+      margin: 0 auto;
+    }
+  }
+
   .TextContent {
-    position: absolute;
-    top: 245rem;
-    right: calc(100vw - 87%);
     width: 600px;
     text-align: left;
+    z-index: 1;
 
     .Title {
       color: #3C2807;
@@ -938,7 +1174,7 @@
       width: 510px;
       letter-spacing: 0px;
       line-height: 130%;
-      margin-bottom: 0;
+      width: 40vw;
       font-family: $elcubo3_font_subtitle;
     }
 
@@ -946,7 +1182,7 @@
       top: 352vh;
       right: 0;
       left: 0;
-      margin-left: 15px;
+      margin-left: 0px;
 
       .Title {
         font-size: 50px!important;
@@ -962,9 +1198,6 @@
   }
 
   .LinksContent {
-    position: absolute;
-    top: 243rem;
-    left: calc(100vw - 84%);
     width: 570px;
     height: 295px;
     text-align: right;
@@ -1049,7 +1282,7 @@
       top: 376vh;
       right: 0;
       left: 0;
-      margin-left: 15px;
+      margin-left: 0px;
       width: 360px;
       height: 270px;
       text-align: left;
@@ -1127,26 +1360,70 @@
   height: 500px;
   display: flex;
   position: relative;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
 
   .SitePicture {
     position: absolute;
-    top: 235rem;
+    top: 135rem;
     right: 0;
-    width: 100%;
-    object-fit: cover;
+    width: 100vw;
 
     @media only screen and (max-width: 768px) {
       width: 155vw;
-      top: 340vh;
+      top: 120rem;
+    }
+  }
+
+  .ColumnsContainer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .columnLink {
+    display:flex;
+    justify-content: flex-start;
+    width: 45%;
+    margin-left: 30px;
+    position: relative;
+    top: calc((100vw + 315rem) / 2.5);
+
+    @media only screen and (max-width: 768px) {
+      width: 60%;
+      position: relative;
+      top: calc((251vw - 325rem) / 2.5);
+      right: 15px;
+      margin: 0 auto;
+    }
+  }
+
+  .columnText {
+    display: flex;
+    justify-content: flex-end;
+    width: 45%;
+    margin-right: 30px;
+    position: relative;
+    top: calc((100vw + 337rem) / 2.5);
+
+    @media only screen and (max-width: 768px) {
+      width: 60%;
+      position: relative;
+      top: calc((251vw + 260rem) / 2.5);
+      right: 15px;
+      margin: 0 auto;
     }
   }
 
   .TextContent {
-    position: absolute;
-    top: 287rem;
-    left: calc(100vw - 85%);
     width: 600px;
     text-align: right;
+    z-index: 1;
 
     .Title {
       color: #3C2807;
@@ -1177,6 +1454,9 @@
       letter-spacing: 0px;
       line-height: 130%;
       margin-bottom: 0;
+      width: 40vw;
+      position: absolute;
+      right: 0;
       font-family: $elcubo3_font_subtitle;
     }
 
@@ -1184,7 +1464,7 @@
       top: 380vh;
       right: 0;
       left: 0;
-      margin-left: 15px;
+      margin-left: 0px;
       text-align: left;
 
       .Title {
@@ -1203,9 +1483,6 @@
   }
 
   .LinksContent {
-    position: absolute;
-    top: 280rem;
-    right: calc(100vw - 87%);
     width: 600px;
     height: 390px;
     text-align: left;
@@ -1306,7 +1583,7 @@
       top: 405vh;
       right: 0;
       left: 0;
-      margin-left: 15px;
+      margin-left: 0px;
       width: 365px;
       height: 355px;
       text-align: left;
@@ -1424,35 +1701,80 @@
   height: 500px;
   display: flex;
   position: relative;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
 
   .Clows {
     position: absolute;
-    top: 285rem;
+    top: 200rem;
     left: 0;
-    width: 100%;
+    width: 100vw;
+    height: 80vh;
     z-index: 0;
   }
 
   .SitePicture {
     position: absolute;
-    top: 270rem;
+    top: 165rem;
     left: 0;
-    width: 70%;
-    object-fit: cover;
+    width: 70vw;
 
     @media only screen and (max-width: 768px) {
-      top: 375vh;
+      top: 140rem;
       left: 0;
       width: 155vw;
     }
   }
 
+  .ColumnsContainer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .columnLink {
+    display:flex;
+    justify-content: flex-end;
+    width: 45%;
+    margin-right: 30px;
+    position: relative;
+    top: calc((100vw + 413rem) / 2.5);
+
+    @media only screen and (max-width: 768px) {
+      width: 60%;
+      position: relative;
+      top: calc((251vw + 355rem) / 2.5);
+      right: 15px;
+      margin: 0 auto;
+    }
+  } 
+
+  .columnText {
+    display: flex;
+    justify-content: flex-start;
+    width: 45%;
+    margin-left: 30px;
+    position: relative;
+    top: calc((100vw + 365rem) / 2.5);
+
+    @media only screen and (max-width: 768px) {
+      width: 60%;
+      position: relative;
+      top: calc((251vw + 355rem) / 2.5);
+      right: 15px;
+      margin: 0 auto;
+    }
+  }
+
   .TextContent {
-    position: absolute;
-    top: 297rem;
-    right: calc(100vw - 87%);
     width: 600px;
     text-align: left;
+    z-index: 1;
 
     .Title {
       color: #3C2807;
@@ -1481,7 +1803,7 @@
       width: 545px;
       letter-spacing: 0px;
       line-height: 130%;
-      margin-bottom: 0;
+      width: 40vw;
       font-family: $elcubo3_font_subtitle;
     }
 
@@ -1489,7 +1811,7 @@
       top: 425vh;
       right: 0;
       left: 0;
-      margin-left: 15px;
+      margin-left: 0px;
 
       .Title {
         font-size: 50px!important;
@@ -1505,9 +1827,6 @@
   }
 
   .LinksContent {
-    position: absolute;
-    top: 319rem;
-    left: calc(100vw - 72%);
     width: 360px;
     height: 125px;
     text-align: right;
@@ -1545,7 +1864,7 @@
 
     .LinkItem:nth-child(2) {
       a {
-        bottom: 0px;
+        top: 62px;
         right: 22px;
       }
       p {
@@ -1562,7 +1881,7 @@
       top: 469vh;
       right: 0;
       left: 0;
-      margin-left: 15px;
+      margin-left: 0px;
       width: 360px;
       height: 110px;
       text-align: left;
@@ -1616,26 +1935,70 @@
   height: 500px;
   display: flex;
   position: relative;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
 
   .SitePicture {
     position: absolute;
-    top: 317rem;
+    top: 195rem;
     right: 0;
-    width: 55%;
-    object-fit: cover;
+    width: 60vw;
 
     @media only screen and (max-width: 768px) {
       width: 130vw;
-      top: 422vh;
+      top: 168rem;
+    }
+  }
+
+  .ColumnsContainer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .columnLink {
+    display:flex;
+    justify-content: flex-start;
+    width: 45%;
+    margin-left: 30px;
+    position: relative;
+    top: calc((100vw + 453rem) / 2.5);
+
+    @media only screen and (max-width: 768px) {
+      width: 60%;
+      position: relative;
+      top: calc((251vw - 331rem) / 2.5);
+      right: 15px;
+      margin: 0 auto;
+    }
+  }
+
+  .columnText {
+    display: flex;
+    justify-content: flex-end;
+    width: 45%;
+    margin-right: 30px;
+    position: relative;
+    top: calc((100vw + 414rem) / 2.5);
+
+    @media only screen and (max-width: 768px) {
+      width: 60%;
+      position: relative;
+      top: calc((251vw + 375rem) / 2.5);
+      right: 15px;
+      margin: 0 auto;
     }
   }
 
   .TextContent {
-    position: absolute;
-    top: 337rem;
-    left: calc(100vw - 85%);
     width: 600px;
     text-align: right;
+    z-index: 1;
 
     .Title {
       color: #3C2807;
@@ -1666,6 +2029,9 @@
       letter-spacing: 0px;
       line-height: 130%;
       margin-bottom: 0;
+      width: 40vw;
+      position: absolute;
+      right: 0;
       font-family: $elcubo3_font_subtitle;
     }
 
@@ -1673,7 +2039,7 @@
       top: 460vh;
       right: 0;
       left: 0;
-      margin-left: 15px;
+      margin-left: 0px;
       text-align: left;
 
       .Title {
@@ -1692,9 +2058,6 @@
   }
 
   .LinksContent {
-    position: absolute;
-    top: 356rem;
-    right: calc(100vw - 88%);
     width: 600px;
     height: 150px;
     text-align: left;
@@ -1750,7 +2113,7 @@
       top: 500vh;
       right: 0;
       left: 0;
-      margin-left: 15px;
+      margin-left: 0px;
       width: 365px;
       height: 130px;
       text-align: left;
@@ -1805,21 +2168,66 @@
   height: 500px;
   display: flex;
   position: relative;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
 
   .Clows {
     position: absolute;
-    top: 348rem;
+    top: 220rem;
     left: 0;
     width: 100%;
     z-index: 0;
   }
 
+  .ColumnsContainer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .columnLink {
+    display:flex;
+    justify-content: flex-end;
+    width: 45%;
+    margin-right: 30px;
+    position: relative;
+    top: calc((100vw + 475rem) / 2.5);
+
+    @media only screen and (max-width: 768px) {
+      width: 60%;
+      position: relative;
+      top: calc((251vw + 417rem) / 2.5);
+      right: 15px;
+      margin: 0 auto;
+    }
+  } 
+
+  .columnText {
+    display: flex;
+    justify-content: flex-start;
+    width: 45%;
+    margin-left: 30px;
+    position: relative;
+    top: calc((100vw + 473rem) / 2.5);
+
+    @media only screen and (max-width: 768px) {
+      width: 60%;
+      position: relative;
+      top: calc((251vw + 417rem) / 2.5);
+      right: 15px;
+      margin: 0 auto;
+    }
+  }
+
   .TextContent {
-    position: absolute;
-    top: 355rem;
-    right: calc(100vw - 88%);
     width: 600px;
     text-align: left;
+    z-index: 1;
 
     .Title {
       color: #3C2807;
@@ -1848,7 +2256,7 @@
       width: 480px;
       letter-spacing: 0px;
       line-height: 130%;
-      margin-bottom: 0;
+      width: 40vw;
       font-family: $elcubo3_font_subtitle;
     }
 
@@ -1856,7 +2264,7 @@
       top: 462vh;
       right: 0;
       left: 0;
-      margin-left: 15px;
+      margin-left: 0px;
 
       .Title {
         font-size: 50px!important;
@@ -1872,9 +2280,6 @@
   }
 
   .LinksContent {
-    position: absolute;
-    top: 358rem;
-    left: calc(100vw - 84%);
     width: 570px;
     height: 355px;
     text-align: right;
@@ -1957,7 +2362,7 @@
 
     .LinkItem:nth-child(5) {
       a {
-        bottom: 0px;
+        top: 285px;
         right: 23px;
       }
       p {
@@ -1974,7 +2379,7 @@
       top: 498vh;
       right: 0;
       left: 0;
-      margin-left: 15px;
+      margin-left: 0px;
       width: 360px;
       height: 330px;
       text-align: left;
@@ -2074,26 +2479,72 @@
   height: 500px;
   display: flex;
   position: relative;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
 
   .SitePicture {
     position: absolute;
-    top: 365rem;
+    top: 265rem;
     right: 0;
-    width: 100%;
-    object-fit: cover;
+    width: 100vw;
 
     @media only screen and (max-width: 768px) {
       width: 130vw;
-      top: 530vh;
+      top: 220rem;
+    }
+  }
+
+  
+
+  .ColumnsContainer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .columnLink {
+    display:flex;
+    justify-content: flex-start;
+    width: 45%;
+    margin-left: 30px;
+    position: relative;
+    top: calc((100vw + 499rem) / 2.5);
+
+    @media only screen and (max-width: 768px) {
+      width: 60%;
+      position: relative;
+      top: calc((251vw - 355rem) / 2.5);
+      right: 15px;
+      margin: 0 auto;
+    }
+  }
+
+  .columnText {
+    display: flex;
+    justify-content: flex-end;
+    width: 45%;
+    margin-right: 30px;
+    position: relative;
+    top: calc((100vw + 460rem) / 2.5);
+
+    @media only screen and (max-width: 768px) {
+      width: 60%;
+      position: relative;
+      top: calc((251vw + 388rem) / 2.5);
+      right: 15px;
+      margin: 0 auto;
     }
   }
 
   .TextContent {
-    position: absolute;
-    top: 375rem;
-    left: calc(100vw - 85%);
     width: 600px;
     text-align: right;
+    z-index: 1;
 
     .Title {
       color: #3C2807;
@@ -2124,6 +2575,9 @@
       letter-spacing: 0px;
       line-height: 130%;
       margin-bottom: 0;
+      width: 40vw;
+      position: absolute;
+      right: 0;
       font-family: $elcubo3_font_subtitle;
     }
 
@@ -2131,7 +2585,7 @@
       top: 485vh;
       right: 0;
       left: 0;
-      margin-left: 15px;
+      margin-left: 0px;
       text-align: left;
 
       .Title {
@@ -2150,9 +2604,6 @@
   }
 
   .LinksContent {
-    position: absolute;
-    top: 394rem;
-    right: calc(100vw - 80%);
     width: 460px;
     height: 60px;
     text-align: left;
@@ -2193,7 +2644,7 @@
       top: 517vh;
       right: 0;
       left: 0;
-      margin-left: 15px;
+      margin-left: 0px;
       width: 365px;
       height: 47px;
       text-align: left;
@@ -2219,26 +2670,27 @@
       }
     }
   }
-}
 
-.VideoContainer {
-  position: relative;
-  top: 390rem;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 2;
-  width: 70%;
-  height: 700px;
-
-  @media only screen and (max-width: 768px) {
-    top: 480vh;
-    left: 0;
-    right: 0;
-    margin-right: auto;
+  .VideoContainer {
+    display: flex;
+    position: absolute;
+    top: 275rem;
+    right: 0px;
+    left: -70px;
+    z-index: 2;
+    width: calc(100vw - 30rem);
+    height: 700px;
     margin-left: auto;
-    width: 80%;
-    height: 200px;
+    margin-right: auto;
+  
+    @media only screen and (max-width: 768px) {
+      display: flex;
+      position: relative;
+      top: calc(100vw + 195rem);
+      left: -8px;
+      right: 0px;
+      width: 80vw;
+      height: 250px;
+    }
   }
 }
