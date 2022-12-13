@@ -12,3 +12,16 @@
     display: block;
   }
 }
+
+.fade_test {
+  transition: opacity .7s ease-in-out;
+}
+
+.fadeOut_test {
+  opacity: 0;
+}
+
+.fadeIn_test {
+  opacity: 1;
+}
+
