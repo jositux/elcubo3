@@ -1,8 +1,8 @@
 .TimelineContainer {
   position: relative;
   width: 100vw;
-  height: 600rem;
-  padding: 0 0 50px 0;
+  height: 525rem;
+  padding: 0 0 0 0;
   background-color: #e4d7b7;
   background-attachment: fixed;
   background-size: cover;
@@ -25,8 +25,8 @@
   position: absolute;
   left: 50%;
   width: 1px;
-  height: calc(100vh + 530rem);
-  margin-left:0 25px;
+  height: calc(100vh + 455rem);
+  margin-left: 0;
   margin-top: 15rem;
   margin-bottom: 15rem;
   background: #3C2807;
@@ -43,16 +43,69 @@
   }
 }
 
-
-.ItemContent:nth-child(1) {
+.ItemContent {
   display: flex;
   position: relative;
   margin: auto;
   justify-content: center;
   width: 100%;
-  align-items: center;
+  align-items: end;
   height: 80vh;
 
+  .TextContent {
+    .Title {
+      color: #3C2807;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      font-size: 50px;
+      letter-spacing: -3px;
+      line-height: 130%;
+      font-size: 70px;
+      font-family: $elcubo3_font_subtitle;
+    }
+    .Subtitle {
+      color: #3C2807;
+      font-weight: bold;
+      margin: 0;
+      font-size: 31px;
+      font-family: $elcubo3_font_subtitle;
+    }
+    .Description {
+      color: #3C2807;
+      font-size: 20px;
+      max-width: 600px;
+      letter-spacing: 0px;
+      line-height: 130%;
+      width: 100%;
+      font-family: $elcubo3_font_subtitle;
+    }
+  }
+
+
+  .LinkItem {
+    position: relative;
+    cursor: pointer;
+
+    a {
+      align-items: center;
+      text-decoration: none;
+    }
+    span {
+      font-size: 13.5px;
+      font-weight: normal;
+    }
+  }
+
+  .Link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+}
+
+
+.ItemContent:nth-child(1) {
   @media only screen and (max-width: 768px) {
     width: 100vw!important;
     height: 70vh!important;
@@ -76,9 +129,8 @@
     justify-content: center;
     align-items: center;
     padding-top: 440px;
-    padding-bottom: 100px;
+    padding-bottom: 35px;
     width: 100%;
-    //flex-direction: row-reverse;
 
     @media only screen and (max-width: 768px) {
       flex-direction: column-reverse;
@@ -90,7 +142,7 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    margin: 0 15px 0 15px;
+    padding: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
       width: 90vw;
@@ -107,7 +159,7 @@
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    margin: 0 15px 0 15px;
+    padding: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
       width: 100vw;
@@ -122,37 +174,6 @@
     max-width: 600px;
     text-align: left;
     z-index: 1;
-
-    .Title {
-      color: #3C2807;
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      font-size: 50px;
-      letter-spacing: -3px;
-      line-height: 130%;
-      font-size: 70px;
-      font-family: $elcubo3_font_subtitle;
-    }
-
-    .Subtitle {
-      color: #3C2807;
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      font-size: 31px;
-      font-family: $elcubo3_font_subtitle;
-    }
-
-    .Description {
-      color: #3C2807;
-      font-size: 20px;
-      max-width: 600px;
-      letter-spacing: 0px;
-      line-height: 130%;
-      width: 40vw;
-      font-family: $elcubo3_font_subtitle;
-    }
 
     @media only screen and (max-width: 768px) {
       top: 0;
@@ -187,29 +208,6 @@
     flex-direction: column;
     align-items: flex-end;
     padding: 10px;
-
-    .LinkItem {
-      position: relative;
-      cursor: pointer;
-
-      a {
-        align-items: center;
-        text-decoration: none;
-        display: flex;
-        //flex-direction: row-reverse;
-      }
-
-      span {
-        font-size: 13.5px;
-        font-weight: normal;
-      }
-    }
-
-    .Link {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-    }
 
     .LinkText {
       margin-right: 10px;
@@ -287,7 +285,7 @@
         }
         svg {
           width: 30px!important;
-        height: 30px!important;
+          height: 30px!important;
         }
       }
     }
@@ -295,13 +293,6 @@
 }
 
 .ItemContent:nth-child(2) {
-  display: flex;
-  position: relative;
-  margin: auto;
-  justify-content: center;
-  width: 100%;
-  align-items: center;
-  height: 80vh;
 
   @media only screen and (max-width: 768px) {
     width: 100vw!important;
@@ -334,7 +325,7 @@
     display: flex;
     position: relative;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     padding-top: 440px;
     padding-bottom: 100px;
     width: 100%;
@@ -349,7 +340,7 @@
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    margin: 225px 15px 0 15px;
+    padding: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
       width: 60%;
@@ -364,7 +355,7 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    margin: 0 15px 0 15px;
+    padding: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
       width: 90vw;
@@ -384,36 +375,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
-    .Title {
-      color: #3C2807;
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      font-size: 50px;
-      letter-spacing: -3px;
-      line-height: 130%;
-      font-size: 70px;
-      font-family: $elcubo3_font_subtitle;
-    }
-
-    .Subtitle {
-      color: #3C2807;
-      font-weight: bold;
-      margin: 0;
-      font-size: 31px;
-      font-family: $elcubo3_font_subtitle;
-    }
-
-    .Description {
-      color: #3C2807;
-      font-size: 20px;
-      max-width: 600px;
-      letter-spacing: 0px;
-      line-height: 130%;
-      width: 100%;
-      font-family: $elcubo3_font_subtitle;
-    }
 
     @media only screen and (max-width: 768px) {
       top: 0;
@@ -454,22 +415,6 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 10px;
-
-    .LinkItem {
-    	position: relative;
-      cursor: pointer;
-
-      a {
-        align-items: center;
-        text-decoration: none;
-      }
-    }
-
-    .Link {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-    }
 
     .LinkText {
       margin-left: 10px;
@@ -512,13 +457,6 @@
 }
 
 .ItemContent:nth-child(3) {
-  display: flex;
-  position: relative;
-  margin: auto;
-  justify-content: center;
-  width: 100%;
-  align-items: center;
-  height: 80vh;
 
   .Clows {
     position: absolute;
@@ -530,7 +468,7 @@
 
   .SitePicture {
     position: absolute;
-    top: 0;
+    top: -125px;
     left: 0;
     width: 100vw;
 
@@ -544,8 +482,8 @@
     display: flex;
     position: relative;
     justify-content: center;
-    padding-top: 440px;
-    padding-bottom: 100px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     width: 100%;
 
     @media only screen and (max-width: 768px) {
@@ -558,7 +496,7 @@
     justify-content: flex-end;
     align-items: end;
     width: 100%;
-    margin: 0 15px 0 15px;
+    margin: 0 60px 0 60px;
     
     @media only screen and (max-width: 768px) {
       width: 60%;
@@ -573,7 +511,7 @@
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    margin: 0 15px 0 15px;
+    margin: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
       width: 60%;
@@ -588,37 +526,6 @@
     max-width: 600px;
     text-align: left;
     z-index: 1;
-
-    .Title {
-      color: #3C2807;
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      font-size: 50px;
-      letter-spacing: -3px;
-      line-height: 130%;
-      font-size: 70px;
-      font-family: $elcubo3_font_subtitle;
-    }
-
-    .Subtitle {
-      color: #3C2807;
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      font-size: 31px;
-      font-family: $elcubo3_font_subtitle;
-    }
-
-    .Description {
-      color: #3C2807;
-      font-size: 20px;
-      width: 600px;
-      letter-spacing: 0px;
-      line-height: 130%;
-      width: 40vw;
-      font-family: $elcubo3_font_subtitle;
-    }
 
     @media only screen and (max-width: 768px) {
       top: 182vh;
@@ -654,28 +561,6 @@
     align-items: flex-end;
     padding: 10px;
     margin-bottom: 25px;
-
-    .LinkItem {
-      position: relative;
-      cursor: pointer;
-
-      a {
-        align-items: center;
-        text-decoration: none;
-        display: flex;
-      }
-
-      span {
-        font-size: 13.5px;
-        font-weight: normal;
-      }
-    }
-
-    .Link {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-    }
 
     .LinkText {
       margin-right: 10px;
@@ -762,27 +647,21 @@
 }
 
 .ItemContent:nth-child(4) {
-  width: 100%;
-  height: 500px;
-  display: flex;
-  position: relative;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
 
   .Clows {
     position: absolute;
-    top: 145rem;
+    top: 175px;
     left: 0;
+    height: 52vh;
     width: 100%;
     z-index: 0;
   }
 
   .SitePicture {
     position: absolute;
-    top: 65rem;
+    top: -225px;
     right: 0;
-    width: 100vw;
+    width: 75vw;
     
     @media only screen and (max-width: 768px) {
       width: 155vw;
@@ -794,6 +673,10 @@
     display: flex;
     position: relative;
     justify-content: center;
+    align-items: center;
+    padding-top: 800px;
+    padding-bottom: 100px;
+    width: 100%;
 
     @media only screen and (max-width: 768px) {
       flex-direction: column-reverse;
@@ -801,12 +684,10 @@
   }
 
   .columnLink {
-    display:flex;
+    display: flex;
     justify-content: flex-start;
-    width: 45%;
-    margin-left: 30px;
-    position: relative;
-    top: calc((100vw + 177rem) / 2.5);
+    width: 100%;
+    padding: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
       width: 60%;
@@ -820,10 +701,8 @@
   .columnText {
     display: flex;
     justify-content: flex-end;
-    width: 45%;
-    margin-right: 30px;
-    position: relative;
-    top: calc((100vw + 160rem) / 2.5);
+    width: 100%;
+    padding: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
       width: 60%;
@@ -835,44 +714,12 @@
   }
 
   .TextContent {
-    width: 600px;
+    max-width: 600px;
     text-align: right;
     z-index: 1;
-
-    .Title {
-      color: #3C2807;
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      font-size: 50px;
-      letter-spacing: -3px;
-      line-height: 130%;
-      font-size: 70px;
-      font-family: $elcubo3_font_subtitle;
-    }
-
-    .Subtitle {
-      color: #3C2807;
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      font-size: 31px;
-      font-family: $elcubo3_font_subtitle;
-    }
-
-    .Description {
-      color: #3C2807;
-      font-size: 20px;
-      width: 510px;
-      margin-left: 90px;
-      letter-spacing: 0px;
-      line-height: 130%;
-      margin-bottom: 0;
-      width: 40vw;
-      position: absolute;
-      right: 0;
-      font-family: $elcubo3_font_subtitle;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
     @media only screen and (max-width: 768px) {
       top: 301vh;
@@ -897,20 +744,19 @@
   }
 
   .LinksContent {
-    width: 570px;
-    height: 280px;
+    max-width: 495px;
+    width: 100%;
+    min-height: 45px;
+    height: auto;
     text-align: left;
     color: #3C2807;
     background-color: #F1E7CE;
     opacity: 0.8;
+    display: flex;
     z-index: 1;
-
-    .Link {
-      display: flex;
-      align-items: center;
-      position: absolute;
-      text-decoration: none;
-    }
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
 
     .LinkText {
       margin-right: 10px;
@@ -919,26 +765,16 @@
       font-weight: bold;
       width: 100%;
     }
-
+    
     .LinkItem:nth-child(1) {
-      a {
-        top: 5px;
-        left: 23px;
-      }
       p {
         margin-left: 15px;
-        width: 265px;
       }
     }
 
     .LinkItem:nth-child(2) {
-      a {
-        top: 55px;
-        left: 22px;
-      }
       p {
         margin-left: 10px;
-        width: 310px;
       }
       span {
         font-size: 13.5px;
@@ -947,13 +783,8 @@
     }
 
     .LinkItem:nth-child(3) {
-      a {
-        top: 114px;
-        left: 22px;
-      }
       p {
         margin-left: 10px;
-        width: 450px;
       }
       span {
         font-size: 13.5px;
@@ -962,10 +793,6 @@
     }
 
     .LinkItem:nth-child(4) {
-      a {
-        bottom: 0px;
-        left: 23px;
-      }
       p {
         margin-left: 15px;
       }
@@ -1069,27 +896,21 @@
 }
 
 .ItemContent:nth-child(5) {
-  width: 100%;
-  height: 500px;
-  display: flex;
-  position: relative;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
 
   .Clows {
     position: absolute;
-    top: 220rem;
+    top: 315px;
     left: 0;
-    width: 100%;
+    width: 100vw;
     z-index: 0;
+    height: 50vh;
   }
 
   .SitePicture {
     position: absolute;
-    top: 100rem;
-    right: 0;
-    width: 100vw;
+    top: -200px;
+    left: 0;
+    width: 70vw;
 
     @media only screen and (max-width: 768px) {
       top: 95rem;
@@ -1102,6 +923,9 @@
     display: flex;
     position: relative;
     justify-content: center;
+    padding-top: 800px;
+    padding-bottom: 100px;
+    width: 100%;
 
     @media only screen and (max-width: 768px) {
       flex-direction: column-reverse;
@@ -1109,12 +933,11 @@
   }
 
   .columnLink {
-    display:flex;
+    display: flex;
     justify-content: flex-end;
-    width: 45%;
-    margin-right: 30px; 
-    position: relative;
-    top: calc((100vw + 253rem) / 2.5);
+    align-items: end;
+    width: 100%;
+    margin: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
       width: 60%;
@@ -1128,10 +951,8 @@
   .columnText {
     display: flex;
     justify-content: flex-start;
-    width: 45%;
-    margin-left: 30px; 
-    position: relative;
-    top: calc((100vw + 253rem) / 2.5);
+    width: 100%;
+    margin: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
       width: 60%;
@@ -1143,40 +964,9 @@
   }
 
   .TextContent {
-    width: 600px;
+    max-width: 600px;
     text-align: left;
     z-index: 1;
-
-    .Title {
-      color: #3C2807;
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      font-size: 50px;
-      letter-spacing: -3px;
-      line-height: 130%;
-      font-size: 70px;
-      font-family: $elcubo3_font_subtitle;
-    }
-
-    .Subtitle {
-      color: #3C2807;
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      font-size: 31px;
-      font-family: $elcubo3_font_subtitle;
-    }
-
-    .Description {
-      color: #3C2807;
-      font-size: 20px;
-      width: 510px;
-      letter-spacing: 0px;
-      line-height: 130%;
-      width: 40vw;
-      font-family: $elcubo3_font_subtitle;
-    }
 
     @media only screen and (max-width: 768px) {
       top: 352vh;
@@ -1198,20 +988,20 @@
   }
 
   .LinksContent {
-    width: 570px;
-    height: 295px;
+    max-width: 495px;
+    width: 100%;
+    min-height: 195px;
+    height: auto;
     text-align: right;
     color: #3C2807;
     background-color: #F1E7CE;
     opacity: 0.8;
+    display: flex;
     z-index: 1;
-
-    .Link {
-      display: flex;
-      align-items: center;
-      position: absolute;
-      text-decoration: none;
-    }
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px 10px 10px 25px;
+    margin-bottom: 25px;
 
     .LinkText {
       margin-right: 10px;
@@ -1222,59 +1012,9 @@
     }
 
     .LinkItem:nth-child(1) {
-      a {
-        top: 5px;
-        right: 23px;
-      }
       p {
-        margin-left: 11px;
-        width: 265px;
+        margin-left: 10px;
         text-transform: uppercase;
-      }
-    }
-
-    .LinkItem:nth-child(2) {
-      a {
-        top: 52px;
-        right: 22px;
-      }
-      p {
-        margin-left: 10px;
-        width: 310px;
-      }
-      span {
-        font-size: 13.5px;
-        font-weight: normal;
-      }
-    }
-
-    .LinkItem:nth-child(3) {
-      a {
-        top: 115px;
-        right: 22px;
-      }
-      p {
-        margin-left: 10px;
-        width: 450px;
-      }
-      span {
-        font-size: 13.5px;
-        font-weight: normal;
-      }
-    }
-
-    .LinkItem:nth-child(4) {
-      a {
-        bottom: 0px;
-        right: 23px;
-      }
-      p {
-        margin-left: 15px;
-        width: 425px;
-      }
-      span {
-        font-size: 13.5px;
-        font-weight: normal;
       }
     }
 
@@ -1356,19 +1096,12 @@
 }
 
 .ItemContent:nth-child(6) {
-  width: 100%;
-  height: 500px;
-  display: flex;
-  position: relative;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
 
   .SitePicture {
     position: absolute;
-    top: 135rem;
+    top: -170px;
     right: 0;
-    width: 100vw;
+    width: 90vw;
 
     @media only screen and (max-width: 768px) {
       width: 155vw;
@@ -1380,6 +1113,10 @@
     display: flex;
     position: relative;
     justify-content: center;
+    align-items: center;
+    padding-top: 1000px;
+    padding-bottom: 100px;
+    width: 100%;
 
     @media only screen and (max-width: 768px) {
       flex-direction: column-reverse;
@@ -1387,12 +1124,10 @@
   }
 
   .columnLink {
-    display:flex;
+    display: flex;
     justify-content: flex-start;
-    width: 45%;
-    margin-left: 30px;
-    position: relative;
-    top: calc((100vw + 315rem) / 2.5);
+    width: 100%;
+    padding: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
       width: 60%;
@@ -1406,10 +1141,8 @@
   .columnText {
     display: flex;
     justify-content: flex-end;
-    width: 45%;
-    margin-right: 30px;
-    position: relative;
-    top: calc((100vw + 337rem) / 2.5);
+    width: 100%;
+    padding: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
       width: 60%;
@@ -1421,44 +1154,12 @@
   }
 
   .TextContent {
-    width: 600px;
+    max-width: 600px;
     text-align: right;
     z-index: 1;
-
-    .Title {
-      color: #3C2807;
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      font-size: 50px;
-      letter-spacing: -3px;
-      line-height: 130%;
-      font-size: 70px;
-      font-family: $elcubo3_font_subtitle;
-    }
-
-    .Subtitle {
-      color: #3C2807;
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      font-size: 31px;
-      font-family: $elcubo3_font_subtitle;
-    }
-
-    .Description {
-      color: #3C2807;
-      font-size: 20px;
-      width: 480px;
-      margin-left: 120px;
-      letter-spacing: 0px;
-      line-height: 130%;
-      margin-bottom: 0;
-      width: 40vw;
-      position: absolute;
-      right: 0;
-      font-family: $elcubo3_font_subtitle;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
     @media only screen and (max-width: 768px) {
       top: 380vh;
@@ -1483,20 +1184,19 @@
   }
 
   .LinksContent {
-    width: 600px;
-    height: 390px;
+    max-width: 495px;
+    width: 100%;
+    min-height: 45px;
+    height: auto;
     text-align: left;
     color: #3C2807;
     background-color: #F1E7CE;
     opacity: 0.8;
+    display: flex;
     z-index: 1;
-
-    .Link {
-      display: flex;
-      align-items: center;
-      position: absolute;
-      text-decoration: none;
-    }
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
 
     .LinkText {
       margin-right: 10px;
@@ -1506,75 +1206,15 @@
       width: 100%;
     }
 
+    .LinkItem {
+      p {
+        margin-left: 15px;
+      }
+    }
+
     .LinkItem:nth-child(1) {
-      a {
-        top: 5px;
-        left: 23px;
-      }
       p {
-        margin-left: 15px;
-        width: 265px;
         text-transform: uppercase;
-      }
-    }
-
-    .LinkItem:nth-child(2) {
-      a {
-        top: 50px;
-        left: 22px;
-      }
-      p {
-        margin-left: 15px;
-        width: 425px;
-      }
-      span {
-        font-size: 13.5px;
-        font-weight: normal;
-      }
-    }
-
-    .LinkItem:nth-child(3) {
-      a {
-        top: 135px;
-        left: 22px;
-      }
-      p {
-        margin-left: 15px;
-        width: 450px;
-      }
-      span {
-        font-size: 13.5px;
-        font-weight: normal;
-      }
-    }
-
-    .LinkItem:nth-child(4) {
-      a {
-        top: 190px;
-        left: 23px;
-      }
-      p {
-        margin-left: 15px;
-        width: 485px;
-      }
-      span {
-        font-size: 13.5px;
-        font-weight: normal;
-      }
-    }
-
-    .LinkItem:nth-child(5) {
-      a {
-        bottom: 0px;
-        left: 23px;
-      }
-      p {
-        margin-left: 15px;
-        width: 485px;
-      }
-      span {
-        font-size: 13.5px;
-        font-weight: normal;
       }
     }
 
@@ -1697,28 +1337,21 @@
 }
 
 .ItemContent:nth-child(7) {
-  width: 100%;
-  height: 500px;
-  display: flex;
-  position: relative;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
 
   .Clows {
     position: absolute;
-    top: 200rem;
+    top: -45px;
     left: 0;
     width: 100vw;
-    height: 80vh;
+    height: 40vh;
     z-index: 0;
   }
 
   .SitePicture {
     position: absolute;
-    top: 165rem;
+    top: -135px;
     left: 0;
-    width: 70vw;
+    width: 65vw;
 
     @media only screen and (max-width: 768px) {
       top: 140rem;
@@ -1731,6 +1364,9 @@
     display: flex;
     position: relative;
     justify-content: center;
+    padding-top: 1100px;
+    padding-bottom: 100px;
+    width: 100%;
 
     @media only screen and (max-width: 768px) {
       flex-direction: column-reverse;
@@ -1738,12 +1374,11 @@
   }
 
   .columnLink {
-    display:flex;
+    display: flex;
     justify-content: flex-end;
-    width: 45%;
-    margin-right: 30px;
-    position: relative;
-    top: calc((100vw + 413rem) / 2.5);
+    align-items: end;
+    width: 100%;
+    margin: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
       width: 60%;
@@ -1757,10 +1392,8 @@
   .columnText {
     display: flex;
     justify-content: flex-start;
-    width: 45%;
-    margin-left: 30px;
-    position: relative;
-    top: calc((100vw + 365rem) / 2.5);
+    width: 100%;
+    margin: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
       width: 60%;
@@ -1772,40 +1405,9 @@
   }
 
   .TextContent {
-    width: 600px;
+    max-width: 600px;
     text-align: left;
     z-index: 1;
-
-    .Title {
-      color: #3C2807;
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      font-size: 50px;
-      letter-spacing: -3px;
-      line-height: 130%;
-      font-size: 70px;
-      font-family: $elcubo3_font_subtitle;
-    }
-
-    .Subtitle {
-      color: #3C2807;
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      font-size: 31px;
-      font-family: $elcubo3_font_subtitle;
-    }
-
-    .Description {
-      color: #3C2807;
-      font-size: 20px;
-      width: 545px;
-      letter-spacing: 0px;
-      line-height: 130%;
-      width: 40vw;
-      font-family: $elcubo3_font_subtitle;
-    }
 
     @media only screen and (max-width: 768px) {
       top: 425vh;
@@ -1827,18 +1429,24 @@
   }
 
   .LinksContent {
-    width: 360px;
-    height: 125px;
+    max-width: 310px;
+    width: 100%;
+    min-height: 140px;
+    height: auto;
     text-align: right;
     color: #3C2807;
     background-color: #F1E7CE;
     opacity: 0.8;
+    display: flex;
     z-index: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px 10px 10px 25px;
+    margin-bottom: 25px;
 
     .Link {
       display: flex;
       align-items: center;
-      position: absolute;
       text-decoration: none;
     }
 
@@ -1850,30 +1458,15 @@
       width: 100%;
     }
 
-    .LinkItem:nth-child(1) {
-      a {
-        top: 5px;
-        right: 23px;
-      }
+    .LinkItem {
       p {
         margin-left: 11px;
-        width: 265px;
-        text-transform: uppercase;
       }
     }
 
-    .LinkItem:nth-child(2) {
-      a {
-        top: 62px;
-        right: 22px;
-      }
+    .LinkItem:nth-child(1) {
       p {
-        margin-left: 10px;
-        width: 310px;
-      }
-      span {
-        font-size: 13.5px;
-        font-weight: normal;
+        text-transform: uppercase;
       }
     }
 
@@ -1931,17 +1524,10 @@
 }
 
 .ItemContent:nth-child(8) {
-  width: 100%;
-  height: 500px;
-  display: flex;
-  position: relative;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
 
   .SitePicture {
     position: absolute;
-    top: 195rem;
+    top: -55px;
     right: 0;
     width: 60vw;
 
@@ -1955,6 +1541,10 @@
     display: flex;
     position: relative;
     justify-content: center;
+    align-items: end;
+    padding-top: 1300px;
+    padding-bottom: 100px;
+    width: 100%;
 
     @media only screen and (max-width: 768px) {
       flex-direction: column-reverse;
@@ -1962,12 +1552,10 @@
   }
 
   .columnLink {
-    display:flex;
+    display: flex;
     justify-content: flex-start;
-    width: 45%;
-    margin-left: 30px;
-    position: relative;
-    top: calc((100vw + 453rem) / 2.5);
+    width: 100%;
+    padding: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
       width: 60%;
@@ -1981,10 +1569,8 @@
   .columnText {
     display: flex;
     justify-content: flex-end;
-    width: 45%;
-    margin-right: 30px;
-    position: relative;
-    top: calc((100vw + 414rem) / 2.5);
+    width: 100%;
+    padding: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
       width: 60%;
@@ -1996,44 +1582,12 @@
   }
 
   .TextContent {
-    width: 600px;
+    max-width: 600px;
     text-align: right;
     z-index: 1;
-
-    .Title {
-      color: #3C2807;
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      font-size: 50px;
-      letter-spacing: -3px;
-      line-height: 130%;
-      font-size: 70px;
-      font-family: $elcubo3_font_subtitle;
-    }
-
-    .Subtitle {
-      color: #3C2807;
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      font-size: 31px;
-      font-family: $elcubo3_font_subtitle;
-    }
-
-    .Description {
-      color: #3C2807;
-      font-size: 20px;
-      width: 480px;
-      margin-left: 120px;
-      letter-spacing: 0px;
-      line-height: 130%;
-      margin-bottom: 0;
-      width: 40vw;
-      position: absolute;
-      right: 0;
-      font-family: $elcubo3_font_subtitle;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
     @media only screen and (max-width: 768px) {
       top: 460vh;
@@ -2058,20 +1612,19 @@
   }
 
   .LinksContent {
-    width: 600px;
-    height: 150px;
+    max-width: 495px;
+    width: 100%;
+    min-height: 45px;
+    height: auto;
     text-align: left;
     color: #3C2807;
     background-color: #F1E7CE;
     opacity: 0.8;
+    display: flex;
     z-index: 1;
-
-    .Link {
-      display: flex;
-      align-items: center;
-      position: absolute;
-      text-decoration: none;
-    }
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
 
     .LinkText {
       margin-right: 10px;
@@ -2081,30 +1634,15 @@
       width: 100%;
     }
 
-    .LinkItem:nth-child(1) {
-      a {
-        top: 5px;
-        left: 23px;
-      }
+    .LinkItem {
       p {
         margin-left: 15px;
-        width: 325px;
-        text-transform: uppercase;
       }
     }
 
-    .LinkItem:nth-child(2) {
-      a {
-        top: 50px;
-        left: 22px;
-      }
+    .LinkItem:nth-child(1) {
       p {
-        margin-left: 15px;
-        width: 440px;
-      }
-      span {
-        font-size: 13.5px;
-        font-weight: normal;
+        text-transform: uppercase;
       }
     }
 
@@ -2164,26 +1702,23 @@
 }
 
 .ItemContent:nth-child(9) {
-  width: 100%;
-  height: 500px;
-  display: flex;
-  position: relative;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
 
   .Clows {
     position: absolute;
-    top: 220rem;
+    top: -90px;
     left: 0;
     width: 100%;
     z-index: 0;
+    height: 70vh;
   }
 
   .ColumnsContainer {
     display: flex;
     position: relative;
     justify-content: center;
+    padding-top: 1500px;
+    padding-bottom: 100px;
+    width: 100%;
 
     @media only screen and (max-width: 768px) {
       flex-direction: column-reverse;
@@ -2191,12 +1726,11 @@
   }
 
   .columnLink {
-    display:flex;
+    display: flex;
     justify-content: flex-end;
-    width: 45%;
-    margin-right: 30px;
-    position: relative;
-    top: calc((100vw + 475rem) / 2.5);
+    align-items: end;
+    width: 100%;
+    margin: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
       width: 60%;
@@ -2210,10 +1744,8 @@
   .columnText {
     display: flex;
     justify-content: flex-start;
-    width: 45%;
-    margin-left: 30px;
-    position: relative;
-    top: calc((100vw + 473rem) / 2.5);
+    width: 100%;
+    margin: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
       width: 60%;
@@ -2225,40 +1757,9 @@
   }
 
   .TextContent {
-    width: 600px;
+    max-width: 600px;
     text-align: left;
     z-index: 1;
-
-    .Title {
-      color: #3C2807;
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      font-size: 50px;
-      letter-spacing: -3px;
-      line-height: 130%;
-      font-size: 70px;
-      font-family: $elcubo3_font_subtitle;
-    }
-
-    .Subtitle {
-      color: #3C2807;
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      font-size: 31px;
-      font-family: $elcubo3_font_subtitle;
-    }
-
-    .Description {
-      color: #3C2807;
-      font-size: 20px;
-      width: 480px;
-      letter-spacing: 0px;
-      line-height: 130%;
-      width: 40vw;
-      font-family: $elcubo3_font_subtitle;
-    }
 
     @media only screen and (max-width: 768px) {
       top: 462vh;
@@ -2280,20 +1781,20 @@
   }
 
   .LinksContent {
-    width: 570px;
-    height: 355px;
+    max-width: 490px;
+    width: 100%;
+    min-height: 140px;
+    height: auto;
     text-align: right;
     color: #3C2807;
     background-color: #F1E7CE;
     opacity: 0.8;
+    display: flex;
     z-index: 1;
-
-    .Link {
-      display: flex;
-      align-items: center;
-      position: absolute;
-      text-decoration: none;
-    }
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px 10px 10px 25px;
+    margin-bottom: 25px;
 
     .LinkText {
       margin-right: 10px;
@@ -2303,75 +1804,15 @@
       width: 100%;
     }
 
+    .LinkItem {
+      p {
+        margin-left: 15px;
+      }
+    }
+
     .LinkItem:nth-child(1) {
-      a {
-        top: 5px;
-        right: 23px;
-      }
       p {
-        margin-left: 11px;
-        width: 265px;
         text-transform: uppercase;
-      }
-    }
-
-    .LinkItem:nth-child(2) {
-      a {
-        top: 45px;
-        right: 22px;
-      }
-      p {
-        margin-left: 10px;
-        width: 445px;
-      }
-      span {
-        font-size: 13.5px;
-        font-weight: normal;
-      }
-    }
-
-    .LinkItem:nth-child(3) {
-      a {
-        top: 165px;
-        right: 22px;
-      }
-      p {
-        margin-left: 10px;
-        width: 450px;
-      }
-      span {
-        font-size: 13.5px;
-        font-weight: normal;
-      }
-    }
-
-    .LinkItem:nth-child(4) {
-      a {
-        top: 225px;
-        right: 23px;
-      }
-      p {
-        margin-left: 15px;
-        width: 425px;
-      }
-      span {
-        font-size: 13.5px;
-        font-weight: normal;
-      }
-    }
-
-    .LinkItem:nth-child(5) {
-      a {
-        top: 285px;
-        right: 23px;
-      }
-      p {
-        margin-left: 15px;
-        width: 425px;
-      }
-      span {
-        font-size: 13.5px;
-        font-weight: normal;
       }
     }
 
@@ -2475,17 +1916,11 @@
 }
 
 .ItemContent:nth-child(10) {
-  width: 100%;
-  height: 500px;
-  display: flex;
-  position: relative;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
+  align-items: baseline!important;
 
   .SitePicture {
     position: absolute;
-    top: 265rem;
+    top: 570px;
     right: 0;
     width: 100vw;
 
@@ -2495,12 +1930,13 @@
     }
   }
 
-  
-
   .ColumnsContainer {
     display: flex;
     position: relative;
     justify-content: center;
+    align-items: end;
+    padding-top: 140px;
+    width: 100%;
 
     @media only screen and (max-width: 768px) {
       flex-direction: column-reverse;
@@ -2508,12 +1944,10 @@
   }
 
   .columnLink {
-    display:flex;
+    display: flex;
     justify-content: flex-start;
-    width: 45%;
-    margin-left: 30px;
-    position: relative;
-    top: calc((100vw + 499rem) / 2.5);
+    width: 100%;
+    padding: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
       width: 60%;
@@ -2527,10 +1961,8 @@
   .columnText {
     display: flex;
     justify-content: flex-end;
-    width: 45%;
-    margin-right: 30px;
-    position: relative;
-    top: calc((100vw + 460rem) / 2.5);
+    width: 100%;
+    padding: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
       width: 60%;
@@ -2542,44 +1974,12 @@
   }
 
   .TextContent {
-    width: 600px;
+    max-width: 600px;
     text-align: right;
     z-index: 1;
-
-    .Title {
-      color: #3C2807;
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      font-size: 50px;
-      letter-spacing: -3px;
-      line-height: 130%;
-      font-size: 70px;
-      font-family: $elcubo3_font_subtitle;
-    }
-
-    .Subtitle {
-      color: #3C2807;
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      font-size: 31px;
-      font-family: $elcubo3_font_subtitle;
-    }
-
-    .Description {
-      color: #3C2807;
-      font-size: 20px;
-      width: 480px;
-      margin-left: 120px;
-      letter-spacing: 0px;
-      line-height: 130%;
-      margin-bottom: 0;
-      width: 40vw;
-      position: absolute;
-      right: 0;
-      font-family: $elcubo3_font_subtitle;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
     @media only screen and (max-width: 768px) {
       top: 485vh;
@@ -2604,18 +2004,23 @@
   }
 
   .LinksContent {
-    width: 460px;
-    height: 60px;
+    max-width: 400px;
+    width: 100%;
+    min-height: 45px;
+    height: auto;
     text-align: left;
     color: #3C2807;
     background-color: #F1E7CE;
     opacity: 0.8;
+    display: flex;
     z-index: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
 
     .Link {
       display: flex;
       align-items: center;
-      position: absolute;
       text-decoration: none;
     }
 
@@ -2627,14 +2032,9 @@
       width: 100%;
     }
 
-    .LinkItem:nth-child(1) {
-      a {
-        top: 5px;
-        left: 23px;
-      }
+    .LinkItem {
       p {
         margin-left: 15px;
-        width: 325px;
         text-transform: uppercase;
       }
     }
@@ -2674,9 +2074,9 @@
   .VideoContainer {
     display: flex;
     position: absolute;
-    top: 275rem;
+    top: 60rem;
     right: 0px;
-    left: -70px;
+    left: 0px;
     z-index: 2;
     width: calc(100vw - 30rem);
     height: 700px;

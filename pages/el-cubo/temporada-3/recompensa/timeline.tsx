@@ -12,25 +12,21 @@ const timeline = () => {
   const [player, setPlayer] = useState(null);
   let srcVideo = UrlUtils.getVideoUrl('a02328');
 
-  /* useEffect(() => {
+  useEffect(() => {
   
     const observerOptions = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.9
+      threshold: 0.5
     };
 
     function observerCallback(entries, observer) {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          //entry.target.classList.replace('fadeOut_test', 'fadeIn_test');
-          entry.target.classList.replace('fadeIn_test', 'fadeOut_test');
-          console.log(entry.isIntersecting);
+          entry.target.classList.replace('fadeOut_test', 'fadeIn_test');
         }
         else {
-          //entry.target.classList.replace('fadeIn_test', 'fadeOut_test');
-          entry.target.classList.replace('fadeOut_test', 'fadeIn_test');
-          console.log(entry.isIntersecting);
+          entry.target.classList.replace('fadeIn_test', 'fadeOut_test');
         }
       });
     }
@@ -40,7 +36,7 @@ const timeline = () => {
     const observer = new IntersectionObserver(observerCallback, observerOptions);
     fadeElms.forEach(el => observer.observe(el));
 
-  }, []) */
+  }, [])
   
 
   return (
@@ -48,7 +44,7 @@ const timeline = () => {
     <div className={styles.TimelineContainer}>
       <div className={styles.Timeline}>
 
-        <div className={ `${styles.ItemContent}` }>
+        <div className={`${styles.ItemContent} fade_test fadeOut_test`}>
           <img className={styles.SitePicture} src="/images/season3/timeline/pueblo.png" alt="imagen del lugar" />
 
           <div className={styles.ColumnsContainer}>
@@ -92,7 +88,7 @@ const timeline = () => {
           </div>
         </div>
 
-        <div className={`${styles.ItemContent}`}>
+        <div className={`${styles.ItemContent} fade_test fadeOut_test`}>
           <img className={styles.Clows} src="/images/season3/timeline/nubes/1.png"/>
           <img className={styles.SitePicture} src="/images/season3/timeline/puente.png" alt="imagen del lugar" />
           
@@ -121,7 +117,7 @@ const timeline = () => {
           </div>
         </div>
 
-        <div className={`${styles.ItemContent}`}>
+        <div className={`${styles.ItemContent} fade_test fadeOut_test`}>
           <img className={styles.Clows} src="/images/season3/timeline/nubes/2.png"/>
           <img className={styles.SitePicture} src="/images/season3/timeline/arrieros.png" alt="imagen del lugar" />
 
@@ -171,7 +167,7 @@ const timeline = () => {
           </div>
         </div>
 
-        <div className={`${styles.ItemContent}`}>
+        <div className={`${styles.ItemContent} fade_test fadeOut_test`}>
           <img className={styles.Clows} src="/images/season3/timeline/nubes/3.png"/>
           <img className={styles.SitePicture} src="/images/season3/timeline/mapa.png" alt="imagen del lugar" />
 
@@ -196,7 +192,9 @@ const timeline = () => {
                 </div>
                 <div className={styles.LinkItem}>
                   <a href='#' className={styles.Link}>
-                    <RedirectionIconTimeline />
+                    <div>
+                      <RedirectionIconTimeline />
+                    </div>
                     <p className={styles.LinkText}>Ruta Nacional 45A (Colombia)<br></br>
                       <span>Wikipedia</span>
                     </p>
@@ -204,7 +202,9 @@ const timeline = () => {
                 </div>  
                 <div className={styles.LinkItem}>
                   <a href='#' className={styles.Link}>
-                    <RedirectionIconTimeline />
+                    <div>
+                      <RedirectionIconTimeline />
+                    </div>
                     <p className={styles.LinkText}>Oculto en el Cañón.<br></br>
                       <span>
                         Especial multimedia por Nicole Acuña y Silvia Corredor. Programa en Periodismo y Opinión Pública PO04. Escuela de Ciencias Humanas. Universidad del Rosario 2019.<br></br>
@@ -215,7 +215,9 @@ const timeline = () => {
                 </div>
                 <div className={styles.LinkItem}>
                   <a href='#' className={styles.Link} >
-                    <PlayIconTimeline />
+                    <div>
+                      <PlayIconTimeline />
+                    </div>
                     <p className={styles.LinkText}>
                       El pueblo 'fantasma' colombiano donde solo viven 56 almas<br></br>
                       <span>El Tiempo (29 de octubre de 2021)</span>
@@ -227,7 +229,7 @@ const timeline = () => {
           </div>
         </div>
 
-        <div className={`${styles.ItemContent}`}>
+        <div className={`${styles.ItemContent} fade_test fadeOut_test`}>
           <img className={styles.Clows} src="/images/season3/timeline/nubes/4.png"/>
           <img className={styles.SitePicture} src="/images/season3/timeline/camuro.png" alt="imagen del lugar" />
 
@@ -238,7 +240,9 @@ const timeline = () => {
                 <div className={styles.LinkItem}>
                   <a href='#' className={styles.Link} >
                     <p className={styles.LinkText}>galería de fotos</p>
-                    <PlayIconTimeline />
+                    <div>
+                      <PlayIconTimeline />
+                    </div>
                   </a>
                 </div>
                 <div className={styles.LinkItem}>
@@ -246,7 +250,9 @@ const timeline = () => {
                     <p className={styles.LinkText}>Jordán Sube, pueblo rico sin gente.<br></br>
                       <span>Canal 1 (16 de agosto del 2015)</span>
                     </p>
-                    <RedirectionIconTimeline />
+                    <div>
+                      <RedirectionIconTimeline />
+                    </div>
                   </a>
                 </div>  
                 <div className={styles.LinkItem}>
@@ -256,7 +262,9 @@ const timeline = () => {
                         Especial multimedia por Nicole Acuña y Silvia Corredor.
                       </span>
                     </p>
-                    <RedirectionIconTimeline />
+                    <div>
+                      <RedirectionIconTimeline />
+                    </div>
                   </a>
                 </div>
                 <div className={styles.LinkItem}>
@@ -264,7 +272,9 @@ const timeline = () => {
                     <p className={styles.LinkText}>
                       <span>Jaime Rodriguez, coleccionista santandereano, nos habla sobre las armas que se usaron en los tiempos de la violencia bipartidista en Jordán. Trabajó algunos años como supervisor en la Caja Agraria. Era el encargado de hacer un balance a quienes solicitaban créditos. En el 78, visitó a Roque Julio Ferreira y su hermano José Ángel, ambos solicitantes de un préstamo.</span>
                     </p>
-                    <PlayIconTimeline />
+                    <div>
+                      <PlayIconTimeline />
+                    </div>
                   </a>
                 </div>
               </div>
@@ -283,7 +293,7 @@ const timeline = () => {
           </div>
         </div>
 
-        <div className={`${styles.ItemContent}`}>
+        <div className={`${styles.ItemContent} fade_test fadeOut_test`}>
           <img className={styles.SitePicture} src="/images/season3/timeline/casa.png" alt="imagen del lugar" />
 
           <div className={styles.ColumnsContainer}>
@@ -301,13 +311,17 @@ const timeline = () => {
               <div className={styles.LinksContent}>
                 <div className={styles.LinkItem}>
                   <a href='#' className={styles.Link} >
-                    <GalleryIconTimeline />
+                    <div>
+                      <GalleryIconTimeline />
+                    </div>
                     <p className={styles.LinkText}>versión ilustrada familia pereira</p>
                   </a>
                 </div>
                 <div className={styles.LinkItem}>
                   <a href='#' className={styles.Link}>
-                    <RedirectionIconTimeline />
+                    <div>
+                      <RedirectionIconTimeline />
+                    </div>
                     <p className={styles.LinkText}>Jordan Sube, un municipio con 10 mil millones de presupuesto y un dueño: los Ferreira<br></br>
                       <span>Las 2 orillas (6 de septiembre de 2015)</span>
                     </p>
@@ -315,7 +329,9 @@ const timeline = () => {
                 </div>  
                 <div className={styles.LinkItem}>
                   <a href='#' className={styles.Link}>
-                    <RedirectionIconTimeline />
+                    <div>
+                      <RedirectionIconTimeline />
+                    </div>
                     <p className={styles.LinkText}>Jordán Sube le dice nuevamente 'no' a la familia Ferreira<br></br>
                       <span>El Tiempo (28 de octubre 2019)</span>
                     </p>
@@ -323,7 +339,9 @@ const timeline = () => {
                 </div>
                 <div className={styles.LinkItem}>
                   <a href='#' className={styles.Link} >
-                    <RedirectionIconTimeline />
+                    <div>
+                      <RedirectionIconTimeline />
+                    </div>
                     <p className={styles.LinkText}>
                       Oculto en el Cañón<br></br>
                       <span>
@@ -335,7 +353,9 @@ const timeline = () => {
                 </div>
                 <div className={styles.LinkItem}>
                   <a href='#' className={styles.Link} >
-                    <RedirectionIconTimeline />
+                    <div>
+                      <RedirectionIconTimeline />
+                    </div>
                     <p className={styles.LinkText}>
                       Oculto en el Cañón<br></br>
                       <span>
@@ -350,7 +370,7 @@ const timeline = () => {
           </div>
         </div>
 
-        <div className={`${styles.ItemContent}`}>
+        <div className={`${styles.ItemContent} fade_test fadeOut_test`}>
           <img className={styles.Clows} src="/images/season3/timeline/nubes/5.png"/>
           <img className={styles.SitePicture} src="/images/season3/timeline/muerte_ferreira.png" alt="imagen del lugar" />
 
@@ -361,7 +381,9 @@ const timeline = () => {
                 <div className={styles.LinkItem}>
                   <a href='#' className={styles.Link} >
                     <p className={styles.LinkText}>ilustración roque ferreira<br></br>el gamonal</p>
-                    <GalleryIconTimeline />
+                    <div>
+                      <GalleryIconTimeline />
+                    </div>
                   </a>
                 </div>
                 <div className={styles.LinkItem}>
@@ -369,7 +391,9 @@ const timeline = () => {
                     <p className={styles.LinkText}>Jaque a los Ferreira en Jordán Sube.<br></br>
                       <span>El tiempo / Manuel Navarro (06 de julio 1997)</span>
                     </p>
-                    <RedirectionIconTimeline />
+                    <div>
+                      <RedirectionIconTimeline />
+                    </div>
                   </a>
                 </div>  
               </div>
@@ -389,7 +413,7 @@ const timeline = () => {
           </div>
         </div>
 
-        <div className={`${styles.ItemContent}`}>
+        <div className={`${styles.ItemContent} fade_test fadeOut_test`}>
           <img className={styles.SitePicture} src="/images/season3/timeline/candado.png" alt="imagen del lugar" />
 
           <div className={styles.ColumnsContainer}>
@@ -413,7 +437,9 @@ const timeline = () => {
                 </div>
                 <div className={styles.LinkItem}>
                   <a href='#' className={styles.Link}>
-                    <RedirectionIconTimeline />
+                    <div>
+                      <RedirectionIconTimeline />
+                    </div>
                     <p className={styles.LinkText}>La tierra del olvido. La increíble historia de Jordán Sube, un municipio santandereano devorado por el abandono, la corrupción y, ahora, un criminal incendio<br></br>
                       <span>Semana (4 de septiembre de 2004)</span>
                     </p>
@@ -424,7 +450,7 @@ const timeline = () => {
           </div>
         </div>
 
-        <div className={`${styles.ItemContent}`}>
+        <div className={`${styles.ItemContent} fade_test fadeOut_test`}>
           <img className={styles.Clows} src="/images/season3/timeline/nubes/6.png"/>
 
           <div className={styles.ColumnsContainer}>
@@ -433,7 +459,9 @@ const timeline = () => {
                 <div className={styles.LinkItem}>
                   <a href='#' className={styles.Link} >
                     <p className={styles.LinkText}>galería de fotos</p>
-                    <PlayIconTimeline />
+                    <div>
+                      <PlayIconTimeline />
+                    </div>
                   </a>
                 </div>
                 <div className={styles.LinkItem}>
@@ -441,7 +469,9 @@ const timeline = () => {
                     <p className={styles.LinkText}>Oculto en el Cañón<br></br>
                       <span>Especial multimedia por Nicole Acuña y Silvia Corredor. Programa en Periodismo y Opinión Pública PO04. Escuela de Ciencias Humanas. Universidad de Rosario. 2019. Leer subapartado (dentro del apartado: 'A mula y alpargata'): 'Los caminos que llevan a Jordán'</span>
                     </p>
-                    <RedirectionIconTimeline />
+                    <div>
+                      <RedirectionIconTimeline />
+                    </div>
                   </a>
                 </div>  
                 <div className={styles.LinkItem}>
@@ -451,7 +481,9 @@ const timeline = () => {
                         (25 de junio de 2018)
                       </span>
                     </p>
-                    <RedirectionIconTimeline />
+                    <div>
+                      <RedirectionIconTimeline />
+                    </div>
                   </a>
                 </div>
                 <div className={styles.LinkItem}>
@@ -459,7 +491,9 @@ const timeline = () => {
                     <p className={styles.LinkText}>El pueblo que ya no es "fantasma"<br></br>
                       <span>Entrvista con la alcaldesa. Caracol(10 de octubre de 2019).</span>
                     </p>
-                    <RedirectionIconTimeline />
+                    <div>
+                      <RedirectionIconTimeline />
+                    </div>
                   </a>
                 </div>
                 <div className={styles.LinkItem}>
@@ -467,7 +501,9 @@ const timeline = () => {
                     <p className={styles.LinkText}>El pueblo escondido en el Chicamocha que busca su 'salida'<br></br>
                       <span>El tiempo (2 de diciembre de 2019).</span>
                     </p>
-                    <RedirectionIconTimeline />
+                    <div>
+                      <RedirectionIconTimeline />
+                    </div>
                   </a>
                 </div>
               </div>
@@ -485,10 +521,10 @@ const timeline = () => {
           </div>
         </div>
 
-        <div className={`${styles.ItemContent}`}>
+        <div className={styles.ItemContent}>
           <img className={styles.SitePicture} src="/images/season3/timeline/pueblo_rio_abajo.png" alt="imagen del lugar" />
           
-          <div className={styles.ColumnsContainer}>
+          <div className={`${styles.ColumnsContainer} fade_test fadeOut_test`}>
 
             <div className={styles.columnText}>
               <div className={styles.TextContent}>
@@ -504,28 +540,30 @@ const timeline = () => {
               <div className={styles.LinksContent}>
                 <div className={styles.LinkItem}>
                   <a href='#' className={styles.Link} >
-                    <GalleryIconTimeline />
+                    <div>
+                      <GalleryIconTimeline />
+                    </div>
                     <p className={styles.LinkText}>galería de fotos</p>
                   </a>
                 </div>
               </div>
             </div>
             
-            <div className={styles.VideoContainer}>
-                <VideoPlayer
-                  showBackButton
-                  autoPlay={false}
-                  showDashboard
-                  title={""}
-                  source={srcVideo}
-                  showPrevButton={false}
-                  showNextButton={false}
-                  setPlayer={setPlayer}
-                  fullscreen={false}
-                  seekControls
-                />
-              </div>
           </div>
+          <div className={styles.VideoContainer}>
+              <VideoPlayer
+                showBackButton
+                autoPlay={false}
+                showDashboard
+                title={""}
+                source={srcVideo}
+                showPrevButton={false}
+                showNextButton={false}
+                setPlayer={setPlayer}
+                fullscreen={false}
+                seekControls
+              />
+            </div>
         </div>
 
       </div>
