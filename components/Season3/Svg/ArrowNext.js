@@ -12,9 +12,9 @@ const ArrowNext = () => {
     <path 
       d="M1.00049 1L9.00049 9L1.00049 17" 
       stroke="white" 
-      stroke-width="2" 
-      stroke-linecap="round" 
-      stroke-linejoin="round"
+      strokeWidth={2} 
+      strokeLinecap="round" 
+      strokeLinejoin="round"
     />
   </svg>);
 };
