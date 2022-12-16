@@ -11,7 +11,6 @@ const MessageAfterVideo = ({ message = 'text', onTimeEnd = () => { }, duration =
 
   return (
     <div className={`${styles.iMessageCover} ${styles.fadeIn}`}>
-      
       <h1 className={styles.iMessage}>{ HtmlParser(message) }</h1>
     </div>
   );
