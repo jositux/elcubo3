@@ -7,7 +7,6 @@ const RedirectionIconTimeline = () => {
     height={30}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    {...props}
   >
     <g
       clipPath="url(#a)"
