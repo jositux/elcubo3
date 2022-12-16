@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import styles from './timeline.module.scss';
 import UrlUtils from 'utils/Url';
-import VideoPlayer from 'components/Season2/VideoPlayer/VideoPlayer';
+//import VideoPlayer from 'components/Season3/VideoPlayer/VideoPlayer';
+import Video2Level from 'components/Season3/Shared/Video2Level/VideoPlayer';
+
 import GalleryIconTimeline from 'components/Season3/Svg/GalleryIconTimeline';
 import PlayIconTimeline from 'components/Season3/Svg/PlayIconTimeline';
 import RedirectionIconTimeline from 'components/Season3/Svg/RedirectionIconTimeline';
@@ -501,7 +503,7 @@ const timeline = () => {
                 <div className={styles.LinkItem}>
                   <a href='#' className={styles.Link} >
                     <p className={styles.LinkText}>El pueblo que ya no es "fantasma"<br></br>
-                      <span>Entrvista con la alcaldesa. Caracol(10 de octubre de 2019).</span>
+                      <span>Entrevista con la alcaldesa. Caracol(10 de octubre de 2019).</span>
                     </p>
                     <div>
                       <RedirectionIconTimeline />
@@ -565,10 +567,9 @@ const timeline = () => {
         
           <div className={styles.ColumnsContainer}>
             <div className={styles.VideoContainer}>
-                <VideoPlayer
+                <Video2Level
                   showBackButton
                   autoPlay={false}
-                  showDashboard
                   title={""}
                   source={srcVideo}
                   showPrevButton={false}

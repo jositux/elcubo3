@@ -79,7 +79,7 @@ export const VideoPlayerWrapper = styled.div`
   }
 
   .plyr--full-ui input[type='range'] {
-    color: #801C16;
+    color: #E2B857;
   }
 
   /* Custom play */
@@ -141,7 +141,7 @@ export const VideoPlayerWrapper = styled.div`
 }
 
 .plyr__video-wrapper {
-    height: auto !important;
+    height: 100vh !important;
 }
 
 /* Hide cursor */

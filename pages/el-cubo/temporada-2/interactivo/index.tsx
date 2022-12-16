@@ -12,9 +12,6 @@ import Translate from 'components/Season2/Interactive/Translate/Translate';
 import Trivia from 'components/Season2/Interactive/Trivia/Trivia';
 import Memory from 'components/Season2/Interactive/Memory/Memory';
 
-//import RoundCursor from 'components/Season2/Shared/RoundCursor/RoundCursor';
-
-
 import Ending from 'components/Season2/Interactive/Ending/Ending';
 
 import disableScroll from 'disable-scroll';

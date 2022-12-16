@@ -341,17 +341,6 @@ const VideoPlayer = ({
 
     let video_duration = duration;
 
-    /*setTimeout(() => { 
-      video_duration = playerRef.current.duration;
-
-      if (markers.length !== 0) {
-        markers.map( (c, index) => (
-          addMarker('marker', c.time, c.text)
-      ))
-      }
-    
-     }, 10000);*/
-
     const calculatePercent = (num1, total) => {
       return (num1 / total) * 100;
     };
@@ -359,18 +348,10 @@ const VideoPlayer = ({
     const createPoint = (pClassElement, pSeconds, pUrl, pText) => {
       let percent = calculatePercent(pSeconds, video_duration);
       let point = document.createElement('div');
-      //let content = document.createElement('span');
-      //let text = document.createTextNode(pText);
-
       let img = new Image();
       img.src = pUrl;
-
-      //content.appendChild(text);
-      //content.appendChild(img);
-
       console.log(document.querySelector('.' + pClassElement));
       point.appendChild(img);
-      //point.appendChild(text);
       point.setAttribute('class', 'marker '+ pClassElement);
       point.setAttribute('style', 'left: ' + percent + '%;');
       return point;

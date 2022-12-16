@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import VideoPlayer from 'components/Season3/VideoPlayer/VideoPlayer';
-import DashboardLinealModal from 'components/Season3/Modal/DashboardLinealModal';
+import DashboardLinealModal from 'components/Season3/Modal/DashboardSlideModal';
 import UrlUtils from 'utils/Url';
 import styles from './lineal.module.scss'
 
@@ -63,7 +63,6 @@ const Lineal = () => {
     };
 
     const markers =[];
-
 
     return (
         <div>

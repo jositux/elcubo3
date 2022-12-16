@@ -1,8 +1,8 @@
 import React from "react";
-import DashboardLineal from 'components/Season3/Dashboard/DashboardLineal';
-import styles from './season3.dashboardLinealModal.module.scss';
+import Dashboard from 'components/Season3/Dashboard/Dashboard';
+import styles from './season3.dashboardSlideModal.module.scss';
 
-const DashboardLinealModal = ({ char, showModal, onCloseDashboard }) => {
+const DashboardSlideModal = ({ char, showModal, onCloseDashboard }) => {
 
   React.useEffect(() => {
 
@@ -26,11 +26,11 @@ const DashboardLinealModal = ({ char, showModal, onCloseDashboard }) => {
         <div className={styles.child}>
           <p className={styles.t_close} onClick={onCloseDashboard}>
           </p>
-          <DashboardLineal char={char} />
+          <Dashboard char={char} />
         </div>
       </div>
     </div>
   );
 };
 
-export default DashboardLinealModal;
+export default DashboardSlideModal;

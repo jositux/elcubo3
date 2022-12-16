@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import VideoPlayer from 'components/Season3/VideoPlayer/VideoPlayer';
-import DashboardLinealModal from 'components/Season3/Modal/DashboardLinealModal';
+import DashboardSlideModal from 'components/Season3/Modal/DashboardSlideModal';
 import GalleryModal from 'components/Season3/Modal/GalleryModal';
 import AudioModal from 'components/Season3/Modal/AudioModal';
-import VideoModal from 'components/Season3/Modal/VideoModal';
+import VideoFadeModal from 'components/Season3/Modal/VideoFadeModal';
 import Pulse from 'components/Season3/Shared/Pulse/Pulse';
 import UrlUtils from 'utils/Url';
 import styles from './lineal.module.scss'
@@ -135,7 +135,7 @@ const Lineal = () => {
 
     return (
         <div className={styles.NodeContainer}>
-            <DashboardLinealModal
+            <DashboardSlideModal
                 char = 'diego'
                 showModal={showDashboardModal}
                 onCloseDashboard={handleOnCloseDashboardLineal}
@@ -177,7 +177,7 @@ const Lineal = () => {
 
      
         <div className={styles.fullScreenVideo}>
-          <VideoModal
+          <VideoFadeModal
             videoId={"475352"}
             showModal={isOpen}
             setShowModal={setIsOpen}

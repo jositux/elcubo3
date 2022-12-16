@@ -12,13 +12,15 @@ const formWaveSurferOptions = (ref) => ({
   responsive: true,
   height: 150,
   normalize: true,
-  partialRender: true
+  partialRender: true,
+  transitionDuration: 2000
 });
 
 
 const AudioWave = ({audio = "default.mp3"}) => {
   const waveformRef = useRef(null);
   const wavesurfer = useRef(null);
+
   const [playing, setPlaying] = useState(true);
 
   const url = audio;
@@ -34,6 +36,7 @@ const AudioWave = ({audio = "default.mp3"}) => {
 
   }, []);
 
+  
   const create = async () => {
     const WaveSurfer = (await import("wavesurfer.js")).default;
 

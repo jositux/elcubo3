@@ -1,96 +1,158 @@
 .DashboardPageContainer {
-  background-color: $elcubo2_bg;
-  font-family: $elcubo2_font;
-  background: url(/images/season2/bg-dashboard.jpg) top center no-repeat black;
-  min-height: calc(100vh - 100px);
-  padding-top: 40px;
-  padding-bottom: 100px;
+  //background-color: rgba(0, 0, 0, 0.7);
+  //font-family: $elcubo2_font;
+  height: 100vh;
   overflow-x: hidden;
+  text-align: center;
+  .Content {
+    padding: 20px 80px;
+    width: 380px;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+  }
   h2 {
-    font-size: 25px;
-    font-weight: 500;
-    margin-block-start: 0;
+    font-family: $elcubo3_font_title;
+    font-size: 32px;
+    font-weight: 400;
     margin-bottom: 10px;
     @media only screen and (max-width: 768px) {
       font-size: 20px;
     }
   }
   p {
-    font-size: 13px;
+    font-family: $elcubo3_font_subtitle;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.3;
   }
 }
 
-.TitleSlides {
-  max-width: 810px;
-  margin: auto;
-  margin-top: 80px;
-}
-
-.SlidesContainer {
-  padding: 140px 0;
-  background: url(/images/season2/slider-marco.svg);
-  background-size: 550px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.SectionCenterCards {
-  max-width: 810px;
-  @media only screen and (max-width: 920px) {
-    max-width: 780px;
-  }
-  margin: auto;
-  padding: 30px 0 0 0;
-  .LineTop {
-    width: 100%;
-  }
-  p.SectionCopy {
-    width: 60%;
-    margin-top: 10px;
-    margin-bottom: 30px;
+.Collectibles {
+  margin-top: 40px;
+  .row {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+    h2 {
+      font-weight: 400;
+    }
+    span:nth-child(1) {
+      width: 22%;
+    }
+    span:last-child {
+      font-family: $elcubo3_font_subtitle;
+      font-weight: 300;
+      font-size: 14px;
+    }
   }
 }
 
-.SectionPersonajes {
-  h2 {
-    margin-top: 0;
-  }
+
+.coverBG {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.7);
 }
 
-.CardsContainer {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 40px;
-  @media only screen and (max-width: 920px) {
-    grid-gap: 15px;
-  }
-  color: white;
+.imgCover {
+  object-fit: cover;
+  width: 100%;
 }
 
-@media only screen and (max-width: 768px) {
-  .DashboardPageContainer {
-    padding: 40px 60px;
-  }
-  .CardsContainer {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .SlidesContainer {
-    padding: 10px 0;
-    overflow: hidden;
-  }
-}
-
-@media only screen and (max-width: 580px) {
-  .CardsContainer {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.LineTop {
+.ContainerCharacter {
+  position: absolute;
+  width: 460px;
+  right: 38%;
+  top: 40%;
+  z-index: 2;
   display: flex;
-  max-width: 810px;
-  margin: 50px auto 40px auto;
-  @media only screen and (max-width: 768px) {
-    max-width: 100%;
+  gap: 0px;
+  text-align: left;
+  h2 {
+    font-family: $elcubo3_font_title;
+    font-size: 30px;
+    font-weight: 300;
+    margin: 16px 0 0px 0;
   }
+  p {
+    font-family: $elcubo3_font_subtitle;
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  a {
+    font-family: $elcubo3_font_subtitle;
+    font-weight: 300;
+    font-size: 22px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #402A04;
+    background: #E2B857;
+    padding: 15px 40px 15px 16px;
+    position: relative;
+    float: left;
+    svg {
+      position: absolute;
+      top: 12px;
+      right: 5px;
+    }
+  }
+  .column:nth-child(1) {
+    width: 40%;
+    img {
+      width: 97%;
+    }
+  }
+  .column:nth-child(2) {
+    width: 60%;
+  }
+}
+
+
+a.video360 {
+  font-family: $elcubo3_font_subtitle;
+  font-weight: 300;
+  font-size: 22px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #402A04;
+  background: #E2B857;
+  padding: 15px 40px 15px 16px;
+  position: relative;
+  float: left;
+  cursor: pointer;
+  svg {
+    position: absolute;
+    top: 12px;
+    right: 5px;
+  }
+}
+
+.juandejesus {
+  left: 56%;
+  top: 50%;
+}
+
+.jenny {
+  left: 60%;
+  top: 2%;
+  flex-direction: row-reverse;
+}
+
+.diego {
+  right: 25%;
+}
+
+.guillermo {
+  right: 12%;
+  top: 70%;
+}
+
+.soledad {
+  left: 36%;
+  top: 20%;
 }

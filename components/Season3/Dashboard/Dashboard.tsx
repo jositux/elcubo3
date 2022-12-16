@@ -1,259 +1,156 @@
-import React from 'react';
-import Head from 'next/head';
-import HeaderInteractive from 'components/Season2/Dashboard/HeaderInteractive';
-import Ranking from 'components/Season2/Dashboard/Ranking';
-import Slider from 'components/Season2/Slider/Slider';
-import CardVideo from 'components/Season2/Shared/Card/CardVideo';
+import React, { Fragment, useState, useRef } from 'react';
+import VideoModal from 'components/Season3/Modal/VideoModal';
+
+import PersonajeArrow from 'components/Season3/Svg/PersonajeArrow';
+import { Popup } from 'components/Season3/Shared/PersonajeSelector/Popup';
 import styles from './dashboard.module.scss';
-import { useInteractive } from 'hooks/useInteractive';
+import YoutubeModal from 'components/Season3/Modal/YoutubeModal';
 
-const Dashboard = () => {
-  const {
-    defaultConfessional,
-    interactiveData,
-    currentPoints,
-    confessionalTotal,
-    totalPoints,
-    totalCollectibles,
-    ownedCollectibles,
-    viewedCollectibles,
-    ownedConfessionalCount,
-    isEnabled
-  } = useInteractive();
+const Dashboard = ({char}) => {
+  const ref = useRef();
 
-  const slides = [
-    {
-      title: 'Slide 1',
-      image: '/images/season2/gallery/interactive/1.jpg',
-      rel: true
-    },
-    {
-      title: 'Slide 2',
-      image: '/images/season2/gallery/interactive/2.jpg',
-      rel: true
-    },
-    {
-      title: 'Slide 3',
-      image: '/images/season2/gallery/interactive/3.jpg',
-      rel: true
-    },
-    {
-      title: 'Slide 4',
-      image: '/images/season2/gallery/interactive/4.jpg',
-      rel: true
-    },
-    {
-      title: 'Slide 5',
-      image: '/images/season2/gallery/interactive/5.jpg',
-      rel: 6600
-      //rel: 6202
-      //Almanza
-    },
-    {
-      title: 'Slide 6',
-      image: '/images/season2/gallery/interactive/6.jpg',
-      rel: 6600
-      //rel: 6202
-      //Almanza
-    },
-    {
-      title: 'Slide 7',
-      image: '/images/season2/gallery/interactive/7.jpg',
-      rel:  6602
-      //rel: 6189
-      //Aura
-    },
-    {
-      title: 'Slide 8',
-      image: '/images/season2/gallery/interactive/8.jpg',
-      rel:  6602
-      //rel: 6189
-      //Aura
-    },
-    {
-      title: 'Slide 9',
-      image: '/images/season2/gallery/interactive/9.jpg',
-      rel: 6604
-      //rel: 6200
-      //El Gato
-    },
-    {
-      title: 'Slide 10',
-      image: '/images/season2/gallery/interactive/10.jpg',
-      rel: 6604
-      //rel: 6200
-      //El Gato
-    },
-    {
-      title: 'Slide 11',
-      image: '/images/season2/gallery/interactive/11.jpg',
-      rel: 6604
-      //rel: 6200
-      //El Gato
-    },
-    {
-      title: 'Slide 12',
-      image: '/images/season2/gallery/interactive/12.jpg',
-      rel: 6603
-      //rel: 6199
-      //Kodak
-    },
-    {
-      title: 'Slide 13',
-      image: '/images/season2/gallery/interactive/13.jpg',
-      rel: 6603
-      //rel: 6199
-      //Kodak
-    },
-    {
-      title: 'Slide 14',
-      image: '/images/season2/gallery/interactive/14.jpg',
-      rel: 6603
-      //rel: 6199
-      //Kodak
-    },
-    {
-      title: 'Slide 15',
-      image: '/images/season2/gallery/interactive/15.jpg',
-      rel: 6613
-      //rel: 6198
-      // Simon Restrepo
-    },
-    {
-      title: 'Slide 16',
-      image: '/images/season2/gallery/interactive/16.jpg',
-      rel: 6613
-      //rel: 6198
-      // Simon Restrepo
-    },
-    {
-      title: 'Slide 17',
-      image: '/images/season2/gallery/interactive/17.jpg',
-      rel: 6613
-      //rel: 6198
-      // Simon Restrepo
-    },
-    {
-      title: 'Slide 18',
-      image: '/images/season2/gallery/interactive/18.jpg',
-      rel: 6605
-      //rel: 6193
-      //Héctor Fabio Rugeles
-    },
-    {
-      title: 'Slide 19',
-      image: '/images/season2/gallery/interactive/19.jpg',
-      rel: 6605
-      //rel: 6193
-      //Héctor Fabio Rugeles
-    },
-    {
-      title: 'Slide 20',
-      image: '/images/season2/gallery/interactive/20.jpg',
-      rel: 6605
-      //rel: 6193
-      //Héctor Fabio Rugeles
-    },
-    {
-      title: 'Slide 21',
-      image: '/images/season2/gallery/interactive/21.jpg',
-      rel: 6601
-      //rel: 6188
-      //Andrés Erazo
-    },
-    {
-      title: 'Slide 22',
-      image: '/images/season2/gallery/interactive/22.jpg',
-      rel: 6601
-      //rel: 6188
-      //Andrés Erazo
-    },
-    {
-      title: 'Slide 23',
-      image: '/images/season2/gallery/interactive/23.jpg',
-      rel: 6601
-      //rel: 6188
-      //Andrés Erazo
-    },
-    {
-      title: 'Slide 24',
-      image: '/images/season2/gallery/interactive/24.jpg',
-      rel: 6611
-      //rel: 6196
-      //Lucía Román
-    },
-    {
-      title: 'Slide 25',
-      image: '/images/season2/gallery/interactive/25.jpg',
-      rel: 6611
-      //rel: 6196
-      //Lucía Román
-    },
-    {
-      title: 'Slide 26',
-      image: '/images/season2/gallery/interactive/26.jpg',
-      rel: 6611
-      //rel: 6196
-      //Lucía Román
-    }
-  ];
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOnPlayVideo = () => {
+    //if (ref && ref.current ) {
+      setIsOpen(true)
+    //}
+  };
+
+  const handleOnDashboardVideoEnd = () => {
+    //disableScroll.off();
+    setIsOpen(false);
+  };
+
+
+const characters = [
+  {
+    name:'soledad', 
+    realName: 'Soledad', 
+    description: '“Los cambios siempre dan miedo, pero hay que hacerlos con miedos y todo“',
+    background: '/images/season3/steals/personaje-soledad.jpg',
+    icon :'/images/season3/map/popups/popup-soledad.png',
+    link: '../soledad',
+  },
+  {
+    name:'diego', 
+    realName: 'Diego', 
+    description: '“Para lograr las cosas primero hay que soñarlas“',
+    background: '/images/season3/steals/personaje-diego.jpg',
+    icon :'/images/season3/map/popups/popup-diego.png',
+    link: '../diego',
+  },
+  {
+    name:'juandejesus', 
+    realName: 'Juan de Jesús', 
+    description: '“Uno busca su misión en la vida, pero a veces es la propia misión la que a uno lo encuentra“',
+    background: '/images/season3/steals/personaje-juan.jpg',
+    icon :'/images/season3/map/popups/popup-juandejesus.png',
+    link: '../juan-de-jesus',
+  },
+  {
+    name:'jenny', 
+    realName: 'Jenny', 
+    description: '“Viajando se conoce la libertad“',
+    background: '/images/season3/steals/personaje-jenny.jpg',
+    icon :'/images/season3/map/popups/popup-jenny.png',
+    link: '../jenny',
+  },
+  {
+    name:'guillermo', 
+    realName: 'Don Guillermo', 
+    description: '“Y si algún día me separo de María, espero encontrarla del otro lado“',
+    background: '/images/season3/steals/personaje-guillermo.jpg',
+    icon :'/images/season3/map/popups/popup-guillermo.png',
+    link: '../guillermo',
+  },
+];
 
   return (
-    <>
-      <Head>
-        <title>Temporada 2 - El Cubo - Modo Interactivo Dashboard</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Fragment>
       <div className={styles.DashboardPageContainer}>
 
-        <HeaderInteractive
-          currentPoints={currentPoints}
-          totalPoints={totalPoints}
-          totalCollectibles={totalCollectibles}
-          ownedCollectibles={ownedCollectibles}
-          ownedConfessionalCount={ownedConfessionalCount}
-          confessionalTotal={confessionalTotal}
-          viewedCollectibles={viewedCollectibles}
-        />
-        <img className={styles.LineTop} src="/images/season2/line-top.svg" />
+        <div className={styles.CharacterBackground}>
 
-        <Ranking collectibles={interactiveData?.collectibles} />
+<div className={styles.Content}>
+          <h2>Dashboard</h2>
+          <p>Suma <strong>3 objetos coleccionables</strong> de cada personaje y desbloquea su <strong>Confesionario</strong>.<br />
+Completa todos los personajes con sus objetos y desbloquea la <strong>Infografía</strong>.</p>
 
-        <div className={styles.DashboardBody}>
+<div className={styles.Collectibles}>
+  <h3>Objetos coleccionables</h3>
+  <div className={styles.row}>
+    <span className={styles.name}>Juan de Jesús</span>
+    <img src="/images/season3/collectibles/0.png" />
+    <img src="/images/season3/collectibles/0.png" />
+    <img src="/images/season3/collectibles/0.png" />
+    <span className={styles.count}>3 de 3</span>
+  </div>
 
-          <div className={styles.SectionCenterCards}>
-            <img className={styles.LineTop} src="/images/season2/line-top.svg" />
-            <h2>Confesionarios</h2>
-            <p className={styles.SectionCopy}>Suma pistas, desbloquea y accede a los confesionarios, que te darán información privilegiada de cada personaje. </p>
-            <section className={styles.CardsContainer}>
-              {defaultConfessional && defaultConfessional.map((item, index) => {
-                const { image, characterName, description, videoId } = item;
-                const key = `${index}_${image.replace(/[^a-zA-Z ]/g, "")}`;
-                return <CardVideo
-                  key={key}
-                  url={image}
-                  title={characterName}
-                  paragraph={description}
-                  isEnabled={isEnabled(item)}
-                  source={videoId}
-                />
-              })}
-            </section>
-          </div>
+  <div className={styles.row}>
+    <span className={styles.name}>Don Guillermo</span>
+    <img src="/images/season3/collectibles/0.png" />
+    <img src="/images/season3/collectibles/0.png" />
+    <img src="/images/season3/collectibles/0.png" />
+    <span className={styles.count}>3 de 3</span>
+  </div>
 
-          <div className={styles.TitleSlides}>
-            <h2>Galería</h2>
-          </div>
-          <section className={styles.SlidesContainer}>
-            <Slider slides={slides} />
-          </section>
+  <div className={styles.row}>
+    <span className={styles.name}>Jenny</span>
+    <img src="/images/season3/collectibles/0.png" />
+    <img src="/images/season3/collectibles/0.png" />
+    <img src="/images/season3/collectibles/0.png" />
+    <span className={styles.count}>3 de 3</span>
+  </div>
 
-        </div>
+  <div className={styles.row}>
+    <span className={styles.name}>Diego</span>
+    <img src="/images/season3/collectibles/0.png" />
+    <img src="/images/season3/collectibles/0.png" />
+    <img src="/images/season3/collectibles/0.png" />
+    <span className={styles.count}>3 de 3</span>
+  </div>
 
-      </div>
+  <div className={styles.row}>
+    <span className={styles.name}>Soledad</span>
+    <img src="/images/season3/collectibles/0.png" />
+    <img src="/images/season3/collectibles/0.png" />
+    <img src="/images/season3/collectibles/0.png" />
+    <span className={styles.count}>3 de 3</span>
+  </div>
 
+</div>
+<YoutubeModal videoId='XyOS58YExw8' />
+</div>
+     
+          <Popup characters={characters} />
+          {
+          characters.map( (c, index) => (
+            c.name == char ?
+            <div className={`${styles.ContainerCharacter} ${styles[c.name]} ` }>
 
-    </>
+            <div className={styles.column}>
+            <img src={c.icon}  />
+            </div>
+            <div className={styles.column}>
+              <h2>{c.realName}</h2>
+              <p>{c.description}</p>
+              <a>Ver Confesionario
+              <PersonajeArrow />
+              </a>
+            </div>
+            
+          </div>: ''
+         
+      
+          ))
+        }
+
+      <div className={styles.coverBG}></div>
+    </div>
+
+  </div>
+  </Fragment>
   )
 };
 

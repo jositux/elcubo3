@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import VideoPlayer from 'components/Season3/VideoPlayer/VideoPlayer';
-import DashboardLinealModal from 'components/Season3/Modal/DashboardLinealModal';
+import DashboardLinealModal from 'components/Season3/Modal/DashboardSlideModal';
 import GalleryModal from 'components/Season3/Modal/GalleryModal';
 import AudioModal from 'components/Season3/Modal/AudioModal';
 import VideoModal from 'components/Season3/Modal/VideoModal';
