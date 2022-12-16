@@ -8,7 +8,7 @@
   background-size: cover;
 
   @media only screen and (max-width: 768px) {
-    height: 860vh;
+    height: 830vh;
   }
 }
 
@@ -25,7 +25,7 @@
   position: absolute;
   left: 50%;
   width: 1px;
-  height: calc(100vh + 455rem);
+  height: calc(100vh + 430rem);
   margin-left: 0;
   margin-top: 15rem;
   margin-bottom: 15rem;
@@ -51,6 +51,15 @@
   width: 100%;
   align-items: end;
   height: 80vh;
+
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    position: relative;
+    margin: auto;
+    justify-content: center;
+    width: 100%;
+    align-items: end;
+  }
 
   .TextContent {
     .Title {
@@ -82,14 +91,23 @@
     }
   }
 
-
   .LinkItem {
     position: relative;
     cursor: pointer;
 
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
+
     a {
       align-items: center;
       text-decoration: none;
+    
+      @media only screen and (max-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
     }
     span {
       font-size: 13.5px;
@@ -106,11 +124,7 @@
 
 
 .ItemContent:nth-child(1) {
-  @media only screen and (max-width: 768px) {
-    width: 100vw!important;
-    height: 70vh!important;
-  }
-
+  
   .SitePicture {
     position: absolute;
     top: 0;
@@ -119,7 +133,7 @@
     height: auto;
 
     @media only screen and (max-width: 768px) {
-      width: 125vw;
+      width: 125%;
     }
   }
 
@@ -134,7 +148,7 @@
 
     @media only screen and (max-width: 768px) {
       flex-direction: column-reverse;
-      width: 95vw;
+      padding: 0;
     }
   }
 
@@ -145,13 +159,9 @@
     padding: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
-      width: 90vw;
-      position: relative;
-      top: 110px;
-      right: auto;
-      left: auto;
-      margin: 0;
-      justify-content: center;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
     }
   }
 
@@ -162,11 +172,9 @@
     padding: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
-      width: 100vw;
-      position: relative;
-      top: 110px;
-      left: 0;
-      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
     }
   }
 
@@ -176,10 +184,10 @@
     z-index: 1;
 
     @media only screen and (max-width: 768px) {
-      top: 0;
-      right: 0;
-      left: 0;
-      margin-left: 15px;
+      margin: 0 30px;
+      max-width: 100%;
+      text-align: left;
+      z-index: 1;
 
       .Title {
         font-size: 50px!important;
@@ -189,7 +197,7 @@
       }
       .Description {
         font-size: 14px;
-        width: 90%;
+        max-width: 100%;
       }
     }
   }
@@ -223,69 +231,35 @@
     }
 
     @media only screen and (max-width: 768px) {
-      top: 0;
-      right: 0px;
-      left: 0;
-      margin-left: 15px;
-      width: 383px;
-      height: 150px;
-      max-height: 150px;
-      text-align: left;
+      display: flex;
+      width: 100%;
+      min-height: 100px;
+      align-items: flex-start;
+      height: auto;
+      text-align: start;
+      justify-content: center;
+      margin: 0 30px;
+      max-width: 100%;
 
       .LinkText {
-        margin-right: 0px;
-        margin-left: 12px;
+        margin-right: 10px;
+        margin-left: 10px;
         font-size: 12px;
       }
 
-      .LinkItem:nth-child(1) {
+      .LinkItem {
         a {
-          top: 5px;
-          left: 0px;
-        }
-        p {
-          text-transform: uppercase;
-          width: 20rem;
-        }
-        svg {
-          width: 30px!important;
-          height: 30px!important;
-        }
-      }
-      
-      .LinkItem:nth-child(2) {
-        a {
-          top: 45px;
-          left: 0px;
-        }
-        p {
-          width: 20rem;
+          align-items: center;
+          text-decoration: none;
         }
         span {
           font-size: 13px;
           font-weight: normal;
         }
-        svg {
-          width: 30px!important;
-          height: 30px!important;
-        }
       }
-      
-      .LinkItem:nth-child(3) {
-        a {
-          top: 100px;
-          left: 0px;
-        }
+      .LinkItem:nth-child(1) {
         p {
-          width: 20rem;
-        }
-        span {
-          font-size: 12px;
-          font-weight: normal;
-        }
-        svg {
-          width: 30px!important;
-          height: 30px!important;
+          text-transform: uppercase;
         }
       }
     }
@@ -293,11 +267,6 @@
 }
 
 .ItemContent:nth-child(2) {
-
-  @media only screen and (max-width: 768px) {
-    width: 100vw!important;
-    height: 100vh!important;
-  }
 
   .Clows {
     position: absolute;
@@ -315,9 +284,8 @@
     width: 70vw;
 
     @media only screen and (max-width: 768px) {
-      width: 145vw;
-      height: 80vh;
-      top: -100px;
+      width: 130%;
+      top: 0;
     }
   }
   
@@ -331,8 +299,9 @@
     width: 100%;
 
     @media only screen and (max-width: 768px) {
-      flex-direction: column-reverse;
-      width: 95vw;
+      flex-direction: column;
+      padding-top: 0;
+      padding-bottom: 14px;
     }
   }
 
@@ -340,14 +309,13 @@
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    padding: 0 60px 0 60px;
+    margin: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
-      width: 60%;
-      position: relative;
-      top: calc((251vw - 153rem) / 2.5);
-      right: 15px;
-      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0px;
     }
   }
 
@@ -355,16 +323,13 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    padding: 0 60px 0 60px;
+    margin: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
-      width: 90vw;
-      position: relative;
-      top: 0;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
+      display: flex;
       justify-content: flex-start;
+      align-items: center;
+      margin: 0px;
     }
   }
 
@@ -377,26 +342,20 @@
     justify-content: flex-end;
 
     @media only screen and (max-width: 768px) {
-      top: 0;
-      right: 0;
-      left: 0;
+      margin: 0 30px;
+      max-width: 100%;
       text-align: left;
-      margin-left: 0;
+      z-index: 1;
 
       .Title {
         font-size: 50px!important;
       }
       .Subtitle {
         font-size: 22px;
-        width: 50vw;
-        padding: 0;
       }
       .Description {
         font-size: 14px;
-        width: 100%;
-        margin-right: 0;
-        position: relative;
-        left: 0;
+        max-width: 100%;
       }
     }
   }
@@ -425,31 +384,36 @@
     }
 
     @media only screen and (max-width: 768px) {
-      position: absolute;
-      top: 143vh;
-      right: 0;
-      left: 0;
-      margin-left: 0px; 
-      width: 365px;
-      height: 50px;
-      text-align: right;
+      display: flex;
+      width: 100%;
+      min-height: 50px;
+      align-items: flex-start;
+      height: auto;
+      text-align: start;
+      justify-content: center;
+      margin: 0 30px;
+      max-width: 100%;
+
+      .LinkText {
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 12px;
+      }
 
       .LinkItem {
         a {
-          top: 7px;
-          left: 12px;
+          align-items: center;
+          text-decoration: none;
+          flex-direction: row-reverse;
         }
+        span {
+          font-size: 13px;
+          font-weight: normal;
+        }
+      }
+      .LinkItem:nth-child(1) {
         p {
-          font-size: 12px;
-          position: relative;
-          right: 56px;
-          width: 316px;
-        }
-        svg {
-          width: 30px!important;
-          height: 30px!important;
-          position: relative;
-          left: 310px;
+          text-transform: uppercase;
         }
       }
     }
@@ -457,6 +421,9 @@
 }
 
 .ItemContent:nth-child(3) {
+  @media only screen and (max-width: 768px) {
+    height: 90vh!important;
+  }
 
   .Clows {
     position: absolute;
@@ -473,8 +440,8 @@
     width: 100vw;
 
     @media only screen and (max-width: 768px) {
-      top: 48rem;
-      width: 150vw;
+      top: -100;
+      width: 150%;
     }
   }
 
@@ -488,6 +455,7 @@
 
     @media only screen and (max-width: 768px) {
       flex-direction: column-reverse;
+      padding: 0;
     }
   }
 
@@ -499,11 +467,9 @@
     margin: 0 60px 0 60px;
     
     @media only screen and (max-width: 768px) {
-      width: 60%;
-      position: relative;
-      top: calc((251vw + 108rem) / 2.5);
-      right: 15px;
-      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start;
+      margin: 0;
     }
   } 
 
@@ -514,11 +480,10 @@
     margin: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
-      width: 60%;
-      position: relative;
-      top: calc((251vw + 107rem) / 2.5);
-      right: 15px;
-      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0px;
     }
   } 
 
@@ -528,10 +493,10 @@
     z-index: 1;
 
     @media only screen and (max-width: 768px) {
-      top: 182vh;
-      right: 0;
-      left: 0;
-      margin-left: 15px;
+      margin: 0 30px;
+      max-width: 100%;
+      text-align: left;
+      z-index: 1;
 
       .Title {
         font-size: 50px!important;
@@ -541,7 +506,7 @@
       }
       .Description {
         font-size: 14px;
-        width: 360px;
+        max-width: 100%;
       }
     }
   }
@@ -575,71 +540,37 @@
       }
     }
 
-
     @media only screen and (max-width: 768px) {
-      top: 234vh;
-      right: 0;
-      left: 0;
-      margin-left: 15px;
-      width: 360px;
-      height: 265px;
-      text-align: left;
+      display: flex;
+      width: 100%;
+      min-height: 35px;
+      align-items: flex-start;
+      height: auto;
+      text-align: start;
+      justify-content: center;
+      margin: 0px 30px;
+      max-width: 100%;
 
       .LinkText {
-        margin-right: 0px;
-        margin-left: 12px;
+        margin-right: 10px;
+        margin-left: 10px;
         font-size: 12px;
       }
 
-      .LinkItem:nth-child(1) {
+      .LinkItem {
         a {
-          top: 5px;
-          left: 12px;
+          align-items: center;
+          text-decoration: none;
         }
+        span {
+          font-size: 12px;
+          font-weight: normal;
+        }
+      }
+      .LinkItem:nth-child(1) {
         p {
           text-transform: uppercase;
-          width: 20rem;
           font-size: 15px;
-        }
-        svg {
-          width: 30px!important;
-          height: 30px!important;
-        }
-      }
-      .LinkItem:nth-child(2) {
-        a {
-          top: 40px;
-          left: 12px;
-        }
-        p {
-          width: 20rem;
-          font-size: 15px;
-        }
-        span {
-          font-size: 12px;
-          font-weight: normal;
-        }
-        svg {
-          width: 30px!important;
-          height: 30px!important;
-        }
-      }
-      .LinkItem:nth-child(3) {
-        a {
-          top: 148px;
-          left: 12px;
-        }
-        p {
-          width: 20rem;
-          font-size: 15px;
-        }
-        span {
-          font-size: 12px;
-          font-weight: normal;
-        }
-        svg {
-          width: 30px!important;
-          height: 30px!important;
         }
       }
     }
@@ -664,8 +595,8 @@
     width: 75vw;
     
     @media only screen and (max-width: 768px) {
-      width: 155vw;
-      top: 60rem;
+      width: 140vw;
+      top: -222px;
     }
   }
 
@@ -679,7 +610,9 @@
     width: 100%;
 
     @media only screen and (max-width: 768px) {
-      flex-direction: column-reverse;
+      flex-direction: column;
+      padding-top: 0;
+      padding-bottom: 14px;
     }
   }
 
@@ -690,11 +623,10 @@
     padding: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
-      width: 60%;
-      position: relative;
-      top: calc((251vw - 325rem) / 2.5);
-      right: 15px;
-      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0px;
     }
   }
 
@@ -705,11 +637,10 @@
     padding: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
-      width: 60%;
-      position: relative;
-      top: calc((251vw + 140rem) / 2.5);
-      right: 15px;
-      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0px;
     }
   }
 
@@ -722,23 +653,20 @@
     justify-content: flex-end;
 
     @media only screen and (max-width: 768px) {
-      top: 301vh;
-      right: 0;
-      left: 0;
-      margin-left: 0px;
+      margin: 0 30px;
+      max-width: 100%;
       text-align: left;
+      z-index: 1;
 
       .Title {
         font-size: 50px!important;
       }
       .Subtitle {
         font-size: 22px;
-        width: 250px;
       }
       .Description {
         font-size: 14px;
-        width: 360px;
-        margin-left: 0;
+        max-width: 100%;
       }
     }
   }
@@ -803,92 +731,36 @@
     }
 
     @media only screen and (max-width: 768px) {
-      position: absolute;
-      top: 335vh;
-      right: 0;
-      left: 0;
-      margin-left: 0px;
-      width: 365px;
-      height: 275px;
-      text-align: left;
+      display: flex;
+      width: 100%;
+      min-height: 50px;
+      align-items: flex-start;
+      height: auto;
+      text-align: start;
+      justify-content: center;
+      margin: 0 30px;
+      max-width: 100%;
 
-      .LinkItem:nth-child(1) {
-        a {
-          top: 5px;
-          left: 12px;
-        }
-        p {
-          font-size: 13px;
-          position: relative;
-          right: 40px;
-          width: 300px;
-          margin-left: 10px;
-        }
-        svg {
-          width: 30px!important;
-          height: 30px!important;
-          position: relative;
-          left: 310px;
-        }
+      .LinkText {
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 12px;
       }
-      .LinkItem:nth-child(2) {
+
+      .LinkItem {
         a {
-          top: 50px;
-          left: 12px;
-        }
-        p {
-          font-size: 13px;
-          position: relative;
-          right: 40px;
-          margin-left: 10px;
-          width: 300px;
-        }
-        svg {
-          width: 30px !important;
-          height: 30px !important;
-          position: relative;
-          left: 310px;
-        }
-      }
-      .LinkItem:nth-child(3) {
-        a {
-          top: 105px;
-          left: 12px;
-        }
-        p {
-          font-size: 13px;
-          position: relative;
-          right: 40px;
-          margin-left: 10px;
-          width: 310px;
+          align-items: center;
+          text-decoration: none;
+          flex-direction: row-reverse;
         }
         span {
-          font-size: 12px;
-        }
-        svg {
-          width: 30px !important;
-          height: 30px !important;
-          position: relative;
-          left: 310px;
+          font-size: 13px;
+          font-weight: normal;
         }
       }
-      .LinkItem:nth-child(4) {
-        a {
-          bottom: 0px;
-          left: 12px;
-        }
+      .LinkItem:nth-child(1) {
         p {
-          font-size: 13px;
-          position: relative;
-          right: 40px;
-          margin-left: 10px;
-          width: 300px;
-        }
-        svg {
-          width: 30px !important;
-          height: 30px !important;
-          position: relative;
-          left: 310px;
+          text-transform: uppercase;
         }
       }
     }
@@ -913,9 +785,8 @@
     width: 70vw;
 
     @media only screen and (max-width: 768px) {
-      top: 95rem;
-      left: 0;
-      width: 160vw;
+      top: -180px;
+      width: 140%;
     }
   }
 
@@ -929,6 +800,7 @@
 
     @media only screen and (max-width: 768px) {
       flex-direction: column-reverse;
+      padding: 0;
     }
   }
 
@@ -940,11 +812,9 @@
     margin: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
-      width: 60%;
-      position: relative;
-      top: calc((251vw + 245rem) / 2.5);
-      right: 15px;
-      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start;
+      margin: 0;
     }
   } 
 
@@ -955,11 +825,10 @@
     margin: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
-      width: 60%;
-      position: relative;
-      top: calc((251vw + 245rem) / 2.5);
-      right: 15px;
-      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0px;
     }
   }
 
@@ -969,10 +838,10 @@
     z-index: 1;
 
     @media only screen and (max-width: 768px) {
-      top: 352vh;
-      right: 0;
-      left: 0;
-      margin-left: 0px;
+      margin: 0 30px;
+      max-width: 100%;
+      text-align: left;
+      z-index: 1;
 
       .Title {
         font-size: 50px!important;
@@ -982,7 +851,7 @@
       }
       .Description {
         font-size: 14px;
-        width: 360px;
+        max-width: 100%;
       }
     }
   }
@@ -1008,87 +877,45 @@
       color: #3C2807;
       font-family: $elcubo3_font_subtitle;
       font-weight: bold;
-      width: 100%;
     }
 
     .LinkItem:nth-child(1) {
       p {
-        margin-left: 10px;
         text-transform: uppercase;
       }
     }
 
     @media only screen and (max-width: 768px) {
-      top: 376vh;
-      right: 0;
-      left: 0;
-      margin-left: 0px;
-      width: 360px;
-      height: 270px;
-      text-align: left;
+      display: flex;
+      width: 100%;
+      min-height: 35px;
+      align-items: flex-start;
+      height: auto;
+      text-align: start;
+      justify-content: center;
+      margin: 0px 30px;
+      max-width: 100%;
 
       .LinkText {
         margin-right: 0px;
-        margin-left: 12px;
+        margin-left: 0px;
         font-size: 12px;
       }
 
-      .LinkItem:nth-child(1) {
+      .LinkItem {
         a {
-          top: 5px;
-          left: 0px;
+          align-items: center;
+          text-decoration: none;
         }
+        span {
+          font-size: 12px;
+          font-weight: normal;
+        }
+      }
+      .LinkItem:nth-child(1) {
         p {
           text-transform: uppercase;
-          width: 20rem;
-        }
-        svg {
-          width: 30px!important;
-          height: 30px!important;
-        }
-      }
-      .LinkItem:nth-child(2) {
-        a {
-          top: 45px;
-          left: 0px;
-        }
-        p {
-          width: 20rem;
-        }
-        svg {
-          width: 30px!important;
-          height: 30px!important;
-        }
-      }
-      .LinkItem:nth-child(3) {
-        a {
-          top: 95px;
-          left: 0px;
-        }
-        p {
-          width: 20rem;
-        }
-        svg {
-          width: 30px!important;
-          height: 30px!important;
-        }
-      }
-      .LinkItem:nth-child(4) {
-        a {
-          bottom: 0px;
-          left: 0px;
-        }
-        p {
-          width: 18.5rem;
-          margin-left: 10px;
-          margin-right: 8px;
-          span{
-            font-size: 13px;
-          }
-        }
-        svg {
-          width: 30px!important;
-          height: 30px!important;
+          font-size: 15px;
         }
       }
     }
@@ -1105,7 +932,7 @@
 
     @media only screen and (max-width: 768px) {
       width: 155vw;
-      top: 120rem;
+      top: -70;
     }
   }
 
@@ -1119,7 +946,9 @@
     width: 100%;
 
     @media only screen and (max-width: 768px) {
-      flex-direction: column-reverse;
+      flex-direction: column;
+      padding-top: 0;
+      padding-bottom: 14px;
     }
   }
 
@@ -1130,11 +959,10 @@
     padding: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
-      width: 60%;
-      position: relative;
-      top: calc((251vw - 325rem) / 2.5);
-      right: 15px;
-      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0px;
     }
   }
 
@@ -1145,11 +973,10 @@
     padding: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
-      width: 60%;
-      position: relative;
-      top: calc((251vw + 260rem) / 2.5);
-      right: 15px;
-      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0px;
     }
   }
 
@@ -1162,23 +989,20 @@
     justify-content: flex-end;
 
     @media only screen and (max-width: 768px) {
-      top: 380vh;
-      right: 0;
-      left: 0;
-      margin-left: 0px;
+      margin: 0 30px;
+      max-width: 100%;
       text-align: left;
+      z-index: 1;
 
       .Title {
         font-size: 50px!important;
       }
       .Subtitle {
         font-size: 22px;
-        width: 250px;
       }
       .Description {
         font-size: 14px;
-        width: 360px;
-        margin-left: 0;
+        max-width: 100%;
       }
     }
   }
@@ -1219,117 +1043,36 @@
     }
 
     @media only screen and (max-width: 768px) {
-      position: absolute;
-      top: 405vh;
-      right: 0;
-      left: 0;
-      margin-left: 0px;
-      width: 365px;
-      height: 355px;
-      text-align: left;
+      display: flex;
+      width: 100%;
+      min-height: 50px;
+      align-items: flex-start;
+      height: auto;
+      text-align: start;
+      justify-content: center;
+      margin: 0 30px;
+      max-width: 100%;
 
+      .LinkText {
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 12px;
+      }
+
+      .LinkItem {
+        a {
+          align-items: center;
+          text-decoration: none;
+          flex-direction: row-reverse;
+        }
+        span {
+          font-size: 13px;
+          font-weight: normal;
+        }
+      }
       .LinkItem:nth-child(1) {
-        a {
-          top: 5px;
-          left: 12px;
-        }
         p {
-          font-size: 13px;
-          position: relative;
-          right: 40px;
-          width: 300px;
-          margin-left: 10px;
-        }
-        svg {
-          width: 30px!important;
-          height: 30px!important;
-          position: relative;
-          left: 310px;
-        }
-      }
-      .LinkItem:nth-child(2) {
-        a {
-          top: 45px;
-          left: 12px;
-        }
-        p {
-          font-size: 13px;
-          position: relative;
-          right: 40px;
-          margin-left: 10px;
-          width: 300px;
-        }
-        svg {
-          width: 30px !important;
-          height: 30px !important;
-          position: relative;
-          left: 310px;
-        }
-      }
-      .LinkItem:nth-child(3) {
-        a {
-          top: 110px;
-          left: 12px;
-        }
-        p {
-          font-size: 13px;
-          position: relative;
-          right: 40px;
-          margin-left: 10px;
-          width: 310px;
-        }
-        span {
-          font-size: 12px;
-        }
-        svg {
-          width: 30px !important;
-          height: 30px !important;
-          position: relative;
-          left: 310px;
-        }
-      }
-      .LinkItem:nth-child(4) {
-        a {
-          top: 160px;
-          left: 12px;
-        }
-        p {
-          font-size: 13px;
-          position: relative;
-          right: 40px;
-          margin-left: 10px;
-          width: 310px;
-        }
-        span {
-          font-size: 12px;
-        }
-        svg {
-          width: 30px !important;
-          height: 30px !important;
-          position: relative;
-          left: 310px;
-        }
-      }
-      .LinkItem:nth-child(5) {
-        a {
-          bottom: 0px;
-          left: 12px;
-        }
-        p {
-          font-size: 13px;
-          position: relative;
-          right: 40px;
-          margin-left: 10px;
-          width: 300px;
-        }
-        span {
-          font-size: 12px;
-        }
-        svg {
-          width: 30px !important;
-          height: 30px !important;
-          position: relative;
-          left: 310px;
+          text-transform: uppercase;
         }
       }
     }
@@ -1354,9 +1097,8 @@
     width: 65vw;
 
     @media only screen and (max-width: 768px) {
-      top: 140rem;
-      left: 0;
-      width: 155vw;
+      top: -165px;
+      width: 155%;
     }
   }
 
@@ -1370,6 +1112,7 @@
 
     @media only screen and (max-width: 768px) {
       flex-direction: column-reverse;
+      padding: 0;
     }
   }
 
@@ -1381,11 +1124,9 @@
     margin: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
-      width: 60%;
-      position: relative;
-      top: calc((251vw + 355rem) / 2.5);
-      right: 15px;
-      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start;
+      margin: 0;
     }
   } 
 
@@ -1396,11 +1137,10 @@
     margin: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
-      width: 60%;
-      position: relative;
-      top: calc((251vw + 355rem) / 2.5);
-      right: 15px;
-      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0px;
     }
   }
 
@@ -1410,10 +1150,10 @@
     z-index: 1;
 
     @media only screen and (max-width: 768px) {
-      top: 425vh;
-      right: 0;
-      left: 0;
-      margin-left: 0px;
+      margin: 0 30px;
+      max-width: 100%;
+      text-align: left;
+      z-index: 1;
 
       .Title {
         font-size: 50px!important;
@@ -1423,7 +1163,7 @@
       }
       .Description {
         font-size: 14px;
-        width: 360px;
+        max-width: 100%;
       }
     }
   }
@@ -1441,7 +1181,7 @@
     z-index: 1;
     flex-direction: column;
     align-items: flex-end;
-    padding: 10px 10px 10px 25px;
+    padding: 10px;
     margin-bottom: 25px;
 
     .Link {
@@ -1471,13 +1211,15 @@
     }
 
     @media only screen and (max-width: 768px) {
-      top: 469vh;
-      right: 0;
-      left: 0;
-      margin-left: 0px;
-      width: 360px;
-      height: 110px;
-      text-align: left;
+      display: flex;
+      width: 100%;
+      min-height: 35px;
+      align-items: flex-start;
+      height: auto;
+      text-align: start;
+      justify-content: center;
+      margin: 0px 30px;
+      max-width: 100%;
 
       .LinkText {
         margin-right: 0px;
@@ -1485,38 +1227,20 @@
         font-size: 12px;
       }
 
-      .LinkItem:nth-child(1) {
+      .LinkItem {
         a {
-          top: 5px;
-          left: 0px;
+          align-items: center;
+          text-decoration: none;
         }
-        p {
-          text-transform: uppercase;
-          width: 20rem;
-        }
-        svg {
-          width: 30px!important;
-          height: 30px!important;
+        span {
+          font-size: 12px;
+          font-weight: normal;
         }
       }
-
-      .LinkItem:nth-child(2) {
-        a {
-          bottom: 0px;
-          left: 0px;
-        }
+      .LinkItem:nth-child(1) {
         p {
-          width: 18.5rem;
-          margin-left: 10px;
-          margin-right: 8px;
-
-          span{
-            font-size: 13px;
-          }
-        }
-        svg {
-          width: 30px!important;
-          height: 30px!important;
+          text-transform: uppercase;
+          font-size: 15px;
         }
       }
     }
@@ -1532,8 +1256,8 @@
     width: 60vw;
 
     @media only screen and (max-width: 768px) {
-      width: 130vw;
-      top: 168rem;
+      width: 120%;
+      top: 0;
     }
   }
 
@@ -1547,7 +1271,9 @@
     width: 100%;
 
     @media only screen and (max-width: 768px) {
-      flex-direction: column-reverse;
+      flex-direction: column;
+      padding-top: 0;
+      padding-bottom: 14px;
     }
   }
 
@@ -1555,14 +1281,13 @@
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    padding: 0 60px 0 60px;
+    margin: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
-      width: 60%;
-      position: relative;
-      top: calc((251vw - 331rem) / 2.5);
-      right: 15px;
-      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0px;
     }
   }
 
@@ -1570,14 +1295,13 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    padding: 0 60px 0 60px;
+    margin: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
-      width: 60%;
-      position: relative;
-      top: calc((251vw + 375rem) / 2.5);
-      right: 15px;
-      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0px;
     }
   }
 
@@ -1590,23 +1314,20 @@
     justify-content: flex-end;
 
     @media only screen and (max-width: 768px) {
-      top: 460vh;
-      right: 0;
-      left: 0;
-      margin-left: 0px;
+      margin: 0 30px;
+      max-width: 100%;
       text-align: left;
+      z-index: 1;
 
       .Title {
         font-size: 50px!important;
       }
       .Subtitle {
         font-size: 22px;
-        width: 250px;
       }
       .Description {
         font-size: 14px;
-        width: 360px;
-        margin-left: 0;
+        max-width: 100%;
       }
     }
   }
@@ -1647,54 +1368,36 @@
     }
 
     @media only screen and (max-width: 768px) {
-      position: absolute;
-      top: 500vh;
-      right: 0;
-      left: 0;
-      margin-left: 0px;
-      width: 365px;
-      height: 130px;
-      text-align: left;
+      display: flex;
+      width: 100%;
+      min-height: 50px;
+      align-items: flex-start;
+      height: auto;
+      text-align: start;
+      justify-content: center;
+      margin: 0 30px;
+      max-width: 100%;
       
-      .LinkItem:nth-child(1) {
-        a {
-          top: 5px;
-          left: 12px;
-        }
-        p {
-          font-size: 13px;
-          position: relative;
-          right: 40px;
-          width: 300px;
-          margin-left: 10px;
-        }
-        svg {
-          width: 30px!important;
-          height: 30px!important;
-          position: relative;
-          left: 310px;
-        }
+      .LinkText {
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 12px;
       }
-      .LinkItem:nth-child(2) {
+
+      .LinkItem {
         a {
-          bottom: 0px;
-          left: 12px;
-        }
-        p {
-          font-size: 13px;
-          position: relative;
-          right: 40px;
-          margin-left: 10px;
-          width: 300px;
+          align-items: center;
+          text-decoration: none;
+          flex-direction: row-reverse;
         }
         span {
-          font-size: 12px;
+          font-size: 13px;
+          font-weight: normal;
         }
-        svg {
-          width: 30px !important;
-          height: 30px !important;
-          position: relative;
-          left: 310px;
+      }
+      .LinkItem:nth-child(1) {
+        p {
+          text-transform: uppercase;
         }
       }
     }
@@ -1702,6 +1405,9 @@
 }
 
 .ItemContent:nth-child(9) {
+  @media only screen and (max-width: 768px) {
+    height: 65vh!important;
+  }
 
   .Clows {
     position: absolute;
@@ -1722,6 +1428,7 @@
 
     @media only screen and (max-width: 768px) {
       flex-direction: column-reverse;
+      padding: 0;
     }
   }
 
@@ -1733,11 +1440,9 @@
     margin: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
-      width: 60%;
-      position: relative;
-      top: calc((251vw + 417rem) / 2.5);
-      right: 15px;
-      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start;
+      margin: 0;
     }
   } 
 
@@ -1748,11 +1453,10 @@
     margin: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
-      width: 60%;
-      position: relative;
-      top: calc((251vw + 417rem) / 2.5);
-      right: 15px;
-      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0px;
     }
   }
 
@@ -1762,10 +1466,10 @@
     z-index: 1;
 
     @media only screen and (max-width: 768px) {
-      top: 462vh;
-      right: 0;
-      left: 0;
-      margin-left: 0px;
+      margin: 0 30px;
+      max-width: 100%;
+      text-align: left;
+      z-index: 1;
 
       .Title {
         font-size: 50px!important;
@@ -1775,7 +1479,7 @@
       }
       .Description {
         font-size: 14px;
-        width: 360px;
+        max-width: 100%;
       }
     }
   }
@@ -1817,97 +1521,37 @@
     }
 
     @media only screen and (max-width: 768px) {
-      top: 498vh;
-      right: 0;
-      left: 0;
-      margin-left: 0px;
-      width: 360px;
-      height: 330px;
-      text-align: left;
+      display: flex;
+      width: 100%;
+      min-height: 35px;
+      align-items: flex-start;
+      height: auto;
+      text-align: start;
+      justify-content: center;
+      margin: 0px 30px;
+      max-width: 100%;
+      padding: 10px;
 
       .LinkText {
         margin-right: 0px;
-        margin-left: 12px;
+        margin-left: 0px;
         font-size: 12px;
       }
 
-      .LinkItem:nth-child(1) {
+      .LinkItem {
         a {
-          top: 5px;
-          left: 0px;
+          align-items: center;
+          text-decoration: none;
         }
+        span {
+          font-size: 12px;
+          font-weight: normal;
+        }
+      }
+      .LinkItem:nth-child(1) {
         p {
           text-transform: uppercase;
-          width: 20rem;
-        }
-        svg {
-          width: 30px!important;
-          height: 30px!important;
-        }
-      }
-
-      .LinkItem:nth-child(2) {
-        a {
-          top: 40px;
-          left: 0px;
-        }
-        p {
-          width: 20rem;
-        }
-        svg {
-          width: 30px!important;
-          height: 30px!important;
-        }
-      }
-
-      .LinkItem:nth-child(3) {
-        a {
-          top: 150px;
-          left: 0px;
-        }
-        p {
-          width: 19.5rem;
-          font-size: 12px;
-        }
-        svg {
-          width: 30px!important;
-          height: 30px!important;
-        }
-      }
-
-      .LinkItem:nth-child(4) {
-        a {
-          top: 212px;
-          left: 0;
-        }
-        p {
-          width: 18.5rem;
-          margin-left: 10px;
-          margin-right: 8px;
-        }
-        svg {
-          width: 30px!important;
-          height: 30px!important;
-        }
-      }
-
-      .LinkItem:nth-child(5) {
-        a {
-          bottom: 0px;
-          left: 0px;
-        }
-        p {
-          width: 18.5rem;
-          margin-left: 10px;
-          margin-right: 8px;
-
-          span{
-            font-size: 13px;
-          }
-        }
-        svg {
-          width: 30px!important;
-          height: 30px!important;
+          font-size: 15px;
         }
       }
     }
@@ -1916,18 +1560,8 @@
 }
 
 .ItemContent:nth-child(10) {
-  align-items: baseline!important;
-
-  .SitePicture {
-    position: absolute;
-    top: 570px;
-    right: 0;
-    width: 100vw;
-
-    @media only screen and (max-width: 768px) {
-      width: 130vw;
-      top: 220rem;
-    }
+  @media only screen and (max-width: 768px) {
+    height: 50vh!important;
   }
 
   .ColumnsContainer {
@@ -1935,11 +1569,12 @@
     position: relative;
     justify-content: center;
     align-items: end;
-    padding-top: 140px;
+    padding-bottom: 340px;
     width: 100%;
 
     @media only screen and (max-width: 768px) {
-      flex-direction: column-reverse;
+      flex-direction: column;
+      padding: 0 0 100px 0;
     }
   }
 
@@ -1947,14 +1582,13 @@
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    padding: 0 60px 0 60px;
+    margin: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
-      width: 60%;
-      position: relative;
-      top: calc((251vw - 355rem) / 2.5);
-      right: 15px;
-      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0px;
     }
   }
 
@@ -1962,14 +1596,13 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    padding: 0 60px 0 60px;
+    margin: 0 60px 0 60px;
 
     @media only screen and (max-width: 768px) {
-      width: 60%;
-      position: relative;
-      top: calc((251vw + 388rem) / 2.5);
-      right: 15px;
-      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0px;
     }
   }
 
@@ -1982,23 +1615,20 @@
     justify-content: flex-end;
 
     @media only screen and (max-width: 768px) {
-      top: 485vh;
-      right: 0;
-      left: 0;
-      margin-left: 0px;
+      margin: 0 30px;
+      max-width: 100%;
       text-align: left;
+      z-index: 1;
 
       .Title {
         font-size: 50px!important;
       }
       .Subtitle {
         font-size: 22px;
-        width: 250px;
       }
       .Description {
         font-size: 14px;
-        width: 360px;
-        margin-left: 0;
+        max-width: 100%;
       }
     }
   }
@@ -2040,57 +1670,147 @@
     }
 
     @media only screen and (max-width: 768px) {
-      position: absolute;
-      top: 517vh;
-      right: 0;
-      left: 0;
-      margin-left: 0px;
-      width: 365px;
-      height: 47px;
-      text-align: left;
+      display: flex;
+      width: 100%;
+      min-height: 50px;
+      align-items: flex-start;
+      height: auto;
+      text-align: start;
+      justify-content: center;
+      margin: 0 30px;
+      max-width: 100%;
     
-      .LinkItem:nth-child(1) {
+      .LinkText {
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 12px;
+      }
+
+      .LinkItem {
         a {
-          top: 5px;
-          left: 12px;
+          align-items: center;
+          text-decoration: none;
+          flex-direction: row-reverse;
         }
-        p {
+        span {
           font-size: 13px;
-          position: relative;
-          right: 40px;
-          width: 300px;
-          margin-left: 10px;
+          font-weight: normal;
         }
-        svg {
-          width: 30px!important;
-          height: 30px!important;
-          position: relative;
-          left: 310px;
+      }
+      .LinkItem:nth-child(1) {
+        p {
+          text-transform: uppercase;
         }
       }
     }
   }
 
+}
+
+.ItemContent:nth-child(11) {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  .SitePicture {
+    position: absolute;
+    bottom: -150px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    object-fit: cover;
+
+    @media only screen and (max-width: 768px) {
+      width: 130%;
+      top: 0;
+    }
+  }
+
+  .ColumnsContainer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    flex-direction: column;
+  }
+
   .VideoContainer {
     display: flex;
-    position: absolute;
-    top: 60rem;
-    right: 0px;
-    left: 0px;
+    width: 80%;
     z-index: 2;
-    width: calc(100vw - 30rem);
-    height: 700px;
     margin-left: auto;
     margin-right: auto;
   
     @media only screen and (max-width: 768px) {
       display: flex;
       position: relative;
-      top: calc(100vw + 195rem);
-      left: -8px;
+      left: 0px;
       right: 0px;
-      width: 80vw;
-      height: 250px;
+      width: 80%;
+      height: 230px;
+    }
+  }
+
+  .Ver360Content {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 150px;
+    width: 100%;
+    color: #ffffff;
+    
+    h1 {
+      font-size: 45px;
+      font-family: $elcubo3_font_title;
+    }
+    p {
+      font-size: 25px;
+      font-weight: 100;
+      font-family: $elcubo3_font_subtitle;
+      max-width: 765px;
+      line-height: 130%;
+      letter-spacing: 0;  
+      margin: 15px 0 40px 0;
+    }
+    
+    .Compartir {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin: 15px 0;
+  
+      p,a {
+        margin: 20px 20px;
+      }
+
+      @media only screen and (max-width: 768px) {
+        p,a {
+          margin: 20px 15px;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      padding-top: 60px;
+
+      h1 {
+        font-size: 25px;
+        max-width: 400px;
+      }
+      p {
+        font-size: 20px;
+        max-width: 400px;
+      }
     }
   }
 }
+
+.NoHeight {
+  height: unset!important;
+}
+
+
