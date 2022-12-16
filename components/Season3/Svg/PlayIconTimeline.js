@@ -3,32 +3,28 @@ import React from 'react';
 const PlayIconTimeline = () => {
   return (
     <svg
-    width={38}
-    height={38}
-    viewBox="0 0 38 38"
+    width={30}
+    height={30}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    {...props}
   >
-      <g clipPath="url(#clip0_1150_985)">
-        <path d="M21.25 6.25H8.75C5.98858 6.25 3.75 8.48858 3.75 11.25V18.75C3.75 21.5114 5.98858 23.75 8.75 23.75H21.25C24.0114 23.75 26.25 21.5114 26.25 18.75V11.25C26.25 8.48858 24.0114 6.25 21.25 6.25Z" 
-          stroke="#3B2807" 
-          strokeWidth={2} 
-          strokeLinecap="round" 
-          strokeLinejoin="round"
-        />
-        <path d="M12.5 11.25L18.75 15L12.5 18.75V11.25Z" 
-          stroke="#3B2807" 
-          strokeWidth="2" 
-          strokeLinecap="round" 
-          strokeLinejoin="round"
-        />
-      </g>
-      <defs>
-        <clipPath id="clip0_1150_985">
-          <rect width="30" height="30" fill="white"/>
-        </clipPath>
-      </defs>
-    </svg>
+    <g
+      clipPath="url(#a)"
+      stroke="#3B2807"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M16.25 23.75h7.5a2.5 2.5 0 0 0 2.5-2.5V8.75a2.5 2.5 0 0 0-2.5-2.5H6.25a2.5 2.5 0 0 0-2.5 2.5v5" />
+      <path d="M5 17.5h6.25c.69 0 1.25.56 1.25 1.25v3.75c0 .69-.56 1.25-1.25 1.25H5c-.69 0-1.25-.56-1.25-1.25v-3.75c0-.69.56-1.25 1.25-1.25ZM21.25 11.25l-5 5M21.25 15v-3.75H17.5" />
+    </g>
+    <defs>
+      <clipPath id="a">
+        <path fill="#fff" transform="matrix(-1 0 0 1 30 0)" d="M0 0h30v30H0z" />
+      </clipPath>
+    </defs>
+  </svg>
   )
 }
 

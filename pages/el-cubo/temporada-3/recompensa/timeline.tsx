@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './timeline.module.scss';
 import UrlUtils from 'utils/Url';
-//import VideoPlayer from 'components/Season3/VideoPlayer/VideoPlayer';
+import VideoPlayer from 'components/Season3/VideoPlayer/VideoPlayer';
 import Video2Level from 'components/Season3/Shared/Video2Level/VideoPlayer';
 
 import GalleryIconTimeline from 'components/Season3/Svg/GalleryIconTimeline';
@@ -70,7 +70,7 @@ const timeline = () => {
                       <span>(15 de Octubre de 2022)</span>
                     </p>
                     <div>
-                      <RedirectionIconTimeline />
+                      {/*<RedirectionIconTimeline />*/}
                     </div>
                   </a>
                 </div>  
@@ -81,7 +81,7 @@ const timeline = () => {
                       <span>Carolina Rincón Ramírez / El tiempo (29 de octubre 2021)</span>
                     </p>
                     <div>
-                      <RedirectionIconTimeline />
+                       {/*<RedirectionIconTimeline />*/}
                     </div>
                   </a>
                 </div>
@@ -119,7 +119,7 @@ const timeline = () => {
               <div className={styles.LinksContent}>
                 <div className={styles.LinkItem}>
                   <a href='#' className={styles.Link} >
-                    <PlayIconTimeline />
+                     {/*<PlayIconTimeline />*/}
                     <p className={styles.LinkText}>Puente de Lengerke - Destino Chicamocha. Encanto majestuoso</p>
                   </a>
                 </div>
