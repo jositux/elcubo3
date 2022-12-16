@@ -5,6 +5,10 @@ import VideoPlayer from 'components/Season2/VideoPlayer/VideoPlayer';
 import GalleryIconTimeline from 'components/Season3/Svg/GalleryIconTimeline';
 import PlayIconTimeline from 'components/Season3/Svg/PlayIconTimeline';
 import RedirectionIconTimeline from 'components/Season3/Svg/RedirectionIconTimeline';
+import Twitter from 'components/Season3/Svg/Twitter';
+import Facebook from 'components/Season3/Svg/Facebook';
+import LinkedIn from 'components/Season3/Svg/LinkedIn';
+import ButtonHome from 'components/Season3/Shared/Button/ButtonHome';
 
 
 const timeline = () => {
@@ -53,7 +57,9 @@ const timeline = () => {
                 <div className={styles.LinkItem}>
                   <a href='#' className={styles.Link} >
                     <p className={styles.LinkText}>galería de fotos</p>
-                    <GalleryIconTimeline />
+                    <div>
+                      <GalleryIconTimeline />
+                    </div>
                   </a>
                 </div>
                 <div className={styles.LinkItem}>
@@ -61,7 +67,9 @@ const timeline = () => {
                     <p className={styles.LinkText}>Jordán - Colombia Turismo Web<br></br>
                       <span>(15 de Octubre de 2022)</span>
                     </p>
-                    <RedirectionIconTimeline />
+                    <div>
+                      <RedirectionIconTimeline />
+                    </div>
                   </a>
                 </div>  
                 <div className={styles.LinkItem}>
@@ -70,7 +78,9 @@ const timeline = () => {
                       El pueblo 'fantasma' colombia donde solo viven 56 almas<br></br>
                       <span>Carolina Rincón Ramírez / El tiempo (29 de octubre 2021)</span>
                     </p>
-                    <RedirectionIconTimeline />
+                    <div>
+                      <RedirectionIconTimeline />
+                    </div>
                   </a>
                 </div>
               </div>
@@ -186,7 +196,9 @@ const timeline = () => {
               <div className={styles.LinksContent}>
                 <div className={styles.LinkItem}>
                   <a href='#' className={styles.Link} >
-                    <PlayIconTimeline />
+                    <div>
+                      <PlayIconTimeline />
+                    </div>
                     <p className={styles.LinkText}>Mapa vial de la ubicación de el Pescadero</p>
                   </a>
                 </div>
@@ -522,10 +534,7 @@ const timeline = () => {
         </div>
 
         <div className={styles.ItemContent}>
-          <img className={styles.SitePicture} src="/images/season3/timeline/pueblo_rio_abajo.png" alt="imagen del lugar" />
-          
           <div className={`${styles.ColumnsContainer} fade_test fadeOut_test`}>
-
             <div className={styles.columnText}>
               <div className={styles.TextContent}>
                 <h1 className={styles.Title}>2004</h1>
@@ -548,22 +557,50 @@ const timeline = () => {
                 </div>
               </div>
             </div>
-            
           </div>
-          <div className={styles.VideoContainer}>
-              <VideoPlayer
-                showBackButton
-                autoPlay={false}
-                showDashboard
-                title={""}
-                source={srcVideo}
-                showPrevButton={false}
-                showNextButton={false}
-                setPlayer={setPlayer}
-                fullscreen={false}
-                seekControls
-              />
+        </div>
+
+        <div className={`${styles.ItemContent} ${styles.NoHeight}`}>
+          <img className={styles.SitePicture} src="/images/season3/timeline/pueblo_rio_abajo.png" alt="imagen del lugar" />
+        
+          <div className={styles.ColumnsContainer}>
+            <div className={styles.VideoContainer}>
+                <VideoPlayer
+                  showBackButton
+                  autoPlay={false}
+                  showDashboard
+                  title={""}
+                  source={srcVideo}
+                  showPrevButton={false}
+                  showNextButton={false}
+                  setPlayer={setPlayer}
+                  fullscreen={false}
+                  seekControls
+                />
             </div>
+
+            <div className={styles.Ver360Content}>
+              <h1>Llegaste al final del camino.<br></br>¡Has recorrido los caminos del Jordán!</h1>
+              <p>Como recompensa puedes acceder al contenido exclusivo final y compartir el proyecto en redes ¡Feliz viaje de regreso!</p>
+            
+              <div >
+                <ButtonHome /* url={Links.registerTemp2} */ text="Ver video 360°" />
+              </div>
+              
+              <div className={styles.Compartir}>
+                <p>Compartir</p>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.elcubo.rtvcplay.co/el-cubo/temporada-3" target="_blank" rel="noopener noreferrer">
+                  <Facebook />
+                </a>
+                <a href="https://twitter.com/intent/tweet?source=https://www.elcubo.rtvcplay.co/el-cubo/temporada-3&amp;text=Caminos de Jordán https://www.elcubo.rtvcplay.co/el-cubo/temporada-3" target="_blank" rel="noopener noreferrer">
+                  <Twitter />
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <LinkedIn />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
