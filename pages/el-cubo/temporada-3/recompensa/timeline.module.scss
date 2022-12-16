@@ -1,14 +1,14 @@
 .TimelineContainer {
   position: relative;
   width: 100vw;
-  height: 525rem;
+  //height: 525rem;
   padding: 0 0 0 0;
   background-color: #e4d7b7;
   background-attachment: fixed;
   background-size: cover;
 
   @media only screen and (max-width: 768px) {
-    height: 830vh;
+    //height: 830vh;
   }
 }
 
@@ -1714,7 +1714,7 @@
 
   .SitePicture {
     position: absolute;
-    bottom: -150px;
+    bottom: 0px;
     left: 0;
     right: 0;
     width: 100%;
@@ -1722,7 +1722,7 @@
 
     @media only screen and (max-width: 768px) {
       width: 130%;
-      top: 0;
+      //top: 0;
     }
   }
 
@@ -1809,8 +1809,9 @@
   }
 }
 
+
 .NoHeight {
-  height: unset!important;
+  height: auto !important;
 }
 
 

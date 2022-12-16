@@ -15,12 +15,12 @@ const PlayIconTimeline = () => {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <path d="M16.25 23.75h7.5a2.5 2.5 0 0 0 2.5-2.5V8.75a2.5 2.5 0 0 0-2.5-2.5H6.25a2.5 2.5 0 0 0-2.5 2.5v5" />
-      <path d="M5 17.5h6.25c.69 0 1.25.56 1.25 1.25v3.75c0 .69-.56 1.25-1.25 1.25H5c-.69 0-1.25-.56-1.25-1.25v-3.75c0-.69.56-1.25 1.25-1.25ZM21.25 11.25l-5 5M21.25 15v-3.75H17.5" />
+      <path d="M21.25 6.25H8.75a5 5 0 0 0-5 5v7.5a5 5 0 0 0 5 5h12.5a5 5 0 0 0 5-5v-7.5a5 5 0 0 0-5-5Z" />
+      <path d="M12.5 11.25 18.75 15l-6.25 3.75v-7.5Z" />
     </g>
     <defs>
       <clipPath id="a">
-        <path fill="#fff" transform="matrix(-1 0 0 1 30 0)" d="M0 0h30v30H0z" />
+        <path fill="#fff" d="M0 0h30v30H0z" />
       </clipPath>
     </defs>
   </svg>
