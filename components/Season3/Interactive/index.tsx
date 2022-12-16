@@ -1,17 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import VideoPlayer from 'components/Season3/VideoPlayer/VideoPlayer';
-import DashboardLinealModal from 'components/Season3/Modal/DashboardSlideModal';
+import DashboardSlideModal from 'components/Season3/Modal/DashboardSlideModal';
 import GalleryModal from 'components/Season3/Modal/GalleryModal';
 import AudioModal from 'components/Season3/Modal/AudioModal';
 import VideoModal from 'components/Season3/Modal/VideoModal';
 import Pulse from 'components/Season3/Shared/Pulse/Pulse';
 import UrlUtils from 'utils/Url';
-
-import SlideModal from 'components/Season3/Interactive/SlideModal/SlideModal';
-import styles from './lineal.module.scss';
+import styles from './interactive.module.scss'
 
 
-const Lineal = () => {
+const Interactive = () => {
 
     let srcVideo = UrlUtils.getVideoUrl("470809");
     let duration = 1983;
@@ -62,11 +60,11 @@ const Lineal = () => {
         }
     };
 
-    const handleOnClickDashboard = () => {
+    const handleOnClickDashboardLineal = () => {
         setShowDashboardModal(true);
     };
 
-    const handleOnCloseDashboard = () => {
+    const handleOnCloseDashboardLineal = () => {
         setShowDashboardModal(false);
         handlePlayVideo(true);
     };
@@ -135,28 +133,15 @@ const Lineal = () => {
       setIsOpenAudio(false);
       handlePlayVideo(true);
     };
-
-
-    const [isOpenSlideModal, setIsOpenSlideModal] = useState(false);
-
-    const handleOnOpenSlideModal = () => {
-      setIsOpenSlideModal(true);
-      handlePlayVideo(false);
-    };
-
-    const handleOnCloseSlideModal = () => {
-      setIsOpenSlideModal(false);
-      handlePlayVideo(true);
-    };
   
     
 
     return (
         <div className={styles.NodeContainer}>
-            <DashboardLinealModal
+            <DashboardSlideModal
                 char="juandejesus"
                 showModal={showDashboardModal}
-                onCloseDashboard={handleOnCloseDashboard}
+                onCloseDashboard={handleOnCloseDashboardLineal}
             />
             <div ref={steal} className={styles.steal}>
                 <img className={styles.stealDesktop} src="/images/season3/steals/personaje-juan.jpg" />
@@ -175,7 +160,7 @@ const Lineal = () => {
                 showDashboardLineal
                 markers = {markers}
                 duration = {duration}
-                onClickDashboardLineal={handleOnClickDashboard}   
+                onClickDashboardLineal={handleOnClickDashboardLineal}   
             />
 
       <span className={styles.Video2level} onClick={handleOnPlayVideo}>Abrir Video 2 level</span>
@@ -183,8 +168,6 @@ const Lineal = () => {
       <span className={styles.Gallery2level} onClick={handleOnOpenGalleryModal}>Abrir Gallery 2 level</span>
 
       <span className={styles.Audio2level} onClick={handleOnOpenAudioModal}>Abrir Audio 2 level</span>
-<br />
-      <span className={styles.Slide2level} onClick={handleOnOpenSlideModal}>Abrir Slide Vacio</span>
 
       <Pulse 
             onClick={() => alert('Enlace a otro personaje')}
@@ -204,6 +187,7 @@ const Lineal = () => {
             onVideoEnded={handleOnDashboardVideoEnd} />
         </div>
       
+
       
         <GalleryModal
             showGalleryModal={isOpenGallery}
@@ -216,13 +200,9 @@ const Lineal = () => {
             onCloseAudioModal={handleOnCloseAudioModal} 
           />
       
-      <SlideModal
-            showSlideModal={isOpenSlideModal}
-            onCloseSlideModal={handleOnCloseSlideModal} 
-            />
     </div>
     );
 };
 
 
-export default Lineal;
+export default Interactive;
