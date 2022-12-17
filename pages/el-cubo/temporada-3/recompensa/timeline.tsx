@@ -31,7 +31,7 @@ const timeline = () => {
           entry.target.classList.replace('fadeOut_test', 'fadeIn_test');
         }
         else {
-          entry.target.classList.replace('fadeIn_test', 'fadeOut_test');
+          //entry.target.classList.replace('fadeIn_test', 'fadeOut_test');
         }
       });
     }
@@ -561,23 +561,13 @@ const timeline = () => {
           </div>
         </div>
 
-        <div className={`${styles.ItemContent} ${styles.NoHeight}`}>
+        <div className={`${styles.EndContent} ${styles.NoHeight}`}>
           <img className={styles.SitePicture} src="/images/season3/timeline/pueblo_rio_abajo.png" alt="imagen del lugar" />
         
-          <div className={styles.ColumnsContainer}>
-            <div className={styles.VideoContainer}>
-                <Video2Level
-                  showBackButton
-                  autoPlay={false}
-                  title={""}
-                  source={srcVideo}
-                  showPrevButton={false}
-                  showNextButton={false}
-                  setPlayer={setPlayer}
-                  fullscreen={false}
-                  seekControls
-                />
-            </div>
+          <div>
+           
+            <img className={styles.VideoPicture} src="/images/season3/timeline/video.jpg" alt="imagen del lugar" />
+            
 
             <div className={styles.Ver360Content}>
               <h1>Llegaste al final del camino.<br></br>¡Has recorrido los caminos del Jordán!</h1>
