@@ -127,7 +127,7 @@ Completa todos los personajes con sus objetos y desbloquea la <strong>Infografí
           {
           characters.map( (c, index) => (
             c.name == char ?
-            <div className={`${styles.ContainerCharacter} ${styles[c.name]} ` }>
+            <div key={index} className={`${styles.ContainerCharacter} ${styles[c.name]} ` }>
 
             <div className={styles.column}>
             <img src={c.icon}  />

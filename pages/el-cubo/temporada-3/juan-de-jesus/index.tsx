@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import VideoPlayer from 'components/Season3/VideoPlayer/VideoPlayer';
-import DashboardLinealModal from 'components/Season3/Modal/DashboardSlideModal';
+import Dashboard from 'components/Season3/Modal/DashboardSlideModal';
 import GalleryModal from 'components/Season3/Modal/GalleryModal';
 import AudioModal from 'components/Season3/Modal/AudioModal';
 import VideoModal from 'components/Season3/Modal/VideoModal';
-import Pulse from 'components/Season3/Shared/Pulse/Pulse';
 import UrlUtils from 'utils/Url';
 
 import SlideModal from 'components/Season3/Interactive/SlideModal/SlideModal';
@@ -137,6 +136,7 @@ const Lineal = () => {
     };
 
 
+    // Slide Vacio
     const [isOpenSlideModal, setIsOpenSlideModal] = useState(false);
 
     const handleOnOpenSlideModal = () => {
@@ -148,12 +148,29 @@ const Lineal = () => {
       setIsOpenSlideModal(false);
       handlePlayVideo(true);
     };
+
+    // Status Active
+    const [isActiveInteractive, setIsActiveInteractive] = useState(false);
+    
+    const toggleActiveInteractive = () => {
+      setIsActiveInteractive(!isActiveInteractive);
+    };
+
+    const handleOnActiveInteractive = () => {
+      setIsActiveInteractive(true);
+      handlePlayVideo(false);
+    };
+
+    const handleOffActiveInteractive = () => {
+      setIsActiveInteractive(false);
+      handlePlayVideo(true);
+    };
   
     
 
     return (
         <div className={styles.NodeContainer}>
-            <DashboardLinealModal
+            <Dashboard
                 char="juandejesus"
                 showModal={showDashboardModal}
                 onCloseDashboard={handleOnCloseDashboard}
@@ -162,6 +179,7 @@ const Lineal = () => {
                 <img className={styles.stealDesktop} src="/images/season3/steals/personaje-juan.jpg" />
                 <img className={styles.stealMobile} src="/images/season3/steals/personaje-juan.jpg" />
             </div>
+            <div className={ `${styles.coverVideo} ${isActiveInteractive ? styles.activeInteractive : ""}`}>
             <VideoPlayer
                 showBackButton
                 backButtonLink={"/el-cubo/temporada-3/personajes/map?ref=view"}
@@ -177,6 +195,7 @@ const Lineal = () => {
                 duration = {duration}
                 onClickDashboardLineal={handleOnClickDashboard}   
             />
+            </div>
 
       <span className={styles.Video2level} onClick={handleOnPlayVideo}>Abrir Video 2 level</span>
 
@@ -186,14 +205,7 @@ const Lineal = () => {
 <br />
       <span className={styles.Slide2level} onClick={handleOnOpenSlideModal}>Abrir Slide Vacio</span>
 
-      <Pulse 
-            onClick={() => alert('Enlace a otro personaje')}
-            x={80}
-            y={50}
-            xMobile={80}
-            yMobile={50}
-            text={'Texto'}
-      />
+      <span className={styles.activeTrigger} onClick={toggleActiveInteractive}>{isActiveInteractive ? "DesacActivar" : "Activar"}</span>
 
      
         <div className={styles.fullScreenVideo}>
@@ -216,10 +228,13 @@ const Lineal = () => {
             onCloseAudioModal={handleOnCloseAudioModal} 
           />
       
+      <div className={ `${styles.coverSlide} ${isActiveInteractive ? styles.activeInteractiveSlide : ""}`}>
       <SlideModal
+            isActive={isActiveInteractive}
             showSlideModal={isOpenSlideModal}
             onCloseSlideModal={handleOnCloseSlideModal} 
             />
+      </div>
     </div>
     );
 };

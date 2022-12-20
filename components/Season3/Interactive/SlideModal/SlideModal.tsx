@@ -2,7 +2,7 @@ import React, { Fragment, useState} from 'react';
 import ArrowDown from 'components/Season3/Svg/ArrowDown';
 import styles from './season3.slideModal.module.scss';
 
-const SlideModal = ({ showSlideModal, onCloseSlideModal }) => {
+const SlideModal = ({ isActive, showSlideModal, onCloseSlideModal }) => {
 
   React.useEffect(() => {
 
@@ -22,7 +22,7 @@ const SlideModal = ({ showSlideModal, onCloseSlideModal }) => {
 
 
   return (
-    <div id="container" className={`${styles.containerCover} ${showSlideModal ? styles.open : ""}`}>
+    <div id="container" className={`${styles.containerCover} ${showSlideModal ? styles.open : ""} ${isActive ? styles.active : ""}`}>
       <div className={styles.container}>
         <div className={styles.child}>
           <div className={styles.t_close} onClick={onCloseSlideModal}>
