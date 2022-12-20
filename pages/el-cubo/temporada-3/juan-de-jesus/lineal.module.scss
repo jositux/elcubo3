@@ -35,6 +35,23 @@
   top: 290px;
 }
 
+.activeTrigger {
+  position: absolute;
+  top: 320px;
+}
+
+.coverVideo video,
+.coverVideo .plyr__controls {
+  transition: margin 700ms;
+  margin-top: 0;
+}
+.activeInteractive video,
+.activeInteractive .plyr__controls {
+  margin-top: -80px;
+}
+
+
+
 .steal {
   position: absolute;
   z-index: 10;

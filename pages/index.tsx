@@ -51,14 +51,15 @@ const Home = () => {
                 <div>
                   <h3>+14 - TEMPORADA 3</h3>
                   <h1>Caminos de Jordán</h1>
-                  <span>Interactividad, Teatro, Tridimesional</span>
+                  <span>Interactividad, Documental</span>
                   <a href="/el-cubo/temporada-3" className={styles.buttonBig}>INICIAR EXPERIENCIA</a>
                 </div>
               </a>
             </div>
             <div className={styles.description}>
-              <p>Cinco personajes buscan superar los fantasmas que se apoderaron de
-Jordán Sube. </p>
+              <p>Jordán Sube es el pueblo Colombiano con la menor cantidad de almas del país.
+¿Qué sucedió para pasar de la
+prosperidad a ser un pueblo fantasma?</p>
               <ul>
                 <li>
                   {<YoutubeModal videoId="2oxfBiKm-II" />}

@@ -38,7 +38,7 @@
   overflow: hidden;
   width: 100%;
   bottom: -100%;
-  transition: 0.8s all ease;
+  transition: 500ms all ease;
   @media screen and (max-width: 960px) {
     width: 100%;
   }
@@ -50,6 +50,10 @@
 
 .containerCover.open .container {
   bottom: 0;
+}
+
+.containerCover.active .container {
+  bottom: calc( -100% + 130px);
 }
 
 .child {
