@@ -122,6 +122,71 @@ Jordán Sube. </p>
 
         </section>
 
+        <section className={`${styles.awardsContainer} ${styles.fadeIn}`}>
+        <div className={styles.Awards}>
+             <h1>PREMIOS Y RECONOCIMIENTOS</h1>
+        </div>
+        <div className={styles.Awards}>
+        <article className={styles.awardRow}>
+          <div className={styles.columnImg}>
+            <img src="/images/season3/awards/india.svg"  />
+          </div>
+          <div className={styles.columnText}>
+            <h3>India Catalina</h3>
+            <p>Sed gravida dicn arcu eu mi tempor venenatis. </p>
+          </div>
+        </article>
+        <article className={styles.awardRow}>
+          <div className={styles.columnImg}>
+            <img src="/images/season3/awards/ima.svg"  />
+          </div>
+          <div className={styles.columnText}>
+            <h3>IMA - Interactive Awards</h3>
+            <p>Sed gravida dicn arcu eu mi tempor venenatis. </p>
+          </div>
+        </article>
+        <article className={styles.awardRow}>
+          <div className={styles.columnImg}>
+            <img src="/images/season3/awards/tal.png"  />
+          </div>
+          <div className={styles.columnText}>
+            <h3>Premios TAL 2021</h3>
+            <p>Sed gravida dicn arcu eu mi tempor venenatis. </p>
+          </div>
+        </article>
+        </div>
+        <div className={styles.Awards}>
+        <article className={styles.awardRow}>
+          <div className={styles.columnImg}>
+            <img src="/images/season3/awards/prix.png"  />
+          </div>
+          <div className={styles.columnText}>
+            <h3>Prix Italia</h3>
+            <p>Sed gravida dicn arcu eu mi tempor venenatis. </p>
+          </div>
+        </article>
+        <article className={styles.awardRow}>
+          <div className={styles.columnImg}>
+            <img src="/images/season3/awards/tal2.png"  />
+          </div>
+          <div className={styles.columnText}>
+            <h3>Premios TAL 2022</h3>
+            <p>Sed gravida dicn arcu eu mi tempor venenatis. </p>
+          </div>
+        </article>
+        <article className={styles.awardRow}>
+          <div className={styles.columnImg}>
+            <img src="/images/season3/awards/horizon.png"  />
+          </div>
+          <div className={styles.columnText}>
+            <h3>Horizon</h3>
+            <p>Sed gravida dicn arcu eu mi tempor venenatis. </p>
+          </div>
+        </article>
+        </div>
+
+        </section>
+
       </div>
       <Footer />
     </React.Fragment>
