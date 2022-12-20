@@ -187,6 +187,55 @@
   }
 }
 
+
+.awardsContainer {
+  display: grid;
+  //max-width: 1200px;
+  margin: auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  padding-left: 4%;
+  padding-right: 4%;
+  h1 {
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 42px;
+  }
+  .awardRow {
+    display: flex;
+    align-items:flex-start;
+    font-family: $elcubo2_font_home;
+    margin-top: 30px;
+      .columnImg {
+        width: 20%;
+        img {
+          width: 100%;
+        }
+      }
+      .columnText {
+        padding-left: 20px;
+        h3 {
+          margin-top: 0;
+          margin-bottom: 0;
+          font-size: 18px;
+        }
+        p {
+          font-weight: 300;
+          margin-top: 5px;
+        }
+      }
+    
+  }
+
+  @media screen and (max-width: 992px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 0;
+      padding-left: 30px;
+      padding-right: 30px;
+  }
+}
+
 .buttonBig {
   display: block;
   text-align: center;
