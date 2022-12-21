@@ -5,10 +5,6 @@
   background-color: #e4d7b7;
   background-attachment: fixed;
   background-size: cover;
-
-  @media only screen and (max-width: 768px) {
-
-  }
 }
 
 
@@ -35,19 +31,24 @@
   position: absolute;
   left: 50%;
   width: 1px;
-  height: calc(100vh + 430rem);
+  height: calc(100vh + 415rem);
   margin-left: 0;     
   margin-top: 15rem;
   margin-bottom: 15rem;
   background: #3C2807;
   z-index: 1;
   
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 680px) {
     display: none;
+  }
+
+  @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+    margin-top: 7.5rem;
+    height: calc(100vh + 200rem);
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 680px) {
   .Clows {
     display: none!important;
   }
@@ -61,16 +62,28 @@
   width: 100%;
   align-items: flex-end;
   -webkit-align-items: flex-end;
-  height: 100vh;
+  height: 80vh;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 680px) {
     display: flex;
     position: relative;
     margin: auto;
     justify-content: center;
     width: 100%;
     height: auto;
-    min-height: 140vh;
+    min-height: 80vh;
+  }
+
+  @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+    height: 100vh;
+
+    .columnText,
+    .columnLink {
+      margin: 0 30px 0 30px!important;
+    }
+    .Clows {
+      display: none!important;
+    }
   }
 
   .TextContent {
@@ -102,13 +115,25 @@
       margin-bottom: 0;
       font-family: $elcubo3_font_subtitle;
     }
+
+    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+      .Title {
+        font-size: 45px!important;
+      }
+      .Subtitle {
+        font-size: 20px;
+      }
+      .Description {
+        font-size: 13px;
+      }
+    }
   }
 
   .LinkItem {
     position: relative;
     cursor: pointer;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       width: 100%;
     }
 
@@ -116,7 +141,7 @@
       align-items: center;
       text-decoration: none;
     
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 680px) {
         display: flex;
         justify-content: space-between;
         width: 100%;
@@ -144,15 +169,19 @@
     width: 100%;
     height: auto;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       width: 125%;
+    }
+
+    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+      width: 90%!important;
     }
   }
 
   .ColumnsContainer {
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       flex-direction: column-reverse;
-      padding: 0;
+      padding: 0 0 80px 0;
     }
   }
 
@@ -160,13 +189,13 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    padding: 0 60px 0 60px;
+    margin: 0 60px 0 60px;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      padding: 0;
+      margin: 15px 0 0 0;
     }
   }
 
@@ -174,13 +203,13 @@
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    padding: 0 60px 0 60px;
+    margin: 0 60px 0 60px;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      padding: 0;
+      margin: 0;
     }
   }
 
@@ -189,7 +218,7 @@
     text-align: left;
     z-index: 1;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       margin: 0 30px;
       max-width: 100%;
       text-align: left;
@@ -236,7 +265,7 @@
       }
     }
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       width: 100%;
       min-height: 100px;
@@ -269,6 +298,21 @@
         }
       }
     }
+
+    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+      min-height: 150px;
+
+      .LinkText {
+        font-size: 13px!important;
+      }
+
+      .LinkItem {
+        span {
+          font-size: 12px!important;
+        }
+      }
+    }
+    
   }
 }
 
@@ -287,11 +331,15 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 70vw;
+    width: 70%;
 
-    @media only screen and (max-width: 768px) {
-      width: 130%;
-      top: 0;
+    @media only screen and (max-width: 680px) {
+      width: 140%;
+      top: -100px;
+    }
+
+    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+      top: -55px;
     }
   }
   
@@ -301,10 +349,9 @@
     justify-content: center;
     width: 100%;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       flex-direction: column;
-      padding-top: 0;
-      padding-bottom: 14px;
+      padding: 0 0 50px 0;
     }
   }
 
@@ -314,11 +361,11 @@
     width: 100%;
     margin: 0 60px 0 60px;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      margin: 0px;
+      margin: 15px 0 0 0;
     }
   }
 
@@ -328,7 +375,7 @@
     width: 100%;
     margin: 0 60px 0 60px;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -344,7 +391,7 @@
     flex-direction: column;
     justify-content: flex-end;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       margin: 0 30px;
       max-width: 100%;
       text-align: left;
@@ -360,6 +407,10 @@
         font-size: 14px;
         max-width: 100%;
       }
+    }
+
+    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+      padding-bottom: 40px;
     }
   }
 
@@ -386,7 +437,7 @@
       font-weight: bold;
     }
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       width: 100%;
       min-height: 50px;
@@ -420,11 +471,26 @@
         }
       }
     }
+
+    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+      min-height: 50px;
+      margin-bottom: 50px;
+
+      .LinkText {
+        font-size: 13px!important;
+      }
+
+      .LinkItem {
+        span {
+          font-size: 12px!important;
+        }
+      }
+    }
   }
 }
 
 .ItemContent:nth-child(3) {
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 680px) {
     height: 90vh!important;
   }
 
@@ -442,9 +508,14 @@
     left: 0;
     width: 100vw;
 
-    @media only screen and (max-width: 768px) {
-      top: -100;
-      width: 150%;
+    @media only screen and (max-width: 680px) {
+      top: -70px;
+      width: 130%;
+    }
+
+    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+      top: -120px;
+      width: 100%;
     }
   }
 
@@ -456,7 +527,7 @@
     padding-bottom: 0px;
     width: 100%;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       flex-direction: column-reverse;
       padding: 0;
     }
@@ -468,7 +539,7 @@
     width: 100%;
     margin: 0 60px 0 60px;
     
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       justify-content: flex-start;
       margin: 0;
@@ -481,7 +552,7 @@
     width: 100%;
     margin: 0 60px 0 60px;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -494,7 +565,7 @@
     text-align: left;
     z-index: 1;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       margin: 0 30px;
       max-width: 100%;
       text-align: left;
@@ -541,7 +612,7 @@
       }
     }
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       width: 100%;
       min-height: 35px;
@@ -575,6 +646,20 @@
         }
       }
     }
+
+    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+      min-height: 150px;
+
+      .LinkText {
+        font-size: 13px!important;
+      }
+
+      .LinkItem {
+        span {
+          font-size: 12px!important;
+        }
+      }
+    }
   }
 }
 
@@ -595,9 +680,15 @@
     right: 0;
     width: 75vw;
     
-    @media only screen and (max-width: 768px) {
-      width: 140vw;
-      top: -222px;
+    @media only screen and (max-width: 680px) {
+      width: 140%;
+      top: -200px;
+    }
+
+    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+      top: -54px;
+      right: 0;
+      width: 60%;
     }
   }
 
@@ -607,7 +698,7 @@
     justify-content: center;
     width: 100%;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       flex-direction: column;
       padding-top: 0;
       padding-bottom: 14px;
@@ -618,13 +709,13 @@
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    padding: 0 60px 0 60px;
+    margin: 0 60px 0 60px;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      margin: 0px;
+      margin: 15px 0 0 0;
     }
   }
 
@@ -632,13 +723,13 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    padding: 0 60px 0 60px;
+    margin: 0 60px 0 60px;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      margin: 0px;
+      margin: 0;
     }
   }
 
@@ -650,7 +741,7 @@
     flex-direction: column;
     justify-content: flex-end;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       margin: 0 30px;
       max-width: 100%;
       text-align: left;
@@ -728,7 +819,7 @@
       }
     }
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       width: 100%;
       min-height: 50px;
@@ -762,6 +853,26 @@
         }
       }
     }
+
+    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+      min-height: 150px;
+
+      .LinkItem {
+        p {
+          margin-top: 4px;
+        }
+      }
+
+      .LinkText {
+        font-size: 13px!important;
+      }
+
+      .LinkItem {
+        span {
+          font-size: 12px!important;
+        }
+      }
+    }
   }
 }
 
@@ -782,9 +893,14 @@
     left: 0;
     width: 70vw;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       top: -180px;
       width: 140%;
+    }
+
+    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+      top: -100px;
+      width: 60%;
     }
   }
 
@@ -794,7 +910,7 @@
     justify-content: center;
     width: 100%;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       flex-direction: column-reverse;
       padding: 0;
     }
@@ -806,10 +922,14 @@
     width: 100%;
     margin: 0 60px 0 60px;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       justify-content: flex-start;
-      margin: 0;
+      margin:  15px 0 0 0;;
+    }
+
+    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+      padding-bottom: 25px;
     }
   } 
 
@@ -819,7 +939,7 @@
     width: 100%;
     margin: 0 60px 0 60px;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -832,7 +952,7 @@
     text-align: left;
     z-index: 1;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       margin: 0 30px;
       max-width: 100%;
       text-align: left;
@@ -848,6 +968,10 @@
         font-size: 14px;
         max-width: 100%;
       }
+    }
+
+    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+      padding-bottom: 80px;
     }
   }
 
@@ -879,7 +1003,7 @@
       }
     }
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       width: 100%;
       min-height: 35px;
@@ -913,20 +1037,48 @@
         }
       }
     }
+
+    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+      min-height: 150px;
+
+      .LinkItem {
+        p {
+          margin-top: 4px;
+        }
+      }
+
+      .LinkText {
+        font-size: 13px!important;
+      }
+
+      .LinkItem {
+        span {
+          font-size: 12px!important;
+        }
+      }
+    }
   }
 }
 
 .ItemContent:nth-child(6) {
+  @media only screen and (max-width: 680px) {
+    min-height: 90vh;
+  }
 
   .SitePicture {
     position: absolute;
-    top: -170px;
+    top: -100px;
     right: 0;
     width: 90vw;
 
-    @media only screen and (max-width: 768px) {
-      width: 155vw;
-      top: -70;
+    @media only screen and (max-width: 680px) {
+      width: 155%;
+      top: -100px;
+    }
+
+    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+      top: -70px;
+      width: 80%;
     }
   }
 
@@ -937,7 +1089,7 @@
     align-items: flex-end;
     width: 100%;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       flex-direction: column;
       padding-top: 0;
       padding-bottom: 14px;
@@ -948,13 +1100,13 @@
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    padding: 0 60px 0 60px;
+    margin: 0 60px 0 60px;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      margin: 0px;
+      margin: 15px 0 0 0;
     }
   }
 
@@ -962,9 +1114,9 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    padding: 0 60px 0 60px;
+    margin: 0 60px 0 60px;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -980,7 +1132,7 @@
     flex-direction: column;
     justify-content: flex-end;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       margin: 0 30px;
       max-width: 100%;
       text-align: left;
@@ -996,6 +1148,10 @@
         font-size: 14px;
         max-width: 100%;
       }
+    }
+
+    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+      padding-bottom: 80px;
     }
   }
 
@@ -1034,7 +1190,7 @@
       }
     }
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       width: 100%;
       min-height: 50px;
@@ -1068,6 +1224,26 @@
         }
       }
     }
+
+    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+      min-height: 150px;
+
+      .LinkItem {
+        p {
+          margin-top: 4px;
+        }
+      }
+
+      .LinkText {
+        font-size: 12px!important;
+      }
+
+      .LinkItem {
+        span {
+          font-size: 11.5px!important;
+        }
+      }
+    }
   }
 }
 
@@ -1088,9 +1264,9 @@
     left: 0;
     width: 65vw;
 
-    @media only screen and (max-width: 768px) {
-      top: -165px;
-      width: 155%;
+    @media only screen and (max-width: 680px) {
+      top: -95px;
+      width: 125%;
     }
   }
 
@@ -1100,7 +1276,7 @@
     justify-content: center;
     width: 100%;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       flex-direction: column-reverse;
       padding: 0;
     }
@@ -1112,10 +1288,10 @@
     width: 100%;
     margin: 0 60px 0 60px;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       justify-content: flex-start;
-      margin: 0;
+      margin: 15px 0 0 0;
     }
   } 
 
@@ -1125,7 +1301,7 @@
     width: 100%;
     margin: 0 60px 0 60px;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -1138,7 +1314,7 @@
     text-align: left;
     z-index: 1;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       margin: 0 30px;
       max-width: 100%;
       text-align: left;
@@ -1198,7 +1374,7 @@
       }
     }
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       width: 100%;
       min-height: 35px;
@@ -1232,6 +1408,20 @@
         }
       }
     }
+
+    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+      min-height: 110px;
+
+      .LinkText {
+        font-size: 13px!important;
+      }
+
+      .LinkItem {
+        span {
+          font-size: 12px!important;
+        }
+      }
+    }
   }
 }
 
@@ -1239,13 +1429,17 @@
 
   .SitePicture {
     position: absolute;
-    top: -55px;
+    top: 0;
     right: 0;
     width: 60vw;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       width: 120%;
-      top: 0;
+      top: -25px;
+    }
+
+    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+      top: -10px;
     }
   }
 
@@ -1256,7 +1450,7 @@
     align-items: flex-end;
     width: 100%;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       flex-direction: column;
       padding-top: 0;
       padding-bottom: 14px;
@@ -1269,11 +1463,11 @@
     width: 100%;
     margin: 0 60px 0 60px;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      margin: 0px;
+      margin: 15px 0 0 0;
     }
   }
 
@@ -1283,7 +1477,7 @@
     width: 100%;
     margin: 0 60px 0 60px;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -1299,7 +1493,7 @@
     flex-direction: column;
     justify-content: flex-end;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       margin: 0 30px;
       max-width: 100%;
       text-align: left;
@@ -1353,7 +1547,7 @@
       }
     }
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       width: 100%;
       min-height: 50px;
@@ -1387,12 +1581,31 @@
         }
       }
     }
+
+    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+      min-height: 120px;
+
+      
+      .LinkText {
+        font-size: 13px!important;
+      }
+
+      .LinkItem {
+        span {
+          font-size: 12px!important;
+        }
+      }
+    }
   }
 }
 
 .ItemContent:nth-child(9) {
-  @media only screen and (max-width: 768px) {
-    height: 65vh!important;
+  @media only screen and (max-width: 680px) {
+    min-height: 70vh!important;
+  }
+
+  @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+    min-height: 80vh!important;
   }
 
   .Clows {
@@ -1410,7 +1623,7 @@
     justify-content: center;
     width: 100%;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       flex-direction: column-reverse;
       padding: 0;
     }
@@ -1423,10 +1636,10 @@
     width: 100%;
     margin: 0 60px 0 60px;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       justify-content: flex-start;
-      margin: 0;
+      margin: 15px 0 0 0;
     }
   } 
 
@@ -1436,7 +1649,7 @@
     width: 100%;
     margin: 0 60px 0 60px;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -1449,7 +1662,7 @@
     text-align: left;
     z-index: 1;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       margin: 0 30px;
       max-width: 100%;
       text-align: left;
@@ -1483,6 +1696,10 @@
     align-items: flex-end;
     padding: 10px 10px 10px 25px;
 
+    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+      padding: 10px;
+    }
+
     .LinkText {
       margin-right: 10px;
       color: #3C2807;
@@ -1503,7 +1720,7 @@
       }
     }
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       width: 100%;
       min-height: 35px;
@@ -1539,12 +1756,34 @@
       }
     }
 
+    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+      min-height: 150px;
+
+      .LinkItem {
+        p {
+          margin-top: 4px;
+        }
+      }
+
+      .LinkText {
+        font-size: 12px!important;
+      }
+
+      .LinkItem {
+        span {
+          font-size: 11.5px!important;
+        }
+      }
+    }
   }
 }
 
 .ItemContent:nth-child(10) {
-  @media only screen and (max-width: 768px) {
-    height: 50vh!important;
+  align-items: center;
+  -webkit-align-items: center;
+
+  @media only screen and (max-width: 680px) {
+    min-height: 50vh!important;
   }
 
   .ColumnsContainer {
@@ -1552,10 +1791,10 @@
     position: relative;
     justify-content: center;
     align-items: flex-end;
-    padding-bottom: 340px;
+    padding-bottom: 100px;
     width: 100%;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       flex-direction: column;
       padding: 0 0 100px 0;
     }
@@ -1567,11 +1806,11 @@
     width: 100%;
     margin: 0 60px 0 60px;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      margin: 0px;
+      margin: 15px 0 0 0;
     }
   }
 
@@ -1581,7 +1820,7 @@
     width: 100%;
     margin: 0 60px 0 60px;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -1597,7 +1836,7 @@
     flex-direction: column;
     justify-content: flex-end;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       margin: 0 30px;
       max-width: 100%;
       text-align: left;
@@ -1652,7 +1891,7 @@
       }
     }
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
       width: 100%;
       min-height: 50px;
@@ -1686,6 +1925,20 @@
         }
       }
     }
+
+    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+      min-height: 40px;
+
+      .LinkText {
+        font-size: 13px!important;
+      }
+
+      .LinkItem {
+        span {
+          font-size: 12px!important;
+        }
+      }
+    }
   }
 
 }
@@ -1704,17 +1957,17 @@
     width: 100%;
     object-fit: cover;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       width: 130%;
     }
   
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       display: flex;
-      position: relative;
+      position: absolute;
       left: 0px;
       right: 0px;
-      width: 80%;
-      height: 230px;
+      width: 100%;
+      height: auto;
     }
   }
 
@@ -1766,14 +2019,20 @@
         margin: 20px 20px;
       }
 
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 680px) {
         p,a {
+          margin: 20px 15px;
+        }
+      }
+
+      @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+        p, a {
           margin: 20px 15px;
         }
       }
     }
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 680px) {
       padding-top: 60px;
 
       h1 {
@@ -1785,9 +2044,19 @@
         max-width: 400px;
       }
     }
+
+    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+      h1 {
+        font-size: 35px;
+        max-width: 35rem;
+      }
+      p {
+        font-size: 20px;
+        max-width: 37rem;
+      }
+    }
   }
 }
-
 
 .NoHeight {
   height: auto !important;

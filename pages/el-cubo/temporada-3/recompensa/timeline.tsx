@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './timeline.module.scss';
 import UrlUtils from 'utils/Url';
-import VideoPlayer from 'components/Season3/VideoPlayer/VideoPlayer';
-import Video2Level from 'components/Season3/Shared/Video2Level/VideoPlayer';
 import GalleryIconTimeline from 'components/Season3/Svg/GalleryIconTimeline';
 import PlayIconTimeline from 'components/Season3/Svg/PlayIconTimeline';
 import RedirectionIconTimeline from 'components/Season3/Svg/RedirectionIconTimeline';
@@ -10,6 +8,7 @@ import Twitter from 'components/Season3/Svg/Twitter';
 import Facebook from 'components/Season3/Svg/Facebook';
 import LinkedIn from 'components/Season3/Svg/LinkedIn';
 import ButtonHome from 'components/Season3/Shared/Button/ButtonHome';
+import YoutubeModal from 'components/Season3/Modal/YoutubeModal';
 
 
 const timeline = () => {
@@ -118,7 +117,9 @@ const timeline = () => {
               <div className={styles.LinksContent}>
                 <div className={styles.LinkItem}>
                   <a href='#' className={styles.Link} >
-                     <PlayIconTimeline />
+                    <div>
+                      <PlayIconTimeline />
+                    </div>
                     <p className={styles.LinkText}>Puente de Lengerke - Destino Chicamocha. Encanto majestuoso</p>
                   </a>
                 </div>
@@ -138,7 +139,9 @@ const timeline = () => {
                 <div className={styles.LinkItem}>
                   <a href='#' className={styles.Link} >
                     <p className={styles.LinkText}>video arrieros</p>
-                    <PlayIconTimeline />
+                    <div>
+                      <PlayIconTimeline />
+                    </div>
                   </a>
                 </div>
                 <div className={styles.LinkItem}>
@@ -574,7 +577,7 @@ const timeline = () => {
               <p>Como recompensa puedes acceder al contenido exclusivo final y compartir el proyecto en redes ¡Feliz viaje de regreso!</p>
             
               <div >
-                <ButtonHome /* url={Links.registerTemp2} */ text="Ver video 360°" />
+                <YoutubeModal videoId='XyOS58YExw8' />
               </div>
               
               <div className={styles.Compartir}>
