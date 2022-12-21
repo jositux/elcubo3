@@ -141,16 +141,28 @@ $backdrop-color: rgba(0, 0, 0, 0.7);
   }
 }
 
-.btn-primary {
-  border: 0;
-  padding: 0;
-  background: transparent;
+.ButtomVer360 {
+  padding: 25px 30px 25px 30px;
+  background-color: #402A04;
+  margin: 0 auto;
+  clear: both;
   color: white;
-  font-family: 'Dosis';
+  font-size: 1.6vw;
+  text-decoration: none;
   text-transform: uppercase;
-  line-height: 2em;
-  cursor: pointer;
-  svg {
-    margin-right: 8px;
+  line-height: 1.2em;
+  border: 1px solid #402A04;
+  font-family: $elcubo3_font_subtitle;
+  font-weight: 300;
+  @include breakpoint-down('sm') {
+    font-size: 20px;
+    @media screen and (orientation: portrait) {
+      width: 100%;
+    }
+    
+    padding: 15px 70px 15px 70px;
+    position: relative;
+    left: 0;
+    top: 0;
   }
 }
