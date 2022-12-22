@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import VideoPlayer from 'components/Season3/VideoPlayer/VideoPlayer';
 import Dashboard from 'components/Season3/Modal/DashboardSlideModal';
-import GalleryModal from 'components/Season3/Modal/GalleryModal';
-import AudioModal from 'components/Season3/Modal/AudioModal';
+import GalleryModal from 'components/Season3/Interactive/Gallery/GalleryModal';
+import AudioModal from 'components/Season3/Interactive/Audio/AudioModal';
 import VideoModal from 'components/Season3/Modal/VideoModal';
 import UrlUtils from 'utils/Url';
 
@@ -155,16 +155,6 @@ const Lineal = () => {
     const toggleActiveInteractive = () => {
       setIsActiveInteractive(!isActiveInteractive);
     };
-
-    const handleOnActiveInteractive = () => {
-      setIsActiveInteractive(true);
-      handlePlayVideo(false);
-    };
-
-    const handleOffActiveInteractive = () => {
-      setIsActiveInteractive(false);
-      handlePlayVideo(true);
-    };
   
     
 
@@ -228,11 +218,12 @@ const Lineal = () => {
             onCloseAudioModal={handleOnCloseAudioModal} 
           />
       
+      
       <div className={ `${styles.coverSlide} ${isActiveInteractive ? styles.activeInteractiveSlide : ""}`}>
       <SlideModal
             isActive={isActiveInteractive}
-            showSlideModal={isOpenSlideModal}
-            onCloseSlideModal={handleOnCloseSlideModal} 
+            handleOnOpenSlideModal={handleOnOpenSlideModal}
+            handleOnCloseSlideModal={handleOnCloseSlideModal} 
             />
       </div>
     </div>

@@ -1,15 +1,13 @@
-.containerCover {
-  /*width: 100%;
+/*.containerCover {
+  width: 100%;
   height: 100vh;
   max-width: 100%;
   overflow-x: hidden;
   display: flex;
-  font-family: $elcubo3_font_title;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0);
   position: absolute;
   top: 0;
-  right: 100; //opacity: 0;*/
-}
+}*/
 
 
   .Content {
@@ -56,6 +54,10 @@
   bottom: calc( -100% + 130px);
 }
 
+.containerCover.active.open .container {
+  bottom: 0;
+}
+
 .child {
   width: 100%;
   position: relative;
@@ -80,4 +82,17 @@
   /* gradient */
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.332812) 42.71%, rgba(0, 0, 0, 0) 100%);
   mix-blend-mode: luminosity;
+}
+
+.containerCover.active.open 
+.t_close.arrowDown {
+  svg {
+    transform: rotate(0deg);
+  }
+}
+
+.t_close.arrowUp {
+  svg {
+    transform: rotate(180deg);
+  }
 }

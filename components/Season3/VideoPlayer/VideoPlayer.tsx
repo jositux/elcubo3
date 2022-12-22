@@ -321,12 +321,12 @@ const VideoPlayer = ({
   playerRef.current.on('play', (event) => {
 
     setInterval(() => {
-      console.log(parseInt(playerRef.current.currentTime, 10));
+      //console.log(parseInt(playerRef.current.currentTime, 10));
 
-      markers.map( (c, index) => (
-      c.time == parseInt(playerRef.current.currentTime, 10) ? alert(c.text):  console.log('')
+      //markers.map( (c, index) => (
+      //c.time == parseInt(playerRef.current.currentTime, 10) ? alert(c.text):  console.log('')
       
-      ));
+      //));
 
     }, 1000);
 
