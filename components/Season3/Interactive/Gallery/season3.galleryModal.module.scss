@@ -19,6 +19,14 @@
   object-position: center;
 }
 
+.gallerySwiper {
+  width: 640px;
+  height: 480px;
+  div {
+    border-radius: 10px;
+  }
+}
+
 .ContainerContent {
   display: flex;
   align-items: center;

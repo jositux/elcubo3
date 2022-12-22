@@ -137,45 +137,42 @@ const GalleryModal = ({ showGalleryModal, onCloseGalleryModal }) => {
         }}
         navigation={true}
         modules={[Autoplay, EffectCards, Navigation]}
-        className="mySwiper"
+        className={styles.gallerySwiper}
       >
         <SwiperSlide>
           <div className={styles.OpenZoom}  onClick={ () => { setIndex(0); setOpen(true);} }>
           <IconZoom />
           </div>
-          <img className={styled.ImagesSwiper} src="/images/season3/hitos/0.jpg" />
+          <img className={styles.ImagesSwiper} src="/images/season3/hitos/0.jpg" />
         </SwiperSlide>
         <SwiperSlide>
           <div className={styles.OpenZoom}  onClick={ () => { setIndex(1); setOpen(true);} }>
           <IconZoom />
           </div>
-          <img className={styled.ImagesSwiper} src="/images/season3/hitos/1.jpg" />
+          <img className={styles.ImagesSwiper} src="/images/season3/hitos/1.jpg" />
         </SwiperSlide>
         <SwiperSlide>
         <div className={styles.OpenZoom}  onClick={ () => { setIndex(2); setOpen(true);} }>
           <IconZoom />
           </div>
-          <img className={styled.ImagesSwiper} src="/images/season3/hitos/2.jpg" />
+          <img className={styles.ImagesSwiper} src="/images/season3/hitos/2.jpg" />
      
         </SwiperSlide>
         <SwiperSlide>
         <div className={styles.OpenZoom}  onClick={ () => { setIndex(3); setOpen(true);} }>
           <IconZoom />
           </div>
-          <img className={styled.ImagesSwiper} src="/images/season3/hitos/3.jpg" />
+          <img className={styles.ImagesSwiper} src="/images/season3/hitos/3.jpg" />
      
         </SwiperSlide>
         <SwiperSlide>
         <div className={styles.OpenZoom} onClick={ () => { setIndex(4); setOpen(true);} }>
           <IconZoom />
           </div>
-          <img className={styled.ImagesSwiper} src="/images/season3/hitos/4.jpg" />
+          <img className={styles.ImagesSwiper} src="/images/season3/hitos/4.jpg" />
      
         </SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        
       </Swiper>
     </div>
 </div>
