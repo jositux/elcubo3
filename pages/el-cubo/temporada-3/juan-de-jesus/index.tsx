@@ -200,7 +200,7 @@ const Lineal = () => {
      
         <div className={styles.fullScreenVideo}>
           <VideoModal
-            videoId={"475352"}
+            videoId={"482203"}
             showModal={isOpen}
             setShowModal={setIsOpen}
             onVideoEnded={handleOnDashboardVideoEnd} />
