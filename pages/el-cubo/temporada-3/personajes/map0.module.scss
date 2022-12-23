@@ -1,23 +1,7 @@
-
-.fadeIn {
-  transition: opacity 2s ease;
-  visibility: visible;
-  position: relative;
-  z-index: 100;
-}
-
-.fadeOut {
-  opacity: 0;
-  transition: opacity 1s ease;
-  visibility: hidden;
-  position: relative;
-  z-index: 100;
-}
-
 .VideoOverlay {
   position: absolute;
   width: 100%;
-  height: calc(100vh);
+  height: calc(100vh - 90px);
   object-fit: cover;
   z-index: 10;
   animation-delay: 8000ms;

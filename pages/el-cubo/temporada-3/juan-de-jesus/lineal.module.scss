@@ -45,9 +45,14 @@
   transition: margin 700ms;
   margin-top: 0;
 }
-.activeInteractive video,
-.activeInteractive .plyr__controls {
+
+.activeInteractive video {
   margin-top: -80px;
+}
+
+.activeInteractive div div div:nth-child(2)  {
+  opacity: 0;
+  visibility: hidden;
 }
 
 

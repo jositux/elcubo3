@@ -130,6 +130,13 @@
     animation-fill-mode: forwards;  
   }
 
+  .PopupContainer.Viewed {
+    .Popup {
+    animation-duration: 450ms;
+    animation-delay: 0s;
+    }
+  }
+
   .PopupContainer.FirstTime:nth-child(1){
     .Popup {
       animation-delay: 11s;

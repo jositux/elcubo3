@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react';
 import styles from './season3.popup.module.scss';
+import { useRouter } from "next/router";
 import cx from 'classnames';
 
 const ubications = [
@@ -37,12 +38,11 @@ export const Popup = ({...props}) => {
 
   const [isViewed, setViewed] = useState(false);
 
-
-  console.log(props.refered)
+  const { query } = useRouter(); 
 
   useEffect(() => {
 
-    if (props.refered == "viewed") {
+    if (query.ref == "view") {
       setViewed(true);
     }
     else {
@@ -59,7 +59,7 @@ export const Popup = ({...props}) => {
         }
       });
     });
-  }, [])
+  }, [query])
 
   const clickPopupCharacter = () => {
 
