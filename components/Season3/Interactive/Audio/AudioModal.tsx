@@ -7,7 +7,7 @@ import { Autoplay } from "swiper";
 
 import styles from './season3.audioModal.module.scss';
 
-const AudioModal = ({ showAudioModal, onCloseAudioModal }) => {
+const AudioModal = ({ title, urlAudio, images, showAudioModal, onCloseAudioModal }) => {
 
   React.useEffect(() => {
 
@@ -34,7 +34,7 @@ const AudioModal = ({ showAudioModal, onCloseAudioModal }) => {
           <ArrowDown width={30} height  ={30} />
           </div>
           <img className={styles.imgGallery} src="/images/season3/slider/audio_background.jpg" />
-          <div className={styles.Content}>
+          
           
           
           {showAudioModal &&
@@ -44,33 +44,33 @@ const AudioModal = ({ showAudioModal, onCloseAudioModal }) => {
         spaceBetween={0}
         loop={true}
         autoplay={{
-          delay: 2500,
+          delay: 4500,
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
         className={styles.audioSwiper}
       >
-        <SwiperSlide><img src="/images/season3/slider/audio_background.jpg" /></SwiperSlide>
-        <SwiperSlide><img src="/images/season3/slider/audio_background.jpg" /></SwiperSlide>
-        <SwiperSlide><img src="/images/season3/slider/audio_background.jpg" /></SwiperSlide>
-        <SwiperSlide><img src="/images/season3/slider/audio_background.jpg" /></SwiperSlide>
-        <SwiperSlide><img src="/images/season3/slider/audio_background.jpg" /></SwiperSlide>
-        <SwiperSlide><img src="/images/season3/slider/audio_background.jpg" /></SwiperSlide>
-        <SwiperSlide><img src="/images/season3/slider/audio_background.jpg" /></SwiperSlide>
-        <SwiperSlide><img src="/images/season3/slider/audio_background.jpg" /></SwiperSlide>
-        <SwiperSlide><img src="/images/season3/slider/audio_background.jpg" /></SwiperSlide>
-      </Swiper>
 
-          <h2>Título del Audio</h2>
-            <div className={styles.fullScreenVideo}>
-              <AudioWave audio="/audios/season3/hito2.mp3" />
-            </div>
-            </div>
+        {
+        images.map( (c, index) => (
+        //addMarker('marker', 'marker-'+index, c.time, c.url, c.text)
+        <SwiperSlide><img src={c.url} /></SwiperSlide>
+        ))}
+
+        </Swiper>
+        <div className={styles.Content}>
+            <h2>{title}</h2>
+              <div className={styles.fullScreenVideo}>
+                <AudioWave audio={urlAudio} />
+              </div>
+
+        </div>
+      </div>
             }
           
 
           </div>
-        </div>
+        
       </div>
     </div>
      

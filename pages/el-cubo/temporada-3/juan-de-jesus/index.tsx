@@ -6,15 +6,17 @@ import AudioModal from 'components/Season3/Interactive/Audio/AudioModal';
 import VideoModal from 'components/Season3/Modal/VideoModal';
 import UrlUtils from 'utils/Url';
 
-import SlideModal from 'components/Season3/Interactive/SlideModal/SlideModal';
+import SlideModal from './SlideModal';
 import styles from './lineal.module.scss';
 
 
 const Lineal = () => {
 
-    let srcVideo = UrlUtils.getVideoUrl("470809");
-    let duration = 1983;
-    // FIXME: Remove/refactor
+    let srcVideo = UrlUtils.getVideoUrl("479317");
+    let duration = 1265;
+
+    const urlAudio = "/images/season3/hitos/juan-de-jesus/1/violencia.mp3";
+
     const [showDashboardModal, setShowDashboardModal] = useState(false);
 
     const [player, setPlayer] = useState(null);
@@ -75,26 +77,51 @@ const Lineal = () => {
         time: 1163, 
         url: '/images/season3/hitos/icons/0.jpg',
         text: 'Violencia en Mogotes', 
+        type: 'audio',
       },
       {
         time: 709, 
         url: '/images/season3/hitos/icons/0.jpg',
-        text: 'Jordan Sin Parroco',      
+        text: 'Jordan Sin Parroco', 
+        type: 'video',    
       },
       {
         time: 566, 
         url: '/images/season3/hitos/icons/0.jpg',
-        text: 'Jordan Sin cementerio',    
+        text: 'Jordan Sin cementerio', 
+        type: 'gallery', 
       },
       {
         time: 323, 
         url: '/images/season3/hitos/icons/0.jpg',
-        text: 'Una misa solo',    
+        text: 'Una misa solo',
+        type: 'video',    
       },
       {
         time: 60, 
         url: '/images/season3/hitos/icons/0.jpg',
-        text: 'Santa Rosa, Patrona de Jordan',    
+        text: 'Santa Rosa, Patrona de Jordan',
+        type: 'gallery',   
+      },
+    ];
+
+
+    const images = [
+      {
+        url: '/images/season3/hitos/juan-de-jesus/1/0.jpg',
+        text: 'Violencia en Mogotes', 
+      },
+      {
+        url: '/images/season3/hitos/juan-de-jesus/1/1.jpg',
+        text: 'Jordan Sin Parroco',      
+      },
+      {
+        url: '/images/season3/hitos/juan-de-jesus/1/3.jpg',
+        text: 'Jordan Sin cementerio',    
+      },
+      {
+        url: '/images/season3/hitos/juan-de-jesus/1/4.jpg',
+        text: 'Una misa solo',    
       },
     ];
 
@@ -155,6 +182,14 @@ const Lineal = () => {
     const toggleActiveInteractive = () => {
       setIsActiveInteractive(!isActiveInteractive);
     };
+
+    const openActiveInteractive = () => {
+      setIsActiveInteractive(true);
+    };
+
+    const closeActiveInteractive = () => {
+      setIsActiveInteractive(false);
+    };
   
     
 
@@ -181,6 +216,8 @@ const Lineal = () => {
                 setPlayer={setPlayer}
                 fullscreen={false}
                 showDashboardLineal
+                openActiveInteractive = {openActiveInteractive}
+                closeActiveInteractive = {closeActiveInteractive}
                 markers = {markers}
                 duration = {duration}
                 onClickDashboardLineal={handleOnClickDashboard}   
@@ -200,7 +237,7 @@ const Lineal = () => {
      
         <div className={styles.fullScreenVideo}>
           <VideoModal
-            videoId={"482203"}
+            videoId={"482209"}
             showModal={isOpen}
             setShowModal={setIsOpen}
             onVideoEnded={handleOnDashboardVideoEnd} />
@@ -214,6 +251,9 @@ const Lineal = () => {
 
 
         <AudioModal
+            title = "Violencia de Mogotes"
+            urlAudio ={urlAudio}
+            images = {images}
             showAudioModal={isOpenAudio}
             onCloseAudioModal={handleOnCloseAudioModal} 
           />

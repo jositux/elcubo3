@@ -5,6 +5,8 @@ import HLS from 'hls.js';
 import { useRouter } from 'next/router';
 import 'plyr/dist/plyr.css';
 import { VideoPlayerWrapper } from './VideoPlayer.style';
+import { clear } from 'console';
+import { any } from 'prop-types';
 
 const VideoPlayer = ({
   source,
@@ -18,6 +20,8 @@ const VideoPlayer = ({
   autoPlay,
   showDashboard = false,
   showDashboardLineal = false,
+  openActiveInteractive,
+  closeActiveInteractive,
   duration,
   markers,
   onClickDashboard,
@@ -323,10 +327,24 @@ const VideoPlayer = ({
     setInterval(() => {
       //console.log(parseInt(playerRef.current.currentTime, 10));
 
-      //markers.map( (c, index) => (
-      //c.time == parseInt(playerRef.current.currentTime, 10) ? alert(c.text):  console.log('')
-      
-      //));
+      {markers.map((element, index) => {
+        
+          if(element.time == parseInt(playerRef.current.currentTime, 10)) {
+            openActiveInteractive();
+          }
+
+          if(element.time + 12 == parseInt(playerRef.current.currentTime, 10) ) {
+            closeActiveInteractive();
+          }
+
+      })}
+
+      /*markers.map( (c, index) => (
+        if(c.time == parseInt(playerRef.current.currentTime, 10)) {
+
+        }
+        c.time == parseInt(playerRef.current.currentTime, 10) ? toggleActiveInteractive() : ''
+      ));*/
 
     }, 1000);
 

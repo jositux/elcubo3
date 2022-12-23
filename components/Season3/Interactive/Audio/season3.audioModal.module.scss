@@ -21,10 +21,11 @@
 
 
   .Content {
-    position: relative;
-    padding-left: 80px;
-    padding-right: 80px;
-
+    position: absolute; 
+    z-index: 1;
+    padding: 0vh 80px 0 80px;
+    bottom: 80px;
+    width: 100%;
       h2 {
         font-family: $elcubo3_font_title;
         font-weight: 400;
@@ -133,4 +134,14 @@
 
 .closeIt {
   animation: fade-out 8000ms forwards;
+}
+
+.audioSwiper {
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+  img {
+    width: 100%;
+    height: auto;
+  }
 }

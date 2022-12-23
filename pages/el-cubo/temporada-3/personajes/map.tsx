@@ -1,16 +1,16 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react'
 import Head from 'next/head';
 import Header from 'components/Season3/Header/Header';
 import Footer from 'components/Footer/Footer';
-import useDetectDevice from 'hooks/useDetectDevice';
-import styles from './map.module.scss';
-import PersonajesModal from 'components/Season3/Modal/Personajes/PersonajesModal';
+import PropTypes from 'prop-types'
+import PersonajesModalFade from 'components/Season3/Modal/Personajes/PersonajesModalFade';
 import { Cards } from 'components/Season3/Shared/Cards/Cards';
 import { Popup } from 'components/Season3/Shared/PersonajeSelector/Popup';
 import CloseIconCards from 'components/Season3/Svg/CloseIconCards';
 import Help from 'components/Season3/Svg/Help';
 import { useRouter } from "next/router";
 import cx from 'classnames';
+import styles from './map.module.scss';
 
 const characters = [
   {
@@ -55,12 +55,20 @@ const characters = [
   },
 ];
 
-const map = () => {
+const Fader = ({ text }) => {
 
-  const { isMobile } = useDetectDevice();
-  const [isShowCards, setIsShowCards] = useState(false);
+    const [fadeProp, setFadeProp] = useState({
+        fade: 'fadeIn',
+    });
 
-  const [showPersonajesModal, setShowPersonajesModal] = useState(false);
+    const [isActive, setIsActive] = useState(false);
+
+    const [texto, setTexto] =    useState('');
+
+
+    const [isShowCards, setIsShowCards] = useState(false);
+
+  const [showPersonajesModal, setShowPersonajesModal] = useState(true);
   const [background, setBackground] = useState('/images/season3/steals/0-home-steal-desktop.jpg');
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
@@ -70,12 +78,25 @@ const map = () => {
   const { query } = useRouter(); 
 
   useEffect(() => {
-
+    
     if (isShowCards) {
       handleCards();
     };
     
   }, [])
+
+  useEffect(() => {
+    const handleEsc = (event) => {
+       if (event.keyCode === 27) {
+        setIsShowCards(false)
+      }
+    };
+    window.addEventListener('keydown', handleEsc);
+    return () => {
+      window.removeEventListener('keydown', handleEsc);
+    };
+  }, []);
+
   
   const handleCards = () => {
     const overlay = document.querySelector('#overlay') as HTMLElement;
@@ -86,7 +107,6 @@ const map = () => {
   const closeCards = () => {
     const overlay = document.querySelector('#overlay') as HTMLElement;
     overlay.style.display = 'none';
-    
     setIsShowCards(false);
     fadeOutEffect(overlay);
   }
@@ -105,7 +125,7 @@ const map = () => {
   };
 
   const handleOnClosePersonajesModal = () => {
-    setShowPersonajesModal(false);
+    clickear()
   };
 
   function updatePersonaje(background, name, description, icon, link) {
@@ -130,18 +150,58 @@ const map = () => {
     }, 2000);
 }
 
+    /*
+    useEffect(() => {
+        const timeout = setInterval(() => {
+            if (fadeProp.fade === 'fadeIn') {
+                setFadeProp({
+                    fade: 'fadeOut'
+                });
+                setIsActive(false);
+            } else {
+                setFadeProp({
+                    fade: 'fadeIn'
+                })
+                setIsActive(true);
+            }
+        }, 2000);
 
-  return (
-    <Fragment>
-      <Head>
+        return () => clearInterval(timeout)
+    }, [fadeProp])*/
+
+    function clickear() {
+        setIsActive(!isActive);
+        if (fadeProp.fade === 'fadeIn') {
+            setFadeProp({
+                fade: 'fadeOut'
+            });
+            
+        } else {
+            setFadeProp({
+                fade: 'fadeIn'
+            })
+        }
+    }
+
+
+    function updateText(pTexto) {
+        setTexto(pTexto);
+    }
+
+
+    return (
+        <Fragment>
+        <Head>
         <title>Temporada 3 - El Cubo</title>
         <meta property="og:title" content="▶️ Temporada 3 de【EL CUBO】La Serie Online Interactiva | RTVC Play" key="title" />
         <meta name="description" content="✅ El Cubo la única serie online interactiva, ⭐ entra ahora y sumérgete en las mejores historias tridimensionales de la televisión online gratuita" />
         <meta property="og:image" content="" />
-      </Head>
+        </Head>
 
-      <Header />
-      <PersonajesModal
+            <Header />
+
+            <div data-testid="fader" className={isActive? styles.fadeIn : styles.fadeOut}>
+            <PersonajesModalFade
             background={background}
             name = {name}
             description = {description}
@@ -150,7 +210,8 @@ const map = () => {
             showPersonajesModal={showPersonajesModal}
             onClosePersonajesModal={handleOnClosePersonajesModal}
       />
-      
+            </div>
+
       { 
       !query.ref && 
       <video className={styles.VideoOverlay} autoPlay loop playsInline muted>
@@ -176,14 +237,21 @@ const map = () => {
       
         <div className={styles.CharacterBackground}>
           
-          <Popup characters={characters} onClickPersonajesModal={ handleOnClickPersonajesModal } updatePersonaje={ updatePersonaje } refered={!query.ref ? "first" : "viewed" } />
+          <Popup characters={characters} onClickPersonajesModal={ clickear } updatePersonaje={ updatePersonaje } refered={!query.ref ? "first" : "viewed" } />
 
         </div>
       </div>  
-
       <Footer />
     </Fragment>
-  )
+    )
 }
 
-export default map
+Fader.defaultProps = {
+    text: 'Hello World!'
+}
+
+Fader.propTypes = {
+    text: PropTypes.string,
+}
+
+export default Fader
