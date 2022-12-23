@@ -320,40 +320,6 @@ const VideoPlayer = ({
     }
   }, [title]);
 
-
-  React.useEffect(() => {
-    playerRef.current.on('play', (event) => {
-
-      setInterval(() => {
-        //console.log(parseInt(playerRef.current.currentTime, 10));
-
-        {
-          markers.map((element, index) => {
-
-            if (element.time == parseInt(playerRef.current.currentTime, 10)) {
-              openActiveInteractive();
-            }
-
-            if (element.time + 12 == parseInt(playerRef.current.currentTime, 10)) {
-              closeActiveInteractive();
-            }
-
-          })
-        }
-
-        /*markers.map( (c, index) => (
-          if(c.time == parseInt(playerRef.current.currentTime, 10)) {
-  
-          }
-          c.time == parseInt(playerRef.current.currentTime, 10) ? toggleActiveInteractive() : ''
-        ));*/
-
-      }, 1000);
-
-
-    });
-  }, [playerRef.current, markers]);
-
   // Add Markers
   React.useEffect(() => {
     //let video_duration = playerRef.current.duration;

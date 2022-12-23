@@ -1,45 +1,40 @@
-import React, { Fragment, useState} from 'react';
-import ArrowDown from 'components/Season3/Svg/ArrowDown';
+import React from 'react';
 import AudioWave from 'components/Season3/Shared/AudioWave/AudioWave';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
-
-
 import styles from './season3.audioModal.module.scss';
+import SlideModal from '../SlideModal/SlideModal';
 
-const AudioModal = ({ title, urlAudio, images, showAudioModal, onCloseAudioModal }) => {
+const AudioModal = ({
+  isActive,
+  handleOpenInteractive,
+  handleCloseInteractive,
+  data
+}) => {
+  const {
+    field_ec_title: title,
+    field_ec_audio: urlAudio,
+    field_ec_gallery
+  } = data;
 
-  React.useEffect(() => {
-
-    window.onclick = function (e) {
-      if (e.target.id == 'container') {
-        onCloseAudioModal
+  const images = field_ec_gallery.split(',').map(img => {
+    const imgA = img.split('|');
+    if (imgA && imgA.length) {
+      return {
+        url: imgA[0],
+        title: imgA[1] || ''
       }
-    };
-
-    window.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') {
-        onCloseAudioModal
-      }
-    });
-
+    }
+    return {};
   });
 
-
   return (
-    <div id="container" className={`${styles.containerCover} ${showAudioModal ? styles.open : ""}`}>
-      <div className={styles.container}>
-        <div className={styles.child}>
-          <div className={styles.t_close} onClick={onCloseAudioModal}>
-          <ArrowDown width={30} height  ={30} />
-          </div>
-          <img className={styles.imgGallery} src="/images/season3/slider/audio_background.jpg" />
-          
-          
-          
-          {showAudioModal &&
-          <div>
-          <Swiper
+    <SlideModal
+      isActive={isActive}
+      handleOpenInteractive={handleOpenInteractive}
+      handleCloseInteractive={handleCloseInteractive}
+    >
+      <Swiper
         slidesPerView={1}
         spaceBetween={0}
         loop={true}
@@ -50,35 +45,18 @@ const AudioModal = ({ title, urlAudio, images, showAudioModal, onCloseAudioModal
         modules={[Autoplay]}
         className={styles.audioSwiper}
       >
-
         {
-        images.map( (c, index) => (
-        //addMarker('marker', 'marker-'+index, c.time, c.url, c.text)
-        <SwiperSlide><img src={c.url} /></SwiperSlide>
-        ))}
-
-        </Swiper>
-        <div className={styles.Content}>
-            <h2>{title}</h2>
-              <div className={styles.fullScreenVideo}>
-                <AudioWave audio={urlAudio} />
-              </div>
-
+          images.map(img => (
+            <SwiperSlide><img src={img.url} /></SwiperSlide>
+          ))}
+      </Swiper>
+      <div className={styles.Content}>
+        <h2>{title}</h2>
+        <div className={styles.fullScreenVideo}>
+          <AudioWave audio={urlAudio} />
         </div>
       </div>
-            }
-          
-
-          </div>
-        
-      </div>
-    </div>
-     
-     
-
- 
-      
-   
+    </SlideModal>
   );
 };
 

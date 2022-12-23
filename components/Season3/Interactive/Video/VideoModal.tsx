@@ -2,67 +2,46 @@ import React, { useState, useEffect } from "react";
 import Video2Level from 'components/Season3/Shared/Video2Level/VideoPlayer';
 import UrlUtils from 'utils/Url';
 import disableScroll from 'disable-scroll';
-import styles from './season3.videoModal.module.scss';
+import SlideModal from '../SlideModal/SlideModal';
 
-
-const VideoModal = ({ videoId, showModal, setShowModal, onVideoEnded, autoPlay }) => {
-
+const VideoModal = ({
+  isActive,
+  handleOpenInteractive,
+  handleCloseInteractive,
+  onVideoEnded,
+  autoPlay = true,
+  data
+}) => {
+  console.log('DATA EN VIDEO MODAL', data);
   const [player, setPlayer] = useState(null);
-  const srcVideo = UrlUtils.getVideoUrl(videoId);
+  const srcVideo = UrlUtils.getVideoUrl('3324234');
 
-    
-  useEffect(() => {
-    disableScroll.on();
-    if (player && showModal) {
-      player.play();
-    }
-  }, [showModal]);
-
-
-/*
   useEffect(() => {
     disableScroll.on();
     if (player) {
       player.play();
     }
-  }, [player]);*/
-
-  const handleCloseVideo = () => {
-    setShowModal(false);
-    disableScroll.off();
-    player.stop();
-    onVideoEnded();
-    //setPlayer(false);
-  }
-
-  const UpdateVideo = () => {
-
-  }
+  }, [player]);
 
   return (
-
-    <div id="container" className={`${styles.containerCover} ${showModal ? styles.open : ""}`}>
-      <div className={styles.container}>
-        <div className={styles.child}>
-          <p className={styles.t_close} onClick={handleCloseVideo}>
-          </p>
-          
-          <Video2Level
-            title={""}
-            source={srcVideo}
-            showPrevButton={false}
-            showNextButton={false}
-            setPlayer={setPlayer} 
-            onVideoEnded={onVideoEnded}
-            fullscreen={false}
-            autoPlay={autoPlay}
-          />
-          
-         
-        </div>
-      </div>
-    </div>
-    
+    <SlideModal
+      isActive={isActive}
+      handleOpenInteractive={handleOpenInteractive}
+      handleCloseInteractive={handleCloseInteractive}
+    >
+      {/* <div className={styles.fullScreenVideo}> */}
+      <Video2Level
+        title={""}
+        source={srcVideo}
+        showPrevButton={false}
+        showNextButton={false}
+        setPlayer={setPlayer}
+        onVideoEnded={onVideoEnded}
+        fullscreen={false}
+        autoPlay={autoPlay}
+      />
+      {/* </div> */}
+    </SlideModal>
   );
 };
 

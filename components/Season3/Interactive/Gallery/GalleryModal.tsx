@@ -1,4 +1,4 @@
-import React, { Fragment, useState} from 'react';
+import React, { Fragment, useState } from 'react';
 import Lightbox from "yet-another-react-lightbox";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
@@ -10,24 +10,35 @@ import IconZoom from 'components/Season3/Svg/Zoom';
 import "swiper/css/navigation";
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/effect-cards"; 
+import "swiper/css/effect-cards";
 import styled from 'styled-components';
 import styles from './season3.galleryModal.module.scss';
 
-const GalleryModal = ({ showGalleryModal, onCloseGalleryModal }) => {
+import SlideModal from '../SlideModal/SlideModal';
 
+const GalleryModal = ({
+  isActive,
+  handleOpenInteractive,
+  handleCloseInteractive,
+  onCloseGalleryModal,
+  data
+}) => {
+  console.log('DATA EN GALLERY MODAL', data);
+  const {
+    field_ec_title,
+    field_ec_audio,
+    field_ec_gallery
+  } = data;
   const [open, setOpen] = React.useState(false);
   const [maxZoomPixelRatio, setMaxZoomPixelRatio] = React.useState(1);
   const [zoomInMultiplier, setZoomInMultiplier] = React.useState(2);
   const [doubleTapDelay, setDoubleTapDelay] = React.useState(300);
   const [doubleClickDelay, setDoubleClickDelay] = React.useState(300);
   const [doubleClickMaxStops, setDoubleClickMaxStops] = React.useState(2);
- 
+
   const [index, setIndex] = React.useState(0);
 
-
   React.useEffect(() => {
-
     window.onclick = function (e) {
       if (e.target.id == 'container') {
         onCloseGalleryModal
@@ -39,20 +50,15 @@ const GalleryModal = ({ showGalleryModal, onCloseGalleryModal }) => {
         onCloseGalleryModal
       }
     });
-
   });
 
-
   return (
-    <div id="container" className={`${styles.containerCover} ${showGalleryModal ? styles.open : ""}`}>
-      <div className={styles.container}>
-        <div className={styles.child}>
-          <div className={styles.t_close} onClick={onCloseGalleryModal}>
-          <ArrowDown width={30} height={30} />
-          </div>
-          <img className={styles.imgGallery} src="/images/season3/slider/galeria_background.jpg" />
-          {showGalleryModal &&
-          <Lightbox
+    <SlideModal
+      isActive={isActive}
+      handleOpenInteractive={handleOpenInteractive}
+      handleCloseInteractive={handleCloseInteractive}
+    >
+      <Lightbox
         open={open}
         close={() => setOpen(false)}
         plugins={[Zoom]}
@@ -65,8 +71,8 @@ const GalleryModal = ({ showGalleryModal, onCloseGalleryModal }) => {
           exited: () => console.log("Exited")
         }}
         render={{
-          buttonPrev:  () => null,
-          buttonNext:  () => null
+          buttonPrev: () => null,
+          buttonNext: () => null
         }}
         slides={[
           {
@@ -116,75 +122,64 @@ const GalleryModal = ({ showGalleryModal, onCloseGalleryModal }) => {
           },
           // ...
         ]}
-      />}
-    <div className={styles.ContainerContent}>
-      <div className={styles.Content}>
-    <div className={styles.Column}>
-      <h2>Título de
-        la Galería</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi efficitur fermentum neque in luctus. Sed iaculis ultrices sem.</p>
-    </div>
-    <div className={styles.Column}>
-    
-    <Swiper
-        effect={"cards"}
-        grabCursor={true}
-        loop={true}
-        zoom={true}
-        autoplay={{
-          delay: 4500,
-          disableOnInteraction: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, EffectCards, Navigation]}
-        className={styles.gallerySwiper}
-      >
-        <SwiperSlide>
-          <div className={styles.OpenZoom}  onClick={ () => { setIndex(0); setOpen(true);} }>
-          <IconZoom />
+      />
+      <div className={styles.ContainerContent}>
+        <div className={styles.Content}>
+          <div className={styles.Column}>
+            <h2>Título de
+              la Galería</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi efficitur fermentum neque in luctus. Sed iaculis ultrices sem.</p>
           </div>
-          <img className={styles.ImagesSwiper} src="/images/season3/hitos/0.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={styles.OpenZoom}  onClick={ () => { setIndex(1); setOpen(true);} }>
-          <IconZoom />
+          <div className={styles.Column}>
+            <Swiper
+              effect={"cards"}
+              grabCursor={true}
+              loop={true}
+              zoom={true}
+              autoplay={{
+                delay: 4500,
+                disableOnInteraction: true,
+              }}
+              navigation={true}
+              modules={[Autoplay, EffectCards, Navigation]}
+              className={styles.gallerySwiper}
+            >
+              <SwiperSlide>
+                <div className={styles.OpenZoom} onClick={() => { setIndex(0); setOpen(true); }}>
+                  <IconZoom />
+                </div>
+                <img className={styles.ImagesSwiper} src="/images/season3/hitos/0.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={styles.OpenZoom} onClick={() => { setIndex(1); setOpen(true); }}>
+                  <IconZoom />
+                </div>
+                <img className={styles.ImagesSwiper} src="/images/season3/hitos/1.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={styles.OpenZoom} onClick={() => { setIndex(2); setOpen(true); }}>
+                  <IconZoom />
+                </div>
+                <img className={styles.ImagesSwiper} src="/images/season3/hitos/2.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={styles.OpenZoom} onClick={() => { setIndex(3); setOpen(true); }}>
+                  <IconZoom />
+                </div>
+                <img className={styles.ImagesSwiper} src="/images/season3/hitos/3.jpg" />
+
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={styles.OpenZoom} onClick={() => { setIndex(4); setOpen(true); }}>
+                  <IconZoom />
+                </div>
+                <img className={styles.ImagesSwiper} src="/images/season3/hitos/4.jpg" />
+              </SwiperSlide>
+            </Swiper>
           </div>
-          <img className={styles.ImagesSwiper} src="/images/season3/hitos/1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-        <div className={styles.OpenZoom}  onClick={ () => { setIndex(2); setOpen(true);} }>
-          <IconZoom />
-          </div>
-          <img className={styles.ImagesSwiper} src="/images/season3/hitos/2.jpg" />
-     
-        </SwiperSlide>
-        <SwiperSlide>
-        <div className={styles.OpenZoom}  onClick={ () => { setIndex(3); setOpen(true);} }>
-          <IconZoom />
-          </div>
-          <img className={styles.ImagesSwiper} src="/images/season3/hitos/3.jpg" />
-     
-        </SwiperSlide>
-        <SwiperSlide>
-        <div className={styles.OpenZoom} onClick={ () => { setIndex(4); setOpen(true);} }>
-          <IconZoom />
-          </div>
-          <img className={styles.ImagesSwiper} src="/images/season3/hitos/4.jpg" />
-     
-        </SwiperSlide>
-        
-      </Swiper>
-    </div>
-</div>
-    </div>
-     
-     
         </div>
       </div>
-    </div>
- 
-      
-   
+    </SlideModal>
   );
 };
 

@@ -1,15 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import VideoPlayer from 'components/Season3/VideoPlayer/VideoPlayer';
 import Dashboard from 'components/Season3/Modal/DashboardSlideModal';
-import GalleryModal from 'components/Season3/Modal/GalleryModal';
-import AudioModal from 'components/Season3/Modal/AudioModal';
-import VideoModal from 'components/Season3/Modal/VideoModal';
+import GalleryModal from 'components/Season3/Interactive/Gallery/GalleryModal';
+import AudioModal from 'components/Season3/Interactive/Audio/AudioModal';
+import VideoModal from 'components/Season3/Interactive/Video/VideoModal';
 import UrlUtils from 'utils/Url';
-
-import SlideModal from 'components/Season3/Interactive/SlideModal/SlideModal';
 import styles from './lineal.module.scss';
 import { rawFetch } from 'libs/fetcher';
-
 
 const Personaje = (props) => {
   const {
@@ -22,13 +19,25 @@ const Personaje = (props) => {
   let srcVideo = UrlUtils.getVideoUrl(episodio?.field_ec_asset_id);
   let duration = episodio?.field_ec_video_duration;
   const [isActiveInteractive, setIsActiveInteractive] = useState(false);
+  const [interactiveData, setInteractiveData] = useState(null);
   const [isOpenGallery, setIsOpenGallery] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenSlideModal, setIsOpenSlideModal] = useState(false);
   const [isOpenAudio, setIsOpenAudio] = useState(false);
+  const [interactiveType, setInteractiveType] = useState('')
   const [showDashboardModal, setShowDashboardModal] = useState(false);
   const [player, setPlayer] = useState(null);
   const steal = useRef(null);
+
+  const markers = interactivos.map(i => {
+    return {
+      time: parseInt(i?.field_ec_time_action),
+      url: i?.field_ec_thumb,
+      text: i?.field_ec_title
+    }
+  });
+
+  const urlAudio = "/images/season3/hitos/juan-de-jesus/1/violencia.mp3";
 
   const fadeOut = (el, pTime) => {
     el.style.opacity = 1;
@@ -41,7 +50,6 @@ const Personaje = (props) => {
     };
     fadeO();
   };
-
 
   useEffect(() => {
     const fixLoad = () => {
@@ -59,7 +67,6 @@ const Personaje = (props) => {
     if (steal?.current && player) {
       onLoadFadeout();
     }
-
   }, [steal.current, player]);
 
   const handlePlayVideo = (playVideo) => {
@@ -70,6 +77,56 @@ const Personaje = (props) => {
     }
   };
 
+  useEffect(() => {
+    if (player) {
+      player.on('play', (event) => {
+        setInterval(() => {
+          interactivos.map((i, index) => {
+            if (i.field_ec_time_action == parseInt(player.currentTime, 10)) {
+              setInteractiveData(i);
+              switch (i.type) {
+                case 'ec3_interactive_audio':
+                  setInteractiveType('audio');
+                  break;
+                case 'ec3_interactive_video':
+                  setInteractiveType('video');
+                  break;
+                case 'ec3_interactive_gallery':
+                  setInteractiveType('gallery');
+                  break;
+                default:
+                  setInteractiveType(null);
+                  break;
+              }
+              openActiveInteractive();
+            }
+            if (i.field_ec_time_action + 12 == parseInt(player.currentTime, 10)) {
+              closeActiveInteractive();
+            }
+          })
+        }, 1000);
+      });
+    }
+  }, [player]);
+
+  useEffect(() => {
+    const fixLoad = () => {
+      player.forward(5);
+      player.rewind(5);
+      player.play();
+    };
+    const onLoadFadeout = () => {
+      window.setTimeout(() => {
+        fadeOut(steal.current, 40);
+        fixLoad();
+      }, 4000);
+
+    };
+    if (steal?.current && player) {
+      onLoadFadeout();
+    }
+  }, [steal.current, player]);
+
   const handleOnClickDashboard = () => {
     setShowDashboardModal(true);
   };
@@ -79,28 +136,27 @@ const Personaje = (props) => {
     handlePlayVideo(true);
   };
 
-  const markers = interactivos.map(i => {
-    console.log(' parseInt(i?.field_ec_time_action)parseInt(i?.field_ec_time_action)', parseInt(i?.field_ec_time_action))
-    return {
-      time: parseInt(i?.field_ec_time_action),
-      url: i?.field_ec_thumb,
-      text: i?.field_ec_title
-    }
-  })
-
-  const handleOnPlayVideo = () => {
-    setIsOpen(true)
-    handlePlayVideo(false);
-  };
+  const images = [
+    {
+      url: '/images/season3/hitos/juan-de-jesus/1/0.jpg',
+      text: 'Violencia en Mogotes',
+    },
+    {
+      url: '/images/season3/hitos/juan-de-jesus/1/1.jpg',
+      text: 'Jordan Sin Parroco',
+    },
+    {
+      url: '/images/season3/hitos/juan-de-jesus/1/3.jpg',
+      text: 'Jordan Sin cementerio',
+    },
+    {
+      url: '/images/season3/hitos/juan-de-jesus/1/4.jpg',
+      text: 'Una misa solo',
+    },
+  ];
 
   const handleOnDashboardVideoEnd = () => {
-    setIsOpen(false);
     handlePlayVideo(true);
-  };
-
-  const handleOnOpenGalleryModal = () => {
-    setIsOpenGallery(true);
-    handlePlayVideo(false);
   };
 
   const handleOnCloseGalleryModal = () => {
@@ -108,41 +164,21 @@ const Personaje = (props) => {
     handlePlayVideo(true);
   };
 
-  const handleOnOpenAudioModal = () => {
-    setIsOpenAudio(true);
-    handlePlayVideo(false);
-  };
-
-  const handleOnCloseAudioModal = () => {
-    setIsOpenAudio(false);
-    handlePlayVideo(true);
-  };
-
   const handleOnOpenSlideModal = () => {
-    setIsOpenSlideModal(true);
     handlePlayVideo(false);
   };
 
   const handleOnCloseSlideModal = () => {
-    setIsOpenSlideModal(false);
     handlePlayVideo(true);
   };
 
-  const toggleActiveInteractive = () => {
-    setIsActiveInteractive(!isActiveInteractive);
-  };
-
-  const handleOnActiveInteractive = () => {
+  const openActiveInteractive = () => {
     setIsActiveInteractive(true);
-    handlePlayVideo(false);
   };
 
-  const handleOffActiveInteractive = () => {
+  const closeActiveInteractive = () => {
     setIsActiveInteractive(false);
-    handlePlayVideo(true);
   };
-
-
 
   return (
     <div className={styles.NodeContainer}>
@@ -167,50 +203,37 @@ const Personaje = (props) => {
           setPlayer={setPlayer}
           fullscreen={false}
           showDashboardLineal
+          openActiveInteractive={openActiveInteractive}
+          closeActiveInteractive={closeActiveInteractive}
           markers={markers}
           duration={duration}
           onClickDashboardLineal={handleOnClickDashboard}
         />
       </div>
 
-      <span className={styles.Video2level} onClick={handleOnPlayVideo}>Abrir Video 2 level</span>
+      {interactiveType === 'video' && <VideoModal
+        isActive={isActiveInteractive}
+        handleOpenInteractive={handleOnOpenSlideModal}
+        handleCloseInteractive={handleOnCloseSlideModal}
+        onVideoEnded={handleOnDashboardVideoEnd}
+        data={interactiveData}
+      />}
 
-      <span className={styles.Gallery2level} onClick={handleOnOpenGalleryModal}>Abrir Gallery 2 level</span>
-
-      <span className={styles.Audio2level} onClick={handleOnOpenAudioModal}>Abrir Audio 2 level</span>
-      <br />
-      <span className={styles.Slide2level} onClick={handleOnOpenSlideModal}>Abrir Slide Vacio</span>
-
-      <span className={styles.activeTrigger} onClick={toggleActiveInteractive}>{isActiveInteractive ? "DesacActivar" : "Activar"}</span>
-
-
-      <div className={styles.fullScreenVideo}>
-        <VideoModal
-          videoId={"475352"}
-          showModal={isOpen}
-          setShowModal={setIsOpen}
-          onVideoEnded={handleOnDashboardVideoEnd} />
-      </div>
-
-
-      <GalleryModal
-        showGalleryModal={isOpenGallery}
+      {interactiveType === 'gallery' && <GalleryModal
+        isActive={isActiveInteractive}
+        handleOpenInteractive={handleOnOpenSlideModal}
+        handleCloseInteractive={handleOnCloseSlideModal}
         onCloseGalleryModal={handleOnCloseGalleryModal}
-      />
+        data={interactiveData}
+      />}
 
+      {interactiveType === 'audio' && <AudioModal
+        isActive={isActiveInteractive}
+        handleOpenInteractive={handleOnOpenSlideModal}
+        handleCloseInteractive={handleOnCloseSlideModal}
+        data={interactiveData}
+      />}
 
-      <AudioModal
-        showAudioModal={isOpenAudio}
-        onCloseAudioModal={handleOnCloseAudioModal}
-      />
-
-      <div className={`${styles.coverSlide} ${isActiveInteractive ? styles.activeInteractiveSlide : ""}`}>
-        <SlideModal
-          isActive={isActiveInteractive}
-          showSlideModal={isOpenSlideModal}
-          onCloseSlideModal={handleOnCloseSlideModal}
-        />
-      </div>
     </div>
   );
 };
@@ -227,11 +250,11 @@ const Personaje = (props) => {
 // }
 
 export const getServerSideProps = async (context) => {
-  const { params } = context
-  const { personaje } = params
+  const { params } = context;
+  const { personaje } = params;
   const dataRaw = await rawFetch('/api/v1/elcubo3/season/6679/interactive/all');
   const dataJson = await dataRaw.json();
-  const filtteredData = dataJson.filter(d => personaje === d.field_ec_title)
+  const filtteredData = dataJson.filter(d => personaje === d.field_ec_title);
 
   if (!filtteredData || !filtteredData.length) {
     return {
@@ -241,28 +264,29 @@ export const getServerSideProps = async (context) => {
     };
   }
 
-  const dataPersonaje = filtteredData[0]
+  const dataPersonaje = filtteredData[0];
   const {
     field_ec_episode_json,
     field_ec3_interactives_items_json,
     field_ec_confessional_episode_json,
     field_ec_characters,
     field_ec_video_duration
-  } = dataPersonaje
+  } = dataPersonaje;
 
-  const episodeJson = JSON.parse(field_ec_episode_json)?.[0]
+  const episodeJson = JSON.parse(field_ec_episode_json)?.[0];
   const itemsInteractivo = JSON.parse(field_ec3_interactives_items_json).sort((a, b) => {
-    const durA = parseInt(a.field_ec_time_action)
-    const durB = parseInt(b.field_ec_time_action)
+    const durA = parseInt(a.field_ec_time_action);
+    const durB = parseInt(b.field_ec_time_action);
     if (durA > durB) {
-      return 1
+      return 1;
     } else if (durA < durB) {
-      return -1
+      return -1;
     }
-    return 0
-  })
-  const confesionario = JSON.parse(field_ec_confessional_episode_json)?.[0]
-  const persona = JSON.parse(field_ec_characters)?.[0]
+    return 0;
+  });
+
+  const confesionario = JSON.parse(field_ec_confessional_episode_json)?.[0];
+  const persona = JSON.parse(field_ec_characters)?.[0];
 
   return {
     props: {
