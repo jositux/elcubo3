@@ -12,9 +12,9 @@ const VideoModal = ({
   autoPlay = true,
   data
 }) => {
-  console.log('DATA EN VIDEO MODAL', data);
   const [player, setPlayer] = useState(null);
-  const srcVideo = UrlUtils.getVideoUrl('3324234');
+  const srcVideo = UrlUtils.getVideoUrl('482209');
+  const [openSlide, setOpenSlide] = useState(null)
 
   useEffect(() => {
     disableScroll.on();
@@ -28,6 +28,7 @@ const VideoModal = ({
       isActive={isActive}
       handleOpenInteractive={handleOpenInteractive}
       handleCloseInteractive={handleCloseInteractive}
+      setOpenSlide={openSlide}
     >
       {/* <div className={styles.fullScreenVideo}> */}
       <Video2Level
@@ -36,7 +37,10 @@ const VideoModal = ({
         showPrevButton={false}
         showNextButton={false}
         setPlayer={setPlayer}
-        onVideoEnded={onVideoEnded}
+        onVideoEnded={() => {
+          console.log('CIERRO EL SLIDER')
+          setOpenSlide(false)
+        }}
         fullscreen={false}
         autoPlay={autoPlay}
       />

@@ -82,25 +82,28 @@ const Personaje = (props) => {
       player.on('play', (event) => {
         setInterval(() => {
           interactivos.map((i, index) => {
-            if (i.field_ec_time_action == parseInt(player.currentTime, 10)) {
-              setInteractiveData(i);
-              switch (i.type) {
-                case 'ec3_interactive_audio':
-                  setInteractiveType('audio');
-                  break;
-                case 'ec3_interactive_video':
-                  setInteractiveType('video');
-                  break;
-                case 'ec3_interactive_gallery':
-                  setInteractiveType('gallery');
-                  break;
-                default:
-                  setInteractiveType(null);
-                  break;
+            if (parseInt(player.currentTime, 10) == i.field_ec_time_action) {
+              console.log('ENTRE, Y EL TIPO ES', i)
+              if (!isActiveInteractive) {
+                openActiveInteractive();
+                setInteractiveData(i);
+                switch (i.type) {
+                  case 'ec3_interactive_audio':
+                    setInteractiveType('audio');
+                    break;
+                  case 'ec3_interactive_video':
+                    setInteractiveType('video');
+                    break;
+                  case 'ec3_interactive_gallery':
+                    setInteractiveType('gallery');
+                    break;
+                  default:
+                    setInteractiveType(null);
+                    break;
+                }
               }
-              openActiveInteractive();
             }
-            if (i.field_ec_time_action + 12 == parseInt(player.currentTime, 10)) {
+            if (parseInt(player.currentTime, 10) == i.field_ec_time_action + 12) {
               closeActiveInteractive();
             }
           })
@@ -169,6 +172,7 @@ const Personaje = (props) => {
   };
 
   const handleOnCloseSlideModal = () => {
+    setIsActiveInteractive(false);
     handlePlayVideo(true);
   };
 

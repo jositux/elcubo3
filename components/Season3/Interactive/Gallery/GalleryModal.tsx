@@ -1,17 +1,15 @@
-import React, { Fragment, useState } from 'react';
+import React, { useEffect } from 'react';
 import Lightbox from "yet-another-react-lightbox";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectCards, Navigation } from "swiper";
-import ArrowDown from 'components/Season3/Svg/ArrowDown';
 import IconZoom from 'components/Season3/Svg/Zoom';
 
 import "swiper/css/navigation";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-cards";
-import styled from 'styled-components';
 import styles from './season3.galleryModal.module.scss';
 
 import SlideModal from '../SlideModal/SlideModal';
@@ -23,12 +21,25 @@ const GalleryModal = ({
   onCloseGalleryModal,
   data
 }) => {
-  console.log('DATA EN GALLERY MODAL', data);
   const {
     field_ec_title,
-    field_ec_audio,
+    field_ec_description,
     field_ec_gallery
   } = data;
+
+  const images = field_ec_gallery.split(',').map(i => {
+    const imgA = i.split('|');
+    return {
+      src: imgA[0],
+      alt: imgA[1] || '',
+      width: 3840,
+      height: 2560,
+      srcSet: [
+        { src: imgA[0], width: 960, height: 480 },
+      ]
+    }
+  });
+
   const [open, setOpen] = React.useState(false);
   const [maxZoomPixelRatio, setMaxZoomPixelRatio] = React.useState(1);
   const [zoomInMultiplier, setZoomInMultiplier] = React.useState(2);
@@ -38,7 +49,7 @@ const GalleryModal = ({
 
   const [index, setIndex] = React.useState(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.onclick = function (e) {
       if (e.target.id == 'container') {
         onCloseGalleryModal
@@ -74,61 +85,13 @@ const GalleryModal = ({
           buttonPrev: () => null,
           buttonNext: () => null
         }}
-        slides={[
-          {
-            src: "/images/season3/hitos/0b.jpg",
-            alt: "image 1",
-            width: 3840,
-            height: 2560,
-            srcSet: [
-              { src: "/images/season3/hitos/0b.jpg", width: 960, height: 480 },
-            ]
-          },
-          {
-            src: "/images/season3/hitos/1b.jpg",
-            alt: "image 2",
-            width: 3840,
-            height: 2560,
-            srcSet: [
-              { src: "/images/season3/hitos/1b.jpg", width: 960, height: 480 },
-            ]
-          },
-          {
-            src: "/images/season3/hitos/2b.jpg",
-            alt: "image 3",
-            width: 3840,
-            height: 2560,
-            srcSet: [
-              { src: "/images/season3/hitos/2b.jpg", width: 960, height: 480 },
-            ]
-          },
-          {
-            src: "/images/season3/hitos/3b.jpg",
-            alt: "image 4",
-            width: 3840,
-            height: 2560,
-            srcSet: [
-              { src: "/images/season3/hitos/3b.jpg", width: 960, height: 480 },
-            ]
-          },
-          {
-            src: "/images/season3/hitos/4b.jpg",
-            alt: "image 4",
-            width: 3840,
-            height: 2560,
-            srcSet: [
-              { src: "/images/season3/hitos/4b.jpg", width: 960, height: 480 },
-            ]
-          },
-          // ...
-        ]}
+        slides={images}
       />
       <div className={styles.ContainerContent}>
         <div className={styles.Content}>
           <div className={styles.Column}>
-            <h2>Título de
-              la Galería</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi efficitur fermentum neque in luctus. Sed iaculis ultrices sem.</p>
+            <h2>{field_ec_title}</h2>
+            <p>{field_ec_description}</p>
           </div>
           <div className={styles.Column}>
             <Swiper
@@ -144,37 +107,16 @@ const GalleryModal = ({
               modules={[Autoplay, EffectCards, Navigation]}
               className={styles.gallerySwiper}
             >
-              <SwiperSlide>
-                <div className={styles.OpenZoom} onClick={() => { setIndex(0); setOpen(true); }}>
-                  <IconZoom />
-                </div>
-                <img className={styles.ImagesSwiper} src="/images/season3/hitos/0.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={styles.OpenZoom} onClick={() => { setIndex(1); setOpen(true); }}>
-                  <IconZoom />
-                </div>
-                <img className={styles.ImagesSwiper} src="/images/season3/hitos/1.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={styles.OpenZoom} onClick={() => { setIndex(2); setOpen(true); }}>
-                  <IconZoom />
-                </div>
-                <img className={styles.ImagesSwiper} src="/images/season3/hitos/2.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={styles.OpenZoom} onClick={() => { setIndex(3); setOpen(true); }}>
-                  <IconZoom />
-                </div>
-                <img className={styles.ImagesSwiper} src="/images/season3/hitos/3.jpg" />
-
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={styles.OpenZoom} onClick={() => { setIndex(4); setOpen(true); }}>
-                  <IconZoom />
-                </div>
-                <img className={styles.ImagesSwiper} src="/images/season3/hitos/4.jpg" />
-              </SwiperSlide>
+              {images && images.length && images.map((img, index) => {
+                return img.src ? <SwiperSlide>
+                  <div className={styles.OpenZoom} onClick={() => { setIndex(index); setOpen(true); }}>
+                    <IconZoom />
+                  </div>
+                  <img className={styles.ImagesSwiper} src={img.src} />
+                </SwiperSlide>
+                  :
+                  null
+              })}
             </Swiper>
           </div>
         </div>

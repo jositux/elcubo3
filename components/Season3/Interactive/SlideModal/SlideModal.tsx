@@ -1,11 +1,25 @@
-import React, { Fragment, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ArrowDown from 'components/Season3/Svg/ArrowDown';
 import styles from './season3.slideModal.module.scss';
 
-const SlideModal = ({ children, isActive, handleOpenInteractive, handleCloseInteractive }) => {
-
+const SlideModal = ({
+  children,
+  isActive,
+  handleOpenInteractive,
+  handleCloseInteractive,
+  setOpenSlide = null
+}) => {
   // Slide Vacio
   const [isOpenSlideModal, setIsOpenSlideModal] = useState(false);
+
+  useEffect(() => {
+    if (setOpenSlide === true) {
+      openSlide();
+    }
+    if (setOpenSlide === false) {
+      closeSlide();
+    }
+  }, [setOpenSlide]);
 
   const handleToggle = () => {
     if (!isOpenSlideModal) {
@@ -26,7 +40,7 @@ const SlideModal = ({ children, isActive, handleOpenInteractive, handleCloseInte
     setIsOpenSlideModal(false);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener('keydown', function (event) {
       if (event.key === 'Escape') {
         setIsOpenSlideModal(false);
