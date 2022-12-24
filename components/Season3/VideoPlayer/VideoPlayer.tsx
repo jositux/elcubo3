@@ -320,39 +320,6 @@ const VideoPlayer = ({
     }
   }, [title]);
 
-
-  React.useEffect(() => {
-  playerRef.current.on('play', (event) => {
-
-    setInterval(() => {
-      //console.log(parseInt(playerRef.current.currentTime, 10));
-
-      {markers.map((element, index) => {
-        
-          if(element.time == parseInt(playerRef.current.currentTime, 10)) {
-            openActiveInteractive();
-          }
-
-          if(element.time + 12 == parseInt(playerRef.current.currentTime, 10) ) {
-            closeActiveInteractive();
-          }
-
-      })}
-
-      /*markers.map( (c, index) => (
-        if(c.time == parseInt(playerRef.current.currentTime, 10)) {
-
-        }
-        c.time == parseInt(playerRef.current.currentTime, 10) ? toggleActiveInteractive() : ''
-      ));*/
-
-    }, 1000);
-
-
-    });
-}, [playerRef.current, markers]);
-
-
   // Add Markers
   React.useEffect(() => {
     //let video_duration = playerRef.current.duration;
@@ -364,30 +331,30 @@ const VideoPlayer = ({
     };
 
     const createPoint = (pClassElement, pSeconds, pUrl, pText) => {
+      console.log('P SECONDS', pSeconds, video_duration)
       let percent = calculatePercent(pSeconds, video_duration);
       let point = document.createElement('div');
       let img = new Image();
       img.src = pUrl;
       console.log(document.querySelector('.' + pClassElement));
       point.appendChild(img);
-      point.setAttribute('class', 'marker '+ pClassElement);
+      point.setAttribute('class', 'marker ' + pClassElement);
       point.setAttribute('style', 'left: ' + percent + '%;');
       return point;
     }
 
     const addMarker = (pClass, pClassElement, pPercent, pUrl, pText) => {
       const controls = document.querySelector('.plyr__progress');
-      if (controls && document.querySelector(pClass) == null)
-      { 
-          controls.appendChild(createPoint(pClassElement, pPercent, pUrl, pText));
+      if (controls && document.querySelector(pClass) == null) {
+        controls.appendChild(createPoint(pClassElement, pPercent, pUrl, pText));
       }
-      
+
     }
 
     if (markers.length !== 0) {
-      markers.map( (c, index) => (
-        addMarker('marker', 'marker-'+index, c.time, c.url, c.text)
-    ))
+      markers.map((c, index) => (
+        addMarker('marker', 'marker-' + index, c.time, c.url, c.text)
+      ))
     }
 
   }, [markers, duration, playerRef.current]);

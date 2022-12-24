@@ -1,20 +1,9 @@
-/*.containerCover {
-  width: 100%;
-  height: 100vh;
-  max-width: 100%;
-  overflow-x: hidden;
-  display: flex;
-  background: rgba(0, 0, 0, 0);
-  position: absolute;
-  top: 0;
-}*/
-
 
   .Content {
     position: relative;
-    // padding-top: 50vh;
-    // padding-left: 80px;
-    // padding-right: 80px;
+    padding-top: 50vh;
+    padding-left: 80px;
+    padding-right: 80px;
 
       h2 {
         font-family: $elcubo3_font_title;
@@ -44,6 +33,10 @@
 
 .containerCover.open {
   z-index: 2; //transition: opacity .2s linear;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
 }
 
 .containerCover.open .container {

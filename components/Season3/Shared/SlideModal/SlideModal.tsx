@@ -1,28 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { Fragment, useState} from 'react';
 import ArrowDown from 'components/Season3/Svg/ArrowDown';
 import styles from './season3.slideModal.module.scss';
 
-const SlideModal = ({
-  children,
-  isActive,
-  handleOpenInteractive,
-  handleCloseInteractive,
-  setOpenSlide = null
-}) => {
+const SlideModal = ({ isActive, handleOnOpenSlideModal, handleOnCloseSlideModal }) => {
+
   // Slide Vacio
   const [isOpenSlideModal, setIsOpenSlideModal] = useState(false);
 
-  useEffect(() => {
-    if (setOpenSlide === true) {
-      openSlide();
-    }
-    if (setOpenSlide === false) {
-      closeSlide();
-    }
-  }, [setOpenSlide]);
-
   const handleToggle = () => {
-    if (!isOpenSlideModal) {
+    if(!isOpenSlideModal) {
       openSlide();
     }
     else {
@@ -31,25 +17,28 @@ const SlideModal = ({
   };
 
   let openSlide = () => {
-    handleOpenInteractive();
+    handleOnOpenSlideModal();
     setIsOpenSlideModal(true);
   };
 
   const closeSlide = () => {
-    handleCloseInteractive();
     setIsOpenSlideModal(false);
+    handleOnCloseSlideModal();
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
+
     window.addEventListener('keydown', function (event) {
       if (event.key === 'Escape') {
         setIsOpenSlideModal(false);
       }
     });
+
   });
 
+
   return (
-    <div id="container"
+    <div id="container" 
       className={
         `${styles.containerCover} 
         ${isOpenSlideModal ? styles.open : ""} 
@@ -61,19 +50,28 @@ const SlideModal = ({
             `${styles.t_close} 
             ${isOpenSlideModal ? styles.arrowDown : ""} 
             ${isActive ? styles.arrowUp : ""}`
-          }
-            onClick={
+            } 
+            onClick={ 
               handleToggle
             }>
-            <ArrowDown width={30} height={30} />
+            <ArrowDown width={30} height  ={30} />
           </div>
-          {/* <img className={styles.imgGallery} src="/images/season3/slider/audio_background.jpg" /> */}
+          <img className={styles.imgGallery} src="/images/season3/slider/audio_background.jpg" />
           <div className={styles.Content}>
-            {isOpenSlideModal && children}
+          
+          
+          {isOpenSlideModal &&
+          <div>
+          <h2>contenido</h2>
+          </div>
+            }
+          
+
           </div>
         </div>
       </div>
-    </div>
+    </div>   
+   
   );
 };
 

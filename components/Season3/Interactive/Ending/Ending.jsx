@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Ending.module.scss';
 
-const Ending = ({ onButtonClicked, onContinue }) => {
+const Ending = ({ onButtonClicked = () => {}, onContinue = () => {}}) => {
 
   return (
     <React.Fragment>
