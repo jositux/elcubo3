@@ -2,7 +2,7 @@ import React, { Fragment, useState, useRef } from 'react';
 import VideoModal from 'components/Season3/Modal/VideoModal';
 
 import PersonajeArrow from 'components/Season3/Svg/PersonajeArrow';
-import { Popup } from 'components/Season3/Shared/PersonajeSelector/Popup';
+import Characters from './Characters';
 import styles from './dashboard.module.scss';
 import YoutubeModal from 'components/Season3/Modal/YoutubeModal';
 
@@ -120,10 +120,10 @@ Completa todos los personajes con sus objetos y desbloquea la <strong>Infografí
   </div>
 
 </div>
-<YoutubeModal videoId='XyOS58YExw8' />
+
 </div>
      
-          <Popup characters={characters} />
+          <Characters characters={characters} />
           {
           characters.map( (c, index) => (
             c.name == char ?
@@ -146,7 +146,7 @@ Completa todos los personajes con sus objetos y desbloquea la <strong>Infografí
           ))
         }
 
-      <div className={styles.coverBG}></div>
+      {/*<div className={styles.coverBG}></div>*/}
     </div>
 
   </div>

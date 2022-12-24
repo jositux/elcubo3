@@ -196,7 +196,7 @@ const Lineal = () => {
           onClickDashboardLineal={handleOnClickDashboard}
         />
       </div>
-
+{/*
       <VideoModal
         isActive={isActiveInteractive}
         handleOpenInteractive={handleOnOpenSlideModal}
@@ -220,7 +220,7 @@ const Lineal = () => {
         title="Violencia de Mogotes"
         urlAudio={urlAudio}
         images={images}
-      />
+  />*/}
     </div>
   );
 };
