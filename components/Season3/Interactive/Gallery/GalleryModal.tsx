@@ -14,6 +14,8 @@ import styles from './season3.galleryModal.module.scss';
 
 import SlideModal from '../SlideModal/SlideModal';
 
+console.log(data)
+
 const GalleryModal = ({
   isActive,
   handleOpenInteractive,

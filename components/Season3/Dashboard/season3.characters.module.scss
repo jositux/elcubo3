@@ -1,0 +1,184 @@
+.PopupContainer {
+  display: flex;
+  cursor: pointer;  
+}
+
+.Popup {
+  width: 5vw;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.soledad-g {
+  /*
+  top: 290px !important;
+  left: 730px !important;
+  */
+
+  img {
+    //width: 190px;
+  }
+}
+
+
+/* .diego-g {
+  top: 485px!important;
+  left: 830px!important;
+
+  img {
+    width: 190px;
+  }
+} */
+
+/* .juandejesus-g {
+  top: 625px !important;
+  left: 990px !important;
+
+  img {
+    width: 190px;
+  }
+} */
+
+
+/* .guillermo-g {
+  top: 830px !important;
+  left: 1030px !important;
+
+  img {
+    width: 190px;
+  }
+}  */
+
+
+/* .jenny-g {
+  top: 75px !important;
+  left: 1360px !important;
+  
+  img {
+    width: 190px;
+  }
+}  */
+
+
+
+.titleImage {
+  h2 {
+    margin: 0 0 -6px 0;
+    font-weight: initial;
+    text-align: center;
+  }
+}
+
+
+.textContent {
+  width: 255px;
+  height: 160px;
+  text-align: left;
+  justify-content: center;
+  position: relative;
+  top: 40px;
+  left: 0;
+  display: none;
+
+  h1 {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    width: 250px;
+    font-size: 16px;
+    text-align: justify;
+    font-weight: 300;
+    font-family: $elcubo3_font_subtitle;
+    line-height: 130%;
+    margin: 15px 0;
+  }
+
+  button {
+    width: 200px;
+    height: 45px;
+    background-color: #E2B857;
+    border: none;
+
+    span {
+      text-transform: uppercase;
+      color: #402A04;
+    }
+  }
+
+}
+
+
+
+
+
+
+  .Popup:hover {
+   cursor: pointer;
+  }
+
+
+
+  .Popup{
+    opacity: 0;
+    animation-name: bounceIn;
+    animation-duration: 450ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;  
+  }
+
+  .PopupContainer.Viewed {
+    .Popup {
+    animation-duration: 450ms;
+    animation-delay: 0s;
+    }
+  }
+
+  .PopupContainer.FirstTime:nth-child(1){
+    .Popup {
+      animation-delay: 11s;
+    }
+  }
+  .PopupContainer.FirstTime:nth-child(2){
+    .Popup{
+      animation-delay: 11.2s;
+    }
+  }
+  .PopupContainer.FirstTime:nth-child(3){
+    .Popup{
+      animation-delay: 11.4s;
+    }
+  }
+  .PopupContainer.FirstTime:nth-child(4){
+    .Popup {
+      animation-delay: 11.6s;
+    }
+  }
+  .PopupContainer.FirstTime:nth-child(5){
+    .Popup {
+      animation-delay: 11.8s;
+    }
+  }
+
+
+@keyframes bounceIn{
+  0%{
+    opacity: 0;
+    transform: scale(0.3) translate3d(0,0,0);
+  }
+  50%{
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+  80%{
+    opacity: 1;
+    transform: scale(0.89);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1) translate3d(0,0,0);
+  }
+}
