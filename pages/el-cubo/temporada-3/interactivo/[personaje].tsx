@@ -4,6 +4,7 @@ import Dashboard from 'components/Season3/Modal/DashboardSlideModal';
 import GalleryModal from 'components/Season3/Interactive/Gallery/GalleryModal';
 import AudioModal from 'components/Season3/Interactive/Audio/AudioModal';
 import VideoModal from 'components/Season3/Interactive/Video/VideoModal';
+import Ending from 'components/Season3/Interactive/Ending/Ending';
 import UrlUtils from 'utils/Url';
 import styles from './lineal.module.scss';
 import { rawFetch } from 'libs/fetcher';
@@ -28,6 +29,7 @@ const Personaje = (props) => {
   const [showDashboardModal, setShowDashboardModal] = useState(false);
   const [player, setPlayer] = useState(null);
   const steal = useRef(null);
+  const [videoEnded, setVideoEnded] = useState(false);
 
   const markers = interactivos.map(i => {
     return {
@@ -36,8 +38,6 @@ const Personaje = (props) => {
       text: i?.field_ec_title
     }
   });
-
-  const urlAudio = "/images/season3/hitos/juan-de-jesus/1/violencia.mp3";
 
   const fadeOut = (el, pTime) => {
     el.style.opacity = 1;
@@ -79,11 +79,10 @@ const Personaje = (props) => {
 
   useEffect(() => {
     if (player) {
-      player.on('play', (event) => {
+      player.on('play', () => {
         setInterval(() => {
           interactivos.map((i, index) => {
             if (parseInt(player.currentTime, 10) == i.field_ec_time_action) {
-              console.log('ENTRE, Y EL TIPO ES', i)
               if (!isActiveInteractive) {
                 openActiveInteractive();
                 setInteractiveData(i);
@@ -109,6 +108,9 @@ const Personaje = (props) => {
           })
         }, 1000);
       });
+      player.on('ended', () => {
+        setVideoEnded(true);
+      })
     }
   }, [player]);
 
@@ -138,25 +140,6 @@ const Personaje = (props) => {
     setShowDashboardModal(false);
     handlePlayVideo(true);
   };
-
-  const images = [
-    {
-      url: '/images/season3/hitos/juan-de-jesus/1/0.jpg',
-      text: 'Violencia en Mogotes',
-    },
-    {
-      url: '/images/season3/hitos/juan-de-jesus/1/1.jpg',
-      text: 'Jordan Sin Parroco',
-    },
-    {
-      url: '/images/season3/hitos/juan-de-jesus/1/3.jpg',
-      text: 'Jordan Sin cementerio',
-    },
-    {
-      url: '/images/season3/hitos/juan-de-jesus/1/4.jpg',
-      text: 'Una misa solo',
-    },
-  ];
 
   const handleOnDashboardVideoEnd = () => {
     handlePlayVideo(true);
@@ -237,6 +220,8 @@ const Personaje = (props) => {
         handleCloseInteractive={handleOnCloseSlideModal}
         data={interactiveData}
       />}
+
+      {videoEnded && <Ending />}
 
     </div>
   );
