@@ -7,7 +7,9 @@ const SlideModal = ({
   isActive,
   handleOpenInteractive,
   handleCloseInteractive,
-  setOpenSlide = null
+  setOpenSlide = null,
+  onOpenCallback = () => { },
+  onCloseCallback = () => { },
 }) => {
   // Slide Vacio
   const [isOpenSlideModal, setIsOpenSlideModal] = useState(false);
@@ -33,11 +35,13 @@ const SlideModal = ({
   let openSlide = () => {
     handleOpenInteractive();
     setIsOpenSlideModal(true);
+    onOpenCallback && onOpenCallback();
   };
 
   const closeSlide = () => {
     handleCloseInteractive();
     setIsOpenSlideModal(false);
+    onCloseCallback && onCloseCallback();
   };
 
   useEffect(() => {
@@ -67,9 +71,9 @@ const SlideModal = ({
             }>
             <ArrowDown width={30} height={30} />
           </div>
-          {<img className={styles.imgContent} src="/images/season3/slider/audio_background.jpg" /> }
+          {<img className={styles.imgContent} src="/images/season3/slider/audio_background.jpg" />}
           <div className={styles.Content}>
-            {isOpenSlideModal && children}
+            {children}
           </div>
         </div>
       </div>

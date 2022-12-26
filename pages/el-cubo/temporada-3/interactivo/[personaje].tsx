@@ -109,7 +109,7 @@ const Personaje = (props) => {
             }
 
             let timeEndActive = parseInt(i.field_ec_time_action, 10) + 12;
-            if ( parseInt(player.currentTime, 10) == timeEndActive ) {
+            if (parseInt(player.currentTime, 10) == timeEndActive) {
               closeActiveInteractive();
             }
           })
@@ -209,7 +209,6 @@ const Personaje = (props) => {
         isActive={isActiveInteractive}
         handleOpenInteractive={handleOnOpenSlideModal}
         handleCloseInteractive={handleOnCloseSlideModal}
-        onVideoEnded={handleOnDashboardVideoEnd}
         data={interactiveData}
       />}
 

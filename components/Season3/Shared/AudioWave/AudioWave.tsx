@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import WaveSurfer from 'wavesurfer.js'
 import styles from './season3.audiowave.module.scss';
 
 const formWaveSurferOptions = (ref) => ({
@@ -16,35 +17,30 @@ const formWaveSurferOptions = (ref) => ({
   transitionDuration: 2000
 });
 
-
-const AudioWave = ({audio = "default.mp3"}) => {
+const AudioWave = ({
+  audio = "default.mp3",
+  setAudioPlayer
+}) => {
   const waveformRef = useRef(null);
   const wavesurfer = useRef(null);
-
   const [playing, setPlaying] = useState(true);
-
   const url = audio;
 
   useEffect(() => {
     create();
-
     return () => {
       if (wavesurfer.current) {
         wavesurfer.current.destroy();
       }
     };
-
   }, []);
 
-  
   const create = async () => {
-    const WaveSurfer = (await import("wavesurfer.js")).default;
-
+    const WaveSurfer = (await import('wavesurfer.js')).default;
     const options = formWaveSurferOptions(waveformRef.current);
     wavesurfer.current = WaveSurfer.create(options);
-
     wavesurfer.current.load(url);
-    
+    setAudioPlayer && setAudioPlayer(wavesurfer.current);
   };
 
   const handlePlayPause = () => {
