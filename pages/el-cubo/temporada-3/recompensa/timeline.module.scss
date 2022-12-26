@@ -42,7 +42,7 @@
     display: none;
   }
 
-  @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+  @media only screen and (min-width: 681px) and (max-width: 900px) and (orientation: landscape) {
     margin-top: 7.5rem;
     height: calc(100vh + 200rem);
   }
@@ -74,8 +74,8 @@
     min-height: 80vh;
   }
 
-  @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
-    height: 100vh;
+  @media only screen and (min-width: 681px) and (max-width: 900px) and (orientation: landscape) {
+    height: auto;
 
     .columnText,
     .columnLink {
@@ -116,7 +116,7 @@
       font-family: $elcubo3_font_subtitle;
     }
 
-    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+    @media only screen and (min-width: 681px) and (max-width: 900px) and (orientation: landscape) {
       .Title {
         font-size: 45px!important;
       }
@@ -173,7 +173,7 @@
       width: 125%;
     }
 
-    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+    @media only screen and (min-width: 681px) and (max-width: 900px) and (orientation: landscape) {
       width: 90%!important;
     }
   }
@@ -299,7 +299,7 @@
       }
     }
 
-    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+    @media only screen and (min-width: 681px) and (max-width: 900px) and (orientation: landscape) {
       min-height: 150px;
 
       .LinkText {
@@ -338,7 +338,7 @@
       top: -100px;
     }
 
-    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+    @media only screen and (min-width: 681px) and (max-width: 900px) and (orientation: landscape) {
       top: -55px;
     }
   }
@@ -409,7 +409,7 @@
       }
     }
 
-    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+    @media only screen and (min-width: 681px) and (max-width: 900px) and (orientation: landscape) {
       padding-bottom: 40px;
     }
   }
@@ -472,7 +472,7 @@
       }
     }
 
-    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+    @media only screen and (min-width: 681px) and (max-width: 900px) and (orientation: landscape) {
       min-height: 50px;
       margin-bottom: 50px;
 
@@ -491,7 +491,7 @@
 
 .ItemContent:nth-child(3) {
   @media only screen and (max-width: 680px) {
-    height: 90vh!important;
+    height: auto !important;
   }
 
   .Clows {

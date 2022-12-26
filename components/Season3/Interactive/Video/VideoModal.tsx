@@ -13,17 +13,24 @@ const VideoModal = ({
   data
 }) => {
   const [player, setPlayer] = useState(null);
-  const srcVideo = UrlUtils.getVideoUrl('482209');
+  console.log(data);  
+  let srcVideo = UrlUtils.getVideoUrl('482209');
+  if(data.id == '1505' ) {
+    srcVideo = UrlUtils.getVideoUrl('482211');  
+  }
   const [openSlide, setOpenSlide] = useState(null)
+
+  console.log(data);
 
   useEffect(() => {
     disableScroll.on();
     if (player) {
-      player.play();
+        //player.play();
     }
   }, [player]);
 
   return (
+    <div className="interactive-video">
     <SlideModal
       isActive={isActive}
       handleOpenInteractive={handleOpenInteractive}
@@ -46,6 +53,7 @@ const VideoModal = ({
       />
       {/* </div> */}
     </SlideModal>
+    </div>
   );
 };
 
