@@ -19,6 +19,11 @@ const Personaje = (props) => {
 
   let srcVideo = UrlUtils.getVideoUrl(episodio?.field_ec_asset_id);
   let duration = episodio?.field_ec_video_duration;
+  let title = personaje?.field_ec_real_name;
+
+  console.log(personaje);
+  //let steal = episodio?.field_ec_asset_id
+
   const [isActiveInteractive, setIsActiveInteractive] = useState(false);
   const [interactiveData, setInteractiveData] = useState(null);
   const [isOpenGallery, setIsOpenGallery] = useState(false);
@@ -102,7 +107,7 @@ const Personaje = (props) => {
                 }
               }
             }
-            
+
             let timeEndActive = parseInt(i.field_ec_time_action, 10) + 12;
             if ( parseInt(player.currentTime, 10) == timeEndActive ) {
               closeActiveInteractive();
@@ -177,15 +182,15 @@ const Personaje = (props) => {
         onCloseDashboard={handleOnCloseDashboard}
       />
       <div ref={steal} className={styles.steal}>
-        <img className={styles.stealDesktop} src="/images/season3/steals/personaje-juan.jpg" />
-        <img className={styles.stealMobile} src="/images/season3/steals/personaje-juan.jpg" />
+        <img className={styles.stealDesktop} src={`/images/season3/steals/${personaje?.name.split(" ")[0].toLowerCase()}.jpg`} />
+        <img className={styles.stealMobile} src={`/images/season3/steals/${personaje?.name.split(" ")[0].toLowerCase()}-mobile.jpg`} />
       </div>
       <div className={`${styles.coverVideo} ${isActiveInteractive ? styles.activeInteractive : ""}`}>
         <VideoPlayer
           showBackButton
           backButtonLink={"/el-cubo/temporada-3/personajes/map?ref=view"}
-          backButtonText={"Volver"}
-          title={"Juan de Jesús"}
+          backButtonText={"Elegir otro personaje"}
+          title={title}
           source={srcVideo}
           showPrevButton={false}
           showNextButton={false}

@@ -75,8 +75,8 @@ const characters = [
 
 <div className={styles.Content}>
           <h2>Dashboard</h2>
-          <p>Suma <strong>3 objetos coleccionables</strong> de cada personaje y desbloquea su <strong>Confesionario</strong>.<br />
-Completa todos los personajes con sus objetos y desbloquea la <strong>Infografía</strong>.</p>
+          <p>Completa <strong>los hitos</strong> de cada personaje y desbloquea su <strong>Confesionario</strong>.<br />
+Completa todos los personajes y desbloquea la <strong>Infografía</strong>.</p>
 
 <div className={styles.Characters}>
   <h3>Objetos coleccionables</h3>

@@ -18,6 +18,16 @@ const VideoModal = ({
   if(data.id == '1505' ) {
     srcVideo = UrlUtils.getVideoUrl('482211');  
   }
+  // Guillermo 1
+  if(data.id == '1512' ) {
+    srcVideo = UrlUtils.getVideoUrl('482203');  
+  }
+  // Guillermo 2
+  if(data.id == '1515' ) {
+    srcVideo = UrlUtils.getVideoUrl('482205');  
+  }
+
+  
   const [openSlide, setOpenSlide] = useState(null)
 
   console.log(data);
