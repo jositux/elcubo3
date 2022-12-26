@@ -19,7 +19,7 @@ const characters = [
     description: '“Los cambios siempre dan miedo, pero hay que hacerlos con miedos y todo“',
     background: '/images/season3/steals/personaje-soledad.jpg',
     icon :'/images/season3/map/popups/popup-soledad.png',
-    link: '../soledad',
+    link: '../interactivo/soledad',
   },
   {
     name:'diego', 
@@ -27,7 +27,7 @@ const characters = [
     description: '“Para lograr las cosas primero hay que soñarlas“',
     background: '/images/season3/steals/personaje-diego.jpg',
     icon :'/images/season3/map/popups/popup-diego.png',
-    link: '../diego',
+    link: '../interactivo/diego',
   },
   {
     name:'juandejesus', 
@@ -35,7 +35,7 @@ const characters = [
     description: '“Uno busca su misión en la vida, pero a veces es la propia misión la que a uno lo encuentra“',
     background: '/images/season3/steals/personaje-juan.jpg',
     icon :'/images/season3/map/popups/popup-juandejesus.png',
-    link: '../juan-de-jesus',
+    link: '../interactivo/juan',
   },
   {
     name:'jenny', 
@@ -43,7 +43,7 @@ const characters = [
     description: '“Viajando se conoce la libertad“',
     background: '/images/season3/steals/personaje-jenny.jpg',
     icon :'/images/season3/map/popups/popup-jenny.png',
-    link: '../jenny',
+    link: '../interactivo/jenny',
   },
   {
     name:'guillermo', 
@@ -51,7 +51,7 @@ const characters = [
     description: '“Y si algún día me separo de María, espero encontrarla del otro lado“',
     background: '/images/season3/steals/personaje-guillermo.jpg',
     icon :'/images/season3/map/popups/popup-guillermo.png',
-    link: '../guillermo',
+    link: '../interactivo/guillermo',
   },
 ];
 
@@ -78,7 +78,7 @@ const Fader = ({ text }) => {
   const { query } = useRouter(); 
 
   useEffect(() => {
-    
+
     if (isShowCards) {
       handleCards();
     };

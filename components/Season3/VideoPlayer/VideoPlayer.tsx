@@ -331,12 +331,12 @@ const VideoPlayer = ({
     };
 
     const createPoint = (pClassElement, pSeconds, pUrl, pText) => {
-      console.log('P SECONDS', pSeconds, video_duration)
+      //console.log('P SECONDS', pSeconds, video_duration)
       let percent = calculatePercent(pSeconds, video_duration);
       let point = document.createElement('div');
       let img = new Image();
       img.src = pUrl;
-      console.log(document.querySelector('.' + pClassElement));
+
       point.appendChild(img);
       point.setAttribute('class', 'marker ' + pClassElement);
       point.setAttribute('style', 'left: ' + percent + '%;');
