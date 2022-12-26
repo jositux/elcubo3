@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { MutableRefObject, useEffect, useState } from 'react';
 import AudioWave from 'components/Season3/Shared/AudioWave/AudioWave';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
@@ -11,6 +11,9 @@ const AudioModal = ({
   handleCloseInteractive,
   data
 }) => {
+  const [openSlide, setOpenSlide] = useState(null)
+  const [audioPlayer, setAudioPlayer] = useState();
+  const [isSlideOpen, setIsSlideOpen] = useState(false);
   const {
     field_ec_title: title,
     field_ec_audio: urlAudio,
@@ -28,11 +31,29 @@ const AudioModal = ({
     return {};
   });
 
+  useEffect(() => {
+    if (audioPlayer) {
+      if (isSlideOpen) {
+        audioPlayer.play();
+      } else {
+        audioPlayer.pause();
+      }
+      audioPlayer.on('finish', () => {
+        setOpenSlide(false);
+        handleCloseInteractive();
+        setOpenSlide(null);
+      })
+    }
+  }, [audioPlayer, isSlideOpen]);
+
   return (
     <SlideModal
       isActive={isActive}
       handleOpenInteractive={handleOpenInteractive}
       handleCloseInteractive={handleCloseInteractive}
+      onOpenCallback={() => setIsSlideOpen(true)}
+      onCloseCallback={() => setIsSlideOpen(false)}
+      setOpenSlide={openSlide}
     >
       <Swiper
         slidesPerView={1}
@@ -53,7 +74,7 @@ const AudioModal = ({
       <div className={styles.Content}>
         <h2>{title}</h2>
         <div className={styles.fullScreenVideo}>
-          <AudioWave audio={urlAudio} />
+          <AudioWave setAudioPlayer={setAudioPlayer} audio={urlAudio} />
         </div>
       </div>
     </SlideModal>
