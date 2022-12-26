@@ -2,9 +2,10 @@ import React, { Fragment, useState, useRef } from 'react';
 import VideoModal from 'components/Season3/Modal/VideoModal';
 
 import PersonajeArrow from 'components/Season3/Svg/PersonajeArrow';
+import Progress from 'components/Season3/Shared/Progress/Progress';
 import Characters from './Characters';
 import styles from './dashboard.module.scss';
-import YoutubeModal from 'components/Season3/Modal/YoutubeModal';
+
 
 const Dashboard = ({char}) => {
   const ref = useRef();
@@ -77,46 +78,24 @@ const characters = [
           <p>Suma <strong>3 objetos coleccionables</strong> de cada personaje y desbloquea su <strong>Confesionario</strong>.<br />
 Completa todos los personajes con sus objetos y desbloquea la <strong>Infografía</strong>.</p>
 
-<div className={styles.Collectibles}>
+<div className={styles.Characters}>
   <h3>Objetos coleccionables</h3>
   <div className={styles.row}>
-    <span className={styles.name}>Juan de Jesús</span>
-    <img src="/images/season3/collectibles/0.png" />
-    <img src="/images/season3/collectibles/0.png" />
-    <img src="/images/season3/collectibles/0.png" />
-    <span className={styles.count}>3 de 3</span>
-  </div>
-
-  <div className={styles.row}>
-    <span className={styles.name}>Don Guillermo</span>
-    <img src="/images/season3/collectibles/0.png" />
-    <img src="/images/season3/collectibles/0.png" />
-    <img src="/images/season3/collectibles/0.png" />
-    <span className={styles.count}>3 de 3</span>
-  </div>
-
-  <div className={styles.row}>
-    <span className={styles.name}>Jenny</span>
-    <img src="/images/season3/collectibles/0.png" />
-    <img src="/images/season3/collectibles/0.png" />
-    <img src="/images/season3/collectibles/0.png" />
-    <span className={styles.count}>3 de 3</span>
-  </div>
-
-  <div className={styles.row}>
-    <span className={styles.name}>Diego</span>
-    <img src="/images/season3/collectibles/0.png" />
-    <img src="/images/season3/collectibles/0.png" />
-    <img src="/images/season3/collectibles/0.png" />
-    <span className={styles.count}>3 de 3</span>
-  </div>
-
-  <div className={styles.row}>
-    <span className={styles.name}>Soledad</span>
-    <img src="/images/season3/collectibles/0.png" />
-    <img src="/images/season3/collectibles/0.png" />
-    <img src="/images/season3/collectibles/0.png" />
-    <span className={styles.count}>3 de 3</span>
+    <div className={styles.column1}>
+      <div className={styles.avatar}>
+      <img src="/images/season3/dashboard/juan.png" />
+      </div>
+      <div className={styles.name}>
+      <h6>Juan de Jesús</h6>
+      <a href="">Ver historia</a>
+      </div>
+      <div className={styles.progress}>
+        <Progress percent={68} />
+      </div>
+    </div>
+    <div className={styles.column2}>
+      
+    </div>
   </div>
 
 </div>

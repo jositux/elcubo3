@@ -6,7 +6,7 @@
   text-align: center;
   .Content {
     padding: 20px 80px;
-    width: 380px;
+    width: 580px;
     text-align: left;
     position: relative;
     z-index: 1;
@@ -28,7 +28,7 @@
   }
 }
 
-.Collectibles {
+.Characters {
   margin-top: 40px;
   .row {
     display: flex;
@@ -38,13 +38,22 @@
     h2 {
       font-weight: 400;
     }
-    span:nth-child(1) {
-      width: 22%;
+    .column1 {
+      width: 60%;
+      display: flex;
+      padding: 20px;
+      div.avatar {
+        width: 40px;
+      }
+      div.name {
+        width: 100px;
+      }
+      div.progress {
+        width: 100px;
+      }
     }
-    span:last-child {
-      font-family: $elcubo3_font_subtitle;
-      font-weight: 300;
-      font-size: 14px;
+    .column2 {
+      width: 40%;
     }
   }
 }

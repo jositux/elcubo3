@@ -101,6 +101,10 @@ export const VideoPlayerWrapper = styled.div`
     height: 100vh;
   }
 
+  .interactiveVideo .plyr {
+    height: calc(100vh - 50px);
+  }
+
 .plyr video {
     object-fit: cover;
 }

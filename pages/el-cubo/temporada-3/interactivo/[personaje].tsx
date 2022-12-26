@@ -102,7 +102,9 @@ const Personaje = (props) => {
                 }
               }
             }
-            if (parseInt(player.currentTime, 10) == i.field_ec_time_action + 12) {
+            
+            let timeEndActive = parseInt(i.field_ec_time_action, 10) + 12;
+            if ( parseInt(player.currentTime, 10) == timeEndActive ) {
               closeActiveInteractive();
             }
           })

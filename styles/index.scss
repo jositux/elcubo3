@@ -55,3 +55,7 @@ div.slick-list {
 .yarl__slide {
   padding: 0 !important;
 }
+
+.interactive-video .plyr {
+  height: calc(100vh - 50px) !important;
+}
