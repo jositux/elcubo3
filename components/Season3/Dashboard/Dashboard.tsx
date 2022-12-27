@@ -191,8 +191,9 @@ const characters = [
 </div>
 
 </div>
-     
+      <div className= {`${styles['Popup-' + char]}`}>
           <Characters characters={characters} />
+      </div>
           {
           characters.map( (c, index) => (
             c.name == char ?
