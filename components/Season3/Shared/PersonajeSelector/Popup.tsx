@@ -15,12 +15,12 @@ const ubications = [
     left: '47%',
   },
   {
-    name: 'juandejesus', 
+    name: 'juan', 
     top: '60%', 
     left: '60%',
   },
   {
-    name: 'jenny', 
+    name: 'yenny', 
     top: '5%', 
     left: '83%',
   },
@@ -88,7 +88,7 @@ export const Popup = ({...props}) => {
             className={styles.titleImage}
             style={{cursor:"pointer"}}
             >
-              <img src={c.icon}   className={styles.Popup}  />
+              <img src={c.icon} className={styles.Popup}  />
             </div>
             <div className={styles.textContent }>
               <h1>{c.realName}</h1>

@@ -20,6 +20,9 @@ const Personaje = (props) => {
   let srcVideo = UrlUtils.getVideoUrl(episodio?.field_ec_asset_id);
   let duration = episodio?.field_ec_video_duration;
   let title = personaje?.field_ec_real_name;
+  let name = personaje?.name.split(" ")[0].toLowerCase();
+
+  console.log(personaje);
 
   const [isActiveInteractive, setIsActiveInteractive] = useState(false);
   const [interactiveData, setInteractiveData] = useState(null);
@@ -167,13 +170,13 @@ const Personaje = (props) => {
   return (
     <div className={styles.NodeContainer}>
       <Dashboard
-        char="juandejesus"
+        char={name}
         showModal={showDashboardModal}
         onCloseDashboard={handleOnCloseDashboard}
       />
       <div ref={steal} className={styles.steal}>
-        <img className={styles.stealDesktop} src={`/images/season3/steals/${personaje?.name.split(" ")[0].toLowerCase()}.jpg`} />
-        <img className={styles.stealMobile} src={`/images/season3/steals/${personaje?.name.split(" ")[0].toLowerCase()}-mobile.jpg`} />
+        <img className={styles.stealDesktop} src={`/images/season3/steals/${name}.jpg`} />
+        <img className={styles.stealMobile} src={`/images/season3/steals/${name}-mobile.jpg`} />
       </div>
       <div className={`${styles.coverVideo} ${isActiveInteractive ? styles.activeInteractive : ""}`}>
         <VideoPlayer

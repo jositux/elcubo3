@@ -37,9 +37,7 @@
     h2 {
       font-weight: 400;
     }
-    .column1.full {
-      background: rgba(64, 56, 4, .7);
-    }
+    
     .column1 {
       width: 60%;
       display: flex;
@@ -75,11 +73,31 @@
         font-weight: 300;
         color:#E2B857;
         border: 1px solid #E2B857;
-        width: 100%;
+        width: 120px;
         font-size: 14px;
         padding: 10px;
       }
     }
+  }
+}
+
+.Info {
+  width: 100%;
+  margin-top: 10px;
+  a {
+    font-family: $elcubo3_font_subtitle;
+    font-weight: 300;
+    color:#E2B857;
+    border: 1px solid #E2B857;
+    font-size: 14px;
+    padding: 10px;
+    width: 120px;
+    text-align: center;
+    float: right;
+    margin: 10px;
+    background: #402A04;
+    cursor: pointer;
+    text-decoration: none;
   }
 }
 
@@ -166,27 +184,70 @@ a.video360 {
   }
 }
 
-.juandejesus {
+.juan {
   left: 56%;
   top: 50%;
 }
 
-.jenny {
-  left: 60%;
+.yenny {
+  left: 57%;
   top: 2%;
   flex-direction: row-reverse;
+  .column:nth-child(2) {
+    width: 45%;
+  }
 }
 
 .diego {
-  right: 25%;
+  right: 18%;
 }
 
 .guillermo {
-  right: 12%;
+  right: 9%;
   top: 70%;
 }
 
 .soledad {
-  left: 36%;
+  left: 42%;
   top: 20%;
+}
+
+.Content.Char-juan {
+  .rowJuan {
+    .column1 {
+      background: rgba(64, 56, 4, .7);
+    }
+  }
+}
+
+.Content.Char-guillermo {
+  .rowGuillermo {
+    .column1 {
+      background: rgba(64, 56, 4, .7);
+    }
+  }
+}
+
+.Content.Char-yenny {
+  .rowYenny {
+    .column1 {
+      background: rgba(64, 56, 4, .7);
+    }
+  }
+}
+
+.Content.Char-diego {
+  .rowDiego {
+    .column1 {
+      background: rgba(64, 56, 4, .7);
+    }
+  }
+}
+
+.Content.Char-soledad {
+  .rowSoledad {
+    .column1 {
+      background: rgba(64, 56, 4, .7);
+    }
+  }
 }

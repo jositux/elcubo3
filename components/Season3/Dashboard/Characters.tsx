@@ -15,12 +15,12 @@ const ubications = [
     left: '52%',
   },
   {
-    name: 'juandejesus', 
+    name: 'juan', 
     top: '60%', 
     left: '60%',
   },
   {
-    name: 'jenny', 
+    name: 'yenny', 
     top: '5%', 
     left: '83%',
   },

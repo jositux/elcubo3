@@ -43,6 +43,11 @@ const VideoModal = ({
   if (data.id == '1523') {
     srcVideo = UrlUtils.getVideoUrl('482199');
   }
+  // Diego 3
+  if (data.id == '1522') {
+    srcVideo = UrlUtils.getVideoUrl('482201');
+  }
+
   // Sole 1
   if (data.id == '1524') {
     srcVideo = UrlUtils.getVideoUrl('482213');
