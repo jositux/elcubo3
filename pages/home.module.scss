@@ -208,6 +208,7 @@
     font-family: $elcubo2_font_home;
     margin-top: 30px;
       .columnImg {
+        display: flex;
         width: 20%;
         img {
           width: 100%;
@@ -215,6 +216,7 @@
       }
       .columnText {
         padding-left: 20px;
+        width: calc(80% - 20px);
         h3 {
           margin-top: 0;
           margin-bottom: 0;

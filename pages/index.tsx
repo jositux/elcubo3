@@ -134,7 +134,7 @@ prosperidad a ser un pueblo fantasma?</p>
           </div>
           <div className={styles.columnText}>
             <h3>India Catalina</h3>
-            <p>Sed gravida dicn arcu eu mi tempor venenatis. </p>
+            <p>38° Premios India Catalina de la Industria Audiovisual Colombiana - Ganador categoría 'Mejor Serie de Ficción Web' / El Cubo: El Poder </p>
           </div>
         </article>
         <article className={styles.awardRow}>
@@ -142,8 +142,8 @@ prosperidad a ser un pueblo fantasma?</p>
             <img src="/images/season3/awards/ima.svg"  />
           </div>
           <div className={styles.columnText}>
-            <h3>IMA - Interactive Awards</h3>
-            <p>Sed gravida dicn arcu eu mi tempor venenatis. </p>
+            <h3>IMA / Interactive Awards</h3>
+            <p>Ganador Best in Class Award  / Categoría 'Artes/Cultura' 2022 / El Cubo: El Poder </p>
           </div>
         </article>
         <article className={styles.awardRow}>
@@ -152,7 +152,7 @@ prosperidad a ser un pueblo fantasma?</p>
           </div>
           <div className={styles.columnText}>
             <h3>Premios TAL 2021</h3>
-            <p>Sed gravida dicn arcu eu mi tempor venenatis. </p>
+            <p>Finalista  Categoría 'Proyectos Transmedia' / <br />El Cubo: El Poder </p>
           </div>
         </article>
         </div>
@@ -163,7 +163,7 @@ prosperidad a ser un pueblo fantasma?</p>
           </div>
           <div className={styles.columnText}>
             <h3>Prix Italia</h3>
-            <p>Sed gravida dicn arcu eu mi tempor venenatis. </p>
+            <p>Nominado Categoría 'Web Interactive' / <br />El Cubo: El Inquisidor </p>
           </div>
         </article>
         <article className={styles.awardRow}>
@@ -172,7 +172,7 @@ prosperidad a ser un pueblo fantasma?</p>
           </div>
           <div className={styles.columnText}>
             <h3>Premios TAL 2022</h3>
-            <p>Sed gravida dicn arcu eu mi tempor venenatis. </p>
+            <p>Finalista Categoría 'Narrativas Transmedia' / <br />El Cubo: El Inquisidor </p>
           </div>
         </article>
         <article className={styles.awardRow}>
@@ -180,8 +180,8 @@ prosperidad a ser un pueblo fantasma?</p>
             <img src="/images/season3/awards/horizon.png"  />
           </div>
           <div className={styles.columnText}>
-            <h3>Horizon</h3>
-            <p>Sed gravida dicn arcu eu mi tempor venenatis. </p>
+            <h3>Horizon Interactive Awards</h3>
+            <p>Ganador Categoría  'Websites - Experimental / New Technology' / El Cubo: El Inquisidor </p>
           </div>
         </article>
         </div>
