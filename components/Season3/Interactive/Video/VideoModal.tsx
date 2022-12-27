@@ -40,6 +40,11 @@ const VideoModal = ({
     }
   }, [player, isSlideOpen]);
 
+  const stopVideoHandler = () => {
+    const stop = player && (player.stop || player.pause);
+    stop && stop();
+  }
+
   return (
     <div className="interactive-video">
       <SlideModal
@@ -48,6 +53,7 @@ const VideoModal = ({
         handleCloseInteractive={handleCloseInteractive}
         setOpenSlide={openSlide}
         onOpenCallback={() => setIsSlideOpen(true)}
+        onCloseCallback={stopVideoHandler}
       >
         <Video2Level
           title={""}
