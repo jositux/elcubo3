@@ -3,6 +3,18 @@
   position: relative;
 }
 
+.Content {
+  display: flex;  
+  align-items: center
+}
+.Controls {
+  width: 60px;
+}
+
+.Wave {
+  width: calc(100% - 60px);
+}
+
 .WaveContainer{
   opacity: 0;
   animation-name: fadeIn;

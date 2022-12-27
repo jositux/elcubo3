@@ -1,4 +1,7 @@
 import { useEffect, useRef, useState } from "react";
+import PlayAudio from 'components/Season3/Svg/PlayAudio';
+import PauseAudio from 'components/Season3/Svg/PauseAudio';
+
 import styles from './season3.audiowave.module.scss';
 
 const formWaveSurferOptions = (ref) => ({
@@ -50,10 +53,14 @@ const AudioWave = ({
   return (
     <div className={styles.WaveContainer}>
       <div className={styles.Content}>
-        <div className="controls">
-          <div className={styles.Play} onClick={handlePlayPause}>{!playing ? "paus" : "play"}</div>
+        <div className={styles.Controls}>
+          <div className={styles.Play} onClick={handlePlayPause}>
+            {!playing ?  <PlayAudio /> : <PauseAudio />}
+          </div>
         </div>
-        <div id="waveform" ref={waveformRef} />
+        <div className={styles.Wave}>
+          <div id="waveform" ref={waveformRef} />
+        </div>
       </div>
     </div>
   );
