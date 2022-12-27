@@ -1,89 +1,41 @@
 .EndingCover {
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
-  left: 0;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  left: calc(50% - 270px);
   z-index: 100;
-  font-family: $elcubo2_font;
+  font-family: $elcubo3_font_title;
+  font-weight: 300;
+  line-height: 1.4;
+  text-align: center;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @media only screen and (max-width: 920px) and (orientation: landscape) {
     height: auto;
     overflow-y: scroll;
   }
   .Ending {
+    background-color: rgba(0, 0, 0, 0.7);
     margin: 0 auto;
-    max-width: 740px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    max-width: 520px;
+    padding: 60px;
+    border-radius: 20px;
     color: white;
     .HeaderInteractive {
-      max-width: 740px;
-      .LineTop {
-        max-width: 100%;
-      }
+      max-width: 520px;
     }
-    .EndingContent {
-      padding: 30px;
-      background: rgba(61, 57, 54, 0.7);
-      border-radius: 8px;
-      section {
-        max-width: 740px;
-      }
-      h3 {
-        font-size: 23px;
-        font-weight: 400;
-        text-align: center;
-        margin-top: 0;
-        @media only screen and (max-width: 920px) and (orientation: landscape) {
-          font-size: 18px;
-        }
-      }
-      button {
-        width: 50%;
-        font-size: 22px;
-        font-family: $elcubo2_font;
-        padding: 20px 0;
-        border-radius: 8px;
-        border: 0;
-        background: rgba(31, 25, 21, 1);
-        color: white;
-        cursor: pointer;
-        @media only screen and (max-width: 920px) and (orientation: landscape) {
-          font-size: 16px;
-        }
-        &:hover {
-          background: white;
-          color: black;
-        }
-        &:last-child {
-          background: transparent;
-          &:hover {
-            color: white;
-            opacity: 0.7;
-          }
-        }
-      }
+    .EndingContent {  
+      font-family: $elcubo3_font_subtitle;
+      text-transform: uppercase;
+      color: #EDC25F;
+      padding-bottom: 10px;
     }
   }
-  h1 {
-    font-weight: 400;
-    font-size: 46 px;
-  }
+ 
 }
 
-.LineTop {
-  display: flex;
-  max-width: 740px;
-  margin: 20px auto 20px auto;
-  @media only screen and (max-width: 768px) {
-    max-width: 100%;
-  }
-}
 
 .fadeIn {
   animation: fadeIn ease 1.5s;

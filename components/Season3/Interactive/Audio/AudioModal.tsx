@@ -72,9 +72,11 @@ const AudioModal = ({
           ))}
       </Swiper>
       <div className={styles.Content}>
-        <h2>{title}</h2>
-        <div className={styles.fullScreenVideo}>
-          <AudioWave setAudioPlayer={setAudioPlayer} audio={urlAudio} />
+        <div className={styles.AudioContent}>
+          <h2>{title}</h2>
+          <div>
+            <AudioWave setAudioPlayer={setAudioPlayer} audio={urlAudio} />
+          </div>
         </div>
       </div>
     </SlideModal>

@@ -7,12 +7,12 @@ const ubications = [
   {
     name: 'soledad', 
     top: '30%', 
-    left: '40%', 
+    left: '45%', 
   },
   {
     name: 'diego', 
     top: '44%', 
-    left: '47%',
+    left: '52%',
   },
   {
     name: 'juandejesus', 
@@ -60,14 +60,13 @@ export const Characters = ({...props}) => {
       { 
         props.characters.map( (c, index) => (
           <div className={`${styles.PopupContainer} ${styles[c.name+`-g`]}`} id={`${c.name}`} key={index}>
-            <div 
-            onMouseEnter={ () => { updatePersonaje(`${c.background}`, `${c.realName}`, `${c.description}`, `${c.icon}`, `${c.link}`); }} 
-            onClick={ () => { updatePersonaje(`${c.background}`, `${c.realName}`, `${c.description}`, `${c.icon}`, `${c.link}`); } } 
+            <a 
+            href={c.link} 
             className={styles.titleImage}
             style={{cursor:"pointer"}}
             >
               <img src={c.icon} className={styles.Popup}  />
-            </div>
+            </a>
           
           </div>
         ))

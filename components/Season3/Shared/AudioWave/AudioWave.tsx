@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import WaveSurfer from 'wavesurfer.js'
 import styles from './season3.audiowave.module.scss';
 
 const formWaveSurferOptions = (ref) => ({

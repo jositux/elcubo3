@@ -217,7 +217,7 @@ const Personaje = (props) => {
         data={interactiveData}
       />}
 
-      {videoEnded && <Ending />}
+      {videoEnded && <Ending name={title} />}
 
     </div>
   );

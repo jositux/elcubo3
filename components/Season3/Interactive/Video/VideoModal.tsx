@@ -14,6 +14,9 @@ const VideoModal = ({
   const [player, setPlayer] = useState(null);
   const [isSlideOpen, setIsSlideOpen] = useState(false);
 
+  console.log(data)
+  //console.log(eval(data.field_ec_episode_json.field_ec_asset_id));
+
   let srcVideo = UrlUtils.getVideoUrl('482209');
   if (data.id == '1505') {
     srcVideo = UrlUtils.getVideoUrl('482211');
@@ -26,6 +29,29 @@ const VideoModal = ({
   if (data.id == '1515') {
     srcVideo = UrlUtils.getVideoUrl('482205');
   }
+
+  // Jenny 1
+  if (data.id == '1518') {
+    srcVideo = UrlUtils.getVideoUrl('482207');
+  }
+
+  // Diego 1
+  if (data.id == '1520') {
+    srcVideo = UrlUtils.getVideoUrl('482197');
+  }
+  // Diego 2
+  if (data.id == '1523') {
+    srcVideo = UrlUtils.getVideoUrl('482199');
+  }
+  // Sole 1
+  if (data.id == '1524') {
+    srcVideo = UrlUtils.getVideoUrl('482213');
+  }
+  // Sole 2
+  if (data.id == '1527') {
+    srcVideo = UrlUtils.getVideoUrl('482213');
+  }
+  
 
   const [openSlide, setOpenSlide] = useState(null)
 
