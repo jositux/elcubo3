@@ -21,15 +21,8 @@ const Personaje = (props) => {
   let duration = episodio?.field_ec_video_duration;
   let title = personaje?.field_ec_real_name;
 
-  console.log(personaje);
-  //let steal = episodio?.field_ec_asset_id
-
   const [isActiveInteractive, setIsActiveInteractive] = useState(false);
   const [interactiveData, setInteractiveData] = useState(null);
-  const [isOpenGallery, setIsOpenGallery] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  const [isOpenSlideModal, setIsOpenSlideModal] = useState(false);
-  const [isOpenAudio, setIsOpenAudio] = useState(false);
   const [interactiveType, setInteractiveType] = useState('')
   const [showDashboardModal, setShowDashboardModal] = useState(false);
   const [player, setPlayer] = useState(null);
@@ -110,6 +103,7 @@ const Personaje = (props) => {
 
             let timeEndActive = parseInt(i.field_ec_time_action, 10) + 12;
             if (parseInt(player.currentTime, 10) == timeEndActive) {
+              setInteractiveData(null);
               closeActiveInteractive();
             }
           })
@@ -148,12 +142,7 @@ const Personaje = (props) => {
     handlePlayVideo(true);
   };
 
-  const handleOnDashboardVideoEnd = () => {
-    handlePlayVideo(true);
-  };
-
   const handleOnCloseGalleryModal = () => {
-    setIsOpenGallery(false);
     handlePlayVideo(true);
   };
 
@@ -163,6 +152,7 @@ const Personaje = (props) => {
 
   const handleOnCloseSlideModal = () => {
     setIsActiveInteractive(false);
+    setInteractiveData(null);
     handlePlayVideo(true);
   };
 
@@ -205,14 +195,14 @@ const Personaje = (props) => {
         />
       </div>
 
-      {interactiveType === 'video' && <VideoModal
+      {interactiveType === 'video' && interactiveData && <VideoModal
         isActive={isActiveInteractive}
         handleOpenInteractive={handleOnOpenSlideModal}
         handleCloseInteractive={handleOnCloseSlideModal}
         data={interactiveData}
       />}
 
-      {interactiveType === 'gallery' && <GalleryModal
+      {interactiveType === 'gallery' && interactiveData && <GalleryModal
         isActive={isActiveInteractive}
         handleOpenInteractive={handleOnOpenSlideModal}
         handleCloseInteractive={handleOnCloseSlideModal}
@@ -220,7 +210,7 @@ const Personaje = (props) => {
         data={interactiveData}
       />}
 
-      {interactiveType === 'audio' && <AudioModal
+      {interactiveType === 'audio' && interactiveData && <AudioModal
         isActive={isActiveInteractive}
         handleOpenInteractive={handleOnOpenSlideModal}
         handleCloseInteractive={handleOnCloseSlideModal}
