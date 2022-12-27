@@ -13,7 +13,7 @@ const VideoModal = ({
 }) => {
   const [player, setPlayer] = useState(null);
   const [isSlideOpen, setIsSlideOpen] = useState(false);
-  console.log(data);
+
   let srcVideo = UrlUtils.getVideoUrl('482209');
   if (data.id == '1505') {
     srcVideo = UrlUtils.getVideoUrl('482211');
