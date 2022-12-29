@@ -11,7 +11,6 @@ import "swiper/css/navigation";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-cards"; 
-import styled from 'styled-components';
 import styles from './season3.galleryModal.module.scss';
 
 const GalleryModal = ({ showGalleryModal, onCloseGalleryModal }) => {
@@ -48,7 +47,7 @@ const GalleryModal = ({ showGalleryModal, onCloseGalleryModal }) => {
       <div className={styles.container}>
         <div className={styles.child}>
           <div className={styles.t_close} onClick={onCloseGalleryModal}>
-          <ArrowDown width={30} height={30} />
+          
           </div>
           <img className={styles.imgGallery} src="/images/season3/slider/galeria_background.jpg" />
           {showGalleryModal &&
@@ -143,33 +142,33 @@ const GalleryModal = ({ showGalleryModal, onCloseGalleryModal }) => {
           <div className={styles.OpenZoom}  onClick={ () => { setIndex(0); setOpen(true);} }>
           <IconZoom />
           </div>
-          <img className={styled.ImagesSwiper} src="/images/season3/hitos/0.jpg" />
+          <img className={styles.ImagesSwiper} src="/images/season3/hitos/0b.jpg" />
         </SwiperSlide>
         <SwiperSlide>
           <div className={styles.OpenZoom}  onClick={ () => { setIndex(1); setOpen(true);} }>
           <IconZoom />
           </div>
-          <img className={styled.ImagesSwiper} src="/images/season3/hitos/1.jpg" />
+          <img className={styles.ImagesSwiper} src="/images/season3/hitos/1b.jpg" />
         </SwiperSlide>
         <SwiperSlide>
         <div className={styles.OpenZoom}  onClick={ () => { setIndex(2); setOpen(true);} }>
           <IconZoom />
           </div>
-          <img className={styled.ImagesSwiper} src="/images/season3/hitos/2.jpg" />
+          <img className={styles.ImagesSwiper} src="/images/season3/hitos/2b.jpg" />
      
         </SwiperSlide>
         <SwiperSlide>
         <div className={styles.OpenZoom}  onClick={ () => { setIndex(3); setOpen(true);} }>
           <IconZoom />
           </div>
-          <img className={styled.ImagesSwiper} src="/images/season3/hitos/3.jpg" />
+          <img className={styles.ImagesSwiper} src="/images/season3/hitos/3b.jpg" />
      
         </SwiperSlide>
         <SwiperSlide>
         <div className={styles.OpenZoom} onClick={ () => { setIndex(4); setOpen(true);} }>
           <IconZoom />
           </div>
-          <img className={styled.ImagesSwiper} src="/images/season3/hitos/4.jpg" />
+          <img className={styles.ImagesSwiper} src="/images/season3/hitos/4b.jpg" />
      
         </SwiperSlide>
         <SwiperSlide>Slide 6</SwiperSlide>

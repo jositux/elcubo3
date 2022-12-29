@@ -1,23 +1,22 @@
 import React, { useState, useEffect } from "react";
 import Video2Level from 'components/Season3/Shared/Video2Level/VideoPlayer';
 import UrlUtils from 'utils/Url';
-import disableScroll from 'disable-scroll';
 import styles from './season3.videoFadeModal.module.scss';
 
 const VideoModal = ({ videoId, showModal, setShowModal, onVideoEnded, autoPlay }) => {
 
   const [player, setPlayer] = useState(null);
+
+  //const [video, setVideo] = useState(videoId);
   const srcVideo = UrlUtils.getVideoUrl(videoId);
 
   useEffect(() => {
-    disableScroll.on();
     if (player && showModal) {
       player.play();
     }
   }, [showModal]);
 
   const handleCloseVideo = () => {
-    disableScroll.off();
     player.stop();
     onVideoEnded();
     setShowModal(false);
@@ -39,6 +38,7 @@ const VideoModal = ({ videoId, showModal, setShowModal, onVideoEnded, autoPlay }
             fullscreen={false}
             autoPlay={autoPlay}
           />
+          
         </div>
       </div>
     </div>

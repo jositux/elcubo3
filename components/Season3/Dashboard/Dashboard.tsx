@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useRef } from 'react';
-import VideoModal from 'components/Season3/Modal/VideoModal';
+import VideoModal from 'components/Season3/Modal/FadeModal';
 
 import PersonajeArrow from 'components/Season3/Svg/PersonajeArrow';
 import Progress from 'components/Season3/Shared/Progress/Progress';

@@ -27,6 +27,17 @@ const GalleryModal = ({
     field_ec_gallery
   } = data;
 
+  console.log(field_ec_gallery);
+
+  const imagenes = [
+  'https://rtvcplay-v2.s3-accelerate.amazonaws.com/s3fs-public/field/ec-gallery/01%209_1.jpg|', 
+  'https://rtvcplay-v2.s3-accelerate.amazonaws.com/s3fs-public/field/ec-gallery/02%209_1.jpg|', 
+  'https://rtvcplay-v2.s3-accelerate.amazonaws.com/s3fs-public/field/ec-gallery/03%207_1.jpg|', 
+  'https://rtvcplay-v2.s3-accelerate.amazonaws.com/s3fs-public/field/ec-gallery/04%206_1.jpg|', 
+  'https://rtvcplay-v2.s3-accelerate.amazonaws.com/s3fs-public/field/ec-gallery/05%206_1.jpg|',
+  ];
+
+
   const images = field_ec_gallery.split(',').map(i => {
     const imgA = i.split('|');
     return {
@@ -39,6 +50,8 @@ const GalleryModal = ({
       ]
     }
   });
+
+  console.log(data);
 
   const [open, setOpen] = React.useState(false);
   const [maxZoomPixelRatio, setMaxZoomPixelRatio] = React.useState(1);

@@ -3,7 +3,7 @@ import VideoPlayer from 'components/Season3/VideoPlayer/VideoPlayer';
 import DashboardSlideModal from 'components/Season3/Modal/DashboardSlideModal';
 import GalleryModal from 'components/Season3/Modal/GalleryModal';
 import AudioModal from 'components/Season3/Modal/AudioModal';
-import VideoModal from 'components/Season3/Modal/VideoModal';
+import VideoModal from 'components/Season3/Modal/FadeModal';
 import Pulse from 'components/Season3/Shared/Pulse/Pulse';
 import UrlUtils from 'utils/Url';
 import styles from './interactive.module.scss'
