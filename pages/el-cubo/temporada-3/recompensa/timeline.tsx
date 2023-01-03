@@ -13,13 +13,14 @@ import VideoFadeModal from 'components/Season3/Modal/VideoFadeModal';
 import GalleryFadeModal from 'components/Season3/Modal/GalleryFadeModal';
 import ImageFadeModal from 'components/Season3/Modal/ImageFadeModal';
 
+import dynamic from 'next/dynamic';
+import ButtonModal from "components/Season3/Shared/Button/ButtonModal";
+const ModalVideo = dynamic(() => import('react-modal-video'), { ssr: false });
+
+
 import disableScroll from 'disable-scroll';
 
 const timeline = () => {
-
-  const [player, setPlayer] = useState(null);
-
-  const imagen1 = '/images/season3/timeline/gallery/1/0.jpg';
 
   const imagenes1 = [
     '/images/season3/timeline/gallery/1/1-960.jpg',
@@ -103,6 +104,13 @@ const timeline = () => {
 
   const [isOpenImage, setIsOpenImage] = useState(false);
 
+  const imagen1 = '/images/season3/timeline/gallery/ilustracion/0.jpg';
+  const imagen2 = '/images/season3/timeline/gallery/ilustracion/1.jpg';
+  const imagen3 = '/images/season3/timeline/gallery/ilustracion/2.jpg';
+  const imagen4 = '/images/season3/timeline/gallery/ilustracion/3.jpg';
+
+  const [image, setImage] = useState(imagen1);
+
   const handleOnOpenImageModal = () => {
     setIsOpenImage(true);
     disableScroll.on();
@@ -126,6 +134,10 @@ const timeline = () => {
     setIsOpen(false);
     disableScroll.off();
   };
+
+  // 360
+  const [isOpen360, setOpen360] = useState(false);
+  const [isOpen360b, setOpen360b] = useState(false);
 
   return (
 
@@ -204,7 +216,7 @@ const timeline = () => {
               <div className={styles.columnLink}>
                 <div className={styles.LinksContent}>
                   <div className={styles.LinkItem}>
-                    <a onClick={() => { setVideo('482203'); handleOnPlayVideo(); }} href='#' className={styles.Link} >
+                    <a onClick={() => { setOpen360b(true) }} className={styles.Link} >
                       <div>
                         <PlayIconTimeline />
                       </div>
@@ -318,7 +330,7 @@ const timeline = () => {
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
-                    <a onClick={() => { setVideo('482203'); handleOnPlayVideo(); }} href='#' className={styles.Link} >
+                    <a onClick={() => { setVideo('485853'); handleOnPlayVideo(); }} className={styles.Link} >
                       <div>
                         <PlayIconTimeline />
                       </div>
@@ -350,7 +362,7 @@ const timeline = () => {
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
-                    <a href='#' className={styles.Link}>
+                    <a href='https://noticias.canal1.com.co/que-tal-esto/jordan-sube-pueblo-rico-sin-gente/' target="_blank" className={styles.Link}>
                       <p className={styles.LinkText}>Jordán Sube, pueblo rico sin gente.<br></br>
                         <span>Canal 1 (16 de agosto del 2015)</span>
                       </p>
@@ -372,7 +384,7 @@ const timeline = () => {
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
-                    <a href='#' className={styles.Link} >
+                    <a href='https://vimeo.com/315140794' target='_blank' className={styles.Link} >
                       <p className={styles.LinkText}>
                         <span>Jaime Rodriguez, coleccionista santandereano, nos habla sobre las armas que se usaron en los tiempos de la violencia bipartidista en Jordán. Trabajó algunos años como supervisor en la Caja Agraria. Era el encargado de hacer un balance a quienes solicitaban créditos. En el 78, visitó a Roque Julio Ferreira y su hermano José Ángel, ambos solicitantes de un préstamo.</span>
                       </p>
@@ -414,7 +426,7 @@ const timeline = () => {
               <div className={styles.columnLink}>
                 <div className={styles.LinksContent}>
                   <div className={styles.LinkItem}>
-                    <a href='#' className={styles.Link} >
+                    <a onClick={() => { setImage(imagen1); handleOnOpenImageModal(); }} className={styles.Link} >
                       <div>
                         <GalleryIconTimeline />
                       </div>
@@ -422,7 +434,8 @@ const timeline = () => {
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
-                    <a href='#' className={styles.Link}>
+                    <a href='https://www.las2orillas.co/jordan-sube-municipio-con-10-mil-millones-de-presupuesto-dueno-los-ferreira/
+' target="_blank" className={styles.Link}>
                       <div>
                         <RedirectionIconTimeline />
                       </div>
@@ -432,7 +445,10 @@ const timeline = () => {
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
-                    <a href='#' className={styles.Link}>
+                    <a
+                      href='https://www.eltiempo.com/colombia/otras-ciudades/jordan-sube-le-dice-nuevamente-no-a-la-familia-ferreira-427978'
+                      target="_blank"
+                      className={styles.Link}>
                       <div>
                         <RedirectionIconTimeline />
                       </div>
@@ -442,7 +458,10 @@ const timeline = () => {
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
-                    <a href='#' className={styles.Link} >
+                    <a
+                      href='http://conlupa.co/oculto-canon/tiempodeexodo.html'
+                      target="_blank"
+                      className={styles.Link} >
                       <div>
                         <RedirectionIconTimeline />
                       </div>
@@ -456,7 +475,9 @@ const timeline = () => {
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
-                    <a href='#' className={styles.Link} >
+                    <a href='http://conlupa.co/oculto-canon/jordanexiste.html'
+                      target="_blank"
+                      className={styles.Link} >
                       <div>
                         <RedirectionIconTimeline />
                       </div>
@@ -483,7 +504,7 @@ const timeline = () => {
               <div className={styles.columnLink}>
                 <div className={styles.LinksContent}>
                   <div className={styles.LinkItem}>
-                    <a href='#' className={styles.Link} >
+                    <a onClick={() => { setImage(imagen2); handleOnOpenImageModal(); }} className={styles.Link} >
                       <p className={styles.LinkText}>ilustración roque ferreira<br></br>el gamonal</p>
                       <div>
                         <GalleryIconTimeline />
@@ -491,7 +512,7 @@ const timeline = () => {
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
-                    <a href='#' className={styles.Link}>
+                    <a href='https://www.eltiempo.com/archivo/documento/MAM-624214' target="_blank" className={styles.Link}>
                       <p className={styles.LinkText}>Jaque a los Ferreira en Jordán Sube.<br></br>
                         <span>El tiempo / Manuel Navarro (06 de julio 1997)</span>
                       </p>
@@ -534,13 +555,13 @@ const timeline = () => {
               <div className={styles.columnLink}>
                 <div className={styles.LinksContent}>
                   <div className={styles.LinkItem}>
-                    <a href='#' className={styles.Link} >
+                    <a onClick={() => { setImage(imagen3); handleOnOpenImageModal(); }} className={styles.Link} >
                       <GalleryIconTimeline />
                       <p className={styles.LinkText}>ilustración destrucción alcaldía incendio</p>
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
-                    <a href='#' className={styles.Link}>
+                    <a href='https://www.semana.com/nacion/articulo/la-tierra-del-olvido/67981-3/' target="_blank" className={styles.Link}>
                       <div>
                         <RedirectionIconTimeline />
                       </div>
@@ -561,8 +582,8 @@ const timeline = () => {
               <div className={styles.columnLink}>
                 <div className={styles.LinksContent}>
                   <div className={styles.LinkItem}>
-                    <a href='#' className={styles.Link} >
-                      <p className={styles.LinkText}>galería de fotos</p>
+                    <a onClick={() => { setImage(imagen4); handleOnOpenImageModal(); }} target="_blank" className={styles.Link} >
+                      <p className={styles.LinkText}>Foto de la Alcaldía</p>
                       <div>
                         <PlayIconTimeline />
                       </div>
@@ -647,26 +668,43 @@ const timeline = () => {
                       <p className={styles.LinkText}>galería de fotos</p>
                     </a>
                   </div>
+                  <div className={styles.LinkItem}>
+                    <a onClick={() => { setVideo('485849'); handleOnPlayVideo(); }} className={styles.Link} >
+                      <div>
+                        <PlayIconTimeline />
+                      </div>
+                      <p className={styles.LinkText}>
+                        <span>Reconstrucción del colegio</span>
+                      </p>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
           <div className={`${styles.EndContent} ${styles.NoHeight}`}>
-            <img className={styles.SitePicture} src="/images/season3/timeline/pueblo_rio_abajo.png" alt="imagen del lugar" />
+            <img
+              className={styles.SitePicture} src="/images/season3/timeline/pueblo_rio_abajo.png"
+              alt="imagen del lugar"
+            />
 
             <div>
 
-              <img className={styles.VideoPicture} src="/images/season3/timeline/video.jpg" alt="imagen del lugar" />
+              <img
+                onClick={() => { setVideo('485851'); handleOnPlayVideo(); }}
+                className={styles.VideoPicture}
+                src="/images/season3/timeline/video.jpg"
+                alt="imagen del lugar"
+              />
 
 
               <div className={styles.Ver360Content}>
                 <h1>Llegaste al final del camino.<br></br>¡Has recorrido los caminos del Jordán!</h1>
                 <p>Como recompensa puedes acceder al contenido exclusivo final y compartir el proyecto en redes ¡Feliz viaje de regreso!</p>
 
-                <div >
-                  <YoutubeModal videoId='R7YZtj03b1s' />
-                </div>
+                <ButtonModal type="btn" text="ver video 360°" onClick={() => setOpen360(true)} />
+
 
                 <div className={styles.Compartir}>
                   <p>Compartir</p>
@@ -714,13 +752,17 @@ const timeline = () => {
       <div className={styles.fullScreenImage}>
         {isOpenImage &&
           <ImageFadeModal
-            imagen={imagen1}
+            imagen={image}
             showModal={handleOnOpenImageModal}
             onCloseModal={handleOnCloseImageModal}
             setShowModal={setIsOpenImage}
           />
         }
       </div>
+
+
+      <ModalVideo channel='youtube' autoplay isOpen={isOpen360} videoId={'R7YZtj03b1s'} onClose={() => setOpen360(false)} />
+      <ModalVideo channel='youtube' autoplay isOpen={isOpen360b} videoId={'6p3u1MW-DAc'} onClose={() => setOpen360b(false)} />
 
     </Fragment>
   )
