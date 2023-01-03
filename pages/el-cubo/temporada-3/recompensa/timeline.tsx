@@ -12,12 +12,9 @@ import YoutubeModal from 'components/Season3/Modal/YoutubeModal';
 import VideoFadeModal from 'components/Season3/Modal/VideoFadeModal';
 import GalleryFadeModal from 'components/Season3/Modal/GalleryFadeModal';
 import ImageFadeModal from 'components/Season3/Modal/ImageFadeModal';
-
-import dynamic from 'next/dynamic';
 import ButtonModal from "components/Season3/Shared/Button/ButtonModal";
+import dynamic from 'next/dynamic';
 const ModalVideo = dynamic(() => import('react-modal-video'), { ssr: false });
-
-
 import disableScroll from 'disable-scroll';
 
 const timeline = () => {
@@ -108,6 +105,7 @@ const timeline = () => {
   const imagen2 = '/images/season3/timeline/gallery/ilustracion/1.jpg';
   const imagen3 = '/images/season3/timeline/gallery/ilustracion/2.jpg';
   const imagen4 = '/images/season3/timeline/gallery/ilustracion/3.jpg';
+  const imagen5 = '/images/season3/timeline/gallery/ilustracion/4.jpg';
 
   const [image, setImage] = useState(imagen1);
 
@@ -585,12 +583,12 @@ const timeline = () => {
                     <a onClick={() => { setImage(imagen4); handleOnOpenImageModal(); }} target="_blank" className={styles.Link} >
                       <p className={styles.LinkText}>Foto de la Alcaldía</p>
                       <div>
-                        <PlayIconTimeline />
+                        <GalleryIconTimeline />
                       </div>
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
-                    <a href='#' className={styles.Link}>
+                    <a href='http://conlupa.co/oculto-canon/amula.html' target="_blank" className={styles.Link}>
                       <p className={styles.LinkText}>Oculto en el Cañón<br></br>
                         <span>Especial multimedia por Nicole Acuña y Silvia Corredor. Programa en Periodismo y Opinión Pública PO04. Escuela de Ciencias Humanas. Universidad de Rosario. 2019. Leer subapartado (dentro del apartado: 'A mula y alpargata'): 'Los caminos que llevan a Jordán'</span>
                       </p>
@@ -600,7 +598,7 @@ const timeline = () => {
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
-                    <a href='#' className={styles.Link}>
+                    <a href='http://www.jordan-santander.gov.co/' target="_blank" className={styles.Link}>
                       <p className={styles.LinkText}>Alcaldía Municipal de Jordán en Santander - Gobierno de Colombia<br></br>
                         <span>
                           (25 de junio de 2018)
@@ -612,7 +610,8 @@ const timeline = () => {
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
-                    <a href='#' className={styles.Link} >
+                    <a href='https://caracol.com.co/emisora/2019/10/01/bucaramanga/1569933810_686960.html
+' target="_blank" className={styles.Link} >
                       <p className={styles.LinkText}>El pueblo que ya no es "fantasma"<br></br>
                         <span>Entrevista con la alcaldesa. Caracol(10 de octubre de 2019).</span>
                       </p>
@@ -622,7 +621,8 @@ const timeline = () => {
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
-                    <a href='#' className={styles.Link} >
+                    <a href='https://www.eltiempo.com/colombia/otras-ciudades/nueva-via-de-acceso-a-jordan-sube-en-santander-313488
+' target="_blank" className={styles.Link} >
                       <p className={styles.LinkText}>El pueblo escondido en el Chicamocha que busca su 'salida'<br></br>
                         <span>El tiempo (2 de diciembre de 2019).</span>
                       </p>
@@ -661,7 +661,7 @@ const timeline = () => {
               <div className={styles.columnLink}>
                 <div className={styles.LinksContent}>
                   <div className={styles.LinkItem}>
-                    <a href='#' className={styles.Link} >
+                    <a onClick={() => { setImage(imagen5); handleOnOpenImageModal(); }} className={styles.Link} >
                       <div>
                         <GalleryIconTimeline />
                       </div>
