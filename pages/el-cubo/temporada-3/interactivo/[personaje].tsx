@@ -22,7 +22,9 @@ const Personaje = (props) => {
   let title = personaje?.field_ec_real_name;
   let name = personaje?.name.split(" ")[0].toLowerCase();
 
-  console.log(personaje);
+  let intervalLocalStorage = null;
+  const dataProgressVideo = [];
+  //console.log(personaje);
 
   const [isActiveInteractive, setIsActiveInteractive] = useState(false);
   const [interactiveData, setInteractiveData] = useState(null);
@@ -78,9 +80,13 @@ const Personaje = (props) => {
     }
   };
 
+
+
   useEffect(() => {
+
     if (player) {
       player.on('play', () => {
+        console.log(player);
         setInterval(() => {
           interactivos.map((i, index) => {
             if (parseInt(player.currentTime, 10) == i.field_ec_time_action) {
@@ -111,10 +117,33 @@ const Personaje = (props) => {
             }
           })
         }, 1000);
+
+        intervalLocalStorage = setInterval(() => {
+          if (player.playing) {
+            let data = JSON.parse(localStorage.getItem(`'${name}'`));
+            if (data) {
+              if (parseInt(player.currentTime, 10) > data.seenTime && !data.ended) {
+                localStorage.setItem(`'${name}'`, JSON.stringify({ character: name, duration, seenTime: parseInt(player.currentTime + 1), ended: false }));
+              }
+              if (parseInt(player.currentTime, 10) >= (data.duration - 6) && !data.ended) {
+                localStorage.setItem(`'${name}'`, JSON.stringify({ character: name, duration, seenTime: duration, ended: true }));
+              }
+            } else {
+              localStorage.setItem(`'${name}'`, JSON.stringify({ character: name, duration, seenTime: parseInt(player.currentTime + 1), ended: false }));
+            }
+          }
+        }, 5000);
       });
+
       player.on('ended', () => {
         setVideoEnded(true);
-      })
+      });
+
+      player.on('pause', () => {
+        if (!player.playing) {
+          clearInterval(intervalLocalStorage);
+        }
+      });
     }
   }, [player]);
 
@@ -135,6 +164,22 @@ const Personaje = (props) => {
       onLoadFadeout();
     }
   }, [steal.current, player]);
+
+
+  useEffect(() => {
+    const loadSeenTime = (data) => {
+      window.setTimeout(() => {
+        player.forward(data.seenTime);
+      }, 1000);
+    };
+
+    let data = JSON.parse(localStorage.getItem(`'${name}'`));
+    if (data && player) {
+      if (!data.ended) {
+        loadSeenTime(data);
+      }
+    }
+  }, [player])
 
   const handleOnClickDashboard = () => {
     setShowDashboardModal(true);
@@ -166,6 +211,7 @@ const Personaje = (props) => {
   const closeActiveInteractive = () => {
     setIsActiveInteractive(false);
   };
+
 
   return (
     <div className={styles.NodeContainer}>
