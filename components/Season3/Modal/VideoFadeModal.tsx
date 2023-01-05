@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Video2Level from 'components/Season3/Shared/Video2Level/VideoPlayer';
 import UrlUtils from 'utils/Url';
+import FadeModal from 'components/Season3/Modal/FadeModal/FadeModal';
+
 import styles from './season3.videoFadeModal.module.scss';
 
-const VideoModal = ({ videoId, showModal, setShowModal, onVideoEnded, autoPlay }) => {
+const VideoModal = ({ videoId, showModal, setShowModal, autoPlay }) => {
 
   const [player, setPlayer] = useState(null);
 
@@ -17,31 +19,30 @@ const VideoModal = ({ videoId, showModal, setShowModal, onVideoEnded, autoPlay }
   }, [showModal]);
 
   const handleCloseVideo = () => {
-    player.stop();
-    onVideoEnded();
+    const stop = player && (player.stop || player.pause);
+    stop && stop();
+    setPlayer(null);
     setShowModal(false);
   }
 
   return (
-    <div className={`${styles.containerCover} ${styles.containerVideoModal} ${showModal ? styles.open : ""}`}>
-      <div className={`${styles.container} ${styles.fadeIn}`}>
-        <div className={styles.child}>
-          <p className={styles.t_close} onClick={() => handleCloseVideo()}>
-          </p>
-          <Video2Level
-            title={""}
-            source={srcVideo}
-            showPrevButton={false}
-            showNextButton={false}
-            setPlayer={setPlayer}
-            onVideoEnded={onVideoEnded}
-            fullscreen={false}
-            autoPlay={autoPlay}
-          />
-          
-        </div>
-      </div>
-    </div>
+    <FadeModal
+      showModal={showModal}
+      onCloseModal={handleCloseVideo}
+      setShowModal={setShowModal}
+    >
+      {showModal &&
+        <Video2Level
+          title={""}
+          source={srcVideo}
+          showPrevButton={false}
+          showNextButton={false}
+          setPlayer={setPlayer}
+          onVideoEnded={handleCloseVideo}
+          fullscreen={false}
+          autoPlay={autoPlay}
+        />}
+    </FadeModal>
   );
 };
 

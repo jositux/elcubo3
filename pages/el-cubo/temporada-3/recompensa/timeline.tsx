@@ -1,21 +1,17 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import styles from './timeline.module.scss';
-import UrlUtils from 'utils/Url';
 import GalleryIconTimeline from 'components/Season3/Svg/GalleryIconTimeline';
 import PlayIconTimeline from 'components/Season3/Svg/PlayIconTimeline';
 import RedirectionIconTimeline from 'components/Season3/Svg/RedirectionIconTimeline';
 import Twitter from 'components/Season3/Svg/Twitter';
 import Facebook from 'components/Season3/Svg/Facebook';
 import LinkedIn from 'components/Season3/Svg/LinkedIn';
-import ButtonHome from 'components/Season3/Shared/Button/ButtonHome';
-import YoutubeModal from 'components/Season3/Modal/YoutubeModal';
 import VideoFadeModal from 'components/Season3/Modal/VideoFadeModal';
 import GalleryFadeModal from 'components/Season3/Modal/GalleryFadeModal';
 import ImageFadeModal from 'components/Season3/Modal/ImageFadeModal';
 import ButtonModal from "components/Season3/Shared/Button/ButtonModal";
 import dynamic from 'next/dynamic';
 const ModalVideo = dynamic(() => import('react-modal-video'), { ssr: false });
-import disableScroll from 'disable-scroll';
 
 const timeline = () => {
 
@@ -86,19 +82,21 @@ const timeline = () => {
   }, [])
 
 
+  /* Gallery */
   const [isOpenGallery, setIsOpenGallery] = useState(false);
   const [images, setImages] = useState(imagenes1);
   const [imagesZoom, setImagesZoom] = useState(imagenes1Zoom);
 
-  const handleOnOpenGalleryModal = () => {
+  const handleOnOpenGallery = () => {
     setIsOpenGallery(true);
   };
 
-  const handleOnCloseGalleryModal = () => {
+  const handleOnCloseGallery = () => {
     setIsOpenGallery(false);
   };
 
 
+  /* Image */
   const [isOpenImage, setIsOpenImage] = useState(false);
 
   const imagen1 = '/images/season3/timeline/gallery/ilustracion/0.jpg';
@@ -109,33 +107,28 @@ const timeline = () => {
 
   const [image, setImage] = useState(imagen1);
 
-  const handleOnOpenImageModal = () => {
+  const handleOnOpenImage = () => {
     setIsOpenImage(true);
-    disableScroll.on();
   };
 
-  const handleOnCloseImageModal = () => {
-    disableScroll.off();
+  const handleOnCloseImage = () => {
     setIsOpenImage(false);
   };
 
 
+  /* video */
   const [isOpen, setIsOpen] = useState(false);
   const [video, setVideo] = useState('482203');
 
   const handleOnPlayVideo = () => {
     setIsOpen(true);
-    disableScroll.on();
   };
 
-  const handleOnVideoEnd = () => {
-    setIsOpen(false);
-    disableScroll.off();
-  };
 
-  // 360
+  /* Video 360 */
   const [isOpen360, setOpen360] = useState(false);
   const [isOpen360b, setOpen360b] = useState(false);
+
 
   return (
 
@@ -152,8 +145,8 @@ const timeline = () => {
               <div className={styles.columnLink}>
                 <div className={styles.LinksContent}>
                   <div className={styles.LinkItem}>
-                    <a onClick={handleOnOpenGalleryModal} className={styles.Link} >
-                      <p className={styles.LinkText}>galería de fotos</p>
+                    <a onClick={() => { setImages(imagenes1); setImagesZoom(imagenes1Zoom); handleOnOpenGallery(); }} className={styles.Link} >
+                      <p className={styles.LinkText}>galería de fotos x</p>
                       <div>
                         <GalleryIconTimeline />
                       </div>
@@ -235,7 +228,7 @@ const timeline = () => {
               <div className={styles.columnLink}>
                 <div className={styles.LinksContent}>
                   <div className={styles.LinkItem}>
-                    <a onClick={() => { setVideo('482203'); handleOnPlayVideo(); }} href='#' className={styles.Link} >
+                    <a onClick={() => { setVideo('482203'); handleOnPlayVideo(); }} className={styles.Link} >
                       <p className={styles.LinkText}>video arrieros</p>
                       <div>
                         <PlayIconTimeline />
@@ -352,7 +345,7 @@ const timeline = () => {
               <div className={styles.columnLink}>
                 <div className={styles.LinksContent}>
                   <div className={styles.LinkItem}>
-                    <a onClick={() => { setImages(imagenes2); setImagesZoom(imagenes2Zoom); handleOnOpenGalleryModal(); }} className={styles.Link} >
+                    <a onClick={() => { setImages(imagenes2); setImagesZoom(imagenes2Zoom); handleOnOpenGallery(); }} className={styles.Link} >
                       <p className={styles.LinkText}>galería de fotos</p>
                       <div>
                         <GalleryIconTimeline />
@@ -424,7 +417,7 @@ const timeline = () => {
               <div className={styles.columnLink}>
                 <div className={styles.LinksContent}>
                   <div className={styles.LinkItem}>
-                    <a onClick={() => { setImage(imagen1); handleOnOpenImageModal(); }} className={styles.Link} >
+                    <a onClick={() => { setImage(imagen1); handleOnOpenImage(); }} className={styles.Link} >
                       <div>
                         <GalleryIconTimeline />
                       </div>
@@ -502,7 +495,7 @@ const timeline = () => {
               <div className={styles.columnLink}>
                 <div className={styles.LinksContent}>
                   <div className={styles.LinkItem}>
-                    <a onClick={() => { setImage(imagen2); handleOnOpenImageModal(); }} className={styles.Link} >
+                    <a onClick={() => { setImage(imagen2); handleOnOpenImage(); }} className={styles.Link} >
                       <p className={styles.LinkText}>ilustración roque ferreira<br></br>el gamonal</p>
                       <div>
                         <GalleryIconTimeline />
@@ -553,7 +546,7 @@ const timeline = () => {
               <div className={styles.columnLink}>
                 <div className={styles.LinksContent}>
                   <div className={styles.LinkItem}>
-                    <a onClick={() => { setImage(imagen3); handleOnOpenImageModal(); }} className={styles.Link} >
+                    <a onClick={() => { setImage(imagen3); handleOnOpenImage(); }} className={styles.Link} >
                       <GalleryIconTimeline />
                       <p className={styles.LinkText}>ilustración destrucción alcaldía incendio</p>
                     </a>
@@ -580,7 +573,7 @@ const timeline = () => {
               <div className={styles.columnLink}>
                 <div className={styles.LinksContent}>
                   <div className={styles.LinkItem}>
-                    <a onClick={() => { setImage(imagen4); handleOnOpenImageModal(); }} target="_blank" className={styles.Link} >
+                    <a onClick={() => { setImage(imagen4); handleOnOpenImage(); }} target="_blank" className={styles.Link} >
                       <p className={styles.LinkText}>Foto de la Alcaldía</p>
                       <div>
                         <GalleryIconTimeline />
@@ -661,7 +654,7 @@ const timeline = () => {
               <div className={styles.columnLink}>
                 <div className={styles.LinksContent}>
                   <div className={styles.LinkItem}>
-                    <a onClick={() => { setImage(imagen5); handleOnOpenImageModal(); }} className={styles.Link} >
+                    <a onClick={() => { setImage(imagen5); handleOnOpenImage(); }} className={styles.Link} >
                       <div>
                         <GalleryIconTimeline />
                       </div>
@@ -721,43 +714,35 @@ const timeline = () => {
               </div>
             </div>
           </div>
-
         </div>
       </div>
 
       <div className={styles.fullScreenVideo}>
-        {isOpen &&
-          <VideoFadeModal
-            videoId={video}
-            showModal={isOpen}
-            setShowModal={setIsOpen}
-            onVideoEnded={handleOnVideoEnd}
-            autoPlay={true}
-          />
-        }
+        <VideoFadeModal
+          videoId={video}
+          showModal={isOpen}
+          setShowModal={setIsOpen}
+          autoPlay={true}
+        />
       </div>
 
 
       <div className={styles.fullScreenGallery}>
-        {isOpenGallery &&
-          <GalleryFadeModal
-            imagenes={images}
-            imagenesZoom={imagesZoom}
-            showModal={isOpenGallery}
-            setShowModal={setIsOpenGallery}
-          />
-        }
+        <GalleryFadeModal
+          imagenes={images}
+          imagenesZoom={imagesZoom}
+          showModal={isOpenGallery}
+          onCloseModal={handleOnCloseGallery}
+          setShowModal={setIsOpenGallery}
+        />
       </div>
-
       <div className={styles.fullScreenImage}>
-        {isOpenImage &&
-          <ImageFadeModal
-            imagen={image}
-            showModal={handleOnOpenImageModal}
-            onCloseModal={handleOnCloseImageModal}
-            setShowModal={setIsOpenImage}
-          />
-        }
+        <ImageFadeModal
+          imagen={image}
+          showModal={isOpenImage}
+          onCloseModal={handleOnCloseImage}
+          setShowModal={setIsOpenImage}
+        />
       </div>
 
 

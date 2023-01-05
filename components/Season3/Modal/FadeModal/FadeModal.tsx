@@ -1,10 +1,16 @@
 import React, { useEffect } from 'react';
+import disableScroll from 'disable-scroll';
 import styles from './season3.fadeModal.module.scss';
 
-const FadeModal = ({ showModal, onCloseModal, setShowModal }) => {
+const FadeModal = ({ children, showModal, onCloseModal, setShowModal }) => {
 
 
   useEffect(() => {
+
+    if (showModal) {
+      disableScroll.on();
+    }
+
     window.onclick = function (e) {
       if (e.target.id == 'container') {
         setShowModal(false);
@@ -23,6 +29,7 @@ const FadeModal = ({ showModal, onCloseModal, setShowModal }) => {
   const handleClose = () => {
     onCloseModal();
     setShowModal(false);
+    disableScroll.off();
   }
 
   return (
@@ -33,7 +40,7 @@ const FadeModal = ({ showModal, onCloseModal, setShowModal }) => {
           </p>
 
           <div className={styles.ContainerContent}>
-
+            {children}
           </div>
         </div>
       </div>
