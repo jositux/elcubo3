@@ -62,7 +62,7 @@ const Credits = () => {
                 <li>Claudia Lozano – <em>Productora de Locaciones</em></li>
                 <li>Manuel Rubio – <em>Asistente PUFA</em></li>
                 <li>John Duarte – <em>Coord. Producción de entregables</em></li>
-                <li>Jenny Alejandra Martínez – <em>Cafetería</em></li>
+                <li>Yenny Alejandra Martínez – <em>Cafetería</em></li>
               </ul>
 
             </div>

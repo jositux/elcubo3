@@ -16,7 +16,7 @@ const Dashboard = ({ char }) => {
   const [soledadPercent, setSoledadPercent] = useState(0);
   const [diegoPercent, setDiegoPercent] = useState(0);
   const [juanPercent, setJuanPercent] = useState(0);
-  const [jennyPercent, setJennyPercent] = useState(0);
+  const [yennyPercent, setYennyPercent] = useState(0);
   const [guillermoPercent, setGuillermoPercent] = useState(0);
 
   const handleOnPlayVideo = () => {
@@ -58,13 +58,13 @@ const Dashboard = ({ char }) => {
       link: '../interactivo/juan',
     },
     {
-      name: 'jenny',
-      realName: 'Jenny',
+      name: 'yenny',
+      realName: 'Yenny',
       description: '“Viajando se conoce la libertad“',
-      background: '/images/season3/steals/personaje-jenny.jpg',
-      icon: '/images/season3/map/popups/popup-jenny-yellow.png',
-      icon2: '/images/season3/map/popups/popup-jenny.png',
-      link: '../interactivo/jenny',
+      background: '/images/season3/steals/personaje-yenny.jpg',
+      icon: '/images/season3/map/popups/popup-yenny-yellow.png',
+      icon2: '/images/season3/map/popups/popup-yenny.png',
+      link: '../interactivo/yenny',
     },
     {
       name: 'guillermo',
@@ -91,8 +91,8 @@ const Dashboard = ({ char }) => {
           case 'juan':
             setJuanPercent(data.percent);
             break;
-          case 'jenny':
-            setJennyPercent(data.percent);
+          case 'yenny':
+            setYennyPercent(data.percent);
             break;
           case 'guillermo':
             setGuillermoPercent(data.percent);
@@ -154,17 +154,17 @@ const Dashboard = ({ char }) => {
                   </a>
                 </div>
               </div>
-              <div className={`${styles.row} ${styles.rowJenny}`}>
+              <div className={`${styles.row} ${styles.rowYenny}`}>
                 <div className={styles.column1}>
                   <div className={styles.avatar}>
-                    <img src="/images/season3/dashboard/jenny.png" />
+                    <img src="/images/season3/dashboard/yenny.png" />
                   </div>
                   <div className={styles.name}>
-                    <h6>Jenny</h6>
-                    <a href="../interactivo/jenny">Ver historia</a>
+                    <h6>Yenny</h6>
+                    <a href="../interactivo/yenny">Ver historia</a>
                   </div>
                   <div className={styles.progress}>
-                    <Progress percent={jennyPercent} />
+                    <Progress percent={yennyPercent} />
                   </div>
                 </div>
                 <div className={styles.column2}>

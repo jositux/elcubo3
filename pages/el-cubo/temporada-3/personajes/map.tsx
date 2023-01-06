@@ -38,12 +38,12 @@ const characters = [
     link: '../interactivo/juan',
   },
   {
-    name:'jenny', 
-    realName: 'Jenny', 
+    name:'yenny', 
+    realName: 'Yenny', 
     description: '“Viajando se conoce la libertad“',
-    background: '/images/season3/steals/personaje-jenny.jpg',
-    icon :'/images/season3/map/popups/popup-jenny.png',
-    link: '../interactivo/jenny',
+    background: '/images/season3/steals/personaje-yenny.jpg',
+    icon :'/images/season3/map/popups/popup-yenny.png',
+    link: '../interactivo/yenny',
   },
   {
     name:'guillermo', 
