@@ -26,7 +26,7 @@ const VideoModal = ({ videoId, showModal, closeVideo, setShowModal, autoPlay }) 
   return (
     <FadeModal
       showModal={showModal}
-      onCloseModal={closeVideo}
+      onCloseModal={handleCloseVideo}
       setShowModal={setShowModal}
     >
       {showModal &&
