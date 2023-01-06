@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useRef } from 'react';
+import React, { Fragment, useState, useRef, useEffect } from 'react';
 import PersonajeArrow from 'components/Season3/Svg/PersonajeArrow';
 import Progress from 'components/Season3/Shared/Progress/Progress';
 import Characters from './Characters';
@@ -12,6 +12,12 @@ const Dashboard = ({ char }) => {
 
   const [isOpen, setIsOpen] = useState(false);
   const [video, setVideo] = useState('482203');
+
+  const [soledadPercent, setSoledadPercent] = useState(0);
+  const [diegoPercent, setDiegoPercent] = useState(0);
+  const [juanPercent, setJuanPercent] = useState(0);
+  const [jennyPercent, setJennyPercent] = useState(0);
+  const [guillermoPercent, setGuillermoPercent] = useState(0);
 
   const handleOnPlayVideo = () => {
     setIsOpen(true);
@@ -52,13 +58,13 @@ const Dashboard = ({ char }) => {
       link: '../interactivo/juan',
     },
     {
-      name: 'yenny',
-      realName: 'Yenny',
+      name: 'jenny',
+      realName: 'Jenny',
       description: '“Viajando se conoce la libertad“',
       background: '/images/season3/steals/personaje-jenny.jpg',
-      icon: '/images/season3/map/popups/popup-yenny-yellow.png',
-      icon2: '/images/season3/map/popups/popup-yenny.png',
-      link: '../interactivo/yenny',
+      icon: '/images/season3/map/popups/popup-jenny-yellow.png',
+      icon2: '/images/season3/map/popups/popup-jenny.png',
+      link: '../interactivo/jenny',
     },
     {
       name: 'guillermo',
@@ -70,6 +76,33 @@ const Dashboard = ({ char }) => {
       link: '../interactivo/guillermo',
     },
   ];
+
+  useEffect(() => {
+    characters.forEach(c => {
+      let data = JSON.parse(localStorage.getItem(`'${c.name}'`));
+      if (data) {
+        switch (c.name) {
+          case 'soledad':
+            setSoledadPercent(data.percent);
+            break;
+          case 'diego':
+            setDiegoPercent(data.percent);
+            break;
+          case 'juan':
+            setJuanPercent(data.percent);
+            break;
+          case 'jenny':
+            setJennyPercent(data.percent);
+            break;
+          case 'guillermo':
+            setGuillermoPercent(data.percent);
+            break;
+          default:
+            break;
+        } 
+      }
+    });
+  }, [])
 
   return (
     <Fragment>
@@ -93,7 +126,7 @@ const Dashboard = ({ char }) => {
                     <a href="../interactivo/juan">Ver historia</a>
                   </div>
                   <div className={styles.progress}>
-                    <Progress percent={68} />
+                    <Progress percent={juanPercent} />
                   </div>
                 </div>
                 <div className={styles.column2}>
@@ -112,7 +145,7 @@ const Dashboard = ({ char }) => {
                     <a href="../interactivo/guillermo">Ver historia</a>
                   </div>
                   <div className={styles.progress}>
-                    <Progress percent={100} />
+                    <Progress percent={guillermoPercent} />
                   </div>
                 </div>
                 <div className={styles.column2}>
@@ -121,17 +154,17 @@ const Dashboard = ({ char }) => {
                   </a>
                 </div>
               </div>
-              <div className={`${styles.row} ${styles.rowYenny}`}>
+              <div className={`${styles.row} ${styles.rowJenny}`}>
                 <div className={styles.column1}>
                   <div className={styles.avatar}>
                     <img src="/images/season3/dashboard/jenny.png" />
                   </div>
                   <div className={styles.name}>
                     <h6>Jenny</h6>
-                    <a href="../interactivo/yenny">Ver historia</a>
+                    <a href="../interactivo/jenny">Ver historia</a>
                   </div>
                   <div className={styles.progress}>
-                    <Progress percent={30} />
+                    <Progress percent={jennyPercent} />
                   </div>
                 </div>
                 <div className={styles.column2}>
@@ -150,7 +183,7 @@ const Dashboard = ({ char }) => {
                     <a href="../interactivo/diego">Ver historia</a>
                   </div>
                   <div className={styles.progress}>
-                    <Progress percent={90} />
+                    <Progress percent={diegoPercent} />
                   </div>
                 </div>
                 <div className={styles.column2}>
@@ -169,7 +202,7 @@ const Dashboard = ({ char }) => {
                     <a href="../interactivo/soledad">Ver historia</a>
                   </div>
                   <div className={styles.progress}>
-                    <Progress percent={50} />
+                    <Progress percent={soledadPercent} />
                   </div>
                 </div>
                 <div className={styles.column2}>
