@@ -80,13 +80,9 @@ const Personaje = (props) => {
     }
   };
 
-
-
   useEffect(() => {
-
     if (player) {
       player.on('play', () => {
-        console.log(player);
         setInterval(() => {
           interactivos.map((i, index) => {
             if (parseInt(player.currentTime, 10) == i.field_ec_time_action) {
@@ -123,13 +119,31 @@ const Personaje = (props) => {
             let data = JSON.parse(localStorage.getItem(`'${name}'`));
             if (data) {
               if (parseInt(player.currentTime, 10) > data.seenTime && !data.ended) {
-                localStorage.setItem(`'${name}'`, JSON.stringify({ character: name, duration, seenTime: parseInt(player.currentTime + 1), ended: false }));
+                localStorage.setItem(`'${name}'`, JSON.stringify({ 
+                  character: name, 
+                  duration, 
+                  seenTime: parseInt(player.currentTime + 1), 
+                  ended: false, 
+                  percent: Math.round(( parseInt(player.currentTime) / duration ) * 100) 
+                }));
               }
               if (parseInt(player.currentTime, 10) >= (data.duration - 6) && !data.ended) {
-                localStorage.setItem(`'${name}'`, JSON.stringify({ character: name, duration, seenTime: duration, ended: true }));
+                localStorage.setItem(`'${name}'`, JSON.stringify({ 
+                  character: name, 
+                  duration, 
+                  seenTime: duration, 
+                  ended: true, 
+                  percent: Math.round(( parseInt(player.currentTime) / duration ) * 100) 
+                }));
               }
             } else {
-              localStorage.setItem(`'${name}'`, JSON.stringify({ character: name, duration, seenTime: parseInt(player.currentTime + 1), ended: false }));
+              localStorage.setItem(`'${name}'`, JSON.stringify({ 
+                character: name, 
+                duration, 
+                seenTime: parseInt(player.currentTime + 1), 
+                ended: false,
+                percent: Math.round(( parseInt(player.currentTime) / duration ) * 100) 
+              }));
             }
           }
         }, 5000);
