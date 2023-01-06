@@ -4,11 +4,9 @@ import styles from './season3.fadeModal.module.scss';
 
 const FadeModal = ({ children, showModal, onCloseModal, setShowModal }) => {
 
-
   useEffect(() => {
-
     if (showModal) {
-      disableScroll.on();
+      //disableScroll.on();
     }
 
     window.onclick = function (e) {
@@ -28,8 +26,8 @@ const FadeModal = ({ children, showModal, onCloseModal, setShowModal }) => {
 
   const handleClose = () => {
     onCloseModal();
+    //disableScroll.off();
     setShowModal(false);
-    disableScroll.off();
   }
 
   return (

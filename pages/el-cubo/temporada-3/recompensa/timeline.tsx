@@ -11,6 +11,7 @@ import GalleryFadeModal from 'components/Season3/Modal/GalleryFadeModal';
 import ImageFadeModal from 'components/Season3/Modal/ImageFadeModal';
 import ButtonModal from "components/Season3/Shared/Button/ButtonModal";
 import dynamic from 'next/dynamic';
+import disableScroll from 'disable-scroll';
 const ModalVideo = dynamic(() => import('react-modal-video'), { ssr: false });
 
 const timeline = () => {
@@ -121,7 +122,13 @@ const timeline = () => {
   const [video, setVideo] = useState('482203');
 
   const handleOnPlayVideo = () => {
+    disableScroll.on();
     setIsOpen(true);
+  };
+
+  const handleOnCloseVideo = () => {
+    //alert('kion/da');
+    disableScroll.off();
   };
 
 
@@ -146,7 +153,7 @@ const timeline = () => {
                 <div className={styles.LinksContent}>
                   <div className={styles.LinkItem}>
                     <a onClick={() => { setImages(imagenes1); setImagesZoom(imagenes1Zoom); handleOnOpenGallery(); }} className={styles.Link} >
-                      <p className={styles.LinkText}>galería de fotos x</p>
+                      <p className={styles.LinkText}>galería de fotos</p>
                       <div>
                         <GalleryIconTimeline />
                       </div>
@@ -721,11 +728,11 @@ const timeline = () => {
         <VideoFadeModal
           videoId={video}
           showModal={isOpen}
+          closeVideo={handleOnCloseVideo}
           setShowModal={setIsOpen}
           autoPlay={true}
         />
       </div>
-
 
       <div className={styles.fullScreenGallery}>
         <GalleryFadeModal
@@ -736,6 +743,7 @@ const timeline = () => {
           setShowModal={setIsOpenGallery}
         />
       </div>
+
       <div className={styles.fullScreenImage}>
         <ImageFadeModal
           imagen={image}
