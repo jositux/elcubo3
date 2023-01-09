@@ -26,7 +26,7 @@ const DashboardSlideModal = ({ char, showModal, onCloseDashboard }) => {
         <div className={styles.child}>
           <p className={styles.t_close} onClick={onCloseDashboard}>
           </p>
-          <Dashboard char={char} />
+          <Dashboard char={char} showModal={showModal}/>
         </div>
       </div>
     </div>

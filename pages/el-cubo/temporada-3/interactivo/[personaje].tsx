@@ -133,7 +133,7 @@ const Personaje = (props) => {
                   duration, 
                   seenTime: duration, 
                   ended: true, 
-                  percent: Math.round(( parseInt(player.currentTime) / duration ) * 100) 
+                  percent: 100
                 }));
               }
             } else {

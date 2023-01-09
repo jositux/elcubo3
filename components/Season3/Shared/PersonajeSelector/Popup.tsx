@@ -5,18 +5,18 @@ import cx from 'classnames';
 
 const ubications = [
   {
-    name: 'soledad', 
-    top: '30%', 
-    left: '40%', 
+    name: 'soledad',
+    top: '30%',
+    left: '40%',
   },
   {
-    name: 'diego', 
-    top: '44%', 
+    name: 'diego',
+    top: '44%',
     left: '47%',
   },
   {
-    name: 'juan', 
-    top: '60%', 
+    name: 'juan',
+    top: '60%',
     left: '60%',
   },
   {
@@ -25,20 +25,20 @@ const ubications = [
     left: '83%',
   },
   {
-    name: 'guillermo', 
-    top: '80%', 
+    name: 'guillermo',
+    top: '80%',
     left: '61%',
   },
 ]
 
-export const Popup = ({...props}) => {
+export const Popup = ({ ...props }) => {
 
   const char = props.characters;
   const [popupSizes, setPopupSizes] = useState(false);
 
   const [isViewed, setViewed] = useState(false);
 
-  const { query } = useRouter(); 
+  const { query } = useRouter();
 
   useEffect(() => {
 
@@ -49,8 +49,8 @@ export const Popup = ({...props}) => {
       setViewed(false);
     }
 
-    char.forEach( character => {
-      ubications.forEach( ubication => {
+    char.forEach(character => {
+      ubications.forEach(ubication => {
         if (ubication.name === character.name || ubication.name === character.realName) {
           const popup = document.querySelector(`#${character.name}`) as HTMLElement;
           popup.style.position = 'absolute';
@@ -72,32 +72,32 @@ export const Popup = ({...props}) => {
   }
 
   function updatePersonaje(bg: string, name: string, description: string, icon: string, link: string) {
-    if(props.updatePersonaje) {
+    if (props.updatePersonaje) {
       props.updatePersonaje(bg, name, description, icon, link);
     }
   }
 
   return (
     <Fragment>
-      { 
-        props.characters.map( (c, index) => (
-          <div className={`${styles.PopupContainer} ${styles[c.name+`-g`]} ${!isViewed ? cx(styles.FirstTime) : cx(styles.Viewed)}`} id={`${c.name}`} key={index}>
-            <div 
-            onMouseEnter={ () => { updatePersonaje(`${c.background}`, `${c.realName}`, `${c.description}`, `${c.icon}`, `${c.link}`); openPersonajesModal(); }} 
-            onClick={ () => { updatePersonaje(`${c.background}`, `${c.realName}`, `${c.description}`, `${c.icon}`, `${c.link}`); openPersonajesModal(); } } 
-            className={styles.titleImage}
-            style={{cursor:"pointer"}}
+      {
+        props.characters.map((c, index) => (
+          <div className={`${styles.PopupContainer} ${styles[c.name + `-g`]} ${!isViewed ? cx(styles.FirstTime) : cx(styles.Viewed)}`} id={`${c.name}`} key={index}>
+            <div
+              onMouseEnter={() => { updatePersonaje(`${c.background}`, `${c.realName}`, `${c.description}`, `${c.icon}`, `${c.link}`); openPersonajesModal(); }}
+              onClick={() => { updatePersonaje(`${c.background}`, `${c.realName}`, `${c.description}`, `${c.icon}`, `${c.link}`); openPersonajesModal(); }}
+              className={styles.titleImage}
+              style={{ cursor: "pointer" }}
             >
-              <img src={c.icon} className={styles.Popup}  />
+              <img src={c.icon} className={styles.Popup} />
             </div>
-            <div className={styles.textContent }>
+            <div className={styles.textContent}>
               <h1>{c.realName}</h1>
               <p>{c.description}</p>
 
-              <button>     
+              <button>
                 <span>Iniciar Experiencia</span>
               </button>
-              
+
             </div>
           </div>
         ))
