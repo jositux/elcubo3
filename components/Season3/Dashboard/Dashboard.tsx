@@ -7,7 +7,7 @@ import disableScroll from 'disable-scroll';
 import styles from './dashboard.module.scss';
 
 
-const Dashboard = ({ char }) => {
+const Dashboard = ({ char,showModal }) => {
   const ref = useRef();
 
   const [isOpen, setIsOpen] = useState(false);
@@ -80,9 +80,7 @@ const Dashboard = ({ char }) => {
   useEffect(() => {
     characters.forEach(c => {
       let data = JSON.parse(localStorage.getItem(`'${c.name}'`));
-
       if (data) {
-        console.log(data.percent);
         switch (c.name) {
           case 'soledad':
             setSoledadPercent(data.percent);
@@ -101,10 +99,11 @@ const Dashboard = ({ char }) => {
             break;
           default:
             break;
-        }
+        } 
       }
     });
-  }, [])
+   
+  }, [showModal])
 
   return (
     <Fragment>
@@ -132,9 +131,13 @@ const Dashboard = ({ char }) => {
                   </div>
                 </div>
                 <div className={styles.column2}>
-                  <a onClick={() => { setVideo('485843'); handleOnPlayVideo(); }} className={styles.buttonConfesionario}>
-                    VER CONFESIONARIO
-                  </a>
+                  {
+                    juanPercent === 100 
+                      ? <a onClick={() => { setVideo('485843'); handleOnPlayVideo(); }} className={styles.buttonConfesionario}>
+                          VER CONFESIONARIO
+                        </a>
+                      : ''
+                  }
                 </div>
               </div>
               <div className={`${styles.row} ${styles.rowGuillermo}`}>
@@ -151,9 +154,13 @@ const Dashboard = ({ char }) => {
                   </div>
                 </div>
                 <div className={styles.column2}>
-                  <a onClick={() => { setVideo('485841'); handleOnPlayVideo(); }} className={styles.buttonConfesionario}>
-                    VER CONFESIONARIO
-                  </a>
+                  {
+                    guillermoPercent === 100
+                      ? <a onClick={() => { setVideo('485841'); handleOnPlayVideo(); }} className={styles.buttonConfesionario}>
+                          VER CONFESIONARIO
+                        </a>
+                      : ''
+                  }
                 </div>
               </div>
               <div className={`${styles.row} ${styles.rowYenny}`}>
@@ -170,9 +177,13 @@ const Dashboard = ({ char }) => {
                   </div>
                 </div>
                 <div className={styles.column2}>
-                  <a onClick={() => { setVideo('485847'); handleOnPlayVideo(); }} className={styles.buttonConfesionario} className={styles.buttonConfesionario}>
-                    VER CONFESIONARIO
-                  </a>
+                  {
+                    yennyPercent === 100
+                      ? <a onClick={() => { setVideo('485847'); handleOnPlayVideo(); }} className={styles.buttonConfesionario} className={styles.buttonConfesionario}>
+                          VER CONFESIONARIO
+                        </a>
+                      : ''
+                  }
                 </div>
               </div>
               <div className={`${styles.row} ${styles.rowDiego}`}>
@@ -189,9 +200,13 @@ const Dashboard = ({ char }) => {
                   </div>
                 </div>
                 <div className={styles.column2}>
-                  <a onClick={() => { setVideo('485839'); handleOnPlayVideo(); }} className={styles.buttonConfesionario}>
-                    VER CONFESIONARIO
-                  </a>
+                  {
+                    diegoPercent === 100
+                      ? <a onClick={() => { setVideo('485839'); handleOnPlayVideo(); }} className={styles.buttonConfesionario}>
+                          VER CONFESIONARIO
+                        </a>
+                      : ''
+                  }
                 </div>
               </div>
               <div className={`${styles.row} ${styles.rowSoledad}`}>
@@ -208,16 +223,25 @@ const Dashboard = ({ char }) => {
                   </div>
                 </div>
                 <div className={styles.column2}>
-                  <a onClick={() => { setVideo('485845'); handleOnPlayVideo(); }} className={styles.buttonConfesionario}>
-                    VER CONFESIONARIO
-                  </a>
+                  {
+                    soledadPercent === 100
+                      ? <a onClick={() => { setVideo('485845'); handleOnPlayVideo(); }} className={styles.buttonConfesionario}>
+                          VER CONFESIONARIO
+                        </a>
+                      : ''
+                  }
+                  
                 </div>
               </div>
 
               <div className={`${styles.Info}`}>
-                <a href="/el-cubo/temporada-3/recompensa/timeline" className={styles.buttonInfo}>
-                  VER INFOGRAFIA
-                </a>
+                {
+                  (soledadPercent && juanPercent && guillermoPercent && yennyPercent && diegoPercent ) === 100
+                    ? <a href="/el-cubo/temporada-3/recompensa/timeline" className={styles.buttonInfo}>
+                        VER INFOGRAFIA
+                      </a>
+                    : ''
+                }
               </div>
 
             </div>
@@ -254,17 +278,15 @@ const Dashboard = ({ char }) => {
       </div>
 
       <div className={styles.fullScreenVideo}>
-
-        <div className={styles.fullScreenVideo}>
+        {isOpen &&
           <VideoFadeModal
             videoId={video}
             showModal={isOpen}
-            closeVideo={handleOnVideoEnd}
             setShowModal={setIsOpen}
+            onVideoEnded={handleOnVideoEnd}
             autoPlay={true}
           />
-        </div>
-
+        }
       </div>
 
     </Fragment>

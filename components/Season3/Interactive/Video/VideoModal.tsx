@@ -30,7 +30,7 @@ const VideoModal = ({
     srcVideo = UrlUtils.getVideoUrl('482205');
   }
 
-  // Jenny 1
+  // Yenny 1
   if (data.id == '1518') {
     srcVideo = UrlUtils.getVideoUrl('482207');
   }
