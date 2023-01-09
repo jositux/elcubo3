@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import VideoPlayer from 'components/Season3/VideoPlayer/VideoPlayer';
-import Dashboard from 'components/Season3/Modal/DashboardSlideModal';
+import DashboardSlide from 'components/Season3/Modal/DashboardSlideModal';
 import GalleryModal from 'components/Season3/Interactive/Gallery/GalleryModal';
 import AudioModal from 'components/Season3/Interactive/Audio/AudioModal';
 import VideoModal from 'components/Season3/Interactive/Video/VideoModal';
@@ -21,6 +21,7 @@ const Personaje = (props) => {
   let duration = episodio?.field_ec_video_duration;
   let title = personaje?.field_ec_real_name;
   let name = personaje?.name.split(" ")[0].toLowerCase();
+  let srcConfessional = UrlUtils.getVideoUrl(episodio?.field_ec_asset_id);
 
   let intervalLocalStorage = null;
   const dataProgressVideo = [];
@@ -33,6 +34,8 @@ const Personaje = (props) => {
   const [player, setPlayer] = useState(null);
   const steal = useRef(null);
   const [videoEnded, setVideoEnded] = useState(false);
+
+  const [percentParam, setPercentParam] = useState(0);
 
   const markers = interactivos.map(i => {
     return {
@@ -56,8 +59,8 @@ const Personaje = (props) => {
 
   useEffect(() => {
     const fixLoad = () => {
-      player.forward(5);
-      player.rewind(5);
+      //player.forward(5);
+      //player.rewind(5);
       player.play();
     };
     const onLoadFadeout = () => {
@@ -119,30 +122,30 @@ const Personaje = (props) => {
             let data = JSON.parse(localStorage.getItem(`'${name}'`));
             if (data) {
               if (parseInt(player.currentTime, 10) > data.seenTime && !data.ended) {
-                localStorage.setItem(`'${name}'`, JSON.stringify({ 
-                  character: name, 
-                  duration, 
-                  seenTime: parseInt(player.currentTime + 1), 
-                  ended: false, 
-                  percent: Math.round(( parseInt(player.currentTime) / duration ) * 100) 
+                localStorage.setItem(`'${name}'`, JSON.stringify({
+                  character: name,
+                  duration,
+                  seenTime: parseInt(player.currentTime + 1),
+                  ended: false,
+                  percent: Math.round((parseInt(player.currentTime) / duration) * 100)
                 }));
               }
               if (parseInt(player.currentTime, 10) >= (data.duration - 6) && !data.ended) {
-                localStorage.setItem(`'${name}'`, JSON.stringify({ 
-                  character: name, 
-                  duration, 
-                  seenTime: duration, 
-                  ended: true, 
+                localStorage.setItem(`'${name}'`, JSON.stringify({
+                  character: name,
+                  duration,
+                  seenTime: duration,
+                  ended: true,
                   percent: 100
                 }));
               }
             } else {
-              localStorage.setItem(`'${name}'`, JSON.stringify({ 
-                character: name, 
-                duration, 
-                seenTime: parseInt(player.currentTime + 1), 
+              localStorage.setItem(`'${name}'`, JSON.stringify({
+                character: name,
+                duration,
+                seenTime: parseInt(player.currentTime + 1),
                 ended: false,
-                percent: Math.round(( parseInt(player.currentTime) / duration ) * 100) 
+                percent: Math.round((parseInt(player.currentTime) / duration) * 100)
               }));
             }
           }
@@ -196,6 +199,8 @@ const Personaje = (props) => {
   }, [player])
 
   const handleOnClickDashboard = () => {
+    let percent = JSON.parse(localStorage.getItem(`'${name}'`)).percent;
+    setPercentParam(percent);
     setShowDashboardModal(true);
   };
 
@@ -229,11 +234,14 @@ const Personaje = (props) => {
 
   return (
     <div className={styles.NodeContainer}>
-      <Dashboard
+
+      <DashboardSlide
         char={name}
+        percentParam={percentParam}
         showModal={showDashboardModal}
         onCloseDashboard={handleOnCloseDashboard}
       />
+
       <div ref={steal} className={styles.steal}>
         <img className={styles.stealDesktop} src={`/images/season3/steals/${name}.jpg`} />
         <img className={styles.stealMobile} src={`/images/season3/steals/${name}-mobile.jpg`} />

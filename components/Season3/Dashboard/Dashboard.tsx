@@ -7,17 +7,19 @@ import disableScroll from 'disable-scroll';
 import styles from './dashboard.module.scss';
 
 
-const Dashboard = ({ char,showModal }) => {
+const Dashboard = ({ char, percentParam }) => {
   const ref = useRef();
 
   const [isOpen, setIsOpen] = useState(false);
   const [video, setVideo] = useState('482203');
 
+  const [juanPercent, setJuanPercent] = useState(0);
+  const [guillermoPercent, setGuillermoPercent] = useState(0);
+  const [yennyPercent, setYennyPercent] = useState(0);
   const [soledadPercent, setSoledadPercent] = useState(0);
   const [diegoPercent, setDiegoPercent] = useState(0);
-  const [juanPercent, setJuanPercent] = useState(0);
-  const [yennyPercent, setYennyPercent] = useState(0);
-  const [guillermoPercent, setGuillermoPercent] = useState(0);
+
+  const [timeline, setTimeline] = useState(true);
 
   const handleOnPlayVideo = () => {
     setIsOpen(true);
@@ -82,28 +84,28 @@ const Dashboard = ({ char,showModal }) => {
       let data = JSON.parse(localStorage.getItem(`'${c.name}'`));
       if (data) {
         switch (c.name) {
-          case 'soledad':
-            setSoledadPercent(data.percent);
-            break;
-          case 'diego':
-            setDiegoPercent(data.percent);
-            break;
           case 'juan':
             setJuanPercent(data.percent);
-            break;
-          case 'yenny':
-            setYennyPercent(data.percent);
             break;
           case 'guillermo':
             setGuillermoPercent(data.percent);
             break;
+          case 'yenny':
+            setYennyPercent(data.percent);
+            break;
+          case 'diego':
+            setDiegoPercent(data.percent);
+            break;
+          case 'soledad':
+            setSoledadPercent(data.percent);
+            break;
           default:
             break;
-        } 
+        }
       }
     });
-   
-  }, [showModal])
+
+  }, [])
 
   return (
     <Fragment>
@@ -132,10 +134,10 @@ const Dashboard = ({ char,showModal }) => {
                 </div>
                 <div className={styles.column2}>
                   {
-                    juanPercent === 100 
+                    juanPercent === 100
                       ? <a onClick={() => { setVideo('485843'); handleOnPlayVideo(); }} className={styles.buttonConfesionario}>
-                          VER CONFESIONARIO
-                        </a>
+                        VER CONFESIONARIO
+                      </a>
                       : ''
                   }
                 </div>
@@ -157,8 +159,8 @@ const Dashboard = ({ char,showModal }) => {
                   {
                     guillermoPercent === 100
                       ? <a onClick={() => { setVideo('485841'); handleOnPlayVideo(); }} className={styles.buttonConfesionario}>
-                          VER CONFESIONARIO
-                        </a>
+                        VER CONFESIONARIO
+                      </a>
                       : ''
                   }
                 </div>
@@ -180,8 +182,8 @@ const Dashboard = ({ char,showModal }) => {
                   {
                     yennyPercent === 100
                       ? <a onClick={() => { setVideo('485847'); handleOnPlayVideo(); }} className={styles.buttonConfesionario} className={styles.buttonConfesionario}>
-                          VER CONFESIONARIO
-                        </a>
+                        VER CONFESIONARIO
+                      </a>
                       : ''
                   }
                 </div>
@@ -203,8 +205,8 @@ const Dashboard = ({ char,showModal }) => {
                   {
                     diegoPercent === 100
                       ? <a onClick={() => { setVideo('485839'); handleOnPlayVideo(); }} className={styles.buttonConfesionario}>
-                          VER CONFESIONARIO
-                        </a>
+                        VER CONFESIONARIO
+                      </a>
                       : ''
                   }
                 </div>
@@ -226,20 +228,20 @@ const Dashboard = ({ char,showModal }) => {
                   {
                     soledadPercent === 100
                       ? <a onClick={() => { setVideo('485845'); handleOnPlayVideo(); }} className={styles.buttonConfesionario}>
-                          VER CONFESIONARIO
-                        </a>
+                        VER CONFESIONARIO
+                      </a>
                       : ''
                   }
-                  
+
                 </div>
               </div>
 
               <div className={`${styles.Info}`}>
                 {
-                  (soledadPercent && juanPercent && guillermoPercent && yennyPercent && diegoPercent ) === 100
+                  (soledadPercent && juanPercent && guillermoPercent && yennyPercent && diegoPercent) === 100
                     ? <a href="/el-cubo/temporada-3/recompensa/timeline" className={styles.buttonInfo}>
-                        VER INFOGRAFIA
-                      </a>
+                      VER INFOGRAFIA
+                    </a>
                     : ''
                 }
               </div>
