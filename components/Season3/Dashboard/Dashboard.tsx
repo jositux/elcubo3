@@ -280,12 +280,12 @@ const Dashboard = ({ char, percentParam }) => {
       </div>
 
       <div className={styles.fullScreenVideo}>
-        {isOpen &&
+        {//isOpen &&
           <VideoFadeModal
             videoId={video}
             showModal={isOpen}
             setShowModal={setIsOpen}
-            onVideoEnded={handleOnVideoEnd}
+            closeVideo={handleOnVideoEnd}
             autoPlay={true}
           />
         }
