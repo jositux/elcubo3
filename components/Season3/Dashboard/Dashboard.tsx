@@ -19,8 +19,6 @@ const Dashboard = ({ char, percentParam }) => {
   const [soledadPercent, setSoledadPercent] = useState(0);
   const [diegoPercent, setDiegoPercent] = useState(0);
 
-  const [timeline, setTimeline] = useState(true);
-
   const handleOnPlayVideo = () => {
     setIsOpen(true);
     disableScroll.on();

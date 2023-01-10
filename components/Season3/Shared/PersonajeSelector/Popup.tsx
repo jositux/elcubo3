@@ -20,8 +20,8 @@ const ubications = [
     left: '60%',
   },
   {
-    name: 'yenny', 
-    top: '5%', 
+    name: 'yenny',
+    top: '5%',
     left: '83%',
   },
   {
@@ -65,7 +65,8 @@ export const Popup = ({ ...props }) => {
 
   }
 
-  function openPersonajesModal() {
+  async function openPersonajesModal() {
+    await new Promise(resolve => setTimeout(resolve, 300));
     if (props.onClickPersonajesModal) {
       props.onClickPersonajesModal();
     }

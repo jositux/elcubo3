@@ -76,7 +76,7 @@ const Personaje = (props) => {
   }, [steal.current, player]);
 
   const handlePlayVideo = (playVideo) => {
-    if (playVideo) {
+    if (playVideo && !videoEnded) {
       player.play();
     } else {
       player.pause();
@@ -288,7 +288,7 @@ const Personaje = (props) => {
         data={interactiveData}
       />}
 
-      {videoEnded && <Ending name={title} />}
+      {videoEnded && <Ending name={title} onButtonClicked={handleOnClickDashboard} />}
 
     </div>
   );
