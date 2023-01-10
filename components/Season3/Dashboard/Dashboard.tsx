@@ -136,7 +136,9 @@ const Dashboard = ({ char, percentParam }) => {
                       ? <a onClick={() => { setVideo('485843'); handleOnPlayVideo(); }} className={styles.buttonConfesionario}>
                         VER CONFESIONARIO
                       </a>
-                      : ''
+                      : <a className={styles.buttonConfesionarioInactive}>
+                        VER CONFESIONARIO
+                      </a>
                   }
                 </div>
               </div>
@@ -159,7 +161,9 @@ const Dashboard = ({ char, percentParam }) => {
                       ? <a onClick={() => { setVideo('485841'); handleOnPlayVideo(); }} className={styles.buttonConfesionario}>
                         VER CONFESIONARIO
                       </a>
-                      : ''
+                      : <a className={styles.buttonConfesionarioInactive}>
+                        VER CONFESIONARIO
+                      </a>
                   }
                 </div>
               </div>
@@ -182,7 +186,9 @@ const Dashboard = ({ char, percentParam }) => {
                       ? <a onClick={() => { setVideo('485847'); handleOnPlayVideo(); }} className={styles.buttonConfesionario} className={styles.buttonConfesionario}>
                         VER CONFESIONARIO
                       </a>
-                      : ''
+                      : <a className={styles.buttonConfesionarioInactive}>
+                        VER CONFESIONARIO
+                      </a>
                   }
                 </div>
               </div>
@@ -205,7 +211,9 @@ const Dashboard = ({ char, percentParam }) => {
                       ? <a onClick={() => { setVideo('485839'); handleOnPlayVideo(); }} className={styles.buttonConfesionario}>
                         VER CONFESIONARIO
                       </a>
-                      : ''
+                      : <a className={styles.buttonConfesionarioInactive}>
+                        VER CONFESIONARIO
+                      </a>
                   }
                 </div>
               </div>
@@ -228,7 +236,9 @@ const Dashboard = ({ char, percentParam }) => {
                       ? <a onClick={() => { setVideo('485845'); handleOnPlayVideo(); }} className={styles.buttonConfesionario}>
                         VER CONFESIONARIO
                       </a>
-                      : ''
+                      : <a className={styles.buttonConfesionarioInactive}>
+                        VER CONFESIONARIO
+                      </a>
                   }
 
                 </div>
@@ -240,7 +250,9 @@ const Dashboard = ({ char, percentParam }) => {
                     ? <a href="/el-cubo/temporada-3/recompensa/timeline" className={styles.buttonInfo}>
                       VER INFOGRAFIA
                     </a>
-                    : ''
+                    : <a className={styles.buttonInfoInactive}>
+                      VER INFOGRAFIA
+                    </a>
                 }
               </div>
 

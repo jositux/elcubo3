@@ -250,7 +250,7 @@ const Personaje = (props) => {
         <VideoPlayer
           showBackButton
           backButtonLink={"/el-cubo/temporada-3/personajes/map?ref=view"}
-          backButtonText={"Elegir otro personaje"}
+          backButtonText={"Elige otro personaje"}
           title={title}
           source={srcVideo}
           showPrevButton={false}

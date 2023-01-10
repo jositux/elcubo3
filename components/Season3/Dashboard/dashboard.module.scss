@@ -60,7 +60,7 @@
         }
       }
       div.progress {
-        width: 100px;
+        width: 80px;
         margin-top: 15px;
       }
     }
@@ -71,9 +71,25 @@
         font-weight: 300;
         color:#E2B857;
         border: 1px solid #E2B857;
-        width: 120px;
+        width: 100%;
+        float: left;
         font-size: 14px;
-        padding: 10px;
+        padding: 10px 0;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .buttonConfesionarioInactive {
+        font-family: $elcubo3_font_subtitle;
+        font-weight: 300;
+        color:#E2B857;
+        border: 1px solid #E2B857;
+        width: 100%;
+        float: left;
+        font-size: 14px;
+        padding: 10px 0;
+        text-align: center;
+        opacity: .2;
       }
     }
   }
@@ -89,13 +105,29 @@
     border: 1px solid #E2B857;
     font-size: 14px;
     padding: 10px;
-    width: 120px;
+    width: 31%;
     text-align: center;
     float: right;
-    margin: 10px;
+    margin: 10px 0;
     background: #402A04;
     cursor: pointer;
     text-decoration: none;
+  }
+
+  a.infoInactive {
+    font-family: $elcubo3_font_subtitle;
+    font-weight: 300;
+    color:#E2B857;
+    border: 1px solid #E2B857;
+    font-size: 14px;
+    padding: 10px;
+    width: 31%;
+    text-align: center;
+    float: right;
+    margin: 10px 0;
+    background: #402A04;
+    text-decoration: none;
+    opacity: .2;
   }
 }
 

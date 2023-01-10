@@ -55,8 +55,8 @@ const Ending = ({ name, onButtonClicked }) => {
 
           <img className={styles.imgCharacter} src={imgUrl} />
           <div className={styles.child}>
-            <a href="/el-cubo/temporada-3/personajes/map" className={styles.Back} >
-              <Back /> <span>Elegir otro personaje</span>
+            <a href="/el-cubo/temporada-3/personajes/map?ref=view" className={styles.Back} >
+              <Back /> <span>Elige otro personaje</span>
             </a>
 
             <div className={`${styles.EndingCover} ${styles.fadeIn}`}>

@@ -27,6 +27,8 @@ const DashboardSlideModal = ({ char, percentParam, showModal, onCloseDashboard }
         <div className={styles.child}>
           <p className={styles.t_close} onClick={onCloseDashboard}>
           </p>
+          <p className={styles.barClose} onClick={onCloseDashboard}>
+          </p>
           {showModal &&
             <Dashboard char={char} percentParam={percentParam} />
           }
