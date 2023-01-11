@@ -17,5 +17,8 @@
   },
   "[javascriptreact]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
   }
 }

@@ -23,16 +23,17 @@ const PersonajesModal = ({ ...props }) => {
 
   return (
     <div id="container" className={`${styles.containerCover} ${props.showPersonajesModal ? styles.open : ""}`}>
-      
+
       <div className={styles.container}>
         <div className={styles.child}>
 
-        <a className={styles.Back} onClick={props.onClosePersonajesModal}>
-        <Back /> <span>Volver</span>
-        </a>
+          <a className={styles.Back} onClick={props.onClosePersonajesModal}>
+            <Back /> <span>Volver</span>
+          </a>
           <p className={styles.t_close} onClick={props.onClosePersonajesModal}>
           </p>
           <img className={styles.imgCover} src={props.background} />
+
           <div className={styles.ContainerCharacter}>
             {/*<div className={styles.column}>
             <img src={props.icon}  />

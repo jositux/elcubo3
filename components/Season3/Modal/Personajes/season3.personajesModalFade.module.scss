@@ -156,3 +156,28 @@
   height: 2px;
 }
 
+
+.coverImg img {
+  display: none;
+}
+
+.coverImg.juan img:nth-child(1){
+  display: block;
+}
+
+.coverImg.guillermo img:nth-child(2){
+  display: block;
+}
+
+.coverImg.yenny img:nth-child(3){
+  display: block;
+}
+
+.coverImg.diego img:nth-child(4){
+  display: block;
+}
+
+.coverImg.soledad img:nth-child(5){
+  display: block;
+}
+

@@ -23,16 +23,24 @@ const PersonajesModal = ({ ...props }) => {
 
   return (
     <div id="container" className={`${styles.containerCover} ${props.showPersonajesModal ? styles.open : ""}`}>
-      
+
       <div className={styles.container}>
         <div className={styles.child}>
 
-        <a className={styles.Back} onClick={props.onClosePersonajesModal}>
-        <Back /> <span>Volver</span>
-        </a>
+          <a className={styles.Back} onClick={props.onClosePersonajesModal}>
+            <Back /> <span>Volver</span>
+          </a>
           <p className={styles.t_close} onClick={props.onClosePersonajesModal}>
           </p>
-          <img className={styles.imgCover} src={props.background} />
+          {/*<img className={styles.imgCover} src={props.background} />*/}
+          <div className={`${styles.coverImg} ${styles[props?.name.split(" ")[0].toLowerCase()]}`}>
+            <img className={styles.imgCover} src='/images/season3/steals/personaje-juan.jpg' />
+            <img className={styles.imgCover} src='/images/season3/steals/personaje-guillermo.jpg' />
+            <img className={styles.imgCover} src='/images/season3/steals/personaje-yenny.jpg' />
+            <img className={styles.imgCover} src='/images/season3/steals/personaje-diego.jpg' />
+            <img className={styles.imgCover} src='/images/season3/steals/personaje-soledad.jpg' />
+          </div>
+
           <div className={styles.ContainerCharacter}>
             {/*<div className={styles.column}>
             <img src={props.icon}  />
