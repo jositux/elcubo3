@@ -21,14 +21,14 @@ export const SlidersMobile = ({ isLoggedIn, onGuest }) => {
     //const contentResizable = document.querySelector('#ContentResizable') as HTMLElement;
     //const logoTeaser = document.querySelector('#LogoTeaser') as HTMLElement;
     //const headerHeigth = 55;
-   // const incrementTop = 1.5;
+    // const incrementTop = 1.5;
 
     //const slider1 = document.querySelector('#Slider1') as HTMLElement;
     //const ImgBG1 = document.querySelector('#ImgBG1') as HTMLElement;
     //const Texto1 = document.querySelector('#Texto1') as HTMLElement;
     //const height1 = videoContainer.offsetHeight + slider1.offsetHeight + headerHeigth;
 
-   // const slider2 = document.querySelector('#Slider2') as HTMLElement;
+    // const slider2 = document.querySelector('#Slider2') as HTMLElement;
     //const ImgBG2 = document.querySelector('#ImgBG2') as HTMLElement;
     //const Texto2 = document.querySelector('#Texto2') as HTMLElement;
     //const height2 = height1 + slider2.offsetHeight;
@@ -43,92 +43,92 @@ export const SlidersMobile = ({ isLoggedIn, onGuest }) => {
 
 
     //const getPosY = () => {
-      //console.log('scroll' + window.scrollY);
-      //console.log(headerHeigth);
+    //console.log('scroll' + window.scrollY);
+    //console.log(headerHeigth);
 
-      //if (window.scrollY <= headerHeigth) {
-        /* 100 equivale al 100% del ancho */
-        //contentResizable.style.width = 100 - window.scrollY / 5 + '%';
-        /* incrementTop es el grado de margen superior mientras se hace scroll */
-        //contentResizable.style.top =  window.scrollY * incrementTop + 'px';
-      //}
-      
+    //if (window.scrollY <= headerHeigth) {
+    /* 100 equivale al 100% del ancho */
+    //contentResizable.style.width = 100 - window.scrollY / 5 + '%';
+    /* incrementTop es el grado de margen superior mientras se hace scroll */
+    //contentResizable.style.top =  window.scrollY * incrementTop + 'px';
+    //}
 
-      //if(window.scrollY <= height1) {
-        //ImgBG0.style.opacity = '' + (window.scrollY * 2 ) / (height1);
-        //Texto0.style.opacity = '' + (window.scrollY * 2 ) / (height1);
-      //}
-     
 
-      //ImgBG1.style.opacity = '' + (window.scrollY ) / (height1);
-      //Texto1.style.opacity = '' + (window.scrollY ) / (height1);
-      
-      //ImgBG2.style.opacity = '' + (window.scrollY ) / (height2);
-      //Texto2.style.opacity = '' + (window.scrollY ) / (height2);
+    //if(window.scrollY <= height1) {
+    //ImgBG0.style.opacity = '' + (window.scrollY * 2 ) / (height1);
+    //Texto0.style.opacity = '' + (window.scrollY * 2 ) / (height1);
+    //}
 
-      //credits.style.opacity = '' + (window.scrollY ) / (height4);
 
-      /*if(window.scrollY >= height1 ) {
-        slider1.style.position = 'relative';
-      }
-      else {
-        slider1.style.position = 'fixed';
-      }*/
+    //ImgBG1.style.opacity = '' + (window.scrollY ) / (height1);
+    //Texto1.style.opacity = '' + (window.scrollY ) / (height1);
 
-      //if(window.scrollY >= height2 ) {
-        //slider2.style.position = 'relative';
-      //}
-      //else {
-        //slider2.style.position = 'fixed';
-     // }
+    //ImgBG2.style.opacity = '' + (window.scrollY ) / (height2);
+    //Texto2.style.opacity = '' + (window.scrollY ) / (height2);
 
-      /*if(window.scrollY >= height3 ) {
-        slider3.style.position = 'relative';
-        whitespace.style.display = 'none';
-      }
-      else {
-        slider3.style.position = 'fixed';
-        whitespace.style.display = 'block';
-      }*/
+    //credits.style.opacity = '' + (window.scrollY ) / (height4);
+
+    /*if(window.scrollY >= height1 ) {
+      slider1.style.position = 'relative';
+    }
+    else {
+      slider1.style.position = 'fixed';
+    }*/
+
+    //if(window.scrollY >= height2 ) {
+    //slider2.style.position = 'relative';
+    //}
+    //else {
+    //slider2.style.position = 'fixed';
+    // }
+
+    /*if(window.scrollY >= height3 ) {
+      slider3.style.position = 'relative';
+      whitespace.style.display = 'none';
+    }
+    else {
+      slider3.style.position = 'fixed';
+      whitespace.style.display = 'block';
+    }*/
 
     // }
-    
+
     //window.addEventListener('scroll', getPosY);
     //return () => {
-     
+
     //window.removeEventListener('scroll', getPosY);
     //}
 
 
 
-    
+
   }, [])
 
   return (
     <Fragment>
-      
+
       <div id="VideoContainerMobile" className={styles.VideoContainer}>
         <div id='LogoTeaser' className={styles.LogoTeaser}>
-              <img src="/images/season3/logo-caminos-de-jordan.png" />
+          <img src="/images/season3/logo-caminos-de-jordan.png" />
         </div>
         <VideoIntro url={"/videos/season3.mp4"} />
-      </div> 
+      </div>
 
       <div className={styles.SlidersContainer}>
-        
+
         <div id="Slider1" className={styles.Images}>
           <div className={styles.ButtonContainerTop}>
-              {isLoggedIn 
-                ? <ButtonHome url={Links.register} text="Iniciar experiencia" />
-                : <ButtonHome 
-                    type="button" 
-                    onClick={onGuest} 
-                    text="Iniciar experiencia" 
-                  />
-              }
+            {isLoggedIn
+              ? <ButtonHome url={Links.register} text="Iniciar experiencia" />
+              : <ButtonHome
+                type="button"
+                onClick={onGuest}
+                text="Iniciar experiencia"
+              />
+            }
           </div>
           <div className={styles.TextContent}>
-            <h1>Jordán Sube es el pueblo Colombiano con la menor cantidad de almas del país.</h1>
+            <h1>Jordán Sube es el pueblo colombiano con la menor cantidad de almas del país.</h1>
             <p>¿Qué sucedió en Jordán para pasar de la prosperidad a ser un pueblo fantasma?</p>
           </div>
           <div className={styles.IconArrowBottom}>
@@ -143,7 +143,7 @@ export const SlidersMobile = ({ isLoggedIn, onGuest }) => {
             <h1>Cinco personajes buscan superar los fantasmas que se apoderaron de Jordán Sube.</h1>
             <p>¿Cómo hacerlo cuando el pueblo vive bajo una maldición?</p>
           </div>
-          
+
         </div>
 
         <div id="Slider3" className={styles.Images}>
@@ -151,20 +151,20 @@ export const SlidersMobile = ({ isLoggedIn, onGuest }) => {
             <h1>¿Puede un pueblo sobrevivir estancado en el tiempo?</h1>
             <p>Jordán Sube se encuentra ubicadoen el fondo del Cañón del Chicamocha, pero su aislamiento no impide que su habitantes sigan adelante.</p>
           </div>
-         
+
           <div className={styles.ButtonContainerBottom}>
-            {isLoggedIn 
+            {isLoggedIn
               ? <ButtonHome url={Links.registerTemp2} text="Iniciar experiencia" />
-              : <ButtonHome 
-                  type="button" 
-                  onClick={onGuest} 
-                  text="Iniciar experiencia" 
-                />
+              : <ButtonHome
+                type="button"
+                onClick={onGuest}
+                text="Iniciar experiencia"
+              />
             }
           </div>
         </div>
         <Credits />
-       
+
       </div>
     </Fragment>
   )

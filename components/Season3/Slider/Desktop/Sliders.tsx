@@ -120,7 +120,7 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
         <img id='ImgBG0' src="/images/season3/slider/home_slider_01.jpg" className={styles.ImgBG0} />
         <div id='Texto0' className={`${styles.TextContent} ${styles.TextContentRight}`}>
           <article>
-            <h1>Jordán Sube es el pueblo Colombiano con la menor cantidad de almas del país.</h1>
+            <h1>Jordán Sube es el pueblo colombiano con la menor cantidad de almas del país.</h1>
             <p>¿Qué sucedió en <strong>Jordán</strong> para pasar de la <br />prosperidad a ser un pueblo fantasma?</p>
           </article>
         </div>
