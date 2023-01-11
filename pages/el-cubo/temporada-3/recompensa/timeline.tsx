@@ -94,6 +94,8 @@ const timeline = () => {
 
   const handleOnCloseGallery = () => {
     setIsOpenGallery(false);
+    setImages([]);
+    setImagesZoom([]);
   };
 
 
@@ -114,6 +116,7 @@ const timeline = () => {
 
   const handleOnCloseImage = () => {
     setIsOpenImage(false);
+    setImage(null);
   };
 
 

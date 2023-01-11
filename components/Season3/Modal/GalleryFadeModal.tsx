@@ -15,6 +15,7 @@ import styles from './season3.galleryFadeModal.module.scss';
 
 const GalleryFadeModal = ({ imagenes, imagenesZoom, showModal, onCloseModal, setShowModal }) => {
 
+
   const imagesZoom = imagenesZoom.map(i => {
     const imgA = i.split('|');
     return {
@@ -28,6 +29,8 @@ const GalleryFadeModal = ({ imagenes, imagenesZoom, showModal, onCloseModal, set
     }
   });
 
+
+
   const images = imagenes.map(i => {
     const imgA = i.split('|');
     return {
@@ -38,6 +41,7 @@ const GalleryFadeModal = ({ imagenes, imagenesZoom, showModal, onCloseModal, set
       ]
     }
   });
+
 
 
   const [openZoom, setOpenZoom] = React.useState(false);

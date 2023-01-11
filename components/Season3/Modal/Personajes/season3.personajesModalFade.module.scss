@@ -1,4 +1,3 @@
-
 .Back {
   position: absolute;
   z-index: 2;
@@ -7,15 +6,18 @@
   font-family: $elcubo3_font_subtitle;
   font-weight: 300;
   cursor: pointer;
+
   svg {
     position: absolute;
   }
+
   span {
     float: left;
     padding-top: 14px;
     padding-left: 50px;
   }
 }
+
 .containerCover {
   width: 100%;
   height: calc(100vh - 90px);
@@ -37,6 +39,7 @@
   width: 100%;
   right: -100%;
   transition: 0.8s all ease;
+
   @media screen and (max-width: 960px) {
     width: 100%;
   }
@@ -81,7 +84,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,.7);
+  background: rgba(0, 0, 0, .7);
 }
 
 .imgCover {
@@ -97,18 +100,21 @@
   z-index: 2;
   display: flex;
   gap: 0px;
+
   h2 {
     font-family: $elcubo3_font_title;
     font-size: 30px;
     font-weight: 300;
     margin: 16px 0 0px 0;
   }
+
   p {
     font-family: $elcubo3_font_subtitle;
     font-weight: 300;
     font-size: 16px;
     margin-bottom: 20px;
   }
+
   a {
     font-family: $elcubo3_font_subtitle;
     font-weight: 300;
@@ -120,12 +126,38 @@
     padding: 15px 40px 15px 16px;
     position: relative;
     float: left;
+
     svg {
       position: absolute;
-      top: 12px;
-      right: 5px;
+      top: 18px;
+      right: 15px;
+
+      path {
+        stroke: #402A04;
+      }
     }
+
+    &:hover {
+      color: white;
+      background: #8D2213;
+
+      svg path {
+        stroke: white;
+      }
+    }
+
+    &:focus {
+      color: white;
+      background: #261901;
+
+      svg path {
+        stroke: white;
+      }
+    }
+
+
   }
+
   /*.column:nth-child(1) {
     width: 40%;
     img {
@@ -161,23 +193,22 @@
   display: none;
 }
 
-.coverImg.juan img:nth-child(1){
+.coverImg.juan img:nth-child(1) {
   display: block;
 }
 
-.coverImg.guillermo img:nth-child(2){
+.coverImg.guillermo img:nth-child(2) {
   display: block;
 }
 
-.coverImg.yenny img:nth-child(3){
+.coverImg.yenny img:nth-child(3) {
   display: block;
 }
 
-.coverImg.diego img:nth-child(4){
+.coverImg.diego img:nth-child(4) {
   display: block;
 }
 
-.coverImg.soledad img:nth-child(5){
+.coverImg.soledad img:nth-child(5) {
   display: block;
 }
-
