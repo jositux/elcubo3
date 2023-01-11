@@ -59,7 +59,13 @@ const SlideModal = ({
         ${isOpenSlideModal ? styles.open : ""} 
         ${isActive ? styles.active : ""}`
       }>
+      <div className={
+        `${styles.coverVideo} 
+        ${isOpenSlideModal ? styles.open : ""} 
+        ${isActive ? styles.active : ""}`}>
+      </div>
       <div className={styles.container}>
+
         <div className={styles.child}>
           <div className={
             `${styles.t_close} 

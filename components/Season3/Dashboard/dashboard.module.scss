@@ -90,6 +90,7 @@
         padding: 10px 0;
         text-align: center;
         opacity: .2;
+        cursor: default;
       }
     }
   }
@@ -114,7 +115,7 @@
     text-decoration: none;
   }
 
-  a.infoInactive {
+  a.buttonInfoInactive {
     font-family: $elcubo3_font_subtitle;
     font-weight: 300;
     color:#E2B857;
@@ -128,6 +129,7 @@
     background: #402A04;
     text-decoration: none;
     opacity: .2;
+    cursor: default;
   }
 }
 

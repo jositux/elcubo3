@@ -50,6 +50,15 @@
   margin-top: -80px;
 }
 
+// Hide controls
+.activeInteractive div div div:nth-child(2) {
+  display: none;
+}
+
+.coverInactiveVideo {
+  display: none;
+}
+
 
 
 .steal {

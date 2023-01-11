@@ -1,31 +1,26 @@
-/*.containerCover {
-  width: 100%;
-  height: 100vh;
-  max-width: 100%;
-  overflow-x: hidden;
-  display: flex;
-  background: rgba(0, 0, 0, 0);
+
+
+.coverVideo.open {
   position: absolute;
   top: 0;
-}*/
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+} 
 
 .imgContent {
   position: absolute;
   top: 0;
 }
 
-
-  .Content {
+.Content {
     position: relative;
       h2 {
         font-family: $elcubo3_font_title;
         font-weight: 400;
         font-size: 34px;
       }
-  }
-
-
-
+}
 
 
 .containerCover .container {

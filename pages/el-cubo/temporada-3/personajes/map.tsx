@@ -38,11 +38,11 @@ const characters = [
     link: '../interactivo/juan',
   },
   {
-    name:'yenny', 
-    realName: 'Yenny', 
+    name: 'yenny',
+    realName: 'Yenny',
     description: '“Viajando se conoce la libertad“',
     background: '/images/season3/steals/personaje-yenny.jpg',
-    icon :'/images/season3/map/popups/popup-yenny.png',
+    icon: '/images/season3/map/popups/popup-yenny.png',
     link: '../interactivo/yenny',
   },
   {
@@ -206,7 +206,9 @@ const Fader = ({ text }) => {
       </div>
       <div className={styles.MapContainer}>
         <div id="LogoSeason" className={styles.LogoSeason}>
-          <img src="/images/season3/logo-caminos-de-jordan.png" />
+          <a href="/el-cubo/temporada-3">
+            <img src="/images/season3/logo-caminos-de-jordan.png" />
+          </a>
         </div>
 
         <div className={`${!isShowCards ? cx(styles.HelpIcon) : cx(styles.HelpIcon)}`} onClick={toggleCards}>

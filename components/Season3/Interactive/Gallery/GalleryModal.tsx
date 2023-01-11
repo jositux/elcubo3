@@ -5,6 +5,7 @@ import "yet-another-react-lightbox/styles.css";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectCards, Navigation } from "swiper";
 import IconZoom from 'components/Season3/Svg/Zoom';
+import HtmlParser from 'html-react-parser';
 
 import "swiper/css/navigation";
 // Import Swiper styles
@@ -24,21 +25,16 @@ const GalleryModal = ({
   const {
     field_ec_title,
     field_ec_description,
-    field_ec_gallery
+    field_ec_gallery,
+    field_ec_gallery_thumbs
   } = data;
 
-  console.log(field_ec_gallery);
-
-  const imagenes = [
-  'https://rtvcplay-v2.s3-accelerate.amazonaws.com/s3fs-public/field/ec-gallery/01%209_1.jpg|', 
-  'https://rtvcplay-v2.s3-accelerate.amazonaws.com/s3fs-public/field/ec-gallery/02%209_1.jpg|', 
-  'https://rtvcplay-v2.s3-accelerate.amazonaws.com/s3fs-public/field/ec-gallery/03%207_1.jpg|', 
-  'https://rtvcplay-v2.s3-accelerate.amazonaws.com/s3fs-public/field/ec-gallery/04%206_1.jpg|', 
-  'https://rtvcplay-v2.s3-accelerate.amazonaws.com/s3fs-public/field/ec-gallery/05%206_1.jpg|',
-  ];
+  console.log(field_ec_gallery_thumbs);
 
 
-  const images = field_ec_gallery.split(',').map(i => {
+  // Images Thumbs
+  const images = field_ec_gallery_thumbs.split(',').map(i => {
+    let key = i;
     const imgA = i.split('|');
     return {
       src: imgA[0],
@@ -51,7 +47,20 @@ const GalleryModal = ({
     }
   });
 
-  console.log(data);
+  // Images Full
+  const imagesFull = field_ec_gallery.split(',').map(i => {
+    const imgA = i.split('|');
+    return {
+      src: imgA[0],
+      alt: imgA[1] || '',
+      width: 3840,
+      height: 2560,
+      srcSet: [
+        { src: imgA[0], width: 960, height: 480 },
+      ]
+    }
+  });
+
 
   const [open, setOpen] = React.useState(false);
   const [maxZoomPixelRatio, setMaxZoomPixelRatio] = React.useState(1);
@@ -98,13 +107,13 @@ const GalleryModal = ({
           buttonPrev: () => null,
           buttonNext: () => null
         }}
-        slides={images}
+        slides={imagesFull}
       />
       <div className={styles.ContainerContent}>
         <div className={styles.Content}>
           <div className={styles.Column}>
-            <h2>{field_ec_title}</h2>
-            <p>{field_ec_description}</p>
+            <h2>{HtmlParser(field_ec_title)}</h2>
+            <p>{HtmlParser(field_ec_description)}</p>
           </div>
           <div className={styles.Column}>
             <Swiper

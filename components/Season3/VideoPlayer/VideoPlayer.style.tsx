@@ -225,23 +225,15 @@ export const VideoPlayerWrapper = styled.div`
   background: #E2B857;
   position: absolute;
   opacity: 1;
-}*/
-
-/*
-.marker 
- {
-  transform-origin: top left;
-  transform: rotate(-90deg);
-  font-family: 'Roboto Condensed', serif;
-  text-transform: uppercase;
-  font-weight: 300; 
 }
+
+
 
 .marker span {
   margin-left: 70px;
   position: absolute;
   animation: fadeIn 5s;
-}
+}*/
 
 @keyframes fadeIn {
   0% { opacity: 0; }

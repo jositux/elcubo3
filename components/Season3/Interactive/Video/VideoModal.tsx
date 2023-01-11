@@ -18,6 +18,8 @@ const VideoModal = ({
   //console.log(eval(data.field_ec_episode_json.field_ec_asset_id));
 
   let srcVideo = UrlUtils.getVideoUrl('482209');
+  let title = data.field_ec_title;
+
   if (data.id == '1505') {
     srcVideo = UrlUtils.getVideoUrl('482211');
   }
@@ -56,7 +58,7 @@ const VideoModal = ({
   if (data.id == '1527') {
     srcVideo = UrlUtils.getVideoUrl('482213');
   }
-  
+
 
   const [openSlide, setOpenSlide] = useState(null)
 
@@ -87,7 +89,7 @@ const VideoModal = ({
         onCloseCallback={stopVideoHandler}
       >
         <Video2Level
-          title={""}
+          title={title}
           source={srcVideo}
           showPrevButton={false}
           showNextButton={false}
