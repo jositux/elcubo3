@@ -20,11 +20,13 @@
 }
 
 .gallerySwiper {
-  width: 640px;
-  height: 400px;
+  width: 700px;
+  height: 440px;
+
   div {
     border-radius: 10px;
   }
+
   img {
     height: 100%;
     margin-left: -40px;
@@ -35,26 +37,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   .Content {
     display: flex;
     position: relative;
-    padding: 180px 80px;
-    .Column:nth-child(1){
+    padding: 22vh 80px;
+
+    .Column:nth-child(1) {
       width: 30%;
+
       h2 {
         font-family: $elcubo3_font_title;
         font-weight: 400;
         text-transform: uppercase;
         font-size: 34px;
       }
+
       p {
         font-family: $elcubo3_font_subtitle;
         font-weight: 300;
         font-size: 18px;
       }
     }
-    .Column:nth-child(2){
+
+    .Column:nth-child(2) {
       width: 70%;
     }
   }
@@ -72,6 +78,7 @@
   width: 100%;
   bottom: -100%;
   transition: 0.3s all ease;
+
   @media screen and (max-width: 960px) {
     width: 100%;
   }
@@ -96,10 +103,12 @@
   align-items: center;
   justify-content: center;
   gap: 30px;
+
   h1 {
     font-size: 45px;
     font-weight: 500;
   }
+
   p {
     font-size: 24px;
     text-align: left;

@@ -11,27 +11,55 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   @media only screen and (max-width: 920px) and (orientation: landscape) {
     height: auto;
     overflow-y: scroll;
   }
+
   .Ending {
     margin: 0 auto;
     max-width: 520px;
     padding: 60px;
     border-radius: 20px;
     color: white;
-    .EndingContent {  
+
+    .EndingContent {
       font-family: $elcubo3_font_subtitle;
       text-transform: uppercase;
       color: #EDC25F;
       padding-bottom: 10px;
+
       a {
         cursor: pointer;
+
+        svg {
+          position: absolute;
+          transform: scale(0.7);
+          padding-top: 2px;
+          padding-left: 10px;
+
+          path {
+            stroke: #EDC25F;
+
+          }
+        }
+
+        &:hover {
+          color: white;
+
+          svg {
+            path {
+              stroke: white;
+
+            }
+          }
+
+        }
       }
     }
   }
- 
+
 }
 
 .Back {
@@ -43,9 +71,11 @@
   font-weight: 300;
   color: white;
   cursor: pointer;
+
   svg {
     position: absolute;
   }
+
   span {
     float: left;
     padding-top: 14px;
@@ -86,7 +116,7 @@
 }
 
 .containerCover {
-  background: rgba(0,0,0,.8);   
+  background: rgba(0, 0, 0, .8);
   position: fixed;
   top: 0;
   left: 0;
@@ -123,6 +153,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -132,6 +163,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -141,6 +173,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -150,6 +183,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -159,6 +193,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }

@@ -1,25 +1,26 @@
-
-
 .coverVideo.open {
   position: absolute;
   top: 0;
   height: 100vh;
   width: 100%;
   z-index: 100;
-} 
+}
 
 .imgContent {
   position: absolute;
+  width: 110%;
+  object-fit: cover;
   top: 0;
 }
 
 .Content {
-    position: relative;
-      h2 {
-        font-family: $elcubo3_font_title;
-        font-weight: 400;
-        font-size: 34px;
-      }
+  position: relative;
+
+  h2 {
+    font-family: $elcubo3_font_title;
+    font-weight: 400;
+    font-size: 34px;
+  }
 }
 
 
@@ -32,6 +33,7 @@
   width: 100%;
   bottom: -100%;
   transition: 500ms all ease;
+
   @media screen and (max-width: 960px) {
     width: 100%;
   }
@@ -46,7 +48,7 @@
 }
 
 .containerCover.active .container {
-  bottom: calc( -100% + 130px);
+  bottom: calc(-100% + 130px);
 }
 
 .containerCover.active.open .container {
@@ -79,8 +81,7 @@
   mix-blend-mode: luminosity;
 }
 
-.containerCover.active.open 
-.t_close.arrowDown {
+.containerCover.active.open .t_close.arrowDown {
   svg {
     transform: rotate(0deg);
   }

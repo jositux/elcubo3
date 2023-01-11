@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Ending.module.scss';
 import IconDashboard from 'components/Season3/Svg/Dashboard';
+import PersonajeArrow from 'components/Season3/Svg/PersonajeArrow';
 import Back from 'components/Season3/Svg/Back';
 import VideoFadeModal from 'components/Season3/Modal/VideoFadeModal';
 
@@ -64,7 +65,7 @@ const Ending = ({ name, onButtonClicked }) => {
                 <h1>¡Has desbloqueado el confesionario de {name}!</h1>
                 <div className={styles.EndingContent}>
 
-                  <a onClick={handleOnPlayVideo}>Ver confesionario</a>
+                  <a onClick={handleOnPlayVideo}>Ver confesionario <PersonajeArrow /></a>
 
                 </div>
               </div>

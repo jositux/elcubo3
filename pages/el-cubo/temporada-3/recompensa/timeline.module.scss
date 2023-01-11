@@ -32,12 +32,13 @@
   left: 50%;
   width: 1px;
   height: calc(800vh);
-  margin-left: 0;     
+  margin-left: 0;
   margin-top: 15rem;
   margin-bottom: 15rem;
   background: #3C2807;
+  opacity: 0.2;
   z-index: 1;
-  
+
   @media only screen and (max-width: 680px) {
     display: none;
   }
@@ -50,7 +51,7 @@
 
 @media only screen and (max-width: 680px) {
   .Clows {
-    display: none!important;
+    display: none !important;
   }
 }
 
@@ -79,10 +80,11 @@
 
     .columnText,
     .columnLink {
-      margin: 0 30px 0 30px!important;
+      margin: 0 30px 0 30px !important;
     }
+
     .Clows {
-      display: none!important;
+      display: none !important;
     }
   }
 
@@ -98,13 +100,15 @@
       font-size: 70px;
       font-family: $elcubo3_font_subtitle;
     }
+
     .Subtitle {
       color: #3C2807;
       font-weight: bold;
       margin: 0;
       font-size: 31px;
-      font-family: $elcubo3_font_subtitle;
+      font-family: $elcubo3_font_title;
     }
+
     .Description {
       color: #3C2807;
       font-size: 20px;
@@ -118,11 +122,13 @@
 
     @media only screen and (min-width: 681px) and (max-width: 900px) and (orientation: landscape) {
       .Title {
-        font-size: 45px!important;
+        font-size: 45px !important;
       }
+
       .Subtitle {
         font-size: 20px;
       }
+
       .Description {
         font-size: 13px;
       }
@@ -140,13 +146,14 @@
     a {
       align-items: center;
       text-decoration: none;
-    
+
       @media only screen and (max-width: 680px) {
         display: flex;
         justify-content: space-between;
         width: 100%;
       }
     }
+
     span {
       font-size: 13.5px;
       font-weight: normal;
@@ -174,7 +181,7 @@
     }
 
     @media only screen and (min-width: 681px) and (max-width: 900px) and (orientation: landscape) {
-      width: 90%!important;
+      width: 90% !important;
     }
   }
 
@@ -225,11 +232,13 @@
       z-index: 1;
 
       .Title {
-        font-size: 50px!important;
+        font-size: 50px !important;
       }
+
       .Subtitle {
         font-size: 22px;
       }
+
       .Description {
         font-size: 14px;
         max-width: 100%;
@@ -287,11 +296,13 @@
           align-items: center;
           text-decoration: none;
         }
+
         span {
           font-size: 13px;
           font-weight: normal;
         }
       }
+
       .LinkItem:nth-child(1) {
         p {
           text-transform: uppercase;
@@ -303,16 +314,16 @@
       min-height: 150px;
 
       .LinkText {
-        font-size: 13px!important;
+        font-size: 13px !important;
       }
 
       .LinkItem {
         span {
-          font-size: 12px!important;
+          font-size: 12px !important;
         }
       }
     }
-    
+
   }
 }
 
@@ -342,7 +353,7 @@
       top: -55px;
     }
   }
-  
+
   .ColumnsContainer {
     display: flex;
     position: relative;
@@ -398,11 +409,13 @@
       z-index: 1;
 
       .Title {
-        font-size: 50px!important;
+        font-size: 50px !important;
       }
+
       .Subtitle {
         font-size: 22px;
       }
+
       .Description {
         font-size: 14px;
         max-width: 100%;
@@ -460,11 +473,13 @@
           text-decoration: none;
           flex-direction: row-reverse;
         }
+
         span {
           font-size: 13px;
           font-weight: normal;
         }
       }
+
       .LinkItem:nth-child(1) {
         p {
           text-transform: uppercase;
@@ -477,12 +492,12 @@
       margin-bottom: 50px;
 
       .LinkText {
-        font-size: 13px!important;
+        font-size: 13px !important;
       }
 
       .LinkItem {
         span {
-          font-size: 12px!important;
+          font-size: 12px !important;
         }
       }
     }
@@ -538,13 +553,13 @@
     justify-content: flex-end;
     width: 100%;
     margin: 0 60px 0 60px;
-    
+
     @media only screen and (max-width: 680px) {
       display: flex;
       justify-content: flex-start;
       margin: 0;
     }
-  } 
+  }
 
   .columnText {
     display: flex;
@@ -558,7 +573,7 @@
       align-items: center;
       margin: 0px;
     }
-  } 
+  }
 
   .TextContent {
     max-width: 600px;
@@ -572,11 +587,13 @@
       z-index: 1;
 
       .Title {
-        font-size: 50px!important;
+        font-size: 50px !important;
       }
+
       .Subtitle {
         font-size: 22px;
       }
+
       .Description {
         font-size: 14px;
         max-width: 100%;
@@ -634,11 +651,13 @@
           align-items: center;
           text-decoration: none;
         }
+
         span {
           font-size: 12px;
           font-weight: normal;
         }
       }
+
       .LinkItem:nth-child(1) {
         p {
           text-transform: uppercase;
@@ -651,12 +670,12 @@
       min-height: 150px;
 
       .LinkText {
-        font-size: 13px!important;
+        font-size: 13px !important;
       }
 
       .LinkItem {
         span {
-          font-size: 12px!important;
+          font-size: 12px !important;
         }
       }
     }
@@ -679,7 +698,7 @@
     top: -225px;
     right: 0;
     width: 75vw;
-    
+
     @media only screen and (max-width: 680px) {
       width: 140%;
       top: -200px;
@@ -748,11 +767,13 @@
       z-index: 1;
 
       .Title {
-        font-size: 50px!important;
+        font-size: 50px !important;
       }
+
       .Subtitle {
         font-size: 22px;
       }
+
       .Description {
         font-size: 14px;
         max-width: 100%;
@@ -782,7 +803,7 @@
       font-weight: bold;
       width: 100%;
     }
-    
+
     .LinkItem:nth-child(1) {
       p {
         margin-left: 15px;
@@ -793,6 +814,7 @@
       p {
         margin-left: 10px;
       }
+
       span {
         font-size: 13.5px;
         font-weight: normal;
@@ -803,6 +825,7 @@
       p {
         margin-left: 10px;
       }
+
       span {
         font-size: 13.5px;
         font-weight: normal;
@@ -813,6 +836,7 @@
       p {
         margin-left: 15px;
       }
+
       span {
         font-size: 13.5px;
         font-weight: normal;
@@ -842,11 +866,13 @@
           text-decoration: none;
           flex-direction: row-reverse;
         }
+
         span {
           font-size: 13px;
           font-weight: normal;
         }
       }
+
       .LinkItem:nth-child(1) {
         p {
           text-transform: uppercase;
@@ -864,12 +890,12 @@
       }
 
       .LinkText {
-        font-size: 13px!important;
+        font-size: 13px !important;
       }
 
       .LinkItem {
         span {
-          font-size: 12px!important;
+          font-size: 12px !important;
         }
       }
     }
@@ -925,13 +951,14 @@
     @media only screen and (max-width: 680px) {
       display: flex;
       justify-content: flex-start;
-      margin:  15px 0 0 0;;
+      margin: 15px 0 0 0;
+      ;
     }
 
     @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
       padding-bottom: 25px;
     }
-  } 
+  }
 
   .columnText {
     display: flex;
@@ -959,11 +986,13 @@
       z-index: 1;
 
       .Title {
-        font-size: 50px!important;
+        font-size: 50px !important;
       }
+
       .Subtitle {
         font-size: 22px;
       }
+
       .Description {
         font-size: 14px;
         max-width: 100%;
@@ -1025,11 +1054,13 @@
           align-items: center;
           text-decoration: none;
         }
+
         span {
           font-size: 12px;
           font-weight: normal;
         }
       }
+
       .LinkItem:nth-child(1) {
         p {
           text-transform: uppercase;
@@ -1048,12 +1079,12 @@
       }
 
       .LinkText {
-        font-size: 13px!important;
+        font-size: 13px !important;
       }
 
       .LinkItem {
         span {
-          font-size: 12px!important;
+          font-size: 12px !important;
         }
       }
     }
@@ -1139,11 +1170,13 @@
       z-index: 1;
 
       .Title {
-        font-size: 50px!important;
+        font-size: 50px !important;
       }
+
       .Subtitle {
         font-size: 22px;
       }
+
       .Description {
         font-size: 14px;
         max-width: 100%;
@@ -1213,11 +1246,13 @@
           text-decoration: none;
           flex-direction: row-reverse;
         }
+
         span {
           font-size: 13px;
           font-weight: normal;
         }
       }
+
       .LinkItem:nth-child(1) {
         p {
           text-transform: uppercase;
@@ -1235,12 +1270,12 @@
       }
 
       .LinkText {
-        font-size: 12px!important;
+        font-size: 12px !important;
       }
 
       .LinkItem {
         span {
-          font-size: 11.5px!important;
+          font-size: 11.5px !important;
         }
       }
     }
@@ -1293,7 +1328,7 @@
       justify-content: flex-start;
       margin: 15px 0 0 0;
     }
-  } 
+  }
 
   .columnText {
     display: flex;
@@ -1321,11 +1356,13 @@
       z-index: 1;
 
       .Title {
-        font-size: 50px!important;
+        font-size: 50px !important;
       }
+
       .Subtitle {
         font-size: 22px;
       }
+
       .Description {
         font-size: 14px;
         max-width: 100%;
@@ -1396,11 +1433,13 @@
           align-items: center;
           text-decoration: none;
         }
+
         span {
           font-size: 12px;
           font-weight: normal;
         }
       }
+
       .LinkItem:nth-child(1) {
         p {
           text-transform: uppercase;
@@ -1413,12 +1452,12 @@
       min-height: 110px;
 
       .LinkText {
-        font-size: 13px!important;
+        font-size: 13px !important;
       }
 
       .LinkItem {
         span {
-          font-size: 12px!important;
+          font-size: 12px !important;
         }
       }
     }
@@ -1500,11 +1539,13 @@
       z-index: 1;
 
       .Title {
-        font-size: 50px!important;
+        font-size: 50px !important;
       }
+
       .Subtitle {
         font-size: 22px;
       }
+
       .Description {
         font-size: 14px;
         max-width: 100%;
@@ -1557,7 +1598,7 @@
       justify-content: center;
       margin: 0 30px;
       max-width: 100%;
-      
+
       .LinkText {
         margin-right: 10px;
         margin-left: 10px;
@@ -1570,11 +1611,13 @@
           text-decoration: none;
           flex-direction: row-reverse;
         }
+
         span {
           font-size: 13px;
           font-weight: normal;
         }
       }
+
       .LinkItem:nth-child(1) {
         p {
           text-transform: uppercase;
@@ -1585,14 +1628,14 @@
     @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
       min-height: 120px;
 
-      
+
       .LinkText {
-        font-size: 13px!important;
+        font-size: 13px !important;
       }
 
       .LinkItem {
         span {
-          font-size: 12px!important;
+          font-size: 12px !important;
         }
       }
     }
@@ -1601,11 +1644,11 @@
 
 .ItemContent:nth-child(9) {
   @media only screen and (max-width: 680px) {
-    min-height: 70vh!important;
+    min-height: 70vh !important;
   }
 
   @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
-    min-height: 80vh!important;
+    min-height: 80vh !important;
   }
 
   .Clows {
@@ -1641,7 +1684,7 @@
       justify-content: flex-start;
       margin: 15px 0 0 0;
     }
-  } 
+  }
 
   .columnText {
     display: flex;
@@ -1669,11 +1712,13 @@
       z-index: 1;
 
       .Title {
-        font-size: 50px!important;
+        font-size: 50px !important;
       }
+
       .Subtitle {
         font-size: 22px;
       }
+
       .Description {
         font-size: 14px;
         max-width: 100%;
@@ -1743,11 +1788,13 @@
           align-items: center;
           text-decoration: none;
         }
+
         span {
           font-size: 12px;
           font-weight: normal;
         }
       }
+
       .LinkItem:nth-child(1) {
         p {
           text-transform: uppercase;
@@ -1766,12 +1813,12 @@
       }
 
       .LinkText {
-        font-size: 12px!important;
+        font-size: 12px !important;
       }
 
       .LinkItem {
         span {
-          font-size: 11.5px!important;
+          font-size: 11.5px !important;
         }
       }
     }
@@ -1783,7 +1830,7 @@
   -webkit-align-items: center;
 
   @media only screen and (max-width: 680px) {
-    min-height: 50vh!important;
+    min-height: 50vh !important;
   }
 
   .ColumnsContainer {
@@ -1843,11 +1890,13 @@
       z-index: 1;
 
       .Title {
-        font-size: 50px!important;
+        font-size: 50px !important;
       }
+
       .Subtitle {
         font-size: 22px;
       }
+
       .Description {
         font-size: 14px;
         max-width: 100%;
@@ -1901,7 +1950,7 @@
       justify-content: center;
       margin: 0 30px;
       max-width: 100%;
-    
+
       .LinkText {
         margin-right: 10px;
         margin-left: 10px;
@@ -1914,11 +1963,13 @@
           text-decoration: none;
           flex-direction: row-reverse;
         }
+
         span {
           font-size: 13px;
           font-weight: normal;
         }
       }
+
       .LinkItem:nth-child(1) {
         p {
           text-transform: uppercase;
@@ -1930,12 +1981,12 @@
       min-height: 40px;
 
       .LinkText {
-        font-size: 13px!important;
+        font-size: 13px !important;
       }
 
       .LinkItem {
         span {
-          font-size: 12px!important;
+          font-size: 12px !important;
         }
       }
     }
@@ -1960,7 +2011,7 @@
     @media only screen and (max-width: 680px) {
       width: 130%;
     }
-  
+
     @media only screen and (max-width: 680px) {
       display: flex;
       position: absolute;
@@ -1992,41 +2043,47 @@
     text-align: center;
     width: 100%;
     color: #ffffff;
-    
+
     h1 {
       font-size: 45px;
       font-family: $elcubo3_font_title;
       font-weight: 300;
       margin-top: 100px;
     }
+
     p {
       font-size: 25px;
       font-weight: 100;
       font-family: $elcubo3_font_subtitle;
       max-width: 765px;
       line-height: 130%;
-      letter-spacing: 0;  
+      letter-spacing: 0;
       margin: 15px 0 80px 0;
     }
-    
+
     .Compartir {
       display: inline-flex;
       justify-content: center;
       align-items: center;
       margin: 60px 0 140px 0;
-  
-      p, a {
+
+      p,
+      a {
         margin: 20px 20px;
       }
 
       @media only screen and (max-width: 680px) {
-        p,a {
+
+        p,
+        a {
           margin: 20px 15px;
         }
       }
 
       @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
-        p, a {
+
+        p,
+        a {
           margin: 20px 15px;
         }
       }
@@ -2039,6 +2096,7 @@
         font-size: 25px;
         max-width: 400px;
       }
+
       p {
         font-size: 20px;
         max-width: 400px;
@@ -2050,6 +2108,7 @@
         font-size: 35px;
         max-width: 35rem;
       }
+
       p {
         font-size: 20px;
         max-width: 37rem;
@@ -2068,5 +2127,3 @@
   z-index: 100;
   top: 0;
 }
-
-

@@ -11,20 +11,24 @@
   position: relative;
   background: #898069;
   z-index: 2;
+
   .TextContent {
     height: 90vh;
     position: relative;
     z-index: 1;
   }
+
   button {
-    position:absolute;
+    position: absolute;
     bottom: 80px;
     right: 50px;
     z-index: 10;
   }
 }
 
-.ImgBG0, .ImgBG1, .ImgBG2 {
+.ImgBG0,
+.ImgBG1,
+.ImgBG2 {
   position: absolute;
   object-fit: cover;
   bottom: 0;
@@ -42,7 +46,8 @@
   min-height: calc(100vh);
   overflow: hidden;
   position: relative;
-  z-index: 10;  
+  z-index: 10;
+
   .StealTeaser {
     width: 100%;
     display: none;
@@ -53,10 +58,11 @@
   }
 
   .LogoTeaser {
-    position: absolute;   
+    position: absolute;
     z-index: 10;
     bottom: 80px;
     left: 50px;
+
     img {
       width: 30vw;
     }
@@ -74,34 +80,38 @@
 }
 
 
-  .TextContent {
-    padding: 0 80px;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    color: #3C2807;
-      article {
-        width: 50%;
-          h1 {
-            font-family: $elcubo3_font_title;
-            font-size: 3.6vw;
-            line-height: 110%;
-            padding: 0;
-            margin: 10px 0 0 0;
-          }
-          p {
-            font-family: $elcubo3_font_subtitle;
-            font-size: 1.8vw !important;
-            line-height: 110%;
-            margin: 10px 0 0 0;
-            padding: 0;
-              strong {
-                font-weight: 600;
-                font-size: 1.8vw
-              }
-          }
-      }   
+.TextContent {
+  padding: 0 80px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color: #3C2807;
+
+  article {
+    width: 50%;
+
+    h1 {
+      font-family: $elcubo3_font_title;
+      font-size: 3.6vw;
+      line-height: 110%;
+      padding: 0;
+      margin: 10px 0 0 0;
+    }
+
+    p {
+      font-family: $elcubo3_font_subtitle;
+      font-size: 1.8vw !important;
+      line-height: 130%;
+      margin: 20px 0 0 0;
+      padding: 0;
+
+      strong {
+        font-weight: 600;
+        font-size: 1.8vw
+      }
+    }
   }
+}
 
 
 .TextContentRight {
@@ -121,6 +131,7 @@
   position: fixed;
   top: 0;
   z-index: 1;
+
   //opacity: 0;
   //transition: opacity 1.5s;
   .TextContent {
@@ -133,7 +144,7 @@
 
 .ImagesDesktop:nth-child(2) {
   height: 240vh;
- // background-image: url("/images/season3/slider/home_slider_03.jpg");
+  // background-image: url("/images/season3/slider/home_slider_03.jpg");
   //background-position: bottom center;
   //background-repeat: no-repeat;
   background-size: cover;
@@ -146,6 +157,7 @@
     color: rgba(22, 52, 56, 1);
     position: relative;
     z-index: 1;
+
     p {
       width: 80%;
     }
@@ -163,8 +175,9 @@
   height: 100vh;
   position: relative;
   justify-content: center;
+
   button {
-    position:absolute;
+    position: absolute;
     bottom: 4%;
     z-index: 10;
   }

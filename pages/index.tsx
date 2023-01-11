@@ -44,7 +44,7 @@ const Home = () => {
 
 
         <section className={`${styles.cardsContainer} ${styles.fadeIn}`}>
-        <article className={styles.Cards}>
+          <article className={styles.Cards}>
             <div className={styles.imageText}>
               <a title="Ir a la temporada 3" href="/el-cubo/temporada-3">
                 <img src="/images/0-season3.jpg" />
@@ -57,9 +57,9 @@ const Home = () => {
               </a>
             </div>
             <div className={styles.description}>
-              <p>Jordán Sube es el pueblo Colombiano con la menor cantidad de almas del país.
-¿Qué sucedió para pasar de la
-prosperidad a ser un pueblo fantasma?</p>
+              <p>Jordán Sube es el pueblo colombiano con la menor cantidad de almas del país.
+                ¿Qué sucedió para pasar de la
+                prosperidad a ser un pueblo fantasma?</p>
               <ul>
                 <li>
                   {<YoutubeModal videoId="2oxfBiKm-II" />}
@@ -124,72 +124,72 @@ prosperidad a ser un pueblo fantasma?</p>
         </section>
 
         <section className={`${styles.awardsContainer} ${styles.fadeIn}`}>
-        <div className={styles.Awards}>
-             <h1>PREMIOS Y RECONOCIMIENTOS</h1>
-        </div>
-        <div className={styles.Awards}>
-        <article className={styles.awardRow}>
-          <div className={styles.columnImg}>
-            <img src="/images/season3/awards/india.svg"  />
+          <div className={styles.Awards}>
+            <h1>PREMIOS Y RECONOCIMIENTOS</h1>
           </div>
-          <div className={styles.columnText}>
-            <h3>India Catalina</h3>
-            <p>38° Premios India Catalina de la Industria Audiovisual Colombiana - Ganador categoría 'Mejor Serie de Ficción Web' / El Cubo: El Poder </p>
+          <div className={styles.Awards}>
+            <article className={styles.awardRow}>
+              <div className={styles.columnImg}>
+                <img src="/images/season3/awards/india.svg" />
+              </div>
+              <div className={styles.columnText}>
+                <h3>India Catalina</h3>
+                <p>38° Premios India Catalina de la Industria Audiovisual Colombiana - Ganador categoría 'Mejor Serie de Ficción Web' / El Cubo: El Poder </p>
+              </div>
+            </article>
+            <article className={styles.awardRow}>
+              <div className={styles.columnImg}>
+                <img src="/images/season3/awards/ima.svg" />
+              </div>
+              <div className={styles.columnText}>
+                <h3>IMA / Interactive Awards</h3>
+                <p>Ganador Best in Class Award  / Categoría 'Artes/Cultura' 2022 / El Cubo: El Poder </p>
+              </div>
+            </article>
+            <article className={styles.awardRow}>
+              <div className={styles.columnImg}>
+                <img src="/images/season3/awards/tal.png" />
+              </div>
+              <div className={styles.columnText}>
+                <h3>Premios TAL 2021</h3>
+                <p>Finalista  Categoría 'Proyectos Transmedia' / <br />El Cubo: El Poder </p>
+              </div>
+            </article>
           </div>
-        </article>
-        <article className={styles.awardRow}>
-          <div className={styles.columnImg}>
-            <img src="/images/season3/awards/ima.svg"  />
-          </div>
-          <div className={styles.columnText}>
-            <h3>IMA / Interactive Awards</h3>
-            <p>Ganador Best in Class Award  / Categoría 'Artes/Cultura' 2022 / El Cubo: El Poder </p>
-          </div>
-        </article>
-        <article className={styles.awardRow}>
-          <div className={styles.columnImg}>
-            <img src="/images/season3/awards/tal.png"  />
-          </div>
-          <div className={styles.columnText}>
-            <h3>Premios TAL 2021</h3>
-            <p>Finalista  Categoría 'Proyectos Transmedia' / <br />El Cubo: El Poder </p>
-          </div>
-        </article>
-        </div>
-        <div className={styles.Awards}>
-        <article className={styles.awardRow}>
-          <div className={styles.columnImg}>
-            <img src="/images/season3/awards/prix.png"  />
-          </div>
-          <div className={styles.columnText}>
-            <h3>Prix Italia</h3>
+          <div className={styles.Awards}>
+            <article className={styles.awardRow}>
+              <div className={styles.columnImg}>
+                <img src="/images/season3/awards/prix.png" />
+              </div>
+              <div className={styles.columnText}>
+                <h3>Prix Italia</h3>
             <p>Nominado Categoría 'Web Interactive' / <br />El Cubo: El Inquisidor </p>
           </div>
         </article>
-        <article className={styles.awardRow}>
-          <div className={styles.columnImg}>
-            <img src="/images/season3/awards/tal2.png"  />
-          </div>
-          <div className={styles.columnText}>
-            <h3>Premios TAL 2022</h3>
-            <p>Finalista Categoría 'Narrativas Transmedia' / <br />El Cubo: El Inquisidor </p>
-          </div>
-        </article>
-        <article className={styles.awardRow}>
-          <div className={styles.columnImg}>
-            <img src="/images/season3/awards/horizon.png"  />
-          </div>
-          <div className={styles.columnText}>
-            <h3>Horizon Interactive Awards</h3>
-            <p>Ganador Categoría  'Websites - Experimental / New Technology' / El Cubo: El Inquisidor </p>
-          </div>
-        </article>
+        rticle className={styles.awardRow}>
+          iv className={styles.columnImg}> 
+          <img src="/images/season3/awards/tal2.png"  />
         </div>
-
-        </section>
-
+          iv className={styles.columnText}>
+          <h3>Premios TAL 2022</h3>
+          <p>Finalista Categoría 'Narrativas Transmedia' / <br />El Cubo: El Inquisidor </p>
+        </div>
+      </article>
+      rticle className={styles.awardRow}>
+        iv className={styles.columnImg}> 
+        <img src="/images/season3/awards/horizon.png"  />
       </div>
-      <Footer />
+        iv className={styles.columnText}>
+        <h3>Horizon Interactive Awards</h3>
+        <p>Ganador Categoría  'Websites - Experimental / New Technology' / El Cubo: El Inquisidor </p>
+      </div>
+        </art icle>
+        </div>
+ 
+        </section>
+ 
+  </div>
+      <Footer /> 
     </React.Fragment>
   )
 };

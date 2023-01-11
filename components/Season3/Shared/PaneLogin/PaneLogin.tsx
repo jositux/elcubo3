@@ -10,7 +10,7 @@ import ButtonModal from '../Button/ButtonModal';
 const PaneLogin = ({ isActive, onClose, isMobile }) => {
 
   const ref = useRef(null);
-  
+
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (!ref?.current?.contains(e.target)) {
@@ -20,12 +20,12 @@ const PaneLogin = ({ isActive, onClose, isMobile }) => {
 
     document.addEventListener("mousedown", handleClickOutside);
 
-    return () => { 
+    return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     }
   }, []);
-  
-  
+
+
   return (
     <div className={`${styles.PaneLogin} ${isActive ? styles.open : styles.inactive}`} >
 
@@ -41,7 +41,7 @@ const PaneLogin = ({ isActive, onClose, isMobile }) => {
         <div className={styles.PaneContent}>
           <h2>¡Regístrate!</h2>
           <p>
-            Puedes realizar la experiencia sin registrarte, pero si te registras obtienes muchas ventajas como poder salir y continuar con la experiencia cuando desees, coleccionar objetos, desbloquear recompensas y acceder al nivel final para desvelar la historia al completo.
+            Puedes realizar la experiencia sin registrarte, pero si te registras obtienes muchas ventajas como poder salir y continuar con la experiencia cuando desees, desbloquear recompensas y acceder al nivel final para desvelar la historia al completo.
           </p>
           <div className={styles.Buttons}>
             <ButtonModal url={Links.register} text="Registrarme" />

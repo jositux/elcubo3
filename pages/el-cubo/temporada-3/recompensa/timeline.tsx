@@ -207,7 +207,7 @@ const timeline = () => {
               <div className={styles.columnText}>
                 <div className={styles.TextContent}>
                   <h1 className={styles.Title}>1864</h1>
-                  <h2 className={styles.Subtitle}>Construcción del primer peaje de Colombia</h2>
+                  <h2 className={styles.Subtitle}>Construcción del primer<br />peaje de Colombia</h2>
                   <p className={styles.Description}>
                     La construcción de la carretera Bogotá – Bucaramanga, fue vital para que Jordán descendiera a nivel comercial y demográfico. La carretera se construyó a 33 kilómetros al oriente de Jordán y conectó los tramos de San Gil y Pescadero. Algunos dicen que fueron los gamonales quienes no permitieron la construcción, y otros aseguran, que las condiciones del terreno no eran las adecuadas para la obra. Aun así, todos coinciden en que esta decisión, desencadenó la decadencia de Jordán.
                   </p>
@@ -546,7 +546,7 @@ const timeline = () => {
               <div className={styles.columnText}>
                 <div className={styles.TextContent}>
                   <h1 className={styles.Title}>2004</h1>
-                  <h2 className={styles.Subtitle}>Incendio provocado en la Alcaldía</h2>
+                  <h2 className={styles.Subtitle}>Incendio provocado<br /> en la Alcaldía</h2>
                   <p className={styles.Description}>
                     El punto más álgido de las sucesivas administraciones de los Ferreira, fue el 23 de agosto de 2004, cuando el entonces alcalde, Gonzalo Bautista, fue citado al despacho del gobernador de Santander, para informarle que al día siguiente, una comisión haría una revisión de las cuentas y gastos del municipio, debido a las evidentes irregularidades en el manejo del presupuesto.<br></br><br></br>
                     Al día siguiente, cuando los miembros de la comisión llegaron a Jordán, encontraron que la sede de la alcaldía se había consumido en llamas la noche anterior, eliminando en el hecho, todos los documentos que iban a ser revisados.

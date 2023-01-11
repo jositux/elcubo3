@@ -1,5 +1,5 @@
 .ButtonHome {
-  padding: 25px 30px 25px 30px;
+  padding: 20px 30px 20px 30px;
   background-color: #402A04;
   margin: 0 auto;
   clear: both;
@@ -8,25 +8,33 @@
   text-decoration: none;
   text-transform: uppercase;
   line-height: 1.2em;
-  border: 1px solid #402A04;
+  border: 0;
   font-family: $elcubo3_font_subtitle;
   font-weight: 300;
+
   @include breakpoint-down('sm') {
     font-size: 20px;
+
     @media screen and (orientation: portrait) {
       width: 100%;
     }
-    
+
     padding: 15px 70px 15px 70px;
     position: relative;
     left: 0;
     top: 0;
   }
+
 }
 
 .ButtonHome:hover {
   box-shadow: rgba(255, 255, 255, 0.8) 0px 0px 25px;
+  background-color: #8D2213;
   cursor: pointer;
+}
+
+.ButtonHome:active {
+  background-color: #261901;
 }
 
 .LinkModal {
@@ -42,11 +50,16 @@
   font-family: $elcubo3_font_subtitle;
   text-align: center;
   padding: 13px 30px 12px 30px;
+
   @include breakpoint-down('sm') {
-    font-size: 15px!important;
+    font-size: 15px !important;
     border: 2px solid #402A04;
     color: #402A04;
   }
+}
+
+.LinkModal:hover {
+  background-color: #EAE7E3;
 }
 
 .ButtonModal {
@@ -60,6 +73,7 @@
   line-height: 1.2em;
   border: 1px solid #402A04;
   font-family: $elcubo3_font_subtitle;
+
   @include breakpoint-down('sm') {
     font-size: 20px;
     padding: 15px 70px 15px 70px;
@@ -67,4 +81,14 @@
     left: 0;
     top: 0;
   }
+}
+
+.ButtonModal:hover {
+  box-shadow: rgba(255, 255, 255, 0.8) 0px 0px 25px;
+  background-color: #8D2213;
+  cursor: pointer;
+}
+
+.ButtonModal:active {
+  background-color: #261901;
 }
