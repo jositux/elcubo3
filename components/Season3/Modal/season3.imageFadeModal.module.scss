@@ -4,13 +4,4 @@
   position: absolute;
   object-fit: cover;
   object-position: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1s linear, visibility 1s linear;
-}
-
-.openFade .imgGallery {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 1s linear, visibility 1s linear;
 }

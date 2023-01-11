@@ -13,7 +13,9 @@ const ImageFadeModal = ({ imagen, showModal, onCloseModal, setShowModal }) => {
       >
 
         <div className={showModal ? styles.openFade : ''}>
-          <img className={styles.imgGallery} src={imagen} />
+          {imagen &&
+            <img className={styles.imgGallery} src={imagen} />
+          }
         </div>
       </FadeModal>
     </Fragment>
