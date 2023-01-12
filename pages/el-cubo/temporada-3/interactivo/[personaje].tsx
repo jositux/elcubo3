@@ -5,6 +5,7 @@ import GalleryModal from 'components/Season3/Interactive/Gallery/GalleryModal';
 import AudioModal from 'components/Season3/Interactive/Audio/AudioModal';
 import VideoModal from 'components/Season3/Interactive/Video/VideoModal';
 import Ending from 'components/Season3/Interactive/Ending/Ending';
+import ListCharacters from 'components/Season3/ListCharacters/ListCharacters';
 import UrlUtils from 'utils/Url';
 import styles from './lineal.module.scss';
 import { rawFetch } from 'libs/fetcher';
@@ -148,6 +149,12 @@ const Personaje = (props) => {
                 percent: Math.round((parseInt(player.currentTime) / duration) * 100)
               }));
             }
+
+            let porcentaje = JSON.parse(localStorage.getItem(`'${name}'`)).percent;
+            setPercentParam(null);
+            setPercentParam(porcentaje);
+            console.log('helllo 1 ', porcentaje);
+
           }
         }, 5000);
       });
@@ -161,6 +168,8 @@ const Personaje = (props) => {
           clearInterval(intervalLocalStorage);
         }
       });
+
+
     }
   }, [player]);
 
@@ -201,7 +210,8 @@ const Personaje = (props) => {
   const handleOnClickDashboard = () => {
     let percent = JSON.parse(localStorage.getItem(`'${name}'`)).percent;
     setPercentParam(percent);
-    setShowDashboardModal(true);
+    //console.log('helllo ', percent);
+    //setShowDashboardModal(true);
   };
 
   const handleOnCloseDashboard = () => {
@@ -263,7 +273,12 @@ const Personaje = (props) => {
           markers={markers}
           duration={duration}
           onClickDashboardLineal={handleOnClickDashboard}
-        />
+        >
+          <ListCharacters
+            char={name}
+            percentParam={percentParam}
+          />
+        </VideoPlayer>
       </div>
 
       {interactiveType === 'video' && interactiveData && <VideoModal

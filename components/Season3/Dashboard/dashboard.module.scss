@@ -2,6 +2,7 @@
   height: 100vh;
   overflow-x: hidden;
   text-align: center;
+
   .Content {
     padding: 20px 0px 20px 80px;
     width: 480px;
@@ -9,15 +10,18 @@
     position: relative;
     z-index: 1;
   }
+
   h2 {
     font-family: $elcubo3_font_title;
     font-size: 32px;
     font-weight: 400;
     margin-bottom: 10px;
+
     @media only screen and (max-width: 768px) {
       font-size: 20px;
     }
   }
+
   p {
     font-family: $elcubo3_font_subtitle;
     font-size: 16px;
@@ -28,48 +32,57 @@
 
 .Characters {
   margin-top: 40px;
+
   .row {
     display: flex;
     gap: 10px;
     align-items: center;
+
     h2 {
       font-weight: 400;
     }
-    
+
     .column1 {
       width: 60%;
       display: flex;
       padding: 20px;
       gap: 10px;
+
       div.avatar {
         width: 40px;
       }
+
       div.name {
         width: 120px;
+
         h6 {
           margin: 0;
           margin-bottom: 5px;
           font-size: 14px;
           font-weight: 300;
         }
+
         a {
           font-family: $elcubo3_font_subtitle;
-          color:#E2B857;
+          color: #E2B857;
           text-decoration: none;
           font-size: 14px;
         }
       }
+
       div.progress {
         width: 80px;
         margin-top: 15px;
       }
     }
+
     .column2 {
       width: 40%;
+
       .buttonConfesionario {
         font-family: $elcubo3_font_subtitle;
         font-weight: 300;
-        color:#E2B857;
+        color: #E2B857;
         border: 1px solid #E2B857;
         width: 100%;
         float: left;
@@ -82,7 +95,7 @@
       .buttonConfesionarioInactive {
         font-family: $elcubo3_font_subtitle;
         font-weight: 300;
-        color:#E2B857;
+        color: #E2B857;
         border: 1px solid #E2B857;
         width: 100%;
         float: left;
@@ -99,10 +112,11 @@
 .Info {
   width: 100%;
   margin-top: 10px;
+
   a {
     font-family: $elcubo3_font_subtitle;
     font-weight: 300;
-    color:#E2B857;
+    color: #E2B857;
     border: 1px solid #E2B857;
     font-size: 14px;
     padding: 10px;
@@ -118,7 +132,7 @@
   a.buttonInfoInactive {
     font-family: $elcubo3_font_subtitle;
     font-weight: 300;
-    color:#E2B857;
+    color: #E2B857;
     border: 1px solid #E2B857;
     font-size: 14px;
     padding: 10px;
@@ -139,7 +153,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,.7);
+  background: rgba(0, 0, 0, .7);
 }
 
 .imgCover {
@@ -156,18 +170,21 @@
   display: flex;
   gap: 0px;
   text-align: left;
+
   h2 {
     font-family: $elcubo3_font_title;
     font-size: 30px;
     font-weight: 300;
     margin: 16px 0 0px 0;
   }
+
   p {
     font-family: $elcubo3_font_subtitle;
     font-weight: 300;
     font-size: 16px;
     margin-bottom: 20px;
   }
+
   a {
     font-family: $elcubo3_font_subtitle;
     font-weight: 300;
@@ -179,42 +196,27 @@
     padding: 15px 40px 15px 16px;
     position: relative;
     float: left;
+
     svg {
       position: absolute;
       top: 12px;
       right: 5px;
     }
   }
+
   .column:nth-child(1) {
     width: 40%;
+
     img {
       width: 97%;
     }
   }
+
   .column:nth-child(2) {
     width: 60%;
   }
 }
 
-
-a.video360 {
-  font-family: $elcubo3_font_subtitle;
-  font-weight: 300;
-  font-size: 22px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #402A04;
-  background: #E2B857;
-  padding: 15px 40px 15px 16px;
-  position: relative;
-  float: left;
-  cursor: pointer;
-  svg {
-    position: absolute;
-    top: 12px;
-    right: 5px;
-  }
-}
 
 .juan {
   left: 56%;
@@ -225,6 +227,7 @@ a.video360 {
   left: 59%;
   top: 2%;
   flex-direction: row-reverse;
+
   .column:nth-child(2) {
     width: 45%;
   }

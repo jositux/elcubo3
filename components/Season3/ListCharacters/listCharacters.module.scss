@@ -1,0 +1,51 @@
+.Characters {
+  margin-top: 40px;
+  position: absolute;
+  z-index: 100;
+  right: 40px;
+
+  .row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    .column1 {
+      width: 100%;
+      display: flex;
+      padding: 0px 5px;
+      gap: 10px;
+
+      div.avatar {
+        width: 40px;
+
+        img {
+          border: 6px solid #EDC25F;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      div.progress {
+        width: 40px;
+        margin-top: 15px;
+      }
+    }
+
+  }
+}
+
+.Content.Char-juan,
+.Content.Char-guillermo,
+.Content.Char-yenny,
+.Content.Char-diego,
+.Content.Char-soledad {
+  .rowJuan {
+    .column1 {
+      img {
+        border: 6px solid white !important;
+        border-radius: 50%;
+      }
+    }
+  }
+}

@@ -58,8 +58,6 @@ const VideoPlayer = ({
       }
     }
 
-
-
     playerRef.current = new Plyr(video, {
       enabled: true,
       ratio: '16:9',
@@ -264,6 +262,12 @@ const VideoPlayer = ({
 
   }, []);
 
+  // Characters Links
+  React.useEffect(() => {
+    const portal = document.getElementById('plyr__portal');
+    ReactDOM.render(children, portal);
+  }, [children]);
+
   // TAP IOs
   React.useEffect(() => {
     let isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
@@ -283,7 +287,7 @@ const VideoPlayer = ({
       ReactDOM.render(children, portal);
     }
 
-  }, [children]);
+  }, [{ children }]);
 
 
   React.useEffect(() => {
