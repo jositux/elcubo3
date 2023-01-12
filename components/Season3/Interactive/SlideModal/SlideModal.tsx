@@ -77,7 +77,7 @@ const SlideModal = ({
             }>
             <ArrowDown width={30} height={30} />
           </div>
-          {<img className={styles.imgContent} src="/images/season3/slider/audio_background.jpg" />}
+          {<img className={styles.imgContent} src="/images/season3/slider/galeria_background.jpg" />}
           <div className={styles.Content}>
             {children}
           </div>
