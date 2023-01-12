@@ -180,8 +180,8 @@
   color: #000;
 }
 
-.d-desktop.season2 .slick-slide:not(.slick-center) img {
-  opacity: .4;
+.d-desktop .slick-slide:not(.slick-center) img {
+  opacity: 1;
   z-index: 1;
 }
 

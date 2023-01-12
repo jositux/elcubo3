@@ -1,9 +1,10 @@
 import React, { MutableRefObject, useEffect, useState } from 'react';
 import AudioWave from 'components/Season3/Shared/AudioWave/AudioWave';
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper";
 import styles from './season3.audioModal.module.scss';
 import SlideModal from '../SlideModal/SlideModal';
+
+import Slider from 'components/Season3/Slider/Slick/Slider';
+
 
 const AudioModal = ({
   isActive,
@@ -12,7 +13,7 @@ const AudioModal = ({
   data
 }) => {
   const [openSlide, setOpenSlide] = useState(null)
-  const [audioPlayer, setAudioPlayer] = useState();
+  const [audioPlayer, setAudioPlayer] = useState(null);
   const [isSlideOpen, setIsSlideOpen] = useState(false);
   const {
     field_ec_title: title,
@@ -20,12 +21,14 @@ const AudioModal = ({
     field_ec_gallery
   } = data;
 
-  const images = field_ec_gallery.split(',').map(img => {
+
+  const slides = field_ec_gallery.split(',').map(img => {
     const imgA = img.split('|');
     if (imgA && imgA.length) {
       return {
-        url: imgA[0],
-        title: imgA[1] || ''
+        title: imgA[1] || '',
+        image: imgA[0],
+        rel: true,
       }
     }
     return {};
@@ -55,22 +58,11 @@ const AudioModal = ({
       onCloseCallback={() => setIsSlideOpen(false)}
       setOpenSlide={openSlide}
     >
-      <Swiper
-        slidesPerView={1}
-        spaceBetween={0}
-        loop={true}
-        autoplay={{
-          delay: 4500,
-          disableOnInteraction: false,
-        }}
-        modules={[Autoplay]}
-        className={styles.audioSwiper}
-      >
-        {
-          images.map(img => (
-            <SwiperSlide><img src={img.url} /></SwiperSlide>
-          ))}
-      </Swiper>
+
+      <section className={styles.SlidesContainer}>
+        <Slider slides={slides} />
+      </section>
+
       <div className={styles.Content}>
         <div className={styles.AudioContent}>
           <h2>{title}</h2>

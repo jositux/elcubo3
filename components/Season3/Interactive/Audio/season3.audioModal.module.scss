@@ -20,20 +20,22 @@
 }
 
 
-  .Content {
-    position: absolute; 
-    z-index: 1;
-    bottom: 80px;
-    width: 100%;
-    .AudioContent {
-      padding: 0 80px;
-    }
-      h2 {
-        font-family: $elcubo3_font_title;
-        font-weight: 400;
-        font-size: 34px;
-      }
+.Content {
+  position: absolute;
+  z-index: 3;
+  bottom: 80px;
+  width: 100%;
+
+  .AudioContent {
+    padding: 0 80px;
   }
+
+  h2 {
+    font-family: $elcubo3_font_title;
+    font-weight: 400;
+    font-size: 34px;
+  }
+}
 
 
 
@@ -48,6 +50,7 @@
   width: 100%;
   bottom: -100%;
   transition: 0.8s all ease;
+
   @media screen and (max-width: 960px) {
     width: 100%;
   }
@@ -72,10 +75,12 @@
   align-items: center;
   justify-content: center;
   gap: 30px;
+
   h1 {
     font-size: 45px;
     font-weight: 500;
   }
+
   p {
     font-size: 24px;
     text-align: left;
@@ -141,6 +146,7 @@
   width: 100%;
   overflow: hidden;
   z-index: 0;
+
   img {
     width: 100%;
     height: auto;

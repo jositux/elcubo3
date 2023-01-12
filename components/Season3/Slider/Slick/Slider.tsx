@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import Slider from "react-slick";
-import styles from './season2.slider.module.scss';
-import useInteractive from '../../../hooks/useInteractive';
+import styles from './season3.slider.module.scss';
+import useInteractive from '../../../../hooks/useInteractive';
 
 const CustomSlider = ({ slides }) => {
 
@@ -9,26 +9,27 @@ const CustomSlider = ({ slides }) => {
 
   const mobileConfig = {
     className: styles.Center,
-    centerMode: true,
+    autoplay: true,
     infinite: true,
     centerPadding: "0px",
-    slidesToShow: 3,
+    slidesToShow: 1,
     draggable: true,
     speed: 500,
-    autoplay: false,
     autoplaySpeed: 5000,
+    pauseOnHover: false,
   };
 
   const desktopConfig = {
     className: styles.Center,
-    centerMode: true,
+    autoplay: true,
+    fade: true,
     infinite: true,
     centerPadding: "0px",
-    slidesToShow: 3,
+    slidesToShow: 1,
     draggable: true,
-    speed: 500,
-    autoplay: false,
+    speed: 1000,
     autoplaySpeed: 5000,
+    pauseOnHover: false,
   };
 
   const filteredSlides = slides.filter(slide => slide.rel === true || showImage(slide.rel));
@@ -42,7 +43,7 @@ const CustomSlider = ({ slides }) => {
           ))}
         </Slider>
       </div>
-      <div className={`${styles.Container} d-desktop season2`}>
+      <div className={`${styles.Container} d-desktop`}>
         <Slider {...desktopConfig}>
           {filteredSlides && filteredSlides.map((slide, index) => (
             <img key={`slider_${index}`} className={styles.Img} src={slide.image} />
