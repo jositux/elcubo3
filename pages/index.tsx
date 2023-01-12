@@ -163,33 +163,33 @@ const Home = () => {
               </div>
               <div className={styles.columnText}>
                 <h3>Prix Italia</h3>
-            <p>Nominado Categoría 'Web Interactive' / <br />El Cubo: El Inquisidor </p>
+                <p>Nominado Categoría 'Web Interactive' / <br />El Cubo: El Inquisidor </p>
+              </div>
+            </article>
+            <article className={styles.awardRow}>
+              <div className={styles.columnImg}>
+                <img src="/images/season3/awards/tal2.png" />
+              </div>
+              <div c lassName={styles.columnText}>
+                <h3>Premios TAL 2022</h3>
+                <p>Finalista Categoría 'Narrativas Transmedia' / <br />El Cubo: El Inquisidor </p>
+              </div>
+            </article>
+            <article className={styles.awardRow}>
+              <div className={styles.columnImg}>
+                <img src="/images/season3/awards/horizon.png" />
+              </div>
+              <div className={styles.columnText}>
+                <h3>Horizon Interactive Awards</h3>
+                <p> Ganador Categoría  'Websites - Experimental / New Technology' / El Cubo: El Inquisidor </p>
+              </div>
+            </article>
           </div>
-        </article>
-        rticle className={styles.awardRow}>
-          iv className={styles.columnImg}> 
-          <img src="/images/season3/awards/tal2.png"  />
-        </div>
-          iv className={styles.columnText}>
-          <h3>Premios TAL 2022</h3>
-          <p>Finalista Categoría 'Narrativas Transmedia' / <br />El Cubo: El Inquisidor </p>
-        </div>
-      </article>
-      rticle className={styles.awardRow}>
-        iv className={styles.columnImg}> 
-        <img src="/images/season3/awards/horizon.png"  />
-      </div>
-        iv className={styles.columnText}>
-        <h3>Horizon Interactive Awards</h3>
-        <p>Ganador Categoría  'Websites - Experimental / New Technology' / El Cubo: El Inquisidor </p>
-      </div>
-        </art icle>
-        </div>
- 
+
         </section>
- 
-  </div>
-      <Footer /> 
+
+      </div>
+      <Footer />
     </React.Fragment>
   )
 };
