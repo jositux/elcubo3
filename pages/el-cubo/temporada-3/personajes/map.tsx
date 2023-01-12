@@ -78,11 +78,15 @@ const Fader = ({ text }) => {
 
   useEffect(() => {
 
-    if (isShowCards) {
+    console.log(query.ref)
+    if (!query.ref) {
       handleCards();
-    };
+    }
+    else {
+      closeCards();
+    }
 
-  }, [])
+  }, [query])
 
   useEffect(() => {
     const handleEsc = (event) => {
