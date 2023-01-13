@@ -122,7 +122,7 @@ const Personaje = (props) => {
           if (player.playing) {
             let data = JSON.parse(localStorage.getItem(`'${name}'`));
             if (data) {
-              if (parseInt(player.currentTime, 10) > data.seenTime && !data.ended) {
+              if (/*parseInt(player.currentTime, 10) > data.seenTime* &&*/ !data.ended) {
                 localStorage.setItem(`'${name}'`, JSON.stringify({
                   character: name,
                   duration,
@@ -151,9 +151,7 @@ const Personaje = (props) => {
             }
 
             let porcentaje = JSON.parse(localStorage.getItem(`'${name}'`)).percent;
-            setPercentParam(null);
             setPercentParam(porcentaje);
-            console.log('helllo 1 ', porcentaje);
 
           }
         }, 5000);
@@ -211,7 +209,7 @@ const Personaje = (props) => {
     let percent = JSON.parse(localStorage.getItem(`'${name}'`)).percent;
     setPercentParam(percent);
     //console.log('helllo ', percent);
-    //setShowDashboardModal(true);
+    setShowDashboardModal(true);
   };
 
   const handleOnCloseDashboard = () => {
