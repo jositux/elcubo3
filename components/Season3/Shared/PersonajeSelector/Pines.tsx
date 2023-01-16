@@ -31,7 +31,7 @@ const ubications = [
   },
 ]
 
-export const Popup = ({ ...props }) => {
+export const Pines = ({ ...props }) => {
 
   const char = props.characters;
   const [popupSizes, setPopupSizes] = useState(false);
@@ -63,7 +63,7 @@ export const Popup = ({ ...props }) => {
 
 
   async function openPersonajesModal() {
-    await new Promise(resolve => setTimeout(resolve, 300));
+    // await new Promise(resolve => setTimeout(resolve, 300));
     if (props.onClickPersonajesModal) {
       props.onClickPersonajesModal();
     }

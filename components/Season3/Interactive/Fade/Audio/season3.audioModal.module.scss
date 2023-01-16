@@ -1,0 +1,152 @@
+.interactiveCover {
+  position: absolute;
+  bottom: 100px;
+}
+
+.trigger {
+  font-size: 18px;
+  font-style: italic;
+  font-family: $elcubo2_font;
+}
+
+.imgGallery {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.Content {
+  position: absolute;
+  z-index: 3;
+  bottom: 80px;
+  width: 100%;
+
+  .AudioContent {
+    padding: 0 80px;
+  }
+
+  h2 {
+    font-family: $elcubo3_font_title;
+    font-weight: 400;
+    font-size: 34px;
+  }
+}
+
+
+
+
+
+.containerCover .container {
+  position: absolute;
+  right: 0;
+  z-index: 100;
+  height: calc(100vh - 50px);
+  overflow: hidden;
+  width: 100%;
+  bottom: -100%;
+  transition: 0.8s all ease;
+
+  @media screen and (max-width: 960px) {
+    width: 100%;
+  }
+}
+
+.containerCover.open {
+  z-index: 2; //transition: opacity .2s linear;
+}
+
+.containerCover.open .container {
+  bottom: 0;
+}
+
+.child {
+  width: 100%;
+  position: relative;
+}
+
+.copy {
+  padding: 30px 20px 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  h1 {
+    font-size: 45px;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 24px;
+    text-align: left;
+  }
+}
+
+.copy h1 {
+  font-size: 45px;
+  letter-spacing: -0.26px;
+}
+
+.copy h1 {
+  font-size: 45px;
+  letter-spacing: -0.26px;
+}
+
+.copy h1,
+.copy p {
+  margin: 0;
+}
+
+.button {
+  color: white;
+  font-style: italic;
+  text-decoration: unset;
+  margin-top: 30px;
+}
+
+.containerCover.open .t_close {
+  display: flex;
+}
+
+.t_close {
+  display: flex;
+  position: absolute;
+  z-index: 99;
+  height: 60px;
+  width: 100%;
+  top: 0px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  /* gradient */
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.332812) 42.71%, rgba(0, 0, 0, 0) 100%);
+  mix-blend-mode: luminosity;
+}
+
+.OpenZoom {
+  position: absolute;
+}
+
+.openIt {
+  animation: fade-in 8000ms forwards;
+}
+
+.closeIt {
+  animation: fade-out 8000ms forwards;
+}
+
+.audioSwiper {
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

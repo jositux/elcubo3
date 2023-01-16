@@ -5,12 +5,12 @@ import Footer from 'components/Footer/Footer';
 import PropTypes from 'prop-types'
 import PersonajesModalSlide from 'components/Season3/Modal/Personajes/PersonajesModalSlide';
 import { Cards } from 'components/Season3/Shared/Cards/Cards';
-import { Popup } from 'components/Season3/Shared/PersonajeSelector/Popup';
+import { Pines } from 'components/Season3/Shared/PersonajeSelector/Pines';
 import CloseIconCards from 'components/Season3/Svg/CloseIconCards';
 import Help from 'components/Season3/Svg/Help';
 import { useRouter } from "next/router";
 import cx from 'classnames';
-import styles from './map.module.scss';
+import styles from './personajes.module.scss';
 
 const characters = [
   {
@@ -19,7 +19,7 @@ const characters = [
     description: '“Los cambios siempre dan miedo, pero hay que hacerlos con miedos y todo“',
     background: '/images/season3/steals/personaje-soledad.jpg',
     icon: '/images/season3/map/popups/popup-soledad.png',
-    link: '../interactivo/soledad',
+    link: '../temporada-3/interactivo/soledad',
   },
   {
     name: 'diego',
@@ -27,7 +27,7 @@ const characters = [
     description: '“Para lograr las cosas primero hay que soñarlas“',
     background: '/images/season3/steals/personaje-diego.jpg',
     icon: '/images/season3/map/popups/popup-diego.png',
-    link: '../interactivo/diego',
+    link: '../temporada-3/interactivo/diego',
   },
   {
     name: 'juan',
@@ -35,7 +35,7 @@ const characters = [
     description: '“Uno busca su misión en la vida, pero a veces es la propia misión la que a uno lo encuentra“',
     background: '/images/season3/steals/personaje-juan.jpg',
     icon: '/images/season3/map/popups/popup-juan.png',
-    link: '../interactivo/juan',
+    link: '../temporada-3/interactivo/juan',
   },
   {
     name: 'yenny',
@@ -43,7 +43,7 @@ const characters = [
     description: '“Viajando se conoce la libertad“',
     background: '/images/season3/steals/personaje-yenny.jpg',
     icon: '/images/season3/map/popups/popup-yenny.png',
-    link: '../interactivo/yenny',
+    link: '../temporada-3/interactivo/yenny',
   },
   {
     name: 'guillermo',
@@ -51,15 +51,11 @@ const characters = [
     description: '“Y si algún día me separo de María, espero encontrarla del otro lado“',
     background: '/images/season3/steals/personaje-guillermo.jpg',
     icon: '/images/season3/map/popups/popup-guillermo.png',
-    link: '../interactivo/guillermo',
+    link: '../temporada-3/interactivo/guillermo',
   },
 ];
 
 const Fader = ({ text }) => {
-
-  const [fadeProp, setFadeProp] = useState({
-    fade: 'fadeIn',
-  });
 
   const [isActive, setIsActive] = useState(false);
 
@@ -111,7 +107,6 @@ const Fader = ({ text }) => {
     const overlay = document.querySelector('#overlay') as HTMLElement;
     overlay.style.display = 'none';
     setIsShowCards(false);
-    fadeOutEffect(overlay);
   }
 
   const toggleCards = () => {
@@ -140,32 +135,9 @@ const Fader = ({ text }) => {
   }
 
 
-  function fadeOutEffect(el) {
-    var fadeEffect = setInterval(function () {
-      if (!el.style.opacity) {
-        el.style.opacity = 1;
-      }
-      if (el.style.opacity > 0) {
-        el.style.opacity -= 0.1;
-      } else {
-        clearInterval(fadeEffect);
-      }
-    }, 2000);
-  }
-
 
   function clickear() {
     setIsActive(!isActive);
-    if (fadeProp.fade === 'fadeIn') {
-      setFadeProp({
-        fade: 'fadeOut'
-      });
-
-    } else {
-      setFadeProp({
-        fade: 'fadeIn'
-      })
-    }
   }
 
 
@@ -183,19 +155,23 @@ const Fader = ({ text }) => {
         <meta property="og:image" content="" />
       </Head>
 
+      <div data-testid="fader" className={`${styles.PersonajesSlide} ${isActive ? styles.open : ''}`}>
+        <div className={styles.Slide}>
+          <PersonajesModalSlide
+            background={background}
+            name={name}
+            description={description}
+            icon={icon}
+            link={link}
+            showPersonajesModal={showPersonajesModal}
+            onClosePersonajesModal={handleOnClosePersonajesModal}
+          />
+        </div>
+      </div>
+
       <Header />
 
-      <div data-testid="fader" className={isActive ? styles.fadeIn : styles.fadeOut}>
-        <PersonajesModalSlide
-          background={background}
-          name={name}
-          description={description}
-          icon={icon}
-          link={link}
-          showPersonajesModal={showPersonajesModal}
-          onClosePersonajesModal={handleOnClosePersonajesModal}
-        />
-      </div>
+
 
       {
         !query.ref &&
@@ -224,7 +200,7 @@ const Fader = ({ text }) => {
 
         <div className={styles.CharacterBackground}>
 
-          <Popup characters={characters} onClickPersonajesModal={clickear} updatePersonaje={updatePersonaje} refered={!query.ref ? "first" : "viewed"} />
+          <Pines characters={characters} onClickPersonajesModal={clickear} updatePersonaje={updatePersonaje} refered={!query.ref ? "first" : "viewed"} />
 
         </div>
       </div>
@@ -233,12 +209,5 @@ const Fader = ({ text }) => {
   )
 }
 
-Fader.defaultProps = {
-  text: 'Hello World!'
-}
-
-Fader.propTypes = {
-  text: PropTypes.string,
-}
 
 export default Fader

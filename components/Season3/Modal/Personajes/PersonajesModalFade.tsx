@@ -34,11 +34,11 @@ const PersonajesModal = ({ ...props }) => {
           </p>
           {/*<img className={styles.imgCover} src={props.background} />*/}
           <div className={`${styles.coverImg} ${styles[props?.name.split(" ")[0].toLowerCase()]}`}>
-            <img className={styles.imgCover} src='/images/season3/steals/personaje-juan.jpg' />
-            <img className={styles.imgCover} src='/images/season3/steals/personaje-guillermo.jpg' />
-            <img className={styles.imgCover} src='/images/season3/steals/personaje-yenny.jpg' />
-            <img className={styles.imgCover} src='/images/season3/steals/personaje-diego.jpg' />
-            <img className={styles.imgCover} src='/images/season3/steals/personaje-soledad.jpg' />
+            <img className={styles.imgCover} src='/images/season3/selector/personaje-juan.jpg' />
+            <img className={styles.imgCover} src='/images/season3/selector/personaje-guillermo.jpg' />
+            <img className={styles.imgCover} src='/images/season3/selector/personaje-yenny.jpg' />
+            <img className={styles.imgCover} src='/images/season3/selector/personaje-diego.jpg' />
+            <img className={styles.imgCover} src='/images/season3/selector/personaje-soledad.jpg' />
           </div>
 
           <div className={styles.ContainerCharacter}>

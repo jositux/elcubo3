@@ -40,7 +40,7 @@ const AudioWave = ({
   const create = async () => {
     const WaveSurfer = (await import('wavesurfer.js')).default;
     const options = formWaveSurferOptions(waveformRef.current);
-    wavesurfer.current = WaveSurfer.create(options);
+    wavesurfer.current = WaveSurfer?.create(options);
     wavesurfer.current.load(url);
     setAudioPlayer && setAudioPlayer(wavesurfer.current);
   };
@@ -55,7 +55,7 @@ const AudioWave = ({
       <div className={styles.Content}>
         <div className={styles.Controls}>
           <div className={styles.Play} onClick={handlePlayPause}>
-            {!playing ?  <PlayAudio /> : <PauseAudio />}
+            {!playing ? <PlayAudio /> : <PauseAudio />}
           </div>
         </div>
         <div className={styles.Wave}>

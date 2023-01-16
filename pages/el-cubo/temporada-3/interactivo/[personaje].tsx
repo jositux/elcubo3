@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import VideoPlayer from 'components/Season3/VideoPlayer/VideoPlayer';
-import DashboardSlide from 'components/Season3/Modal/DashboardSlideModal';
-import GalleryModal from 'components/Season3/Interactive/Gallery/GalleryModal';
-import AudioModal from 'components/Season3/Interactive/Audio/AudioModal';
-import VideoModal from 'components/Season3/Interactive/Video/VideoModal';
+import GalleryModal from 'components/Season3/Interactive/Fade/Gallery/GalleryModal';
+import AudioModal from 'components/Season3/Interactive/Fade/Audio/AudioModal';
+import VideoModal from 'components/Season3/Interactive/Fade/Video/VideoModal';
 import Ending from 'components/Season3/Interactive/Ending/Ending';
 import ListCharacters from 'components/Season3/ListCharacters/ListCharacters';
 import UrlUtils from 'utils/Url';
@@ -77,11 +76,13 @@ const Personaje = (props) => {
   }, [steal.current, player]);
 
   const handlePlayVideo = (playVideo) => {
+
     if (playVideo && !videoEnded) {
       player.play();
     } else {
       player.pause();
     }
+
   };
 
   useEffect(() => {
@@ -243,13 +244,6 @@ const Personaje = (props) => {
   return (
     <div className={styles.NodeContainer}>
 
-      <DashboardSlide
-        char={name}
-        percentParam={percentParam}
-        showModal={showDashboardModal}
-        onCloseDashboard={handleOnCloseDashboard}
-      />
-
       <div ref={steal} className={styles.steal}>
         <img className={styles.stealDesktop} src={`/images/season3/steals/${name}.jpg`} />
         <img className={styles.stealMobile} src={`/images/season3/steals/${name}-mobile.jpg`} />
@@ -257,7 +251,7 @@ const Personaje = (props) => {
       <div className={`${styles.coverVideo} ${isActiveInteractive ? styles.activeInteractive : ""}`}>
         <VideoPlayer
           showBackButton
-          backButtonLink={"/el-cubo/temporada-3/personajes/map?ref=view"}
+          backButtonLink={"/el-cubo/temporada-3/personajes?ref=view"}
           backButtonText={"Elige otro personaje"}
           title={title}
           source={srcVideo}
@@ -265,7 +259,7 @@ const Personaje = (props) => {
           showNextButton={false}
           setPlayer={setPlayer}
           fullscreen={false}
-          showDashboardLineal
+          showDashboardLineal={false}
           openActiveInteractive={openActiveInteractive}
           closeActiveInteractive={closeActiveInteractive}
           markers={markers}
