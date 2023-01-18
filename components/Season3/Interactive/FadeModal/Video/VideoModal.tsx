@@ -2,18 +2,19 @@ import React, { useState, useEffect } from "react";
 import Video2Level from 'components/Season3/Shared/Video2Level/VideoPlayer';
 import UrlUtils from 'utils/Url';
 import disableScroll from 'disable-scroll';
-import SlideModal from '../SlideModal/SlideModal';
+import styles from './season3.videoModal.module.scss';
+import FadeModal from 'components/Season3/Modal/FadeModal/FadeModal';
 
 const VideoModal = ({
   isActive,
   handleOpenInteractive,
   handleCloseInteractive,
-  autoPlay = false,
   data
 }) => {
   const [player, setPlayer] = useState(null);
   const [isSlideOpen, setIsSlideOpen] = useState(false);
 
+  console.log(data)
   //console.log(eval(data.field_ec_episode_json.field_ec_asset_id));
 
   let srcVideo = UrlUtils.getVideoUrl('482209');
@@ -59,7 +60,8 @@ const VideoModal = ({
   }
 
 
-  const [openSlide, setOpenSlide] = useState(null)
+  const [openVideo, setOpenVideo] = useState(null)
+
 
   useEffect(() => {
     disableScroll.on();
@@ -73,33 +75,36 @@ const VideoModal = ({
   }, [player, isSlideOpen]);
 
   const stopVideoHandler = () => {
+    setOpenVideo(false)
     const stop = player && (player.stop || player.pause);
     stop && stop();
   }
 
   return (
-    <div className="interactive-video">
-      <SlideModal
-        isActive={isActive}
-        handleOpenInteractive={handleOpenInteractive}
-        handleCloseInteractive={handleCloseInteractive}
-        setOpenSlide={openSlide}
-        onOpenCallback={() => setIsSlideOpen(true)}
-        onCloseCallback={stopVideoHandler}
+    <div className={styles.interactiveVideo}>
+      <div className={styles.trigger} onClick={() => setOpenVideo(true)}>HELLLO</div>
+
+
+      <FadeModal
+        showModal={openVideo}
+        onCloseModal={handleCloseInteractive}
+        setShowModal={openVideo}
       >
-        <Video2Level
-          title={title}
-          source={srcVideo}
-          showPrevButton={false}
-          showNextButton={false}
-          setPlayer={setPlayer}
-          onVideoEnded={() => {
-            setOpenSlide(false)
-          }}
-          fullscreen={false}
-          autoPlay={autoPlay}
-        />
-      </SlideModal>
+        {openVideo &&
+          <Video2Level
+            title={title}
+            source={srcVideo}
+            showPrevButton={false}
+            showNextButton={false}
+            setPlayer={setPlayer}
+            onVideoEnded={() => {
+              handleCloseInteractive();
+            }}
+            fullscreen={false}
+            autoPlay={true}
+          />
+        }
+      </FadeModal>
     </div>
   );
 };

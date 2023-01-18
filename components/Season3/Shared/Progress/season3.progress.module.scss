@@ -1,6 +1,5 @@
-
 .progress {
-  background: #4F3B18;
+  background: #D2D6EA;
   justify-content: flex-start;
   align-items: center;
   position: relative;
@@ -10,11 +9,16 @@
 .progressValue {
   //animation: load 3s normal forwards;
   background: #EDC25F;
-  height: 15px;
+  height: 10px;
   width: 0;
 }
 
 @keyframes load {
-  0% { width: 0; }
-  100% { width: 68%; }
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 68%;
+  }
 }

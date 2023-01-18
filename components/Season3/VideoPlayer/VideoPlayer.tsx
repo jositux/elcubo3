@@ -175,7 +175,7 @@ const VideoPlayer = ({
       controls.insertAdjacentHTML(
         'afterend',
         `<button class="back-to-season">
-          <img src="/images/icon-arrow-back.svg" />
+          <img src="/images/season3/back.svg" />
           <span>${backButtonText}</span>
          </button>`,
       );

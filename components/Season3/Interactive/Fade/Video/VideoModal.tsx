@@ -2,17 +2,22 @@ import React, { useState, useEffect } from "react";
 import Video2Level from 'components/Season3/Shared/Video2Level/VideoPlayer';
 import UrlUtils from 'utils/Url';
 import disableScroll from 'disable-scroll';
-import SlideModal from '../SlideModal/SlideModal';
+import styles from './season3.videoModal.module.scss';
+import FadeModal from '../FadeModal/FadeModal';
+import PlayInteractive from 'components/Season3/Svg/PlayInteractive';
+import Ripple from 'components/Season3/Shared/Ripple/Ripple';
 
 const VideoModal = ({
   isActive,
   handleOpenInteractive,
   handleCloseInteractive,
-  autoPlay = false,
-  data
+  data,
+  duration
 }) => {
   const [player, setPlayer] = useState(null);
   const [isSlideOpen, setIsSlideOpen] = useState(false);
+
+  const position = (data.field_ec_time_action * 100 / duration).toFixed(2);
 
   //console.log(eval(data.field_ec_episode_json.field_ec_asset_id));
 
@@ -59,7 +64,8 @@ const VideoModal = ({
   }
 
 
-  const [openSlide, setOpenSlide] = useState(null)
+  const [openVideo, setOpenVideo] = useState(null)
+
 
   useEffect(() => {
     disableScroll.on();
@@ -72,34 +78,60 @@ const VideoModal = ({
     }
   }, [player, isSlideOpen]);
 
+  const openHandler = () => {
+    setOpenVideo(true);
+    handleOpenInteractive();
+  }
+
   const stopVideoHandler = () => {
+    setOpenVideo(false)
     const stop = player && (player.stop || player.pause);
     stop && stop();
   }
 
   return (
-    <div className="interactive-video">
-      <SlideModal
-        isActive={isActive}
-        handleOpenInteractive={handleOpenInteractive}
-        handleCloseInteractive={handleCloseInteractive}
-        setOpenSlide={openSlide}
-        onOpenCallback={() => setIsSlideOpen(true)}
-        onCloseCallback={stopVideoHandler}
-      >
-        <Video2Level
-          title={title}
-          source={srcVideo}
-          showPrevButton={false}
-          showNextButton={false}
-          setPlayer={setPlayer}
-          onVideoEnded={() => {
-            setOpenSlide(false)
-          }}
-          fullscreen={false}
-          autoPlay={autoPlay}
-        />
-      </SlideModal>
+    <div className={`${styles.interactiveCover} ${isActive ? styles.open : ''}`} >
+      <div className={styles.interactiveContent}>
+        <div className={styles.trigger} onClick={openHandler}>
+          <div className={styles.buttonTrigger} style={{
+            left: `${position}%`,
+          }}>
+            <h2 className={styles.InteractiveTitle}>
+              {title}
+            </h2>
+            <Ripple />
+            <PlayInteractive />
+            <span className={styles.marker}>
+            </span>
+          </div>
+        </div>
+
+        <span className={styles.Line}>
+        </span>
+
+
+        <FadeModal
+          showModal={openVideo}
+          onOpenModal={handleOpenInteractive}
+          onCloseModal={handleCloseInteractive}
+          setShowModal={openVideo}
+        >
+          {openVideo &&
+            <Video2Level
+              title={title}
+              source={srcVideo}
+              showPrevButton={false}
+              showNextButton={false}
+              setPlayer={setPlayer}
+              onVideoEnded={() => {
+                handleCloseInteractive();
+              }}
+              fullscreen={false}
+              autoPlay={true}
+            />
+          }
+        </FadeModal>
+      </div>
     </div>
   );
 };
