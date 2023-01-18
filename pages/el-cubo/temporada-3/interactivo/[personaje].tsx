@@ -278,6 +278,7 @@ const Personaje = (props) => {
         handleOpenInteractive={handleOnOpenSlideModal}
         handleCloseInteractive={handleOnCloseSlideModal}
         data={interactiveData}
+        duration={duration}
       />}
 
       {interactiveType === 'gallery' && interactiveData && <GalleryModal
@@ -286,6 +287,7 @@ const Personaje = (props) => {
         handleCloseInteractive={handleOnCloseSlideModal}
         onCloseGalleryModal={handleOnCloseGalleryModal}
         data={interactiveData}
+        duration={duration}
       />}
 
       {interactiveType === 'audio' && interactiveData && <AudioModal
@@ -293,6 +295,7 @@ const Personaje = (props) => {
         handleOpenInteractive={handleOnOpenSlideModal}
         handleCloseInteractive={handleOnCloseSlideModal}
         data={interactiveData}
+        duration={duration}
       />}
 
       {videoEnded && <Ending name={title} onButtonClicked={handleOnClickDashboard} />}

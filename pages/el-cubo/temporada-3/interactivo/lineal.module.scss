@@ -1,8 +1,9 @@
 .NodeContainer {
-  position: relative  ;
+  position: relative;
   max-height: 100vh;
   overflow: hidden;
 }
+
 .iMessage {
   font-size: 30px;
   font-weight: normal;
@@ -40,6 +41,7 @@
   top: 320px;
 }
 
+/*
 .coverVideo video,
 .coverVideo .plyr__controls {
   transition: margin 700ms;
@@ -48,9 +50,10 @@
 .activeInteractive video,
 .activeInteractive .plyr__controls {
   margin-top: -80px;
-}
+}*/
 
 // Hide controls
+.activeInteractive div div div:nth-child(1),
 .activeInteractive div div div:nth-child(2) {
   display: none;
 }
@@ -75,13 +78,14 @@
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    animation: zoomOut 60s infinite ;
+    animation: zoomOut 60s infinite;
   }
 
   @media only screen and (max-width: 960px) {
     img.stealDesktop {
       display: none;
     }
+
     img.stealMobile {
       display: block;
     }
@@ -91,6 +95,7 @@
     img.stealMobile {
       display: none;
     }
+
     img.stealDesktop {
       display: block;
     }
@@ -100,13 +105,15 @@
 
 @keyframes zoomOut {
   0% {
-      transform: scale(1);
+    transform: scale(1);
   }
+
   50% {
-      transform: scale(1.2);
+    transform: scale(1.2);
   }
+
   100% {
-      transform: scale(1.4);
+    transform: scale(1.4);
   }
 }
 
@@ -114,6 +121,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }

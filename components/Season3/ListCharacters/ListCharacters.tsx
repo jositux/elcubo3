@@ -100,7 +100,7 @@ const ListCharacters = ({ char, percentParam }) => {
                 <div className={styles.column1}>
                   <div className={styles.avatar}>
                     <a title="Historia de Juan de Jesús" href="../interactivo/juan">
-                      <img src="/images/season3/dashboard/juan.png" />
+                      <h2>Juan de Jesús</h2><PersonajeArrow />
                     </a>
                   </div>
                   <div className={styles.progress}>
@@ -115,7 +115,7 @@ const ListCharacters = ({ char, percentParam }) => {
                 <div className={`${styles.column1} ${styles.full}`}>
                   <div className={styles.avatar}>
                     <a title="Historia de Guillermo" href="../interactivo/guillermo">
-                      <img src="/images/season3/dashboard/guillermo.png" />
+                      <h2>Guillermo</h2><PersonajeArrow />
                     </a>
                   </div>
                   <div className={styles.progress}>
@@ -130,7 +130,7 @@ const ListCharacters = ({ char, percentParam }) => {
                 <div className={styles.column1}>
                   <div className={styles.avatar}>
                     <a title="Historia de Yenny" href="../interactivo/yenny">
-                      <img src="/images/season3/dashboard/yenny.png" />
+                      <h2>Yenny</h2><PersonajeArrow />
                     </a>
                   </div>
                   <div className={styles.progress}>
@@ -143,7 +143,7 @@ const ListCharacters = ({ char, percentParam }) => {
                 <div className={styles.column1}>
                   <div className={styles.avatar}>
                     <a title="Historia de Diego" href="../interactivo/diego">
-                      <img src="/images/season3/dashboard/diego.png" />
+                      <h2>Diego</h2><PersonajeArrow />
                     </a>
                   </div>
                   <div className={styles.progress}>
@@ -156,7 +156,7 @@ const ListCharacters = ({ char, percentParam }) => {
                 <div className={styles.column1}>
                   <div className={styles.avatar}>
                     <a title="Historia de Soledad" href="../interactivo/soledad">
-                      <img src="/images/season3/dashboard/soledad.png" />
+                      <h2>Soledad</h2><PersonajeArrow />
                     </a>
                   </div>
                   <div className={styles.progress}>

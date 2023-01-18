@@ -49,14 +49,14 @@ const Ending = ({ name, onButtonClicked }) => {
     <React.Fragment>
       <div className={`${styles.containerCover} ${styles.containerVideoModal} ${styles.open}`}>
 
-        <span className={styles.iconDashboard} onClick={onButtonClicked}>
+        {/*<span className={styles.iconDashboard} onClick={onButtonClicked}>
           <IconDashboard />
-        </span>
+  </span>*/}
         <div className={`${styles.container} ${styles.fadeIn}`}>
 
           <img className={styles.imgCharacter} src={imgUrl} />
           <div className={styles.child}>
-            <a href="/el-cubo/temporada-3/personajes/map?ref=view" className={styles.Back} >
+            <a href="/el-cubo/temporada-3/personajes?ref=view" className={styles.Back} >
               <Back /> <span>Elige otro personaje</span>
             </a>
 

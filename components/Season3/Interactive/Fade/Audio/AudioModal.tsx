@@ -4,13 +4,16 @@ import styles from './season3.audioModal.module.scss';
 import FadeModal from '../FadeModal/FadeModal';
 
 import Slider from 'components/Season3/Slider/Slick/Slider';
+import AudioInteractive from 'components/Season3/Svg/AudioInteractive';
+import Ripple from 'components/Season3/Shared/Ripple/Ripple';
 
 
 const AudioModal = ({
   isActive,
   handleOpenInteractive,
   handleCloseInteractive,
-  data
+  data,
+  duration
 }) => {
   const [open, setOpen] = useState(null)
   const [audioPlayer, setAudioPlayer] = useState(null);
@@ -20,6 +23,8 @@ const AudioModal = ({
     field_ec_gallery
   } = data;
 
+
+  const position = (data.field_ec_time_action * 100 / duration).toFixed(2);
 
   const slides = field_ec_gallery.split(',').map(img => {
     const imgA = img.split('|');
@@ -56,28 +61,46 @@ const AudioModal = ({
 
   return (
     <div className={styles.interactiveCover}>
-      <div className={styles.trigger} onClick={openHandler}>{data.field_ec_title}</div>
-
-      <FadeModal
-        showModal={open}
-        onOpenModal={handleOpenInteractive}
-        onCloseModal={handleCloseInteractive}
-        setShowModal={open}
-      >
-
-        <section className={styles.SlidesContainer}>
-          <Slider slides={slides} />
-        </section>
-
-        <div className={styles.Content}>
-          <div className={styles.AudioContent}>
-            <h2>{title}</h2>
-            <div>
-              <AudioWave setAudioPlayer={setAudioPlayer} audio={urlAudio} />
-            </div>
+      <div className={styles.interactiveContent}>
+        <div className={styles.trigger} onClick={openHandler}>
+          <div className={styles.buttonTrigger} style={{
+            left: `${position}%`,
+          }}>
+            <h2 className={styles.InteractiveTitle}>
+              {title}
+            </h2>
+            <Ripple />
+            <AudioInteractive />
+            <span className={styles.marker}
+            >
+            </span>
           </div>
         </div>
-      </FadeModal>
+
+        <span className={styles.Line}>
+        </span>
+
+        <FadeModal
+          showModal={open}
+          onOpenModal={handleOpenInteractive}
+          onCloseModal={handleCloseInteractive}
+          setShowModal={open}
+        >
+
+          <section className={styles.SlidesContainer}>
+            <Slider slides={slides} />
+          </section>
+
+          <div className={styles.Content}>
+            <div className={styles.AudioContent}>
+              <h2>{title}</h2>
+              <div>
+                <AudioWave setAudioPlayer={setAudioPlayer} audio={urlAudio} />
+              </div>
+            </div>
+          </div>
+        </FadeModal>
+      </div>
     </div>
 
   );

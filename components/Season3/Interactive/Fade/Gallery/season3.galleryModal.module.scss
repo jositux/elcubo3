@@ -1,12 +1,107 @@
 .interactiveCover {
   position: absolute;
-  bottom: 100px;
+  bottom: 120px;
+  width: 100%;
+  opacity: 0;
+  -webkit-animation: fading ease-in 1s;
+  animation: fading ease-in 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+
+  .interactiveContent {
+    width: calc(100vw - 180px);
+    margin: auto;
+    position: relative;
+  }
+
+  .marker {
+    position: absolute;
+    height: 30px;
+    width: 2px;
+    background: white;
+    margin-left: 48px;
+    margin-top: 110px;
+    left: 27px;
+    top: 0;
+  }
+
+  .Line {
+    width: 100%;
+    background: #C4C4C4;
+    height: 1px;
+    display: flex;
+    flex-grow: 1;
+    margin-top: 140px;
+    opacity: .7;
+  }
+
 }
 
 .trigger {
-  font-size: 18px;
-  font-style: italic;
-  font-family: $elcubo2_font;
+
+  cursor: pointer;
+
+  .InteractiveTitle {
+    font-family: $elcubo3_font_subtitle;
+    font-weight: 300;
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 140px;
+  }
+
+  svg {
+    position: relative;
+    z-index: 100;
+    margin: 38px;
+
+    &:hover {
+      circle {
+        fill: white;
+      }
+    }
+  }
+}
+
+.buttonTrigger {
+  position: absolute;
+  margin-left: -75px;
+  top: -140px;
+}
+
+
+@-webkit-keyframes fading {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fading {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fading {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .gallerySwiper {

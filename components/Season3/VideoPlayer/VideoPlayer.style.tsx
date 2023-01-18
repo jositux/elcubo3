@@ -6,12 +6,12 @@ export const VideoPlayerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: Arial;
+  font-family: "Roboto Condensed", sans-serif;
 
   .back-to-season {
     position: absolute;
-    top: 20px;
-    left: 10px;
+    top: 50px;
+    left: 80px;
     z-index: 10;
     opacity: 1;
     transition: all 0.3s ease;
@@ -29,13 +29,14 @@ export const VideoPlayerWrapper = styled.div`
 
     & span {
       color: white;
-      margin-left: 5px;
+      margin-left: 10px;
       opacity: 0;
       transition: opacity 0.5s ease;
       will-change: opacity;
-      font-family: Inter;
+      font-family: "Roboto Condensed", sans-serif;
       font-size: 16px;
       font-weight: 500;
+
     }
 
     &:hover {
@@ -123,13 +124,13 @@ export const VideoPlayerWrapper = styled.div`
   .plyr__portal__title {
     color: white;
     font-family: "Roboto Serif", serif;
-    font-size: 2.3rem;
-    letter-spacing: -1px;
+    font-size: 3rem;
     font-weight: 500;
     position: absolute;
-    left: 25px;
-    top: 5vh;
+    left: 90px;
+    top: 80px;
     z-index: 100;
+    margin-top: 0;
   }
 
   .plyr {
@@ -212,17 +213,20 @@ export const VideoPlayerWrapper = styled.div`
   top: -40px;
   position: absolute;
   z-index: 10;
+  img {
+    display: none;
+  }
 }
 
-/*
+
 .marker::before {
   content: "";
   width: 15px;
   height: 15px;
   margin-top: 6px;
-  left: 45px;
+  left: -7px;
   border-radius: 50%;
-  background: #E2B857;
+  background: #787878;
   position: absolute;
   opacity: 1;
 }
@@ -233,7 +237,7 @@ export const VideoPlayerWrapper = styled.div`
   margin-left: 70px;
   position: absolute;
   animation: fadeIn 5s;
-}*/
+}
 
 @keyframes fadeIn {
   0% { opacity: 0; }

@@ -45,7 +45,7 @@ const PaneLogin = ({ isActive, onClose, isMobile }) => {
           </p>
           <div className={styles.Buttons}>
             <ButtonModal url={Links.register} text="Registrarme" />
-            <Link url="/el-cubo/temporada-3/personajes/map" text="En otro momento" type="a" />
+            <Link url="/el-cubo/temporada-3/personajes/" text="En otro momento" type="a" />
           </div>
         </div>
 
