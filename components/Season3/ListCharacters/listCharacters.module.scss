@@ -1,8 +1,8 @@
 .Characters {
   position: absolute;
   z-index: 100;
-  right: 190px;
-  bottom: 90px;
+  right: 175px;
+  bottom: 130px;
   width: 280px;
 
   .row {
@@ -13,7 +13,7 @@
     .column1 {
       width: 100%;
       display: flex;
-      padding: 0px 5px;
+      padding: 0;
       gap: 10px;
 
       div.avatar {
@@ -134,18 +134,59 @@
   }
 }
 
+.timeline {
+  position: relative;
+
+  .line {
+    height: 155px;
+    width: 1px;
+    background: #FF6D4D;
+    position: absolute;
+    top: -160px;
+    right: 20px;
+  }
+
+  p {
+    color: #FF6D4D;
+    font-weight: 300;
+    text-align: right;
+    margin-right: -43px;
+  }
+}
+
+
+a.buttonInfo {
+  font-family: $elcubo3_font_subtitle;
+  font-weight: 300;
+  color: #E2B857;
+  border: 1px solid #E2B857;
+  font-size: 16px;
+  padding: 10px;
+  width: 60%;
+  text-align: center;
+  float: right;
+  margin: 20px 0;
+  background: #402A04;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    color: white;
+    background-color: #8D2213;
+  }
+}
 
 a.buttonInfoInactive {
   font-family: $elcubo3_font_subtitle;
   font-weight: 300;
   color: #E2B857;
   border: 1px solid #E2B857;
-  font-size: 14px;
+  font-size: 16px;
   padding: 10px;
-  width: 58%;
+  width: 60%;
   text-align: center;
   float: right;
-  margin: 10px 0;
+  margin: 20px 0;
   background: #402A04;
   text-decoration: none;
   opacity: .2;
