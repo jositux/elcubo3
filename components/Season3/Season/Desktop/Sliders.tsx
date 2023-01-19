@@ -120,8 +120,8 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
         <img id='ImgBG0' src="/images/season3/slider/home_slider_01.jpg" className={styles.ImgBG0} />
         <div id='Texto0' className={`${styles.TextContent} ${styles.TextContentRight}`}>
           <article>
-            <h1>Jordán Sube es el pueblo colombiano con la menor cantidad de almas del país.</h1>
-            <p>¿Qué sucedió en <strong>Jordán</strong> para pasar de la <br />prosperidad a ser un pueblo fantasma?</p>
+            <h1>Bienvenido y bienvenida a Jordán Sube, un pueblo con gente que resiste y sabe vivir</h1>
+            <p></p>
           </article>
         </div>
 
@@ -132,8 +132,8 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
           <img id='ImgBG1' src="/images/season3/slider/home_slider_02.jpg" className={styles.ImgBG1} />
           <div id='Texto1' className={`${styles.TextContent} ${styles.TextContentLeft}`}>
             <article>
-              <h1>Cinco personajes buscan superar los fantasmas que se apoderaron de <br />Jordán Sube.</h1>
-              <p>¿Cómo hacerlo cuando el pueblo<br /> vive bajo una maldición?</p>
+              <h1>Jordán fue próspero pero ahora se mantiene en una frágil realidad.</h1>
+              <p>A lo largo de su historia ha estado sumido en la violencia, la pobreza y el larguísimo mandato de una sola familia; y hoy quedan un poco más de 1000 habitantes.</p>
             </article>
           </div>
         </div>
@@ -141,15 +141,19 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
           <img id='ImgBG2' src="/images/season3/slider/home_slider_03.jpg" className={styles.ImgBG1} />
           <div id='Texto2' className={`${styles.TextContent} ${styles.TextContentRight}`}>
             <article>
-              <h1>¿Puede un pueblo sobrevivir estancado  <br />en el tiempo?</h1>
-              <p>Jordán Sube se encuentra ubicado en el fondo del Cañón del Chicamocha, pero su aislamiento no impide que su habitantes sigan adelante.</p>
+              <h1>Viaja con nosotros <br />a este lugar. </h1>
+              <p>Recorre sus caminos de la mano de personajes entrañables, explora sus historias al ritmo y en el orden que quieras. Completa la foto de Jordán con información adicional que te será revelada al final. </p>
             </article>
           </div>
           <div className={styles.ButtonContainerBottom}>
-            {isLoggedIn
-              ? <ButtonHome url={Links.registerTemp2} text="Iniciar experiencia" />
-              : <ButtonHome type="button" onClick={onGuest} text="Iniciar experiencia" />
-            }
+            <div className={styles.ButtonContainerContent}>
+              <h2>Este viaje es una forma de entender<br />la propia realidad y recobrar la fuerza.</h2>
+
+              {isLoggedIn
+                ? <ButtonHome url={Links.registerTemp2} text="Iniciar EL Viaje" />
+                : <ButtonHome type="button" onClick={onGuest} text="Iniciar El Viaje" />
+              }
+            </div>
           </div>
         </div>
         <div id='slider3' className={styles.ImagesDesktop}>

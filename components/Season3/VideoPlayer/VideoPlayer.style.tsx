@@ -141,6 +141,12 @@ export const VideoPlayerWrapper = styled.div`
     object-fit: cover;
 }
 
+.plyr--video .plyr__controls {
+  padding-left: 85px;
+  padding-right: 85px;
+  padding-bottom: 60px;
+}
+
 .plyr__video-wrapper {
     height: 100vh !important;
 }

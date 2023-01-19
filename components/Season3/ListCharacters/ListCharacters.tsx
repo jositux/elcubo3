@@ -166,6 +166,11 @@ const ListCharacters = ({ char, percentParam }) => {
 
               </div>
 
+              <div className={styles.timeline}>
+                <span className={styles.line} />
+                <p>Fiesta de Santa Rosa</p>
+              </div>
+
               <div className={`${styles.Info}`}>
                 {
                   (soledadPercent && juanPercent && guillermoPercent && yennyPercent && diegoPercent) === 100
