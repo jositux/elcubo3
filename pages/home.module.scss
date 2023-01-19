@@ -12,6 +12,7 @@
   align-items: center;
   justify-content: center;
   padding: 60px;
+
   img.elcuboLogo {
     width: 130px;
   }
@@ -25,6 +26,7 @@
     animation-fill-mode: forwards;
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
+
     @media screen and (max-width: 920px) {
       display: none;
     }
@@ -73,25 +75,31 @@
   padding-right: 4%;
   color: white;
   font-family: $elcubo2_font_home;
+
   .imageText {
     position: relative;
+
     a {
       color: white;
     }
+
     img {
       border: 2px solid #56BEC9;
       width: calc(100% - 4px);
     }
+
     div {
       padding: 25px;
       position: absolute;
       bottom: 0;
+
       h3 {
         margin: 0;
         font-size: 14.5px;
         font-weight: 500;
         text-transform: uppercase;
       }
+
       h1 {
         margin: 0;
         margin-top: 10px;
@@ -100,34 +108,42 @@
         font-weight: 400;
         text-transform: uppercase;
       }
+
       span {
         font-size: 18px;
       }
     }
   }
+
   .description {
     margin: 25px;
     padding-bottom: 25px;
     border-bottom: 1px solid #56BEC9;
+
     p {
       margin: 0;
       font-size: 18px;
       min-height: 92px;
     }
+
     ul {
       margin: 0;
       margin-top: 20px;
       padding: 0;
+
       li {
         display: inline-block;
         margin-right: 20px;
         align-items: center;
+
         ul {
           margin-top: 0;
         }
+
         svg {
           float: left;
         }
+
         span {
           margin-left: 10px;
           line-height: 2.2em;
@@ -143,43 +159,51 @@
     grid-template-columns: repeat(1, 1fr);
     padding-left: 30px;
     padding-right: 30px;
+
     .description {
       p {
         min-height: 0px;
       }
     }
   }
+
   img.elcuboLetras {
     opacity: 0;
   }
-  
+
 }
 
 @media screen and (max-width: 580px) {
   .homeLogo {
     padding: 30px;
+
     img {
       width: 60px !important;
     }
   }
+
   .cardsContainer {
     h1 {
       font-size: 30px !important;
     }
+
     .imageText {
       a {
         margin-top: 10px;
         padding: 5px 0px 5px 0px;
         width: 140px;
         font-size: 14px;
+
         span {
           font-size: 14px;
         }
       }
     }
+
     .description {
       margin: 0px;
       padding-top: 25px;
+
       li {
         margin-bottom: 10px;
       }
@@ -196,45 +220,52 @@
   grid-gap: 40px;
   padding-left: 4%;
   padding-right: 4%;
+
   h1 {
     color: white;
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-size: 42px;
   }
+
   .awardRow {
     display: flex;
-    align-items:flex-start;
+    align-items: flex-start;
     font-family: $elcubo2_font_home;
     margin-top: 30px;
-      .columnImg {
-        display: flex;
-        width: 20%;
-        img {
-          width: 100%;
-        }
+
+    .columnImg {
+      display: flex;
+      width: 20%;
+
+      img {
+        width: 100%;
       }
-      .columnText {
-        padding-left: 20px;
-        width: calc(80% - 20px);
-        h3 {
-          margin-top: 0;
-          margin-bottom: 0;
-          font-size: 18px;
-        }
-        p {
-          font-weight: 300;
-          margin-top: 5px;
-        }
+    }
+
+    .columnText {
+      padding-left: 20px;
+      width: calc(80% - 20px);
+
+      h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 18px;
       }
-    
+
+      p {
+        font-weight: 300;
+        margin-top: 5px;
+      }
+    }
+
   }
 
   @media screen and (max-width: 992px) {
-      grid-template-columns: repeat(1, 1fr);
-      grid-gap: 0;
-      padding-left: 30px;
-      padding-right: 30px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -265,6 +296,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -274,6 +306,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -283,6 +316,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -292,6 +326,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -301,6 +336,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }

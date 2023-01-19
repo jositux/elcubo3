@@ -9,6 +9,21 @@ import { isAbsolute } from 'path';
 
 export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
 
+  const [scrollTop, setScrollTop] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = (event) => {
+      setScrollTop(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
   useEffect(() => {
     const videoContainer = document.querySelector('#VideoContainer') as HTMLElement;
     const ImgBG0 = document.querySelector('#ImgBG0') as HTMLElement;
@@ -39,13 +54,20 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
 
     const getPosY = () => {
       console.log('scroll' + window.scrollY);
-      console.log(height1);
+      //console.log(height1);
 
       if (window.scrollY <= headerHeigth) {
         /* 100 equivale al 100% del ancho */
-        //contentResizable.style.width = 100 - window.scrollY / 5 + '%';
+        //contentResizable.style.transform = "scale(" + (100 - window.scrollY / 5) / 100 + ")";
         /* incrementTop es el grado de margen superior mientras se hace scroll */
-        //contentResizable.style.top =  window.scrollY * incrementTop + 'px';
+        //contentResizable.style.top = window.scrollY * incrementTop + 'px';
+      }
+
+      if (window.scrollY > headerHeigth) {
+        //contentResizable.classList.add('active');
+      }
+      else {
+        //contentResizable.classList.remove('active');
       }
 
 
@@ -104,7 +126,7 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
     <Fragment>
       <div id='VideoContainer' className={styles.VideoContainer}>
         <div id='VideoContent' className={styles.VideoContent}>
-          <div id="ContentResizable" className={styles.ContentResizable}>
+          <div id="ContentResizable" className={`${styles.ContentResizable} ${scrollTop >= 90 ? styles.active : ''}`}>
             <VideoIntro url={"/videos/season3.mp4"} />
             <img src="/images/season3/steals/0-home-steal-desktop.jpg" className={styles.StealTeaser} />
             <div id='LogoTeaser' className={styles.LogoTeaser}>
