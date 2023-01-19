@@ -19,12 +19,12 @@ const VideoModal = ({
 
   const position = (data.field_ec_time_action * 100 / duration).toFixed(2);
 
-  const video2Level = JSON.parse(data?.field_ec_episode_json)[0]?.field_ec_asset_id;
+  //const video2Level = eval(data.field_ec_episode_json)[0].field_ec_asset_id;
+  //console.log(eval(data.field_ec_episode_json)[0].field_ec_asset_id);
 
-  let srcVideo = UrlUtils.getVideoUrl(video2Level);
+  let srcVideo = UrlUtils.getVideoUrl('482209');
   let title = data.field_ec_title;
 
-  /*
   if (data.id == '1505') {
     srcVideo = UrlUtils.getVideoUrl('482211');
   }
@@ -62,7 +62,7 @@ const VideoModal = ({
   // Sole 2
   if (data.id == '1527') {
     srcVideo = UrlUtils.getVideoUrl('482213');
-  }*/
+  }
 
 
   const [openVideo, setOpenVideo] = useState(null)
