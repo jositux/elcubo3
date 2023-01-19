@@ -25,7 +25,6 @@ const Personaje = (props) => {
 
   let intervalLocalStorage = null;
   const dataProgressVideo = [];
-  //console.log(personaje);
 
   const [isActiveInteractive, setIsActiveInteractive] = useState(false);
   const [interactiveData, setInteractiveData] = useState(null);
