@@ -58,11 +58,14 @@
   display: none;
 }
 
-.coverInactiveVideo {
+// Hide Background Opacity
+.activeInteractive div div div:nth-child(3) div:last-child {
   display: none;
 }
 
-
+.coverInactiveVideo {
+  display: none;
+}
 
 .steal {
   position: absolute;
