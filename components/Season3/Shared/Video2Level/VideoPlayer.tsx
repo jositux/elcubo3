@@ -16,6 +16,7 @@ const VideoPlayer = ({
   backButtonText = 'Volver',
   chapterButtonName = 'Chapters',
   autoPlay,
+  loop,
   showDashboard = false,
   showDashboardLineal = false,
   onClickDashboard,
@@ -112,6 +113,7 @@ const VideoPlayer = ({
         'airplay',
         'fullscreen',
       ],
+      loop: { active: loop },
       captions: { active: true, update: true, language: 'es' },
       settings: ['quality'],
     });
@@ -329,6 +331,7 @@ const VideoPlayer = ({
         crossOrigin="true"
         poster={poster}
         autoPlay={autoPlay}
+        loop={loop}
         playsInline
       />
     </VideoPlayerWrapper>
