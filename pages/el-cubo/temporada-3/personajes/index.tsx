@@ -14,45 +14,71 @@ import styles from './personajes.module.scss';
 
 const characters = [
   {
-    name: 'soledad',
-    realName: 'Soledad',
-    description: '“Los cambios siempre dan miedo, pero hay que hacerlos con miedos y todo“',
     background: '/images/season3/steals/personaje-soledad.jpg',
+    name: 'soledad',
+    realName: 'Soledad Silva Rico',
+    nameButton: 'Soledad',
+    description: 'Cuando estamos en medio del huracán es imposible ver. Pero Soledad ha ido redescubriendo su propia fuerza y ahora solo le quedan sueños por cumplir. ¿Sabes de qué es capaz?',
+    age: '34 años',
+    proof: 'Concejal, Agricultora',
+    born: '',
+    address: 'Vereda Morros - Jordán Sube',
     icon: '/images/season3/map/popups/popup-soledad.png',
     link: '../temporada-3/interactivo/soledad',
   },
   {
-    name: 'diego',
-    realName: 'Diego',
-    description: '“Para lograr las cosas primero hay que soñarlas“',
     background: '/images/season3/steals/personaje-diego.jpg',
+    name: 'diego',
+    realName: 'Diego Sarmiento',
+    nameButton: 'Diego',
+    description: '¿Has sentido alguna vez que tienes que decidir entre seguir tu pasión y pagar las cuentas? Eso es lo que le pasa precisamente a Diego. Solo quiere que el tiempo y el dinero le alcancen para cumplir su sueño.',
+    age: '39 años',
+    proof: 'Agricultor, Conductor, Músico',
+    born: '',
+    address: 'Vereda Suavecito - Jordán Sube',
     icon: '/images/season3/map/popups/popup-diego.png',
     link: '../temporada-3/interactivo/diego',
   },
   {
-    name: 'juan',
-    realName: 'Juan de Jesús',
-    description: '“Uno busca su misión en la vida, pero a veces es la propia misión la que a uno lo encuentra“',
+    background: '/images/season3/steals/personaje-guillermo.jpg',
+    name: 'guillermo',
+    realName: 'Guillermo Prada Monsalve',
+    nameButton: 'Guillermo',
+    description: '¿Te ha pasado que un mosquito te quita el sueño? Guillermo se para todas las noches a espantar lo que le asusta. En la historia de este hombre se juntan la belleza, el cuidado y la fragilidad para recordarnos que todo es impermanente. Y que todo sobrevive en la memoria.',
+    age: '77 años',
+    proof: ' Pescador; Agricultor; Sobandero',
+    born: '',
+    address: 'Via Jordán - Mesa de los Santos',
+    icon: '/images/season3/map/popups/popup-guillermo.png',
+    link: '../temporada-3/interactivo/guillermo',
+  },
+  {
     background: '/images/season3/steals/personaje-juan.jpg',
+    name: 'juan',
+    realName: 'Juan de Jesús Estévez',
+    nameButton: 'Juan de Jesús',
+    description: 'Como muchos de nosotros, el párroco Juan de Jesús siente a veces que para hacer lo importante tiene que mover montañas. Se ha propuesto dos misiones muy difíciles. Mira fijamente con él eso que parece ser ingenuidad o locura, y entiende por qué no lo es.',
+    age: '35 años',
+    proof: 'Sacerdote',
+    born: 'Nacido en el municipio de Mogotes - Santander',
+    address: 'Casa cural, casco urbano de Jordán Sube',
     icon: '/images/season3/map/popups/popup-juan.png',
     link: '../temporada-3/interactivo/juan',
   },
   {
-    name: 'yenny',
-    realName: 'Yenny',
-    description: '“Viajando se conoce la libertad“',
     background: '/images/season3/steals/personaje-yenny.jpg',
+    name: 'yenny',
+    realName: 'Yenny Delgado',
+    nameButton: 'Yenny',
+    description: '¿La vida te ha puesto en una situación de la que parece no haber escapatoria? Yenny es la única hija de un matriarcado compuesto por su mamá y sus 4 tías. Las quiere mucho pero tiene grandes sueños. Descúbrelos y sueña con ella.',
+    age: '38 años',
+    proof: 'Bachiller; Catequista',
+    born: '',
+    address: 'Vereda El Pozo - Jordán Sube',
     icon: '/images/season3/map/popups/popup-yenny.png',
     link: '../temporada-3/interactivo/yenny',
   },
-  {
-    name: 'guillermo',
-    realName: 'Guillermo',
-    description: '“Y si algún día me separo de María, espero encontrarla del otro lado“',
-    background: '/images/season3/steals/personaje-guillermo.jpg',
-    icon: '/images/season3/map/popups/popup-guillermo.png',
-    link: '../temporada-3/interactivo/guillermo',
-  },
+
 ];
 
 const Fader = ({ text }) => {
@@ -66,7 +92,13 @@ const Fader = ({ text }) => {
   const [showPersonajesModal, setShowPersonajesModal] = useState(true);
   const [background, setBackground] = useState('/images/season3/steals/0-home-steal-desktop.jpg');
   const [name, setName] = useState('');
+  const [realName, setRealName] = useState('');
+  const [nameButton, setNameButton] = useState('');
   const [description, setDescription] = useState('');
+  const [age, setAge] = useState('');
+  const [born, setBorn] = useState('');
+  const [address, setAdress] = useState('');
+  const [proof, setProof] = useState('');
   const [icon, setIcon] = useState('');
   const [link, setLink] = useState('');
 
@@ -126,10 +158,16 @@ const Fader = ({ text }) => {
     clickear()
   };
 
-  function updatePersonaje(background, name, description, icon, link) {
+  function updatePersonaje(background, name, realName, nameButton, description, age, proof, born, address, icon, link) {
     setBackground(background);
     setName(name);
+    setRealName(realName);
+    setNameButton(nameButton);
     setDescription(description);
+    setAge(age);
+    setProof(proof);
+    setBorn(born);
+    setAdress(address);
     setIcon(icon);
     setLink(link);
   }
@@ -160,7 +198,13 @@ const Fader = ({ text }) => {
           <PersonajesModalSlide
             background={background}
             name={name}
+            nameButton={nameButton}
+            realName={realName}
             description={description}
+            age={age}
+            proof={proof}
+            born={born}
+            address={address}
             icon={icon}
             link={link}
             showPersonajesModal={showPersonajesModal}

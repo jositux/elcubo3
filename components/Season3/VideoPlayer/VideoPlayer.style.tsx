@@ -216,6 +216,7 @@ export const VideoPlayerWrapper = styled.div`
 
 
 .marker {
+  cursor: pointer;
   top: -40px;
   position: absolute;
   z-index: 10;
@@ -237,7 +238,9 @@ export const VideoPlayerWrapper = styled.div`
   opacity: 1;
 }
 
-
+.marker:hover::before {
+  background: white;
+}
 
 .marker span {
   margin-left: 70px;

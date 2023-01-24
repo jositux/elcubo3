@@ -4,6 +4,8 @@ import styles from './season3.personajesModalSlide.module.scss';
 
 const PersonajesModal = ({ ...props }) => {
 
+  console.log(props)
+
   React.useEffect(() => {
 
     window.onclick = function (e) {
@@ -42,11 +44,19 @@ const PersonajesModal = ({ ...props }) => {
             <img src={props.icon}  />
   </div>*/}
             <div className={styles.column}>
-              <h2>{props.name}</h2>
-              <p>{props.description}</p>
-              <a href={props.link}>INICIAR EXPERIENCIA
-                <PersonajeArrow />
-              </a>
+              <h2>{props.realName}</h2>
+              <p>
+                <span><strong>Edad</strong>: {props.age}<br /></span>
+                <span><strong>Profesión</strong>: {props.proof}</span>
+                {`${props.born.trim()}` !== '' ?
+                  props.born
+                  : ''}
+                <span><strong>Residencia</strong>: {props.address}</span>
+                <p>{props.description}</p>
+                <a href={props.link}>Conoce a {props.nameButton}
+                  <PersonajeArrow />
+                </a>
+              </p>
             </div>
           </div>
           <div className={styles.coverBG}></div>

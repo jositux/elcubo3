@@ -6,6 +6,7 @@ import styles from './season3.videoModal.module.scss';
 import FadeModal from '../FadeModal/FadeModal';
 import PlayInteractive from 'components/Season3/Svg/PlayInteractive';
 import Ripple from 'components/Season3/Shared/Ripple/Ripple';
+import { stringify } from "querystring";
 
 const VideoModal = ({
   isActive,
@@ -19,50 +20,68 @@ const VideoModal = ({
 
   const position = (data.field_ec_time_action * 100 / duration).toFixed(2);
 
-  //const video2Level = eval(data.field_ec_episode_json)[0].field_ec_asset_id;
+
+  const dataVideo = data.field_ec_episode_json.slice(1, -1);
+
+  const re = /(?:"field_ec_asset_id":")(.*?)(?:")/;
+
+  const id = dataVideo.match(re)[1];
+
+  console.log(id);
+
+
+  //const jsonVideo = JSON.parse(dataVideo);
+
+  //console.log(jsonVideo.field_ec_asset_id);
+  //const video2Level = JSON.parse(data.field_ec_episode_json);
+
+  //console.log((video2Level)[0]);
+
   //console.log(eval(data.field_ec_episode_json)[0].field_ec_asset_id);
 
-  let srcVideo = UrlUtils.getVideoUrl('482209');
+
+  let srcVideo = UrlUtils.getVideoUrl(id);
+  //let srcVideo = UrlUtils.getVideoUrl(dataVideo.field_ec_asset_id);
   let title = data.field_ec_title;
 
-  if (data.id == '1505') {
-    srcVideo = UrlUtils.getVideoUrl('482211');
-  }
-  // Guillermo 1
-  if (data.id == '1512') {
-    srcVideo = UrlUtils.getVideoUrl('482203');
-  }
-  // Guillermo 2
-  if (data.id == '1515') {
-    srcVideo = UrlUtils.getVideoUrl('482205');
-  }
-
-  // Yenny 1
-  if (data.id == '1518') {
-    srcVideo = UrlUtils.getVideoUrl('482207');
-  }
-
-  // Diego 1
-  if (data.id == '1520') {
-    srcVideo = UrlUtils.getVideoUrl('482197');
-  }
-  // Diego 2
-  if (data.id == '1523') {
-    srcVideo = UrlUtils.getVideoUrl('482199');
-  }
-  // Diego 3
-  if (data.id == '1522') {
-    srcVideo = UrlUtils.getVideoUrl('482201');
-  }
-
-  // Sole 1
-  if (data.id == '1524') {
-    srcVideo = UrlUtils.getVideoUrl('482213');
-  }
-  // Sole 2
-  if (data.id == '1527') {
-    srcVideo = UrlUtils.getVideoUrl('482213');
-  }
+  /* if (data.id == '1505') {
+     srcVideo = UrlUtils.getVideoUrl('482211');
+   }
+   // Guillermo 1
+   if (data.id == '1512') {
+     srcVideo = UrlUtils.getVideoUrl('482203');
+   }
+   // Guillermo 2
+   if (data.id == '1515') {
+     srcVideo = UrlUtils.getVideoUrl('482205');
+   }
+ 
+   // Yenny 1
+   if (data.id == '1518') {
+     srcVideo = UrlUtils.getVideoUrl('482207');
+   }
+ 
+   // Diego 1
+   if (data.id == '1520') {
+     srcVideo = UrlUtils.getVideoUrl('482197');
+   }
+   // Diego 2
+   if (data.id == '1523') {
+     srcVideo = UrlUtils.getVideoUrl('482199');
+   }
+   // Diego 3
+   if (data.id == '1522') {
+     srcVideo = UrlUtils.getVideoUrl('482201');
+   }
+ 
+   // Sole 1
+   if (data.id == '1524') {
+     srcVideo = UrlUtils.getVideoUrl('482213');
+   }
+   // Sole 2
+   if (data.id == '1527') {
+     srcVideo = UrlUtils.getVideoUrl('482213');
+   }*/
 
 
   const [openVideo, setOpenVideo] = useState(null)

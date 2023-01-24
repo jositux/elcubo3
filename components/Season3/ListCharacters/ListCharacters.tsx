@@ -171,7 +171,7 @@ const ListCharacters = ({ char, percentParam }) => {
                 <p>Fiesta de Santa Rosa</p>
               </div>
 
-              <div className={`${styles.Info}`}>
+              {/*<div className={`${styles.Info}`}>
                 {
                   (soledadPercent && juanPercent && guillermoPercent && yennyPercent && diegoPercent) === 100
                     ? <a href="/el-cubo/temporada-3/recompensa/timeline" className={styles.buttonInfo}>
@@ -180,8 +180,8 @@ const ListCharacters = ({ char, percentParam }) => {
                     : <a className={styles.buttonInfoInactive}>
                       VER INFOGRAFIA
                     </a>
-                }
-              </div>
+                
+            </div>*/}
 
             </div>
 
