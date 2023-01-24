@@ -324,6 +324,13 @@ const VideoPlayer = ({
     }
   }, [title]);
 
+  React.useEffect(() => {
+    const container: HTMLElement = wrapperRef.current;
+    const videoContext = container.getElementsByClassName('plyr__poster')[0];
+    videoContext.insertAdjacentHTML('afterend', `<div class="coverBG"></div>`);
+  }, []);
+
+
   // Add Markers
   React.useEffect(() => {
     //let video_duration = playerRef.current.duration;
@@ -365,7 +372,6 @@ const VideoPlayer = ({
         addMarker('marker', 'marker-' + index, c.time, c.url, c.text)
       ))
     }
-
 
   }, [markers, duration, playerRef.current]);
 

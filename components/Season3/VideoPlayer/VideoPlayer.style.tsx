@@ -271,4 +271,18 @@ export const VideoPlayerWrapper = styled.div`
   display: none;
 }
 
+
+.coverBG {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0,0,0,.3);
+}
+
+.plyr--hide-controls {
+  .coverBG {
+   display: none;
+  }
+}
+
 `;
