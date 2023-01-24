@@ -337,13 +337,18 @@ const VideoPlayer = ({
     const createPoint = (pClassElement, pSeconds, pUrl, pText) => {
       //console.log('P SECONDS', pSeconds, video_duration)
       let percent = calculatePercent(pSeconds, video_duration);
-      let point = document.createElement('div');
-      let img = new Image();
-      img.src = pUrl;
 
-      point.appendChild(img);
+      let point = document.createElement('a');
+      //let img = new Image();
+      //img.src = pUrl;
+
+      //point.appendChild(img);
       point.setAttribute('class', 'marker ' + pClassElement);
       point.setAttribute('style', 'left: ' + percent + '%;');
+      point.setAttribute('rel', pSeconds);
+      point.addEventListener("click", function () {
+        playerRef.current.currentTime = parseInt(pSeconds) - 1;
+      });
       return point;
     }
 
@@ -361,7 +366,10 @@ const VideoPlayer = ({
       ))
     }
 
+
   }, [markers, duration, playerRef.current]);
+
+
 
 
   React.useEffect(() => {

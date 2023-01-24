@@ -69,9 +69,20 @@ export const Pines = ({ ...props }) => {
     }
   }
 
-  function updatePersonaje(bg: string, name: string, description: string, icon: string, link: string) {
+  function updatePersonaje(
+    bg: string,
+    name: string,
+    realName: string,
+    nameButton: string,
+    description: string,
+    age: string,
+    proof: string,
+    born: string,
+    address: string,
+    icon: string,
+    link: string) {
     if (props.updatePersonaje) {
-      props.updatePersonaje(bg, name, description, icon, link);
+      props.updatePersonaje(bg, name, realName, nameButton, description, age, proof, born, address, icon, link);
     }
   }
 
@@ -82,7 +93,21 @@ export const Pines = ({ ...props }) => {
           <div className={`${styles.PopupContainer} ${styles[c.name + `-g`]} ${!isViewed ? cx(styles.FirstTime) : cx(styles.Viewed)}`} id={`${c.name}`} key={index}>
             <div
               //onMouseEnter={() => { updatePersonaje(`${c.background}`, `${c.realName}`, `${c.description}`, `${c.icon}`, `${c.link}`); openPersonajesModal(); }}
-              onClick={() => { updatePersonaje(`${c.background}`, `${c.realName}`, `${c.description}`, `${c.icon}`, `${c.link}`); openPersonajesModal(); }}
+              onClick={() => {
+                updatePersonaje(
+                  `${c.background}`,
+                  `${c.name}`,
+                  `${c.realName}`,
+                  `${c.nameButton}`,
+                  `${c.description}`,
+                  `${c.age}`,
+                  `${c.proof}`,
+                  `${c.born}`,
+                  `${c.address}`,
+                  `${c.icon}`,
+                  `${c.link}`);
+                openPersonajesModal();
+              }}
               className={styles.titleImage}
               style={{ cursor: "pointer" }}
             >
