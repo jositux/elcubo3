@@ -345,14 +345,20 @@ const VideoPlayer = ({
       //console.log('P SECONDS', pSeconds, video_duration)
       let percent = calculatePercent(pSeconds, video_duration);
 
-      let point = document.createElement('a');
+      let point = document.createElement('span');
       //let img = new Image();
       //img.src = pUrl;
 
+      //<span class="tooltip" data-tooltip="I found what I need. And it's not friends, it's things." data-tooltip-pos="up" data-tooltip-length="medium"></span>
+
       //point.appendChild(img);
-      point.setAttribute('class', 'marker ' + pClassElement);
+      point.setAttribute('class', 'marker tooltip ' + pClassElement);
       point.setAttribute('style', 'left: ' + percent + '%;');
       point.setAttribute('rel', pSeconds);
+      point.setAttribute('data-tooltip', pText);
+      point.setAttribute('data-tooltip-pos', 'up');
+      point.setAttribute('data-tooltip-lenght', 'medium');
+
       point.addEventListener("click", function () {
         playerRef.current.currentTime = parseInt(pSeconds) - 1;
       });
