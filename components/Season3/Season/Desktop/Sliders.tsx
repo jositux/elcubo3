@@ -3,7 +3,7 @@ import ButtonHome from 'components/Season3/Shared/Button/ButtonHome';
 import VideoIntro from 'components/Season3/VideoIntro/VideoIntro';
 import styles from './season3.slider.desktop.module.scss';
 import Credits from 'components/Season3/Season/Credits/Credits';
-import Codepen from 'components/Season3/Season/Desktop/Codepen';
+import Hero from 'components/Season3/Season/Desktop/Hero';
 
 import Links from 'constants/Links';
 import Footer from 'components/Footer/Footer';
@@ -100,7 +100,7 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
   return (
     <Fragment>
       <div id="videoContainer">
-        <Codepen />
+        <Hero video="482811" />
       </div>
 
       <div className={styles.SlidersContainer}>

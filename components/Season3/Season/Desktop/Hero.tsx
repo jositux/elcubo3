@@ -1,16 +1,15 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react';
 import VideoIntro from 'components/Season3/VideoIntro/VideoIntro';
-import styles from './season3.codepen.module.scss';
+import styles from './season3.hero.module.scss';
 import Video2Level from 'components/Season3/Shared/Video2Level/VideoPlayer';
 import UrlUtils from 'utils/Url';
 import ScrollDown from 'components/Season3/Shared/ScrollDown/ScrollDown';
 
 
-export const Codepen = ({ }) => {
+export const Hero = ({ video }) => {
 
-  let srcVideo = UrlUtils.getVideoUrl("482811");
+  let srcVideo = UrlUtils.getVideoUrl(video);
   const [player, setPlayer] = useState(null);
-
 
   const [scrollTop, setScrollTop] = useState(0);
 
@@ -27,33 +26,6 @@ export const Codepen = ({ }) => {
   }, []);
 
 
-  useEffect(() => {
-    //const videoContainer = document.querySelector('#VideoContainer') as HTMLElement;
-    // const logoTeaser = document.querySelector('#LogoTeaser') as HTMLElement;
-
-    const getPosY = () => {
-      console.log('scroll inside' + window.scrollY);
-      //console.log(height1);
-
-      if (window.scrollY < 90) {
-        document.getElementById('test').style.width = 100 - window.scrollY / 5 + '%';
-        document.getElementById('test').style.marginTop = window.scrollY + 'px';
-        document.getElementById('logoteaser').style.bottom = window.scrollY + 180 + 'px';
-      }
-
-    }
-
-    window.addEventListener('scroll', getPosY);
-    return () => {
-      window.removeEventListener('scroll', getPosY);
-    }
-
-
-
-
-  }, [])
-
-
   const handleCloseInteractive = () => {
     return false;
   }
@@ -62,8 +34,15 @@ export const Codepen = ({ }) => {
     <Fragment>
       <div id="section-0" className={`${styles.coverall} ${styles.section0}`}>
 
-        <div className={styles.imgArea}>
-          <div className={styles.Test} id="test">
+        <div className={styles.VideoArea}>
+          <div className={styles.ContentResizable}
+            style={
+              {
+                width: scrollTop < 90 ? `${100 - scrollTop / 5 + '%'}` : '83%',
+                marginTop: scrollTop < 90 ? `${scrollTop + 'px'}` : '90px'
+              }
+            }
+          >
             <div className={styles.aspect}>
               {/*<VideoIntro url={"/videos/season3.mp4"} />*/}
               <Video2Level
@@ -79,7 +58,14 @@ export const Codepen = ({ }) => {
                 autoPlay={true}
                 loop={true}
               />
-              <div id='logoteaser' className={styles.LogoTeaser}>
+              <div
+                className={styles.LogoTeaser}
+                style={
+                  {
+                    bottom: scrollTop < 90 ? `${180 + scrollTop + 'px'}` : '270px'
+                  }
+                }
+              >
                 <img src="/images/season3/logo-caminos-de-jordan.png" />
               </div>
               <ScrollDown />
@@ -105,4 +91,4 @@ export const Codepen = ({ }) => {
   )
 }
 
-export default Codepen
+export default Hero
