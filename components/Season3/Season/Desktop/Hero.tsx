@@ -4,14 +4,18 @@ import styles from './season3.hero.module.scss';
 import Video2Level from 'components/Season3/Shared/Video2Level/VideoPlayer';
 import UrlUtils from 'utils/Url';
 import ScrollDown from 'components/Season3/Shared/ScrollDown/ScrollDown';
-
+import SoundActive from "components/Season2/Svg/SoundActive";
+import SoundInactive from 'components/Season2/Svg/SoundInactive';
 
 export const Hero = ({ video }) => {
-
   let srcVideo = UrlUtils.getVideoUrl(video);
   const [player, setPlayer] = useState(null);
 
+  //const windowSize = useRef([window.innerWidth, window.innerHeight]);
+
   const [scrollTop, setScrollTop] = useState(0);
+
+  const [muted, setMuted] = useState(false);
 
   useEffect(() => {
     const handleScroll = (event) => {
@@ -20,20 +24,33 @@ export const Hero = ({ video }) => {
 
     window.addEventListener('scroll', handleScroll);
 
+
+
+    // setHeight(videoArea.current.clientHeight)
+
+    if (window.innerHeight / 2 < scrollTop) {
+      console.log('basado');
+    }
+    else {
+      console.log('NO BASAD0');
+    }
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [scrollTop]);
+
 
 
   const handleCloseInteractive = () => {
     return false;
   }
 
+
+
   return (
     <Fragment>
       <div id="section-0" className={`${styles.coverall} ${styles.section0}`}>
-
         <div className={styles.VideoArea}>
           <div className={styles.ContentResizable}
             style={
@@ -45,6 +62,13 @@ export const Hero = ({ video }) => {
           >
             <div className={styles.aspect}>
               {/*<VideoIntro url={"/videos/season3.mp4"} />*/}
+
+              <div className={styles.ButtonMuted}>
+                <div onClick={() => setMuted(!muted)} className={`${!muted ? "Active" : ""}`}>
+                  {!muted ? <SoundActive /> : <SoundInactive />}
+                </div>
+              </div>
+
               <Video2Level
                 title={''}
                 source={srcVideo}
@@ -56,6 +80,7 @@ export const Hero = ({ video }) => {
                 }}
                 fullscreen={false}
                 autoPlay={true}
+                muted={muted}
                 loop={true}
               />
               <div

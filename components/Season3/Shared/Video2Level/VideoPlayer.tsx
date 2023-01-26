@@ -28,6 +28,7 @@ const VideoPlayer = ({
   onControlsShown,
   onVideoPause,
   onVideoPlaying,
+  muted,
   setPlayer,
   children,
   seekControls
@@ -177,6 +178,8 @@ const VideoPlayer = ({
       onClickDashboard()
     }
 
+
+
     if (showDashboard) {
       const controls = container.getElementsByClassName('plyr__portal')[0];
       controls.insertAdjacentHTML(
@@ -267,6 +270,18 @@ const VideoPlayer = ({
       ReactDOM.render(children, portal);
     }
   }, [children]);
+
+  React.useEffect(() => {
+    if (muted) {
+      videoRef.current.muted = true;
+    }
+    else {
+      videoRef.current.muted = false;
+    }
+  }, [muted, videoRef.current]);
+
+
+
 
 
   React.useEffect(() => {
