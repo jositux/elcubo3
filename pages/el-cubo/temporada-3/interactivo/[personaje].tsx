@@ -317,7 +317,7 @@ const Personaje = (props) => {
 export const getServerSideProps = async (context) => {
   const { params } = context;
   const { personaje } = params;
-  const dataRaw = await rawFetch('https://jositux.com/json/all.json');
+  const dataRaw = await rawFetch('https://elcubo3.vercel.app/js/all.json');
   const dataJson = await dataRaw.json();
   const filtteredData = dataJson.filter(d => personaje === d.field_ec_title);
 
