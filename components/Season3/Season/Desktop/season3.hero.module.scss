@@ -112,3 +112,24 @@ div.VideoArea {
     float: left;
   }
 }
+
+
+.ButtonMuted {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+
+  div {
+    position: absolute;
+    right: 80px;
+    top: 70px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    @media (max-width: 920px) {
+      right: 10px;
+      bottom: 10px;
+    }
+  }
+}
