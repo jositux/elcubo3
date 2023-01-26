@@ -3,7 +3,7 @@ const path = require('path')
 // next.js configuration
 const nextConfig = {
   env: {
-    API_URL: 'http://jositux.com',
+    API_URL: 'https://elcubo3.vercel.app/',
     // API_URL: 'https://cms.rtvcplay.co',
     // API_URL: 'https://play-cms.rtvc.dev/',
     MEDIA_CONTENT_URL: 'https://rtvcplay-v2.s3.amazonaws.com',
