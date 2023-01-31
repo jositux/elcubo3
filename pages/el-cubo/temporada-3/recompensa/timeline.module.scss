@@ -31,7 +31,7 @@
   position: absolute;
   left: 50%;
   width: 1px;
-  height: calc(800vh);
+  height: calc(900vh);
   margin-left: 0;
   margin-top: 15rem;
   margin-bottom: 15rem;
@@ -1826,6 +1826,175 @@
 }
 
 .ItemContent:nth-child(10) {
+  align-items: center;
+  -webkit-align-items: center;
+
+  @media only screen and (max-width: 680px) {
+    min-height: 50vh !important;
+  }
+
+  .ColumnsContainer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 100px;
+    width: 100%;
+
+    @media only screen and (max-width: 680px) {
+      flex-direction: column;
+      padding: 0 0 100px 0;
+    }
+  }
+
+  .columnLink {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0 60px 0 60px;
+
+    @media only screen and (max-width: 680px) {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 15px 0 0 0;
+    }
+  }
+
+  .columnText {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0 60px 0 60px;
+
+    @media only screen and (max-width: 680px) {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0px;
+    }
+  }
+
+  .TextContent {
+    max-width: 600px;
+    text-align: right;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @media only screen and (max-width: 680px) {
+      margin: 0 30px;
+      max-width: 100%;
+      text-align: left;
+      z-index: 1;
+
+      .Title {
+        font-size: 50px !important;
+      }
+
+      .Subtitle {
+        font-size: 22px;
+      }
+
+      .Description {
+        font-size: 14px;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .LinksContent {
+    max-width: 400px;
+    width: 100%;
+    min-height: 45px;
+    height: auto;
+    text-align: left;
+    color: #3C2807;
+    background-color: #F1E7CE;
+    opacity: 0.8;
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+
+    .Link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .LinkText {
+      margin-right: 10px;
+      color: #3C2807;
+      font-family: $elcubo3_font_subtitle;
+      font-weight: bold;
+      width: 100%;
+    }
+
+    .LinkItem {
+      p {
+        margin-left: 15px;
+        text-transform: uppercase;
+      }
+    }
+
+    @media only screen and (max-width: 680px) {
+      display: flex;
+      width: 100%;
+      min-height: 50px;
+      align-items: flex-start;
+      height: auto;
+      text-align: start;
+      justify-content: center;
+      margin: 0 30px;
+      max-width: 100%;
+
+      .LinkText {
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 12px;
+      }
+
+      .LinkItem {
+        a {
+          align-items: center;
+          text-decoration: none;
+          flex-direction: row-reverse;
+        }
+
+        span {
+          font-size: 13px;
+          font-weight: normal;
+        }
+      }
+
+      .LinkItem:nth-child(1) {
+        p {
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    @media only screen and (min-width: 681px) and (max-width: 855px) and (orientation: landscape) {
+      min-height: 40px;
+
+      .LinkText {
+        font-size: 13px !important;
+      }
+
+      .LinkItem {
+        span {
+          font-size: 12px !important;
+        }
+      }
+    }
+  }
+
+}
+
+.ItemContent:nth-child(11) {
   align-items: center;
   -webkit-align-items: center;
 

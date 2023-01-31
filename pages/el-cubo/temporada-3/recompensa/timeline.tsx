@@ -686,6 +686,72 @@ const timeline = () => {
             </div>
           </div>
 
+          <div className={styles.ItemContent}>
+            <div className={`${styles.ColumnsContainer} fade_test fadeOut_test`}>
+              <div className={styles.columnText}>
+                <div className={styles.TextContent}>
+                  <h1 className={styles.Title}>Confesionarios</h1>
+                  <p className={styles.Description}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu est nec eros ultricies pretium vel at austo volutpat, fermentum massa id, varius nisi. Vestibulum a lectus eget velit mollis aliquet a viverra eros. </p>
+                </div>
+              </div>
+              <div className={styles.columnLink}>
+                <div className={styles.LinksContent}>
+                  <div className={styles.LinkItem}>
+                    <a onClick={() => { setVideo('485843'); handleOnPlayVideo(); }} className={styles.Link} >
+                      <div>
+                        <PlayIconTimeline />
+                      </div>
+                      <p className={styles.LinkText}>
+                        <span>Juan de Jesús Estévez</span>
+                      </p>
+                    </a>
+                  </div>
+                  <div className={styles.LinkItem}>
+                    <a onClick={() => { setVideo('485845'); handleOnPlayVideo(); }} className={styles.Link} >
+                      <div>
+                        <PlayIconTimeline />
+                      </div>
+                      <p className={styles.LinkText}>
+                        <span>Soledad Silva Rico  </span>
+                      </p>
+                    </a>
+                  </div>
+                  <div className={styles.LinkItem}>
+                    <a onClick={() => { setVideo('485839'); handleOnPlayVideo(); }} className={styles.Link} >
+                      <div>
+                        <PlayIconTimeline />
+                      </div>
+                      <p className={styles.LinkText}>
+                        <span>Diego Sarmiento</span>
+                      </p>
+                    </a>
+                  </div>
+                  <div className={styles.LinkItem}>
+                    <a onClick={() => { setVideo('485847'); handleOnPlayVideo(); }} className={styles.Link} >
+                      <div>
+                        <PlayIconTimeline />
+                      </div>
+                      <p className={styles.LinkText}>
+                        <span>Yenny Delgado</span>
+                      </p>
+                    </a>
+                  </div>
+                  <div className={styles.LinkItem}>
+                    <a onClick={() => { setVideo('485841'); handleOnPlayVideo(); }} className={styles.Link} >
+                      <div>
+                        <PlayIconTimeline />
+                      </div>
+                      <p className={styles.LinkText}>
+                        <span>Guillermo Prada Monsalve</span>
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className={`${styles.EndContent} ${styles.NoHeight}`}>
             <img
               className={styles.SitePicture} src="/images/season3/timeline/pueblo_rio_abajo.png"
