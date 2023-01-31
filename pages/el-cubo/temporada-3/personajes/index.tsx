@@ -11,6 +11,9 @@ import Help from 'components/Season3/Svg/Help';
 import { useRouter } from "next/router";
 import cx from 'classnames';
 import styles from './personajes.module.scss';
+import Video2Level from 'components/Season3/Shared/Video2Level/VideoPlayer';
+import UrlUtils from 'utils/Url';
+
 
 const characters = [
   {
@@ -172,8 +175,6 @@ const Fader = ({ text }) => {
     setLink(link);
   }
 
-
-
   function clickear() {
     setIsActive(!isActive);
   }
@@ -182,6 +183,15 @@ const Fader = ({ text }) => {
   function updateText(pTexto) {
     setTexto(pTexto);
   }
+
+
+  let srcVideo = UrlUtils.getVideoUrl("488026");
+  const [player, setPlayer] = useState(null);
+
+  const handleCloseInteractive = () => {
+    return false;
+  }
+
 
 
   return (
@@ -219,9 +229,20 @@ const Fader = ({ text }) => {
 
       {
         !query.ref &&
-        <video className={styles.VideoOverlay} autoPlay loop playsInline muted>
-          <source src="/videos/intro_season3c.mp4" type="video/mp4" />
-        </video>
+        <div className={styles.VideoOverlay}>
+          <Video2Level title={''}
+            source={srcVideo}
+            showPrevButton={false}
+            showNextButton={false}
+            setPlayer={setPlayer}
+            onVideoEnded={() => {
+              handleCloseInteractive();
+            }}
+            fullscreen={false}
+            autoPlay={true}
+            loop={false}
+          />
+        </div>
       }
       <div className={styles.overlay} id='overlay'>
         {
@@ -249,7 +270,7 @@ const Fader = ({ text }) => {
         </div>
       </div>
       <Footer />
-    </Fragment>
+    </Fragment >
   )
 }
 
