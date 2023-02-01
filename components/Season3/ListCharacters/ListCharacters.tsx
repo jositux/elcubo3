@@ -180,7 +180,7 @@ const ListCharacters = ({ char, percentParam }) => {
 
                   (juanPercent === 100 && guillermoPercent === 100 && yennyPercent === 100 && soledadPercent === 100 && diegoPercent === 100)
                     ? <a href="/el-cubo/temporada-3/recompensa/timeline" className={styles.buttonInfo}>
-                      VER INFOGRAFIA {yennyPercent}
+                      VER INFOGRAFIA
                     </a>
                     : ''
                 }
