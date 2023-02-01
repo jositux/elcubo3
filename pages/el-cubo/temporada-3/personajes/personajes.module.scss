@@ -46,6 +46,11 @@
   left: 280px;
   cursor: pointer;
   z-index: 1;
+
+  @media (max-width: 768px) {
+    left: 160px;
+    top: 40px;
+  }
 }
 
 @-webkit-keyframes fadeOut {
@@ -90,6 +95,12 @@
 
   img {
     width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    left: 20px;
+    top: 40px;
+    width: 130px;
   }
 }
 

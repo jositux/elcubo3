@@ -28,8 +28,8 @@ const PersonajesModal = ({ ...props }) => {
       <div className={styles.container}>
         <div className={styles.child}>
 
-          <p className={styles.t_close} onClick={props.onClosePersonajesModal}>
-          </p>
+          <span className={styles.t_close} onClick={props.onClosePersonajesModal}>
+          </span>
           {/*<img className={styles.imgCover} src={props.background} />*/}
           <div className={`${styles.coverImg} ${styles[props?.name.split(" ")[0].toLowerCase()]}`}>
             <img className={styles.imgCover} src='/images/season3/selector/personaje-juan.jpg' />
@@ -45,18 +45,20 @@ const PersonajesModal = ({ ...props }) => {
   </div>*/}
             <div className={styles.column}>
               <h2>{props.realName}</h2>
-              <p>
-                <span><strong>Edad</strong>: {props.age}<br /></span>
-                <span><strong>Profesión</strong>: {props.proof}</span>
-                {`${props.born.trim()}` !== '' ?
-                  props.born
-                  : ''}
-                <span><strong>Residencia</strong>: {props.address}</span>
-                <p>{props.description}</p>
+              <div>
+                <p><strong>Edad</strong>: {props.age}<br />
+                  <strong>Profesión</strong>: {props.proof}
+                  {`${props.born.trim()}` !== '' ?
+                    props.born
+                    : ''}
+                  <br />
+                  <strong>Residencia</strong>: {props.address}
+                  <br /><br />
+                  {props.description}</p>
                 <a href={props.link}>Conoce a {props.nameButton}
                   <PersonajeArrow />
                 </a>
-              </p>
+              </div>
             </div>
           </div>
           <div className={styles.coverBG}></div>
