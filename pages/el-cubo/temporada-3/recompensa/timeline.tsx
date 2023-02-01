@@ -197,8 +197,12 @@ const timeline = () => {
                   <h1 className={styles.Title}>1822</h1>
                   <h2 className={styles.Subtitle}>Fundación del pueblo</h2>
                   <p className={styles.Description}>
-                    El 2 de octubre de 1822, los campesinos que habitaban los caminos que unían a San Gil con Los Santos, pidieron la creación de una parroquia en advocación a Santa Rosa de Lima, en una capilla de palos y paja que estaba a orillas del río Sube.<br></br><br></br>
-                    En 1830, Rafel Urdaneta, presidente de La Gran Colombia, sancionó la ley que erigió el municipio de sube, al que la Asamblea de Santander, mas de un siglo después, le antepuso el nombre de Jordán.
+                    El 2 de octubre de 1822, los campesinos que habitaban los caminos que unían a San Gil con
+                    Los Santos pidieron la creación de una parroquia en advocación a Santa Rosa de Lima, en
+                    una capilla de palos y paja que estaba a orillas del río Sube.<br /><br />
+                    En 1830, Rafel Urdaneta, presidente de La Gran Colombia, sancionó la ley que erigió el
+                    municipio de sube, al que la Asamblea de Santander, más de un siglo después, le antepuso
+                    el nombre de Jordán.
                   </p>
                 </div>
               </div>
@@ -215,7 +219,10 @@ const timeline = () => {
                   <h1 className={styles.Title}>1864</h1>
                   <h2 className={styles.Subtitle}>Construcción del primer<br />peaje de Colombia</h2>
                   <p className={styles.Description}>
-                    La construcción de la carretera Bogotá – Bucaramanga, fue vital para que Jordán descendiera a nivel comercial y demográfico. La carretera se construyó a 33 kilómetros al oriente de Jordán y conectó los tramos de San Gil y Pescadero. Algunos dicen que fueron los gamonales quienes no permitieron la construcción, y otros aseguran, que las condiciones del terreno no eran las adecuadas para la obra. Aun así, todos coinciden en que esta decisión, desencadenó la decadencia de Jordán.
+                    El puente Lengerke se construyó en 1864 sobre el río Chicamocha en Jordán Sube. Este es
+                    un puente emblemático porque no sólo fue uno de los primeros construidos en Colombia, y
+                    zona de paso del Libertador Simón Bolívar, sino que además fue el primer peaje del país
+                    donde se cobraban cinco centavos por cada caballo de carga que cruzaba el lugar.
                   </p>
                 </div>
               </div>
@@ -279,9 +286,16 @@ const timeline = () => {
                   <h1 className={styles.Title}>1900 -1940</h1>
                   <h2 className={styles.Subtitle}>Periodo de bonanza<br></br>La buena hora</h2>
                   <p className={styles.Description}>
-                    Jordán Sube tuvo una época de bonanza porque recibía diariamente a decenas de arrieros y caballos de carga que seguían su camino. Este flujo de personas hizo que se construyeran posadas, chicherías, casas y restaurantes, en donde se les brindaba a los viajeros abundantes comidas con cabros, gallinas y cerdos.<br></br><br></br>
-                    Las tierras, el clima y las aguas de Jordán, lo convirtieron en un lugar ideal para la siembra de tabaco negro, por esta razón, la Compañía Colombiana de Tabaco abrió una de sus primeras oficinas allí.<br></br><br></br>
-                    El constante tránsito de mulas y arrieros por el puente colgante, y los prósperos cultivos de tabaco, dejaron muy buenas ganancias para Jordán, por eso estuvo en la cima del comercio de la región.
+                    Jordán Sube tuvo una época de bonanza porque recibía diariamente a decenas de arrieros y
+                    caballos de carga que seguían su camino. Este flujo de personas hizo que se construyeran
+                    posadas, chicherías, casas y restaurantes en donde se les brindaba a los viajeros abundantes
+                    comidas con cabros, gallinas y cerdos.<br /><br />
+                    Las tierras, el clima y las aguas de Jordán lo convirtieron en un lugar ideal para la siembra
+                    de tabaco negro. Por esta razón, la Compañía Colombiana de Tabaco abrió una de sus
+                    primeras oficinas allí.<br /><br />
+                    El constante tránsito de mulas y arrieros por el puente colgante y los prósperos cultivos de
+                    tabaco dejaron muy buenas ganancias para Jordán, por eso estuvo en la cima del comercio
+                    de la región.
                   </p>
                 </div>
               </div>
@@ -295,7 +309,7 @@ const timeline = () => {
             <div className={styles.ColumnsContainer}>
               <div className={styles.columnText}>
                 <div className={styles.TextContent}>
-                  <h1 className={styles.Title}>1930 -1940</h1>
+                  <h1 className={styles.Title}>1930 - 1940</h1>
                   <h2 className={styles.Subtitle}>Construcción de la carretera<br></br>Bogotá – Bucaramanga</h2>
                   <p className={styles.Description}>
                     La construcción de la carretera Bogotá – Bucaramanga, fue vital para que Jordán descendiera a nivel comercial y demográfico. La carretera se construyó a 33 kilómetros al oriente de Jordán y conectó los tramos de San Gil y Pescadero. Algunos dicen que fueron los gamonales quienes no permitieron la construcción, y otros aseguran, que las condiciones del terreno no eran las adecuadas para la obra. Aun así, todos coinciden en que esta decisión, desencadenó la decadencia de Jordán.
@@ -324,7 +338,7 @@ const timeline = () => {
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
-                    <a href='https://www.eltiempo.com/colombia/otras-ciudades/jordan-sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' target="_blank" className={styles.Link}>
+                    <a href='http://conlupa.co/oculto-canon/amula.html' target="_blank" className={styles.Link}>
                       <div>
                         <RedirectionIconTimeline />
                       </div>
@@ -337,9 +351,10 @@ const timeline = () => {
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
-                    <a onClick={() => { setVideo('485853'); handleOnPlayVideo(); }} className={styles.Link} >
+                    <a href='https://www.eltiempo.com/colombia/otras-ciudades/jordan-
+sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' className={styles.Link} >
                       <div>
-                        <PlayIconTimeline />
+                        <RedirectionIconTimeline />
                       </div>
                       <p className={styles.LinkText}>
                         El pueblo 'fantasma' colombiano donde solo viven 56 almas<br></br>
@@ -378,18 +393,7 @@ const timeline = () => {
                       </div>
                     </a>
                   </div>
-                  <div className={styles.LinkItem}>
-                    <a href='#' className={styles.Link}>
-                      <p className={styles.LinkText}>Las Armas (Jaime Rodriguez) - Oculto en el Cañón.<br></br>
-                        <span>
-                          Especial multimedia por Nicole Acuña y Silvia Corredor.
-                        </span>
-                      </p>
-                      <div>
-                        <RedirectionIconTimeline />
-                      </div>
-                    </a>
-                  </div>
+
                   <div className={styles.LinkItem}>
                     <a href='https://vimeo.com/315140794' target='_blank' className={styles.Link} >
                       <p className={styles.LinkText}>
@@ -406,9 +410,11 @@ const timeline = () => {
               <div className={styles.columnText}>
                 <div className={styles.TextContent}>
                   <h1 className={styles.Title}>1949</h1>
-                  <h2 className={styles.Subtitle}>Violencia bipartidista<br></br>La mala hora</h2>
+                  <h2 className={styles.Subtitle}>Violencia bipartidista<br />La mala hora</h2>
                   <p className={styles.Description}>
-                    En 1949, muchas familias de Jordán Sube abandonaron el pueblo porque el partido mayoritario era el Conservador, y sus militantes se encargaron de sacar a todos los Liberales.
+                    En 1949, muchas familias de Jordán Sube abandonaron el pueblo porque el partido
+                    mayoritario era el Conservador, y sus militantes se encargaron de sacar a todos los
+                    Liberales.
                   </p>
                 </div>
               </div>
@@ -425,7 +431,9 @@ const timeline = () => {
                   <h1 className={styles.Title}>1949 - 2016</h1>
                   <h2 className={styles.Subtitle}>La Familia Ferreira</h2>
                   <p className={styles.Description}>
-                    Isabel Sarmiento de Ferreira era la ‘matrona’ de la familia Ferreira. A partir de ella nace el poderío de esta familia en Jordán Sube, algunos lugareños afirman, que para los años del bipartidismo, los Ferreira obligaban a los liberales a declararse conservadores.
+                    Isabel Sarmiento de Ferreira era la ‘matrona’ de la familia Ferreira. A partir de ella nace el
+                    poderío de esta familia en Jordán Sube. Algunos lugareños afirman que para los años del
+                    bipartidismo, los Ferreira obligaban a los liberales a declararse conservadores.
                   </p>
                 </div>
               </div>
@@ -536,8 +544,17 @@ const timeline = () => {
                   <h1 className={styles.Title}>1991</h1>
                   <h2 className={styles.Subtitle}>Muerte de Roque Ferreira</h2>
                   <p className={styles.Description}>
-                    A Roque Julio Ferreira se le reconoce como el gamonal conservador del municipio de Jordán, quién por más de 20 años controló al pueblo no sólo imponiéndose desde la alcaldía, sino que con su grupo de escoltas y su revólver, decidía absolutamente todo lo que pasaba en el pueblo.<br></br>
-                    Al hacerse un sexagenario, un tumor maligno le quitó vigorosidad y fue perdiendo su poder, dejándolo sólo y débil rezando en la iglesia, a la que los jerarcas eclesiásticos no quisieron mandar sacerdote durante muchas décadas por falta de fieles. Roque Julio Ferreira fallece el 9 de julio, y a los tres días de su sepelio, la bóveda explotó como premonición de lo que sucedería con la hegemonía política de los Ferreira y además, generando la creencia de una posible maldición que recae sobre Jordán.
+                    A Roque Julio Ferreira se le reconoce como el gamonal conservador del municipio de
+                    Jordán, quién por más de 20 años controló al pueblo no sólo imponiéndose desde la
+                    alcaldía, sino que con su grupo de escoltas y su revólver, decidía absolutamente todo lo que
+                    pasaba en el pueblo.<br /><br />
+
+                    Al hacerse un sexagenario, un tumor maligno le quitó vigorosidad y fue perdiendo su
+                    poder, dejándolo sólo y débil rezando en la iglesia, a la que los jerarcas eclesiásticos no
+                    quisieron mandar sacerdote durante muchas décadas por falta de fieles. Roque Julio
+                    Ferreira falleció el 9 de julio de 1991, y a los tres días de su sepelio, la bóveda explotó
+                    como premonición de lo que sucedería con la hegemonía política de los Ferreira y además,
+                    generando la creencia de una posible maldición que recae sobre Jordán.
                   </p>
                 </div>
               </div>
@@ -554,9 +571,15 @@ const timeline = () => {
                   <h1 className={styles.Title}>2004</h1>
                   <h2 className={styles.Subtitle}>Incendio provocado<br /> en la Alcaldía</h2>
                   <p className={styles.Description}>
-                    El punto más álgido de las sucesivas administraciones de los Ferreira, fue el 23 de agosto de 2004, cuando el entonces alcalde, Gonzalo Bautista, fue citado al despacho del gobernador de Santander, para informarle que al día siguiente, una comisión haría una revisión de las cuentas y gastos del municipio, debido a las evidentes irregularidades en el manejo del presupuesto.<br></br><br></br>
-                    Al día siguiente, cuando los miembros de la comisión llegaron a Jordán, encontraron que la sede de la alcaldía se había consumido en llamas la noche anterior, eliminando en el hecho, todos los documentos que iban a ser revisados.
-                  </p>
+                    El punto más álgido de las sucesivas administraciones de los Ferreira fue el 23 de agosto de
+                    2004 cuando el entonces alcalde, Gonzalo Bautista, fue citado al despacho del gobernador
+                    de Santander para informarle que al día siguiente una comisión haría una revisión de las
+                    cuentas y gastos del municipio debido a las evidentes irregularidades en el manejo del
+                    presupuesto.<br /><br />
+                    Al día siguiente, cuando los miembros de la comisión llegaron a Jordán, encontraron que la
+
+                    sede de la alcaldía se había consumido en llamas la noche anterior, eliminando en el hecho
+                    todos los documentos que iban a ser revisados.  </p>
                 </div>
               </div>
               <div className={styles.columnLink}>
@@ -648,8 +671,13 @@ const timeline = () => {
                   <h1 className={styles.Title}>2016</h1>
                   <h2 className={styles.Subtitle}>Alcaldía nueva</h2>
                   <p className={styles.Description}>
-                    Durante muchos años en el municipio de Jordán se reportaron gastos millonarios en obras que nunca se hicieron, y con la opinión pública siguiéndoles la pista, la familia Ferreira perdió las elecciones del 2015. Gloria Isabel Ferreira Fajardo, quien en dos oportunidades ya había sido alcaldesa de Jordán, se enfrentó en las urnas a la candidata Johanna Muñoz. Con una diferencia de 22 votos, Muñoz fue electa como alcaldesa y desde entonces la gente dice haber notado la diferencia. Con esta elección terminó el control que ejerció sobre Jordán la familia Ferreira por más de 60 años.
-                  </p>
+                    Durante muchos años, en el municipio de Jordán se reportaron gastos millonarios en obras
+                    que nunca se hicieron, y con la opinión pública siguiéndoles la pista, la familia Ferreira
+                    perdió las elecciones del 2015. Gloria Isabel Ferreira Fajardo, quien en dos oportunidades
+                    ya había sido alcaldesa de Jordán, se enfrentó en las urnas a la candidata Johanna Muñoz.
+                    Con una diferencia de 22 votos, Muñoz fue electa como alcaldesa y desde entonces la gente
+                    dice haber notado la diferencia.<br />Con esta elección terminó el control que ejerció sobre
+                    Jordán la familia Ferreira por más de 60 años.</p>
                 </div>
               </div>
             </div>
@@ -659,12 +687,13 @@ const timeline = () => {
             <div className={`${styles.ColumnsContainer} fade_test fadeOut_test`}>
               <div className={styles.columnText}>
                 <div className={styles.TextContent}>
-                  <h1 className={styles.Title}>2004</h1>
+                  <h1 className={styles.Title}>2019</h1>
                   <h2 className={styles.Subtitle}>Un colegio<br></br>para Jordán</h2>
                   <p className={styles.Description}>
-                    En el casco urbano de Jordán, los estudiantes reciben clases en las instalaciones de un pequeño edificio que antes funcionó como ancianato, en cada salón, comparten clases tres cursos diferentes.<br></br><br></br>
-                    En el año 2022, se inició la construcción de un nuevo colegio para Jordán.
-                  </p>
+                    En el casco urbano de Jordán, los estudiantes reciben clases en las instalaciones de un
+                    pequeño edificio que antes funcionó como ancianato. En cada salón, comparten clases tres
+                    cursos diferentes.<br /><br />
+                    En el año 2022, se inició la construcción de un nuevo colegio para Jordán.                  </p>
                 </div>
               </div>
               <div className={styles.columnLink}>
@@ -698,7 +727,8 @@ const timeline = () => {
                 <div className={styles.TextContent}>
                   <h1 className={styles.Title}>Confesionarios</h1>
                   <p className={styles.Description}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu est nec eros ultricies pretium vel at austo volutpat, fermentum massa id, varius nisi. Vestibulum a lectus eget velit mollis aliquet a viverra eros. </p>
+                    Ahora que ya conoces a todos los personajes… ¿quieres conocer
+                    sus pensamientos más íntimos? </p>
                 </div>
               </div>
               <div className={styles.columnLink}>
