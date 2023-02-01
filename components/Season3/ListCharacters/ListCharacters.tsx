@@ -63,6 +63,8 @@ const ListCharacters = ({ char, percentParam }) => {
   useEffect(() => {
     characters.forEach(c => {
       let data = JSON.parse(localStorage.getItem(`'${c.name}'`));
+
+
       if (data) {
         switch (c.name) {
           case 'juan':
@@ -83,6 +85,8 @@ const ListCharacters = ({ char, percentParam }) => {
           default:
             break;
         }
+
+        console.log(yennyPercent);
       }
     });
 
@@ -99,12 +103,12 @@ const ListCharacters = ({ char, percentParam }) => {
               <div className={`${styles.row} ${styles.rowJuan}`}>
                 <div className={styles.column1}>
                   <div className={styles.avatar}>
-                    <a title="Historia de Juan de Jesús" href="../interactivo/juan">
+                    <a title="Historia de Juan de Jesús" href="/el-cubo/temporada-3/interactivo/juan">
                       <h2>Juan de Jesús</h2><PersonajeArrow />
                     </a>
                   </div>
                   <div className={styles.progress}>
-                    <a title="Historia de Juan de Jesús" href="../interactivo/juan">
+                    <a title="Historia de Juan de Jesús" href="/el-cubo/temporada-3/interactivo/juan">
                       <Progress percent={juanPercent} />
                     </a>
                   </div>
@@ -114,12 +118,12 @@ const ListCharacters = ({ char, percentParam }) => {
               <div className={`${styles.row} ${styles.rowGuillermo}`}>
                 <div className={`${styles.column1} ${styles.full}`}>
                   <div className={styles.avatar}>
-                    <a title="Historia de Guillermo" href="../interactivo/guillermo">
+                    <a title="Historia de Guillermo" href="/el-cubo/temporada-3/interactivo/guillermo">
                       <h2>Guillermo</h2><PersonajeArrow />
                     </a>
                   </div>
                   <div className={styles.progress}>
-                    <a title="Historia de Guillermo" href="../interactivo/guillermo">
+                    <a title="Historia de Guillermo" href="/el-cubo/temporada-3/interactivo/guillermo">
                       <Progress percent={guillermoPercent} />
                     </a>
                   </div>
@@ -129,7 +133,7 @@ const ListCharacters = ({ char, percentParam }) => {
               <div className={`${styles.row} ${styles.rowYenny}`}>
                 <div className={styles.column1}>
                   <div className={styles.avatar}>
-                    <a title="Historia de Yenny" href="../interactivo/yenny">
+                    <a title="Historia de Yenny" href="/el-cubo/temporada-3/interactivo/yenny">
                       <h2>Yenny</h2><PersonajeArrow />
                     </a>
                   </div>
@@ -142,7 +146,7 @@ const ListCharacters = ({ char, percentParam }) => {
               <div className={`${styles.row} ${styles.rowDiego}`}>
                 <div className={styles.column1}>
                   <div className={styles.avatar}>
-                    <a title="Historia de Diego" href="../interactivo/diego">
+                    <a title="Historia de Diego" href="/el-cubo/temporada-3/interactivo/diego">
                       <h2>Diego</h2><PersonajeArrow />
                     </a>
                   </div>
@@ -155,7 +159,7 @@ const ListCharacters = ({ char, percentParam }) => {
               <div className={`${styles.row} ${styles.rowSoledad}`}>
                 <div className={styles.column1}>
                   <div className={styles.avatar}>
-                    <a title="Historia de Soledad" href="../interactivo/soledad">
+                    <a title="Historia de Soledad" href="/el-cubo/temporada-3/interactivo/soledad">
                       <h2>Soledad</h2><PersonajeArrow />
                     </a>
                   </div>
@@ -171,17 +175,16 @@ const ListCharacters = ({ char, percentParam }) => {
                 <p>Fiesta de Santa Rosa</p>
               </div>
 
-              {/*<div className={`${styles.Info}`}>
+              <div className={`${styles.Info}`}>
                 {
-                  (soledadPercent && juanPercent && guillermoPercent && yennyPercent && diegoPercent) === 100
+
+                  (juanPercent === 100 && guillermoPercent === 100 && yennyPercent === 100 && soledadPercent === 100 && diegoPercent === 100)
                     ? <a href="/el-cubo/temporada-3/recompensa/timeline" className={styles.buttonInfo}>
-                      VER INFOGRAFIA
+                      VER INFOGRAFIA {yennyPercent}
                     </a>
-                    : <a className={styles.buttonInfoInactive}>
-                      VER INFOGRAFIA
-                    </a>
-                
-            </div>*/}
+                    : ''
+                }
+              </div>
 
             </div>
 

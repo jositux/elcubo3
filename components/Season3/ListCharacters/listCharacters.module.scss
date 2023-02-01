@@ -1,6 +1,6 @@
 .Characters {
   position: absolute;
-  z-index: 100;
+  z-index: 10;
   right: 175px;
   bottom: 130px;
   width: 280px;
@@ -9,6 +9,7 @@
     display: flex;
     gap: 10px;
     align-items: center;
+    margin-bottom: 5px;
 
     .column1 {
       width: 100%;
@@ -53,7 +54,7 @@
           svg {
             position: absolute;
             right: 0;
-            top: 12px;
+            top: 9px;
 
             path {
               stroke: #EDC25F;
@@ -65,13 +66,12 @@
 
       div.progress {
         width: 50%;
-        margin-top: 15px;
+        margin-top: 10px;
       }
     }
 
   }
 }
-
 
 .Content.Char-guillermo .rowGuillermo,
 .Content.Char-juan .rowJuan,
@@ -155,6 +155,10 @@
 }
 
 
+.Info {
+  display: none;
+}
+
 a.buttonInfo {
   font-family: $elcubo3_font_subtitle;
   font-weight: 300;
@@ -162,7 +166,7 @@ a.buttonInfo {
   border: 1px solid #E2B857;
   font-size: 16px;
   padding: 10px;
-  width: 60%;
+  width: 80%;
   text-align: center;
   float: right;
   margin: 20px 0;
@@ -183,7 +187,7 @@ a.buttonInfoInactive {
   border: 1px solid #E2B857;
   font-size: 16px;
   padding: 10px;
-  width: 60%;
+  width: 80%;
   text-align: center;
   float: right;
   margin: 20px 0;
@@ -191,4 +195,46 @@ a.buttonInfoInactive {
   text-decoration: none;
   opacity: .2;
   cursor: default;
+}
+
+
+
+.Content.Char-all {
+  .Characters {
+    right: auto;
+    left: 60px;
+    bottom: 60px;
+
+    .rowYenny {
+      .progress div {
+        margin-right: 0px;
+      }
+    }
+
+    .rowGuillermo {
+      .progress div {
+        margin-right: 0px;
+      }
+    }
+
+    .rowDiego {
+      .progress div {
+        margin-right: 0px;
+      }
+    }
+
+    .rowSoledad {
+      .progress div {
+        margin-right: 0px;
+      }
+    }
+
+    .timeline {
+      display: none;
+    }
+  }
+
+  .Info {
+    display: block;
+  }
 }

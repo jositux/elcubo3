@@ -13,6 +13,8 @@ import cx from 'classnames';
 import styles from './personajes.module.scss';
 import Video2Level from 'components/Season3/Shared/Video2Level/VideoPlayer';
 import UrlUtils from 'utils/Url';
+import ListCharacters from 'components/Season3/ListCharacters/ListCharacters';
+
 
 
 const characters = [
@@ -26,7 +28,7 @@ const characters = [
     proof: 'Concejal, Agricultora',
     born: '',
     address: 'Vereda Morros - Jordán Sube',
-    icon: '/images/season3/map/popups/popup-soledad.png',
+    icon: '/images/season3/map/popups/popup-soledad-yellow.png',
     link: '../temporada-3/interactivo/soledad',
   },
   {
@@ -39,7 +41,7 @@ const characters = [
     proof: 'Agricultor, Conductor, Músico',
     born: '',
     address: 'Vereda Suavecito - Jordán Sube',
-    icon: '/images/season3/map/popups/popup-diego.png',
+    icon: '/images/season3/map/popups/popup-diego-yellow.png',
     link: '../temporada-3/interactivo/diego',
   },
   {
@@ -52,7 +54,7 @@ const characters = [
     proof: ' Pescador; Agricultor; Sobandero',
     born: '',
     address: 'Via Jordán - Mesa de los Santos',
-    icon: '/images/season3/map/popups/popup-guillermo.png',
+    icon: '/images/season3/map/popups/popup-guillermo-yellow.png',
     link: '../temporada-3/interactivo/guillermo',
   },
   {
@@ -65,7 +67,7 @@ const characters = [
     proof: 'Sacerdote',
     born: 'Nacido en el municipio de Mogotes - Santander',
     address: 'Casa cural, casco urbano de Jordán Sube',
-    icon: '/images/season3/map/popups/popup-juan.png',
+    icon: '/images/season3/map/popups/popup-juan-yellow.png',
     link: '../temporada-3/interactivo/juan',
   },
   {
@@ -78,13 +80,13 @@ const characters = [
     proof: 'Bachiller; Catequista',
     born: '',
     address: 'Vereda El Pozo - Jordán Sube',
-    icon: '/images/season3/map/popups/popup-yenny.png',
+    icon: '/images/season3/map/popups/popup-yenny-yellow.png',
     link: '../temporada-3/interactivo/yenny',
   },
 
 ];
 
-const Fader = ({ text }) => {
+const Personajes = ({ text }) => {
 
   const [isActive, setIsActive] = useState(false);
 
@@ -225,12 +227,19 @@ const Fader = ({ text }) => {
 
       <Header />
 
-
+      <div className={query.ref === "init" ? "first" : "viewed"}>
+        <ListCharacters
+          char="all"
+          percentParam={0}
+        />
+      </div>
 
       {
-        !query.ref &&
+        query.ref === "init" &&
+
         <div className={styles.VideoOverlay}>
-          <Video2Level title={''}
+          <Video2Level
+            title={''}
             source={srcVideo}
             showPrevButton={false}
             showNextButton={false}
@@ -265,7 +274,7 @@ const Fader = ({ text }) => {
 
         <div className={styles.CharacterBackground}>
 
-          <Pines characters={characters} onClickPersonajesModal={clickear} updatePersonaje={updatePersonaje} refered={!query.ref ? "first" : "viewed"} />
+          <Pines characters={characters} onClickPersonajesModal={clickear} updatePersonaje={updatePersonaje} refered={query.ref === "init" ? "first" : "viewed"} />
 
         </div>
       </div>
@@ -275,4 +284,4 @@ const Fader = ({ text }) => {
 }
 
 
-export default Fader
+export default Personajes

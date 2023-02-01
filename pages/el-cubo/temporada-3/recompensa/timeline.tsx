@@ -12,6 +12,8 @@ import ImageFadeModal from 'components/Season3/Modal/ImageFadeModal';
 import ButtonModal from "components/Season3/Shared/Button/ButtonModal";
 import dynamic from 'next/dynamic';
 import disableScroll from 'disable-scroll';
+import Back from 'components/Season3/Svg/Back';
+
 const ModalVideo = dynamic(() => import('react-modal-video'), { ssr: false });
 
 const timeline = () => {
@@ -145,6 +147,10 @@ const timeline = () => {
     <Fragment>
 
       <div className={styles.TimelineContainer}>
+
+        <a href="/el-cubo/temporada-3/personajes?ref=view" className={styles.Back} >
+          <Back /> <span>Volver</span>
+        </a>
 
         <div className={styles.Timeline}>
 
