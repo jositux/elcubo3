@@ -20,7 +20,7 @@
   transition: 0.8s all ease;
 
   @media screen and (max-width: 960px) {
-    width: 100%;
+    max-width: 100%;
   }
 }
 

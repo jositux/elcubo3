@@ -3,7 +3,7 @@
   height: 155px;
   background-color: #6B5F43;
   position: absolute;
-  z-index: 2;
+  z-index: 11;
   top: 170px;
   left: 340px;
   font-family: $elcubo3_font_subtitle;
@@ -17,8 +17,14 @@
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 
+  @media (max-width: 768px) {
+    width: calc(100vw - 40px);
+    left: 20px;
+    top: 150px;
+  }
+
   .TextContent {
-    padding: 4px; 
+    padding: 4px;
     text-align: left;
     padding-left: 25px;
 
@@ -35,7 +41,7 @@
       font-weight: 300;
     }
   }
-  
+
   .ButtonNext {
     background-color: transparent;
     border: none;
@@ -55,6 +61,7 @@
       justify-content: center;
       margin-right: 10px;
     }
+
     svg {
       margin-top: 3px;
     }
@@ -75,8 +82,14 @@
   //animation-iteration-count: 1;
   animation-fill-mode: forwards;
 
+  @media (max-width: 768px) {
+    width: calc(100vw - 40px);
+    left: 20px;
+    top: 150px;
+  }
+
   .TextContent {
-    padding: 4px; 
+    padding: 4px;
     text-align: left;
     padding-left: 25px;
 
@@ -94,7 +107,7 @@
       font-weight: 300;
     }
   }
-  
+
   .ButtonsContent {
     display: flex;
 
@@ -163,7 +176,7 @@
   height: 570px;
   background-color: #6B5F43;
   position: absolute;
-  z-index: 2;
+  z-index: 11;
   top: 170px;
   left: 340px;
   font-family: $elcubo3_font_subtitle;
@@ -172,8 +185,14 @@
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 
+  @media (max-width: 768px) {
+    width: calc(100vw - 40px);
+    left: 20px;
+    top: 150px;
+  }
+
   .TextContent {
-    padding: 4px; 
+    padding: 4px;
     text-align: left;
     padding-left: 25px;
 
@@ -181,7 +200,8 @@
       font-family: $elcubo3_font_subtitle;
       text-transform: uppercase;
       font-weight: normal;
-      font-size: 26px;margin-bottom: 10px;
+      font-size: 26px;
+      margin-bottom: 10px;
     }
 
     p {
@@ -190,7 +210,7 @@
       font-weight: 300;
     }
   }
-  
+
   .ButtonsContent {
     display: flex;
 
@@ -259,7 +279,7 @@
   }
 }
 
-.CloseIconCards{
+.CloseIconCards {
   position: relative;
   z-index: 2;
   left: 280px;
@@ -278,9 +298,10 @@
 
 @keyframes fadeInAnimation {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
+
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }

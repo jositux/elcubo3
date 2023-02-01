@@ -205,6 +205,21 @@ a.buttonInfoInactive {
     left: 60px;
     bottom: 60px;
 
+    @media (max-width: 768px) {
+      right: auto;
+      left: 20px;
+      bottom: 40px;
+      width: 220px;
+
+      div.avater {
+        width: 70%;
+      }
+
+      div.progress {
+        width: 30%;
+      }
+    }
+
     .rowYenny {
       .progress div {
         margin-right: 0px;
