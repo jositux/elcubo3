@@ -6,6 +6,8 @@ import RedirectionIconTimeline from 'components/Season3/Svg/RedirectionIconTimel
 import Twitter from 'components/Season3/Svg/Twitter';
 import Facebook from 'components/Season3/Svg/Facebook';
 import LinkedIn from 'components/Season3/Svg/LinkedIn';
+import Play from 'components/Season3/Svg/PlayConfesionario';
+
 import VideoFadeModal from 'components/Season3/Modal/VideoFadeModal';
 import GalleryFadeModal from 'components/Season3/Modal/GalleryFadeModal';
 import ImageFadeModal from 'components/Season3/Modal/ImageFadeModal';
@@ -727,8 +729,8 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' class
                 <div className={styles.TextContent}>
                   <h1 className={styles.Title}>Confesionarios</h1>
                   <p className={styles.Description}>
-                    Ahora que ya conoces a todos los personajes… ¿quieres conocer
-                    sus pensamientos más íntimos? </p>
+                    Ahora que ya conoces a todos los personajes…<br />¿quieres conocer
+                    sus pensamientos más íntimos? <br /> <br /></p>
                 </div>
               </div>
               <div className={styles.columnLink}>
@@ -736,50 +738,55 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' class
                   <div className={styles.LinkItem}>
                     <a onClick={() => { setVideo('485843'); handleOnPlayVideo(); }} className={styles.Link} >
                       <div>
-                        <PlayIconTimeline />
+                        <img className={styles.ConfesionarioPicture} src="/images/season3/timeline/confesionarios/juan.png" alt="Juan" />
+                        <Play />
                       </div>
                       <p className={styles.LinkText}>
-                        <span>Juan de Jesús Estévez</span>
+                        <h2 className={styles.Subtitle}>Juan de Jesús Estévez</h2>
                       </p>
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
                     <a onClick={() => { setVideo('485845'); handleOnPlayVideo(); }} className={styles.Link} >
                       <div>
-                        <PlayIconTimeline />
+                        <img className={styles.ConfesionarioPicture} src="/images/season3/timeline/confesionarios/soledad.png" alt="Soledad" />
+                        <Play />
                       </div>
                       <p className={styles.LinkText}>
-                        <span>Soledad Silva Rico  </span>
+                        <h2 className={styles.Subtitle}>Soledad Silva Rico  </h2>
                       </p>
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
                     <a onClick={() => { setVideo('485839'); handleOnPlayVideo(); }} className={styles.Link} >
                       <div>
-                        <PlayIconTimeline />
+                        <img className={styles.ConfesionarioPicture} src="/images/season3/timeline/confesionarios/diego.png" alt="Diego" />
+                        <Play />
                       </div>
                       <p className={styles.LinkText}>
-                        <span>Diego Sarmiento</span>
+                        <h2 className={styles.Subtitle}>Diego Sarmiento</h2>
                       </p>
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
                     <a onClick={() => { setVideo('485847'); handleOnPlayVideo(); }} className={styles.Link} >
                       <div>
-                        <PlayIconTimeline />
+                        <img className={styles.ConfesionarioPicture} src="/images/season3/timeline/confesionarios/yenny.png" alt="Yenny" />
+                        <Play />
                       </div>
                       <p className={styles.LinkText}>
-                        <span>Yenny Delgado</span>
+                        <h2 className={styles.Subtitle}>Yenny Delgado</h2>
                       </p>
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
                     <a onClick={() => { setVideo('485841'); handleOnPlayVideo(); }} className={styles.Link} >
                       <div>
-                        <PlayIconTimeline />
+                        <img className={styles.ConfesionarioPicture} src="/images/season3/timeline/confesionarios/guillermo.png" alt="Guillermo" />
+                        <Play />
                       </div>
                       <p className={styles.LinkText}>
-                        <span>Guillermo Prada Monsalve</span>
+                        <h2 className={styles.Subtitle}>Guillermo Prada Monsalve</h2>
                       </p>
                     </a>
                   </div>
