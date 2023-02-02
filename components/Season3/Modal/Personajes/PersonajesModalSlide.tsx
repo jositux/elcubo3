@@ -28,8 +28,10 @@ const PersonajesModal = ({ ...props }) => {
       <div className={styles.container}>
         <div className={styles.child}>
 
-          <span className={styles.t_close} onClick={props.onClosePersonajesModal}>
-          </span>
+          <div className={styles.Close}>
+            <span className={styles.t_close} onClick={props.onClosePersonajesModal}>
+            </span>
+          </div>
           {/*<img className={styles.imgCover} src={props.background} />*/}
           <div className={`${styles.coverImg} ${styles[props?.name.split(" ")[0].toLowerCase()]}`}>
             <img className={styles.imgCover} src='/images/season3/selector/personaje-juan.jpg' />
@@ -64,7 +66,7 @@ const PersonajesModal = ({ ...props }) => {
           <div className={styles.coverBG}></div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 
