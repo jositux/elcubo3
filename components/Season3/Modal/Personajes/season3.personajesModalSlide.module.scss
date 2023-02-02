@@ -46,8 +46,8 @@
   z-index: 99;
   height: 30px;
   width: 30px;
-  left: 40px;
-  top: 40px;
+  left: 25px;
+  top: 25px;
   padding: 0;
   margin: 0;
   transform: rotate(45deg);
@@ -149,6 +149,12 @@
 
 }
 
+.t_close {
+  padding: 4px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
 .t_close:after,
 .t_close:before {
   content: '';
@@ -156,6 +162,11 @@
   position: absolute;
   background-color: white;
   border-radius: 3px;
+
+  &:hover {
+    background-color: #E2B857;
+  }
+
 }
 
 .t_close:after {
