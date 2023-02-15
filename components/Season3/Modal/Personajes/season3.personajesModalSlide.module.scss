@@ -88,8 +88,12 @@
   p {
     font-family: $elcubo3_font_subtitle;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 20px;
+
+    strong {
+      font-size: 18px;
+    }
 
     span {
       width: 100%;

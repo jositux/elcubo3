@@ -36,9 +36,10 @@ const GalleryModal = ({
   const position = (data.field_ec_time_action * 100 / duration).toFixed(2);
 
   // Images Thumbs
-  const images = field_ec_gallery_thumbs.split(',').map(i => {
+  const images = field_ec_gallery_thumbs.split('%%').map(i => {
     let key = i;
     const imgA = i.split('|');
+
     return {
       src: imgA[0],
       alt: imgA[1] || '',
@@ -51,7 +52,7 @@ const GalleryModal = ({
   });
 
   // Images Full
-  const imagesFull = field_ec_gallery.split(',').map(i => {
+  const imagesFull = field_ec_gallery.split('%%').map(i => {
     const imgA = i.split('|');
     return {
       src: imgA[0],
@@ -92,6 +93,12 @@ const GalleryModal = ({
   const openHandler = () => {
     setOpen(true);
     handleOpenInteractive();
+  }
+
+  function decodeHTML(html) {
+    let txt = document.createElement('textarea');
+    txt.innerHTML = html;
+    return txt.value;
   }
 
   return (
@@ -143,7 +150,9 @@ const GalleryModal = ({
             <div className={styles.Content}>
               <div className={styles.Column}>
                 <h2>{HtmlParser(field_ec_title)}</h2>
-                <p>{HtmlParser(field_ec_description)}</p>
+                <p>
+                  {HtmlParser(decodeHTML(field_ec_description))}
+                </p>
               </div>
               <div className={styles.Column}>
                 <Swiper
@@ -164,7 +173,12 @@ const GalleryModal = ({
                       <div className={styles.OpenZoom} onClick={() => { setIndex(index); setOpenZoom(true); }}>
                         <IconZoom />
                       </div>
+
                       <img className={styles.ImagesSwiper} src={img.src} />
+                      {
+                        img.alt === '' ? '' :
+                          <p className={styles.Description}>{HtmlParser(img.alt)}</p>
+                      }
                     </SwiperSlide>
                       :
                       null

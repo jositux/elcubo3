@@ -5,6 +5,8 @@ import AudioModal from 'components/Season3/Interactive/Fade/Audio/AudioModal';
 import VideoModal from 'components/Season3/Interactive/Fade/Video/VideoModal';
 import Ending from 'components/Season3/Interactive/Ending/Ending';
 import ListCharacters from 'components/Season3/ListCharacters/ListCharacters';
+import RotateAdvice from 'components/Season3/Shared/RotateAdvice/RotateAdvice';
+
 import UrlUtils from 'utils/Url';
 import styles from './lineal.module.scss';
 import { rawFetch } from 'libs/fetcher';
@@ -16,6 +18,8 @@ const Personaje = (props) => {
     interactivos,
     confesionario
   } = props;
+
+  console.log(interactivos)
 
   let srcVideo = UrlUtils.getVideoUrl(episodio?.field_ec_asset_id);
   let duration = episodio?.field_ec_video_duration;
@@ -247,6 +251,8 @@ const Personaje = (props) => {
         <img className={styles.stealDesktop} src={`/images/season3/steals/${name}.jpg`} />
         <img className={styles.stealMobile} src={`/images/season3/steals/${name}-mobile.jpg`} />
       </div>
+
+      <RotateAdvice />
       <div className={`${styles.coverVideo} ${isActiveInteractive ? styles.activeInteractive : ""}`}>
         <VideoPlayer
           showBackButton
