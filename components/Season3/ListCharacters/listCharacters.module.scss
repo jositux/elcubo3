@@ -54,7 +54,7 @@
           svg {
             position: absolute;
             right: 0;
-            top: 9px;
+            top: 12px;
 
             path {
               stroke: #EDC25F;
@@ -200,10 +200,21 @@ a.buttonInfoInactive {
 
 
 .Content.Char-all {
+
   .Characters {
     right: auto;
     left: 60px;
     bottom: 60px;
+
+    .column1 {
+      div.avatar {
+        a {
+          svg {
+            top: 9px;
+          }
+        }
+      }
+    }
 
     @media (max-width: 768px) {
       right: auto;
@@ -211,7 +222,7 @@ a.buttonInfoInactive {
       bottom: 40px;
       width: 220px;
 
-      div.avater {
+      div.avatar {
         width: 70%;
       }
 
