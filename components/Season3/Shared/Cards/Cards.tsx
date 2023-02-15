@@ -63,7 +63,7 @@ export const Cards = ({ closeCards }) => {
               ? (
                 <div className={styles.CardContent3}>
                   <div className={styles.TextContent}>
-                    <h1>profundiza en la historia</h1>
+                    <h1>3. Profundiza en la historia</h1>
                     <p>Puedes profundizar en la historia de cada personaje a través de los hitos marcados en su línea de tiempo.</p>
                   </div>
 

@@ -47,9 +47,9 @@
   cursor: pointer;
   z-index: 1;
 
-  @media (max-width: 768px) {
+  @media (max-width: 920px) {
     left: 160px;
-    top: 40px;
+    top: 25px;
   }
 }
 
@@ -97,10 +97,10 @@
     width: 100%;
   }
 
-  @media (max-width: 768px) {
-    left: 20px;
-    top: 40px;
-    width: 130px;
+  @media (max-width: 992px) {
+    left: 30px;
+    top: 25px;
+    width: 110px;
   }
 }
 
