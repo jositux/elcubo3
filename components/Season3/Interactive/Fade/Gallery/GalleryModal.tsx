@@ -161,7 +161,7 @@ const GalleryModal = ({
                   loop={true}
                   zoom={true}
                   autoplay={{
-                    delay: 4500,
+                    delay: 8500,
                     disableOnInteraction: true,
                   }}
                   navigation={true}
