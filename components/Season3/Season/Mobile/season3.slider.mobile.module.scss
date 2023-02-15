@@ -4,34 +4,27 @@
   margin: 0;
   /*overflow-y: scroll;
   scroll-behavior: smooth;*/
+  margin-top: -5px;
 }
 
 .VideoContainer {
   width: 100%;
-  height: 30vh;
+  height: auto;
   position: relative;
-  //background-color: gray;
-  background-image: url("/images/season3/steals/0-home-steal-mobile.jpg");
   background-size: cover;
-  //background-position: center;
-  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.45));
 
   @media screen and (max-width: 1024px) and (orientation: landscape) {
     height: 100vh;
   }
- // position: relative;
-  /*top: 0;
-  bottom:0;
-  overflow-y:scroll;
-  overflow-x:hidden;
-  z-index: 998;*/
+
 }
 
 .LogoTeaser {
   position: absolute;
-  left: 20px;
-  top: 20px;
+  left: 30px;
+  top: 25px;
   z-index: 11;
+
   img {
     width: 120px;
   }
@@ -75,7 +68,6 @@
 
 .Images:nth-child(1) {
   background-image: url("/images/season3/slider/mobile/home_mobile_slider_01.png");
-  //background-attachment: scroll ;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -90,29 +82,33 @@
     text-align: center;
     margin-top: 30px;
     padding: 0 30px;
+
     a {
       font-size: 20px;
       padding: 15px 75px 15px 75px;
     }
   }
+
   .TextContent {
     padding: 30px;
     color: #3C2807;
 
     h1 {
       font-family: $elcubo3_font_title;
-      font-size: 24px;
-      line-height: 110%;
+      font-size: 27px;
+      line-height: 120%;
       margin: 0
     }
+
     p {
       font-family: $elcubo3_font_subtitle;
-      font-size: 20px !important;
-      line-height: 135%;
+      font-size: 22px !important;
+      line-height: 0;
       font-weight: initial;
       margin: 5px 0 0 0;
     }
   }
+
   .IconArrowBottom {
     position: absolute;
     bottom: 0px;
@@ -133,21 +129,23 @@
   .TextContent {
     color: #0E290E;
     padding: 70px 30px;
-  
+
     h1 {
       font-family: $elcubo3_font_title;
-      font-size: 24px;
-      line-height: 110%;
+      font-size: 27px;
+      line-height: 120%;
       margin: 0
     }
+
     p {
       font-family: $elcubo3_font_subtitle;
-      font-size: 20px !important;
-      line-height: 135%;
+      font-size: 22px !important;
+      line-height: 120%;
       font-weight: initial;
       margin: 5px 0 0 0;
     }
   }
+
   .IconArrowBottom {
     position: relative;
     top: 39rem;
@@ -168,27 +166,38 @@
   .TextContent {
     color: #0E290E;
     padding: 70px 30px;
-  
+
     h1 {
       font-family: $elcubo3_font_title;
-      font-size: 24px;
-      line-height: 110%;
+      font-size: 27px;
+      line-height: 120%;
       margin: 0
     }
+
     p {
       font-family: $elcubo3_font_subtitle;
-      font-size: 18px !important;
-      line-height: 135%;
+      font-size: 22px !important;
+      line-height: 120%;
       font-weight: initial;
       margin: 5px 0 0 0;
     }
   }
+
   .ButtonContainerBottom {
+
     text-align: center;
-    margin-top: 40vh;
+    margin-top: 30vh;
     padding: 0 30px;
+
     @media screen and (max-width: 1024px) and (orientation: landscape) {
       margin-top: 0;
+    }
+
+    h2 {
+      font-family: $elcubo3_font_title;
+      font-size: 20px;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 10px black;
     }
 
     a {
@@ -196,20 +205,5 @@
       padding: 15px 75px 15px 75px;
     }
   }
- 
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

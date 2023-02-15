@@ -148,6 +148,7 @@
 
   p {
     color: #FF6D4D;
+    font-family: $elcubo3_font_subtitle;
     font-weight: 300;
     text-align: right;
     margin-right: -43px;
@@ -206,6 +207,7 @@ a.buttonInfoInactive {
     left: 60px;
     bottom: 60px;
 
+
     .column1 {
       div.avatar {
         a {
@@ -216,21 +218,51 @@ a.buttonInfoInactive {
       }
     }
 
+
     @media (max-width: 768px) {
       right: auto;
       left: 20px;
-      bottom: 40px;
-      width: 220px;
+      bottom: 0px;
+      width: 175px;
 
       div.avatar {
-        width: 70%;
+        width: 65%;
       }
 
       div.progress {
-        width: 30%;
+        width: 35%;
+      }
+
+      .rowGuillermo {
+        .progress div {
+          margin-right: -30px;
+        }
+      }
+
+      .rowYenny {
+        .progress div {
+          margin-right: -16px;
+        }
+      }
+
+      .rowDiego {
+        .progress div {
+          margin-right: -22px;
+        }
+      }
+
+      .rowSoledad {
+        .progress div {
+          margin-right: -10px;
+        }
       }
     }
 
+    @media (max-width: 480px) {
+      bottom: 20px;
+    }
+
+    /*
     .rowYenny {
       .progress div {
         margin-right: 0px;
@@ -262,5 +294,6 @@ a.buttonInfoInactive {
 
   .Info {
     display: block;
+  }*/
   }
 }

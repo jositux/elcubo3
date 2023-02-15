@@ -1,6 +1,7 @@
 .CardContent1 {
   width: 380px;
-  height: 155px;
+  height: auto;
+  padding-bottom: 20px;
   background-color: #6B5F43;
   position: absolute;
   z-index: 11;
@@ -18,9 +19,13 @@
   animation-fill-mode: forwards;
 
   @media (max-width: 768px) {
-    width: calc(100vw - 40px);
+    //width: calc(100vw - 40px);
     left: 20px;
     top: 150px;
+  }
+
+  @media (max-width: 480px) {
+    width: calc(100vw - 40px);
   }
 
   .TextContent {
@@ -33,6 +38,10 @@
       text-transform: uppercase;
       font-weight: normal;
       font-size: 26px;
+
+      @media (max-width: 480px) {
+        font-size: 22px;
+      }
     }
 
     p {
@@ -49,6 +58,12 @@
     width: 120px;
     justify-items: flex-end;
     margin-left: 240px;
+
+    @media (max-width: 480px) {
+      margin-left: auto;
+      margin-right: 20px;
+    }
+
     margin-top: 8px;
     cursor: pointer;
 
@@ -70,7 +85,8 @@
 
 .CardContent2 {
   width: 380px;
-  height: 180px;
+  height: auto;
+  padding-bottom: 20px;
   background-color: #6B5F43;
   position: absolute;
   z-index: 2;
@@ -83,9 +99,13 @@
   animation-fill-mode: forwards;
 
   @media (max-width: 768px) {
-    width: calc(100vw - 40px);
+    // width: calc(100vw - 40px);
     left: 20px;
     top: 150px;
+  }
+
+  @media (max-width: 480px) {
+    width: calc(100vw - 40px);
   }
 
   .TextContent {
@@ -98,6 +118,10 @@
       text-transform: uppercase;
       font-weight: normal;
       font-size: 26px;
+
+      @media (max-width: 480px) {
+        font-size: 22px;
+      }
     }
 
     p {
@@ -118,6 +142,11 @@
       width: 120px;
       justify-items: flex-end;
       margin-left: 100px;
+
+      @media (max-width: 480px) {
+        margin-left: auto;
+      }
+
       margin-top: 10px;
       cursor: pointer;
 
@@ -148,6 +177,11 @@
       justify-items: flex-end;
       margin-left: 15px;
       margin-top: 10px;
+
+      @media (max-width: 480px) {
+        margin-right: 20px;
+      }
+
       cursor: pointer;
 
       span {
@@ -187,9 +221,13 @@
   animation-fill-mode: forwards;
 
   @media (max-width: 768px) {
-    width: calc(100vw - 40px);
+    //width: calc(100vw - 40px);
     left: 20px;
     top: 150px;
+  }
+
+  @media (max-width: 480px) {
+    width: calc(100vw - 40px);
   }
 
   .TextContent {
@@ -203,6 +241,10 @@
       font-weight: normal;
       font-size: 26px;
       margin-bottom: 10px;
+
+      @media (max-width: 480px) {
+        font-size: 22px;
+      }
     }
 
     p {
@@ -223,6 +265,11 @@
       justify-items: flex-end;
       margin-left: 70px;
       margin-top: 45px;
+
+      @media (max-width: 768px) {
+        margin-left: auto;
+      }
+
       cursor: pointer;
 
       span {
@@ -252,6 +299,11 @@
       justify-items: flex-end;
       margin-left: 20px;
       margin-top: 34px;
+
+      @media (max-width: 480px) {
+        margin-right: 20px;
+      }
+
       background-color: #402A04;
       width: 140px;
       height: 45px;
