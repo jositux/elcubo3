@@ -6,6 +6,7 @@ const PersonajesModal = ({ ...props }) => {
 
   console.log(props)
 
+
   React.useEffect(() => {
 
     window.onclick = function (e) {
@@ -48,13 +49,14 @@ const PersonajesModal = ({ ...props }) => {
             <div className={styles.column}>
               <h2>{props.realName}</h2>
               <div>
-                <p><strong>Edad</strong>: {props.age}<br />
-                  <strong>Profesión</strong>: {props.proof}
+                <p><strong>Edad</strong>: {props.age}
+                  &nbsp;  &nbsp;<strong>    Profesión</strong>: {props.proof}
+                  <br />
                   {`${props.born.trim()}` !== '' ?
                     props.born
                     : ''}
-                  <br />
-                  <strong>Residencia</strong>: {props.address}
+
+                  <br /><strong>Residencia</strong>: {props.address}
                   <br /><br />
                   {props.description}</p>
                 <a href={props.link}>Conoce a {props.nameButton}

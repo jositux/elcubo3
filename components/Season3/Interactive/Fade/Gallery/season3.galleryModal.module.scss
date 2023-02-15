@@ -159,3 +159,16 @@
   right: 20px;
   cursor: pointer;
 }
+
+.Description {
+  position: absolute;
+  bottom: 0;
+  padding: 60px 30px 20px 30px;
+  margin-bottom: 0;
+  font-family: $elcubo3_font_subtitle;
+  font-weight: 300;
+  font-size: 18px;
+  /* gradient */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.332812) 42.71%, rgba(0, 0, 0, 0) 100%);
+  mix-blend-mode: luminosity;
+}

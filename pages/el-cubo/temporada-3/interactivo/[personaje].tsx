@@ -17,6 +17,8 @@ const Personaje = (props) => {
     confesionario
   } = props;
 
+  console.log(interactivos)
+
   let srcVideo = UrlUtils.getVideoUrl(episodio?.field_ec_asset_id);
   let duration = episodio?.field_ec_video_duration;
   let title = personaje?.field_ec_real_name;
