@@ -9,38 +9,58 @@ const Credits = () => {
         <div className={styles.Credits}>
           <div className={styles.CreditsContent}>
             <div className={styles.Column1}>
-              <h2>EL CUBO es concepto original de:</h2>
+              <h2>PROYECTO DOCUMENTAL INTERACTIVO
+                CON LA<br />PARTICIPACIÓN DE
+                :</h2>
               <ul>
-                <li>Juan Baquero Romero - <em>Director de RTVCPlay</em></li>
-                <li>Álvaro Eduardo García - <em>Gerente RTVC</em></li>
-                <li>María del Pilar Cubillos - <em>Productora Ejecutiva RTVCPlay</em></li>
-                <li>Carolina Aponte Rodríguez - <em>Productora Delegada de Contenidos Originales de RTVCPlay</em></li>
-                <li>Juliana García Mutis - <em>Productora Ejecutiva de Contenidos Originales de RTVCPlay</em></li>
-                <li>Lina Acosta Góngora - <em>Productora Ejecutiva de Contenidos Originales de RTVCPlay </em></li>
-                <li>Luisa Fernanda Mayorga - <em>Productora General RTVCPlay</em></li>
+                <li>Diego Sarmiento</li>
+                <li>Guillermo Prada Monsalve</li>
+                <li>Juan De Jesús Estévez</li>
+                <li>Soledad Silva Rico</li>
+                <li>Yenny Delgado</li><br /><br />
+                <li>ADRIANA VASQUEZ SÁNCHEZ
+                  – <em>
+                    Gerente (E) RTVC
+                  </em></li>
+                <li>JUAN CARLOS BAQUERO
+                  – <em>Director RTVCPlay
+                  </em></li>
+                <li>PILAR CUBILLOS CRUZ
+                  – <em>Productora general RTVCPlay </em></li>
+                <li>LUISA MAYORGA MAYORGA
+                  – <em>Productora Ejecutiva RTVCPlay
+                  </em></li>
+                <li>CAMILO GALVIS GUERRA
+                  – <em>Productor Creativo RTVCPlay
+                  </em></li>
+                <li>MARGARITA HERRERA SABOGAL – <em>Productora Delegada de Contenidos Originales de RTVCPlay
+                </em></li>
+                <li>PAULA ANDREA ARIAS GÓMEZ – <em>Productora Ejecutiva de Contenidos Originales de RTVCPlay</em></li>
+
               </ul>
-              <br/>
-              
+              <br />
+
             </div>
 
             <div className={styles.Column2}>
-              <h2>Elenco</h2>
+              <h2>Una producción por encargo<br />de
+                DIECISEIS NUEVE SAS
+              </h2>
               <ul>
-                <li>Diego León Hoyos – <em>Almanza</em></li>
-                <li>Luís Eduardo Arango – <em>Kodak</em></li>
-                <li>Mario Ruíz – <em>Jair</em></li>
-                <li>José Julián Gaviria – <em>Andrés</em></li>
-                <li>María Adelaida Puerta – <em>Aura</em></li>
-                <li>Claudio Cataño – <em>Gato</em></li>
-                <li>Isabel Olano – <em>Lucía</em></li>
-                
+                <li>
+                  <img className={styles.LogoProduction} alt="El futuro digitial es de todos" title="El futuro digitial es de todos" src="/images/season3/credits/169.jpg" /></li>
+                <li><br /><br />Para
+                  RTVCPlay
+                </li>
+                <li><img className={styles.LogoProduction} alt="El futuro digitial es de todos" title="El futuro digitial es de todos" src="/images/season3/credits/rtvcplay.png" /></li>
+
               </ul>
             </div>
 
             <div className={styles.Column3}>
               <h2>Equipo de Dirección</h2>
               <ul>
-              <li>Gustavo Salcedo - <em>Idea Original - Libretos</em></li>
+                <li>Gustavo Salcedo - <em>Idea Original - Libretos</em></li>
                 <li>Juan Baquero Romero - <em>Director Creativo</em></li>
                 <li>Mauricio Navas Talero – <em>Director y Show Runner</em></li>
                 <li>Andrés Valencia – <em>Director</em></li>
@@ -132,7 +152,7 @@ const Credits = () => {
           </div>
         </div>
       </div>
-    </Fragment>
+    </Fragment >
   )
 }
 

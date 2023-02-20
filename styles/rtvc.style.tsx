@@ -4703,7 +4703,7 @@ footer {
 
 .dNaHdC .textFooterLine img {
   max-width: 240px;
-  height: 51px;
+  height: 41px;
 }
 
 @media screen and (max-width: 767px) {

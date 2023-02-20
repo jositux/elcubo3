@@ -3,10 +3,12 @@
   margin: 0;
   margin-top: -43px;
   margin-bottom: -5px;
+
   @media (max-width: 768px) {
     margin-top: 0px;
     margin-bottom: 0px;
   }
+
   height: 100%;
   width: 100%;
   background-image: url("/images/season3/slider/home_slider_04.jpg");
@@ -18,22 +20,27 @@
   margin: auto;
   font-family: $elcubo3_font_subtitle;
   font-weight: 300;
+
   @media (max-width: 1113px) {
     padding: 0 50px;
   }
+
   @media (max-width: 768px) {
     margin-bottom: 0px;
     padding: 0 30px;
+
     h2 {
       font-size: 20px !important;
     }
   }
+
   h2 {
     font-size: 22px;
     font-weight: 300;
     text-transform: uppercase;
     margin-bottom: 10px;
   }
+
   em {
     color: #949494;
     font-style: normal;
@@ -45,27 +52,34 @@
   width: 100%;
   padding-top: 200px;
   padding-bottom: 200px;
+
   @media (max-width: 768px) {
     padding-top: 70px;
     padding-bottom: 70px;
   }
+
   div {
     margin-bottom: 50px;
   }
+
   ul {
     margin: 0;
     margin-top: 20px;
     padding: 0;
     list-style-type: none;
+
     li {
       font-size: 18px;
       margin-top: 10px;
+
       a {
         color: white;
+
         svg {
           margin-left: 5px;
         }
       }
+
       img {
         display: block;
         clear: both;
@@ -79,23 +93,27 @@
   @media only screen and (max-width: 480px) {
     column-count: 1;
   }
+
   @media only screen and (min-width: 481px) and (max-width: 620px) {
     column-count: 2;
   }
+
   @media only screen and (min-width: 621px) and (max-width: 1023px) {
     column-count: 3;
   }
+
   @media only screen and (min-width: 1024px) {
     column-count: 3;
     column-gap: 100px;
   }
+
   column-gap: 50px;
+
   div {
     display: inline-block;
   }
 }
 
-
-
-
-
+.LogoProduction {
+  max-width: 150px;
+}
