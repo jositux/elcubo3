@@ -6,8 +6,17 @@ const Credits = () => {
   return (
     <Fragment>
       <div className={styles.CreditsContainer}>
+        <div className={styles.CreditsMintic}>
+          <h2 >Este contenido fue financiado con recursos del Fondo Único de Tecnologías
+            de la Información y las Comunicaciones de MinTic
+          </h2>
+          <img className={styles.LogoMintic} alt="El futuro digitial es de todos" title="El futuro digitial es de todos" src="/images/season3/credits/mintic.jpg" />
+        </div>
         <div className={styles.Credits}>
+
+
           <div className={styles.CreditsContent}>
+
             <div className={styles.Column1}>
               <h2>PROYECTO DOCUMENTAL INTERACTIVO
                 CON LA<br />PARTICIPACIÓN DE
@@ -52,100 +61,181 @@ const Credits = () => {
                 <li><br /><br />Para
                   RTVCPlay
                 </li>
-                <li><img className={styles.LogoProduction} alt="El futuro digitial es de todos" title="El futuro digitial es de todos" src="/images/season3/credits/rtvcplay.png" /></li>
+                <li><img className={styles.LogoRTVC} alt="El futuro digitial es de todos" title="El futuro digitial es de todos" src="/images/season3/credits/rtvcplay.png" /></li>
 
               </ul>
             </div>
 
             <div className={styles.Column3}>
-              <h2>Equipo de Dirección</h2>
+              <h2>DIRECCIÓN
+              </h2>
               <ul>
-                <li>Gustavo Salcedo - <em>Idea Original - Libretos</em></li>
-                <li>Juan Baquero Romero - <em>Director Creativo</em></li>
-                <li>Mauricio Navas Talero – <em>Director y Show Runner</em></li>
-                <li>Andrés Valencia – <em>Director</em></li>
-                <li>Arnau Gifreu Castells - <em>Diseño, guion y dirección de interactividad</em></li>
-                <li>David Velázquez – <em>Asistente de dirección</em></li>
-                <li>Jesús “TETU” Cortés – <em>2do Asistente de Dirección</em></li>
-                <li>Duver Betancour – <em>Coordinador de piso</em></li>
-                <li>Danilo Chacón – <em>Planner</em></li>
-                <li>Carmenza Mendigaña – <em>Script</em></li>
+                <li>JUAN CARLOS BAQUERO - <em>Dirección general
+                </em></li>
+                <li>ARNAU GIFREU - CAMILO GALVIS - <em>Dirección de interactividad
+                </em></li>
+                <li>MARGARITA HERRERA SABOGAL – <em>Director y Show Runner</em></li>
+                <li>CAROLINA VASQUEZ TRIANA – <em> Investigación
+
+                </em></li>
               </ul>
             </div>
 
             <div className={styles.Column1}>
-              <h2>Equipo de Producción</h2>
+              <h2>GUIÓN
+              </h2>
               <ul>
-                <li>Luisa Bendeck - <em>Productora Ejecutiva</em></li>
-                <li>J.C. “Chomo” Calderón – <em>Jefe de Producción</em></li>
-                <li>Carlos Mario Pérez – <em>Productor de Campo</em></li>
-                <li>Claudia Lozano – <em>Productora de Locaciones</em></li>
-                <li>Manuel Rubio – <em>Asistente PUFA</em></li>
-                <li>John Duarte – <em>Coord. Producción de entregables</em></li>
-                <li>Yenny Alejandra Martínez – <em>Cafetería</em></li>
+                <li>CAROLINA VASQUEZ TRIANA  - <em>Guión documental
+                </em></li>
+                <li>JOSE FELIPE VARON GARCIA – <em>Guión documental
+                </em></li>
+                <li>JUAN ANTONIO UNGAR – <em>Redacción textos narrativa web
+                </em></li>
+                <li>MARIA ALEJANDRA ROA – <em>Redacción textos narrativa web</em></li>
               </ul>
 
             </div>
 
             <div className={styles.Column1}>
-              <h2>Equipo de Postproducción</h2>
+              <h2>PRODUCCIÓN GENERAL
+              </h2>
               <ul>
-                <li>Danny Bermúdez Urbano – <em>Editor Conceptual</em></li>
-                <li>Alejandro Arismendi – <em>Edición Offline</em></li>
-                <li>Daniela Arismendi – <em>Ingesta y Sincronización</em></li>
-                <li>Juan V Martínez – <em>Colorista</em></li>
-                <li>Germán León – <em>Diseño sonoro y mezcla final</em></li>
+                <li>DIANA PAOLA OLARTE PACHÓN – <em>Jefe de producción
+                </em></li>
+                <li>LUIS ALBERTO GARAVITO BELTRAN – <em>Productor general
+                </em></li>
+                <li>LAURA TATIANA PRIETO MUÑETON – <em>Producción general</em></li>
+                <li>JUAN RODRIGO BASTIDAS HERRERA – <em> Producción  web
+                </em></li>
+                <li>GIOVANNELA TORRES YATE – <em>Producción de campo
+                </em></li>
+                <li>DANIELA CORREA ARÉVALO – <em>Producción de campo
+                </em></li>
+                <li>YENNIFER CAMACHO – <em>Producción de campo segunda unidad
+
+                </em></li>
               </ul>
 
             </div>
 
             <div className={styles.Column3}>
-              <h2>VFX y Composición Digital</h2>
+              <h2>REALIZACIÓN DOCUMENTAL</h2>
               <ul>
-                <li>Freddy Rodríguez – <em>Director VFX</em></li>
-                <li>Andrea López - <em>Coordinadora VFX</em></li>
-                <li>Johan Ballesteros – <em>Composición digital</em></li>
-                <li>Haiver Henao - <em>Composición digital</em></li>
-                <li>Tatiana Virviescas - <em>Composición digital</em></li>
-                <li>Jonatan Loaiza - <em>Composición digital</em></li>
-                <li>Juan Pablo Vargas - <em>Composición digital</em></li>
-                <li>James Salamanca - <em>Composición digital</em></li>
-                <li>Jesús Caicedo - <em>Composición digital</em></li>
-                <li>Christor Córdoba - <em>Composición digital</em></li>
-                <li>Óscar Rincón - <em>Composición digital</em></li>
+                <li>JOSE FELIPE VARON GARCIA – <em>Dirección y realización documental </em></li>
+                <li>MATEO SANTAMARIA ESTRADA - <em>Asistencia de dirección
+                </em></li>
+                <li>JAVIER RODRIGUEZ ACOSTA – <em>Realización
+                </em></li>
+                <li>JOSE LUIS OSORIO SANCHEZ - <em>Realización
+                </em></li>
               </ul>
             </div>
 
             <div className={styles.Column3}>
-              <h2>Fotografía y luces</h2>
+              <h2>FOTOGRAFÍA
+              </h2>
               <ul>
-                <li>Rubén Fernández – <em>Director de Fotografía</em></li>
-                <li>Rubén Fernández – <em>Gaffer</em></li>
-                <li>Dago Rivera – <em>Asistente de Luces</em></li>
-                <li>Juan Carlos Rivera – <em>Asistente de Luces</em></li>
-                <li>Fidel Aguilera – <em>Electrónico</em></li>
+                <li>JOSE LUIS OSORIO SÁNCHEZ – <em>Director de Fotografía</em></li>
+                <li>JAVIER RODRIGUEZ ACOSTA  – <em>Camarografía
+                </em></li>
+                <li>JOSE FELIPE VARON GARCIA – <em>Camarografía
+                </em></li>
+                <li>JOSE LUIS OSORIO SÁNCHEZ – <em>Camarografía
+                </em></li>
+                <li>JULIAN GUILLERMO HERNANDEZ PEÑA – <em>Asistencia de fotografía</em></li>
+                <li>JUAN FELIPE CORREDOR QUIROGA  – <em>Asistencia de fotografía</em></li>
+
+                <li>JULIÁN BARAYA CEBALLOS – <em>Asistencia de fotografía</em></li>
+                <li>ARIEL FERNANDO HINCAPIE OSSA – <em>Datamanager
+                </em></li>
+                <li>MILAGROS DE JESÚS CASTRO POLO – <em>Foto fija</em></li>
+
+
+
+                <li>LUIS ALBERTO GARAVITO BELTRAN – <em>Foto Fija</em></li>
+
               </ul>
             </div>
 
             <div className={styles.Column2}>
-              <h2>Equipo de Cámara</h2>
+              <h2>SONIDO  Y MÚSICA
+              </h2>
               <ul>
-                <li>Nicolás Sastoque – <em>Camarógrafo</em></li>
-                <li>Cristian Barajas – <em>Foquista</em></li>
-                <li>Cristian Torres – <em>2do de Cámara</em></li>
-                <li>Oscar Díaz – <em>2do de Cámara</em></li>
-                <li>Alejandro Niebles – <em>Data Manager</em></li>
-                <li>Walter Gómez – <em>Foto Fija</em></li>
+                <li>WILLIAM ALFREDO TRIANA MEDINA – <em>Sonido directo
+                </em></li>
+                <li>LUIS FERNANDO TRIANA MEDINA – <em>Sonido directo
+                </em></li>
+                <li>OSCAR MAURICIO PULIDO  – <em>Sonido directo
+                </em></li>
+                <li>LEONARDO SANCHEZ GIL – <em>Sonido directo
+                </em></li>
+                <li>SERGIO MALALMA – <em> Música Original</em></li>
               </ul>
             </div>
 
             <div className={styles.Column3}>
-              <h2>Sonido Directo</h2>
+              <h2>POSTPRODUCCIÓN IMAGEN
+              </h2>
               <ul>
-                <li>Danny Rodríguez – <em>Proveedor de sonido</em></li>
-                <li>Felipe Cortés - <em>Sonidista</em></li>
-                <li>Pablo Medina – <em>Sonidista</em></li>
-                <li>Jorge Oviedo – <em>Microfonista</em></li>
+                <li>MATEO SANTAMARIA ESTRADA  – <em>Editor conceptual
+                </em></li>
+                <li>JONATHAN BELTRÁN - <em> Colorista
+                </em></li>
+                <li>JAIME BARBOSA GÓMEZ – <em>Montajista
+                </em></li>
+                <li>ESTEBAN JOSE CORZO FAJARDO – <em>Montajista
+                </em></li>
+                <li>JOSE LUIS OSORIO SANCHEZ – <em>Montajista
+                </em></li>
+
+                <li>GUSTAVO ORDOÑEZ – <em>Montajista
+                </em></li>
+
+              </ul>
+            </div>
+
+            <div className={styles.Column2}>
+              <h2>INTERFAZ - ESTUDIO MULTIMEDIA
+              </h2>
+              <ul>
+                <li>JUAN MARÍN – <em>Director Creativo
+                </em></li>
+                <li>ANDRÉS CANO – <em>Diseño e Ilustración
+                </em></li>
+                <li>ING. JOSÉ MARÍA GUAIMAS – <em>IT Director
+                </em></li>
+                <li>ING. MARCOS HENNING – <em> Drupal API
+                </em></li>
+              </ul>
+            </div>
+
+            <div className={styles.Column3}>
+              <h2>Agradecimientos
+              </h2>
+              <ul>
+                <li>ALONSO RODRIGUEZ ORTIZ – <em>Alimentación, Producción de campo local
+                </em></li>
+                <li>RICARDO PEREZ – <em>Producción de campo local
+
+                </em></li>
+                <li>NUBIA ORTIZ ORTIZ – <em>Alimentación
+
+                </em></li>
+                <li>SOFIA ORTIZ ORTIZ  – <em> Alimentación
+
+                </em></li>
+                <li>PATRICIA ORTIZ ORTIZ  – <em>Alimentación
+
+                </em></li>
+                <li>SALVEIRO CASTRO  – <em> Transporte
+
+                </em></li>
+                <li>BRYAN CASTRO  – <em> Transporte
+
+                </em></li>
+                <li>ISABEL APARICIO  – <em> Alojamiento
+
+                </em></li>
               </ul>
             </div>
 
