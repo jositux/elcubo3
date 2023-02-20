@@ -58,29 +58,29 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
       ImgBG2.style.opacity = '' + (window.scrollY) / (height2);
       Texto2.style.opacity = '' + (window.scrollY) / (height2);
 
-      credits.style.opacity = '' + (window.scrollY) / (height4);
+      //credits.style.opacity = '' + (window.scrollY) / (height4);
 
       if (window.scrollY >= height1) {
-        slider1.style.position = 'relative';
+        //slider1.style.position = 'relative';
       }
       else {
-        slider1.style.position = 'fixed';
+        //slider1.style.position = 'fixed';
       }
 
       if (window.scrollY >= height2) {
-        slider2.style.position = 'relative';
+        //slider2.style.position = 'relative';
       }
       else {
-        slider2.style.position = 'fixed';
+        //slider2.style.position = 'fixed';
       }
 
       if (window.scrollY >= height3) {
-        slider3.style.position = 'relative';
-        whitespace.style.display = 'none';
+        //slider3.style.position = 'relative';
+        //whitespace.style.display = 'none';
       }
       else {
-        slider3.style.position = 'fixed';
-        whitespace.style.display = 'block';
+        //slider3.style.position = 'fixed';
+        //whitespace.style.display = 'block';
       }
 
     }

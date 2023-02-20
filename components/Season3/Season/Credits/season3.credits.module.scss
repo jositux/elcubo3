@@ -1,8 +1,8 @@
 .CreditsContainer {
   padding: 0;
   margin: 0;
-  margin-top: -43px;
-  margin-bottom: -5px;
+  /*margin-top: -43px;
+  margin-bottom: -5px;*/
 
   @media (max-width: 768px) {
     margin-top: 0px;
@@ -48,9 +48,9 @@
 }
 
 .CreditsContent {
-  transition: max-height 1s ease;
+  //transition: max-height 1s ease;
   width: 100%;
-  padding-top: 200px;
+  //padding-top: 200px;
   padding-bottom: 200px;
 
   @media (max-width: 768px) {
@@ -116,4 +116,27 @@
 
 .LogoProduction {
   max-width: 150px;
+}
+
+.LogoRTVC {
+  max-width: 220px;
+}
+
+.CreditsMintic {
+  padding-top: 200px;
+  padding-bottom: 60px;
+  text-align: center;
+
+  h2 {
+    font-family: $elcubo3_font_subtitle;
+    font-weight: 300;
+    font-size: 24px;
+    max-width: 650px;
+    padding: 30px;
+    margin: auto;
+  }
+
+  img {
+    max-width: 300px;
+  }
 }
