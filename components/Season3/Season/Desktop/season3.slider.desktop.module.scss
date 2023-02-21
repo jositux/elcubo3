@@ -24,8 +24,9 @@
 }
 
 .ImgBG0,
-.ImgBG1,
-.ImgBG2 {
+.ImgBG1 //.ImgBG2 
+
+  {
   position: absolute;
   object-fit: cover;
   top: 0;
@@ -36,6 +37,11 @@
 
 .ImgBG0 {
   opacity: 1;
+}
+
+.ImgBG1 {
+  object-fit: contain;
+  //position: relative;
 }
 
 
@@ -90,7 +96,8 @@
   background-size: cover;
   //position: fixed;
   bottom: 0;
-  z-index: 1;
+  // z-index: 1;
+  z-index: 0;
 
   //opacity: 0;
   //transition: opacity 1.5s;
@@ -103,7 +110,7 @@
 
 
 .ImagesDesktop:nth-child(2) {
-  height: 240vh;
+  // height: 240vh;
   //background-image: url("/images/season3/slider/home_slider_03.jpg");
   //background-position: bottom center;
   //background-repeat: no-repeat;
@@ -127,7 +134,7 @@
 .ImagesDesktop:nth-child(3) {
   //position: fixed;
   top: 0;
-  z-index: -1;
+  //z-index: -1;
 }
 
 .ButtonContainerBottom {
