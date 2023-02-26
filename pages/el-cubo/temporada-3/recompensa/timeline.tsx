@@ -314,7 +314,7 @@ const timeline = () => {
                   <h1 className={styles.Title}>1930 - 1940</h1>
                   <h2 className={styles.Subtitle}>Construcción de la carretera<br></br>Bogotá – Bucaramanga</h2>
                   <p className={styles.Description}>
-                    La construcción de la carretera Bogotá – Bucaramanga, fue vital para que Jordán descendiera a nivel comercial y demográfico. La carretera se construyó a 33 kilómetros al oriente de Jordán y conectó los tramos de San Gil y Pescadero. Algunos dicen que fueron los gamonales quienes no permitieron la construcción, y otros aseguran, que las condiciones del terreno no eran las adecuadas para la obra. Aun así, todos coinciden en que esta decisión, desencadenó la decadencia de Jordán.
+                    La construcción de la carretera Bogotá – Bucaramanga fue vital para que Jordán descendiera a nivel comercial y demográfico. La carretera se construyó a 33 kilómetros al oriente de Jordán y conectó los tramos de San Gil y Pescadero. Algunos dicen que fueron los gamonales quienes no permitieron la construcción, y otros aseguran que las condiciones del terreno no eran las adecuadas para la obra. Aun así, todos coinciden en que esta decisión desencadenó la decadencia de Jordán.
                   </p>
                 </div>
               </div>
@@ -354,7 +354,7 @@ const timeline = () => {
                   </div>
                   <div className={styles.LinkItem}>
                     <a href='https://www.eltiempo.com/colombia/otras-ciudades/jordan-
-sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' className={styles.Link} >
+sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' target="_blank" className={styles.Link} >
                       <div>
                         <RedirectionIconTimeline />
                       </div>
@@ -700,14 +700,14 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' class
               </div>
               <div className={styles.columnLink}>
                 <div className={styles.LinksContent}>
-                  <div className={styles.LinkItem}>
+                  {/*<div className={styles.LinkItem}>
                     <a onClick={() => { setImage(imagen5); handleOnOpenImage(); }} className={styles.Link} >
                       <div>
                         <GalleryIconTimeline />
                       </div>
                       <p className={styles.LinkText}>galería de fotos</p>
                     </a>
-                  </div>
+  </div>*/}
                   <div className={styles.LinkItem}>
                     <a onClick={() => { setVideo('485849'); handleOnPlayVideo(); }} className={styles.Link} >
                       <div>
@@ -826,7 +826,7 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' class
                   <a href="https://twitter.com/intent/tweet?source=https://www.elcubo.rtvcplay.co/el-cubo/temporada-3&amp;text=Caminos de Jordán https://www.elcubo.rtvcplay.co/el-cubo/temporada-3" target="_blank" rel="noopener noreferrer">
                     <Twitter />
                   </a>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://elcubo3.vercel.app/el-cubo/temporada-3/" target="_blank" rel="noopener noreferrer">
                     <LinkedIn />
                   </a>
                 </div>

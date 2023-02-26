@@ -11,10 +11,11 @@ import Help from 'components/Season3/Svg/Help';
 import { useRouter } from "next/router";
 import cx from 'classnames';
 import styles from './personajes.module.scss';
+import FadeModal from 'components/Season3/Interactive/FadeModal/FadeModal';
 import Video2Level from 'components/Season3/Shared/Video2Level/VideoPlayer';
 import UrlUtils from 'utils/Url';
 import ListCharacters from 'components/Season3/ListCharacters/ListCharacters';
-
+import disableScroll from 'disable-scroll';
 
 
 const characters = [
@@ -121,18 +122,6 @@ const Personajes = ({ text }) => {
 
   }, [query])
 
-  useEffect(() => {
-    const handleEsc = (event) => {
-      if (event.keyCode === 27) {
-        setIsShowCards(false)
-      }
-    };
-    window.addEventListener('keydown', handleEsc);
-    return () => {
-      window.removeEventListener('keydown', handleEsc);
-    };
-  }, []);
-
 
   const handleCards = () => {
     const overlay = document.querySelector('#overlay') as HTMLElement;
@@ -187,11 +176,33 @@ const Personajes = ({ text }) => {
   }
 
 
-  let srcVideo = UrlUtils.getVideoUrl("488026");
   const [player, setPlayer] = useState(null);
+  const [isSlideOpen, setIsSlideOpen] = useState(true);
+  let srcVideo = UrlUtils.getVideoUrl("488026");
 
-  const handleCloseInteractive = () => {
-    return false;
+  const [openVideo, setOpenVideo] = useState(true)
+
+
+  useEffect(() => {
+    if (player) {
+      disableScroll.on();
+      if (isSlideOpen) {
+        player.play();
+      } else {
+        player.pause();
+      }
+    }
+  }, [player, isSlideOpen]);
+
+  const openHandler = () => {
+    setOpenVideo(true);
+  }
+
+  const stopVideoHandler = () => {
+    setOpenVideo(false);
+    disableScroll.off();
+    const stop = player && (player.stop || player.pause);
+    stop && stop();
   }
 
 
@@ -205,80 +216,90 @@ const Personajes = ({ text }) => {
         <meta property="og:image" content="" />
       </Head>
 
-      <div data-testid="fader" className={`${styles.PersonajesSlide} ${isActive ? styles.open : ''}`}>
-        <div className={styles.Slide}>
-          <PersonajesModalSlide
-            background={background}
-            name={name}
-            nameButton={nameButton}
-            realName={realName}
-            description={description}
-            age={age}
-            proof={proof}
-            born={born}
-            address={address}
-            icon={icon}
-            link={link}
-            showPersonajesModal={showPersonajesModal}
-            onClosePersonajesModal={handleOnClosePersonajesModal}
-          />
-        </div>
-      </div>
-
-      <Header />
-
-      <div className={query.ref === "init" ? "first" : "viewed"}>
-        <ListCharacters
-          char="all"
-          percentParam={0}
-        />
-      </div>
-
       {
         query.ref === "init" &&
 
-        <div className={styles.VideoOverlay}>
-          <Video2Level
-            title={''}
-            source={srcVideo}
-            showPrevButton={false}
-            showNextButton={false}
-            setPlayer={setPlayer}
-            onVideoEnded={() => {
-              handleCloseInteractive();
-            }}
-            fullscreen={false}
-            autoPlay={true}
-            loop={false}
+        <FadeModal
+          showModal={openVideo}
+          //onOpenModal={handleOpenInteractive}
+          onCloseModal={stopVideoHandler}
+          setShowModal={openVideo}
+        >
+          {openVideo &&
+            <Video2Level
+              title=""
+              source={srcVideo}
+              showPrevButton={false}
+              showNextButton={false}
+              setPlayer={setPlayer}
+              onVideoEnded={() => {
+                stopVideoHandler();
+              }}
+              fullscreen={false}
+              autoPlay={true}
+            />
+          }
+        </FadeModal>
+      }
+
+      <div className={styles.CharactersCover}>
+        <div data-testid="fader" className={`${styles.PersonajesSlide} ${isActive ? styles.open : ''}`}>
+          <div className={styles.Slide}>
+            <PersonajesModalSlide
+              background={background}
+              name={name}
+              nameButton={nameButton}
+              realName={realName}
+              description={description}
+              age={age}
+              proof={proof}
+              born={born}
+              address={address}
+              icon={icon}
+              link={link}
+              showPersonajesModal={showPersonajesModal}
+              onClosePersonajesModal={handleOnClosePersonajesModal}
+            />
+          </div>
+        </div>
+
+        <Header />
+
+        <div className={query.ref === "init" ? "first" : "viewed"}>
+          <ListCharacters
+            char="all"
+            percentParam={0}
           />
         </div>
-      }
-      <div className={styles.overlay} id='overlay'>
-        {
-          isShowCards ? <Cards closeCards={closeCards} /> : ''
-        }
-      </div>
-      <div className={styles.MapContainer}>
-        <div id="LogoSeason" className={styles.LogoSeason}>
-          <a href="/el-cubo/temporada-3">
-            <img src="/images/season3/logo-caminos-de-jordan.png" />
-          </a>
-        </div>
 
-        <div className={`${!isShowCards ? cx(styles.HelpIcon) : cx(styles.HelpIcon)}`} onClick={toggleCards}>
+        <div className={styles.overlay} id='overlay'>
           {
-            isShowCards ? <CloseIconCards /> : <Help />
+            isShowCards ? <Cards closeCards={closeCards} /> : ''
           }
         </div>
-        <img className={styles.MapImage} src="/images/season3/map/jordan-map-bg.jpg" />
+        <div className={styles.MapContainer}>
+          <div id="LogoSeason" className={styles.LogoSeason}>
+            <a href="/el-cubo/temporada-3">
+              <img src="/images/season3/logo-caminos-de-jordan.png" />
+            </a>
+          </div>
 
-        <div className={styles.CharacterBackground}>
+          <div className={`${!isShowCards ? cx(styles.HelpIcon) : cx(styles.HelpIcon)}`} onClick={toggleCards}>
+            {
+              isShowCards ? <CloseIconCards /> : <Help />
+            }
+          </div>
+          <img className={styles.MapImage} src="/images/season3/map/jordan-map-bg.jpg" />
 
-          <Pines characters={characters} onClickPersonajesModal={clickear} updatePersonaje={updatePersonaje} refered={query.ref === "init" ? "first" : "viewed"} />
+          <div className={styles.CharacterBackground}>
 
+            <Pines characters={characters} onClickPersonajesModal={clickear} updatePersonaje={updatePersonaje} refered={query.ref === "init" ? "first" : "viewed"} />
+
+          </div>
         </div>
+        <Footer />
+
       </div>
-      <Footer />
     </Fragment >
   )
 }
