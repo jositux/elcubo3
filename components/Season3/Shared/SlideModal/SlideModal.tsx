@@ -1,4 +1,4 @@
-import React, { Fragment, useState} from 'react';
+import React, { Fragment, useState } from 'react';
 import ArrowDown from 'components/Season3/Svg/ArrowDown';
 import styles from './season3.slideModal.module.scss';
 
@@ -8,7 +8,7 @@ const SlideModal = ({ isActive, handleOnOpenSlideModal, handleOnCloseSlideModal 
   const [isOpenSlideModal, setIsOpenSlideModal] = useState(false);
 
   const handleToggle = () => {
-    if(!isOpenSlideModal) {
+    if (!isOpenSlideModal) {
       openSlide();
     }
     else {
@@ -38,7 +38,7 @@ const SlideModal = ({ isActive, handleOnOpenSlideModal, handleOnCloseSlideModal 
 
 
   return (
-    <div id="container" 
+    <div id="container"
       className={
         `${styles.containerCover} 
         ${isOpenSlideModal ? styles.open : ""} 
@@ -50,28 +50,28 @@ const SlideModal = ({ isActive, handleOnOpenSlideModal, handleOnCloseSlideModal 
             `${styles.t_close} 
             ${isOpenSlideModal ? styles.arrowDown : ""} 
             ${isActive ? styles.arrowUp : ""}`
-            } 
-            onClick={ 
+          }
+            onClick={
               handleToggle
             }>
-            <ArrowDown width={30} height  ={30} />
+            <ArrowDown width={30} height={30} />
           </div>
           <img className={styles.imgGallery} src="/images/season3/slider/audio_background.jpg" />
           <div className={styles.Content}>
-          
-          
-          {isOpenSlideModal &&
-          <div>
-          <h2>contenido</h2>
-          </div>
+
+
+            {isOpenSlideModal &&
+              <div>
+                <h2>contenido</h2>
+              </div>
             }
-          
+
 
           </div>
         </div>
       </div>
-    </div>   
-   
+    </div>
+
   );
 };
 

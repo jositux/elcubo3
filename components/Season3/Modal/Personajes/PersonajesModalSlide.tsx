@@ -15,11 +15,13 @@ const PersonajesModal = ({ ...props }) => {
       }
     };
 
-    window.addEventListener('keydown', function (event) {
+    /*window.addEventListener('keydown', function (event) {
       if (event.key === 'Escape') {
+        
         props.onClosePersonajesModal();
+
       }
-    });
+    });*/
 
   });
 

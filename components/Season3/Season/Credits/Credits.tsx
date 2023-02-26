@@ -28,23 +28,23 @@ const Credits = () => {
                 <li>Soledad Silva Rico</li>
                 <li>Yenny Delgado</li><br /><br />
                 <li>ADRIANA VASQUEZ SÁNCHEZ
-                  – <em>
+                  <br /><em>
                     Gerente (E) RTVC
                   </em></li>
                 <li>JUAN CARLOS BAQUERO
-                  – <em>Director RTVCPlay
+                  <br /><em>Director RTVCPlay
                   </em></li>
                 <li>PILAR CUBILLOS CRUZ
-                  – <em>Productora general RTVCPlay </em></li>
+                  <br /><em>Productora general RTVCPlay </em></li>
                 <li>LUISA MAYORGA MAYORGA
-                  – <em>Productora Ejecutiva RTVCPlay
+                  <br /><em>Productora Ejecutiva RTVCPlay
                   </em></li>
                 <li>CAMILO GALVIS GUERRA
-                  – <em>Productor Creativo RTVCPlay
+                  <br /><em>Productor Creativo RTVCPlay
                   </em></li>
-                <li>MARGARITA HERRERA SABOGAL – <em>Productora Delegada de Contenidos Originales de RTVCPlay
+                <li>MARGARITA HERRERA SABOGAL <br /><em>Productora Delegada de Contenidos Originales de RTVCPlay
                 </em></li>
-                <li>PAULA ANDREA ARIAS GÓMEZ – <em>Productora Ejecutiva de Contenidos Originales de RTVCPlay</em></li>
+                <li>PAULA ANDREA ARIAS GÓMEZ <br /><em>Productora Ejecutiva de Contenidos Originales de RTVCPlay</em></li>
 
               </ul>
               <br />
@@ -70,12 +70,12 @@ const Credits = () => {
               <h2>DIRECCIÓN
               </h2>
               <ul>
-                <li>JUAN CARLOS BAQUERO - <em>Dirección general
+                <li>JUAN CARLOS BAQUERO<br /><em>Dirección general
                 </em></li>
-                <li>ARNAU GIFREU - CAMILO GALVIS - <em>Dirección de interactividad
+                <li>ARNAU GIFREU - CAMILO GALVIS <br /><em>Dirección de interactividad
                 </em></li>
-                <li>MARGARITA HERRERA SABOGAL – <em>Director y Show Runner</em></li>
-                <li>CAROLINA VASQUEZ TRIANA – <em> Investigación
+                <li>MARGARITA HERRERA SABOGAL <br /><em>Director y Show Runner</em></li>
+                <li>CAROLINA VASQUEZ TRIANA <br /><em> Investigación
 
                 </em></li>
               </ul>
@@ -85,13 +85,13 @@ const Credits = () => {
               <h2>GUIÓN
               </h2>
               <ul>
-                <li>CAROLINA VASQUEZ TRIANA  - <em>Guión documental
+                <li>CAROLINA VASQUEZ TRIANA  <br /><em>Guión documental
                 </em></li>
-                <li>JOSE FELIPE VARON GARCIA – <em>Guión documental
+                <li>JOSE FELIPE VARON GARCIA <br /><em>Guión documental
                 </em></li>
-                <li>JUAN ANTONIO UNGAR – <em>Redacción textos narrativa web
+                <li>JUAN ANTONIO UNGAR <br /><em>Redacción textos narrativa web
                 </em></li>
-                <li>MARIA ALEJANDRA ROA – <em>Redacción textos narrativa web</em></li>
+                <li>MARIA ALEJANDRA ROA <br /><em>Redacción textos narrativa web</em></li>
               </ul>
 
             </div>
@@ -100,18 +100,18 @@ const Credits = () => {
               <h2>PRODUCCIÓN GENERAL
               </h2>
               <ul>
-                <li>DIANA PAOLA OLARTE PACHÓN – <em>Jefe de producción
+                <li>DIANA PAOLA OLARTE PACHÓN <br /><em>Jefe de producción
                 </em></li>
-                <li>LUIS ALBERTO GARAVITO BELTRAN – <em>Productor general
+                <li>LUIS ALBERTO GARAVITO BELTRAN <br /><em>Productor general
                 </em></li>
-                <li>LAURA TATIANA PRIETO MUÑETON – <em>Producción general</em></li>
-                <li>JUAN RODRIGO BASTIDAS HERRERA – <em> Producción  web
+                <li>LAURA TATIANA PRIETO MUÑETON <br /><em>Producción general</em></li>
+                <li>JUAN RODRIGO BASTIDAS HERRERA <br /><em> Producción  web
                 </em></li>
-                <li>GIOVANNELA TORRES YATE – <em>Producción de campo
+                <li>GIOVANNELA TORRES YATE <br /><em>Producción de campo
                 </em></li>
-                <li>DANIELA CORREA ARÉVALO – <em>Producción de campo
+                <li>DANIELA CORREA ARÉVALO <br /><em>Producción de campo
                 </em></li>
-                <li>YENNIFER CAMACHO – <em>Producción de campo segunda unidad
+                <li>YENNIFER CAMACHO <br /><em>Producción de campo segunda unidad
 
                 </em></li>
               </ul>
@@ -121,10 +121,10 @@ const Credits = () => {
             <div className={styles.Column3}>
               <h2>REALIZACIÓN DOCUMENTAL</h2>
               <ul>
-                <li>JOSE FELIPE VARON GARCIA – <em>Dirección y realización documental </em></li>
+                <li>JOSE FELIPE VARON GARCIA <br /><em>Dirección y realización documental </em></li>
                 <li>MATEO SANTAMARIA ESTRADA - <em>Asistencia de dirección
                 </em></li>
-                <li>JAVIER RODRIGUEZ ACOSTA – <em>Realización
+                <li>JAVIER RODRIGUEZ ACOSTA <br /><em>Realización
                 </em></li>
                 <li>JOSE LUIS OSORIO SANCHEZ - <em>Realización
                 </em></li>
@@ -135,24 +135,24 @@ const Credits = () => {
               <h2>FOTOGRAFÍA
               </h2>
               <ul>
-                <li>JOSE LUIS OSORIO SÁNCHEZ – <em>Director de Fotografía</em></li>
-                <li>JAVIER RODRIGUEZ ACOSTA  – <em>Camarografía
+                <li>JOSE LUIS OSORIO SÁNCHEZ <br /><em>Director de Fotografía</em></li>
+                <li>JAVIER RODRIGUEZ ACOSTA  <br /><em>Camarografía
                 </em></li>
-                <li>JOSE FELIPE VARON GARCIA – <em>Camarografía
+                <li>JOSE FELIPE VARON GARCIA <br /><em>Camarografía
                 </em></li>
-                <li>JOSE LUIS OSORIO SÁNCHEZ – <em>Camarografía
+                <li>JOSE LUIS OSORIO SÁNCHEZ <br /><em>Camarografía
                 </em></li>
-                <li>JULIAN GUILLERMO HERNANDEZ PEÑA – <em>Asistencia de fotografía</em></li>
-                <li>JUAN FELIPE CORREDOR QUIROGA  – <em>Asistencia de fotografía</em></li>
+                <li>JULIAN GUILLERMO HERNANDEZ PEÑA <br /><em>Asistencia de fotografía</em></li>
+                <li>JUAN FELIPE CORREDOR QUIROGA  <br /><em>Asistencia de fotografía</em></li>
 
-                <li>JULIÁN BARAYA CEBALLOS – <em>Asistencia de fotografía</em></li>
-                <li>ARIEL FERNANDO HINCAPIE OSSA – <em>Datamanager
+                <li>JULIÁN BARAYA CEBALLOS <br /><em>Asistencia de fotografía</em></li>
+                <li>ARIEL FERNANDO HINCAPIE OSSA <br /><em>Datamanager
                 </em></li>
-                <li>MILAGROS DE JESÚS CASTRO POLO – <em>Foto fija</em></li>
+                <li>MILAGROS DE JESÚS CASTRO POLO <br /><em>Foto fija</em></li>
 
 
 
-                <li>LUIS ALBERTO GARAVITO BELTRAN – <em>Foto Fija</em></li>
+                <li>LUIS ALBERTO GARAVITO BELTRAN <br /><em>Foto Fija</em></li>
 
               </ul>
             </div>
@@ -161,15 +161,15 @@ const Credits = () => {
               <h2>SONIDO  Y MÚSICA
               </h2>
               <ul>
-                <li>WILLIAM ALFREDO TRIANA MEDINA – <em>Sonido directo
+                <li>WILLIAM ALFREDO TRIANA MEDINA <br /><em>Sonido directo
                 </em></li>
-                <li>LUIS FERNANDO TRIANA MEDINA – <em>Sonido directo
+                <li>LUIS FERNANDO TRIANA MEDINA <br /><em>Sonido directo
                 </em></li>
-                <li>OSCAR MAURICIO PULIDO  – <em>Sonido directo
+                <li>OSCAR MAURICIO PULIDO  <br /><em>Sonido directo
                 </em></li>
-                <li>LEONARDO SANCHEZ GIL – <em>Sonido directo
+                <li>LEONARDO SANCHEZ GIL <br /><em>Sonido directo
                 </em></li>
-                <li>SERGIO MALALMA – <em> Música Original</em></li>
+                <li>SERGIO MALALMA <br /><em> Música Original</em></li>
               </ul>
             </div>
 
@@ -177,18 +177,18 @@ const Credits = () => {
               <h2>POSTPRODUCCIÓN IMAGEN
               </h2>
               <ul>
-                <li>MATEO SANTAMARIA ESTRADA  – <em>Editor conceptual
+                <li>MATEO SANTAMARIA ESTRADA  <br /><em>Editor conceptual
                 </em></li>
                 <li>JONATHAN BELTRÁN - <em> Colorista
                 </em></li>
-                <li>JAIME BARBOSA GÓMEZ – <em>Montajista
+                <li>JAIME BARBOSA GÓMEZ <br /><em>Montajista
                 </em></li>
-                <li>ESTEBAN JOSE CORZO FAJARDO – <em>Montajista
+                <li>ESTEBAN JOSE CORZO FAJARDO <br /><em>Montajista
                 </em></li>
-                <li>JOSE LUIS OSORIO SANCHEZ – <em>Montajista
+                <li>JOSE LUIS OSORIO SANCHEZ <br /><em>Montajista
                 </em></li>
 
-                <li>GUSTAVO ORDOÑEZ – <em>Montajista
+                <li>GUSTAVO ORDOÑEZ <br /><em>Montajista
                 </em></li>
 
               </ul>
@@ -198,13 +198,15 @@ const Credits = () => {
               <h2>INTERFAZ - ESTUDIO MULTIMEDIA
               </h2>
               <ul>
-                <li>JUAN MARÍN – <em>Director Creativo
+                <li>JUAN MARÍN <br /><em>Director Creativo
                 </em></li>
-                <li>ANDRÉS CANO – <em>Diseño e Ilustración
+                <li>ANDRÉS CANO <br /><em>Diseño e Ilustración
                 </em></li>
-                <li>ING. JOSÉ MARÍA GUAIMAS – <em>IT Director
+                <li>ING. JOSÉ MARÍA GUAIMAS <br /><em>IT Director
                 </em></li>
-                <li>ING. MARCOS HENNING – <em> Drupal API
+                <li>ING. GUILLERMO COLOTTI <br /><em>Javascript Developer
+                </em></li>
+                <li>ING. MARCOS HENNING <br /><em> Drupal API
                 </em></li>
               </ul>
             </div>
@@ -213,27 +215,27 @@ const Credits = () => {
               <h2>Agradecimientos
               </h2>
               <ul>
-                <li>ALONSO RODRIGUEZ ORTIZ – <em>Alimentación, Producción de campo local
+                <li>ALONSO RODRIGUEZ ORTIZ <br /><em>Alimentación, Producción de campo local
                 </em></li>
-                <li>RICARDO PEREZ – <em>Producción de campo local
+                <li>RICARDO PEREZ <br /><em>Producción de campo local
 
                 </em></li>
-                <li>NUBIA ORTIZ ORTIZ – <em>Alimentación
+                <li>NUBIA ORTIZ ORTIZ <br /><em>Alimentación
 
                 </em></li>
-                <li>SOFIA ORTIZ ORTIZ  – <em> Alimentación
+                <li>SOFIA ORTIZ ORTIZ  <br /><em> Alimentación
 
                 </em></li>
-                <li>PATRICIA ORTIZ ORTIZ  – <em>Alimentación
+                <li>PATRICIA ORTIZ ORTIZ  <br /><em>Alimentación
 
                 </em></li>
-                <li>SALVEIRO CASTRO  – <em> Transporte
+                <li>SALVEIRO CASTRO  <br /><em> Transporte
 
                 </em></li>
-                <li>BRYAN CASTRO  – <em> Transporte
+                <li>BRYAN CASTRO  <br /><em> Transporte
 
                 </em></li>
-                <li>ISABEL APARICIO  – <em> Alojamiento
+                <li>ISABEL APARICIO  <br /><em> Alojamiento
 
                 </em></li>
               </ul>
