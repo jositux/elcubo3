@@ -28,36 +28,53 @@ export const SlidersMobile = ({ isLoggedIn, onGuest }) => {
 
       <div className={styles.SlidersContainer}>
 
+
         <div id="Slider1" className={styles.Images}>
-          <div className={styles.ButtonContainerTop}>
-            {isLoggedIn
-              ? <ButtonHome url={Links.register} text="Iniciar experiencia" />
-              : <ButtonHome
-                type="button"
-                onClick={onGuest}
-                text="Iniciar experiencia"
-              />
-            }
-          </div>
-          <div className={styles.TextContent}>
-            <h1>Bienvenido y bienvenida a Jordán Sube, un pueblo con gente que resiste y sabe vivir.</h1>
-            <p></p>
+
+          <img src="/images/season3/slider/mobile/home_mobile_slider_01.png" />
+
+          <div className={styles.SliderContent}>
+            <div className={styles.ButtonContainerTop}>
+              {isLoggedIn
+                ? <ButtonHome url={Links.register} text="Iniciar experiencia" />
+                : <ButtonHome
+                  type="button"
+                  onClick={onGuest}
+                  text="Iniciar experiencia"
+                />
+              }
+            </div>
+            <div className={styles.TextContent}>
+              <h1>Bienvenido y bienvenida a Jordán Sube, un pueblo con gente que resiste y sabe vivir.</h1>
+              <p></p>
+            </div>
+
           </div>
 
         </div>
 
         <div id="Slider2" className={styles.Images}>
-          <div className={styles.TextContent}>
-            <h1>Jordán fue próspero pero ahora se mantiene en una frágil realidad.</h1>
-            <p>A lo largo de su historia ha estado sumido en la violencia, la pobreza y el larguísimo mandato de una sola familia; y hoy quedan un poco más de 1000 habitantes.</p>
+          <img src="/images/season3/slider/mobile/home_mobile_slider_02.png" />
+
+          <div className={styles.SliderContent}>
+            <div className={styles.TextContent}>
+              <h1>Jordán fue próspero pero ahora se mantiene en una frágil realidad.</h1>
+              <p>A lo largo de su historia ha estado sumido en la violencia, la pobreza y el larguísimo mandato de una sola familia; y hoy quedan un poco más de 1000 habitantes.</p>
+            </div>
           </div>
 
         </div>
 
         <div id="Slider3" className={styles.Images}>
-          <div className={styles.TextContent}>
-            <h1>Viaja con nosotros a este lugar.</h1>
-            <p>Recorre sus caminos de la mano de personajes entrañables, explora sus historias al ritmo y en el orden que quieras. Completa la foto de Jordán con información adicional que te será revelada al final.</p>
+          <img src="/images/season3/slider/mobile/home_mobile_slider_03.png" />
+
+          <div className={styles.SliderContent}>
+
+            <div className={styles.TextContent}>
+              <h1>Viaja con nosotros a este lugar.</h1>
+              <p>Recorre sus caminos de la mano de personajes entrañables, explora sus historias al ritmo y en el orden que quieras. Completa la foto de Jordán con información adicional que te será revelada al final.</p>
+            </div>
+
           </div>
 
           <div className={styles.ButtonContainerBottom}>
@@ -73,7 +90,9 @@ export const SlidersMobile = ({ isLoggedIn, onGuest }) => {
             }
           </div>
         </div>
-        <Credits />
+        <div className={styles.Credits}>
+          <Credits />
+        </div>
 
       </div>
     </Fragment>

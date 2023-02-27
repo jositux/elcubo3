@@ -60,19 +60,24 @@
 
 .Images {
   width: 100vw;
-  height: 100vh;
+  //height: 100vh;
   display: block;
   align-items: center;
   justify-content: center;
+  position: relative;
+  margin-top: -4px;
 }
 
 .Images:nth-child(1) {
-  background-image: url("/images/season3/slider/mobile/home_mobile_slider_01.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: inline-block;
-  height: calc(70vh - 55px);
+
+  img {
+    width: 100%;
+  }
+
+  .SliderContent {
+    position: absolute;
+    top: 0;
+  }
 
   @media screen and (max-width: 1024px) and (orientation: landscape) {
     height: 100vh;
@@ -118,13 +123,15 @@
 }
 
 .Images:nth-child(2) {
-  background-image: url("/images/season3/slider/mobile/home_mobile_slider_02.png");
-  /*background-attachment: scroll;*/
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  //position: fixed;
-  z-index: 1;
+
+  img {
+    width: 100%;
+  }
+
+  .SliderContent {
+    position: absolute;
+    top: 0;
+  }
 
   .TextContent {
     color: #0E290E;
@@ -154,14 +161,14 @@
 }
 
 .Images:nth-child(3) {
-  background-image: url("/images/season3/slider/mobile/home_mobile_slider_03.png");
-  //background-attachment: scroll;
-  //position: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: inline-block;
-  z-index: 0;
+  img {
+    width: 100%;
+  }
+
+  .SliderContent {
+    position: absolute;
+    top: 0;
+  }
 
   .TextContent {
     color: #0E290E;
@@ -185,9 +192,11 @@
 
   .ButtonContainerBottom {
 
+    position: absolute;
+    bottom: 100px;
+
     text-align: center;
-    margin-top: 30vh;
-    padding: 0 30px;
+
 
     @media screen and (max-width: 1024px) and (orientation: landscape) {
       margin-top: 0;
@@ -206,4 +215,8 @@
     }
   }
 
+}
+
+.Credits {
+  margin-top: -4px;
 }
