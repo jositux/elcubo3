@@ -46,14 +46,6 @@ const Season3 = () => {
       <div className={styles.Home}>
         <Header />
 
-
-        {/*
-        isMobile 
-            ? <div className={styles.HomeMobile}><SlidersMobile isLoggedIn={isLoggedIn} onGuest={onGuest} /></div>
-            : <div className={styles.HomeDesktop}><SlidersDesktop isLoggedIn={isLoggedIn} onGuest={onGuest} /></div>
-        */}
-
-
         <div className={styles.HomeMobile}><SlidersMobile isLoggedIn={isLoggedIn} onGuest={onGuest} /></div>
         <div className={styles.HomeDesktop}><SlidersDesktop isLoggedIn={isLoggedIn} onGuest={onGuest} /></div>
 

@@ -7,6 +7,7 @@ import Hero from 'components/Season3/Season/Desktop/Hero';
 
 import Links from 'constants/Links';
 import Footer from 'components/Footer/Footer';
+
 import { isAbsolute } from 'path';
 
 export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
@@ -125,14 +126,18 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
             <div className={styles.ButtonContainerContent}>
               <h2>Este viaje es una forma de entender<br />la propia realidad y recobrar la fuerza.</h2>
 
-              {isLoggedIn
-                ? <ButtonHome url={Links.registerTemp2} text="Iniciar EL Viaje" />
-                : <ButtonHome type="button" onClick={onGuest} text="Iniciar El Viaje" />
-              }
+              <div className={styles.buttonPulse}>
+
+                {isLoggedIn
+                  ? <ButtonHome url={Links.registerTemp2} text="Iniciar EL Viaje" />
+                  : <ButtonHome type="button" onClick={onGuest} text="Iniciar El Viaje" />
+                }
+              </div>
             </div>
           </div>
         </div>
         <div id='slider3' className={styles.ImagesDesktop}>
+
 
           <div id="Credits">
             <Credits />
