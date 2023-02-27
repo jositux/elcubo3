@@ -24,24 +24,8 @@
 }
 
 .ImgBG0,
-.ImgBG1 //.ImgBG2 
-
-  {
-  position: absolute;
-  object-fit: cover;
-  top: 0;
-  z-index: 0;
-  width: 103%;
-  //opacity: 0;
-}
-
-.ImgBG0 {
-  opacity: 1;
-}
-
 .ImgBG1 {
-  object-fit: contain;
-  //position: relative;
+  width: 100%;
 }
 
 
@@ -52,6 +36,8 @@
   display: flex;
   align-items: center;
   color: #3C2807;
+  position: absolute;
+  top: 0;
 
   article {
     width: 50%;
@@ -92,60 +78,51 @@
   background: black;
   background-position: center;
   background-repeat: no-repeat;
-  //background-image: url("/images/season3/slider/home_slider_02.jpg");
+  margin-bottom: -4px;
   background-size: cover;
-  //position: fixed;
   bottom: 0;
-  // z-index: 1;
   z-index: 0;
 
-  //opacity: 0;
-  //transition: opacity 1.5s;
   .TextContent {
     color: rgba(21, 57, 22, 1);
-    position: relative;
     z-index: 1;
   }
 }
 
 
 .ImagesDesktop:nth-child(2) {
-  // height: 240vh;
-  //background-image: url("/images/season3/slider/home_slider_03.jpg");
-  //background-position: bottom center;
-  //background-repeat: no-repeat;
   background-size: cover;
   background: black;
-  //position: fixed;
   top: 0;
   z-index: 0;
 
   .TextContent {
     color: rgba(22, 52, 56, 1);
-    position: relative;
     z-index: 1;
 
+    article {
+      width: 41%;
+    }
+
     p {
-      width: 85%;
+      width: 100%;
     }
   }
 }
 
 .ImagesDesktop:nth-child(3) {
-  //position: fixed;
-  top: 0;
-  //z-index: -1;
+  margin-top: -4px;
 }
 
 .ButtonContainerBottom {
   display: flex;
-  height: 100vh;
   position: relative;
   justify-content: center;
 
   .ButtonContainerContent {
     position: absolute;
-    bottom: 12%;
+    bottom: 0%;
+    margin-bottom: 220px;
     z-index: 10;
     text-align: center;
 
@@ -159,12 +136,6 @@
   }
 }
 
-.WhiteSpace {
-  width: 100%;
-  height: 100vh;
-  display: none;
-}
-
 
 .ContentResizable {
   -webkit-transition: all .2s linear;
@@ -173,8 +144,6 @@
   transition: all .2 s linear;
   margin-top: 0;
   transform: scale(1, 1);
-
-  //transform: translateY(0);
 }
 
 .active {
@@ -183,5 +152,4 @@
 
   top: 0;
   width: 100%;
-  //transform: translateY(200px);
 }

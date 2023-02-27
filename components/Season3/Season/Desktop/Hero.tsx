@@ -24,17 +24,6 @@ export const Hero = ({ video }) => {
 
     window.addEventListener('scroll', handleScroll);
 
-
-
-    // setHeight(videoArea.current.clientHeight)
-
-    if (window.innerHeight / 2 < scrollTop) {
-      console.log('basado');
-    }
-    else {
-      console.log('NO BASAD0');
-    }
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -55,7 +44,7 @@ export const Hero = ({ video }) => {
           <div className={styles.ContentResizable}
             style={
               {
-                width: scrollTop < 90 ? `${100 - scrollTop / 5 + '%'}` : '83%',
+                width: scrollTop < 90 ? `${100 - scrollTop / 8 + '%'}` : '88%',
                 marginTop: scrollTop < 90 ? `${scrollTop + 'px'}` : '90px'
               }
             }

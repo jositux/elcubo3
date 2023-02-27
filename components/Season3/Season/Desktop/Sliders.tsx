@@ -52,10 +52,10 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
 
     const getPosYSlides = () => {
 
-      ImgBG1.style.opacity = '' + (window.scrollY) / (height1);
+      //ImgBG1.style.opacity = '' + (window.scrollY) / (height1);
       Texto1.style.opacity = '' + (window.scrollY) / (height1);
 
-      ImgBG2.style.opacity = '' + (window.scrollY) / (height2);
+      //ImgBG2.style.opacity = '' + (window.scrollY) / (height2);
       Texto2.style.opacity = '' + (window.scrollY) / (height2);
 
       //credits.style.opacity = '' + (window.scrollY) / (height4);
@@ -141,7 +141,6 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
           <Footer />
         </div>
 
-        <div id="whitespace" className={styles.WhiteSpace}></div>
       </div>
     </Fragment>
   )
