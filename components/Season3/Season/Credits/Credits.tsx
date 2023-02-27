@@ -19,7 +19,7 @@ const Credits = () => {
 
             <div className={styles.Column1}>
               <h2>PROYECTO DOCUMENTAL INTERACTIVO
-                CON LA<br />PARTICIPACIÓN DE
+                CON LA PARTICIPACIÓN DE
                 :</h2>
               <ul>
                 <li>Diego Sarmiento</li>
