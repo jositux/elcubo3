@@ -285,6 +285,7 @@ const Personajes = ({ text }) => {
           <ListCharacters
             char="all"
             percentParam={0}
+            timeline={true}
           />
         </div>
 

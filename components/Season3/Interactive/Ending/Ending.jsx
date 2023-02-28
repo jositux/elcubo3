@@ -62,11 +62,15 @@ const Ending = ({ name, onButtonClicked }) => {
 
             <div className={`${styles.EndingCover} ${styles.fadeIn}`}>
               <div className={styles.Ending}>
-                <h1>¡Has desbloqueado el confesionario de {name}!</h1>
+                <h1>¡Lo lograste!</h1>
+                <h2>¡Has terminado tu camino con {name}!</h2>
                 <div className={styles.EndingContent}>
 
-                  <a onClick={handleOnPlayVideo}>Ver confesionario <PersonajeArrow /></a>
+                  {/*<a onClick={handleOnPlayVideo}>Ver confesionario <PersonajeArrow /></a>*/}
 
+                  <a href="/el-cubo/temporada-3/personajes?ref=view">
+                    Elige otro personaje <PersonajeArrow />
+                  </a>
                 </div>
               </div>
             </div>

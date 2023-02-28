@@ -4,7 +4,7 @@ import Progress from 'components/Season3/Shared/Progress/Progress';
 import styles from './listCharacters.module.scss';
 
 
-const ListCharacters = ({ char, percentParam }) => {
+const ListCharacters = ({ char, percentParam, timeline }) => {
 
   const [juanPercent, setJuanPercent] = useState(0);
   const [guillermoPercent, setGuillermoPercent] = useState(0);
@@ -64,7 +64,6 @@ const ListCharacters = ({ char, percentParam }) => {
     characters.forEach(c => {
       let data = JSON.parse(localStorage.getItem(`'${c.name}'`));
 
-
       if (data) {
         switch (c.name) {
           case 'juan':
@@ -85,8 +84,6 @@ const ListCharacters = ({ char, percentParam }) => {
           default:
             break;
         }
-
-        console.log(yennyPercent);
       }
     });
 
@@ -178,7 +175,7 @@ const ListCharacters = ({ char, percentParam }) => {
               <div className={`${styles.Info}`}>
                 {
 
-                  (juanPercent === 100 && guillermoPercent === 100 && yennyPercent === 100 && soledadPercent === 100 && diegoPercent === 100)
+                  (juanPercent === 100 && guillermoPercent === 100 && yennyPercent === 100 && soledadPercent === 100 && diegoPercent === 100 && timeline)
                     ? <a href="/el-cubo/temporada-3/recompensa/timeline" className={styles.buttonInfo}>
                       VER INFOGRAFIA
                     </a>

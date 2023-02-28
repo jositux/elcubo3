@@ -134,7 +134,6 @@ const timeline = () => {
   };
 
   const handleOnCloseVideo = () => {
-    //alert('kion/da');
     disableScroll.off();
   };
 
@@ -609,6 +608,7 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
 
           <div className={`${styles.ItemContent} fade_test fadeOut_test`}>
             <img className={styles.Clows} src="/images/season3/timeline/nubes/6.png" />
+            <img className={styles.SitePicture} src="/images/season3/timeline/alcaldia.png" alt="imagen del lugar" />
 
             <div className={styles.ColumnsContainer}>
               <div className={styles.columnLink}>
@@ -686,6 +686,8 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
           </div>
 
           <div className={styles.ItemContent}>
+            <img className={styles.SitePicture} src="/images/season3/timeline/colegio.png" alt="imagen del lugar" />
+
             <div className={`${styles.ColumnsContainer} fade_test fadeOut_test`}>
               <div className={styles.columnText}>
                 <div className={styles.TextContent}>
