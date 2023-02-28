@@ -1,16 +1,26 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react';
 import ButtonHome from 'components/Season3/Shared/Button/ButtonHome';
-import VideoIntro from 'components/Season3/VideoIntro/VideoIntro';
-import styles from './season3.slider.desktop.module.scss';
 import Credits from 'components/Season3/Season/Credits/Credits';
 import Hero from 'components/Season3/Season/Desktop/Hero';
-
 import Links from 'constants/Links';
 import Footer from 'components/Footer/Footer';
 
-import { isAbsolute } from 'path';
+
+import styles from './season3.slider.desktop.module.scss';
+
 
 export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
+
+  const [audios, setAudios] = useState(null);
+
+  useEffect(() => {
+    setAudios({
+      click: new Audio('/audios/actions/click_1.mp3'),
+      alert: new Audio('/audios/season2/notifications_alerts/alert_1.mp3'),
+      collapse: new Audio('/audios/season2/buttons_navigation/Collapse.mp3'),
+      message: new Audio('/audios/season2/notifications_alerts/notification_6.mp3')
+    });
+  }, []);
 
   const [scrollTop, setScrollTop] = useState(0);
 

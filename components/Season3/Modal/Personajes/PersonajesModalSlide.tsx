@@ -54,12 +54,8 @@ const PersonajesModal = ({ ...props }) => {
                 <p><strong>Edad</strong>: {props.age}
                   &nbsp;  &nbsp;<strong>    Profesión</strong>: {props.proof}
                   <br />
-                  {`${props.born.trim()}` !== '' ?
-                    props.born
-                    : ''}
 
-                  <br /><strong>Residencia</strong>: {props.address}
-                  <br /><br />
+                  <br />
                   {props.description}</p>
                 <a href={props.link}>Conoce a {props.nameButton}
                   <PersonajeArrow />

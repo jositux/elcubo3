@@ -1,5 +1,4 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react';
-import VideoIntro from 'components/Season3/VideoIntro/VideoIntro';
 import styles from './season3.hero.module.scss';
 import Video2Level from 'components/Season3/Shared/Video2Level/VideoPlayer';
 import UrlUtils from 'utils/Url';
@@ -42,12 +41,12 @@ export const Hero = ({ video }) => {
       <div id="section-0" className={`${styles.coverall} ${styles.section0}`}>
         <div className={styles.VideoArea}>
           <div className={styles.ContentResizable}
-            style={
-              {
-                width: scrollTop < 90 ? `${100 - scrollTop / 8 + '%'}` : '88%',
-                marginTop: scrollTop < 90 ? `${scrollTop + 'px'}` : '90px'
-              }
-            }
+          /* style={
+             {
+               width: scrollTop < 90 ? `${100 - scrollTop / 8 + '%'}` : '88%',
+               marginTop: scrollTop < 90 ? `${scrollTop + 'px'}` : '90px'
+             }
+           }*/
           >
             <div className={styles.aspect}>
               {/*<VideoIntro url={"/videos/season3.mp4"} />*/}
@@ -74,11 +73,11 @@ export const Hero = ({ video }) => {
               />
               <div
                 className={styles.LogoTeaser}
-                style={
-                  {
-                    bottom: scrollTop < 90 ? `${180 + scrollTop + 'px'}` : '270px'
-                  }
+              /*style={
+                {
+                  bottom: scrollTop < 90 ? `${180 + scrollTop + 'px'}` : '270px'
                 }
+              }*/
               >
                 <img src="/images/season3/logo-caminos-de-jordan.png" />
               </div>

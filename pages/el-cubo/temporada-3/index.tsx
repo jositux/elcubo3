@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import Head from 'next/head';
 import Footer from 'components/Footer/Footer';
 import styles from './season3.module.scss';
@@ -13,19 +13,36 @@ import PaneLogin from 'components/Season3/Shared/PaneLogin/PaneLogin';
 
 const Season3 = () => {
 
+
+  const [audios, setAudios] = useState(null);
+
+  useEffect(() => {
+    setAudios({
+      click: new Audio('/audios/actions/click_1.mp3'),
+      alert: new Audio('/audios/season2/notifications_alerts/alert_1.mp3'),
+      collapse: new Audio('/audios/season2/buttons_navigation/Collapse.mp3'),
+      message: new Audio('/audios/season2/notifications_alerts/notification_6.mp3')
+    });
+  }, []);
+
   const isLoggedIn = AuthService.isLoggedIn();
   const { isMobile } = useDetectDevice();
   const [showLogin, setShowLogin] = useState(false);
 
-
   const onGuest = () => {
     setShowLogin(true);
     disableScroll.on();
+    if (audios?.click) {
+      audios.click.play();
+    }
   };
 
   const closePanelLogin = () => {
     setShowLogin(false);
     disableScroll.off();
+    if (audios?.click) {
+      audios.click.play();
+    }
   }
 
   return (

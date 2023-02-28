@@ -133,9 +133,9 @@
 .ContainerCharacter {
   z-index: 2;
   position: relative;
-  padding: 30px 40px;
+  padding: 0px 40px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 
   h2 {
@@ -179,6 +179,7 @@
     padding: 15px 40px 15px 16px;
     position: relative;
     float: left;
+    margin-bottom: 40px;
 
     svg {
       position: absolute;
