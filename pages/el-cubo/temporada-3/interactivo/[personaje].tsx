@@ -274,6 +274,7 @@ const Personaje = (props) => {
           <ListCharacters
             char={name}
             percentParam={percentParam}
+            timeline={false}
           />
         </VideoPlayer>
       </div>

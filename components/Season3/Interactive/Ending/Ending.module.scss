@@ -2,7 +2,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: calc(50% - 320px);
+  left: calc(50% - 420px);
   font-family: $elcubo3_font_title;
   font-weight: 300;
   line-height: 1.4;
@@ -19,10 +19,26 @@
 
   .Ending {
     margin: 0 auto;
-    max-width: 520px;
+    max-width: 650px;
     padding: 60px;
     border-radius: 20px;
     color: white;
+
+    h1,
+    h2 {
+      font-family: $elcubo3_font_title;
+      font-weight: 100;
+      margin: 10px;
+    }
+
+    h1 {
+      font-size: 44px;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
 
     .EndingContent {
       font-family: $elcubo3_font_subtitle;
@@ -31,7 +47,10 @@
       padding-bottom: 10px;
 
       a {
+        margin-top: 30px;
+        text-decoration: none;
         cursor: pointer;
+        color: #EDC25F;
 
         svg {
           position: absolute;

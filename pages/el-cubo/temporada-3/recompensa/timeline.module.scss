@@ -31,7 +31,7 @@
   position: absolute;
   left: 50%;
   width: 1px;
-  height: calc(900vh);
+  height: calc(1100vh);
   margin-left: 0;
   margin-top: 15rem;
   margin-bottom: 15rem;
@@ -63,7 +63,7 @@
   width: 100%;
   align-items: flex-end;
   -webkit-align-items: flex-end;
-  height: 80vh;
+  min-height: 100vh;
 
   @media only screen and (max-width: 680px) {
     display: flex;
@@ -1660,6 +1660,22 @@
     height: 70vh;
   }
 
+  .SitePicture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: auto;
+
+    @media only screen and (max-width: 680px) {
+      width: 125%;
+    }
+
+    @media only screen and (min-width: 681px) and (max-width: 900px) and (orientation: landscape) {
+      width: 90% !important;
+    }
+  }
+
   .ColumnsContainer {
     display: flex;
     position: relative;
@@ -1828,6 +1844,22 @@
 .ItemContent:nth-child(10) {
   align-items: center;
   -webkit-align-items: center;
+
+  .SitePicture {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: auto;
+
+    @media only screen and (max-width: 680px) {
+      width: 125%;
+    }
+
+    @media only screen and (min-width: 681px) and (max-width: 900px) and (orientation: landscape) {
+      width: 90% !important;
+    }
+  }
 
   @media only screen and (max-width: 680px) {
     min-height: 50vh !important;
