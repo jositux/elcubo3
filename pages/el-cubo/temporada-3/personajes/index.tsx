@@ -93,7 +93,7 @@ const Personajes = ({ text }) => {
 
   const [texto, setTexto] = useState('');
 
-  const [isShowCards, setIsShowCards] = useState(false);
+  const [isShowCards, setIsShowCards] = useState(true);
 
   const [showPersonajesModal, setShowPersonajesModal] = useState(true);
   const [background, setBackground] = useState('/images/season3/steals/0-home-steal-desktop.jpg');
@@ -117,39 +117,42 @@ const Personajes = ({ text }) => {
       handleCards();
     }
     else {
-      closeCards();
+      //closeCards();
     }
 
   }, [query])
 
 
   const handleCards = () => {
-    const overlay = document.querySelector('#overlay') as HTMLElement;
-    overlay.style.display = 'block';
+    //const overlay = document.querySelector('#overlay') as HTMLElement;
+    //overlay.style.display = 'block';
     setIsShowCards(true);
   }
 
   const closeCards = () => {
-    const overlay = document.querySelector('#overlay') as HTMLElement;
-    overlay.style.display = 'none';
+    //const overlay = document.querySelector('#overlay') as HTMLElement;
+    //overlay.style.display = 'none';
     setIsShowCards(false);
   }
 
   const toggleCards = () => {
     if (!isShowCards) {
       handleCards();
+      if (audios?.click) {
+        audios.click.play();
+      }
     }
     else {
       closeCards();
+      if (audios?.click) {
+        audios.click.play();
+      }
     }
   }
 
-  const handleOnClickPersonajesModal = () => {
-    setShowPersonajesModal(true);
-  };
 
   const handleOnClosePersonajesModal = () => {
-    clickear()
+    clickear();
   };
 
   function updatePersonaje(background, name, realName, nameButton, description, age, proof, born, address, icon, link) {
@@ -168,6 +171,10 @@ const Personajes = ({ text }) => {
 
   function clickear() {
     setIsActive(!isActive);
+    if (audios?.click) {
+      audios.click.play();
+    }
+    !isActive ? disableScroll.on() : disableScroll.off();
   }
 
 
@@ -205,7 +212,16 @@ const Personajes = ({ text }) => {
     stop && stop();
   }
 
+  const [audios, setAudios] = useState(null);
 
+  useEffect(() => {
+    setAudios({
+      click: new Audio('/audios/actions/click_1.mp3'),
+      alert: new Audio('/audios/season2/notifications_alerts/alert_1.mp3'),
+      expand: new Audio('/audios/actions/expand.mp3'),
+      message: new Audio('/audios/season2/notifications_alerts/notification_6.mp3')
+    });
+  }, []);
 
   return (
     <Fragment>
@@ -272,11 +288,11 @@ const Personajes = ({ text }) => {
           />
         </div>
 
-        <div className={styles.overlay} id='overlay'>
-          {
-            isShowCards ? <Cards closeCards={closeCards} /> : ''
-          }
-        </div>
+
+        {
+          isShowCards ? <Cards closeCards={closeCards} /> : ''
+        }
+
         <div className={styles.MapContainer}>
           <div id="LogoSeason" className={styles.LogoSeason}>
             <a href="/el-cubo/temporada-3">

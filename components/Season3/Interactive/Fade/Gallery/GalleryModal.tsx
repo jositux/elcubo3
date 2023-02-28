@@ -162,7 +162,7 @@ const GalleryModal = ({
                   zoom={true}
                   autoplay={{
                     delay: 8500,
-                    disableOnInteraction: true,
+                    disableOnInteraction: false,
                   }}
                   navigation={true}
                   modules={[Autoplay, EffectCards, Navigation]}

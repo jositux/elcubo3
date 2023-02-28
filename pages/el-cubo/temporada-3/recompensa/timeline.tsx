@@ -695,7 +695,8 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                     En el casco urbano de Jordán, los estudiantes reciben clases en las instalaciones de un
                     pequeño edificio que antes funcionó como ancianato. En cada salón, comparten clases tres
                     cursos diferentes.<br /><br />
-                    En el año 2022, se inició la construcción de un nuevo colegio para Jordán.                  </p>
+                    En el año 2022, se inició la construcción de un nuevo colegio para Jordán.
+                  </p>
                 </div>
               </div>
               <div className={styles.columnLink}>
@@ -707,12 +708,28 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                       </div>
                       <p className={styles.LinkText}>galería de fotos</p>
                     </a>
+
+
   </div>*/}
+                  <div className={styles.LinkItem}>
+                    <a href='https://www.ellibrototal.com/ltotal/?t=1&d=1927' target="_blank" className={styles.Link} >
+                      <div>
+                        <RedirectionIconTimeline />
+                      </div>
+                      <p className={styles.LinkText}><em>Crónicas de un pueblo muerto: Jordán Sube</em><br></br>
+                        <span>Germán Valenzuela Sánchez. Sic Editorial, 2008</span>
+                      </p>
+
+                    </a>
+                  </div>
                   <div className={styles.LinkItem}>
                     <a onClick={() => { setVideo('485849'); handleOnPlayVideo(); }} className={styles.Link} >
                       <div>
                         <PlayIconTimeline />
                       </div>
+
+
+
                       <p className={styles.LinkText}>
                         <span>Reconstrucción del colegio</span>
                       </p>
@@ -753,7 +770,7 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                         <Play />
                       </div>
                       <p className={styles.LinkText}>
-                        <h2 className={styles.Subtitle}>Soledad Silva Rico  </h2>
+                        <h2 className={styles.Subtitle}>Soledad Silva </h2>
                       </p>
                     </a>
                   </div>
@@ -786,7 +803,7 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                         <Play />
                       </div>
                       <p className={styles.LinkText}>
-                        <h2 className={styles.Subtitle}>Guillermo Prada Monsalve</h2>
+                        <h2 className={styles.Subtitle}>Guillermo Prada</h2>
                       </p>
                     </a>
                   </div>

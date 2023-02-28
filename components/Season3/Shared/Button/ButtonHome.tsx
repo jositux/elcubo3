@@ -1,8 +1,9 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import styles from './season3.button.module.scss';
 
 
 const ButtonHome = ({ url = '#', text, type = 'a', onClick = () => { } }) => {
+
   return (
     <Fragment>
       {type === 'a' ?

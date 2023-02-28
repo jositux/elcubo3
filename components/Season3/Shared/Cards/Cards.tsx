@@ -1,22 +1,35 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import styles from './season3.cards.module.scss';
 import ArrowNext from 'components/Season3/Svg/ArrowNext';
 import ArrowPrevious from 'components/Season3/Svg/ArrowPrevious';
-import CloseIconCards from 'components/Season3/Svg/CloseIconCards';
 
 export const Cards = ({ closeCards }) => {
 
-  const [card, setCard] = useState(1)
+  const [card, setCard] = useState(0)
 
   const nextButtonChange = () => {
     //fade
     setCard(card + 1);
+    if (audios?.click) {
+      audios.click.play();
+    }
   }
 
   const prevButtonChange = () => {
     //fade
     setCard(card - 1);
+    if (audios?.click) {
+      audios.click.play();
+    }
   }
+
+  const [audios, setAudios] = useState(null);
+
+  useEffect(() => {
+    setAudios({
+      click: new Audio('/audios/actions/click_1.mp3')
+    });
+  }, []);
 
   return (
     <Fragment>
@@ -24,13 +37,21 @@ export const Cards = ({ closeCards }) => {
         <CloseIconCards />
   </div>*/}
 
+      <div className={styles.overlay}>
+
+      </div>
+
       {
-        card == 1
+        card == 0
           ? (
             <div className={styles.CardContent1}>
               <div className={styles.TextContent}>
-                <h1>1. selecciona un personaje</h1>
-                <p>Debes elegir un personaje para iniciar la experiencia</p>
+                <h1>BIENVENIDOS</h1>
+                <p>Para descubrir a Jordán, sus misterios, su belleza y lo que tiene que decir sobre nuestras vidas y la realidad del país, te recomendamos:
+                  <br /><br />
+                  - Dejar que la curiosidad te guíe.<br />
+                  - Mantener tus sentidos despiertos.<br />
+                  - Aprovechar el ritmo de Jordán para ir más lento.</p>
               </div>
               <button className={styles.ButtonNext} onClick={nextButtonChange} >
                 <span>siguiente</span>
@@ -39,12 +60,12 @@ export const Cards = ({ closeCards }) => {
             </div>
           )
           :
-          card == 2
+          card == 1
             ? (
-              <div className={styles.CardContent2}>
+              <div className={styles.CardContent1}>
                 <div className={styles.TextContent}>
-                  <h1>2. cambia de personaje</h1>
-                  <p>En determinados momentos puedes cambiar de personaje y de historia</p>
+                  <h1>1. selecciona un personaje</h1>
+                  <p>Debes elegir un personaje para iniciar la experiencia</p>
                 </div>
                 <div className={styles.ButtonsContent}>
                   <button className={styles.ButtonPrevious} onClick={prevButtonChange} >
@@ -59,31 +80,51 @@ export const Cards = ({ closeCards }) => {
               </div>
             )
             :
-            card == 3
+            card == 2
               ? (
-                <div className={styles.CardContent3}>
+                <div className={styles.CardContent2}>
                   <div className={styles.TextContent}>
-                    <h1>3. Profundiza en la historia</h1>
-                    <p>Puedes profundizar en la historia de cada personaje a través de los hitos marcados en su línea de tiempo.</p>
-                  </div>
-
-                  <div className={styles.TextContent}>
-                    <p>¡Bienvenido a Jordán Sube!</p>
+                    <h1>2. cambia de personaje</h1>
+                    <p>Puedes cambiar de historia y personaje cuando quieras clicando en la línea de tiempo de cada personaje</p>
                   </div>
                   <div className={styles.ButtonsContent}>
                     <button className={styles.ButtonPrevious} onClick={prevButtonChange} >
                       <ArrowPrevious />
                       <span>anterior</span>
                     </button>
-                    <button className={styles.ButtonNext} onClick={closeCards}>
-                      <span>continuar</span>
+                    <button className={styles.ButtonNext} onClick={nextButtonChange} >
+                      <span>siguiente</span>
                       <ArrowNext />
                     </button>
                   </div>
                 </div>
               )
-              : ''
+              :
+              card == 3
+                ? (
+                  <div className={styles.CardContent3}>
+                    <div className={styles.TextContent}>
+                      <h1>3. Profundiza en la historia</h1>
+                      <p>Puedes profundizar en la historia de cada personaje a través de los hitos marcados en su línea de tiempo.</p>
+                    </div>
+
+                    <div className={styles.TextContent}>
+                      <p>¡Bienvenido a Jordán Sube!</p>
+                    </div>
+                    <div className={styles.ButtonsContent}>
+                      <button className={styles.ButtonPrevious} onClick={prevButtonChange} >
+                        <ArrowPrevious />
+                        <span>anterior</span>
+                      </button>
+                      <button className={styles.ButtonNext} onClick={closeCards}>
+                        <span>continuar</span>
+                        <ArrowNext />
+                      </button>
+                    </div>
+                  </div>
+                )
+                : ''
       }
-    </Fragment>
+    </Fragment >
   )
 }

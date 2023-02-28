@@ -32,6 +32,7 @@
     padding: 4px;
     text-align: left;
     padding-left: 25px;
+    padding-right: 25px;
 
     h1 {
       font-family: $elcubo3_font_subtitle;
@@ -89,7 +90,7 @@
   padding-bottom: 20px;
   background-color: #6B5F43;
   position: absolute;
-  z-index: 2;
+  z-index: 11;
   top: 170px;
   left: 340px;
   font-family: $elcubo3_font_subtitle;
@@ -132,75 +133,77 @@
     }
   }
 
-  .ButtonsContent {
+
+}
+
+.ButtonsContent {
+  display: flex;
+
+  .ButtonPrevious {
+    background-color: transparent;
+    border: none;
     display: flex;
+    width: 120px;
+    justify-items: flex-end;
+    margin-left: 100px;
 
-    .ButtonPrevious {
-      background-color: transparent;
-      border: none;
-      display: flex;
-      width: 120px;
-      justify-items: flex-end;
-      margin-left: 100px;
-
-      @media (max-width: 480px) {
-        margin-left: auto;
-      }
-
-      margin-top: 10px;
-      cursor: pointer;
-
-      span {
-        font-family: $elcubo3_font_subtitle;
-        font-size: 20px;
-        text-transform: uppercase;
-        color: #ffffff;
-        text-align: center;
-        justify-content: center;
-        margin-left: 5px;
-      }
-
-      .Next {
-        margin-left: 25px;
-      }
-
-      svg {
-        margin-top: 3px;
-      }
+    @media (max-width: 480px) {
+      margin-left: auto;
     }
 
-    .ButtonNext {
-      background-color: transparent;
-      border: none;
-      display: flex;
-      width: 120px;
-      justify-items: flex-end;
-      margin-left: 15px;
-      margin-top: 10px;
+    margin-top: 10px;
+    cursor: pointer;
 
-      @media (max-width: 480px) {
-        margin-right: 20px;
-      }
+    span {
+      font-family: $elcubo3_font_subtitle;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #ffffff;
+      text-align: center;
+      justify-content: center;
+      margin-left: 5px;
+    }
 
-      cursor: pointer;
+    .Next {
+      margin-left: 25px;
+    }
 
-      span {
-        font-family: $elcubo3_font_subtitle;
-        font-size: 20px;
-        text-transform: uppercase;
-        color: #ffffff;
-        text-align: center;
-        justify-content: center;
-        margin-right: 10px;
-      }
+    svg {
+      margin-top: 3px;
+    }
+  }
 
-      .Next {
-        margin-left: 25px;
-      }
+  .ButtonNext {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    width: 120px;
+    justify-items: flex-end;
+    margin-left: 15px;
+    margin-top: 10px;
 
-      svg {
-        margin-top: 3px;
-      }
+    @media (max-width: 480px) {
+      margin-right: 20px;
+    }
+
+    cursor: pointer;
+
+    span {
+      font-family: $elcubo3_font_subtitle;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #ffffff;
+      text-align: center;
+      justify-content: center;
+      margin-right: 10px;
+    }
+
+    .Next {
+      margin-left: 25px;
+    }
+
+    svg {
+      margin-top: 3px;
     }
   }
 }
@@ -357,4 +360,13 @@
   100% {
     opacity: 1;
   }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  background: rgba(0, 0, 0, .7);
+  width: 100%;
+  z-index: 10;
 }
