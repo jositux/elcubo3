@@ -22,7 +22,7 @@ const characters = [
   {
     background: '/images/season3/steals/personaje-soledad.jpg',
     name: 'soledad',
-    realName: 'Soledad Silva Rico',
+    realName: 'Soledad Silva',
     nameButton: 'Soledad',
     description: 'Cuando estamos en medio del huracán es imposible ver. Pero Soledad ha ido redescubriendo su propia fuerza y ahora solo le quedan sueños por cumplir. ¿Sabes de qué es capaz?',
     age: '34 años',
@@ -48,7 +48,7 @@ const characters = [
   {
     background: '/images/season3/steals/personaje-guillermo.jpg',
     name: 'guillermo',
-    realName: 'Guillermo Prada Monsalve',
+    realName: 'Guillermo Prada',
     nameButton: 'Guillermo',
     description: '¿Te ha pasado que un mosquito te quita el sueño? Guillermo se para todas las noches a espantar lo que le asusta. En la historia de este hombre se juntan la belleza, el cuidado y la fragilidad para recordarnos que todo es impermanente. Y que todo sobrevive en la memoria.',
     age: '77 años',
