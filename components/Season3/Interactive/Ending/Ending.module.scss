@@ -1,8 +1,16 @@
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .EndingCover {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: calc(50% - 420px);
+  //position: absolute;
+  //top: 50%;
+  //transform: translateY(-50%);
+  //left: calc(50% - 420px);
   font-family: $elcubo3_font_title;
   font-weight: 300;
   line-height: 1.4;
@@ -158,6 +166,10 @@
   height: calc(100vh);
   position: relative;
   top: 0;
+  justify-content: center;
+  -moz-box-align: center;
+  align-items: center;
+  display: flex;
 }
 
 
