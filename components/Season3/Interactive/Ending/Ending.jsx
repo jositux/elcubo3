@@ -51,22 +51,40 @@ const Ending = ({ name, onButtonClicked }) => {
   const [soledadPercent, setSoledadPercent] = useState(0);
   const [diegoPercent, setDiegoPercent] = useState(0);
 
+  const [countFull, setCountFull] = useState(0);
+
   useEffect(() => {
 
     const dataJuan = JSON.parse(localStorage.getItem(`'juan'`));
-    setJuanPercent(dataJuan.percent);
+    if (dataJuan) {
+      setJuanPercent(dataJuan.percent);
+    }
 
     const dataGuillermo = JSON.parse(localStorage.getItem(`'guillermo'`));
-    setGuillermoPercent(dataGuillermo.percent);
+    if (dataGuillermo) {
+      setGuillermoPercent(dataGuillermo.percent);
+    }
 
     const dataDiego = JSON.parse(localStorage.getItem(`'diego'`));
-    setDiegoPercent(dataDiego.percent);
+    if (dataDiego) {
+      setDiegoPercent(dataDiego.percent);
+    }
 
     const dataYenny = JSON.parse(localStorage.getItem(`'yenny'`));
-    setYennyPercent(dataYenny.percent);
+    if (dataYenny) {
+      setYennyPercent(dataYenny.percent);
+    }
 
     const dataSoledad = JSON.parse(localStorage.getItem(`'soledad'`));
-    setSoledadPercent(dataSoledad.percent);
+    if (dataSoledad) {
+      setSoledadPercent(dataSoledad.percent);
+    }
+
+
+    setCountFull([juanPercent, guillermoPercent, yennyPercent, soledadPercent, diegoPercent].filter(element => element === 100).length);
+
+
+    console.log('los que tienen 100 son / ' + countFull);
 
   }, [])
 
@@ -88,7 +106,121 @@ const Ending = ({ name, onButtonClicked }) => {
 
             <div className={`${styles.EndingCover} ${styles.EndingFinal} ${styles.fadeIn}`}>
 
-              {(juanPercent === 100 && guillermoPercent === 100 && yennyPercent === 100 && soledadPercent === 100 && diegoPercent === 100)
+              {(
+                [juanPercent,
+                  guillermoPercent,
+                  yennyPercent,
+                  soledadPercent,
+                  diegoPercent].
+                  filter(element => element === 100).length === 1
+              ) ?
+                <div className={styles.Ending}>
+                  <h1>¡Lo lograste!</h1>
+                  <h2>¡Has terminado tu camino con {name}!</h2>
+                  <p>¿Quieres seguir recorriendo los caminos de Jordán? Acompaña a otro personaje y completa la historia del pueblo al final. </p>
+                  <div className={styles.EndingContent}>
+
+                    {/*<a onClick={handleOnPlayVideo}>Ver confesionario <PersonajeArrow /></a>*/}
+
+                    <a href="/el-cubo/temporada-3/personajes?ref=view">
+                      Elige otro personaje <PersonajeArrow />
+                    </a>
+                  </div>
+                </div>
+                :
+                (
+                  [juanPercent,
+                    guillermoPercent,
+                    yennyPercent,
+                    soledadPercent,
+                    diegoPercent].
+                    filter(element => element === 100).length === 2
+                ) ?
+                  <div className={styles.Ending}>
+                    <h1>¡Lo lograste!</h1>
+                    <h2>¡Has terminado tu camino con {name}!</h2>
+                    <p>Recuerda que una vez completes las cinco historias, abrirás la recompensa final. </p>
+                    <div className={styles.EndingContent}>
+
+                      {/*<a onClick={handleOnPlayVideo}>Ver confesionario <PersonajeArrow /></a>*/}
+
+                      <a href="/el-cubo/temporada-3/personajes?ref=view">
+                        Elige otro personaje <PersonajeArrow />
+                      </a>
+                    </div>
+                  </div>
+                  :
+                  (
+                    [juanPercent,
+                      guillermoPercent,
+                      yennyPercent,
+                      soledadPercent,
+                      diegoPercent].
+                      filter(element => element === 100).length === 3
+                  ) ?
+                    <div className={styles.Ending}>
+                      <h1>¡Lo lograste!</h1>
+                      <h2>¡Has terminado tu camino con {name}!</h2>
+                      <p>Al desbloquear otra historia, estarás más cerca de revelar la foto de Jordán.</p>
+                      <div className={styles.EndingContent}>
+
+                        {/*<a onClick={handleOnPlayVideo}>Ver confesionario <PersonajeArrow /></a>*/}
+
+                        <a href="/el-cubo/temporada-3/personajes?ref=view">
+                          Elige otro personaje <PersonajeArrow />
+                        </a>
+                      </div>
+                    </div>
+                    :
+                    (
+                      [juanPercent,
+                        guillermoPercent,
+                        yennyPercent,
+                        soledadPercent,
+                        diegoPercent].
+                        filter(element => element === 100).length === 4
+                    ) ?
+                      <div className={styles.Ending}>
+                        <h1>¡Lo lograste!</h1>
+                        <h2>¡Has terminado tu camino con {name}!</h2>
+                        <div className={styles.EndingContent}>
+
+                          {/*<a onClick={handleOnPlayVideo}>Ver confesionario <PersonajeArrow /></a>*/}
+
+                          <a href="/el-cubo/temporada-3/personajes?ref=view">
+                            Elige otro personaje <PersonajeArrow />
+                          </a>
+                        </div>
+                      </div>
+                      :
+                      (
+                        [juanPercent,
+                          guillermoPercent,
+                          yennyPercent,
+                          soledadPercent,
+                          diegoPercent].
+                          filter(element => element === 100).length === 5
+                      ) ?
+                        <div className={styles.Ending}>
+                          <h2>¡Has terminado tu camino con {name}!</h2>
+                          <p>
+                            ¡Llegaste al final! Sin embargo, este no es el verdadero final. Ahora podrás acceder a la recompensa. Una línea del tiempo que te contará todos los detalles de la historia de Jordán, artículos, investigaciones, fotos… gracias por recorrer los caminos hermosos y difíciles de la cordillera colombiana.
+                          </p>
+
+                          <div className={styles.EndingContent}>
+
+                            {/*<a onClick={handleOnPlayVideo}>Ver confesionario <PersonajeArrow /></a>*/}
+
+                            <a href="/el-cubo/temporada-3/recompensa/timeline">
+                              Ver infografía <PersonajeArrow />
+                            </a>
+                          </div>
+                        </div>
+                        :
+                        ''
+              }
+
+              {/*(juanPercent === 100 && guillermoPercent === 100 && yennyPercent === 100 && soledadPercent === 100 && diegoPercent === 100)
                 ?
                 <div className={styles.Ending}>
                   <h2>¡Has terminado tu camino con {name} y desbloqueado la infografía
@@ -96,7 +228,7 @@ const Ending = ({ name, onButtonClicked }) => {
 
                   <div className={styles.EndingContent}>
 
-                    {/*<a onClick={handleOnPlayVideo}>Ver confesionario <PersonajeArrow /></a>*/}
+                    {<a onClick={handleOnPlayVideo}>Ver confesionario <PersonajeArrow /></a>}
 
                     <a href="/el-cubo/temporada-3/recompensa/timeline">
                       Ver infografía <PersonajeArrow />
@@ -109,13 +241,13 @@ const Ending = ({ name, onButtonClicked }) => {
                   <h2>¡Has terminado tu camino con {name}!</h2>
                   <div className={styles.EndingContent}>
 
-                    {/*<a onClick={handleOnPlayVideo}>Ver confesionario <PersonajeArrow /></a>*/}
+                    {<a onClick={handleOnPlayVideo}>Ver confesionario <PersonajeArrow /></a>}
 
                     <a href="/el-cubo/temporada-3/personajes?ref=view">
                       Elige otro personaje <PersonajeArrow />
                     </a>
                   </div>
-                </div>}
+            </div>*/}
             </div>
           </div>
         </div>
