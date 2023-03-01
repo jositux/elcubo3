@@ -45,6 +45,32 @@ const Ending = ({ name, onButtonClicked }) => {
   }, []);
 
 
+  const [juanPercent, setJuanPercent] = useState(0);
+  const [guillermoPercent, setGuillermoPercent] = useState(0);
+  const [yennyPercent, setYennyPercent] = useState(0);
+  const [soledadPercent, setSoledadPercent] = useState(0);
+  const [diegoPercent, setDiegoPercent] = useState(0);
+
+  useEffect(() => {
+
+    const dataJuan = JSON.parse(localStorage.getItem(`'juan'`));
+    setJuanPercent(dataJuan.percent);
+
+    const dataGuillermo = JSON.parse(localStorage.getItem(`'guillermo'`));
+    setGuillermoPercent(dataGuillermo.percent);
+
+    const dataDiego = JSON.parse(localStorage.getItem(`'diego'`));
+    setDiegoPercent(dataDiego.percent);
+
+    const dataYenny = JSON.parse(localStorage.getItem(`'yenny'`));
+    setYennyPercent(dataYenny.percent);
+
+    const dataSoledad = JSON.parse(localStorage.getItem(`'soledad'`));
+    setSoledadPercent(dataSoledad.percent);
+
+  }, [])
+
+
   return (
     <React.Fragment>
       <div className={`${styles.containerCover} ${styles.containerVideoModal} ${styles.open}`}>
@@ -60,19 +86,36 @@ const Ending = ({ name, onButtonClicked }) => {
               <Back /> <span>Elige otro personaje</span>
             </a>
 
-            <div className={`${styles.EndingCover} ${styles.fadeIn}`}>
-              <div className={styles.Ending}>
-                <h1>¡Lo lograste!</h1>
-                <h2>¡Has terminado tu camino con {name}!</h2>
-                <div className={styles.EndingContent}>
+            <div className={`${styles.EndingCover} ${styles.EndingFinal} ${styles.fadeIn}`}>
 
-                  {/*<a onClick={handleOnPlayVideo}>Ver confesionario <PersonajeArrow /></a>*/}
+              {(juanPercent === 100 && guillermoPercent === 100 && yennyPercent === 100 && soledadPercent === 100 && diegoPercent === 100)
+                ?
+                <div className={styles.Ending}>
+                  <h2>¡Has terminado tu camino con {name} y desbloqueado la infografía
+                    del final de la Experiencia!</h2>
 
-                  <a href="/el-cubo/temporada-3/personajes?ref=view">
-                    Elige otro personaje <PersonajeArrow />
-                  </a>
+                  <div className={styles.EndingContent}>
+
+                    {/*<a onClick={handleOnPlayVideo}>Ver confesionario <PersonajeArrow /></a>*/}
+
+                    <a href="/el-cubo/temporada-3/recompensa/timeline">
+                      Ver infografía <PersonajeArrow />
+                    </a>
+                  </div>
                 </div>
-              </div>
+                :
+                <div className={styles.Ending}>
+                  <h1>¡Lo lograste!</h1>
+                  <h2>¡Has terminado tu camino con {name}!</h2>
+                  <div className={styles.EndingContent}>
+
+                    {/*<a onClick={handleOnPlayVideo}>Ver confesionario <PersonajeArrow /></a>*/}
+
+                    <a href="/el-cubo/temporada-3/personajes?ref=view">
+                      Elige otro personaje <PersonajeArrow />
+                    </a>
+                  </div>
+                </div>}
             </div>
           </div>
         </div>
