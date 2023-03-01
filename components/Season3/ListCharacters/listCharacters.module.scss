@@ -156,10 +156,6 @@
 }
 
 
-.Info {
-  // display: none;
-}
-
 a.buttonInfo {
   font-family: $elcubo3_font_subtitle;
   font-weight: 300;
@@ -219,7 +215,7 @@ a.buttonInfoInactive {
     }
 
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       right: auto;
       left: 20px;
       bottom: 0px;
@@ -262,38 +258,5 @@ a.buttonInfoInactive {
       bottom: 20px;
     }
 
-    /*
-    .rowYenny {
-      .progress div {
-        margin-right: 0px;
-      }
-    }
-
-    .rowGuillermo {
-      .progress div {
-        margin-right: 0px;
-      }
-    }
-
-    .rowDiego {
-      .progress div {
-        margin-right: 0px;
-      }
-    }
-
-    .rowSoledad {
-      .progress div {
-        margin-right: 0px;
-      }
-    }
-
-    .timeline {
-      display: none;
-    }
-  }
-
-  .Info {
-    display: block;
-  }*/
   }
 }

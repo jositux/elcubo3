@@ -18,7 +18,12 @@
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) and (orientation: landscape) {
+    top: 90px;
+    left: 30%;
+  }
+
+  @media (max-width: 768px) and (orientation: portrait) {
     //width: calc(100vw - 40px);
     left: 20px;
     top: 150px;
@@ -98,6 +103,11 @@
   animation: fadeInAnimation ease 2s;
   //animation-iteration-count: 1;
   animation-fill-mode: forwards;
+
+  @media (max-width: 900px) and (orientation: landscape) {
+    top: 90px;
+    left: 30%;
+  }
 
   @media (max-width: 768px) {
     // width: calc(100vw - 40px);
@@ -222,6 +232,11 @@
   animation: fadeInAnimation ease 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+
+  @media (max-width: 900px) and (orientation: landscape) {
+    top: 90px;
+    left: 30%;
+  }
 
   @media (max-width: 768px) {
     //width: calc(100vw - 40px);
