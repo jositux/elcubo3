@@ -131,7 +131,7 @@
 
 
 .ContainerCharacter {
-  z-index: 2;
+  z-index: 11;
   position: relative;
   padding: 0px 40px;
   display: flex;
@@ -150,6 +150,10 @@
     font-weight: 300;
     font-size: 18px;
     margin-bottom: 20px;
+
+    @media only screen and (max-width: 680px) and (orientation : portrait) {
+      font-size: 16px;
+    }
 
     strong {
       font-size: 18px;
@@ -180,6 +184,11 @@
     position: relative;
     float: left;
     margin-bottom: 40px;
+
+    @media only screen and (max-width: 680px) and (orientation : portrait) {
+      margin-bottom: 80px;
+    }
+
 
     svg {
       position: absolute;
