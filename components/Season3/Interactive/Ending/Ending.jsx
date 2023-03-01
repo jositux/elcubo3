@@ -73,7 +73,7 @@ const Ending = ({ name, onButtonClicked }) => {
 
   return (
     <React.Fragment>
-      <div className={`${styles.containerCover} ${styles.containerVideoModal} ${styles.open}`}>
+      <div className={`${styles.containerCover} ${styles.open}`}>
 
         {/*<span className={styles.iconDashboard} onClick={onButtonClicked}>
           <IconDashboard />
