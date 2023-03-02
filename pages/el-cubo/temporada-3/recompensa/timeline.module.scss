@@ -55,6 +55,10 @@
   }
 }
 
+.LinkItem.NoLink {
+  cursor: default !important;
+}
+
 .ItemContent {
   display: flex;
   position: relative;
