@@ -713,8 +713,8 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
 
 
   </div>*/}
-                  <div className={styles.LinkItem}>
-                    <span target="_blank" className={styles.Link} >
+                  <div className={`${styles.LinkItem} ${styles.NoLink}`}>
+                    <span className={styles.Link} >
 
                       <p className={styles.LinkText}><em>Crónicas de un pueblo muerto: Jordán Sube</em><br></br>
                         <span>Germán Valenzuela Sánchez. Sic Editorial, 2008</span>
