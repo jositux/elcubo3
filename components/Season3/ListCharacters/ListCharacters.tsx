@@ -95,7 +95,7 @@ const ListCharacters = ({ char, percentParam, timeline }) => {
 
         <div className={styles.CharacterBackground}>
 
-          <div className={`${styles.Content} ${styles['Char-' + char]}`}>
+          <div className={`${styles.Content} ${styles['Char-' + char]} ${!timeline ? styles.isInteractive : ''}`}>
             <div className={styles.Characters}>
               <div className={`${styles.row} ${styles.rowJuan}`}>
                 <div className={styles.column1}>
