@@ -1,6 +1,8 @@
 @import 'mixins';
+
 .d-desktop {
   display: block;
+
   @include breakpoint-down('sm') {
     display: none;
   }
@@ -8,6 +10,7 @@
 
 .d-mobile {
   display: none;
+
   @include breakpoint-down('sm') {
     display: block;
   }
@@ -24,4 +27,3 @@
 .fadeIn_test {
   opacity: 1;
 }
-
