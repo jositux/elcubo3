@@ -28,11 +28,35 @@ export const Hero = ({ video }) => {
     };
   }, [scrollTop]);
 
-
-
   const handleCloseInteractive = () => {
     return false;
   }
+
+  useEffect(() => {
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.75
+    };
+
+    function observerCallback(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.replace('fadeBlurOut', 'fadeBlurIn');
+        }
+        else {
+          //entry.target.classList.replace('fadeIn_test', 'fadeOut_test');
+        }
+      });
+    }
+
+    const fadeElms = document.querySelectorAll('.fadeBlur');
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    fadeElms.forEach(el => observer.observe(el));
+
+  }, [])
 
 
 
@@ -86,7 +110,7 @@ export const Hero = ({ video }) => {
           </div>
         </div>
         <div className={styles.covertext}>
-          <div id='Texto0' className={`${styles.TextContent} ${styles.TextContentRight}`}>
+          <div id='Texto0' className={`${styles.TextContent} ${styles.TextContentRight} fade_test .fadeOut_test`}>
             <article>
               <h1>Bienvenido y bienvenida a Jordán Sube, un pueblo con gente que resiste y sabe vivir</h1>
               <p></p>

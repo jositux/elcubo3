@@ -11,17 +11,6 @@ import styles from './season3.slider.desktop.module.scss';
 
 export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
 
-  const [audios, setAudios] = useState(null);
-
-  useEffect(() => {
-    setAudios({
-      click: new Audio('/audios/actions/click_1.mp3'),
-      alert: new Audio('/audios/season2/notifications_alerts/alert_1.mp3'),
-      collapse: new Audio('/audios/season2/buttons_navigation/Collapse.mp3'),
-      message: new Audio('/audios/season2/notifications_alerts/notification_6.mp3')
-    });
-  }, []);
-
   const [scrollTop, setScrollTop] = useState(0);
 
   useEffect(() => {
@@ -107,6 +96,33 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
   }, [])
 
 
+  useEffect(() => {
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.25
+    };
+
+    function observerCallback(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.replace('fadeOut_test', 'fadeIn_test');
+        }
+        else {
+          entry.target.classList.replace('fadeIn_test', 'fadeOut_test');
+        }
+      });
+    }
+
+    const fadeElms = document.querySelectorAll('.fade_test');
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    fadeElms.forEach(el => observer.observe(el));
+
+  }, [])
+
+
 
   return (
     <Fragment>
@@ -117,7 +133,7 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
       <div className={styles.SlidersContainer}>
         <div id='slider1' className={styles.ImagesDesktop}>
           <img id='ImgBG1' src="/images/season3/slider/home_slider_02.jpg" className={styles.ImgBG1} />
-          <div id='Texto1' className={`${styles.TextContent} ${styles.TextContentLeft}`}>
+          <div id='Texto1' className={`${styles.TextContent} ${styles.TextContentLeft} fade_test fadeOut_test`}>
             <article>
               <h1>Jordán fue próspero pero ahora se mantiene en una frágil realidad.</h1>
               <p>A lo largo de su historia ha estado sumido en la violencia, la pobreza y el larguísimo mandato de una sola familia; y hoy quedan un poco más de 1000 habitantes.</p>
@@ -126,7 +142,7 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
         </div>
         <div id='slider2' className={styles.ImagesDesktop}>
           <img id='ImgBG2' src="/images/season3/slider/home_slider_03.jpg" className={styles.ImgBG1} />
-          <div id='Texto2' className={`${styles.TextContent} ${styles.TextContentRight}`}>
+          <div id='Texto2' className={`${styles.TextContent} ${styles.TextContentRight} fade_test fadeOut_test`}>
             <article>
               <h1>Viaja con nosotros <br />a este lugar. </h1>
               <p>Recorre sus caminos de la mano de personajes entrañables, explora sus historias al ritmo y en el orden que quieras. Completa la foto de Jordán con información adicional que te será revelada al final. </p>
@@ -134,7 +150,7 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
           </div>
           <div className={styles.ButtonContainerBottom}>
             <div className={styles.ButtonContainerContent}>
-              <h2>Este viaje es una forma de entender<br />la propia realidad y recobrar la fuerza.</h2>
+              <h2 className='fade_test fadeOut_test'>Este viaje es una forma de entender<br />la propia realidad y recobrar la fuerza.</h2>
 
               <div className={styles.buttonPulse}>
 
