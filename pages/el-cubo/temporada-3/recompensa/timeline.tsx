@@ -285,18 +285,12 @@ const timeline = () => {
               <div className={styles.columnText}>
                 <div className={styles.TextContent}>
                   <h1 className={styles.Title}>1900 -1940</h1>
-                  <h2 className={styles.Subtitle}>Periodo de bonanza<br></br>La buena hora</h2>
+                  <h2 className={styles.Subtitle}>Periodo de bonanza</h2>
                   <p className={styles.Description}>
-                    Jordán Sube tuvo una época de bonanza porque recibía diariamente a decenas de arrieros y
-                    caballos de carga que seguían su camino. Este flujo de personas hizo que se construyeran
-                    posadas, chicherías, casas y restaurantes en donde se les brindaba a los viajeros abundantes
-                    comidas con cabros, gallinas y cerdos.<br /><br />
-                    Las tierras, el clima y las aguas de Jordán lo convirtieron en un lugar ideal para la siembra
-                    de tabaco negro. Por esta razón, la Compañía Colombiana de Tabaco abrió una de sus
-                    primeras oficinas allí.<br /><br />
-                    El constante tránsito de mulas y arrieros por el puente colgante y los prósperos cultivos de
-                    tabaco dejaron muy buenas ganancias para Jordán, por eso estuvo en la cima del comercio
-                    de la región.
+                    Jordán Sube se vio beneficiado durante un tiempo de los arrieros y caballos de carga que cruzaban sus dominios. Este movimiento humano y comercial permitió la construcción de casas e hizo florecer chicherías, restaurantes y posadas.<br /><br />
+
+                    Además, las tierras fértiles y el río Chicamocha lo convirtieron en un espacio idóneo para la siembra y cultivo del tabaco negro. Un ejemplo de la prosperidad que se vivió en el pueblo durante esa época fue el establecimiento en la zona de la Compañía Colombiana de Tabaco. De este modo, mulas, arrieros y tabaco se constituyeron como los tres pilares que permitieron a Jordán disfrutar de una época de bonanza, una buena hora para el pueblo.
+
                   </p>
                 </div>
               </div>
@@ -572,15 +566,10 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                   <h1 className={styles.Title}>2004</h1>
                   <h2 className={styles.Subtitle}>Incendio provocado<br /> en la Alcaldía</h2>
                   <p className={styles.Description}>
-                    El punto más álgido de las sucesivas administraciones de los Ferreira fue el 23 de agosto de
-                    2004 cuando el entonces alcalde, Gonzalo Bautista, fue citado al despacho del gobernador
-                    de Santander para informarle que al día siguiente una comisión haría una revisión de las
-                    cuentas y gastos del municipio debido a las evidentes irregularidades en el manejo del
-                    presupuesto.<br /><br />
-                    Al día siguiente, cuando los miembros de la comisión llegaron a Jordán, encontraron que la
-
-                    sede de la alcaldía se había consumido en llamas la noche anterior, eliminando en el hecho
-                    todos los documentos que iban a ser revisados.  </p>
+                    Uno de los momentos más críticos de las sucesivas administraciones de los Ferreira fue el 23 de agosto de 2004 cuando el entonces alcalde, Gonzalo Bautista, fue convocado por el gobernador de Santander para informarle que al día siguiente una comisión haría una revisión de las cuentas y gastos del municipio debido a las evidentes irregularidades en el manejo del presupuesto.
+                    <br /><br />
+                    Al día siguiente, cuando los miembros de la comisión llegaron a Jordán, encontraron que la sede de la alcaldía se había consumido en llamas la noche anterior, así como todos los documentos que iban a ser revisados.
+                  </p>
                 </div>
               </div>
               <div className={styles.columnLink}>
@@ -673,13 +662,10 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                   <h1 className={styles.Title}>2016</h1>
                   <h2 className={styles.Subtitle}>Alcaldía nueva</h2>
                   <p className={styles.Description}>
-                    Durante muchos años, en el municipio de Jordán se reportaron gastos millonarios en obras
-                    que nunca se hicieron, y con la opinión pública siguiéndoles la pista, la familia Ferreira
-                    perdió las elecciones del 2015. Gloria Isabel Ferreira Fajardo, quien en dos oportunidades
-                    ya había sido alcaldesa de Jordán, se enfrentó en las urnas a la candidata Johanna Muñoz.
-                    Con una diferencia de 22 votos, Muñoz fue electa como alcaldesa y desde entonces la gente
-                    dice haber notado la diferencia.<br />Con esta elección terminó el control que ejerció sobre
-                    Jordán la familia Ferreira por más de 60 años.</p>
+                    Durante muchos años, en el municipio de Jordán se reportaron gastos millonarios en obras que nunca se hicieron, y con la opinión pública siguiéndoles la pista, la familia Ferreira perdió las elecciones del 2015. Gloria Isabel Ferreira Fajardo, quien en dos oportunidades ya había sido alcaldesa de Jordán, se enfrentó en las urnas a la candidata Johanna Muñoz. En unas ajustadas elecciones, Muñoz superó por 22 votos a Ferreira, convirtiéndose en la nueva alcaldesa del municipio y, con el paso del tiempo, siendo alabada y reconocida su labor por algunos habitantes del pueblo.
+                    <br /><br />
+                    Con esta elección terminó el control que ejerció sobre Jordán la familia Ferreira por más de 60 años.
+                  </p>
                 </div>
               </div>
             </div>
@@ -713,15 +699,7 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
 
 
   </div>*/}
-                  <div className={`${styles.LinkItem} ${styles.NoLink}`}>
-                    <span className={styles.Link} >
 
-                      <p className={styles.LinkText}><em>Crónicas de un pueblo muerto: Jordán Sube</em><br></br>
-                        <span>Germán Valenzuela Sánchez. Sic Editorial, 2008</span>
-                      </p>
-
-                    </span>
-                  </div>
                   <div className={styles.LinkItem}>
                     <a onClick={() => { setVideo('485849'); handleOnPlayVideo(); }} className={styles.Link} >
                       <div>
@@ -850,8 +828,8 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </div >
+      </div >
 
       <div className={styles.fullScreenVideo}>
         <VideoFadeModal
@@ -886,7 +864,7 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
       <ModalVideo channel='youtube' autoplay isOpen={isOpen360} videoId={'R7YZtj03b1s'} onClose={() => setOpen360(false)} />
       <ModalVideo channel='youtube' autoplay isOpen={isOpen360b} videoId={'6p3u1MW-DAc'} onClose={() => setOpen360b(false)} />
 
-    </Fragment>
+    </Fragment >
   )
 }
 
