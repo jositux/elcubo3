@@ -127,7 +127,7 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
   return (
     <Fragment>
       <div id="videoContainer">
-        <Hero video="482811" />
+        <Hero video="496712" />
       </div>
 
       <div className={styles.SlidersContainer}>
