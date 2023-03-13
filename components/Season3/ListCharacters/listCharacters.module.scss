@@ -122,9 +122,17 @@
   }
 }
 
+.rowJuan {
+  .progress div {
+    margin-right: -5px;
+    float: right;
+    width: 100%;
+  }
+}
+
 .rowGuillermo {
   .progress div {
-    margin-right: -90px;
+    margin-right: -10px;
     float: right;
     width: 100%;
   }
@@ -132,7 +140,7 @@
 
 .rowYenny {
   .progress div {
-    margin-right: -40px;
+    margin-right: -58px;
     float: right;
     width: 100%;
   }
@@ -140,17 +148,21 @@
 
 .rowDiego {
   .progress div {
-    margin-right: -60px;
+    margin-right: -65px;
     float: right;
     width: 100%;
   }
 }
 
 .rowSoledad {
-  .progress div {
-    margin-right: -30px;
-    float: right;
-    width: 100%;
+  .progress {
+
+    div {
+      margin-right: 0px;
+
+      float: right;
+      width: 100%;
+    }
   }
 }
 
@@ -163,7 +175,7 @@
     background: #FF6D4D;
     position: absolute;
     top: -160px;
-    right: 20px;
+    right: 35px;
   }
 
   p {
@@ -171,7 +183,7 @@
     font-family: $elcubo3_font_subtitle;
     font-weight: 300;
     text-align: right;
-    margin-right: -43px;
+    margin-right: -30px;
   }
 }
 
@@ -241,6 +253,28 @@ a.buttonInfoInactive {
       bottom: 0px;
       width: 175px;
 
+      .timeline {
+        position: relative;
+
+        .line {
+          height: 155px;
+          width: 1px;
+          background: #FF6D4D;
+          position: absolute;
+          top: -160px;
+          right: 12px;
+        }
+
+        p {
+          color: #FF6D4D;
+          font-family: $elcubo3_font_subtitle;
+          font-weight: 300;
+          text-align: right;
+          margin-right: -23px;
+        }
+      }
+
+
       div.avatar {
         width: 65%;
       }
@@ -251,27 +285,23 @@ a.buttonInfoInactive {
 
       .rowGuillermo {
         .progress div {
-          margin-right: -30px;
+          margin-right: -10px;
         }
       }
 
       .rowYenny {
         .progress div {
-          margin-right: -16px;
+          margin-right: -26px;
         }
       }
 
       .rowDiego {
         .progress div {
-          margin-right: -22px;
+          margin-right: -32px;
         }
       }
 
-      .rowSoledad {
-        .progress div {
-          margin-right: -10px;
-        }
-      }
+
     }
 
     @media (max-width: 480px) {

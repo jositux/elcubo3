@@ -731,7 +731,7 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
               <div className={styles.columnLink}>
                 <div className={styles.LinksContent}>
                   <div className={styles.LinkItem}>
-                    <a onClick={() => { setVideo('485843'); handleOnPlayVideo(); }} className={styles.Link} >
+                    <a onClick={() => { setVideo('497300'); handleOnPlayVideo(); }} className={styles.Link} >
                       <div className={styles.Avatar}>
                         <img className={styles.ConfesionarioPicture} src="/images/season3/timeline/confesionarios/juan.png" alt="Juan" />
                         <Play />
@@ -742,7 +742,7 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
-                    <a onClick={() => { setVideo('485845'); handleOnPlayVideo(); }} className={styles.Link} >
+                    <a onClick={() => { setVideo('497302'); handleOnPlayVideo(); }} className={styles.Link} >
                       <div className={styles.Avatar}>
                         <img className={styles.ConfesionarioPicture} src="/images/season3/timeline/confesionarios/soledad.png" alt="Soledad" />
                         <Play />
@@ -753,7 +753,7 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
-                    <a onClick={() => { setVideo('485839'); handleOnPlayVideo(); }} className={styles.Link} >
+                    <a onClick={() => { setVideo('497294'); handleOnPlayVideo(); }} className={styles.Link} >
                       <div className={styles.Avatar}>
                         <img className={styles.ConfesionarioPicture} src="/images/season3/timeline/confesionarios/diego.png" alt="Diego" />
                         <Play />
@@ -764,7 +764,7 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
-                    <a onClick={() => { setVideo('485847'); handleOnPlayVideo(); }} className={styles.Link} >
+                    <a onClick={() => { setVideo('497298'); handleOnPlayVideo(); }} className={styles.Link} >
                       <div className={styles.Avatar}>
                         <img className={styles.ConfesionarioPicture} src="/images/season3/timeline/confesionarios/yenny.png" alt="Yenny" />
                         <Play />
@@ -775,7 +775,7 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
-                    <a onClick={() => { setVideo('485841'); handleOnPlayVideo(); }} className={styles.Link} >
+                    <a onClick={() => { setVideo('497296'); handleOnPlayVideo(); }} className={styles.Link} >
                       <div className={styles.Avatar}>
                         <img className={styles.ConfesionarioPicture} src="/images/season3/timeline/confesionarios/guillermo.png" alt="Guillermo" />
                         <Play />

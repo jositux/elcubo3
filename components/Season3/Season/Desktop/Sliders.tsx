@@ -101,7 +101,7 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
     const observerOptions = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.25
+      threshold: .75
     };
 
     function observerCallback(entries, observer) {
@@ -131,8 +131,18 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
       </div>
 
       <div className={styles.SlidersContainer}>
+        <div id='slider0' className={styles.ImagesDesktop}>
+          <img id='ImgBG0' src="/images/season3/slider/0.jpg" className={styles.ImgBG1} />
+          <div id='Texto0' className={`${styles.TextContent} ${styles.TextContentRight} fade_test fadeOut_test`}>
+            <article>
+              <h1>Jordán fue próspero pero ahora se mantiene en una frágil realidad.</h1>
+              <p>A lo largo de su historia ha estado sumido en la violencia, la pobreza y el larguísimo mandato de una sola familia; y hoy quedan un poco más de 1000 habitantes.</p>
+            </article>
+          </div>
+        </div>
+
         <div id='slider1' className={styles.ImagesDesktop}>
-          <img id='ImgBG1' src="/images/season3/slider/home_slider_02.jpg" className={styles.ImgBG1} />
+          <img id='ImgBG1' src="/images/season3/slider/1.jpg" className={styles.ImgBG1} />
           <div id='Texto1' className={`${styles.TextContent} ${styles.TextContentLeft} fade_test fadeOut_test`}>
             <article>
               <h1>Jordán fue próspero pero ahora se mantiene en una frágil realidad.</h1>
@@ -141,27 +151,31 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
           </div>
         </div>
         <div id='slider2' className={styles.ImagesDesktop}>
-          <img id='ImgBG2' src="/images/season3/slider/home_slider_03.jpg" className={styles.ImgBG1} />
+          <img id='ImgBG2' src="/images/season3/slider/2.jpg" className={styles.ImgBG1} />
           <div id='Texto2' className={`${styles.TextContent} ${styles.TextContentRight} fade_test fadeOut_test`}>
             <article>
               <h1>Viaja con nosotros <br />a este lugar. </h1>
               <p>Recorre sus caminos de la mano de personajes entrañables, explora sus historias al ritmo y en el orden que quieras. Completa la foto de Jordán con información adicional que te será revelada al final. </p>
             </article>
           </div>
-          <div className={styles.ButtonContainerBottom}>
-            <div className={styles.ButtonContainerContent}>
-              <h2 className='fade_test fadeOut_test'>Este viaje es una forma de entender<br />la propia realidad y recobrar la fuerza.</h2>
 
-              <div className={styles.buttonPulse}>
+        </div>
+        <div className={styles.ButtonContainerBottom}>
+          <img id='ImgBG3' src="/images/season3/slider/3.jpg" className={styles.ImgBG3} />
 
-                {isLoggedIn
-                  ? <ButtonHome url={Links.registerTemp2} text="Iniciar EL Viaje" />
-                  : <ButtonHome type="button" onClick={onGuest} text="Iniciar El Viaje" />
-                }
-              </div>
+          <div className={styles.ButtonContainerContent}>
+            <h2 className='fade_test fadeOut_test'>Este viaje es una forma de entender<br />la propia realidad y recobrar la fuerza.</h2>
+
+            <div className={styles.buttonPulse}>
+
+              {isLoggedIn
+                ? <ButtonHome url={Links.registerTemp2} text="Iniciar EL Viaje" />
+                : <ButtonHome type="button" onClick={onGuest} text="Iniciar El Viaje" />
+              }
             </div>
           </div>
         </div>
+
         <div id='slider3' className={styles.ImagesDesktop}>
 
 
