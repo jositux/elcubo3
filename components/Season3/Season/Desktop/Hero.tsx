@@ -64,7 +64,7 @@ export const Hero = ({ video }) => {
     <Fragment>
       <div id="section-0" className={`${styles.coverall} ${styles.section0}`}>
         <div className={styles.VideoArea}>
-          <div className={styles.ContentResizable}
+          <div
           /* style={
              {
                width: scrollTop < 90 ? `${100 - scrollTop / 8 + '%'}` : '88%',
@@ -109,14 +109,14 @@ export const Hero = ({ video }) => {
             </div>
           </div>
         </div>
-        <div className={styles.covertext}>
-          <div id='Texto0' className={`${styles.TextContent} ${styles.TextContentRight} fade_test .fadeOut_test`}>
+        {/*<div className={styles.covertext}>
+          <div id='Texto0' className={`${styles.TextContent} ${styles.TextContentRight} fade_test fadeOut_test`}>
             <article>
               <h1>Bienvenido y bienvenida a Jordán Sube, un pueblo con gente que resiste y sabe vivir</h1>
               <p></p>
             </article>
           </div>
-        </div>
+            </div>*/}
       </div>
 
 

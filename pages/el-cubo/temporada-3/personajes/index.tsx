@@ -185,7 +185,7 @@ const Personajes = ({ text }) => {
 
   const [player, setPlayer] = useState(null);
   const [isSlideOpen, setIsSlideOpen] = useState(true);
-  let srcVideo = UrlUtils.getVideoUrl("496640");
+  let srcVideo = UrlUtils.getVideoUrl("498202");
 
   const [openVideo, setOpenVideo] = useState(true)
 

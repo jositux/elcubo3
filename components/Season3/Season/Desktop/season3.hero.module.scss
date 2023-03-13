@@ -1,6 +1,6 @@
 .coverall {
-  height: calc(200vh - 90px);
-  background: url('/images/season3/slider/home_slider_01.jpg');
+  //height: calc(200vh - 90px);
+  //background: url('/images/season3/slider/home_slider_01.jpg');
   background-color: black;
   background-size: 100%;
   background-position: bottom center;
@@ -11,14 +11,15 @@
 
 div.VideoArea {
   width: 100%;
-  min-height: calc(100vh - 90px);
-  overflow: hidden;
-  position: relative;
+  height: auto;
+  //min-height: calc(100vh - 90px);
+  //overflow: hidden;
+  //position: relative;
 }
 
 .covertext {
-  height: 100vh;
-  display: flex;
+  //height: 100vh;
+  //display: flex;
   align-items: center;
   justify-content: center;
   justify-content: space-around;
@@ -26,7 +27,7 @@ div.VideoArea {
 
 .TextContent {
   padding: 0 80px;
-  height: 100vh;
+  //height: 100vh;
   display: flex;
   align-items: center;
   color: transparent;
@@ -74,13 +75,14 @@ div.VideoArea {
   justify-content: flex-end;
 }
 
+/*
 .bg {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   z-index: 0;
-}
+}*/
 
 .ContentResizable {
   width: 100%;

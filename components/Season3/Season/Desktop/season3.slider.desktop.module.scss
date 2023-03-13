@@ -24,8 +24,13 @@
 }
 
 .ImgBG0,
-.ImgBG1 {
+.ImgBG1,
+.ImgBG3 {
   width: 100%;
+}
+
+.ImgBG3 {
+  margin-top: -4px;
 }
 
 
@@ -74,7 +79,23 @@
   justify-content: flex-start;
 }
 
+
 .ImagesDesktop:nth-child(1) {
+  background: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: -4px;
+  background-size: cover;
+  bottom: 0;
+  z-index: 0;
+
+  .TextContent {
+    color: #402A04;
+    z-index: 1;
+  }
+}
+
+.ImagesDesktop:nth-child(2) {
   background: black;
   background-position: center;
   background-repeat: no-repeat;
@@ -90,7 +111,7 @@
 }
 
 
-.ImagesDesktop:nth-child(2) {
+.ImagesDesktop:nth-child(3) {
   background-size: cover;
   background: black;
   top: 0;
@@ -110,7 +131,7 @@
   }
 }
 
-.ImagesDesktop:nth-child(3) {
+.ImagesDesktop:nth-child(4) {
   margin-top: -4px;
 }
 
