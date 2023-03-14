@@ -234,28 +234,29 @@ const Personajes = ({ text }) => {
 
       {
         query.ref === "init" &&
-
-        <FadeModal
-          showModal={openVideo}
-          //onOpenModal={handleOpenInteractive}
-          onCloseModal={stopVideoHandler}
-          setShowModal={openVideo}
-        >
-          {openVideo &&
-            <Video2Level
-              title=""
-              source={srcVideo}
-              showPrevButton={false}
-              showNextButton={false}
-              setPlayer={setPlayer}
-              onVideoEnded={() => {
-                stopVideoHandler();
-              }}
-              fullscreen={false}
-              autoPlay={true}
-            />
-          }
-        </FadeModal>
+        <div id="videoContainer">
+          <FadeModal
+            showModal={openVideo}
+            //onOpenModal={handleOpenInteractive}
+            onCloseModal={stopVideoHandler}
+            setShowModal={openVideo}
+          >
+            {openVideo &&
+              <Video2Level
+                title=""
+                source={srcVideo}
+                showPrevButton={false}
+                showNextButton={false}
+                setPlayer={setPlayer}
+                onVideoEnded={() => {
+                  stopVideoHandler();
+                }}
+                fullscreen={false}
+                autoPlay={true}
+              />
+            }
+          </FadeModal>
+        </div>
       }
 
       <div className={styles.CharactersCover}>
