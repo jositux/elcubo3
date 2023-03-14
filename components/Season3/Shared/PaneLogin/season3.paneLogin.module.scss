@@ -29,6 +29,13 @@
 .PaneLogin.open .pane {
     right: 80px;
 
+
+    @media only screen and (max-width: 1024px) and (orientation:landscape) {
+        right: 0px;
+        top: 0;
+        height: 100vh;
+    }
+
     @media only screen and (max-width: 768px) {
         top: 0vh;
         right: 0;
