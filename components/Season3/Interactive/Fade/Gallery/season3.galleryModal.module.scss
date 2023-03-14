@@ -108,6 +108,13 @@
   width: 700px;
   height: 440px;
 
+  @media (max-width: 1024px) {
+    margin-top: 40px;
+    width: 360px;
+    height: 240px;
+  }
+
+
   div {
     border-radius: 10px;
   }
@@ -128,8 +135,24 @@
     position: relative;
     padding: 22vh 80px;
 
+    @media (max-width: 1024px) {
+      padding: 60px;
+    }
+
     .Column:nth-child(1) {
       width: 30%;
+
+      @media (max-width: 1024px) {
+        width: 40%;
+
+        h2 {
+          font-size: 34px !important;
+        }
+
+        p {
+          font-size: 16px !important;
+        }
+      }
 
       h2 {
         font-family: $elcubo3_font_title;
@@ -147,6 +170,10 @@
 
     .Column:nth-child(2) {
       width: 70%;
+
+      @media (max-width: 1024px) {
+        width: 60%;
+      }
     }
   }
 }
@@ -171,4 +198,8 @@
   /* gradient */
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.332812) 42.71%, rgba(0, 0, 0, 0) 100%);
   mix-blend-mode: luminosity;
+
+  @media (max-width: 1024px) {
+    font-size: 12px;
+  }
 }
