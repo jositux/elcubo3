@@ -2,6 +2,7 @@ import React, { Fragment, useEffect } from 'react';
 import ButtonHome from 'components/Season3/Shared/Button/ButtonHome';
 import Links from 'constants/Links';
 import VideoIntro from 'components/Season3/VideoIntro/VideoIntro';
+import Hero from 'components/Season3/Season/Desktop/Hero';
 import Credits from 'components/Season3/Season/Credits/Credits';
 import styles from './season3.slider.mobile.module.scss';
 import { useRef } from 'react';
@@ -19,12 +20,7 @@ export const SlidersMobile = ({ isLoggedIn, onGuest }) => {
   return (
     <Fragment>
 
-      <div id="VideoContainerMobile" className={styles.VideoContainer}>
-        <div id='LogoTeaser' className={styles.LogoTeaser}>
-          <img src="/images/season3/logo-caminos-de-jordan.png" />
-        </div>
-        <VideoIntro url={"/videos/season3.mp4"} />
-      </div>
+
 
       <div className={styles.SlidersContainer}>
 
