@@ -32,32 +32,6 @@ export const Hero = ({ video }) => {
     return false;
   }
 
-  useEffect(() => {
-
-    const observerOptions = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.75
-    };
-
-    function observerCallback(entries, observer) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.replace('fadeBlurOut', 'fadeBlurIn');
-        }
-        else {
-          //entry.target.classList.replace('fadeIn_test', 'fadeOut_test');
-        }
-      });
-    }
-
-    const fadeElms = document.querySelectorAll('.fadeBlur');
-
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-    fadeElms.forEach(el => observer.observe(el));
-
-  }, [])
-
 
 
   return (
