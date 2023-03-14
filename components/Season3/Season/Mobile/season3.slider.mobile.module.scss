@@ -1,63 +1,3 @@
-.SlidersContainer {
-  //overflow-x: hidden;
-  padding: 0;
-  margin: 0;
-  /*overflow-y: scroll;
-  scroll-behavior: smooth;*/
-  margin-top: -5px;
-}
-
-.VideoContainer {
-  width: 100%;
-  height: auto;
-  position: relative;
-  background-size: cover;
-
-  @media screen and (max-width: 1024px) and (orientation: landscape) {
-    height: 100vh;
-  }
-
-}
-
-.LogoTeaser {
-  position: absolute;
-  left: 30px;
-  top: 25px;
-  z-index: 11;
-
-  img {
-    width: 120px;
-  }
-}
-
-.ButtonTeaser {
-  position: absolute;
-  bottom: 10%;
-  right: 0;
-  margin-right: 30px;
-  padding-right: 25px;
-  text-decoration: none;
-  background-image: url("/images/season3/icon-play-teaser-mobile.svg");
-  background-repeat: no-repeat;
-  background-position: 100% 13px;
-  font-family: $elcubo3_font_subtitle;
-  font-weight: 300;
-  line-height: 130%;
-  display: flex;
-
-  span {
-    text-transform: uppercase;
-    color: #ffffff;
-    font-size: 20px;
-    margin-right: 0px;
-    margin-top: 12px;
-  }
-
-  img {
-    width: 40px;
-  }
-}
-
 .Images {
   width: 100vw;
   //height: 100vh;
@@ -87,6 +27,14 @@
     text-align: center;
     margin-top: 30px;
     padding: 0 30px;
+
+    @media screen and (max-width: 540px) and (orientation: portrait) {
+      button {
+        width: 100%;
+      }
+    }
+
+
 
     a {
       font-size: 20px;
