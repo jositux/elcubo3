@@ -28,7 +28,15 @@
   opacity: 1;
 }
 
+
+/* Season 3 */
 #videoContainer .plyr__video-wrapper,
-#videoContainer .plyr {
+#videoContainer .plyr,
+#videoContainerIntro .plyr__video-wrapper,
+#videoContainerIntro .plyr {
   height: auto !important;
+}
+
+#videoContainer .plyr__controls {
+  display: none !important;
 }
