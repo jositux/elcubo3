@@ -27,6 +27,11 @@ export const VideoPlayerWrapper = styled.div`
     align-items: center;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 
+    @media screen and (max-width: 1024px) {
+      top: 30px;
+      left: 20px;
+    }
+
     & span {
       color: white;
       margin-left: 10px;
@@ -131,6 +136,12 @@ export const VideoPlayerWrapper = styled.div`
     top: 80px;
     z-index: 100;
     margin-top: 0;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 2rem;
+      top: 60px;
+      left: 30px;
+    }
   }
 
   .plyr {
@@ -156,9 +167,11 @@ export const VideoPlayerWrapper = styled.div`
   cursor:none !important;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
   .plyr--video .plyr__controls {
     padding-bottom: 62px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 

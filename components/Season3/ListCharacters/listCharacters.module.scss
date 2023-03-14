@@ -25,6 +25,12 @@
   bottom: 130px;
   width: 280px;
 
+  @media screen and (max-width: 1024px) {
+    top: 40px;
+    right: 100px;
+    bottom: auto;
+  }
+
   .row {
     display: flex;
     gap: 10px;
