@@ -25,7 +25,7 @@
   bottom: 130px;
   width: 280px;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1024px) and (orientation:landscape) {
     top: 40px;
     right: 100px;
     bottom: auto;
@@ -310,7 +310,12 @@ a.buttonInfoInactive {
 
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 1024px) and (orientation:landscape) {
+      bottom: auto;
+      top: 240px;
+    }
+
+    @media (max-width: 900px) and (orientation:portrait) {
       bottom: 20px;
     }
 
