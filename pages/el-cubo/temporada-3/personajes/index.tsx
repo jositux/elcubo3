@@ -234,7 +234,7 @@ const Personajes = ({ text }) => {
 
       {
         query.ref === "init" &&
-        <div id="videoContainer">
+        <div id="videoContainerIntro">
           <FadeModal
             showModal={openVideo}
             //onOpenModal={handleOpenInteractive}
