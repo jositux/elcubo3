@@ -9,6 +9,7 @@ import { SlidersDesktop } from 'components/Season3/Season/Desktop/Sliders';
 import { SlidersMobile } from 'components/Season3/Season/Mobile/Sliders';
 import Header from 'components/Season3/Header/Header';
 import PaneLogin from 'components/Season3/Shared/PaneLogin/PaneLogin';
+import Hero from 'components/Season3/Season/Desktop/Hero';
 
 
 const Season3 = () => {
@@ -62,7 +63,9 @@ const Season3 = () => {
 
       <div className={styles.Home}>
         <Header />
-
+        <div id="videoContainer">
+          <Hero video="496712" />
+        </div>
         <div className={styles.HomeMobile}><SlidersMobile isLoggedIn={isLoggedIn} onGuest={onGuest} /></div>
         <div className={styles.HomeDesktop}><SlidersDesktop isLoggedIn={isLoggedIn} onGuest={onGuest} /></div>
 

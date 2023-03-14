@@ -27,3 +27,8 @@
 .fadeIn_test {
   opacity: 1;
 }
+
+#videoContainer .plyr__video-wrapper,
+#videoContainer .plyr {
+  height: auto !important;
+}
