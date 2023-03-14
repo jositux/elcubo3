@@ -75,14 +75,6 @@ div.VideoArea {
   justify-content: flex-end;
 }
 
-/*
-.bg {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 0;
-}*/
 
 .ContentResizable {
   width: 100%;
@@ -125,6 +117,16 @@ div.VideoArea {
     width: 30%;
     float: left;
   }
+
+  @media (max-width: 991px) {
+    top: 25px;
+    left: 30px;
+
+    img {
+      width: 110px;
+    }
+  }
+
 }
 
 
@@ -144,6 +146,10 @@ div.VideoArea {
     @media (max-width: 920px) {
       right: 20px;
       bottom: 10px;
+    }
+
+    @media (max-width: 991px) {
+      top: 15px;
     }
   }
 }
