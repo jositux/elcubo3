@@ -26,7 +26,7 @@ const AudioModal = ({
 
   const position = (data.field_ec_time_action * 100 / duration).toFixed(2);
 
-  const slides = field_ec_gallery.split(',').map(img => {
+  const slides = field_ec_gallery.split('%%').map(img => {
     const imgA = img.split('|');
     if (imgA && imgA.length) {
       return {
