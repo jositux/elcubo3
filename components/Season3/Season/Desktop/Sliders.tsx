@@ -101,7 +101,7 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
     const observerOptions = {
       root: null,
       rootMargin: "0px",
-      threshold: .75
+      threshold: 0.50
     };
 
     function observerCallback(entries, observer) {
@@ -133,10 +133,11 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
       <div className={styles.SlidersContainer}>
         <div id='slider0' className={styles.ImagesDesktop}>
           <img id='ImgBG0' src="/images/season3/slider/0.jpg" className={styles.ImgBG1} />
-          <div id='Texto0' className={`${styles.TextContent} ${styles.TextContentRight} fade_test fadeOut_test`}>
-            <article>
-              <h1>Jordán fue próspero pero ahora se mantiene en una frágil realidad.</h1>
-              <p>A lo largo de su historia ha estado sumido en la violencia, la pobreza y el larguísimo mandato de una sola familia; y hoy quedan un poco más de 1000 habitantes.</p>
+          <div id='Texto0' className={`${styles.TextContent} ${styles.TextContentRight}`}>
+            <article className='fade_test fadeOut_test'>
+              <h1>Bienvenido y bienvenida a Jordán Sube, un pueblo con gente que resiste y sabe vivir</h1>
+
+
             </article>
           </div>
         </div>
@@ -144,7 +145,7 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
         <div id='slider1' className={styles.ImagesDesktop}>
           <img id='ImgBG1' src="/images/season3/slider/1.jpg" className={styles.ImgBG1} />
           <div id='Texto1' className={`${styles.TextContent} ${styles.TextContentLeft} fade_test fadeOut_test`}>
-            <article>
+            <article className='fade_test fadeOut_test'>
               <h1>Jordán fue próspero pero ahora se mantiene en una frágil realidad.</h1>
               <p>A lo largo de su historia ha estado sumido en la violencia, la pobreza y el larguísimo mandato de una sola familia; y hoy quedan un poco más de 1000 habitantes.</p>
             </article>
@@ -152,8 +153,8 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
         </div>
         <div id='slider2' className={styles.ImagesDesktop}>
           <img id='ImgBG2' src="/images/season3/slider/2.jpg" className={styles.ImgBG1} />
-          <div id='Texto2' className={`${styles.TextContent} ${styles.TextContentRight} fade_test fadeOut_test`}>
-            <article>
+          <div id='Texto2' className={`${styles.TextContent} ${styles.TextContentRight}`}>
+            <article className='fade_test fadeOut_test'>
               <h1>Viaja con nosotros <br />a este lugar. </h1>
               <p>Recorre sus caminos de la mano de personajes entrañables, explora sus historias al ritmo y en el orden que quieras. Completa la foto de Jordán con información adicional que te será revelada al final. </p>
             </article>
@@ -164,15 +165,17 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
           <img id='ImgBG3' src="/images/season3/slider/3.jpg" className={styles.ImgBG3} />
 
           <div className={styles.ButtonContainerContent}>
-            <h2 className='fade_test fadeOut_test'>Este viaje es una forma de entender<br />la propia realidad y recobrar la fuerza.</h2>
+            <article className='fade_test fadeOut_test'>
+              <h2>Este viaje es una forma de entender<br />la propia realidad y recobrar la fuerza.</h2>
 
-            <div className={styles.buttonPulse}>
+              <div className={`${styles.buttonPulse} fade_test fadeOut_test'`}>
 
-              {isLoggedIn
-                ? <ButtonHome url={Links.registerTemp2} text="Iniciar EL Viaje" />
-                : <ButtonHome type="button" onClick={onGuest} text="Iniciar El Viaje" />
-              }
-            </div>
+                {isLoggedIn
+                  ? <ButtonHome url={Links.registerTemp2} text="Iniciar EL Viaje" />
+                  : <ButtonHome type="button" onClick={onGuest} text="Iniciar El Viaje" />
+                }
+              </div>
+            </article>
           </div>
         </div>
 
