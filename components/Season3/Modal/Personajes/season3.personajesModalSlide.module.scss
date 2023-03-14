@@ -97,7 +97,15 @@
 .ContainerCharacter {
   height: 100vh;
   background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+
   //mix-blend-mode: luminosity;
+  .column {
+    // @media screen and (max-width: 1024px) {
+    position: absolute;
+    padding: 40px;
+    bottom: 0;
+    // }
+  }
 }
 
 
@@ -188,10 +196,10 @@
     padding: 15px 40px 15px 16px;
     position: relative;
     float: left;
-    margin-bottom: 40px;
+    //margin-bottom: 70px;
 
     @media only screen and (max-width: 680px) and (orientation : portrait) {
-      margin-bottom: 80px;
+      //margin-bottom: 80px;
     }
 
 
