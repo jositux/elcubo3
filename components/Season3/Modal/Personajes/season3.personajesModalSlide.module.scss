@@ -100,11 +100,11 @@
 
   //mix-blend-mode: luminosity;
   .column {
-    @media screen and (max-width: 1024px) {
-      position: absolute;
-      padding: 40px;
-      bottom: 0;
-    }
+    // @media screen and (max-width: 1024px) {
+    position: absolute;
+    padding: 40px;
+    bottom: 0;
+    // }
   }
 }
 
