@@ -8,6 +8,18 @@
   margin-top: -4px;
 }
 
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .imgPortrait {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  .imgLandscape {
+    display: none;
+  }
+}
+
 .Images:nth-child(1) {
 
   img {
@@ -19,9 +31,7 @@
     top: 0;
   }
 
-  @media screen and (max-width: 1024px) and (orientation: landscape) {
-    height: 100vh;
-  }
+
 
   .ButtonContainerTop {
     text-align: center;
@@ -45,6 +55,10 @@
   .TextContent {
     padding: 30px;
     color: #3C2807;
+
+    @media screen and (max-width: 1024px) and (orientation: landscape) {
+      padding: 20%;
+    }
 
     h1 {
       font-family: $elcubo3_font_title;
@@ -85,6 +99,10 @@
     color: #0E290E;
     padding: 70px 30px;
 
+    @media screen and (max-width: 1024px) and (orientation: landscape) {
+      padding: 20%;
+    }
+
     h1 {
       font-family: $elcubo3_font_title;
       font-size: 27px;
@@ -113,6 +131,11 @@
     width: 100%;
   }
 
+  .imgLandscape:nth-child(2) {
+    float: left;
+    margin-top: -4px;
+  }
+
   .SliderContent {
     position: absolute;
     top: 0;
@@ -121,6 +144,10 @@
   .TextContent {
     color: #0E290E;
     padding: 70px 30px;
+
+    @media screen and (max-width: 1024px) and (orientation: landscape) {
+      padding: 20%;
+    }
 
     h1 {
       font-family: $elcubo3_font_title;
@@ -148,6 +175,7 @@
 
     @media screen and (max-width: 1024px) and (orientation: landscape) {
       margin-top: 0;
+      padding: 20%;
     }
 
     h2 {
