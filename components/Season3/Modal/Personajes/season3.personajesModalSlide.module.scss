@@ -19,9 +19,11 @@
   width: 100%;
   transition: 0.8s all ease;
 
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 1024px) {
     max-width: 100%;
   }
+
+
 }
 
 .containerCover.open .container {
@@ -31,6 +33,10 @@
 .child {
   width: 100%;
   position: relative;
+
+  @media screen and (max-width: 1024px) {
+    position: fixed;
+  }
 }
 
 
@@ -120,7 +126,6 @@
   .ContainerCharacter {
     height: 100vh;
     background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
-
   }
 
   .t_close {
