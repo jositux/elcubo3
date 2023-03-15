@@ -110,11 +110,11 @@ div.VideoArea {
   position: absolute;
   z-index: 10;
   left: 90px;
-  bottom: 180px;
-  width: calc(100% - 180px);
+  bottom: 90px;
+  width: 30%;
 
   img {
-    width: 30%;
+    width: 100%;
     float: left;
   }
 

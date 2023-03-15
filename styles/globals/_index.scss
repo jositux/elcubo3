@@ -30,12 +30,46 @@
 
 
 /* Season 3 */
+
+
+
+
 #videoContainer .plyr__video-wrapper,
-#videoContainer .plyr,
 #videoContainerIntro .plyr__video-wrapper,
+#videoContainer .plyr,
 #videoContainerIntro .plyr {
+
+
+
   //height: auto !important;
-  height: calc(100vh - 90px) !important;
+  @media screen and (max-width:1024px) {
+    height: auto !important;
+  }
+
+  @media screen and (min-width: 1024px) {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 90px) !important;
+    padding-bottom: 0 !important;
+
+    overflow: hidden;
+
+    video {
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: calc(100vh - 90px) !important;
+      transform: translate(-50%, -50%);
+    }
+
+  }
+
+
+
+
 }
 
 #videoContainer .plyr__controls {
