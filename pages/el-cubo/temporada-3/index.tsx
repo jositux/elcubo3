@@ -6,6 +6,8 @@ import useDetectDevice from 'hooks/useDetectDevice';
 import AuthService from 'services/Auth';
 import disableScroll from 'disable-scroll';
 import { SlidersDesktop } from 'components/Season3/Season/Desktop/Sliders';
+import { SlidersDesktop2 } from 'components/Season3/Season/Desktop/Sliders2';
+
 import { SlidersMobile } from 'components/Season3/Season/Mobile/Sliders';
 import Header from 'components/Season3/Header/Header';
 import PaneLogin from 'components/Season3/Shared/PaneLogin/PaneLogin';
@@ -63,11 +65,11 @@ const Season3 = () => {
 
       <div className={styles.Home}>
         <Header />
-        <div id="videoContainer">
+        <div className="videoContainer" id="videoContainer">
           <Hero video="496712" />
         </div>
         <div className={styles.HomeMobile}><SlidersMobile isLoggedIn={isLoggedIn} onGuest={onGuest} /></div>
-        <div className={styles.HomeDesktop}><SlidersDesktop isLoggedIn={isLoggedIn} onGuest={onGuest} /></div>
+        <div className={styles.HomeDesktop}><SlidersDesktop2 isLoggedIn={isLoggedIn} onGuest={onGuest} /></div>
 
       </div>
     </Fragment>
