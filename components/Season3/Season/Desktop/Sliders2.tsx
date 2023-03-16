@@ -143,9 +143,11 @@ export const SlidersDesktop2 = ({ isLoggedIn, onGuest }) => {
       if (window.scrollY >= height3) {
         slider3.style.position = 'relative';
         whitespace.style.display = 'none';
+        slider3.style.zIndex = '10';
       }
       else {
         slider3.style.position = 'fixed';
+        slider3.style.zIndex = '-2';
         whitespace.style.display = 'block';
       }
 
