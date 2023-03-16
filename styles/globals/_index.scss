@@ -31,8 +31,27 @@
 
 /* Season 3 */
 
+#videoContainerIntro .plyr__video-wrapper,
+#videoContainerIntro .plyr {
+  @media screen and (min-width: 1024px) {
+    height: calc(100vh) !important;
 
+    video {
+      min-height: calc(100vh) !important;
+    }
+  }
+}
 
+#videoContainer .plyr__video-wrapper,
+#videoContainer .plyr {
+  @media screen and (min-width: 1024px) {
+    height: calc(100vh - 90px) !important;
+
+    video {
+      min-height: calc(100vh - 90px) !important;
+    }
+  }
+}
 
 #videoContainer .plyr__video-wrapper,
 #videoContainerIntro .plyr__video-wrapper,
@@ -52,7 +71,6 @@
     align-items: center;
     position: relative;
     width: 100%;
-    height: calc(100vh - 90px) !important;
     padding-bottom: 0 !important;
 
     overflow: hidden;
@@ -61,7 +79,6 @@
       top: 50%;
       left: 50%;
       min-width: 100%;
-      min-height: calc(100vh - 90px) !important;
       transform: translate(-50%, -50%);
     }
 
