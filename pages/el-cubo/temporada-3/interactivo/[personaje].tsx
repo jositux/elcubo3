@@ -6,10 +6,10 @@ import VideoModal from 'components/Season3/Interactive/Fade/Video/VideoModal';
 import Ending from 'components/Season3/Interactive/Ending/Ending';
 import ListCharacters from 'components/Season3/ListCharacters/ListCharacters';
 import RotateAdvice from 'components/Season3/Shared/RotateAdvice/RotateAdvice';
-
 import UrlUtils from 'utils/Url';
 import styles from './lineal.module.scss';
 import { rawFetch } from 'libs/fetcher';
+import HtmlParser from 'html-react-parser';
 
 const Personaje = (props) => {
   const {
@@ -44,7 +44,7 @@ const Personaje = (props) => {
     return {
       time: parseInt(i?.field_ec_time_action),
       url: i?.field_ec_thumb,
-      text: i?.field_ec_title
+      text: HtmlParser(i?.field_ec_title)
     }
   });
 
