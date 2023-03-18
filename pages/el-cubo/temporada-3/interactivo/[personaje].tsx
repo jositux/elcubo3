@@ -324,7 +324,7 @@ const Personaje = (props) => {
 export const getServerSideProps = async (context) => {
   const { params } = context;
   const { personaje } = params;
-  const dataRaw = await rawFetch('/api/v1/elcubo3/season/6679/interactive/all');
+  const dataRaw = await rawFetch('/api/v1/elcubo3/season/6743/interactive/all');
 
   const dataJson = await dataRaw.json();
   const filtteredData = dataJson.filter(d => personaje === d.field_ec_title);
