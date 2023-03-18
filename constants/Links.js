@@ -17,6 +17,12 @@ const guest = '/el-cubo/temporada-1/guest';
 const characters = '/el-cubo/temporada-1/personajes';
 const notFound = `/el-cubo/404`;
 
+const registerTemp3 = `${base_url}/login?ref=${elcubo_base_url}/el-cubo/temporada-3/personajes?ref=init`;
+const registerCharacters3 = `${base_url}/login?ref=${elcubo_base_url}/el-cubo/temporada-3/personajes/personajes?ref=init`;
+const logoutCharacters3 = `${base_url}/logout?ref=${elcubo_base_url}/el-cubo/temporada-3/personajes/`;
+const logoutTemp3 = `${base_url}/logout?ref=${elcubo_base_url}/el-cubo/temporada-3/`;
+
+
 const cronoReward = (character) => {
     const charName = NameUtils.getCharacterName(character);
     if (charName) {
@@ -37,5 +43,9 @@ export default {
     logoutTemp2,
     logoutCharacters,
     logoutSelector,
+    registerTemp3,
+    registerCharacters3,
+    logoutCharacters3,
+    logoutTemp3,
     profile
 };

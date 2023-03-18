@@ -44,7 +44,7 @@ const PaneLogin = ({ isActive, onClose, isMobile }) => {
             Puedes realizar la experiencia sin registrarte, pero si te registras obtienes muchas ventajas como poder salir y continuar con la experiencia cuando desees, desbloquear recompensas y acceder al nivel final para desvelar la historia al completo.
           </p>
           <div className={styles.Buttons}>
-            <ButtonModal url={Links.register} text="Registrarme" />
+            <ButtonModal url={Links.registerTemp3} text="Registrarme" />
             <Link url="/el-cubo/temporada-3/personajes?ref=init" text="En otro momento" type="a" />
           </div>
         </div>

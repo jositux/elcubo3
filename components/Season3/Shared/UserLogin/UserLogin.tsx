@@ -9,20 +9,20 @@ const UserLogin = () => {
 
   return (
     <div className={styles.LoginRegister}>
-      {user 
+      {user
         ?
-          <>
-            Hola,<a href={Links.profile} > {user ? user.full_name.split(' ')[0] : null}</a> | <a href={Links.logoutTemp2}>Salir</a>
-          </>
+        <>
+          Hola,<a href={Links.profile} > {user ? user.full_name.split(' ')[0] : null}</a> | <a href={Links.logoutTemp3}>Salir</a>
+        </>
         : <div className={styles.menuContainer}>
-            <a className={styles.LoginRegister} href={Links.registerCharacters}>
-              Ingreso
-            </a>
-            <div className={styles.separadorLoginRegister}></div>
-            <a className={styles.LoginRegister} href={Links.registerCharacters}>
-              Registro
-            </a>
-          </div>
+          <a className={styles.LoginRegister} href={Links.registerCharacters3}>
+            Ingreso
+          </a>
+          <div className={styles.separadorLoginRegister}></div>
+          <a className={styles.LoginRegister} href={Links.registerCharacters3}>
+            Registro
+          </a>
+        </div>
       }
     </div>
   );
