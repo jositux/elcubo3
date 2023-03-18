@@ -20,6 +20,62 @@ const ModalVideo = dynamic(() => import('react-modal-video'), { ssr: false });
 
 const timeline = () => {
 
+
+  const [juanPercent, setJuanPercent] = useState(0);
+  const [guillermoPercent, setGuillermoPercent] = useState(0);
+  const [yennyPercent, setYennyPercent] = useState(0);
+  const [soledadPercent, setSoledadPercent] = useState(0);
+  const [diegoPercent, setDiegoPercent] = useState(0);
+  const characters = [
+    {
+      name: 'soledad'
+    },
+    {
+      name: 'diego'
+
+    },
+    {
+      name: 'juan'
+
+    },
+    {
+      name: 'yenny'
+
+    },
+    {
+      name: 'guillermo'
+    },
+  ];
+
+  useEffect(() => {
+    characters.forEach(c => {
+      let data = JSON.parse(localStorage.getItem(`'${c.name}'`));
+
+      if (data) {
+        switch (c.name) {
+          case 'juan':
+            setJuanPercent(data.percent);
+            break;
+          case 'guillermo':
+            setGuillermoPercent(data.percent);
+            break;
+          case 'yenny':
+            setYennyPercent(data.percent);
+            break;
+          case 'diego':
+            setDiegoPercent(data.percent);
+            break;
+          case 'soledad':
+            setSoledadPercent(data.percent);
+            break;
+          default:
+            break;
+        }
+      }
+    });
+
+  }, [])
+
   const imagenes1 = [
     '/images/season3/timeline/gallery/1/1-960.jpg',
     '/images/season3/timeline/gallery/1/2-960.jpg',
@@ -151,6 +207,13 @@ const timeline = () => {
 
         <a href="/el-cubo/temporada-3/personajes?ref=view" className={styles.Back} >
           <Back /> <span>Volver</span>
+          {
+
+            /* (juanPercent === 100 && guillermoPercent === 100 && yennyPercent === 100 && soledadPercent === 100 && diegoPercent === 100 && timeline) ?
+               <h2>finalisima</h2> :
+               ''
+ */
+          }
         </a>
 
         <div className={styles.Timeline}>
