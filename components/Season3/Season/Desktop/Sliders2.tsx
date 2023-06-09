@@ -3,9 +3,17 @@ import ButtonHome from 'components/Season3/Shared/Button/ButtonHome';
 import Credits from 'components/Season3/Season/Credits/Credits';
 
 import styles from './season3.slider2.desktop.module.scss';
+import { useRouter } from 'next/router';
 
 
 export const SlidersDesktop2 = ({ isLoggedIn, onGuest }) => {
+
+  const router = useRouter();
+
+  let phrase_1 =
+    router.locale === "en"
+      ? "Welcome to Jordan Sube, a town with people who resists  and knows how to live"
+      : "Bienvenido y bienvenida a Jordán Sube, un pueblo con gente que resiste y sabe vivir.";
 
 
   useEffect(() => {
@@ -173,7 +181,7 @@ export const SlidersDesktop2 = ({ isLoggedIn, onGuest }) => {
           <img id='ImgBG0' src="/images/season3/slider/0.jpg" className={styles.ImgBG0} />
           <div id='Texto0' className={`${styles.TextContent} ${styles.TextContentRight}`}>
             <article>
-              <h1>Bienvenido y bienvenida a Jordán Sube, un pueblo con gente que resiste y sabe vivir.</h1>
+              <h1>{phrase_1}</h1>
             </article>
           </div>
         </div>

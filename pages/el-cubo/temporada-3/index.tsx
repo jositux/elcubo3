@@ -13,6 +13,8 @@ import HeaderSeason from 'components/Season3/Header/HeaderSeason';
 import PaneLogin from 'components/Season3/Shared/PaneLogin/PaneLogin';
 import Hero from 'components/Season3/Season/Desktop/Hero';
 
+import { useRouter } from 'next/router';
+
 
 const Season3 = () => {
 
