@@ -69,6 +69,7 @@ const VideoPlayer = ({
       //  forced: true,
       //  onChange: (e) => updateQuality(e),
       //},
+
       i18n: {
         restart: 'Restart',
         rewind: 'Retroceder {seektime} seg',
@@ -83,8 +84,8 @@ const VideoPlayer = ({
         volume: 'Volumen',
         mute: 'Silenciar',
         unmute: 'Activar Sonido',
-        enableCaptions: 'Enable captions',
-        disableCaptions: 'Disable captions',
+        enableCaptions: 'Habilitar Subtítulos',
+        disableCaptions: 'Deshabilitar Subtítulos',
         enterFullscreen: 'Enter fullscreen',
         exitFullscreen: 'Exit fullscreen',
         frameTitle: 'Player for {title}',
@@ -120,7 +121,7 @@ const VideoPlayer = ({
         'airplay',
         'fullscreen',
       ],
-      captions: { active: true, update: true, language: 'es' },
+      captions: { active: true },
       settings: ['quality'],
     });
 
@@ -135,6 +136,8 @@ const VideoPlayer = ({
       window.hls = hls;
 
       const { wrapper, container } = playerRef.current.elements;
+
+      playerRef.current.captions.active = true;
       // Tap Support
       if (container) {
         if (!container._clickListener) {
