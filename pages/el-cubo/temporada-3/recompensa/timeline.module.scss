@@ -194,6 +194,8 @@
     }
   }
 
+
+
   @media only screen and (max-width: 680px) and (orientation: portrait) {
     min-height: 120vh;
   }
@@ -2360,9 +2362,11 @@
       }
 
       h1 {
-        font-size: 25px;
+        font-size: 22px;
         max-width: 400px;
         color: #3C2807;
+        padding-left: 30px;
+        padding-right: 30px;
       }
 
       p {
@@ -2404,6 +2408,10 @@
   z-index: 2;
   left: 60px;
   top: 60px;
+  @media only screen and (max-width: 1024px) {
+    left: 30px;
+    top: 30px;
+  }
   font-family: $elcubo3_font_subtitle;
   font-weight: 300;
   background: rgba(0, 0, 0, 0.7);
@@ -2427,4 +2435,25 @@
 
 .Avatar {
   position: relative;
+}
+
+
+
+// Mobile imgs
+@media only screen and (max-width: 1024px) {
+  .SitePicture:not(.SitePictureMobile) {
+    display: none;
+  }
+  .SitePicture.SitePictureMobile {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .SitePicture.SitePictureMobile {
+    display: none;
+  }
+  .SitePicture:not(.SitePictureMobile) {
+    display: block;
+  }
 }

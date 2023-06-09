@@ -1,11 +1,8 @@
 import React, { Fragment, useEffect } from 'react';
 import ButtonHome from 'components/Season3/Shared/Button/ButtonHome';
 import Links from 'constants/Links';
-import VideoIntro from 'components/Season3/VideoIntro/VideoIntro';
-import Hero from 'components/Season3/Season/Desktop/Hero';
 import Credits from 'components/Season3/Season/Credits/Credits';
 import styles from './season3.slider.mobile.module.scss';
-import { useRef } from 'react';
 
 
 
@@ -53,14 +50,16 @@ export const SlidersMobile = ({ isLoggedIn, onGuest }) => {
 
           <div className={styles.SliderContent}>
             <div className={styles.ButtonContainerTop}>
-              {isLoggedIn
+              {/*isLoggedIn
                 ? <ButtonHome url={Links.register} text="Iniciar experiencia" />
                 : <ButtonHome
                   type="button"
                   onClick={onGuest}
                   text="Iniciar experiencia"
                 />
-              }
+
+              <ButtonHome url={"/el-cubo/temporada-3/personajes?ref=init"} text="Iniciar EL Viaje" />  */}
+
             </div>
             <div className={styles.TextContent}>
               <article className='fade_test fadeOut_test'>
@@ -99,25 +98,28 @@ export const SlidersMobile = ({ isLoggedIn, onGuest }) => {
 
             <div className={styles.TextContent}>
               <article className='fade_test fadeOut_test'>
-                <h1>Viaja con nosotros a este lugar.</h1>
-                <p>Recorre sus caminos de la mano de personajes entrañables, explora sus historias al ritmo y en el orden que quieras. Completa la foto de Jordán con información adicional que te será revelada al final.</p>
+                <h1>Viaja con nosotros <br />a este lugar. </h1>
+                <p>Recorre sus caminos de la mano de personajes entrañables, explora sus historias al ritmo y en el orden que quieras. Completa la foto de Jordán con información adicional que te será revelada al final. </p>
               </article>
             </div>
 
           </div>
 
           <div className={styles.ButtonContainerBottom}>
-            <article className='fade_test fadeOut_test'>
+            <article className=''>
               <h2>Este viaje es una forma de entender la propia realidad y recobrar la fuerza.</h2>
 
-              {isLoggedIn
+              {/*isLoggedIn
                 ? <ButtonHome url={Links.registerTemp2} text="Iniciar experiencia" />
                 : <ButtonHome
                   type="button"
                   onClick={onGuest}
                   text="Iniciar experiencia"
                 />
-              }
+            */}
+              <div className={`${styles.buttonPulse}`}>
+                <ButtonHome url={"/el-cubo/temporada-3/personajes?ref=init"} text="Iniciar EL Viaje" />
+              </div>
             </article>
           </div>
 

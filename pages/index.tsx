@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-//import Header from 'components/Header/Header';
 import Header from 'components/Season3/Header/Header';
 import Footer from 'components/Footer/Footer';
 import Social from 'components/Season2/Shared/Social/Social';
@@ -61,9 +60,9 @@ const Home = () => {
                 ¿Qué sucedió para pasar de la
                 prosperidad a ser un pueblo fantasma?</p>
               <ul>
-                <li>
-                  {<YoutubeModal videoId="2oxfBiKm-II" />}
-                </li>
+                {<li>
+                  {<YoutubeModal videoId="fELuoUl2L-A" />}
+                </li>}
                 <li>
                   <Social season="3" />
                 </li>
@@ -170,18 +169,19 @@ const Home = () => {
               <div className={styles.columnImg}>
                 <img src="/images/season3/awards/tal2.png" />
               </div>
-              <div c lassName={styles.columnText}>
+              <div className={styles.columnText}>
                 <h3>Premios TAL 2022</h3>
                 <p>Finalista Categoría 'Narrativas Transmedia' / <br />El Cubo: El Inquisidor </p>
               </div>
             </article>
             <article className={styles.awardRow}>
               <div className={styles.columnImg}>
-                <img src="/images/season3/awards/horizon.png" />
+                <img src="/images/season3/awards/horizon-best.png" />
               </div>
               <div className={styles.columnText}>
                 <h3>Horizon Interactive Awards</h3>
-                <p> Ganador Categoría  'Websites - Experimental / New Technology' / El Cubo: El Inquisidor </p>
+                <p>Ganador Mejor Categoría 'Sitios Web - Experimentales / Nuevas Tecnologías' /<br /> El
+                  Cubo: El Poder</p>
               </div>
             </article>
           </div>

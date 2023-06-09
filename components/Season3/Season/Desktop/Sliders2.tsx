@@ -1,14 +1,12 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react';
 import ButtonHome from 'components/Season3/Shared/Button/ButtonHome';
 import Credits from 'components/Season3/Season/Credits/Credits';
-import Links from 'constants/Links';
-import Footer from 'components/Footer/Footer';
-
 
 import styles from './season3.slider2.desktop.module.scss';
 
 
 export const SlidersDesktop2 = ({ isLoggedIn, onGuest }) => {
+
 
   useEffect(() => {
 
@@ -38,10 +36,12 @@ export const SlidersDesktop2 = ({ isLoggedIn, onGuest }) => {
 
 
   const [scrollTop, setScrollTop] = useState(0);
+  const [heightScroll, setHeightScroll] = useState(0);
 
   useEffect(() => {
     const handleScroll = (event) => {
       setScrollTop(window.scrollY);
+      setHeightScroll(window.innerHeight);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -61,7 +61,7 @@ export const SlidersDesktop2 = ({ isLoggedIn, onGuest }) => {
     const slider0 = document.querySelector('#slider0') as HTMLElement;
     const ImgBG0 = document.querySelector('#ImgBG0') as HTMLElement;
     const Texto0 = document.querySelector('#Texto0') as HTMLElement;
-    const height0 = window.innerHeight;//videoContainer.offsetHeight + headerHeigth;
+    const height0 = heightScroll;//videoContainer.offsetHeight + headerHeigth;
 
     const slider1 = document.querySelector('#slider1') as HTMLElement;
     const ImgBG1 = document.querySelector('#ImgBG1') as HTMLElement;
@@ -85,7 +85,7 @@ export const SlidersDesktop2 = ({ isLoggedIn, onGuest }) => {
 
 
     const getPosY = () => {
-      console.log('scroll' + window.scrollY);
+      //console.log('scroll' + window.scrollY);
       //console.log(height1);
 
       if (window.scrollY <= headerHeigth) {
@@ -161,7 +161,7 @@ export const SlidersDesktop2 = ({ isLoggedIn, onGuest }) => {
 
 
 
-  }, [])
+  }, [heightScroll])
 
 
 
@@ -173,7 +173,7 @@ export const SlidersDesktop2 = ({ isLoggedIn, onGuest }) => {
           <img id='ImgBG0' src="/images/season3/slider/0.jpg" className={styles.ImgBG0} />
           <div id='Texto0' className={`${styles.TextContent} ${styles.TextContentRight}`}>
             <article>
-              <h1>Bienvenido y bienvenida a Jordán Sube, un pueblo con gente que resiste y sabe vivir</h1>
+              <h1>Bienvenido y bienvenida a Jordán Sube, un pueblo con gente que resiste y sabe vivir.</h1>
             </article>
           </div>
         </div>
@@ -182,8 +182,8 @@ export const SlidersDesktop2 = ({ isLoggedIn, onGuest }) => {
           <img id='ImgBG1' src="/images/season3/slider/1.jpg" className={styles.ImgBG1} />
           <div id='Texto1' className={`${styles.TextContent} ${styles.TextContentLeft}`}>
             <article>
-              <h1>Jordán fue próspero pero ahora se mantiene en una frágil realidad.</h1>
-              <p>A lo largo de su historia ha estado sumido en la violencia, la pobreza y el larguísimo mandato de una sola familia; y hoy quedan un poco más de 1000 habitantes.</p>
+              <h1>Jordán fue próspero, pero ahora convive en una frágil realidad.</h1>
+              <p>A lo largo de su historia, ha estado sumido en la violencia, la pobreza y el extenso mandato de una sola familia. Hoy quedan poco más de 1.000 habitantes.</p>
             </article>
           </div>
         </div>
@@ -193,7 +193,7 @@ export const SlidersDesktop2 = ({ isLoggedIn, onGuest }) => {
           <div id='Texto2' className={`${styles.TextContent} ${styles.TextContentRight}`}>
             <article >
               <h1>Viaja con nosotros <br />a este lugar. </h1>
-              <p>Recorre sus caminos de la mano de personajes entrañables, explora sus historias al ritmo y en el orden que quieras. Completa la foto de Jordán con información adicional que te será revelada al final. </p>
+              <p>Recorre los Caminos de Jordán de la mano de personajes entrañables, explora sus historias en el orden y al ritmo que quieras, y completa la foto del pueblo con información que será revelada al final de esta travesía. </p>
             </article>
           </div>
         </div>
@@ -207,11 +207,7 @@ export const SlidersDesktop2 = ({ isLoggedIn, onGuest }) => {
                 <h2>Este viaje es una forma de entender<br />la propia realidad y recobrar la fuerza.</h2>
 
                 <div className={`${styles.buttonPulse}`}>
-
-                  {isLoggedIn
-                    ? <ButtonHome url={Links.registerTemp2} text="Iniciar EL Viaje" />
-                    : <ButtonHome type="button" onClick={onGuest} text="Iniciar El Viaje" />
-                  }
+                  <ButtonHome url={"/el-cubo/temporada-3/personajes?ref=init"} text="Iniciar EL Viaje" />
                 </div>
               </article>
             </div>

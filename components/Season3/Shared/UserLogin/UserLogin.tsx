@@ -12,14 +12,14 @@ const UserLogin = () => {
       {user
         ?
         <>
-          Hola,<a href={Links.profile} > {user ? user.full_name.split(' ')[0] : null}</a> | <a href={Links.logoutTemp3}>Salir</a>
+          Hola,<a href={Links.profile} > {user ? user.full_name.split(' ')[0] : null}</a> | <a href={Links.logout}>Salir</a>
         </>
         : <div className={styles.menuContainer}>
-          <a className={styles.LoginRegister} href={Links.registerCharacters3}>
+          <a className={styles.LoginRegister} href={Links.register_base}>
             Ingreso
           </a>
           <div className={styles.separadorLoginRegister}></div>
-          <a className={styles.LoginRegister} href={Links.registerCharacters3}>
+          <a className={styles.LoginRegister} href={Links.register_base}>
             Registro
           </a>
         </div>

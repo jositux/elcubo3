@@ -2,9 +2,19 @@
   margin: 0 auto;
   position: relative;
   z-index: 2;
+  img {
+    height: 100vh;
+    object-fit: cover;
+  }
 }
 
 .slick-next:before,
 .slick-prev:before {
   color: #000;
 }
+
+.d-mobile img,
+.d-desktop img {
+height: 100vh;
+}
+

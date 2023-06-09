@@ -63,6 +63,7 @@
       circle {
         fill: white;
       }
+      cursor: pointer;
     }
   }
 }
@@ -116,11 +117,13 @@
 .Content {
   position: absolute;
   z-index: 3;
-  bottom: 80px;
+  bottom: 0;
   width: 100%;
 
   .AudioContent {
-    padding: 0 80px;
+    padding: 40px 80px 40px;
+    background: rgb(237,194,95);
+background: linear-gradient(0deg, rgba(237,194,95,1) 0%, rgba(0,0,0,0) 80%);
   }
 
   h2 {

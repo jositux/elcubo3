@@ -41,9 +41,9 @@ const AudioModal = ({
   useEffect(() => {
     if (audioPlayer) {
       if (open) {
-        audioPlayer.play();
+        //audioPlayer.play();
       } else {
-        audioPlayer.pause();
+        //audioPlayer.pause();
       }
       audioPlayer.on('finish', () => {
         setOpen(false);

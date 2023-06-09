@@ -5,7 +5,7 @@ import PersonajeArrow from 'components/Season3/Svg/PersonajeArrow';
 import Back from 'components/Season3/Svg/Back';
 import VideoFadeModal from 'components/Season3/Modal/VideoFadeModal';
 
-const Ending = ({ name, onButtonClicked }) => {
+const Ending = ({ name }) => {
 
   const [isOpen, setIsOpen] = useState(false);
   const [video, setVideo] = useState('482203');
@@ -204,14 +204,16 @@ const Ending = ({ name, onButtonClicked }) => {
                         <div className={styles.Ending}>
                           <h2>¡Has terminado tu camino con {name}!</h2>
                           <p>
-                            ¡Llegaste al final! Sin embargo, este no es el verdadero final. Ahora podrás acceder a la recompensa. Una línea del tiempo que te contará todos los detalles de la historia de Jordán, artículos, investigaciones, fotos… gracias por recorrer los caminos hermosos y difíciles de la cordillera colombiana.
+                          ¡Llegaste al final! Sin embargo, aún no termina el camino. Ahora podrás acceder a la recompensa: una
+línea de tiempo con artículos, investigaciones y fotos que te contarán todos los detalles de Jordán.
+Gracias por recorrer los hermosos y difíciles caminos de la cordillera colombiana.
                           </p>
 
                           <div className={styles.EndingContent}>
 
                             {/*<a onClick={handleOnPlayVideo}>Ver confesionario <PersonajeArrow /></a>*/}
 
-                            <a href="/el-cubo/temporada-3/recompensa/timeline">
+                            <a href="/el-cubo/temporada-3/recompensa">
                               Ver infografía <PersonajeArrow />
                             </a>
                           </div>

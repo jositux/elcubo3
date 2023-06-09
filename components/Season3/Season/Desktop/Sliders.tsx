@@ -1,7 +1,6 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react';
 import ButtonHome from 'components/Season3/Shared/Button/ButtonHome';
 import Credits from 'components/Season3/Season/Credits/Credits';
-import Hero from 'components/Season3/Season/Desktop/Hero';
 import Links from 'constants/Links';
 import Footer from 'components/Footer/Footer';
 
@@ -47,9 +46,7 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
           <img id='ImgBG0' src="/images/season3/slider/0.jpg" className={styles.ImgBG1} />
           <div id='Texto0' className={`${styles.TextContent} ${styles.TextContentRight}`}>
             <article className='fade_test fadeOut_test'>
-              <h1>Bienvenido y bienvenida a Jordán Sube, un pueblo con gente que resiste y sabe vivir</h1>
-
-
+              <h1>Bienvenido y bienvenida a Jordán Sube, un pueblo con gente que resiste y sabe vivir.</h1>
             </article>
           </div>
         </div>
@@ -82,10 +79,12 @@ export const SlidersDesktop = ({ isLoggedIn, onGuest }) => {
 
               <div className={`${styles.buttonPulse} fade_test fadeOut_test'`}>
 
-                {isLoggedIn
+                {/*isLoggedIn
                   ? <ButtonHome url={Links.registerTemp2} text="Iniciar EL Viaje" />
                   : <ButtonHome type="button" onClick={onGuest} text="Iniciar El Viaje" />
-                }
+  */}
+
+                <ButtonHome url={"/personajes?ref=init"} text="Iniciar EL Viajess" />
               </div>
             </article>
           </div>

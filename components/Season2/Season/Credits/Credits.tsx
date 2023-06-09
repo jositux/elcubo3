@@ -23,10 +23,10 @@ const Credits = () => {
             <li>Luisa Fernanda Mayorga - <em>Productora General RTVCPlay</em></li>
             <li>Arnau Gifreu Castells - <em>Productor de contenidos interactivos de RTVCPlay</em></li>
             <li>Camilo Galvis Guerra - <em>Realizador audiovisual RTVCPlay</em></li>
-           
+
           </ul>
-          <br/>
-          
+          <br />
+
         </div>
 
         <div className={styles.Column2}>
@@ -49,7 +49,7 @@ const Credits = () => {
         <div className={styles.Column3}>
           <h2>Equipo de Dirección</h2>
           <ul>
-          <li>Gustavo Salcedo - <em>Idea Original - Libretos</em></li>
+            <li>Gustavo Salcedo - <em>Idea Original - Libretos</em></li>
             <li>Juan Baquero Romero - <em>Director Creativo</em></li>
             <li>Mauricio Navas Talero – <em>Director y Show Runner</em></li>
             <li>Andrés Valencia – <em>Director</em></li>
@@ -205,7 +205,7 @@ const Credits = () => {
             <li>Ing. Guillermo Colotti – <em>React Developer</em></li>
             <li>Ing. Marcos Henning – <em>Drupal API</em></li>
             <li className={styles.SoundCredits}><a href="https://design.facebook.com/soundkitlicense/">Licencia de efectos de sonido<SoundCredits /></a>
-</li>
+            </li>
           </ul>
         </div>
 
@@ -220,8 +220,8 @@ const Credits = () => {
           </ul>
 
           <h3 className={styles.CreditsMinticTitle}>Este contenido fue financiado con recursos del Fondo Único de Tecnologías de la Información y las Comunicaciones de</h3>
-          <img className={styles.CreditsMinticImg} src="/images/rtvc/logo-mintic.png" />
-                  
+          <img className={styles.CreditsMinticImg} src="/images/rtvc/mintic.png" />
+
         </div>
 
 
@@ -229,7 +229,7 @@ const Credits = () => {
       <div className={styles.ColumnFinal}>
         Una producción por encargo de Valencia Producciones FX S.A.S<br />
         para RTVCPlay 2021
-        </div>
+      </div>
     </div>
   );
 }

@@ -23,7 +23,7 @@ const Header = () => {
             <Logo url="/" />
           </div>
           <div className={styles.LoginContainer}>
-            <UserLogin />
+            {/*<UserLogin />*/}
           </div>
         </div>
       </header>

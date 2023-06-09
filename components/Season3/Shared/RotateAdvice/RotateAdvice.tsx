@@ -11,7 +11,8 @@ const RotateAdvice = () => {
       <div>
         <img className={styles.iconSmart} src={'/images/rotate.gif'} />
         <p>
-          Para disfrutar mejor de la experiencia te invitamos a girar tu celular.
+          Para disfrutar mejor de la experiencia te invitamos a girar tu celular. <br />
+          <span>Asegúrate que la rotación automática de tu dispositivo esté activada.</span>
         </p>
       </div>
     </div>
