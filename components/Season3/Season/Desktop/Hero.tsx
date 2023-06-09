@@ -77,7 +77,7 @@ export const Hero = ({ video }) => {
                 }
               }*/
               >
-                <img src="/images/season3/logo-caminos-de-jordan.png" />
+                <img src="/images/season3/logo-caminos-de-jordanc.png" />
               </div>
               <ScrollDown />
             </div>

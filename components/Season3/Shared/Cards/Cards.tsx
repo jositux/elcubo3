@@ -65,7 +65,7 @@ export const Cards = ({ closeCards }) => {
               <div className={styles.CardContent1}>
                 <div className={styles.TextContent}>
                   <h1>1. selecciona un personaje</h1>
-                  <p>Debes elegir un personaje para iniciar la experiencia</p>
+                  <p>Debes elegir un personaje para iniciar la experiencia.</p>
                 </div>
                 <div className={styles.ButtonsContent}>
                   <button className={styles.ButtonPrevious} onClick={prevButtonChange} >
@@ -85,7 +85,7 @@ export const Cards = ({ closeCards }) => {
                 <div className={styles.CardContent2}>
                   <div className={styles.TextContent}>
                     <h1>2. cambia de personaje</h1>
-                    <p>Puedes cambiar de historia y personaje cuando quieras clicando en la línea de tiempo de cada personaje</p>
+                    <p>Puedes cambiar de historia cuando quieras haciendo clic en la línea de tiempo de cada personaje.</p>
                   </div>
                   <div className={styles.ButtonsContent}>
                     <button className={styles.ButtonPrevious} onClick={prevButtonChange} >
@@ -105,12 +105,11 @@ export const Cards = ({ closeCards }) => {
                   <div className={styles.CardContent3}>
                     <div className={styles.TextContent}>
                       <h1>3. Profundiza en la historia</h1>
-                      <p>Puedes profundizar en la historia de cada personaje a través de los hitos marcados en su línea de tiempo.</p>
+                      <p>Conoce los detalles en la vida de cada personaje a través de los hitos marcados en su línea de tiempo.<br /><br />
+                        ¡Bienvenido a Jordán Sube! Recuerda que una vez completes las cinco historias podrás acceder a contenido exclusivo.</p>
                     </div>
 
-                    <div className={styles.TextContent}>
-                      <p>¡Bienvenido a Jordán Sube!</p>
-                    </div>
+
                     <div className={styles.ButtonsContent}>
                       <button className={styles.ButtonPrevious} onClick={prevButtonChange} >
                         <ArrowPrevious />

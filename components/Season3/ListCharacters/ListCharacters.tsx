@@ -169,19 +169,19 @@ const ListCharacters = ({ char, percentParam, timeline }) => {
 
               <div className={styles.timeline}>
                 <span className={styles.line} />
-                <p>Fiesta de Santa Rosa</p>
+                <p>Fiesta de Santa Rosa<br />(Patrona de Jordán Sube)</p>
               </div>
 
-              <div className={`${styles.Info}`}>
-                {
 
-                  (juanPercent === 100 && guillermoPercent === 100 && yennyPercent === 100 && soledadPercent === 100 && diegoPercent === 100 && timeline)
-                    ? <a href="/el-cubo/temporada-3/recompensa/timeline" className={styles.buttonInfo}>
-                      VER INFOGRAFIA
-                    </a>
-                    : ''
-                }
-              </div>
+              {
+
+                (juanPercent === 100 && guillermoPercent === 100 && yennyPercent === 100 && soledadPercent === 100 && diegoPercent === 100 && timeline)
+                  ? <div className={`${styles.Info}`}><a href="/el-cubo/temporada-3/recompensa" className={styles.buttonInfo}>
+                    VER INFOGRAFIA
+                  </a></div>
+                  : ''
+              }
+
 
             </div>
 

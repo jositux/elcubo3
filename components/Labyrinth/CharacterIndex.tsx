@@ -11,7 +11,7 @@ const CharacterIndex = ({ bgImage, character, userData, onContinueClick }) => {
     >
       <div className="rotate">
         <div className="box">
-          <img src="https://thumbs.gfycat.com/ClosedDizzyAmericanavocet-size_restricted.gif" />
+          <img src="/images/smart.gif" />
           <p>
             Para disfrutar mejor de la experiencia te invitamos a girar tu celular.
           </p>
@@ -55,7 +55,7 @@ const CharacterIndex = ({ bgImage, character, userData, onContinueClick }) => {
                     <div className="col-left">
                       <a className="button-login cyan-dark button-quit" href={`/el-cubo/temporada-1/laberinto/${userData.lastNode.character}/${userData.lastNode.id}`}>
                         Ir donde quedé
-                    </a>
+                      </a>
                     </div>
                     <div className="col-right">
                       <div className="cover-link">

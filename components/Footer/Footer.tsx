@@ -185,7 +185,7 @@ const Footer = () => {
           <div className="OrFooter__ContactInfoFutureIsOurs-wp3gjy-6 dNaHdC">
             <div className="textFooterLine">
               <span>Este contenido fue financiado con recursos del Fondo Único de Tecnologías de la Información y las Comunicaciones de MinTic.</span>
-              <img alt="El futuro digitial es de todos" title="El futuro digitial es de todos" src="/images/rtvc/mintic.jpg" />
+              <img alt="El futuro digitial es de todos" title="El futuro digitial es de todos" src="/images/rtvc/mintic.png" />
             </div>
           </div>
 

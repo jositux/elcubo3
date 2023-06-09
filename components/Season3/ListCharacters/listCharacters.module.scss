@@ -188,8 +188,9 @@
     color: #FF6D4D;
     font-family: $elcubo3_font_subtitle;
     font-weight: 300;
-    text-align: right;
-    margin-right: -30px;
+    text-align: center;
+    margin-right: -200px;
+    line-height: 1.2;
   }
 }
 
@@ -200,11 +201,11 @@ a.buttonInfo {
   color: #E2B857;
   border: 1px solid #E2B857;
   font-size: 16px;
-  padding: 10px;
-  width: 80%;
+  padding: 10px 0;
+  width: 100%;
   text-align: center;
   float: right;
-  margin: 20px 0;
+  margin: 0px 0;
   background: #402A04;
   cursor: pointer;
   text-decoration: none;
@@ -221,11 +222,11 @@ a.buttonInfoInactive {
   color: #E2B857;
   border: 1px solid #E2B857;
   font-size: 16px;
-  padding: 10px;
-  width: 80%;
+  padding: 10px 0;
+  width: 100%;
   text-align: center;
   float: right;
-  margin: 20px 0;
+  margin: 0px 0;
   background: #402A04;
   text-decoration: none;
   opacity: .2;
@@ -275,7 +276,7 @@ a.buttonInfoInactive {
           color: #FF6D4D;
           font-family: $elcubo3_font_subtitle;
           font-weight: 300;
-          text-align: right;
+          text-align: center;
           margin-right: -23px;
         }
       }
@@ -319,5 +320,22 @@ a.buttonInfoInactive {
       bottom: 20px;
     }
 
+  }
+}
+
+
+
+
+.Info{
+  float: right;
+  width: 80%;
+  margin: 20px 0;
+  animation: pulse 2s infinite 3s cubic-bezier(0.5, 0, 0, 1);
+  box-shadow: 0 0 0 0 rgb(99, 81, 8);
+}
+
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 30px rgba(255, 255, 255, 0);
   }
 }

@@ -413,7 +413,11 @@ const VideoPlayer = ({
         poster={poster}
         autoPlay={autoPlay}
         playsInline
-      />
+      >
+        <track kind="captions" label="English" srcLang="en" src="/subs/guillermo.vtt"
+          default>
+        </track>
+      </video>
     </VideoPlayerWrapper>
   );
 };

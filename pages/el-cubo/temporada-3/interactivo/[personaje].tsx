@@ -19,7 +19,14 @@ const Personaje = (props) => {
     confesionario
   } = props;
 
-  console.log(interactivos)
+  const [audios, setAudios] = useState(null);
+
+  useEffect(() => {
+    setAudios({
+      click: new Audio('/audios/actions/click_1.mp3'),
+      alert: new Audio('/audios/season2/complete_success/Success2.mp3'),
+    });
+  }, []);
 
   let srcVideo = UrlUtils.getVideoUrl(episodio?.field_ec_asset_id);
   let duration = episodio?.field_ec_video_duration;
@@ -96,6 +103,9 @@ const Personaje = (props) => {
             if (parseInt(player.currentTime, 10) == i.field_ec_time_action) {
               if (!isActiveInteractive) {
                 openActiveInteractive();
+                if (audios?.alert) {
+                  audios.alert.play();
+                }
                 setInteractiveData(i);
                 switch (i.type) {
                   case 'ec3_interactive_audio':
@@ -209,23 +219,17 @@ const Personaje = (props) => {
     }
   }, [player])
 
-  const handleOnClickDashboard = () => {
-    let percent = JSON.parse(localStorage.getItem(`'${name}'`)).percent;
-    setPercentParam(percent);
-    //console.log('helllo ', percent);
-    setShowDashboardModal(true);
-  };
-
-  const handleOnCloseDashboard = () => {
-    setShowDashboardModal(false);
-    handlePlayVideo(true);
-  };
-
   const handleOnCloseGalleryModal = () => {
     handlePlayVideo(true);
+    if (audios?.click) {
+      audios.click.play();
+    }
   };
 
   const handleOnOpenSlideModal = () => {
+    if (audios?.click) {
+      audios.click.play();
+    }
     handlePlayVideo(false);
   };
 
@@ -233,6 +237,9 @@ const Personaje = (props) => {
     setIsActiveInteractive(false);
     setInteractiveData(null);
     handlePlayVideo(true);
+    if (audios?.click) {
+      audios.click.play();
+    }
   };
 
   const openActiveInteractive = () => {
@@ -269,7 +276,6 @@ const Personaje = (props) => {
           closeActiveInteractive={closeActiveInteractive}
           markers={markers}
           duration={duration}
-          onClickDashboardLineal={handleOnClickDashboard}
         >
           <ListCharacters
             char={name}
@@ -304,7 +310,7 @@ const Personaje = (props) => {
         duration={duration}
       />}
 
-      {videoEnded && <Ending name={title} onButtonClicked={handleOnClickDashboard} />}
+      {videoEnded && <Ending name={title} />}
 
     </div>
   );

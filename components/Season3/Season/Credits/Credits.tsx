@@ -10,12 +10,12 @@ const Credits = () => {
           <h2 >Este contenido fue financiado con recursos del Fondo Único de Tecnologías
             de la Información y las Comunicaciones de MinTic
           </h2>
-          <img className={styles.LogoMintic} alt="El futuro digitial es de todos" title="El futuro digitial es de todos" src="/images/season3/credits/mintic.jpg" />
+          <img className={styles.LogoMintic} alt="El futuro digitial es de todos" title="El futuro digitial es de todos" src="/images/season3/credits/mintic.png" />
           <br /><br /><br />
           <section className={styles.columnsCredits}>
             <div>
               <h2 >Una producción por encargo<br />de
-                DIECISEIS NUEVE SAS
+                Dieciséis9 Films SAS
 
               </h2>
               <img className={styles.LogoProduction} alt="El futuro digitial es de todos" title="El futuro digitial es de todos" src="/images/season3/credits/169.jpg" />
@@ -39,11 +39,13 @@ const Credits = () => {
               <ul>
                 <li>JUAN CARLOS BAQUERO<br /><em>Dirección general
                 </em></li>
-                <li>ARNAU GIFREU - CAMILO GALVIS <br /><em>Dirección de interactividad
-                </em></li>
+                <li>ARNAU GIFREU<br />
+                  CAMILO GALVIS <br /><em>Dirección de interactividad
+                  </em></li>
                 <li>JOSE FELIPE VARON GARCIA <br /><em>Dirección documental
                 </em></li>
-                <li>MARGARITA HERRERA SABOGAL <br /><em>Director y Show Runner</em></li>
+                <li>MARGARITA HERRERA SABOGAL <br /><em>Coordinación de investigación
+                </em></li>
 
                 <li>PAULA ANDREA ARIAS
                   <br /><em>Diseño de Producción
@@ -58,27 +60,26 @@ const Credits = () => {
                   JUAN CARLOS BAQUERO <br /><em> Guión interactividad
                   </em></li>
 
-                <li>CAROLINA VASQUEZ TRIANA<br />
+                <li>ARNAU GIFREU CASTELLS<br />
+                  CAROLINA VASQUEZ TRIANA<br />
                   JOSE FELIPE VARON GARCIA<br />
                   JUAN CARLOS BAQUERO<br />
-                  MARGARITA HERRERA SABOGAL<br /><em> Guión interactividad
+                  MARGARITA HERRERA SABOGAL<br /><em> Guión documental
                   </em></li>
 
-                <li> CAROLINA VASQUEZ TRIANA
-                  JUAN ANTONIO UNGAR
+                <li> CAROLINA VASQUEZ TRIANA <br />
+                  JUAN ANTONIO UNGAR <br />
                   MARIA ALEJANDRA ROA
                   <br /><em> Redacción textos narrativa web
                   </em></li>
 
-                <li> DIECISEIS NUEVE FILMS
-                  <em> <br />
-                  </em></li>
+
               </ul>
 
             </div>
 
             <div className={styles.Column2}>
-              <h2>Producción
+              <h2> Dieciséis9 Films SAS<br /><br />Producción
               </h2>
               <ul>
                 <li> DIANA PAOLA OLARTE PACHÓN <br /><em> Jefatura de producción
@@ -98,9 +99,7 @@ const Credits = () => {
                   <br /><em> Producción de campo segunda unidad
                   </em></li>
 
-                <li>YENNIFER CAMACHO
-                  <br /><em> Producción de campo segunda unidad
-                  </em></li>
+
               </ul>
 
             </div>
@@ -137,7 +136,7 @@ const Credits = () => {
                 <li>JULIAN GUILLERMO HERNANDEZ PEÑA
                   <br /><em>Asistencia de fotografía
                   </em></li>
-                <li>JUAN FELIPE CORREDOR QUIROGA
+                <li>JUAN FELIPE CORREDOR QUIROGA<br />
                   JULIÁN BARAYA CEBALLOS
                   <br /><em>Asistencia de fotografía</em></li>
 
@@ -159,7 +158,7 @@ const Credits = () => {
                 <li>LEONARDO SANCHEZ GIL <br />
                   LUIS FERNANDO TRIANA MEDINA<br />
                   OSCAR MAURICIO PULIDO<br />
-                  WILLIAM ALFREDO TRIANA MEDINA <br />
+                  WILLIAM ALFREDO TRIANA MEDINA
                   <br /><em>Sonido directo
                   </em></li>
                 <li>SERGIO MALALMA
@@ -198,11 +197,17 @@ const Credits = () => {
                 <li>RICARDO PEREZ
                   <br /><em>Producción de campo local
                   </em></li>
+                <li>NUBIA ORTIZ ORTIZ
+                  <br />
+                  SOFIA ORTIZ ORTIZ<br />
+                  PATRICIA ORTIZ ORTIZ<br />
+                  <em>Alimentación
+                  </em></li>
                 <li>ALVEIRO CASTRO<br />
                   BRYAN CASTRO<br />
-                  Transporte<br /><em>Transporte
+                  <em>Transporte
                   </em></li>
-                <li>ISABEL APARICIO
+                <li>ISABEL APARICIO<br />
                   <em>Alojamiento
                   </em></li>
 
@@ -235,13 +240,12 @@ const Credits = () => {
 
               <ul>
                 <li>Diego Sarmiento
-                  <br /><em>Editor conceptual
-                  </em></li>
+                </li>
                 <li>Guillermo Prada Monsalve
 
                 </li>
                 <li>Juan de Jesús Estévez
-                  <br /></li>
+                </li>
                 <li>Soledad Silva Rico
                 </li>
                 <li>Yenny Delgado Delgado</li>
@@ -267,7 +271,8 @@ const Credits = () => {
                 Agradecimientos a la agrupación Bacardí por la Interpretación de las obras
 
                 <li>Bella y Bonita -
-                  <em> Jorge Veloza </em></li>
+                  <em> Luis Arturo Cardenas
+                  </em></li>
                 <li>El Marranito -
                   <em> Los Doctores de la Carranga</em></li>
                 <li>La de Estrato 8 -
@@ -290,22 +295,14 @@ const Credits = () => {
                   <em> Vereda Tocayo Vargas </em></li>
                 <li>Falsa Enfermedad -
                   <em>Diego Alexander Sarmiento González</em></li>
-                <li>La de Estrato 8 -
-                  <em> Los Doctores de la Carranga </em></li>
-                <li>El Cuartetazo -
-                  <em> Mario A. Castillón Campos </em></li>
-                <li>El sinvergüenza -
-                  <em> Los Doctores de la Carranga </em></li>
-                <li>Doña Pepa -
-                  <em> D.R.A. </em></li>
-
               </ul>
               <br />
               <ul>
                 Agradecimiento a los autores de las obras
 
                 <li>La Prima -
-                  <em> La Prima </em></li>
+                  <em> Willy Quintero
+                  </em></li>
                 <li>La Ley -
                   <em> Heredero Carranga</em></li>
               </ul>
@@ -354,9 +351,9 @@ const Credits = () => {
 
                 <li>Alba liliana Forero Ferreira
                 </li>
-                <li>Juan Manuel sarmiento forero
+                <li>Juan Manuel Sarmiento Forero
                 </li>
-                <li>Jose Miguel sarmiento forero
+                <li>Jose Miguel Sarmiento Forero
                 </li>
               </ul>
             </div>
@@ -412,22 +409,26 @@ const Credits = () => {
                   <br /><em>Director RTVCPlay
 
                   </em></li>
+                <li>PILAR CUBILLOS CRUZ
+
+                  <br /><em>Productora general RTVCPlay
+                  </em></li>
                 <li>LUISA MAYORGA MAYORGA<br />
                   <em>Productora Ejecutiva RTVCPlay
                   </em></li>
-                <li>CAMILO GALVIS GUERRA
+                <li>CAMILO GALVIS GUERRA<br />
 
                   <em>Productor Creativo proyectos audiovisuales RTVCPlay
 
                   </em></li>
 
-                <li>ARNAU GIFREU
+                <li>ARNAU GIFREU<br />
 
                   <em>Productor Creativo proyectos interactivos RTVCPlay
 
                   </em></li>
 
-                <li>MARGARITA HERRERA SABOGAL
+                <li>MARGARITA HERRERA SABOGAL<br />
 
                   <em>Productora Delegada de Contenidos Originales de RTVCPlay
 
@@ -460,7 +461,7 @@ const Credits = () => {
                   <br />
                   <em>Desarrollador de sitios web Coordinación de TI RTVC.
                   </em></li>
-                <li>IVÁN DARÍO ROLDÁN
+                <li>IVÁN DARÍO ROLDÁN<br />
 
                   <em>Administrador infraestructura nube Coordinación de TI RTVC.
 

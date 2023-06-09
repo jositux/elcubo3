@@ -116,8 +116,8 @@
 
   @media (max-width: 1024px) {
     margin-top: 40px;
-    width: 320px;
-    height: 240px;
+    width: 324px;
+    height: 220px;
   }
 
 
@@ -135,6 +135,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 
   .Content {
     display: flex;
@@ -145,6 +146,12 @@
       padding: 40px;
     }
 
+    @media (min-height: 768px) {
+      p {
+        font-size: 18px !important;
+      }
+    }
+
     .Column:nth-child(1) {
       width: 35%;
       padding-right: 20px;
@@ -153,12 +160,16 @@
         width: 40%;
 
         h2 {
-          font-size: 26px !important;
+          font-size: 22px !important;
         }
 
         p {
           font-size: 14px !important;
           padding-right: 20px;
+          @media screen and (max-width: 1024px) and (orientation: landscape) {
+            height: 55vh;
+            overflow-y: scroll;
+          }
         }
       }
 

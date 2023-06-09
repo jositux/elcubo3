@@ -174,7 +174,7 @@ const VideoPlayer = ({
         `,
       );
       const backToButton = container.getElementsByClassName('back-to-season')[0];
-      backToButton.addEventListener('click', () => router.push(backLink));
+      backToButton.addEventListener('click', () => router.push('/el-cubo/temporada-1/personajes'));
     }
 
     const menuControl = container.querySelector('.plyr__volume');

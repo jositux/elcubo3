@@ -3,6 +3,7 @@ import NameUtils from 'utils/Names';
 const base_url = 'https://rtvcplay.co';
 //const base_url = 'https://play.rtvc.dev';
 const elcubo_base_url = 'https://elcubo.rtvcplay.co';
+const register_base = `${base_url}/login?ref=${elcubo_base_url}`;
 //const elcubo_base_url = 'https://cal-cubo.rtvc.dev';
 const register = `${base_url}/login?ref=${elcubo_base_url}/el-cubo/temporada-1/`;
 const registerTemp2 = `${base_url}/login?ref=${elcubo_base_url}/el-cubo/temporada-2/`;
@@ -18,7 +19,7 @@ const characters = '/el-cubo/temporada-1/personajes';
 const notFound = `/el-cubo/404`;
 
 const registerTemp3 = `${base_url}/login?ref=${elcubo_base_url}/el-cubo/temporada-3/personajes?ref=init`;
-const registerCharacters3 = `${base_url}/login?ref=${elcubo_base_url}/el-cubo/temporada-3/personajes/personajes?ref=init`;
+const registerCharacters3 = `${base_url}/login?ref=${elcubo_base_url}/el-cubo/temporada-3/personajes?ref=init`;
 const logoutCharacters3 = `${base_url}/logout?ref=${elcubo_base_url}/el-cubo/temporada-3/personajes/`;
 const logoutTemp3 = `${base_url}/logout?ref=${elcubo_base_url}/el-cubo/temporada-3/`;
 
@@ -32,6 +33,7 @@ const cronoReward = (character) => {
 };
 
 export default {
+    register_base,
     register,
     registerTemp2,
     registerCharacters,

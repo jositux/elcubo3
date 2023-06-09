@@ -25,7 +25,8 @@ const AudioWave = ({
 }) => {
   const waveformRef = useRef(null);
   const wavesurfer = useRef(null);
-  const [playing, setPlaying] = useState(true);
+  //const [playing, setPlaying] = useState(true);
+  const [playing, setPlaying] = useState(false);
   const url = audio;
 
   useEffect(() => {

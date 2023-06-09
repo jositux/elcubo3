@@ -58,7 +58,7 @@ export default function SeasonPage({ data }) {
           </span>
           <a key={'logout'} href={Links.logout} className="link-logout">
             Salir
-        </a>
+          </a>
         </div>
       );
     };
@@ -297,45 +297,45 @@ export default function SeasonPage({ data }) {
               <div className="paragraph-message paragraph-message-1">
                 <p>
                   Del lat. vulg.
-                    <em>*potēre</em>, creado sobre ciertas formas del verbo lat. posse 'poder1',
-          como potes 'puedes',
-                    <em> potĕram</em> 'podía',
-                    <em> potuisti</em> 'pudiste', etc.
-                    <br /> Conjug. modelo. ◆ U. solo en 3.ª pers. en acep. 6.
-                  </p>
+                  <em>*potēre</em>, creado sobre ciertas formas del verbo lat. posse 'poder1',
+                  como potes 'puedes',
+                  <em> potĕram</em> 'podía',
+                  <em> potuisti</em> 'pudiste', etc.
+                  <br /> Conjug. modelo. ◆ U. solo en 3.ª pers. en acep. 6.
+                </p>
 
                 <ol>
                   <li>Tener expedita la facultad o potencia de hacer algo.</li>
                   <li>Tener facilidad, tiempo o lugar de hacer algo. U. m. con neg.</li>
                   <li>
                     tr. coloq. Tener más fuerza que alguien, vencerlo luchando cuerpo a cuerpo.
-                      <strong>
+                    <strong>
                       <em> Puedo a Roberto</em>
                     </strong>
                     .
-                    </li>
+                  </li>
                   <li>
                     Ser más fuerte que alguien, ser capaz de vencerlo.
-                      <strong>
+                    <strong>
                       <em> No pudo CON su rival</em>
                     </strong>
                     .
-                    </li>
+                  </li>
                   <li>
                     Aguantar o soportar algo o a alguien que producen rechazo. U. con el verbo en
                     forma negativa.
-                      <strong>
+                    <strong>
                       <em> No puedo CON sus impertinencias</em>
                     </strong>
                     .
-                    </li>
+                  </li>
                   <li>
                     intr. Ser contingente o posible que suceda algo.
-                      <strong>
+                    <strong>
                       <em> Puede que llueva mañana</em>
                     </strong>
                     .
-                    </li>
+                  </li>
                 </ol>
 
               </div>
@@ -367,7 +367,7 @@ export default function SeasonPage({ data }) {
                     Carolina Aponte Rodríguez - Productora de Proyecto<br />
                     María Margarita Herrera - Productora Ejecutiva <br />
                     Margarita Posada - Textos Modo Reflexivo<br />
-                </div>
+                  </div>
                   <div className="column-right">
                     <strong>Una producción de Eva Producciones Artísticas en alianza con El Teatro Petra</strong>
                     <img src="/images/teatro.png" />
@@ -398,24 +398,24 @@ export default function SeasonPage({ data }) {
                       Ariel Merchán - Joven O <br />
                       Jaques Toukhmanian - Fiscal <br />
                       Angélica García - Compañera Infancia Albav
-                  Carlos Valencia - Papá Carey<br />
+                      Carlos Valencia - Papá Carey<br />
                       Cristina Umaña - Mamá Carey
 
-                  <strong>Figurantes</strong><br />
+                      <strong>Figurantes</strong><br />
                       Carolina Pose - Enfermera<br />
                       Esteban Torres - Médico
 
-                  <strong>Producción Administrativa	</strong><br />
+                      <strong>Producción Administrativa	</strong><br />
                       Jhon Sanabria – Contaduría -  Js Pinzon<br />
                       Julián Gutiérrez – Asistencia Contable<br />
                       Diego Mora – Asesoría Legal<br />
                       Sergio Romero - Asistencia De Producción Y Campo
 
-                  <strong>Medios Digitales</strong><br />
+                      <strong>Medios Digitales</strong><br />
                       Manuela Uribe - Foto Fija<br />
                       Sandra Suarez - Comunity Manager
 
-                  <strong>Realización Audiovisual</strong><br />
+                      <strong>Realización Audiovisual</strong><br />
                       Manuel Ponce - Realizador<br />
                       José Lucio - Director De Fotografía <br />
                       Adelio Leiva - Jefe Técnico E Iluminador Escénico<br />
@@ -431,22 +431,22 @@ export default function SeasonPage({ data }) {
 
                       Camilo Galvis Guerra - Detrás De Cámaras Y Piezas Promocionales
 
-                  <strong>Sonido - Hilo Studio</strong><br />
+                      <strong>Sonido - Hilo Studio</strong><br />
                       Yesid Vásquez – Sonido Directo Y Supervisión De Postproducción De Sonido<br />
                       Cristian Vargas – Microfonista<br />
                       Daniel Gómez	- Edición Y Mezcla De Sonido<br />
                       Stephanie Betancourt- Laura Portilla – Fernanda Cortés – Edición De Sonido<br />
                       Carlos Humberto Motta - Interpretación Músical - Trompeta
 
-                  <strong>Diseño y Producción de Arte - I´ts A Wrap</strong><br />
+                      <strong>Diseño y Producción de Arte - I´ts A Wrap</strong><br />
                       Hernán García - Diseñador de Producción<br />
                       Juan Carlos Acevedo - Productor De Arte<br />
                       Diego García	- Director De Arte<br />
                       Melissa Villegas - Decoradora<br />
                       Andres Gurisatti - Prop Master
-                  </p>
-                 
-                  
+                    </p>
+
+
                   </div>
 
                   <div className="column-right">
@@ -455,7 +455,7 @@ export default function SeasonPage({ data }) {
                       Camila Olarte - Diseñadora De Vestuario<br />
                       Melissa Cancino - Vestuarista
 
-                  <strong>Los Niños Films - Postproducción Video</strong> <br />
+                      <strong>Los Niños Films - Postproducción Video</strong> <br />
                       Antonio Ponce - Músico<br />
                       Cesar Jaimes	- Editor<br />
                       Felipe Caceres - Editor<br />
@@ -463,7 +463,7 @@ export default function SeasonPage({ data }) {
                       Sebastián Cáceres	Traducción Trailer<br />
                       Diego Ricardo - Asistencia De Edición Promos
 
-                  <strong>Interfaz.co - Estudio Multimedia</strong><br />
+                      <strong>Interfaz.co - Estudio Multimedia</strong><br />
                       Juan Marín - Director Creativo<br />
                       Andrés Cano - Diseño Gráfico - Video y Animación<br />
                       José María Guaimas - It Director  <br />
@@ -471,7 +471,7 @@ export default function SeasonPage({ data }) {
                       Guillermo Colotti  - React Developer<br />
                       Santiago Semhan - Javascript Developer
 
-                  <strong>Acrobacia - Golpe De Gracia</strong><br />
+                      <strong>Acrobacia - Golpe De Gracia</strong><br />
                       Juan Carlos García	- Stunt Coordinador<br />
                       David Herrera - Técnico Fx<br />
                       Nayiver Castaño Técnico Fx<br />
@@ -479,7 +479,7 @@ export default function SeasonPage({ data }) {
                       Fabián Bustamante - Tcnico Fx<br />
                       Ivan Orjuela	- Técnico Fx
 
-                  <strong>Alimentación	 - El Vientre De La Ballena</strong><br />
+                      <strong>Alimentación	 - El Vientre De La Ballena</strong><br />
                       Mariela Rubiano - Jefa De Alimentación <br />
                       Amparo Lasso - Chef 1<br />
                       Santiago Villegas - Chef 2<br />
@@ -487,16 +487,16 @@ export default function SeasonPage({ data }) {
                       Carolina Pose - Asistente De Servicio Alimentación<br />
                       Sergio Hernández - Chef Y Servicio
 
-                  <strong>Logística Teatro Petra</strong>	<br />
+                      <strong>Logística Teatro Petra</strong>	<br />
                       Sandra Suárez - Jefa De Sala<br />
                       Martha Isabel Espinosa - Servicios Generales<br />
                       July Niño - Auxiliar De Enfermería
 
-                  <strong>Transporte</strong><br />
+                      <strong>Transporte</strong><br />
                       Fabio Enrique Guayara - Transporte Van<br />
                       Martin Fonseca - Transportes Fonseca
 
-                  <strong>Rtvc - Rtvcplay</strong><br />
+                      <strong>Rtvc - Rtvcplay</strong><br />
                       Álvaro García Jiménez - Gerente Rtvc<br />
                       Juan Carlos Baquero - Director De Rtvcplay<br />
                       María Del Pilar Cubillos - Productora Ejecutiva <br />
@@ -511,20 +511,20 @@ export default function SeasonPage({ data }) {
                       Fernando Cruz Quintero - Asistente De Producción<br />
                       Mariana Mosquera Gutiérrez - Periodista Web
 
-                  <strong>Dirección De Tecnologías Convergentes RTVC</strong><br />
+                      <strong>Dirección De Tecnologías Convergentes RTVC</strong><br />
                       Orlando Bernal Díaz - Director de Tecnologías<br />
                       Gerardo Andrés Penagos - Dueño de Producto<br />
                       Juan Jorge Hernández - Desarrollador de Sitios Web y Aplicaciones Móviles<br />
                       Iván Darío Roldán - Administrador Infraestructura Nube<br />
 
-                  <img className="credits-rtvc" src="/images/logo-RTVCPlay-Header.png" />
+                      <img className="credits-rtvc" src="/images/logo-RTVCPlay-Header.png" />
                       <strong className="credits-year">Año de producción: 2020 - 2021
-                  MCMXXI, reservados todos los derechos</strong><br />
-                   
+                        MCMXXI, reservados todos los derechos</strong><br />
 
-                  <h3 className="credits-mintic-p">Este contenido fue financiado con recursos del Fondo Único de Tecnologías de la Información y las Comunicaciones de</h3>
-                  <img className="credits-mintic" src="/images/rtvc/logo-mintic.png" />
-                  </p>
+
+                      <h3 className="credits-mintic-p">Este contenido fue financiado con recursos del Fondo Único de Tecnologías de la Información y las Comunicaciones de</h3>
+                      <img className="credits-mintic" src="/images/rtvc/mintic.png" />
+                    </p>
                   </div>
 
                 </div>

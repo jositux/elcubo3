@@ -5,7 +5,7 @@ const BackToCharacters = ({ text }) => {
     <div className="header-top">
       <div className="header-top-inner">
         <nav className="nav">
-          <a href="/" className="back-to-season">
+          <a href="/el-cubo/temporada-1/personajes" className="back-to-season">
             <img src="/images/icon-arrow-back.svg" />
             <span>{text}</span>
           </a>

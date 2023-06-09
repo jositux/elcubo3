@@ -1,8 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import Head from 'next/head';
-import Header from 'components/Season3/Header/Header';
+import HeaderSeason from 'components/Season3/Header/HeaderSeason';
 import Footer from 'components/Footer/Footer';
-import PropTypes from 'prop-types'
 import PersonajesModalSlide from 'components/Season3/Modal/Personajes/PersonajesModalSlide';
 import { Cards } from 'components/Season3/Shared/Cards/Cards';
 import { Pines } from 'components/Season3/Shared/PersonajeSelector/Pines';
@@ -24,9 +23,9 @@ const characters = [
     name: 'soledad',
     realName: 'Soledad Silva',
     nameButton: 'Soledad',
-    description: 'Cuando estamos en medio del huracán es imposible ver. Pero Soledad ha ido redescubriendo su propia fuerza y ahora solo le quedan sueños por cumplir. ¿Sabes de qué es capaz?',
+    description: 'Cuando estamos en medio del huracán es imposible ver, pero Soledad ha ido redescubriendo su propia fuerza y ahora solo le quedan sueños por cumplir. ¿Quieres saber de qué es capaz?',
     age: '34 años',
-    proof: 'Concejal, Agricultora',
+    proof: 'concejal, agricultora',
     born: '',
     address: 'Vereda Morros - Jordán Sube',
     icon: '/images/season3/map/popups/popup-soledad-yellow.png',
@@ -37,9 +36,9 @@ const characters = [
     name: 'diego',
     realName: 'Diego Sarmiento',
     nameButton: 'Diego',
-    description: '¿Has sentido alguna vez que tienes que decidir entre seguir tu pasión y pagar las cuentas? Eso es lo que le pasa precisamente a Diego. Solo quiere que el tiempo y el dinero le alcancen para cumplir su sueño.',
+    description: '¿Seguir tu pasión o pagar las cuentas? Esta es la historia de Diego, un descendiente de la carranga que sólo desea que el tiempo y dinero sean suficientes para alcanzar sus aspiraciones en la vida.',
     age: '39 años',
-    proof: 'Agricultor, Conductor, Músico',
+    proof: 'agricultor, conductor, músico',
     born: '',
     address: 'Vereda Suavecito - Jordán Sube',
     icon: '/images/season3/map/popups/popup-diego-yellow.png',
@@ -50,9 +49,9 @@ const characters = [
     name: 'guillermo',
     realName: 'Guillermo Prada',
     nameButton: 'Guillermo',
-    description: '¿Te ha pasado que un mosquito te quita el sueño? Guillermo se para todas las noches a espantar lo que le asusta. En la historia de este hombre se juntan la belleza, el cuidado y la fragilidad para recordarnos que todo es impermanente. Y que todo sobrevive en la memoria.',
+    description: '¿Alguna vez un mosquito te ha quitado el sueño? Guillermo se despierta todas las noches a espantar lo que le asusta. Su historia está compuesta de belleza, cuidado y fragilidad para recordarnos que todo es impermanente.',
     age: '77 años',
-    proof: ' Pescador; Agricultor; Sobandero',
+    proof: ' pescador; agricultor; sobandero',
     born: '',
     address: 'Via Jordán - Mesa de los Santos',
     icon: '/images/season3/map/popups/popup-guillermo-yellow.png',
@@ -65,7 +64,7 @@ const characters = [
     nameButton: 'Juan de Jesús',
     description: 'Como muchos de nosotros, el párroco Juan de Jesús siente a veces que para hacer lo importante tiene que mover montañas. Se ha propuesto dos misiones muy difíciles. Mira fijamente con él eso que parece ser ingenuidad o locura, y entiende por qué no lo es.',
     age: '35 años',
-    proof: 'Sacerdote',
+    proof: 'sacerdote',
     born: 'Nacido en el municipio de Mogotes - Santander',
     address: 'Casa cural, casco urbano de Jordán Sube',
     icon: '/images/season3/map/popups/popup-juan-yellow.png',
@@ -78,7 +77,7 @@ const characters = [
     nameButton: 'Yenny',
     description: '¿La vida te ha puesto en una situación de la que parece no haber escapatoria? Yenny es la única hija de un matriarcado compuesto por su mamá y sus 4 tías. Las quiere mucho pero tiene grandes sueños. Descúbrelos y sueña con ella.',
     age: '38 años',
-    proof: 'Bachiller; Catequista',
+    proof: 'bachiller, catequista',
     born: '',
     address: 'Vereda El Pozo - Jordán Sube',
     icon: '/images/season3/map/popups/popup-yenny-yellow.png',
@@ -113,11 +112,13 @@ const Personajes = ({ text }) => {
   useEffect(() => {
 
     console.log(query.ref)
-    if (!query.ref) {
+    if (!query.ref || query.ref === "init") {
       handleCards();
     }
     else {
-      //closeCards();
+      if (query.ref === "view") {
+        closeCards();
+      }
     }
 
   }, [query])
@@ -185,7 +186,7 @@ const Personajes = ({ text }) => {
 
   const [player, setPlayer] = useState(null);
   const [isSlideOpen, setIsSlideOpen] = useState(true);
-  let srcVideo = UrlUtils.getVideoUrl("498202");
+  let srcVideo = UrlUtils.getVideoUrl("a02494");
 
   const [openVideo, setOpenVideo] = useState(true)
 
@@ -280,7 +281,7 @@ const Personajes = ({ text }) => {
           </div>
         </div>
 
-        <Header />
+        <HeaderSeason />
 
         <div className={query.ref === "init" ? "first" : "viewed"}>
           <ListCharacters

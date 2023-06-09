@@ -9,7 +9,7 @@ import { SlidersDesktop } from 'components/Season3/Season/Desktop/Sliders';
 import { SlidersDesktop2 } from 'components/Season3/Season/Desktop/Sliders2';
 
 import { SlidersMobile } from 'components/Season3/Season/Mobile/Sliders';
-import Header from 'components/Season3/Header/Header';
+import HeaderSeason from 'components/Season3/Header/HeaderSeason';
 import PaneLogin from 'components/Season3/Shared/PaneLogin/PaneLogin';
 import Hero from 'components/Season3/Season/Desktop/Hero';
 
@@ -52,8 +52,10 @@ const Season3 = () => {
     <Fragment>
       <Head>
         <title>Temporada 3 - El Cubo</title>
-        <meta property="og:title" content="▶️ Temporada 3 de【EL CUBO】La Serie Online Interactiva | RTVC Play" key="title" />
-        <meta name="description" content="✅ El Cubo la única serie online interactiva, ⭐ entra ahora y sumérgete en las mejores historias tridimensionales de la televisión online gratuita" />
+        <meta property="og:title" content="El Cubo: serie online interactiva por los Caminos de Jordán" key="title" />
+        <meta name="description" content="Descubre la nueva temporada de El Cubo, la fascinante serie online gratis e interactiva. Entra ahora y explora los Caminos de Jordán y sus historias.
+
+La imagen sería la misma que tenemos para seleccionar la temporada." />
         <meta property="og:image" content="" />
       </Head>
 
@@ -64,7 +66,7 @@ const Season3 = () => {
       />
 
       <div className={styles.Home}>
-        <Header />
+        <HeaderSeason />
         <div className="videoContainer" id="videoContainer">
           <Hero video="496712" />
         </div>
