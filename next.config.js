@@ -31,6 +31,15 @@ const nextConfig = {
     includePaths: [path.join(__dirname, 'styles')],
     prependData: `@import "styles/globals/index.scss";`,
   },
+  i18n: {
+    // providing the locales supported by your application
+    locales: ["en", "es"],
+
+    //  default locale used when the non-locale paths are visited
+    defaultLocale: "es"
+  }
 };
+
+
 
 module.exports = nextConfig;
