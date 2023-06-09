@@ -161,9 +161,6 @@ export const SlidersDesktop2 = ({ isLoggedIn, onGuest }) => {
       window.removeEventListener('scroll', getPosY);
     }
 
-
-
-
   }, [heightScroll])
 
 
