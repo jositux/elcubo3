@@ -3,8 +3,12 @@ import PersonajeArrow from 'components/Season3/Svg/PersonajeArrow';
 import Progress from 'components/Season3/Shared/Progress/Progress';
 import styles from './listCharacters.module.scss';
 
+import { useRouter } from 'next/router';
+
 
 const ListCharacters = ({ char, percentParam, timeline }) => {
+
+  const router = useRouter();
 
   const [juanPercent, setJuanPercent] = useState(0);
   const [guillermoPercent, setGuillermoPercent] = useState(0);
@@ -169,7 +173,17 @@ const ListCharacters = ({ char, percentParam, timeline }) => {
 
               <div className={styles.timeline}>
                 <span className={styles.line} />
-                <p>Fiesta de Santa Rosa<br />(Patrona de Jordán Sube)</p>
+                <p>{
+                  router.locale === "en" ?
+                    "Saint Rosa's day" :
+                    "Fiesta de Santa Rosa"
+                }<br />
+                  {
+                    router.locale === "en" ?
+                      "(Jordan Sube patron saint)" :
+                      "(Patrona de Jordán Sube)"
+                  }
+                </p>
               </div>
 
 
@@ -177,7 +191,12 @@ const ListCharacters = ({ char, percentParam, timeline }) => {
 
                 (juanPercent === 100 && guillermoPercent === 100 && yennyPercent === 100 && soledadPercent === 100 && diegoPercent === 100 && timeline)
                   ? <div className={`${styles.Info}`}><a href="/el-cubo/temporada-3/recompensa" className={styles.buttonInfo}>
-                    VER INFOGRAFIA
+
+                    {
+                      router.locale === "en" ?
+                        "VIEW INFOGRAPHIC" :
+                        "VER INFOGRAFIA"
+                    }
                   </a></div>
                   : ''
               }

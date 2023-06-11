@@ -1,28 +1,46 @@
 import React, { Fragment } from 'react';
 import styles from './season3.credits.module.scss';
+import { useRouter } from 'next/router';
 
 const Credits = () => {
+
+  const router = useRouter();
 
   return (
     <Fragment>
       <div className={styles.CreditsContainer}>
         <div className={styles.CreditsMintic}>
-          <h2 >Este contenido fue financiado con recursos del Fondo Único de Tecnologías
-            de la Información y las Comunicaciones de MinTic
+          <h2 >
+            {
+              router.locale === "en" ?
+                "This content was financed with resources from Fondo Único de Tecnologías de la Información y las Comunicaciones de MinTic" :
+                "Este contenido fue financiado con recursos del Fondo Único de Tecnologías de la Información y las Comunicaciones de MinTic"
+            }
+
           </h2>
           <img className={styles.LogoMintic} alt="El futuro digitial es de todos" title="El futuro digitial es de todos" src="/images/season3/credits/mintic.png" />
           <br /><br /><br />
           <section className={styles.columnsCredits}>
             <div>
-              <h2 >Una producción por encargo<br />de
-                Dieciséis9 Films SAS
+              <h2 >
+                {
+                  router.locale === "en" ?
+                    HtmlParser("A commissioned production <br />from Dieciséis9 Films SAS") :
+                    HtmlParser("Una producción por encargo<br />de Dieciséis9 Films SAS")
+                }
+
 
               </h2>
               <img className={styles.LogoProduction} alt="El futuro digitial es de todos" title="El futuro digitial es de todos" src="/images/season3/credits/169.jpg" />
             </div>
             <div>
               <br /><br />
-              <h2 >Para RTVCPlay
+              <h2 >
+                {
+                  router.locale === "en" ?
+                    "for RTVCPlay" :
+                    "para RTVCPlay"
+                }
               </h2>
               <img className={styles.LogoRTVC} alt="El futuro digitial es de todos" title="El futuro digitial es de todos" src="/images/season3/credits/rtvcplay.png" />
             </div>

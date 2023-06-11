@@ -10,8 +10,9 @@ import { SlidersDesktop2 } from 'components/Season3/Season/Desktop/Sliders2';
 
 import { SlidersMobile } from 'components/Season3/Season/Mobile/Sliders';
 import HeaderSeason from 'components/Season3/Header/HeaderSeason';
-import PaneLogin from 'components/Season3/Shared/PaneLogin/PaneLogin';
+//import PaneLogin from 'components/Season3/Shared/PaneLogin/PaneLogin';
 import Hero from 'components/Season3/Season/Desktop/Hero';
+
 
 const Season3 = () => {
 
@@ -58,11 +59,11 @@ La imagen sería la misma que tenemos para seleccionar la temporada." />
         <meta property="og:image" content="" />
       </Head>
 
-      <PaneLogin
+      {/*<PaneLogin
         isActive={showLogin}
         onClose={() => closePanelLogin()}
         isMobile={isMobile}
-      />
+      />*/}
 
       <div className={styles.Home}>
         <HeaderSeason />

@@ -54,16 +54,21 @@
     padding: 30px;
     color: #3C2807;
 
-    @media screen and (max-width: 1024px) and (orientation: landscape) {
-      padding: 20%;
-    }
-
     h1 {
       font-family: $elcubo3_font_title;
       font-size: 6.6vw;
       line-height: 120%;
       margin: 0
     }
+
+    @media screen and (max-width: 1024px) and (orientation: landscape) {
+      padding: 20%;
+      h1 {
+        font-size: 4vw;
+      }
+    }
+
+    
 
     p {
       font-family: $elcubo3_font_subtitle;
@@ -96,16 +101,18 @@
   .TextContent {
     color: #0E290E;
     padding: 70px 30px;
-
-    @media screen and (max-width: 1024px) and (orientation: landscape) {
-      padding: 20%;
-    }
-
     h1 {
       font-family: $elcubo3_font_title;
       font-size: 6.6vw;
       line-height: 120%;
       margin: 0
+    }
+
+    @media screen and (max-width: 1024px) and (orientation: landscape) {
+      padding: 20%;
+      h1 {
+        font-size: 4vw;
+      }
     }
 
     p {
@@ -143,16 +150,21 @@
     color: #0E290E;
     padding: 70px 30px;
 
-    @media screen and (max-width: 1024px) and (orientation: landscape) {
-      padding: 20%;
-    }
-
     h1 {
       font-family: $elcubo3_font_title;
       font-size: 6.6vw;
       line-height: 120%;
       margin: 0
     }
+
+    @media screen and (max-width: 1024px) and (orientation: landscape) {
+      padding: 20%;
+      h1 {  
+        font-size: 4vw;
+      }
+    }
+
+    
 
     p {
       font-family: $elcubo3_font_subtitle;
