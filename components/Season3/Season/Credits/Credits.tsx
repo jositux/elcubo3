@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import styles from './season3.credits.module.scss';
 import { useRouter } from 'next/router';
+import HtmlParser from 'html-react-parser';
 
 const Credits = () => {
 
