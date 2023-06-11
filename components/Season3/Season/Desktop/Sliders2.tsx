@@ -215,8 +215,6 @@ export const SlidersDesktop2 = ({ isLoggedIn, onGuest }) => {
                     HtmlParser("Viaja con nosotros <br /> a este lugar")
                 }
               </h1>
-
-
               <p>
                 {
                   router.locale === "en" ?

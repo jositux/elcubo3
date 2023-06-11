@@ -1,8 +1,11 @@
 import React from "react";
 import PersonajeArrow from 'components/Season3/Svg/PersonajeArrow';
 import styles from './season3.personajesModalSlide.module.scss';
+import { useRouter } from 'next/router';
 
 const PersonajesModal = ({ ...props }) => {
+
+  const router = useRouter();
 
   React.useEffect(() => {
 
@@ -41,13 +44,28 @@ const PersonajesModal = ({ ...props }) => {
             <div className={styles.column}>
               <h2>{props.realName}</h2>
               <div>
-                <p><strong>Edad</strong>: {props.age}
-                  &nbsp;  &nbsp;<strong>    Profesión</strong>: {props.proof}
+                <p>
+                  <strong>
+                    {
+                      router.locale === "en" ?
+                        "Age" :
+                        "Edad"
+                    }
+                  </strong>: {props.age}
+                  &nbsp;  &nbsp;<strong>     {
+                    router.locale === "en" ?
+                      "Proof" :
+                      "Profesión"
+                  }</strong>: {props.proof}
                   <br />
 
                   <br />
                   {props.description}</p>
-                <a href={props.link}>Conoce a {props.nameButton}
+                <a href={props.link}>{
+                  router.locale === "en" ?
+                    "Meet " :
+                    "Conoce a "}
+                  {props.nameButton}
                   <PersonajeArrow />
                 </a>
               </div>
