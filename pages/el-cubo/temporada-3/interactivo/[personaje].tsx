@@ -10,6 +10,8 @@ import UrlUtils from 'utils/Url';
 import styles from './lineal.module.scss';
 import { rawFetch } from 'libs/fetcher';
 import HtmlParser from 'html-react-parser';
+import { useRouter } from "next/router";
+
 
 const Personaje = (props) => {
   const {
@@ -20,6 +22,8 @@ const Personaje = (props) => {
   } = props;
 
   const [audios, setAudios] = useState(null);
+
+  const router = useRouter();
 
   useEffect(() => {
     setAudios({
@@ -263,8 +267,12 @@ const Personaje = (props) => {
       <div className={`${styles.coverVideo} ${isActiveInteractive ? styles.activeInteractive : ""}`}>
         <VideoPlayer
           showBackButton
-          backButtonLink={"/el-cubo/temporada-3/personajes?ref=view"}
-          backButtonText={"Elige otro personaje"}
+          backButtonLink={router.locale === 'en' ?
+            '/en/el-cubo/temporada-3/personajes?ref=view' :
+            '/el-cubo/temporada-3/personajes?ref=view'}
+          backButtonText={router.locale === 'en' ?
+            'Choose another character' :
+            'Elige otro personaje'}
           title={title}
           source={srcVideo}
           showPrevButton={false}
@@ -276,11 +284,13 @@ const Personaje = (props) => {
           closeActiveInteractive={closeActiveInteractive}
           markers={markers}
           duration={duration}
+          router={router}
         >
           <ListCharacters
             char={name}
             percentParam={percentParam}
             timeline={false}
+            router={router}
           />
         </VideoPlayer>
       </div>
