@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import Plyr from 'plyr';
 import HLS from 'hls.js';
-import { useRouter } from 'next/router';
+//import { useRouter } from 'next/router';
 import 'plyr/dist/plyr.css';
 import { VideoPlayerWrapper } from './VideoPlayer.style';
 import { clear } from 'console';
@@ -39,12 +39,13 @@ const VideoPlayer = ({
   setPlayer,
   children,
   continueOnTime,
-  seekControls
+  seekControls,
+  router
 }) => {
   const wrapperRef = React.useRef();
   const videoRef = React.useRef();
   const playerRef = React.useRef();
-  const router = useRouter();
+  //const router = useRouter();
 
   React.useEffect(() => {
     const video: HTMLMediaElement = videoRef.current;
@@ -73,8 +74,14 @@ const VideoPlayer = ({
       i18n: {
         restart: 'Restart',
         rewind: 'Retroceder {seektime} seg',
-        play: 'Reproducir',
-        pause: 'Pausar',
+        play:
+          router.locale === "en" ?
+            "Play" :
+            "Reproducir"
+        ,
+        pause: router.locale === "en" ?
+          "Pause" :
+          "Pausar",
         fastForward: 'Adelantar {seektime} seg',
         seek: 'Seek',
         played: 'Played',
@@ -82,10 +89,18 @@ const VideoPlayer = ({
         currentTime: 'Current time',
         duration: 'Duration',
         volume: 'Volumen',
-        mute: 'Silenciar',
-        unmute: 'Activar Sonido',
-        enableCaptions: 'Habilitar Subtítulos',
-        disableCaptions: 'Deshabilitar Subtítulos',
+        mute: router.locale === "en" ?
+          "Mute" :
+          "Silenciar",
+        unmute: router.locale === "en" ?
+          "Unmute" :
+          "Activar Sonido",
+        enableCaptions: router.locale === "en" ?
+          "Enable Subtitles" :
+          "Habilitar Subtítulos",
+        disableCaptions: router.locale === "en" ?
+          "Disable Subtitles" :
+          "Dehabilitar Subtítulos",
         enterFullscreen: 'Enter fullscreen',
         exitFullscreen: 'Exit fullscreen',
         frameTitle: 'Player for {title}',

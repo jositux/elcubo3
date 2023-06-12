@@ -37,7 +37,9 @@ const Personajes = ({ text }) => {
       born: '',
       address: 'Vereda Morros - Jordán Sube',
       icon: '/images/season3/map/popups/popup-soledad-yellow.png',
-      link: '../temporada-3/interactivo/soledad',
+      link: router.locale === 'en' ?
+        '../../../en/el-cubo/temporada-3/interactivo/soledad' :
+        '../temporada-3/interactivo/soledad',
     },
     {
       background: '/images/season3/steals/personaje-diego.jpg',
@@ -54,7 +56,9 @@ const Personajes = ({ text }) => {
       born: '',
       address: 'Vereda Suavecito - Jordán Sube',
       icon: '/images/season3/map/popups/popup-diego-yellow.png',
-      link: '../temporada-3/interactivo/diego',
+      link: router.locale === 'en' ?
+        '../../../en/el-cubo/temporada-3/interactivo/diego' :
+        '../temporada-3/interactivo/diego',
     },
     {
       background: '/images/season3/steals/personaje-guillermo.jpg',
@@ -71,7 +75,9 @@ const Personajes = ({ text }) => {
       born: '',
       address: 'Via Jordán - Mesa de los Santos',
       icon: '/images/season3/map/popups/popup-guillermo-yellow.png',
-      link: '../temporada-3/interactivo/guillermo',
+      link: router.locale === 'en' ?
+        '../../../en/el-cubo/temporada-3/interactivo/guillermo' :
+        '../temporada-3/interactivo/guillermo',
     },
     {
       background: '/images/season3/steals/personaje-juan.jpg',
@@ -88,7 +94,9 @@ const Personajes = ({ text }) => {
       born: 'Nacido en el municipio de Mogotes - Santander',
       address: 'Casa cural, casco urbano de Jordán Sube',
       icon: '/images/season3/map/popups/popup-juan-yellow.png',
-      link: '../temporada-3/interactivo/juan',
+      link: router.locale === 'en' ?
+        '../../../en/el-cubo/temporada-3/interactivo/juan' :
+        '../temporada-3/interactivo/juan',
     },
     {
       background: '/images/season3/steals/personaje-yenny.jpg',
@@ -105,7 +113,9 @@ const Personajes = ({ text }) => {
       born: '',
       address: 'Vereda El Pozo - Jordán Sube',
       icon: '/images/season3/map/popups/popup-yenny-yellow.png',
-      link: '../temporada-3/interactivo/yenny',
+      link: router.locale === 'en' ?
+        '../../../en/el-cubo/temporada-3/interactivo/yenny' :
+        '../temporada-3/interactivo/yenny',
     },
 
   ];
@@ -310,6 +320,7 @@ const Personajes = ({ text }) => {
             char="all"
             percentParam={0}
             timeline={true}
+            router={router}
           />
         </div>
 
@@ -320,7 +331,9 @@ const Personajes = ({ text }) => {
 
         <div className={styles.MapContainer}>
           <div id="LogoSeason" className={styles.LogoSeason}>
-            <a href="/el-cubo/temporada-3">
+            <a href={router.locale === 'en' ?
+              '/en/el-cubo/temporada-3' :
+              '/el-cubo/temporada-3'}>
               <img src="/images/season3/logo-caminos-de-jordan.png" />
             </a>
           </div>

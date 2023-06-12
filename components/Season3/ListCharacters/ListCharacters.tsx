@@ -3,12 +3,7 @@ import PersonajeArrow from 'components/Season3/Svg/PersonajeArrow';
 import Progress from 'components/Season3/Shared/Progress/Progress';
 import styles from './listCharacters.module.scss';
 
-import { useRouter } from 'next/router';
-
-
-const ListCharacters = ({ char, percentParam, timeline }) => {
-
-  const router = useRouter();
+const ListCharacters = ({ char, percentParam, timeline, router }) => {
 
   const [juanPercent, setJuanPercent] = useState(0);
   const [guillermoPercent, setGuillermoPercent] = useState(0);
@@ -104,14 +99,23 @@ const ListCharacters = ({ char, percentParam, timeline }) => {
               <div className={`${styles.row} ${styles.rowJuan}`}>
                 <div className={styles.column1}>
                   <div className={styles.avatar}>
-                    <a title="Historia de Juan de Jesús" href="/el-cubo/temporada-3/interactivo/juan">
+                    <a title={
+                      router.locale === "en" ?
+                        "History of Juan de Jesús" :
+                        "Historia de Juan de Jesús"
+                    }
+                      href={
+                        router.locale === "en" ?
+                          "/en/el-cubo/temporada-3/interactivo/juan" :
+                          "/el-cubo/temporada-3/interactivo/juan"
+                      }>
                       <h2>Juan de Jesús</h2><PersonajeArrow />
                     </a>
                   </div>
                   <div className={styles.progress}>
-                    <a title="Historia de Juan de Jesús" href="/el-cubo/temporada-3/interactivo/juan">
-                      <Progress percent={juanPercent} />
-                    </a>
+
+                    <Progress percent={juanPercent} />
+
                   </div>
                 </div>
 
@@ -119,14 +123,22 @@ const ListCharacters = ({ char, percentParam, timeline }) => {
               <div className={`${styles.row} ${styles.rowGuillermo}`}>
                 <div className={`${styles.column1} ${styles.full}`}>
                   <div className={styles.avatar}>
-                    <a title="Historia de Guillermo" href="/el-cubo/temporada-3/interactivo/guillermo">
+                    <a title={
+                      router.locale === "en" ?
+                        "History of Guillermo" :
+                        "Historia de Guillermo"
+                    } href={
+                      router.locale === "en" ?
+                        "/en/el-cubo/temporada-3/interactivo/guillermo" :
+                        "/el-cubo/temporada-3/interactivo/guillermo"
+                    }>
                       <h2>Guillermo</h2><PersonajeArrow />
                     </a>
                   </div>
                   <div className={styles.progress}>
-                    <a title="Historia de Guillermo" href="/el-cubo/temporada-3/interactivo/guillermo">
-                      <Progress percent={guillermoPercent} />
-                    </a>
+
+                    <Progress percent={guillermoPercent} />
+
                   </div>
                 </div>
 
@@ -134,7 +146,15 @@ const ListCharacters = ({ char, percentParam, timeline }) => {
               <div className={`${styles.row} ${styles.rowYenny}`}>
                 <div className={styles.column1}>
                   <div className={styles.avatar}>
-                    <a title="Historia de Yenny" href="/el-cubo/temporada-3/interactivo/yenny">
+                    <a title={
+                      router.locale === "en" ?
+                        "History of Yenny" :
+                        "Historia de Yenny"
+                    } href={
+                      router.locale === "en" ?
+                        "/en/el-cubo/temporada-3/interactivo/yenny" :
+                        "/el-cubo/temporada-3/interactivo/yenny"
+                    }>
                       <h2>Yenny</h2><PersonajeArrow />
                     </a>
                   </div>
@@ -147,7 +167,15 @@ const ListCharacters = ({ char, percentParam, timeline }) => {
               <div className={`${styles.row} ${styles.rowDiego}`}>
                 <div className={styles.column1}>
                   <div className={styles.avatar}>
-                    <a title="Historia de Diego" href="/el-cubo/temporada-3/interactivo/diego">
+                    <a title={
+                      router.locale === "en" ?
+                        "History of Diego" :
+                        "Historia de Diego"
+                    } href={
+                      router.locale === "en" ?
+                        "/en/el-cubo/temporada-3/interactivo/diego" :
+                        "/el-cubo/temporada-3/interactivo/diego"
+                    }>
                       <h2>Diego</h2><PersonajeArrow />
                     </a>
                   </div>
@@ -160,7 +188,15 @@ const ListCharacters = ({ char, percentParam, timeline }) => {
               <div className={`${styles.row} ${styles.rowSoledad}`}>
                 <div className={styles.column1}>
                   <div className={styles.avatar}>
-                    <a title="Historia de Soledad" href="/el-cubo/temporada-3/interactivo/soledad">
+                    <a title={
+                      router.locale === "en" ?
+                        "History of Soledad" :
+                        "Historia de Soledad"
+                    } href={
+                      router.locale === "en" ?
+                        "/en/el-cubo/temporada-3/interactivo/soledad" :
+                        "/el-cubo/temporada-3/interactivo/soledad"
+                    }>
                       <h2>Soledad</h2><PersonajeArrow />
                     </a>
                   </div>
@@ -174,12 +210,13 @@ const ListCharacters = ({ char, percentParam, timeline }) => {
               <div className={styles.timeline}>
                 <span className={styles.line} />
                 <p>{
-                  router.locale === "en" ?
+                  router?.locale === "en" ?
                     "Saint Rosa's day" :
                     "Fiesta de Santa Rosa"
-                }<br />
+                }
+                  <br />
                   {
-                    router.locale === "en" ?
+                    router?.locale === "en" ?
                       "(Jordan Sube patron saint)" :
                       "(Patrona de Jordán Sube)"
                   }
