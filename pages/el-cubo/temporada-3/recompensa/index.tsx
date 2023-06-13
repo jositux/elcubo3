@@ -721,8 +721,21 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                       <div>
                         <RedirectionIconTimeline />
                       </div>
-                      <p className={styles.LinkText}>Jordán Sube le dice nuevamente 'no' a la familia Ferreira<br></br>
-                        <span>El Tiempo (28 de octubre 2019)</span>
+                      <p className={styles.LinkText}>
+                        {
+                          router.locale === 'en' ?
+                            ' Jordán Sube says "no" to the Ferreira family once again' :
+                            ' Jordán Sube le dice nuevamente "no" a la familia Ferreira'
+                        }
+                        <br></br>
+                        <span>
+
+                          {
+                            router.locale === 'en' ?
+                              'El Tiempo (2019 - October 28)' :
+                              'El Tiempo (28 de octubre 2019)'
+                          }
+                        </span>
                       </p>
                     </a>
                   </div>
@@ -735,10 +748,17 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                         <RedirectionIconTimeline />
                       </div>
                       <p className={styles.LinkText}>
-                        Oculto en el Cañón<br></br>
+                        {
+                          router.locale === 'en' ?
+                            'Hidden in the Canyon' :
+                            'Oculto en el Cañón'
+                        }
+                        <br />
                         <span>
-                          Especial multimedia por Nicole Acuña y Silvia Corredor. Programa en Periodismo y Opinión Pública PO04. Escuela de Ciencias Humanas. Universidad del Rosario. 2019.
-                          Leer subapartado: "Tiempo de éxodo"
+                          {
+                            router.locale === 'en' ?
+                              'Multimedia Special by Nicole Acuña and Silvia Corredor. Journalistic and  Public opinion show PO04. Escuela de Ciencias Humanas. Universidad del Rosario. 2019. Read: "Tiempo de éxodo"' :
+                              'Especial multimedia por Nicole Acuña y Silvia Corredor. Programa en Periodismo y Opinión Pública PO04. Escuela de Ciencias Humanas. Universidad del Rosario. 2019. Leer subapartado: "Tiempo de éxodo"'}
                         </span>
                       </p>
                     </a>
@@ -751,10 +771,18 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                         <RedirectionIconTimeline />
                       </div>
                       <p className={styles.LinkText}>
-                        Oculto en el Cañón<br></br>
+                        {
+                          router.locale === 'en' ?
+                            'Hidden in the Canyon' :
+                            'Oculto en el Cañón'
+                        }<br />
                         <span>
-                          Especial multimedia por Nicole Acuña y Silvia Corredor. Programa en Periodismo y Opinión Pública PO04. Escuela de Ciencias Humanas. Universidad del Rosario. 2019.
-                          Leer apartado: "¡Jordán existe!"
+                          {
+                            router.locale === 'en' ?
+                              'Multimedia Special by Nicole Acuña and Silvia Corredor. Journalistic and  Public opinion show PO04. Escuela de Ciencias Humanas. Universidad del Rosario. 2019. Read: "¡Jordán existe!"' :
+                              ' Especial multimedia por Nicole Acuña y Silvia Corredor. Programa en Periodismo y Opinión Pública PO04. Escuela de Ciencias Humanas. Universidad del Rosario. 2019. Leer apartado: "¡Jordán existe!"'}
+
+
                         </span>
                       </p>
                     </a>
@@ -775,7 +803,12 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                 <div className={styles.LinksContent}>
                   <div className={styles.LinkItem}>
                     <a onClick={() => { setImage(imagen2); handleOnOpenImage(); }} className={styles.Link} >
-                      <p className={styles.LinkText}>ilustración roque ferreira<br></br>el gamonal</p>
+                      <p className={styles.LinkText}>
+                        {
+                          router.locale === 'en' ?
+                            'drawn roque ferreira' :
+                            'ilustración roque ferreira'
+                        }<br></br>el gamonal</p>
                       <div>
                         <GalleryIconTimeline />
                       </div>
@@ -783,8 +816,18 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                   </div>
                   <div className={styles.LinkItem}>
                     <a href='https://www.eltiempo.com/archivo/documento/MAM-624214' target="_blank" className={styles.Link}>
-                      <p className={styles.LinkText}>Jaque a los Ferreira en Jordán Sube.<br></br>
-                        <span>El tiempo / Manuel Navarro (06 de julio 1997)</span>
+                      <p className={styles.LinkText}>
+                        {
+                          router.locale === 'en' ?
+                            'Checkmate to Ferreira family in Jordán Sube' :
+                            'Jaque a los Ferreira en Jordán Sube.'
+                        }
+                        <br></br>
+                        <span>El tiempo / Manuel Navarro {
+                          router.locale === 'en' ?
+                            '(july 6 - 1997)' :
+                            '(06 de julio 1997)'
+                        }</span>
                       </p>
                       <div>
                         <RedirectionIconTimeline />
@@ -797,11 +840,20 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
               <div className={styles.columnText}>
                 <div className={styles.TextContent}>
                   <h1 className={styles.Title}>1991</h1>
-                  <h2 className={styles.Subtitle}>Muerte de Roque Ferreira</h2>
+                  <h2 className={styles.Subtitle}>
+                    {
+                      router.locale === 'en' ?
+                        'Roque Ferreira’s death' :
+                        'Muerte de Roque Ferreira'
+                    }
+                  </h2>
                   <p className={styles.Description}>
-                    Roque Julio Ferreira es reconocido como el gamonal conservador del municipio de Jordán Sube. Un
-                    hombre que por más de 20 años controló todo lo que sucedía en el pueblo con sus escoltas, revólver e
-                    investidura política, pues era el alcalde.<br /><br />
+                    {
+                      router.locale === 'en' ?
+                        'Roque Julio Ferreira is recognized as the conservative boss in Jordan Sube.  A man who, for over 20 years, controlled everything that happened in the town with his bodyguards, guns, and political position, as he was the mayor.' :
+                        'Roque Julio Ferreira es reconocido como el gamonal conservador del municipio de Jordán Sube. Un hombre que por más de 20 años controló todo lo que sucedía en el pueblo con sus escoltas, revólver e investidura política, pues era el alcalde.'
+                    }
+                    <br /><br />
 
                     Al cumplir 70 años, un tumor maligno le restó vigorosidad y fue perdiendo su poder. Ferreira terminó
                     sólo, débil y rezando en la iglesia que durante muchos años estuvo sin sacerdote por falta de fieles.

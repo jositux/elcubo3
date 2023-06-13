@@ -263,7 +263,7 @@ const Personaje = (props) => {
         <img className={styles.stealMobile} src={`/images/season3/steals/${name}-mobile.jpg`} />
       </div>
 
-      <RotateAdvice />
+      <RotateAdvice router={router} />
       <div className={`${styles.coverVideo} ${isActiveInteractive ? styles.activeInteractive : ""}`}>
         <VideoPlayer
           showBackButton

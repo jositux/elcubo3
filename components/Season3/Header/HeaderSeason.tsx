@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import Logo from '../Shared/Logo/Logo';
-import UserLoginSeason from '../Shared/UserLogin/UserLoginSeason';
+//import UserLoginSeason from '../Shared/UserLogin/UserLoginSeason';
+import LangSelector from './LangSelector';
 import styles from './season3.header.module.scss';
 import { RTVCGlobalStyles } from 'styles/rtvc.style';
 
@@ -23,7 +24,7 @@ const HeaderSeason = () => {
             <Logo url="/" />
           </div>
           <div className={styles.LoginContainer}>
-            {/*<UserLoginSeason />*/}
+            <LangSelector />
           </div>
         </div>
       </header>
