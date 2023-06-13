@@ -16,10 +16,15 @@ import dynamic from 'next/dynamic';
 import disableScroll from 'disable-scroll';
 import Back from 'components/Season3/Svg/Back';
 
+import HtmlParser from 'html-react-parser';
+
+import { useRouter } from 'next/router';
+
 const ModalVideo = dynamic(() => import('react-modal-video'), { ssr: false });
 
 const Timeline = () => {
 
+  const router = useRouter();
 
   const [juanPercent, setJuanPercent] = useState(0);
   const [guillermoPercent, setGuillermoPercent] = useState(0);
@@ -206,7 +211,14 @@ const Timeline = () => {
       <div className={styles.TimelineContainer}>
 
         <a href="/el-cubo/temporada-3/personajes?ref=view" className={styles.Back} >
-          <Back /> <span>Volver</span>
+          <Back />
+          <span>
+            {
+              router.locale === 'en' ?
+                'Back' :
+                'Volver'
+            }
+          </span>
           {
 
             /* (juanPercent === 100 && guillermoPercent === 100 && yennyPercent === 100 && soledadPercent === 100 && diegoPercent === 100 && timeline) ?
@@ -227,7 +239,13 @@ const Timeline = () => {
                 <div className={styles.LinksContent}>
                   <div className={styles.LinkItem}>
                     <a onClick={() => { setImages(imagenes1); setImagesZoom(imagenes1Zoom); handleOnOpenGallery(); }} className={styles.Link} >
-                      <p className={styles.LinkText}>galería de fotos</p>
+                      <p className={styles.LinkText}>
+                        {
+                          router.locale === 'en' ?
+                            'photo gallery' :
+                            'galería de fotos'
+                        }
+                      </p>
                       <div>
                         <GalleryIconTimeline />
                       </div>
@@ -237,7 +255,13 @@ const Timeline = () => {
                     <a href='http://www.colombiaturismoweb.com/DEPARTAMENTOS/SANTANDER/MUNICIPIOS/JORDAN/JORDAN.htm
 '  target="_blank" className={styles.Link}>
                       <p className={styles.LinkText}>Jordán - Colombia Turismo Web<br></br>
-                        <span>(15 de Octubre de 2022)</span>
+                        <span>
+                          {
+                            router.locale === 'en' ?
+                              '(2022 - October 15)' :
+                              '(15 de Octubre de 2022)'
+                          }
+                        </span>
                       </p>
                       <div>
                         <RedirectionIconTimeline />
@@ -247,8 +271,19 @@ const Timeline = () => {
                   <div className={styles.LinkItem}>
                     <a href='https://www.eltiempo.com/colombia/otras-ciudades/jordan-sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' target="_blank" className={styles.Link}>
                       <p className={styles.LinkText}>
-                        El pueblo 'fantasma' colombia donde solo viven 56 almas<br></br>
-                        <span>Carolina Rincón Ramírez / El tiempo (29 de octubre 2021)</span>
+                        {
+                          router.locale === 'en' ?
+                            'The "ghost" town where only 56 souls live' :
+                            ' El pueblo "fantasma" colombiano donde solo viven 56 almas'
+                        }
+                        <br></br>
+                        <span>Carolina Rincón Ramírez / El tiempo
+                          {
+                            router.locale === 'en' ?
+                              ' (2021 - October 29)' :
+                              ' (29 de octubre 2021)'
+                          }
+                        </span>
                       </p>
                       <div>
                         <RedirectionIconTimeline />
@@ -260,13 +295,19 @@ const Timeline = () => {
               <div className={styles.columnText}>
                 <div className={styles.TextContent}>
                   <h1 className={styles.Title}>1822</h1>
-                  <h2 className={styles.Subtitle}>Fundación del pueblo</h2>
+                  <h2 className={styles.Subtitle}>
+                    {
+                      router.locale === 'en' ?
+                        'Town foundation' :
+                        'Fundación del pueblo'
+                    }
+                  </h2>
                   <p className={styles.Description}>
-                    El 2 de octubre de 1822, los campesinos que habitaban los caminos que unían a San Gil con Los Santos
-                    pidieron la creación, en una capilla ubicada a orillas del río Sube y construida con palos y paja, de una
-                    parroquia en advocación a Santa Rosa de Lima.<br /><br />
-                    En 1830, Rafel Urdaneta, presidente de La Gran Colombia, sancionó la ley que erigió el municipio de
-                    Sube, al que la Asamblea de Santander, más de un siglo después, le antepuso el nombre de Jordán.
+                    {
+                      router.locale === 'en' ?
+                        HtmlParser('October 2, 1822. The peasants who lived in the paths that united San Gil and Los Santos prayed in a chapel located on the shores of the Sube river, for the creation of a parish in advocation to Santa Rosa de Lima. <br /><br />In 1830, Rafael Urdaneta, president of La Gran Colombia, ratified the bill that founded  the town of Sube, to which the Assembly of Santader, more than a century later, put the Jordan name ahead.') :
+                        HtmlParser('El 2 de octubre de 1822, los campesinos que habitaban los caminos que unían a San Gil con Los Santos pidieron la creación, en una capilla ubicada a orillas del río Sube y construida con palos y paja, de una parroquia en advocación a Santa Rosa de Lima.<br /><br />En 1830, Rafel Urdaneta, presidente de La Gran Colombia, sancionó la ley que erigió el municipio de Sube, al que la Asamblea de Santander, más de un siglo después, le antepuso el nombre de Jordán.')
+                    }
                   </p>
                 </div>
               </div>
@@ -282,12 +323,21 @@ const Timeline = () => {
               <div className={styles.columnText}>
                 <div className={styles.TextContent}>
                   <h1 className={styles.Title}>1864</h1>
-                  <h2 className={styles.Subtitle}>Construcción del primer<br />peaje de Colombia</h2>
+                  <h2 className={styles.Subtitle}>
+                    {
+                      router.locale === 'en' ?
+                        'Colombia’s first toll construction' :
+                        HtmlParser('Construcción del primer<br />peaje de Colombia')
+                    }
+
+                  </h2>
                   <p className={styles.Description}>
-                    El puente Lengerke fue construido en 1864 sobre el río Chicamocha en Jordán Sube. Este es un puente
-                    emblemático por ser uno de los primeros en Colombia, y zona de paso del libertador Simón Bolívar, así
-                    como el primer peaje del país. Allí cobraban cinco centavos por cada caballo de carga que cruzaba el
-                    lugar.</p>
+                    {
+                      router.locale === 'en' ?
+                        'The Lengerke bridge over the Chicamocha River was built in 1864 in Jordan Sube. This is an iconic bridge because it is one of the first in Colombia. It also was part of Bolivar’s route and the first toll in the country. For every horse that went through the toll a 5 cent fee was charged.' :
+                        'El puente Lengerke fue construido en 1864 sobre el río Chicamocha en Jordán Sube. Este es un puente emblemático por ser uno de los primeros en Colombia, y zona de paso del libertador Simón Bolívar, así como el primer peaje del país. Allí cobraban cinco centavos por cada caballo de carga que cruzaba el lugar.'
+                    }
+                  </p>
                 </div>
               </div>
 
@@ -325,8 +375,20 @@ const Timeline = () => {
                   </div>
                   <div className={styles.LinkItem}>
                     <a href='http://conlupa.co/oculto-canon/amula.html' target="_blank" className={styles.Link}>
-                      <p className={styles.LinkText}>Oculto en el Cañón<br></br>
-                        <span>Oculto en el Cañón. Especial multimedia por Nicole Acuña y Silvia Corredor. Programa en Periodismo y Opinión Pública PO04. Escuela de Ciencias Humanas. Universidad del Rosario. 2019. Leer apartado: 'A mula y alpargata</span>
+                      <p className={styles.LinkText}>
+                        {
+                          router.locale === 'en' ?
+                            'Hidden in the Canyon' :
+                            'Oculto en el Cañón'
+                        }
+                        <br></br>
+                        <span>
+                          {
+                            router.locale === 'en' ?
+                              'Hidden in the Canyon. Multimedia Special by Nicole Acuña and Silvia Corredor. Journalistic and  Public opinion show PO04. Escuela de Ciencias Humanas. Universidad del Rosario. 2019. Read: "A mula y alpargata"' :
+                              'Oculto en el Cañón. Especial multimedia por Nicole Acuña y Silvia Corredor. Programa en Periodismo y Opinión Pública PO04. Escuela de Ciencias Humanas. Universidad del Rosario. 2019. Leer apartado: "A mula y alpargata"'
+                          }
+                        </span>
                       </p>
                       <div>
                         <RedirectionIconTimeline />
@@ -335,8 +397,19 @@ const Timeline = () => {
                   </div>
                   <div className={styles.LinkItem}>
                     <a href='http://conlupa.co/oculto-canon/larutadeltabaco.html' target="_blank" className={styles.Link}>
-                      <p className={styles.LinkText}>Oculto en el Cañón.<br></br>
-                        <span>Especial multimedia por Nicole Acuña y Silvia Corredor. Programa en Periodismo y Opinión Pública PO04. Escuela de Ciencias Humanas. Universidad del Rosario. 2019. Leer apartado: 'La ruta del tabaco’</span>
+                      <p className={styles.LinkText}>
+                        {
+                          router.locale === 'en' ?
+                            'Hidden in the Canyon' :
+                            'Oculto en el Cañón'
+                        }<br></br>
+                        <span>
+                          {
+                            router.locale === 'en' ?
+                              'Multimedia Special by Nicole Acuña and Silvia Corredor. Journalistic and  Public opinion show PO04. Escuela de Ciencias Humanas. Universidad del Rosario. 2019. Read: "La ruta del tabaco"' :
+                              'Especial multimedia por Nicole Acuña y Silvia Corredor. Programa en Periodismo y Opinión Pública PO04. Escuela de Ciencias Humanas. Universidad del Rosario. 2019. Leer apartado: "La ruta del tabaco"'
+                          }
+                        </span>
                       </p>
                       <div>
                         <RedirectionIconTimeline />
@@ -349,17 +422,26 @@ const Timeline = () => {
               <div className={styles.columnText}>
                 <div className={styles.TextContent}>
                   <h1 className={styles.Title}>1900 -1940</h1>
-                  <h2 className={styles.Subtitle}>Periodo de bonanza</h2>
+                  <h2 className={styles.Subtitle}>
+                    {
+                      router.locale === 'en' ?
+                        'Boom time' :
+                        'Periodo de bonanza'
+                    }
+                  </h2>
                   <p className={styles.Description}>
-                    Jordán Sube se vio beneficiado durante un tiempo de los arrieros y caballos de carga que cruzaban sus
-                    dominios. Este movimiento humano y comercial permitió la construcción de casas e hizo florecer
-                    chicherías, restaurantes y posadas.<br /><br />
+                    {
+                      router.locale === 'en' ?
+                        'Jordan Sube benefited for a while from the muleteers and horses who crossed their domains. This human and commercial movement allowed the construction of houses and made chicherías, restaurants and hotels(inns) flourish.' :
+                        'Jordán Sube se vio beneficiado durante un tiempo de los arrieros y caballos de carga que cruzaban sus dominios. Este movimiento humano y comercial permitió la construcción de casas e hizo florecer chicherías, restaurantes y posadas.'
+                    }
+                    <br /><br />
 
-                    Además, las tierras fértiles y el río Chicamocha lo convirtieron en un espacio idóneo para la siembra y
-                    cultivo del tabaco negro. Un ejemplo de la prosperidad que se vivió en el pueblo durante esa época fue
-                    el establecimiento en la zona de la Compañía Colombiana de Tabaco. De este modo, mulas, arrieros y
-                    tabaco se constituyeron como los tres pilares que permitieron a Jordán disfrutar de una etapa de
-                    bonanza, una buena hora para el pueblo.
+                    {
+                      router.locale === 'en' ?
+                        'Furthermore, the fertile lands and the Chicamocha river made it an ideal spot for planting and growing of black tobacco. An example of the prosperity the town was living, was the establishment in the zone of the Colombian Tobacco Company. Thus, mules, muleteers and tobacco were constituted as the three pillars that allowed Jordan to enjoy a bonanza stage. Those were good times for the people.' :
+                        'Además, las tierras fértiles y el río Chicamocha lo convirtieron en un espacio idóneo para la siembra y cultivo del tabaco negro. Un ejemplo de la prosperidad que se vivió en el pueblo durante esa época fue el establecimiento en la zona de la Compañía Colombiana de Tabaco. De este modo, mulas, arrieros y tabaco se constituyeron como los tres pilares que permitieron a Jordán disfrutar de una etapa de bonanza, una buena hora para el pueblo.'
+                    }
 
                   </p>
                 </div>
@@ -376,13 +458,20 @@ const Timeline = () => {
               <div className={styles.columnText}>
                 <div className={styles.TextContent}>
                   <h1 className={styles.Title}>1930 - 1940</h1>
-                  <h2 className={styles.Subtitle}>Construcción de la carretera<br></br>Bogotá – Bucaramanga</h2>
+                  <h2 className={styles.Subtitle}>
+                    {
+                      router.locale === 'en' ?
+                        HtmlParser('Construction of the Bogota<br />Bucaramanga road') :
+                        HtmlParser('Construcción de la carretera<br />Bogotá – Bucaramanga')
+                    }
+                  </h2>
                   <p className={styles.Description}>
-                    La construcción de la carretera Bogotá – Bucaramanga frenó el crecimiento comercial y demográfico de
-                    Jordán. La carretera fue construida 33 kilómetros al oriente del pueblo y conectó los tramos de San Gil y
-                    Pescadero. Algunos dicen que fueron los gamonales quienes no permitieron la construcción, y otros
-                    aseguran que las condiciones del terreno no eran las adecuadas para la obra. Aun así, todos coinciden
-                    en que esta decisión terminó en la decadencia del municipio.
+                    {
+                      router.locale === 'en' ?
+                        'The Bogota - Bucaramanga road stopped the commercial and demographic growth of Jordan. The road was built 33 kilometers west from the town and connected San Gil and Pescadero. Some say the gamonales were the ones that did not allowed the construction. Other assure that the ground conditions were not ideal for the obra. Even though, all agree this decision ended in the towns decadencia' :
+                        'La construcción de la carretera Bogotá – Bucaramanga frenó el crecimiento comercial y demográfico de Jordán. La carretera fue construida 33 kilómetros al oriente del pueblo y conectó los tramos de San Gil y Pescadero. Algunos dicen que fueron los gamonales quienes no permitieron la construcción, y otros aseguran que las condiciones del terreno no eran las adecuadas para la obra. Aun así, todos coinciden en que esta decisión terminó en la decadencia del municipio.'
+                    }
+
                   </p>
                 </div>
               </div>
@@ -407,10 +496,18 @@ const Timeline = () => {
                       <div>
                         <RedirectionIconTimeline />
                       </div>
-                      <p className={styles.LinkText}>Oculto en el Cañón.<br></br>
+                      <p className={styles.LinkText}>{
+                        router.locale === 'en' ?
+                          'Hidden in the Canyon.' :
+                          'Oculto en el Cañón.'
+                      }<br></br>
                         <span>
-                          Especial multimedia por Nicole Acuña y Silvia Corredor. Programa en Periodismo y Opinión Pública PO04. Escuela de Ciencias Humanas. Universidad del Rosario 2019.<br></br>
-                          Leer subapartado: 'Cuando las venas se cortaron'
+                          {
+                            router.locale === 'en' ?
+                              'Multimedia Special by Nicole Acuña and Silvia Corredor. Journalistic and  Public opinion show PO04. Escuela de Ciencias Humanas. Universidad del Rosario. 2019. Read: "Cuando las venas se cortaron"' :
+                              'Especial multimedia por Nicole Acuña y Silvia Corredor. Programa en Periodismo y Opinión Pública PO04. Escuela de Ciencias Humanas. Universidad del Rosario. 2019. Leer apartado: "Cuando las venas se cortaron"'
+                          }
+
                         </span>
                       </p>
                     </a>
@@ -421,7 +518,12 @@ const Timeline = () => {
                       <div>
                         <PlayIconTimeline />
                       </div>
-                      <p className={styles.LinkText}>Oculto en el Cañón.</p>
+                      <p className={styles.LinkText}>
+                        {
+                          router.locale === 'en' ?
+                            'Hidden in the Canyon.' :
+                            'Oculto en el Cañón.'
+                        }</p>
 
                     </a>
                   </div>
@@ -432,8 +534,19 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                         <RedirectionIconTimeline />
                       </div>
                       <p className={styles.LinkText}>
-                        El pueblo 'fantasma' colombiano donde solo viven 56 almas<br></br>
-                        <span>El Tiempo (29 de octubre de 2021)</span>
+                        {
+                          router.locale === 'en' ?
+                            'The "ghost" town where only 56 souls live' :
+                            ' El pueblo "fantasma" colombiano donde solo viven 56 almas'
+                        }
+
+                        <br></br>
+                        <span>
+                          {
+                            router.locale === 'en' ?
+                              'El Tiempo (2021 - October 29)' :
+                              'El Tiempo (29 de octubre de 29'
+                          }</span>
                       </p>
                     </a>
                   </div>
@@ -453,7 +566,14 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                 <div className={styles.LinksContent}>
                   <div className={styles.LinkItem}>
                     <a onClick={() => { setImages(imagenes2); setImagesZoom(imagenes2Zoom); handleOnOpenGallery(); }} className={styles.Link} >
-                      <p className={styles.LinkText}>galería de fotos</p>
+                      <p className={styles.LinkText}>
+                        {
+                          router.locale === 'en' ?
+                            'photo gallery' :
+                            'galería de fotos'
+                        }
+
+                      </p>
                       <div>
                         <GalleryIconTimeline />
                       </div>
@@ -461,8 +581,21 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                   </div>
                   <div className={styles.LinkItem}>
                     <a href='https://noticias.canal1.com.co/que-tal-esto/jordan-sube-pueblo-rico-sin-gente/' target="_blank" className={styles.Link}>
-                      <p className={styles.LinkText}>Jordán Sube, pueblo rico sin gente.<br></br>
-                        <span>Canal 1 (16 de agosto del 2015)</span>
+                      <p className={styles.LinkText}>
+                        {
+                          router.locale === 'en' ?
+                            'Jordan Sube, rich town with no people' :
+                            'Jordán Sube, pueblo rico sin gente.'
+                        }
+
+                        <br></br>
+                        <span>
+                          {
+                            router.locale === 'en' ?
+                              'Canal 1 (2015 - August 16)' :
+                              'Canal 1 (16 de agosto del 2015)'
+                          }
+                        </span>
                       </p>
                       <div>
                         <RedirectionIconTimeline />
@@ -473,11 +606,13 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                   <div className={styles.LinkItem}>
                     <a href='https://vimeo.com/315140794' target='_blank' className={styles.Link} >
                       <p className={styles.LinkText}>
-                        <span>Jaime Rodríguez, coleccionista santandereano, habla sobre las armas que fueron
-                          usadas en tiempos de la violencia bipartidista en Jordán. Cuando Rodríguez era empleado de la
-                          Caja Agraria visitó a los hermanos del gamonal del pueblo: Julio y José Ángel Ferreira, quienes
-                          solicitaron un préstamo en 1978. Testimonio tomado del especial multimedia Oculto en el
-                          Cañón.</span>
+                        <span>
+                          {
+                            router.locale === 'en' ?
+                              'Jaime Rodriguez, santanderean collector, talks about the weapons that were used during the bipartisan violence times in Jordan. When he was an employee in Caja Agraria, he visited the town’s gamonal brothers: Julio and Jose Angel Ferreira, who requested a loan in 1978. Testimony taken from multimedia’s special Hidden in the canyon' :
+                              'Jaime Rodríguez, coleccionista santandereano, habla sobre las armas que fueron usadas en tiempos de la violencia bipartidista en Jordán. Cuando Rodríguez era empleado de la Caja Agraria visitó a los hermanos del gamonal del pueblo: Julio y José Ángel Ferreira, quienes solicitaron un préstamo en 1978. Testimonio tomado del especial multimedia Oculto en el Cañón.'
+                          }
+                        </span>
                       </p>
                       <div>
                         <PlayIconTimeline />
@@ -490,10 +625,20 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
               <div className={styles.columnText}>
                 <div className={styles.TextContent}>
                   <h1 className={styles.Title}>1949</h1>
-                  <h2 className={styles.Subtitle}>Violencia bipartidista<br />La mala hora</h2>
+                  <h2 className={styles.Subtitle}>
+                    {
+                      router.locale === 'en' ?
+                        HtmlParser('  Bipartisan violence<br />The bad hour') :
+                        HtmlParser(' Violencia bipartidista<br />La mala hora')
+                    }
+                  </h2>
                   <p className={styles.Description}>
-                    En 1949, muchas familias de Jordán Sube abandonaron el pueblo, controlado por los conservadores,
-                    quienes pusieron todos sus esfuerzos en desplazar a los liberales.
+                    {
+                      router.locale === 'en' ?
+                        'In 1949 many families from Jordan sube abbandoned the village that was under the conservadores control. They put all their efforts in desplazar a los liberales' :
+                        'En 1949, muchas familias de Jordán Sube abandonaron el pueblo, controlado por los conservadores,quienes pusieron todos sus esfuerzos en desplazar a los liberales.'
+                    }
+
                   </p>
                 </div>
               </div>
@@ -509,11 +654,20 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
               <div className={styles.columnText}>
                 <div className={styles.TextContent}>
                   <h1 className={styles.Title}>1949 - 2016</h1>
-                  <h2 className={styles.Subtitle}>La Familia Ferreira</h2>
+                  <h2 className={styles.Subtitle}>
+                    {
+                      router.locale === 'en' ?
+                        'Ferreira Family' :
+                        'La Familia Ferreira'
+                    }
+                  </h2>
                   <p className={styles.Description}>
-                    El poderío de los Ferreira en Jordán Sube nace con Isabel Sarmiento de Ferreira, la ‘matrona’ de la
-                    familia. Algunos lugareños afirman que en los años del bipartidismo fueron ellos quienes obligaron a los
-                    liberales a declararse conservadores.
+                    {
+                      router.locale === 'en' ?
+                        'The Ferreira power in Jordan Sube starts with Isabel Sarmiento de Ferreira, the family’s matrona. Some say that in the bipartisan years, they were the one who forced the liberals declared themselves conservadores.' :
+                        'El poderío de los Ferreira en Jordán Sube nace con Isabel Sarmiento de Ferreira, la ‘matrona’ de la familia. Algunos lugareños afirman que en los años del bipartidismo fueron ellos quienes obligaron a los liberales a declararse conservadores.'
+                    }
+
                   </p>
                 </div>
               </div>
@@ -525,7 +679,14 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                       <div>
                         <GalleryIconTimeline />
                       </div>
-                      <p className={styles.LinkText}>versión ilustrada familia pereira</p>
+                      <p className={styles.LinkText}>
+                        {
+                          router.locale === 'en' ?
+                            'Drawn version of the Ferreira Family' :
+                            'versión ilustrada de La Familia Ferreira'
+                        }
+
+                      </p>
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
@@ -534,8 +695,21 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                       <div>
                         <RedirectionIconTimeline />
                       </div>
-                      <p className={styles.LinkText}>Jordan Sube, un municipio con 10 mil millones de presupuesto y un dueño: los Ferreira<br></br>
-                        <span>Las 2 orillas (6 de septiembre de 2015)</span>
+                      <p className={styles.LinkText}>
+                        {
+                          router.locale === 'en' ?
+                            "Jordan Sube, a town with a budget of 10 billion and 1 owner: The Ferreira's" :
+                            'Jordan Sube, un municipio con 10 mil millones de presupuesto y un dueño: los Ferreira'
+                        }
+
+                        <br></br>
+                        <span>
+                          {
+                            router.locale === 'en' ?
+                              "Las 2 orillas (2015 - september 6)" :
+                              'Las 2 orillas (6 de septiembre de 2015)'
+                          }
+                        </span>
                       </p>
                     </a>
                   </div>
@@ -723,7 +897,12 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                   <div className={styles.LinkItem}>
                     <a href='https://caracol.com.co/emisora/2019/10/01/bucaramanga/1569933810_686960.html
 ' target="_blank" className={styles.Link} >
-                      <p className={styles.LinkText}>El pueblo que ya no es "fantasma"<br></br>
+                      <p className={styles.LinkText}>{
+                        router.locale === 'en' ?
+                          'The "ghost" town where only 56 souls live' :
+                          ' El pueblo "fantasma" colombiano donde solo viven 56 almas'
+                      }
+                        <br></br>
                         <span>Entrevista con la alcaldesa. Caracol(10 de octubre de 2019).</span>
                       </p>
                       <div>

@@ -147,11 +147,14 @@ export const SlidersMobile = ({ isLoggedIn, onGuest }) => {
                 />
             */}
               <div className={`${styles.buttonPulse}`}>
-                <ButtonHome url={"/el-cubo/temporada-3/personajes?ref=init"} text={
-                  router.locale === "en" ?
-                    "Begin the journey" :
-                    "Iniciar el viaje"
-                } />
+                <ButtonHome url={router.locale === "en" ?
+                  "/en/el-cubo/temporada-3/personajes?ref=init" :
+                  "/el-cubo/temporada-3/personajes?ref=init"}
+                  text={
+                    router.locale === "en" ?
+                      "Begin the journey" :
+                      "Iniciar el viaje"
+                  } />
               </div>
             </article>
           </div>
