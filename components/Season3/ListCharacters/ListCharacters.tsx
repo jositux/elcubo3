@@ -227,14 +227,20 @@ const ListCharacters = ({ char, percentParam, timeline, router }) => {
               {
 
                 (juanPercent === 100 && guillermoPercent === 100 && yennyPercent === 100 && soledadPercent === 100 && diegoPercent === 100 && timeline)
-                  ? <div className={`${styles.Info}`}><a href="/el-cubo/temporada-3/recompensa" className={styles.buttonInfo}>
-
-                    {
-                      router.locale === "en" ?
-                        "VIEW INFOGRAPHIC" :
-                        "VER INFOGRAFIA"
-                    }
-                  </a></div>
+                  ? <div className={`${styles.Info}`}>
+                    <a href=
+                      {
+                        router.locale === "en" ?
+                          "/en/el-cubo/temporada-3/recompensa" :
+                          "/el-cubo/temporada-3/recompensa"
+                      }
+                      className={styles.buttonInfo}>
+                      {
+                        router.locale === "en" ?
+                          "VIEW INFOGRAPHIC" :
+                          "VER INFOGRAFIA"
+                      }
+                    </a></div>
                   : ''
               }
 
