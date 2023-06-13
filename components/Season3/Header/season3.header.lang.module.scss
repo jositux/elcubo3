@@ -1,0 +1,41 @@
+.containerLang {
+  display: flex;
+  justify-content: center;
+  /* align-self: center;    <---- REMOVE */
+  align-items: center;
+  height: 100%;
+
+  ul {
+    margin: 0;
+    list-style-type: none;
+
+    li {
+      display: inline;
+
+      &:first-child {
+        padding-right: 10px;
+        margin-right: 10px;
+        border-right: 1px solid #444444;
+      }
+
+      a {
+        font-family: $elcubo3_font_subtitle;
+        color: #927C31;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 100;
+
+        &:hover {
+          color: white;
+          border-bottom: 1px solid white;
+        }
+      }
+    }
+  }
+
+}
+
+a.active {
+  color: white !important;
+  border-bottom: 1px solid white;
+}

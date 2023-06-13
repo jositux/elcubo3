@@ -45,6 +45,7 @@ const VideoPlayer = ({
   const wrapperRef = React.useRef();
   const videoRef = React.useRef();
   const playerRef = React.useRef();
+
   //const router = useRouter();
 
   React.useEffect(() => {
@@ -432,7 +433,24 @@ const VideoPlayer = ({
         autoPlay={autoPlay}
         playsInline
       >
-        <track kind="captions" label="English" srcLang="en" src="/subs/guillermo.vtt"
+        <track kind="captions"
+          label=
+          {
+            router.locale === "en" ?
+              "English" :
+              "Spanish"
+          }
+          srcLang={
+            router.locale === "en" ?
+              "en" :
+              "es"
+          }
+          src={
+            router.locale === "en" ?
+              '/subs/' + title.toLowerCase().split(' ')[0] + '-en.vtt' :
+              '/subs/' + title.toLowerCase().split(' ')[0] + '.vtt'
+
+          }
           default>
         </track>
       </video>
