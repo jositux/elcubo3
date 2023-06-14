@@ -441,7 +441,11 @@ const VideoPlayer = ({
               "English" :
               "Spanish"
           }
-          srcLang="es"
+          srcLang={
+            router.locale === "en" ?
+              "en" :
+              "es"
+          }
 
           src={
             router.locale === "en" ?
