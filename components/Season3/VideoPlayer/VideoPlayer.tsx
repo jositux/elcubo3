@@ -441,7 +441,7 @@ const VideoPlayer = ({
               "English" :
               "Spanish"
           }
-          srcLang="en"
+          srcLang="es"
 
           src={
             router.locale === "en" ?
@@ -450,6 +450,7 @@ const VideoPlayer = ({
           }
           default>
         </track>
+
       </video>
     </VideoPlayerWrapper>
   );
