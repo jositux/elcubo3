@@ -433,23 +433,19 @@ const VideoPlayer = ({
         autoPlay={autoPlay}
         playsInline
       >
-        <track kind="captions"
+        <track
+          kind="captions"
           label=
           {
             router.locale === "en" ?
               "English" :
               "Spanish"
           }
-          srcLang={
-            router.locale === "en" ?
-              "en" :
-              "es"
-          }
+
           src={
             router.locale === "en" ?
               '/subs/' + title.toLowerCase().split(' ')[0] + '-en.vtt' :
               '/subs/' + title.toLowerCase().split(' ')[0] + '.vtt'
-
           }
           default>
         </track>

@@ -210,7 +210,13 @@ const Timeline = () => {
 
       <div className={styles.TimelineContainer}>
 
-        <a href="/el-cubo/temporada-3/personajes?ref=view" className={styles.Back} >
+        <a href=
+          {
+            router.locale === 'en' ?
+              '/en/el-cubo/temporada-3/personajes?ref=view' :
+              '/el-cubo/temporada-3/personajes?ref=view'
+          }
+          className={styles.Back} >
           <Back />
           <span>
             {
