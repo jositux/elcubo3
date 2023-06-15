@@ -20,14 +20,29 @@
   align-items: center;
   justify-content: center;
 
+  p {
+    font-family: $elcubo3_font_subtitle;
+    font-size: 22px;
+  }
+
+
   @media only screen and (max-width: 920px) and (orientation: landscape) {
     height: auto;
     overflow-y: scroll;
+
+    h2 {
+      font-size: 22px !important;
+    }
+
+    p {
+      font-family: $elcubo3_font_subtitle;
+      font-size: 14px;
+    }
   }
 
   .Ending {
     margin: 0 auto;
-    max-width: 650px;
+    max-width: 700px;
     padding: 60px;
     border-radius: 20px;
     color: white;
@@ -44,8 +59,9 @@
     }
 
     h2 {
-      font-size: 32px;
+      font-size: 3vw;
       margin-bottom: 30px;
+      line-height: 1.2;
     }
 
     .EndingContent {
@@ -59,11 +75,12 @@
         text-decoration: none;
         cursor: pointer;
         color: #EDC25F;
+        font-size: 22px;
 
         svg {
           position: absolute;
           transform: scale(0.7);
-          padding-top: 2px;
+          padding-top: 7px;
           padding-left: 10px;
 
           path {
