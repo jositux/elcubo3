@@ -427,10 +427,10 @@ width: 260px; }
 width: 100%; }
 
 .plyr__captions {
-  font-size: 2.3vw;
+  font-size: 2.1vw;
   font-family: Arial;
   padding-bottom: 10%;
-  max-width: 40vw;
+  max-width: 42vw;
   left: auto;
   right: auto;
 }

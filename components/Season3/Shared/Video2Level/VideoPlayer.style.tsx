@@ -232,9 +232,9 @@ export const VideoPlayerWrapper = styled.div`
 }
 
 .plyr__captions {
-  font-size: 2.3vw;
+  font-size: 2.1vw;
   font-family: Arial;
-  max-width: 40vw;
+  max-width: 42vw;
   left: auto;
   right: auto;
   }
