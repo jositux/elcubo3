@@ -188,6 +188,7 @@ const Timeline = () => {
   /* video */
   const [isOpen, setIsOpen] = useState(false);
   const [video, setVideo] = useState('482203');
+  const [videoTitle, setVideoTitle] = useState('confesionario');
 
   const handleOnPlayVideo = () => {
     disableScroll.on();
@@ -376,7 +377,13 @@ const Timeline = () => {
               <div className={styles.columnLink}>
                 <div className={styles.LinksContent}>
                   <div className={styles.LinkItem}>
-                    <a onClick={() => { setVideo('482203'); handleOnPlayVideo(); }} className={styles.Link} >
+                    <a onClick={
+                      () => {
+                        setVideo('482203');
+                        setVideoTitle('');
+                        handleOnPlayVideo();
+                      }}
+                      className={styles.Link} >
                       <p className={styles.LinkText}>video arrieros</p>
                       <div>
                         <PlayIconTimeline />
@@ -1189,7 +1196,15 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
               <div className={styles.columnLink}>
                 <div className={styles.LinksContent}>
                   <div className={styles.LinkItem}>
-                    <a onClick={() => { setVideo('497300'); handleOnPlayVideo(); }} className={styles.Link} >
+                    <a
+                      onClick={
+                        () => {
+                          setVideo('497300');
+                          setVideoTitle('confesionario-juan');
+                          handleOnPlayVideo();
+                        }}
+
+                      className={styles.Link} >
                       <div className={styles.Avatar}>
                         <img className={styles.ConfesionarioPicture} src="/images/season3/timeline/confesionarios/juan.png" alt="Juan" />
                         <Play />
@@ -1200,7 +1215,15 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
-                    <a onClick={() => { setVideo('497302'); handleOnPlayVideo(); }} className={styles.Link} >
+                    <a onClick={
+
+                      () => {
+                        setVideo('497302');
+                        setVideoTitle('confesionario-soledad');
+                        handleOnPlayVideo();
+                      }
+
+                    } className={styles.Link} >
                       <div className={styles.Avatar}>
                         <img className={styles.ConfesionarioPicture} src="/images/season3/timeline/confesionarios/soledad.png" alt="Soledad" />
                         <Play />
@@ -1211,7 +1234,15 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
-                    <a onClick={() => { setVideo('497294'); handleOnPlayVideo(); }} className={styles.Link} >
+                    <a onClick=
+                      {
+                        () => {
+                          setVideo('497294');
+                          setVideoTitle('confesionario-diego');
+                          handleOnPlayVideo();
+                        }
+                      }
+                      className={styles.Link} >
                       <div className={styles.Avatar}>
                         <img className={styles.ConfesionarioPicture} src="/images/season3/timeline/confesionarios/diego.png" alt="Diego" />
                         <Play />
@@ -1222,7 +1253,15 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
-                    <a onClick={() => { setVideo('497298'); handleOnPlayVideo(); }} className={styles.Link} >
+                    <a onClick=
+                      {
+                        () => {
+                          setVideo('497298');
+                          setVideoTitle('confesionario-yenny');
+                          handleOnPlayVideo();
+                        }
+                      }
+                      className={styles.Link} >
                       <div className={styles.Avatar}>
                         <img className={styles.ConfesionarioPicture} src="/images/season3/timeline/confesionarios/yenny.png" alt="Yenny" />
                         <Play />
@@ -1233,7 +1272,14 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                     </a>
                   </div>
                   <div className={styles.LinkItem}>
-                    <a onClick={() => { setVideo('497296'); handleOnPlayVideo(); }} className={styles.Link} >
+                    <a onClick=
+                      {
+                        () => {
+                          setVideo('497296');
+                          setVideoTitle('confesionario-guillermo');
+                          handleOnPlayVideo();
+                        }
+                      } className={styles.Link} >
                       <div className={styles.Avatar}>
                         <img className={styles.ConfesionarioPicture} src="/images/season3/timeline/confesionarios/guillermo.png" alt="Guillermo" />
                         <Play />
@@ -1259,7 +1305,13 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
             <div>
 
               <img
-                onClick={() => { setVideo('485851'); handleOnPlayVideo(); }}
+                onClick={
+                  () => {
+                    setVideo('485851');
+                    setVideoTitle('');
+                    handleOnPlayVideo();
+                  }
+                }
                 className={styles.VideoPicture}
                 src="/images/season3/timeline/video.jpg"
                 alt="imagen del lugar"
@@ -1271,7 +1323,7 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                   router.locale === 'en' ?
                     HtmlParser('<h1>You made it to the end of the road!<br />You have walked the paths of El Jordan!</h1><p>As a reward, you can now access exclusive content and share this content in social media. Happy journey back!</p>')
                     :
-                    HtmlParser('<h1>Llegaste al final del camino. ¡Has recorrido los caminos del Jordán!</h1><p>Como recompensa puedes acceder al contenido exclusivo final y compartir el proyecto en redes. ¡Feliz viaje de regreso!</p>')
+                    HtmlParser('<h1>Llegaste al final del camino.<br /> ¡Has recorrido los caminos del Jordán!</h1><p>Como recompensa puedes acceder al contenido exclusivo final y compartir el proyecto en redes. ¡Feliz viaje de regreso!</p>')
                 }
 
 
@@ -1311,6 +1363,7 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
       <div className={styles.fullScreenVideo}>
         <VideoFadeModal
           videoId={video}
+          videoTitle={videoTitle}
           showModal={isOpen}
           closeVideo={handleOnCloseVideo}
           setShowModal={setIsOpen}

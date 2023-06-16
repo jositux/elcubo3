@@ -46,8 +46,6 @@ const VideoPlayer = ({
   const videoRef = React.useRef();
   const playerRef = React.useRef();
 
-  //const router = useRouter();
-
   React.useEffect(() => {
     const video: HTMLMediaElement = videoRef.current;
     const updateQuality = (newQuality) => {
@@ -118,7 +116,7 @@ const VideoPlayer = ({
         disabled: 'Disabled',
         advertisement: 'Ad',
       },
-      seekTime: 30,
+      seekTime: 5,
       tooltips: {
         controls: true,
         seek: true
