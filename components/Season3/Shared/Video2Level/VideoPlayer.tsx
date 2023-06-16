@@ -10,6 +10,7 @@ const VideoPlayer = ({
   source,
   poster = null,
   title,
+  subtitle,
   fullscreen,
   showBackButton = false,
   backButtonLink = '/',
@@ -66,8 +67,14 @@ const VideoPlayer = ({
       i18n: {
         restart: 'Restart',
         rewind: 'Retroceder {seektime} seg',
-        play: 'Reproducir',
-        pause: 'Pausar',
+        play:
+          router.locale === "en" ?
+            "Play" :
+            "Reproducir"
+        ,
+        pause: router.locale === "en" ?
+          "Pause" :
+          "Pausar",
         fastForward: 'Adelantar {seektime} seg',
         seek: 'Seek',
         played: 'Played',
@@ -75,10 +82,18 @@ const VideoPlayer = ({
         currentTime: 'Current time',
         duration: 'Duration',
         volume: 'Volumen',
-        mute: 'Silenciar',
-        unmute: 'Activar Sonido',
-        enableCaptions: 'Enable captions',
-        disableCaptions: 'Disable captions',
+        mute: router.locale === "en" ?
+          "Mute" :
+          "Silenciar",
+        unmute: router.locale === "en" ?
+          "Unmute" :
+          "Activar Sonido",
+        enableCaptions: router.locale === "en" ?
+          "Enable Subtitles" :
+          "Habilitar Subtítulos",
+        disableCaptions: router.locale === "en" ?
+          "Disable Subtitles" :
+          "Dehabilitar Subtítulos",
         enterFullscreen: 'Enter fullscreen',
         exitFullscreen: 'Exit fullscreen',
         frameTitle: 'Player for {title}',
@@ -95,7 +110,7 @@ const VideoPlayer = ({
         disabled: 'Disabled',
         advertisement: 'Ad',
       },
-      seekTime: 30,
+      seekTime: 5,
       tooltips: {
         controls: true,
         seek: true
@@ -348,7 +363,30 @@ const VideoPlayer = ({
         autoPlay={autoPlay}
         loop={loop}
         playsInline
-      />
+      >
+        <track
+          kind="captions"
+          label=
+          {
+            router.locale === "en" ?
+              "English" :
+              "Spanish"
+          }
+          srcLang={
+            router.locale === "en" ?
+              "en" :
+              "es"
+          }
+
+          src={
+            router.locale === "en" ?
+              '/subs/' + subtitle + '-en.vtt' :
+              '/subs/' + subtitle + '.vtt'
+          }
+          default>
+        </track>
+
+      </video>
     </VideoPlayerWrapper>
   );
 };

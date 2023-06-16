@@ -3,7 +3,7 @@ import Video2Level from 'components/Season3/Shared/Video2Level/VideoPlayer';
 import UrlUtils from 'utils/Url';
 import FadeModal from 'components/Season3/Modal/FadeModal/FadeModal';
 
-const VideoModal = ({ videoId, showModal, closeVideo, setShowModal, autoPlay }) => {
+const VideoModal = ({ videoId, videoTitle, showModal, closeVideo, setShowModal, autoPlay }) => {
 
   const [player, setPlayer] = useState(null);
 
@@ -31,7 +31,8 @@ const VideoModal = ({ videoId, showModal, closeVideo, setShowModal, autoPlay }) 
     >
       {showModal &&
         <Video2Level
-          title={""}
+          title=''
+          subtitle={videoTitle}
           source={srcVideo}
           showPrevButton={false}
           showNextButton={false}

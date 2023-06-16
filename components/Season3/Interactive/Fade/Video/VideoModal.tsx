@@ -19,7 +19,8 @@ const VideoModal = ({
   const [player, setPlayer] = useState(null);
   const [isSlideOpen, setIsSlideOpen] = useState(false);
   const position = (data.field_ec_time_action * 100 / duration).toFixed(2);
-  let srcVideo = UrlUtils.getVideoUrl(data.field_ec_asset_id);
+  let videId = data.field_ec_asset_id;
+  let srcVideo = UrlUtils.getVideoUrl(videId);
   let title = data.field_ec_title;
 
   const router = useRouter();
@@ -38,7 +39,7 @@ const VideoModal = ({
 
     // Guillermo
     if (data?.id === '1692') { title = 'Escaping from violence' }
-    if (data?.id === '1694') { title = 'Guillermo y Saint Rosa meet in Jordán' }
+    if (data?.id === '1694') { title = 'Guillermo and Saint Rosa meet in Jordán' }
 
     // Soledad
     if (data?.id === '1699') { title = 'The heiress to a place on the council' }
@@ -102,6 +103,7 @@ const VideoModal = ({
           {openVideo &&
             <Video2Level
               title={title}
+              subtitle={title.replace(/[^a-z0-9]/gi, '-').toLowerCase()}
               source={srcVideo}
               showPrevButton={false}
               showNextButton={false}
