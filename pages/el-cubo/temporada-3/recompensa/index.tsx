@@ -376,7 +376,7 @@ const Timeline = () => {
             <div className={styles.ColumnsContainer}>
               <div className={styles.columnLink}>
                 <div className={styles.LinksContent}>
-                  <div className={styles.LinkItem}>
+                  {/*<div className={styles.LinkItem}>
                     <a onClick={
                       () => {
                         setVideo('482203');
@@ -389,7 +389,7 @@ const Timeline = () => {
                         <PlayIconTimeline />
                       </div>
                     </a>
-                  </div>
+                    </div>*/}
                   <div className={styles.LinkItem}>
                     <a href='http://conlupa.co/oculto-canon/amula.html' target="_blank" className={styles.Link}>
                       <p className={styles.LinkText}>
