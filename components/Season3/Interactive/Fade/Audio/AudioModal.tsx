@@ -7,6 +7,8 @@ import Slider from 'components/Season3/Slider/Slick/Slider';
 import AudioInteractive from 'components/Season3/Svg/AudioInteractive';
 import Ripple from 'components/Season3/Shared/Ripple/Ripple';
 
+import { useRouter } from 'next/router';
+
 
 const AudioModal = ({
   isActive,
@@ -23,6 +25,21 @@ const AudioModal = ({
     field_ec_gallery
   } = data;
 
+  const router = useRouter();
+
+  let titleCustom = title;
+
+  console.log(data)
+
+  if (router.locale === 'en') {
+    // Juan
+    if (data?.id === '1685') { titleCustom = 'A shepherd without herd' }
+    // Diego
+    if (data?.id === '1697') { titleCustom = 'Rural artist´s dream' }
+  }
+  else {
+    titleCustom = title;
+  }
 
   const position = (data.field_ec_time_action * 100 / duration).toFixed(2);
 
@@ -67,7 +84,7 @@ const AudioModal = ({
             left: `${position}%`,
           }}>
             <h2 className={styles.InteractiveTitle}>
-              {title}
+              {titleCustom}
             </h2>
             <Ripple />
             <AudioInteractive />
@@ -93,7 +110,7 @@ const AudioModal = ({
 
           <div className={styles.Content}>
             <div className={styles.AudioContent}>
-              <h2>{title}</h2>
+              <h2>{titleCustom}</h2>
               <div>
                 <AudioWave setAudioPlayer={setAudioPlayer} audio={urlAudio} />
               </div>
