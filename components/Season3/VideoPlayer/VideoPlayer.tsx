@@ -155,7 +155,6 @@ const VideoPlayer = ({
 
       const { wrapper, container } = playerRef.current.elements;
 
-      playerRef.current.captions.active = true;
       // Tap Support
       if (container) {
         if (!container._clickListener) {
