@@ -1147,12 +1147,14 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
   </div>*/}
 
                   <div className={styles.LinkItem}>
-                    <a onClick={() => { setVideo('485849'); handleOnPlayVideo(); }} className={styles.Link} >
+                    <a onClick={() => {
+                      setVideo('485849');
+                      setVideoTitle('');
+                      handleOnPlayVideo();
+                    }} className={styles.Link} >
                       <div>
                         <PlayIconTimeline />
                       </div>
-
-
 
                       <p className={styles.LinkText}>
                         <span>
