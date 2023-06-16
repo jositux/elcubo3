@@ -426,4 +426,13 @@ width: 260px; }
 [data-tooltip-length="fit"]:after {
 width: 100%; }
 
+.plyr__captions {
+  font-size: 2.3vw;
+  font-family: Arial;
+  padding-bottom: 10%;
+  max-width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 `;

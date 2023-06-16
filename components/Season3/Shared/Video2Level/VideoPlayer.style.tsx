@@ -231,4 +231,12 @@ export const VideoPlayerWrapper = styled.div`
   z-index: 0 ;
 }
 
+.plyr__captions {
+  font-size: 2.3vw;
+  font-family: Arial;
+  max-width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
 `;
