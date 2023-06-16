@@ -431,8 +431,8 @@ width: 100%; }
   font-family: Arial;
   padding-bottom: 10%;
   max-width: 40vw;
-  margin-left: auto;
-  margin-right: auto;
+  left: auto;
+  right: auto;
 }
 
 `;

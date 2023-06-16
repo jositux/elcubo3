@@ -235,8 +235,8 @@ export const VideoPlayerWrapper = styled.div`
   font-size: 2.3vw;
   font-family: Arial;
   max-width: 40vw;
-  margin-left: auto;
-  margin-right: auto;
+  left: auto;
+  right: auto;
   }
 
 `;
