@@ -51,11 +51,51 @@ const Personaje = (props) => {
 
   const [percentParam, setPercentParam] = useState(0);
 
+  let titleCustom = ''
+
   const markers = interactivos.map(i => {
+
+    titleCustom = i?.field_ec_title;
+    if (router.locale === 'en') {
+      // Yenny
+      if (i?.id === '1687') { titleCustom = 'The patriarchal as the origin of matriarchal' }
+      if (i?.id === '1690') { titleCustom = '"The young ladys"' }
+      if (i?.id === '1688') { titleCustom = 'the first dream come true' }
+      if (i?.id === '1689') { titleCustom = 'First Time in town' }
+
+      // Juan
+      if (i?.id === '1684') { titleCustom = 'The curse of the cemetery' }
+      if (i?.id === '1683') { titleCustom = 'A vocation is born from violence' }
+      if (i?.id === '1685') { titleCustom = 'A shepherd without herd' }
+      if (i?.id === '1686') { titleCustom = 'Santa Rosa de Lima, Jordan´s caretaker' }
+
+      // Diego
+      if (i?.id === '1695') { titleCustom = 'And the inheritance continues' }
+      if (i?.id === '1696') { titleCustom = 'No road, out of the map' }
+      if (i?.id === '1697') { titleCustom = 'Rural artist´s dream' }
+
+      // Guillermo
+      if (i?.id === '1691') { titleCustom = 'Guillermo Prada, a child of violence' }
+      if (i?.id === '1692') { titleCustom = 'Escaping from violence' }
+      if (i?.id === '1693') { titleCustom = 'The complexities of not owning land' }
+      if (i?.id === '1694') { titleCustom = 'Guillermo y Saint Rosa meet in Jordán' }
+
+      // Soledad
+      if (i?.id === '1698') { titleCustom = 'Conditions of rural women' }
+      if (i?.id === '1699') { titleCustom = 'The heiress to a place on the council' }
+      if (i?.id === '1700') { titleCustom = 'The councilor' }
+
+    }
+    else {
+      titleCustom = i?.field_ec_title;
+    }
+    console.log(i?.id);
+
+
     return {
       time: parseInt(i?.field_ec_time_action),
       url: i?.field_ec_thumb,
-      text: HtmlParser(i?.field_ec_title)
+      text: HtmlParser(titleCustom)
     }
   });
 
