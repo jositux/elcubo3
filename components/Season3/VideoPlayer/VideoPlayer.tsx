@@ -135,7 +135,11 @@ const VideoPlayer = ({
         'airplay',
         'fullscreen',
       ],
-      captions: { active: true },
+      captions: {
+        active: true,
+        update: true,
+        language: router.locale === "en" ? 'en' : 'es'
+      },
       settings: ['quality'],
     });
 
