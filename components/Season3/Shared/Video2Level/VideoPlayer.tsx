@@ -130,7 +130,11 @@ const VideoPlayer = ({
         'fullscreen',
       ],
       loop: { active: loop },
-      captions: { active: true, update: true, language: 'es' },
+      captions: {
+        active: true,
+        update: true,
+        language: router.locale === "en" ? 'en' : 'es'
+      },
       settings: ['quality'],
     });
 

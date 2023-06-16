@@ -31,7 +31,7 @@ const VideoModal = ({
 
     // Juan
     if (data?.id === '1683') { title = 'A vocation is born from violence' }
-    if (data?.id === '1686') { title = 'Santa Rosa de Lima, Jordan´s caretaker' }
+    if (data?.id === '1686') { title = "Santa Rosa de Lima, Jordan's caretaker" }
 
     // Diego
     if (data?.id === '1695') { title = 'And the inheritance continues' }

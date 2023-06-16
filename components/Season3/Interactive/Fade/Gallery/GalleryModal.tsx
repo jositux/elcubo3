@@ -40,7 +40,6 @@ const GalleryModal = ({
   let titleCustom = field_ec_title;
   let descriptionCustom = field_ec_description;
 
-  console.log(id)
   if (router.locale === 'en') {
     // Yenny
     if (id === '1687') {
@@ -53,7 +52,7 @@ const GalleryModal = ({
     }
     if (id === '1688') {
       titleCustom = 'The first dream come true';
-      descriptionCustom = 'In Jordán, people do not have easy access to education. For many of them, the best option is to work in the fields and start a family, which is why very few manage to obtain a high school diploma. Yenny Delgado achieved this in the year 2002 when she was 19 years old.';
+      descriptionCustom = "In Jordán, people do not have easy access to education. For many of them, the best option is to work in the fields and have a family, which is why very few manage to obtain a bachelor's degree. Yenny Delgado did it in 2002 when she was 19 years old.";
     }
 
     // Guillermo
@@ -68,18 +67,18 @@ const GalleryModal = ({
 
     // Juan
     if (id === '1684') {
-      titleCustom = 'The curse of the cemetery';
-      descriptionCustom = 'The Jordán Sube cemetery ceased operations in the early 1990s when Roque Julio Ferreira, a reckless man who had been in power for over 20 years, was buried. Locals claim that Roque Ferreira´s tomb exploded on the third day of his burial, giving rise to the belief that the cemetery is cursed and, therefore, no one returned to bury their deceased there.'
+      titleCustom = "The curse of the cemetery";
+      descriptionCustom = "The Jordán Sube cemetery stopped working in the early 1990s when Roque Julio Ferreira, a reckless man who had been in power for more than 20 years, was buried. The locals claim that Roque Ferreira's tomb exploded on the third day of his burial, and thus the belief was born that the cemetery has a curse and, therefore, no one ever buried their dead there again."
     }
 
     // Soledad
     if (id === '1698') {
       titleCustom = 'Conditions of rural women';
-      descriptionCustom = 'Rural women face inequality in aspects such as land ownership, remuneration, decision-making power, access to resources, and education. However, if rural women had the same access as men, agricultural production in developing countries would increase between 2.5% and 4%, and the number of undernourished people would decrease by approximately 12% to 17% (FAO, 2011).'
+      descriptionCustom = 'Rural women face inequality in aspects such as land ownership, remuneration, decision-making power, access to resources and education. But, if rural women had the same access as men, agricultural production in developing countries would increase between 2.5 and 4%, and the number of undernourished people would decrease approximately between 12% and 17% (FAO, 2011).'
     }
     if (id === '1700') {
       titleCustom = 'The councilor';
-      descriptionCustom = 'In Latin America, only 25% of local government representatives are women. Soledad Silva dreams of becoming the mayor of Jordán Sube, which is why she started her political career as a councilwoman for the 2020-2023 term.'
+      descriptionCustom = 'In Latin America, only 25% of local government representatives are women. Soledad Silva dreams of being mayor of Jordán Sube, which is why she began her political career as a councilor for the period 2020-2023.'
     }
   }
   else {
