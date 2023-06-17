@@ -48,6 +48,8 @@ const VideoPlayer = ({
 
   React.useEffect(() => {
     const video: HTMLMediaElement = videoRef.current;
+
+
     const updateQuality = (newQuality) => {
       if (window.hls) {
         window.hls.levels.forEach((level, levelIndex) => {
@@ -399,8 +401,10 @@ const VideoPlayer = ({
       ))
     }
 
+
     // Player ref captions
     playerRef.current.captions.active = true;
+    console.log(playerRef.current.captions.active);
 
   }, [markers, duration, playerRef.current]);
 
