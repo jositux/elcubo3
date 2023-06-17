@@ -48,6 +48,8 @@ const VideoPlayer = ({
 
   React.useEffect(() => {
     const video: HTMLMediaElement = videoRef.current;
+
+
     const updateQuality = (newQuality) => {
       if (window.hls) {
         window.hls.levels.forEach((level, levelIndex) => {
@@ -138,6 +140,7 @@ const VideoPlayer = ({
       captions: {
         active: true,
         update: true,
+        language: router.locale === "en" ? 'en' : 'es'
       },
       settings: ['quality'],
     });
@@ -398,6 +401,11 @@ const VideoPlayer = ({
       ))
     }
 
+
+    // Player ref captions
+    playerRef.current.captions.active = true;
+    console.log(playerRef.current.captions.active);
+
   }, [markers, duration, playerRef.current]);
 
 
@@ -446,10 +454,10 @@ const VideoPlayer = ({
               "en" :
               "es"
           }
-
-          src={router.locale === "en" ?
-            '/subs/' + title.toLowerCase().split(' ')[0] + '-en.vtt' :
-            '/subs/' + title.toLowerCase().split(' ')[0] + '.vtt'
+          src={
+            router.locale === "en" ?
+              '/subs/' + title.toLowerCase().split(' ')[0] + '-en.vtt' :
+              '/subs/' + title.toLowerCase().split(' ')[0] + '.vtt'
           }
           default
         >
