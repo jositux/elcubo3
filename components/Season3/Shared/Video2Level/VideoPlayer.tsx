@@ -133,7 +133,6 @@ const VideoPlayer = ({
       captions: {
         active: true,
         update: true,
-        language: router.locale === "en" ? 'en' : 'es'
       },
       settings: ['quality'],
     });
@@ -376,12 +375,6 @@ const VideoPlayer = ({
               "English" :
               "Spanish"
           }
-          srcLang={
-            router.locale === "en" ?
-              "en" :
-              "es"
-          }
-
           src={
             router.locale === "en" ?
               '/subs/' + subtitle + '-en.vtt' :

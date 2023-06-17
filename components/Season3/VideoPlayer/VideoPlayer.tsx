@@ -138,7 +138,6 @@ const VideoPlayer = ({
       captions: {
         active: true,
         update: true,
-        language: router.locale === "en" ? 'en' : 'es'
       },
       settings: ['quality'],
     });
@@ -448,12 +447,12 @@ const VideoPlayer = ({
               "es"
           }
 
-          src={
-            router.locale === "en" ?
-              '/subs/' + title.toLowerCase().split(' ')[0] + '-en.vtt' :
-              '/subs/' + title.toLowerCase().split(' ')[0] + '.vtt'
+          src={router.locale === "en" ?
+            '/subs/' + title.toLowerCase().split(' ')[0] + '-en.vtt' :
+            '/subs/' + title.toLowerCase().split(' ')[0] + '.vtt'
           }
-          default>
+          default
+        >
         </track>
 
       </video>
