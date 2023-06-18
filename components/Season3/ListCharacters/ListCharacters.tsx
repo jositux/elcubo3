@@ -109,7 +109,7 @@ const ListCharacters = ({ char, percentParam, timeline, router }) => {
                           "/en/el-cubo/temporada-3/interactivo/juan" :
                           "/el-cubo/temporada-3/interactivo/juan"
                       }>
-                      <h2>Juan de Jesús</h2><PersonajeArrow />
+                      Juan de Jesús<PersonajeArrow />
                     </a>
                   </div>
                   <div className={styles.progress}>
@@ -132,7 +132,7 @@ const ListCharacters = ({ char, percentParam, timeline, router }) => {
                         "/en/el-cubo/temporada-3/interactivo/guillermo" :
                         "/el-cubo/temporada-3/interactivo/guillermo"
                     }>
-                      <h2>Guillermo</h2><PersonajeArrow />
+                      Guillermo<PersonajeArrow />
                     </a>
                   </div>
                   <div className={styles.progress}>
@@ -155,7 +155,7 @@ const ListCharacters = ({ char, percentParam, timeline, router }) => {
                         "/en/el-cubo/temporada-3/interactivo/yenny" :
                         "/el-cubo/temporada-3/interactivo/yenny"
                     }>
-                      <h2>Yenny</h2><PersonajeArrow />
+                      Yenny<PersonajeArrow />
                     </a>
                   </div>
                   <div className={styles.progress}>
@@ -176,7 +176,7 @@ const ListCharacters = ({ char, percentParam, timeline, router }) => {
                         "/en/el-cubo/temporada-3/interactivo/diego" :
                         "/el-cubo/temporada-3/interactivo/diego"
                     }>
-                      <h2>Diego</h2><PersonajeArrow />
+                      Diego<PersonajeArrow />
                     </a>
                   </div>
                   <div className={styles.progress}>
@@ -197,7 +197,7 @@ const ListCharacters = ({ char, percentParam, timeline, router }) => {
                         "/en/el-cubo/temporada-3/interactivo/soledad" :
                         "/el-cubo/temporada-3/interactivo/soledad"
                     }>
-                      <h2>Soledad</h2><PersonajeArrow />
+                      Soledad <PersonajeArrow />
                     </a>
                   </div>
                   <div className={styles.progress}>

@@ -22,7 +22,7 @@
 
   p {
     font-family: $elcubo3_font_subtitle;
-    font-size: 22px;
+    font-size: 18px;
   }
 
 
@@ -55,11 +55,11 @@
     }
 
     h1 {
-      font-size: 44px;
+      font-size: 3vw;
     }
 
     h2 {
-      font-size: 3vw;
+      font-size: 2vw;
       margin-bottom: 30px;
       line-height: 1.2;
     }
@@ -75,12 +75,12 @@
         text-decoration: none;
         cursor: pointer;
         color: #EDC25F;
-        font-size: 22px;
+        font-size: 18px;
 
         svg {
           position: absolute;
           transform: scale(0.7);
-          padding-top: 7px;
+          padding-top: 4px;
           padding-left: 10px;
 
           path {
