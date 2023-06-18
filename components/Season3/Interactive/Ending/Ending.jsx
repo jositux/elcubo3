@@ -145,7 +145,7 @@ const Ending = ({ name }) => {
                     {
                       router.locale === 'en' ?
                         'You have finished your journey with ' :
-                        '¡Has terminado tu camino con'
+                        '¡Has terminado tu camino con '
                     }
                     {name}!</h2>
                   <p>
@@ -200,7 +200,7 @@ const Ending = ({ name }) => {
                       {
                         router.locale === 'en' ?
                           'You have finished your journey with ' :
-                          '¡Has terminado tu camino con'
+                          '¡Has terminado tu camino con '
                       }
                       {name}!
                     </h2>
@@ -257,7 +257,7 @@ const Ending = ({ name }) => {
                         {
                           router.locale === 'en' ?
                             'You have finished your journey with ' :
-                            '¡Has terminado tu camino con'
+                            '¡Has terminado tu camino con '
                         }
                         {name}!</h2>
                       <p>
@@ -311,7 +311,7 @@ const Ending = ({ name }) => {
                           {
                             router.locale === 'en' ?
                               'You have finished your journey with ' :
-                              '¡Has terminado tu camino con'
+                              '¡Has terminado tu camino con '
                           }
                           {name}!
                         </h2>  <div className={styles.EndingContent}>
@@ -358,8 +358,20 @@ const Ending = ({ name }) => {
 
                             {/*<a onClick={handleOnPlayVideo}>Ver confesionario <PersonajeArrow /></a>*/}
 
-                            <a href="/el-cubo/temporada-3/recompensa">
-                              Ver infografía <PersonajeArrow />
+                            <a href=
+                              {
+                                router.locale === 'en' ?
+                                  "/en/el-cubo/temporada-3/recompensa"
+                                  :
+                                  "/el-cubo/temporada-3/recompensa"
+                              }
+                            >
+                              {
+                                router.locale === 'en' ?
+                                  "View infographic"
+                                  :
+                                  "Ver infografía"
+                              } <PersonajeArrow />
                             </a>
                           </div>
                         </div>
