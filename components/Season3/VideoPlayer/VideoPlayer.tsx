@@ -7,6 +7,7 @@ import 'plyr/dist/plyr.css';
 import { VideoPlayerWrapper } from './VideoPlayer.style';
 import { clear } from 'console';
 import { any } from 'prop-types';
+import { getElementById } from 'domutils';
 
 const VideoPlayer = ({
   source,
@@ -189,6 +190,9 @@ const VideoPlayer = ({
         <div id="plyr__portal" class="plyr__portal"></div>
       </div>
     `,
+
+
+
     );
 
     if (showBackButton) {
@@ -402,9 +406,7 @@ const VideoPlayer = ({
     }
 
 
-    // Player ref captions
-    playerRef.current.captions.active = true;
-    console.log(playerRef.current.captions.active);
+
 
   }, [markers, duration, playerRef.current]);
 
@@ -434,6 +436,7 @@ const VideoPlayer = ({
   return (
     <VideoPlayerWrapper ref={wrapperRef}>
       <video
+        id="video-base"
         ref={videoRef}
         controls
         crossOrigin="true"
