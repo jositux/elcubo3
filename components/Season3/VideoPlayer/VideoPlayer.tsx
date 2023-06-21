@@ -408,8 +408,6 @@ const VideoPlayer = ({
 
     // Player ref captions
     playerRef.current.captions.active = true;
-    console.log(playerRef.current.captions.active);
-
     setName(title.toLowerCase().split(' ')[0]);
 
   }, [markers, duration, playerRef.current]);
