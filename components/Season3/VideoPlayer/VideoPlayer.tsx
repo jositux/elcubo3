@@ -8,6 +8,7 @@ import { VideoPlayerWrapper } from './VideoPlayer.style';
 import { clear } from 'console';
 import { any } from 'prop-types';
 import { getElementById } from 'domutils';
+import { setAnswerClicked } from 'redux/actions/interactive';
 
 const VideoPlayer = ({
   source,
@@ -46,6 +47,8 @@ const VideoPlayer = ({
   const wrapperRef = React.useRef();
   const videoRef = React.useRef();
   const playerRef = React.useRef();
+
+  let [name, setName] = useState('');
 
   React.useEffect(() => {
     const video: HTMLMediaElement = videoRef.current;
@@ -405,7 +408,7 @@ const VideoPlayer = ({
 
     // Player ref captions
     playerRef.current.captions.active = true;
-    console.log(playerRef.current.captions.active);
+    setName(title.toLowerCase().split(' ')[0]);
 
   }, [markers, duration, playerRef.current]);
 
@@ -458,8 +461,8 @@ const VideoPlayer = ({
           }
           src={
             router.locale === "en" ?
-              '/subs/' + title.toLowerCase().split(' ')[0] + '-en.vtt' :
-              '/subs/' + title.toLowerCase().split(' ')[0] + '.vtt'
+              '/subs/' + name + '-en.vtt' :
+              '/subs/' + name + '.vtt'
           }
           default
         >

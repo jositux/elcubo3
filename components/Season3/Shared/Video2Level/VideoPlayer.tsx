@@ -135,7 +135,6 @@ const VideoPlayer = ({
         update: true,
         language: router.locale === "en" ? 'en' : 'es'
       },
-      settings: ['quality'],
     });
 
     setPlayer(playerRef.current);
