@@ -426,6 +426,8 @@ const VideoPlayer = ({
     };
   }, [onVideoEnded]);
 
+
+
   React.useEffect(() => {
     if (playerRef.current) {
       playerRef.current.on('controlsshown', onControlsShown);
