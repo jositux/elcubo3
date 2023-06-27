@@ -434,10 +434,13 @@ width: 100%; }
   left: auto;
   right: auto;
   line-height: 1.5;
+  background: transparent;
 }
 
 .plyr__captions .plyr__caption {
   line-height: 1.5;
+  background: transparent;
+  text-shadow: rgba(0, 0, 0, 1) 0em 0em .2em !important;
 }
 
 `;
