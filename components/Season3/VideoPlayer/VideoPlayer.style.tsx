@@ -433,6 +433,11 @@ width: 100%; }
   max-width: 42vw;
   left: auto;
   right: auto;
+  line-height: 1.5;
+}
+
+.plyr__captions .plyr__caption {
+  line-height: 1.5;
 }
 
 `;
