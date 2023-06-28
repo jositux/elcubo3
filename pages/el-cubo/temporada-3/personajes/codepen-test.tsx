@@ -38,8 +38,6 @@ export const codepenTest = ({ isLoggedIn, onGuest }) => {
 
 
     const getPosY = () => {
-      console.log('scroll' + window.scrollY);
-      //console.log(height1);
 
       if (window.scrollY < 90) {
         document.getElementById('test').style.width = 100 - window.scrollY / 5 + '%';

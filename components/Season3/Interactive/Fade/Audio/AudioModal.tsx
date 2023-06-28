@@ -29,8 +29,6 @@ const AudioModal = ({
 
   let titleCustom = title;
 
-  console.log(data)
-
   if (router.locale === 'en') {
     // Juan
     if (data?.id === '1685') { titleCustom = 'A shepherd without herd' }

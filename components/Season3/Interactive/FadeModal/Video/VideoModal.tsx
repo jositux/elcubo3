@@ -14,9 +14,6 @@ const VideoModal = ({
   const [player, setPlayer] = useState(null);
   const [isSlideOpen, setIsSlideOpen] = useState(false);
 
-  console.log(data)
-  //console.log(eval(data.field_ec_episode_json.field_ec_asset_id));
-
   let srcVideo = UrlUtils.getVideoUrl('482209');
   let title = data.field_ec_title;
 

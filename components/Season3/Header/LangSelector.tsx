@@ -6,8 +6,6 @@ const LangSelector = () => {
 
   const router = useRouter();
 
-  console.log(router.pathname);
-
   return (
     <Fragment>
       <div className={styles.containerLang}>
