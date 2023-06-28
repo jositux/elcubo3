@@ -143,7 +143,6 @@ const Personajes = ({ text }) => {
 
   useEffect(() => {
 
-    console.log(query.ref)
     if (!query.ref || query.ref === "init") {
       handleCards();
     }

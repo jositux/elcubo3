@@ -89,7 +89,7 @@ const Personaje = (props) => {
     else {
       titleCustom = i?.field_ec_title;
     }
-    console.log(i?.id);
+    //console.log(i?.id);
 
 
     return {

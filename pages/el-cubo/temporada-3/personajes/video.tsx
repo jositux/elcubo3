@@ -31,9 +31,6 @@ export const video = ({ isLoggedIn, onGuest }) => {
 
 
     const getPosY = () => {
-      console.log('scroll' + window.scrollY);
-      //console.log(height1);
-
       if (window.scrollY <= headerHeigth) {
         /* 100 equivale al 100% del ancho */
         //contentResizable.style.transform = "scale(" + (100 - window.scrollY / 5) / 100 + ")";

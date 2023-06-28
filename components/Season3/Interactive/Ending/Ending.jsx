@@ -87,7 +87,7 @@ const Ending = ({ name }) => {
     setCountFull([juanPercent, guillermoPercent, yennyPercent, soledadPercent, diegoPercent].filter(element => element === 100).length);
 
 
-    console.log('los que tienen 100 son / ' + countFull);
+    // console.log('los que tienen 100 son / ' + countFull);
 
   }, [])
 

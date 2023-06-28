@@ -429,7 +429,7 @@ width: 100%; }
 .plyr__captions {
   font-size: 2.1vw;
   font-family: Arial;
-  padding-bottom: 8%;
+  padding-bottom: 10%;
   max-width: 42vw;
   left: auto;
   right: auto;
