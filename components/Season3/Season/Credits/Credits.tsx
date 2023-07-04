@@ -53,43 +53,102 @@ const Credits = () => {
           <div className={styles.CreditsContent}>
 
             <div className={styles.Column1}>
-              <h2>DIRECCIÓN Y DESARROLLO
+              <h2>
+                {
+                  router.locale === "en" ?
+                    "Direction and Development" :
+                    "DIRECCIÓN Y DESARROLLO"
+                }
               </h2>
               <ul>
-                <li>JUAN CARLOS BAQUERO<br /><em>Dirección general
-                </em></li>
+                <li>JUAN CARLOS BAQUERO<br />
+                  <em>
+                    {
+                      router.locale === "en" ?
+                        "General direction" :
+                        "Dirección general"
+                    }
+                  </em>
+
+                </li>
                 <li>ARNAU GIFREU<br />
-                  CAMILO GALVIS <br /><em>Dirección de interactividad
+                  CAMILO GALVIS <br />
+                  <em>
+                    {
+                      router.locale === "en" ?
+                        "Interactivity direction" :
+                        "Dirección de interactividad"
+                    }
                   </em></li>
-                <li>JOSE FELIPE VARON GARCIA <br /><em>Dirección documental
-                </em></li>
-                <li>MARGARITA HERRERA SABOGAL <br /><em>Coordinación de investigación
-                </em></li>
+                <li>JOSE FELIPE VARON GARCIA <br />
+                  <em>
+                    {
+                      router.locale === "en" ?
+                        "Documentaryy direction" :
+                        "Dirección documental"
+                    }
+                  </em>
+                </li>
+                <li>MARGARITA HERRERA SABOGAL <br />
+                  <em>
+                    {
+                      router.locale === "en" ?
+                        "Research coordination" :
+                        "Coordinación de investigación"
+                    }
+                  </em></li>
 
                 <li>PAULA ANDREA ARIAS
-                  <br /><em>Diseño de Producción
+                  <br /><em>
+                    {
+                      router.locale === "en" ?
+                        "Production design" :
+                        "Diseño de Producción"
+                    }
                   </em></li>
 
-                <li>CAROLINA VASQUEZ TRIANA <br /><em> Investigación
-                </em></li>
+                <li>CAROLINA VASQUEZ TRIANA <br />
+                  <em>
+                    {
+                      router.locale === "en" ?
+                        "Research" :
+                        "Investigación"
+                    }
+                  </em></li>
 
                 <li> ARNAU GIFREU CASTELLS<br />
                   CAMILO ERNESTO GALVIS<br />
                   CAROLINA VASQUEZ TRIANA<br />
-                  JUAN CARLOS BAQUERO <br /><em> Guión interactividad
+                  JUAN CARLOS BAQUERO <br />
+                  <em>
+                    {
+                      router.locale === "en" ?
+                        "Interactivity script" :
+                        "Guión de interactividad"
+                    }
                   </em></li>
 
                 <li>ARNAU GIFREU CASTELLS<br />
                   CAROLINA VASQUEZ TRIANA<br />
                   JOSE FELIPE VARON GARCIA<br />
                   JUAN CARLOS BAQUERO<br />
-                  MARGARITA HERRERA SABOGAL<br /><em> Guión documental
+                  MARGARITA HERRERA SABOGAL<br /><em>
+                    {
+                      router.locale === "en" ?
+                        "Documentary script" :
+                        "Guión documental"
+                    }
                   </em></li>
 
                 <li> CAROLINA VASQUEZ TRIANA <br />
                   JUAN ANTONIO UNGAR <br />
                   MARIA ALEJANDRA ROA
-                  <br /><em> Redacción textos narrativa web
+                  <br /><em>
+                    {
+                      router.locale === "en" ?
+                        "Redacción textos narrativa web" :
+                        "Web Narrative Text Writing"
+                    }
                   </em></li>
 
 
@@ -98,66 +157,143 @@ const Credits = () => {
             </div>
 
             <div className={styles.Column2}>
-              <h2> Dieciséis9 Films SAS<br /><br />Producción
+              <h2> Dieciséis9 Films SAS<br /><br />
+
+                {
+                  router.locale === "en" ?
+                    "Production" :
+                    "Producción"
+                }
+
               </h2>
               <ul>
-                <li> DIANA PAOLA OLARTE PACHÓN <br /><em> Jefatura de producción
+                <li> DIANA PAOLA OLARTE PACHÓN <br /><em>
+                  {
+                    router.locale === "en" ?
+                      "Production manager" :
+                      "Jefatura de producción"
+                  }
+
                 </em></li>
                 <li>LAURA TATIANA PRIETO MUÑETON <br />
-                  LUIS ALBERTO GARAVITO BELTRAN  <br /><em> Producción general
+                  LUIS ALBERTO GARAVITO BELTRAN  <br />
+                  <em>
+                    {
+                      router.locale === "en" ?
+                        "General production" :
+                        "Producción general"
+                    }
+
                   </em></li>
                 <li>JUAN RODRIGO BASTIDAS HERRERA
-                  <br /><em> Producción  web
+                  <br /><em>
+                    {
+                      router.locale === "en" ?
+                        "Web production" :
+                        "Producción  web"
+                    }
                   </em></li>
                 <li>DANIELA CORREA ARÉVALO<br />
                   GIOVANNELA TORRES YATE
-                  <br /><em> Producción de campo
+                  <br /><em>
+                    {
+                      router.locale === "en" ?
+                        "On-set production" :
+                        "Producción de campo"
+                    }
                   </em></li>
 
                 <li>YENNIFER CAMACHO
-                  <br /><em> Producción de campo segunda unidad
+                  <br /><em>
+                    {
+                      router.locale === "en" ?
+                        "On-set production second unit" :
+                        "Producción de campo segunda unidad"
+                    }
                   </em></li>
-
-
               </ul>
 
             </div>
 
             <div className={styles.Column3}>
-              <h2> REALIZACIÓN DOCUMENTAL
+              <h2>
+                {
+                  router.locale === "en" ?
+                    "Documentary realization" :
+                    "REALIZACIÓN DOCUMENTAL"
+                }
               </h2>
               <ul>
                 <li>JOSE FELIPE VARON GARCIA
-                  <br /><em>Dirección y realización documental
+                  <br /><em>
+                    {
+                      router.locale === "en" ?
+                        "Direction and documentary realization" :
+                        "Dirección y realización documental"
+                    }
                   </em></li>
                 <li>MATEO SANTAMARIA ESTRADA
-                  <br /><em>Asistencia de dirección
+                  <br /><em>
+                    {
+                      router.locale === "en" ?
+                        "Director's assistant" :
+                        "Asistencia de dirección"
+                    }
                   </em></li>
                 <li>JAVIER RODRIGUEZ ACOSTA<br />
                   JOSE LUIS OSORIO SANCHEZ
-                  <br /><em>Realización
+                  <br /><em>
+                    {
+                      router.locale === "en" ?
+                        "Realization" :
+                        "Realización"
+                    }
                   </em></li>
               </ul>
             </div>
 
             <div className={styles.Column1}>
-              <h2>FOTOGRAFÍA
+              <h2>
+                {
+                  router.locale === "en" ?
+                    "Photography" :
+                    "FOTOGRAFÍA"
+                }
               </h2>
               <ul>
                 <li>JOSE LUIS OSORIO SÁNCHEZ
-                  <br /><em>Dirección de fotografía
+                  <br /><em>
+                    {
+                      router.locale === "en" ?
+                        "Photography director" :
+                        "Dirección de fotografía"
+                    }
                   </em></li>
                 <li>JAVIER RODRIGUEZ ACOSTA<br />
                   JOSE FELIPE VARON GARCIA <br />
                   JOSE LUIS OSORIO SÁNCHEZ
-                  <br /><em>Camarografía
+                  <br /><em>
+                    {
+                      router.locale === "en" ?
+                        "Cameragraphy" :
+                        "Camarografía"
+                    }
                   </em></li>
                 <li>JULIAN GUILLERMO HERNANDEZ PEÑA
-                  <br /><em>Asistencia de fotografía
+                  <br /><em>
+                    {
+                      router.locale === "en" ?
+                        "Photography assistance" :
+                        "Asistencia de fotografía"
+                    }
                   </em></li>
                 <li>JUAN FELIPE CORREDOR QUIROGA<br />
                   JULIÁN BARAYA CEBALLOS
-                  <br /><em>Asistencia de fotografía</em></li>
+                  <br /><em>{
+                    router.locale === "en" ?
+                      "Photography assistance" :
+                      "Asistencia de fotografía"
+                  }</em></li>
 
                 <li>ARIEL FERNANDO HINCAPIE OSSA
 
@@ -165,39 +301,88 @@ const Credits = () => {
 
                 <li>LUIS ALBERTO GARAVITO BELTRAN<br />
                   MILAGROS DE JESÚS CASTRO POLO
-                  <br /><em>Foto fija</em></li>
+                  <br /><em>
+
+                    {
+                      router.locale === "en" ?
+                        "Still Phographer" :
+                        "Foto fija"
+                    }
+                  </em></li>
               </ul>
 
             </div>
 
             <div className={styles.Column1}>
-              <h2> SONIDO  Y MÚSICA
+              <h2>
+                {
+                  router.locale === "en" ?
+                    "SOUND AND MUSIC" :
+                    "SONIDO Y MÚSICA"
+                }
               </h2>
               <ul>
                 <li>LEONARDO SANCHEZ GIL <br />
                   LUIS FERNANDO TRIANA MEDINA<br />
                   OSCAR MAURICIO PULIDO<br />
                   WILLIAM ALFREDO TRIANA MEDINA
-                  <br /><em>Sonido directo
+                  <br /><em>
+                    {
+                      router.locale === "en" ?
+                        "Direct sound" :
+                        "Sonido directo"
+                    }
                   </em></li>
                 <li>SERGIO MALALMA
-                  <br /><em>Música original
+                  <br /><em>
+
+                    {
+                      router.locale === "en" ?
+                        "Original Music" :
+                        "Música original"
+                    }
                   </em></li>
                 <li>ALEJANDRO GÓMEZ
-                  <br /><em>Postproducción de sonido</em></li>
+                  <br /><em>
+                    {
+                      router.locale === "en" ?
+                        "Sound post-production" :
+                        "Postproducción de sonido"
+                    }
+
+                  </em></li>
               </ul>
             </div>
 
             <div className={styles.Column2}>
-              <h2>POSTPRODUCCIÓN IMAGEN</h2>
+              <h2>
+
+                {
+                  router.locale === "en" ?
+                    "Image post-production" :
+                    "POSTPRODUCCIÓN IMAGEN"
+                }
+              </h2>
               <ul>
                 <li>MATEO SANTAMARIA ESTRADA
-                  <br /><em>Edición conceptual</em></li>
+                  <br /><em>
+                    {
+                      router.locale === "en" ?
+                        "Concept editing" :
+                        "Edición conceptual"
+                    }
+                  </em></li>
                 <li>ESTEBAN JOSE CORZO FAJARDO<br />
                   GUSTAVO ORDOÑEZ <br />
                   JAIME BARBOSA GÓMEZ  <br />
                   JOSE LUIS OSORIO SANCHEZ <br />
-                  <em>Montaje
+                  <em>
+
+                    {
+                      router.locale === "en" ?
+                        "Montage" :
+                        "Montaje"
+                    }
                   </em></li>
                 <li>JONATHAN BELTRÁN<br />
                   <em>Color
@@ -208,26 +393,63 @@ const Credits = () => {
 
             <div className={styles.Column3}>
 
-              <h2> LOGÍSTICA Y PRODUCCIÓN
+              <h2>
+
+                {
+                  router.locale === "en" ?
+                    "LOGISTICS AND PRODUCTION" :
+                    "LOGÍSTICA Y PRODUCCIÓN"
+                }
               </h2>
               <ul>
                 <li>ALONSO RODRIGUEZ ORTIZ
-                  <br /><em>Alimentación, producción de campo local</em></li>
+                  <br />
+                  <em>
+
+                    {
+                      router.locale === "en" ?
+                        "Food, on-set local production" :
+                        "Alimentación, producción de campo local"
+                    }
+                  </em></li>
                 <li>RICARDO PEREZ
-                  <br /><em>Producción de campo local
+                  <br /><em>
+
+                    {
+                      router.locale === "en" ?
+                        "On-set local production" :
+                        "Producción de campo local"
+                    }
                   </em></li>
                 <li>NUBIA ORTIZ ORTIZ
                   <br />
                   SOFIA ORTIZ ORTIZ<br />
                   PATRICIA ORTIZ ORTIZ<br />
-                  <em>Alimentación
+                  <em>
+
+                    {
+                      router.locale === "en" ?
+                        "Feeding" :
+                        "Alimentación"
+                    }
                   </em></li>
                 <li>ALVEIRO CASTRO<br />
                   BRYAN CASTRO<br />
-                  <em>Transporte
+                  <em>
+
+                    {
+                      router.locale === "en" ?
+                        "Transport" :
+                        "Transporte"
+                    }
                   </em></li>
                 <li>ISABEL APARICIO<br />
-                  <em>Alojamiento
+                  <em>
+                    {
+                      router.locale === "en" ?
+                        "Accommodation" :
+                        "Alojamiento"
+                    }
                   </em></li>
 
               </ul>
@@ -237,9 +459,21 @@ const Credits = () => {
               <h2>INTERFAZ - ESTUDIO MULTIMEDIA
               </h2>
               <ul>
-                <li>JUAN MARÍN <br /><em>Director Creativo
+                <li>JUAN MARÍN <br /><em>
+
+                  {
+                    router.locale === "en" ?
+                      "Creative Director" :
+                      "Director Creativo"
+                  }
                 </em></li>
-                <li>ANDRÉS CANO <br /><em>Diseño e Ilustración
+                <li>ANDRÉS CANO <br /><em>
+                  {
+                    router.locale === "en" ?
+                      "Design and drawing" :
+                      "Diseño e Ilustración"
+                  }
+
                 </em></li>
                 <li>ING. JOSÉ MARÍA GUAIMAS <br /><em>IT Director
                 </em></li>
@@ -253,9 +487,18 @@ const Credits = () => {
 
 
             <div className={styles.Column2}>
-              <h2>AGRADECIMIENTOS
+              <h2>
+                {
+                  router.locale === "en" ?
+                    "Thanks" :
+                    "AGRADECIMIENTOS"
+                }
               </h2>
-              Un agradecimiento especial a las personas y familias que participaron en Caminos de Jordán
+              {
+                router.locale === "en" ?
+                  "A special thanks to poeple and families who participated in Caminos de Jordán" :
+                  "Un agradecimiento especial a las personas y familias que participaron en Caminos de Jordán"
+              }
 
               <ul>
                 <li>Diego Sarmiento
@@ -273,7 +516,13 @@ const Credits = () => {
             </div>
 
             <div className={styles.Column3}>
-              <h2>LA COMUNIDAD
+              <h2>
+
+                {
+                  router.locale === "en" ?
+                    "The community" :
+                    "LA COMUNIDAD"
+                }
               </h2>
               <ul>
                 <li>Municipio Jordán Sube, Santander
@@ -287,7 +536,12 @@ const Credits = () => {
 
             <div className={styles.Column1}>
               <ul>
-                Agradecimientos a la agrupación Bacardí por la Interpretación de las obras
+                {
+                  router.locale === "en" ?
+                    "Thanks to the Bacardí band for the interpretation of music" :
+                    "Agradecimientos a la agrupación Bacardí por la Interpretación de las obras"
+                }
+
 
                 <li>Bella y Bonita -
                   <em> Luis Arturo Cardenas
@@ -308,7 +562,12 @@ const Credits = () => {
 
             <div className={styles.Column2}>
               <ul>
-                Agradecimientos a Diego Alexander Sarmiento González por la Interpretación de las obras
+                {
+                  router.locale === "en" ?
+                    "Thanks to Diego Alexander Sarmiento González for the interpretation of music" :
+                    "Agradecimientos a Diego Alexander Sarmiento González por la Interpretación de las obras"
+                }
+
 
                 <li>Rumbo a mi -
                   <em> Vereda Tocayo Vargas </em></li>
@@ -317,7 +576,11 @@ const Credits = () => {
               </ul>
               <br />
               <ul>
-                Agradecimiento a los autores de las obras
+                {
+                  router.locale === "en" ?
+                    "Thanks to the authors" :
+                    " Agradecimiento a los autores de las obras"
+                }
 
                 <li>La Prima -
                   <em> Willy Quintero
@@ -327,7 +590,13 @@ const Credits = () => {
               </ul>
               <br />
               <ul>
-                Autor y compositor Carlos OLID Rodríguez
+                {
+                  router.locale === "en" ?
+                    "Author and composer " :
+                    "Autor y compositor "
+                }
+
+                Carlos OLID Rodríguez
 
                 <li>El sinverguenza</li>
                 <li>El marranito </li>
@@ -336,7 +605,12 @@ const Credits = () => {
             </div>
 
             <div className={styles.Column3}>
-              <h2>LA COLABORACIÓN DE
+              <h2>
+                {
+                  router.locale === "en" ?
+                    "Collaboration of" :
+                    "LA COLABORACIÓN DE"
+                }
               </h2>
 
               <ul>
@@ -350,7 +624,13 @@ const Credits = () => {
               </ul>
               <br />
               <ul>
-                <em>Familia Delgado Daza</em>
+                <em>
+                  {
+                    router.locale === "en" ?
+                      "Family " :
+                      "Familia "
+                  } Delgado Daza
+                </em>
                 <li>Anyelo Ferney
                 </li>
                 <li>Herminda Delgado Daza
@@ -366,7 +646,12 @@ const Credits = () => {
               </ul>
               <br />
               <ul>
-                <em>Familia Sarmiento Forero</em>
+                <em>
+                  {
+                    router.locale === "en" ?
+                      "Family " :
+                      "Familia "
+                  } Sarmiento Forero</em>
 
                 <li>Alba liliana Forero Ferreira
                 </li>
@@ -378,7 +663,13 @@ const Credits = () => {
             </div>
 
             <div className={styles.Column1}>
-              <h2>CITAS DE INVESTIGACIÓN INFOGRAFÍA
+              <h2>
+
+                {
+                  router.locale === "en" ?
+                    "INFOGRAPHIC RESEARCH QUOTES" :
+                    "CITAS DE INVESTIGACIÓN INFOGRAFÍA"
+                }
               </h2>
 
               <ul>
@@ -414,7 +705,14 @@ const Credits = () => {
 
             <div className={styles.Column2}>
 
-              <h2> ESTE ES UN CONTENIDO ORIGINAL DE RTVCPlay<br />
+              <h2>
+
+                {
+                  router.locale === "en" ?
+                    "THIS IS ORIGINAL CONTENT FROM " :
+                    "ESTE ES UN CONTENIDO ORIGINAL DE "
+                }
+                RTVCPlay<br />
 
               </h2>
               <h2>
@@ -422,40 +720,87 @@ const Credits = () => {
               </h2>
               <ul>
                 <li>ADRIANA VASQUEZ SÁNCHEZ
-                  <br /><em>Gerente (E) RTVC</em></li>
+                  <br /><em>
+                    {
+                      router.locale === "en" ?
+                        "Manager (E) " :
+                        "Gerente (E) "
+                    }
+
+                    RTVC</em></li>
                 <li>JUAN CARLOS BAQUERO
 
-                  <br /><em>Director RTVCPlay
+                  <br /><em>
+                    Director RTVCPlay
 
                   </em></li>
                 <li>PILAR CUBILLOS CRUZ
 
-                  <br /><em>Productora general RTVCPlay
+                  <br /><em>
+                    Productora general
+                    {
+                      router.locale === "en" ?
+                        "General Producer " :
+                        "Productora general  "
+                    }
+
+                    RTVCPlay
                   </em></li>
                 <li>LUISA MAYORGA MAYORGA<br />
-                  <em>Productora Ejecutiva RTVCPlay
+                  <em>
+                    {
+                      router.locale === "en" ?
+                        "Executive Producer " :
+                        "Productora Ejecutiva  "
+                    }
+                    RTVCPlay
                   </em></li>
                 <li>CAMILO GALVIS GUERRA<br />
 
-                  <em>Productor Creativo proyectos audiovisuales RTVCPlay
+                  <em>
+                    {
+                      router.locale === "en" ?
+                        "Creative Producer of audiovisual projects " :
+                        "Productor Creativo proyectos audiovisuales  "
+                    }
+                    RTVCPlay
 
                   </em></li>
 
                 <li>ARNAU GIFREU<br />
 
-                  <em>Productor Creativo proyectos interactivos RTVCPlay
+                  <em>
+                    {
+                      router.locale === "en" ?
+                        "Creative Producer of interactive projects " :
+                        "Productor Creativo proyectos interactivos  "
+                    }
+                    RTVCPlay
 
                   </em></li>
 
                 <li>MARGARITA HERRERA SABOGAL<br />
 
-                  <em>Productora Delegada de Contenidos Originales de RTVCPlay
+                  <em>
+
+                    {
+                      router.locale === "en" ?
+                        "Delegate Producer of Original Contents of " :
+                        "Productora Delegada de Contenidos Originales de  "
+                    }
+                    RTVCPlay
 
                   </em></li>
 
                 <li>PAULA ANDREA ARIAS GÓMEZ
 
-                  <em>Productora Ejecutiva de Contenidos Originales de RTVCPlay
+                  <em>
+                    {
+                      router.locale === "en" ?
+                        "Executive Producer of Original Contents of " :
+                        "Productora Ejecutiva de Contenidos Originales de  "
+                    }
+                    RTVCPlay
 
                   </em></li>
 
@@ -464,26 +809,56 @@ const Credits = () => {
 
             <div className={styles.Column3}>
 
-              <h2> DIRECCIÓN DE TECNOLOGÍAS CONVERGENTES RTVC
-
+              <h2>
+                {
+                  router.locale === "en" ?
+                    "CONVERGENT TECHNOLOGIES DIRECTION OF " :
+                    "DIRECCIÓN DE TECNOLOGÍAS CONVERGENTES  "
+                }
+                RTVC
               </h2>
               <ul>
                 <li>LUIS ALFONSO VARGAS AMADO
 
-                  <br /><em>Director de tecnologías (E).<br />
-                    Coordinador de Gestión • Dirección Tecnologías Convergentes - Coordinación Ingeniería de Red
+                  <br /><em>
+
+                    {
+                      router.locale === "en" ?
+                        "Technoly director (E)." :
+                        "Director de tecnologías (E)."
+                    }
+                    <br />
+                    {
+                      router.locale === "en" ?
+                        "Management Coordinator • Convergent Technologies Department - Network Engineering Coordination" :
+                        "Coordinador de Gestión • Dirección Tecnologías Convergentes - Coordinación Ingeniería de Red"
+                    }
                   </em></li>
                 <li>GERARDO ANDRÉS PENAGOS
-                  <br /><em>Dueño de producto Coordinación de TI RTVC.
+                  <br /><em>
+                    {
+                      router.locale === "en" ?
+                        "Product Owner. RTVC IT Coordination." :
+                        "Dueño de producto. Coordinación de TI RTVC."
+                    }
                   </em></li>
                 <li>JUAN JORGE HERNÁNDEZ
                   <br />
-                  <em>Desarrollador de sitios web Coordinación de TI RTVC.
+                  <em>
+                    {
+                      router.locale === "en" ?
+                        "Website developer. RTVC IT Coordination." :
+                        "Desarrollador de sitios web. Coordinación de TI RTVC."
+                    }
                   </em></li>
                 <li>IVÁN DARÍO ROLDÁN<br />
 
-                  <em>Administrador infraestructura nube Coordinación de TI RTVC.
-
+                  <em>
+                    {
+                      router.locale === "en" ?
+                        "Cloud infrastructure administrator. RTVC IT Coordination." :
+                        "Administrador infraestructura nube. Coordinación de TI RTVC."
+                    }
 
                   </em></li>
 
