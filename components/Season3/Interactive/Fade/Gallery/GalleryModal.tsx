@@ -47,7 +47,7 @@ const GalleryModal = ({
       descriptionCustom = "The young ladies are Ernestina Daza and Ciro Delgado’s daughters. Since they were kids, her father always told them they shouldn't leave the house to work for other people, nor get married with a man to be happy, claiming that whatever they needed, they would always find it at home, with their family.";
     }
     if (id === '1690') {
-      titleCustom = '"The young ladys"';
+      titleCustom = '"Las Señoritas"';
       descriptionCustom = '“The young ladies” as they say to the group of sisters are Paulina 72, Maria Antonia 70, Lucila 68, Herminda 60 and Ercilia 59. Their younger brother is Jose and he is 53. They live with their nephews Luz Jenny, 38 and Angelo, 20.<br /><br /> Throughout their lives, they lived in three different houses in the path “El Pozo" in the municipality of Jordan, one and a half hour away from the town. The house where they currently live is called "La Primavera (The spring). They have it almost 60 years ago. The house is now crooked, it’s leaning as if falling, we are just like the house", Las Señoritas say, laughing.<br /><br />Since her son Angelo was born, Herminda likes to hang small significant objects on the dry branches of a tree. This place is called “Pesebre” (“Nativity”).<br /><br />Paulina is “Las señoritas” oldest sister. She stands out for being the most cheerful and extrovert. She takes care of the kitchen and because of that, she proudly shows the stone in which she kneads the most exquisite arepas.<br /><br />Maria Antonia is an excellent talker who enjoys cutting out images from magazines and posting them on the house’s walls. She needs privacy, so she prefers working alone.'
     }
     if (id === '1688') {
