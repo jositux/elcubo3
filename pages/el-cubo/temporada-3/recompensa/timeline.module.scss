@@ -5,6 +5,7 @@
   background-color: #e4d7b7;
   background-attachment: fixed;
   background-size: cover;
+  overflow-x: hidden;
 }
 
 
@@ -16,6 +17,7 @@
   align-items: flex-end;
   justify-content: center;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .Timeline {
@@ -2408,10 +2410,12 @@
   z-index: 2;
   left: 60px;
   top: 60px;
+
   @media only screen and (max-width: 1024px) {
     left: 30px;
     top: 30px;
   }
+
   font-family: $elcubo3_font_subtitle;
   font-weight: 300;
   background: rgba(0, 0, 0, 0.7);
@@ -2444,6 +2448,7 @@
   .SitePicture:not(.SitePictureMobile) {
     display: none;
   }
+
   .SitePicture.SitePictureMobile {
     display: block;
   }
@@ -2453,6 +2458,7 @@
   .SitePicture.SitePictureMobile {
     display: none;
   }
+
   .SitePicture:not(.SitePictureMobile) {
     display: block;
   }
