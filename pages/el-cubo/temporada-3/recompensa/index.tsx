@@ -452,13 +452,14 @@ const Timeline = () => {
                         'Jordan Sube benefited for a while from the muleteers and horses who crossed their domains. This human and commercial movement allowed the construction of houses and made chicherías, restaurants and hotels(inns) flourish.' :
                         'Jordán Sube se vio beneficiado durante un tiempo de los arrieros y caballos de carga que cruzaban sus dominios. Este movimiento humano y comercial permitió la construcción de casas e hizo florecer chicherías, restaurantes y posadas.'
                     }
-                    <br /><br />
+
 
                     {
                       router.locale === 'en' ?
                         'Furthermore, the fertile lands and the Chicamocha river made it an ideal spot for planting and growing of black tobacco. An example of the prosperity the town was living, was the establishment in the zone of the Colombian Tobacco Company. Thus, mules, muleteers and tobacco were constituted as the three pillars that allowed Jordan to enjoy a bonanza stage. Those were good times for the people.' :
                         'Además, las tierras fértiles y el río Chicamocha lo convirtieron en un espacio idóneo para la siembra y cultivo del tabaco negro. Un ejemplo de la prosperidad que se vivió en el pueblo durante esa época fue el establecimiento en la zona de la Compañía Colombiana de Tabaco. De este modo, mulas, arrieros y tabaco se constituyeron como los tres pilares que permitieron a Jordán disfrutar de una etapa de bonanza, una buena hora para el pueblo.'
                     }
+                    <br /><br />
 
                   </p>
                 </div>
