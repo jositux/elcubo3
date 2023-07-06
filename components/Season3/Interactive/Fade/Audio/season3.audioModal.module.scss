@@ -45,13 +45,15 @@
 
   .InteractiveTitle {
     font-family: $elcubo3_font_subtitle;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 16px;
     color: white;
     position: absolute;
     text-align: center;
     width: 100%;
-    bottom: 140px;
+    top: 140px;
+    left: -50%;
+    text-shadow: 1px 1px 2px black;
   }
 
   svg {
@@ -63,6 +65,7 @@
       circle {
         fill: white;
       }
+
       cursor: pointer;
     }
   }
@@ -122,8 +125,8 @@
 
   .AudioContent {
     padding: 40px 80px 40px;
-    background: rgb(237,194,95);
-background: linear-gradient(0deg, rgba(237,194,95,1) 0%, rgba(0,0,0,0) 80%);
+    background: rgb(237, 194, 95);
+    background: linear-gradient(0deg, rgba(237, 194, 95, 1) 0%, rgba(0, 0, 0, 0) 80%);
   }
 
   h2 {
