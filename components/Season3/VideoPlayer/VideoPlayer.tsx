@@ -227,12 +227,11 @@ const VideoPlayer = ({
     const handleOnClickDashboardLineal = () => {
       const click = new Audio('/audios/actions/click_1.mp3');
       click.play();
-
       controls2List.classList.toggle("active");
+    }
 
-      //console.log(controls);
-      //playerRef.current.pause();
-      //onClickDashboardLineal()
+    const changeActive = (e) => {
+      e.target.parentElement.classList.toggle("active");
     }
 
     const controls2List = container.getElementsByClassName('plyr__portal')[0];
@@ -241,12 +240,17 @@ const VideoPlayer = ({
       controls2List.insertAdjacentHTML(
         'afterend',
         `<div class="link-to-dashboard-lineal">
+        <div class="internall">
         <img src="/images/season3/icon-change-char.svg" />
+        <img src="/images/season3/icon-change-char-y.svg" />
+
+        </div>
         </div>`,
       );
 
       const linkToDashboardLineal = container.getElementsByClassName('link-to-dashboard-lineal')[0];
       linkToDashboardLineal.addEventListener('click', handleOnClickDashboardLineal);
+      linkToDashboardLineal.addEventListener("click", changeActive);
     }
 
     const menuControl = container.querySelector('.plyr__volume');
