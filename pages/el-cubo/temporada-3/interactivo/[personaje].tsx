@@ -319,7 +319,7 @@ const Personaje = (props) => {
           showNextButton={false}
           setPlayer={setPlayer}
           fullscreen={false}
-          showDashboardLineal={false}
+          showDashboardLineal={true}
           openActiveInteractive={openActiveInteractive}
           closeActiveInteractive={closeActiveInteractive}
           markers={markers}
