@@ -54,14 +54,18 @@ export const VideoPlayerWrapper = styled.div`
   .link-to-dashboard, .link-to-dashboard-lineal {
     position: absolute;
     z-index: 100;
-    top: 30px;
+    top: 60px;
     right: 30px;
     cursor: pointer;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
   }
 
   .link-to-dashboard-lineal { 
-    right: 20px;
+    right: 90px;
+    img {
+      width: 40px;
+      height: 40px;
+    }
   }
   
   &.in-fullscreen {
@@ -320,15 +324,16 @@ export const VideoPlayerWrapper = styled.div`
   transition: all 0.18s ease-out 0.18s; }
 
 .tooltip:after {
-width: 165px;
-background-color: rgba(0,0,0,.5);
-box-shadow: 0 0 0px #ddd;
+width: 280px;
+//background-color: rgba(0,0,0,.5);
+//box-shadow: 0 0 0px #ddd;
 content: attr(data-tooltip);
 padding: 10px;
 white-space: wrap;
 margin-bottom: 11px; 
 line-height: 1.2rem;
-font-weight: 300;
+font-weight: 400;
+text-shadow: 1px 1px 2px black;
 }
 
 .tooltip:before {
@@ -427,10 +432,10 @@ width: 260px; }
 width: 100%; }
 
 .plyr__captions {
-  font-size: 2.1vw;
+  font-size: 2.4vw;
   font-family: Arial;
   padding-bottom: 10%;
-  max-width: 42vw;
+  max-width: 90vw;
   left: auto;
   right: auto;
   line-height: 1.3;
@@ -441,6 +446,28 @@ width: 100%; }
   line-height: 1.3;
   background: transparent;
   text-shadow: rgba(0, 0, 0, 1) 0em 0em .2em !important;
+}
+
+#plyr__portal {
+  background: rgba(0,0,0,.5);
+  width: 380px;
+  height: 240px;
+  position: absolute;
+  right: 90px;
+  top: 140px;
+  direction: unset;
+  float: left;
+  z-index: 100;
+  padding-top: 30px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .4s linear, visibility 0s linear .4s;
+}
+
+#plyr__portal.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .4s linear, visibility 0s linear;
 }
 
 `;

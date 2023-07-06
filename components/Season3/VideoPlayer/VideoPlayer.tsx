@@ -2,13 +2,8 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import Plyr from 'plyr';
 import HLS from 'hls.js';
-//import { useRouter } from 'next/router';
 import 'plyr/dist/plyr.css';
 import { VideoPlayerWrapper } from './VideoPlayer.style';
-import { clear } from 'console';
-import { any } from 'prop-types';
-import { getElementById } from 'domutils';
-import { setAnswerClicked } from 'redux/actions/interactive';
 
 const VideoPlayer = ({
   source,
@@ -230,18 +225,26 @@ const VideoPlayer = ({
     }
 
     const handleOnClickDashboardLineal = () => {
-      playerRef.current.pause();
-      onClickDashboardLineal()
+      const click = new Audio('/audios/actions/click_1.mp3');
+      click.play();
+
+      controls2List.classList.toggle("active");
+
+      //console.log(controls);
+      //playerRef.current.pause();
+      //onClickDashboardLineal()
     }
 
+    const controls2List = container.getElementsByClassName('plyr__portal')[0];
+
     if (showDashboardLineal) {
-      const controls = container.getElementsByClassName('plyr__portal')[0];
-      controls.insertAdjacentHTML(
+      controls2List.insertAdjacentHTML(
         'afterend',
-        `<div class="link-to-dashboard-lineal" title="Ir al dashboard">
-        <img src="/images/season3/icon-dashboard.svg" />
+        `<div class="link-to-dashboard-lineal">
+        <img src="/images/season3/icon-change-char.svg" />
         </div>`,
       );
+
       const linkToDashboardLineal = container.getElementsByClassName('link-to-dashboard-lineal')[0];
       linkToDashboardLineal.addEventListener('click', handleOnClickDashboardLineal);
     }
@@ -364,20 +367,15 @@ const VideoPlayer = ({
     let video_duration = duration;
 
     const calculatePercent = (num1, total) => {
-      return (num1 / total) * 100;
+      return ((num1 / total) * 100).toFixed(2);
     };
 
     const createPoint = (pClassElement, pSeconds, pUrl, pText) => {
-      //console.log('P SECONDS', pSeconds, video_duration)
+
       let percent = calculatePercent(pSeconds, video_duration);
 
       let point = document.createElement('span');
-      //let img = new Image();
-      //img.src = pUrl;
 
-      //<span class="tooltip" data-tooltip="I found what I need. And it's not friends, it's things." data-tooltip-pos="up" data-tooltip-length="medium"></span>
-
-      //point.appendChild(img);
       point.setAttribute('class', 'marker tooltip ' + pClassElement);
       point.setAttribute('style', 'left: ' + percent + '%;');
       point.setAttribute('rel', pSeconds);
