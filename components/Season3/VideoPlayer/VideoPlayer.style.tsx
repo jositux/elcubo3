@@ -62,11 +62,30 @@ export const VideoPlayerWrapper = styled.div`
 
   .link-to-dashboard-lineal { 
     right: 90px;
-    img {
+    img, .internall {
       width: 40px;
       height: 40px;
     }
+    .internall {
+      img:first-child {
+        display: block;
+      }
+      img:nth-child(2) {
+        display: none;
+      }
+    }
+
+    .internall.active, .internall:hover {
+      img:first-child {
+        display: none;
+      }
+      img:nth-child(2) {
+        display: block;
+      }
+    }
   }
+
+
   
   &.in-fullscreen {
     .back-to-season {
