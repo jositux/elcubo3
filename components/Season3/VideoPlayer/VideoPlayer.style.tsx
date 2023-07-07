@@ -64,7 +64,7 @@ export const VideoPlayerWrapper = styled.div`
     right: 35px;
 
     @media screen and (max-width: 1024px) {
-      top: 20px;
+      top: 0px;
       right: 30px;
     }
 
@@ -157,6 +157,7 @@ export const VideoPlayerWrapper = styled.div`
 
   .plyr__portal__title {
     color: white;
+    text-shadow: 1px 1px 20px black;
     font-family: "Roboto Serif", serif;
     font-size: 3rem;
     font-weight: 500;
@@ -342,9 +343,10 @@ export const VideoPlayerWrapper = styled.div`
   border-radius: 100%;
   cursor: pointer;
   float: left;
-  margin-left: -8px;
+  margin-left: -6px;
   @media screen and (max-width: 1024px) {
     padding: 5px;
+    margin-left: -4px;
   }
 }
 

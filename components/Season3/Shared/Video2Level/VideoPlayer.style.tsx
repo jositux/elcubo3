@@ -122,6 +122,7 @@ export const VideoPlayerWrapper = styled.div`
 
   .plyr__portal__title {
     color: white;
+    text-shadow: 1px 1px 20px black;
     font-family: "Roboto Serif", serif;
     font-size: 2.3rem;
     letter-spacing: -1px;
