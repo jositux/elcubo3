@@ -51,7 +51,7 @@ export const VideoPlayerWrapper = styled.div`
     }
   }
 
-  .link-to-dashboard, .link-to-dashboard-lineal {
+  .link-to-dashboard-lineal {
     position: absolute;
     z-index: 100;
     top: 30px;
@@ -64,7 +64,7 @@ export const VideoPlayerWrapper = styled.div`
     right: 35px;
 
     @media screen and (max-width: 1024px) {
-      top: 0px;
+      top: 30px;
       right: 30px;
     }
 
@@ -487,7 +487,7 @@ width: 100%; }
 }
 
 #plyr__portal {
-  background: rgba(0,0,0,.5);
+  background: rgba(0,0,0,.7);
   width: 380px;
   height: 240px;
   position: absolute;
@@ -505,7 +505,7 @@ width: 100%; }
     top: 80px;
     right: 35px;
     padding-top: 15px;
-    height: 200px;
+    height: 240px;
   }
 }
 

@@ -347,11 +347,20 @@ const Ending = ({ name }) => {
                           filter(element => element === 100).length === 5
                       ) ?
                         <div className={styles.Ending}>
-                          <h2>¡Has terminado tu camino con {name}!</h2>
+                          <h2>
+                            {
+                              router.locale === 'en' ?
+                                'You have finished your journey with ' :
+                                '¡Has terminado tu camino con '
+                            }
+                            {name}!
+                          </h2>
                           <p>
-                            ¡Llegaste al final! Sin embargo, aún no termina el camino. Ahora podrás acceder a la recompensa: una
-                            línea de tiempo con artículos, investigaciones y fotos que te contarán todos los detalles de Jordán.
-                            Gracias por recorrer los hermosos y difíciles caminos de la cordillera colombiana.
+                            {
+                              router.locale === 'en' ?
+                                "You've reached the end! However, the journey is not yet finished. Now, you will be able to access the reward: a timeline featuring articles, research, and photos that will provide all the details about Jordán. Thank you for exploring the beautiful and challenging paths of the Colombian mountains." :
+                                '¡Llegaste al final! Sin embargo, aún no termina el camino. Ahora podrás acceder a la recompensa: una línea de tiempo con artículos, investigaciones y fotos que te contarán todos los detalles de Jordán. Gracias por recorrer los hermosos y difíciles caminos de la cordillera colombiana.'
+                            }
                           </p>
 
                           <div className={styles.EndingContent}>
