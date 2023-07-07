@@ -44,19 +44,6 @@ export const VideoPlayerWrapper = styled.div`
       }
     }
   }
-
-  .link-to-dashboard, .link-to-dashboard-lineal {
-    position: absolute;
-    z-index: 100;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-  }
-
-  .link-to-dashboard-lineal { 
-    right: 20px;
-  }
   
   &.in-fullscreen {
     .back-to-season {
