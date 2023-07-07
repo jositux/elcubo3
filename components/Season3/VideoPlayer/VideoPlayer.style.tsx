@@ -10,8 +10,8 @@ export const VideoPlayerWrapper = styled.div`
 
   .back-to-season {
     position: absolute;
-    top: 50px;
-    left: 80px;
+    top: 30px;
+    left: 30px;
     z-index: 10;
     opacity: 1;
     transition: all 0.3s ease;
@@ -28,7 +28,7 @@ export const VideoPlayerWrapper = styled.div`
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 
     @media screen and (max-width: 1024px) {
-      top: 30px;
+      top: 20px;
       left: 20px;
     }
 
@@ -54,14 +54,20 @@ export const VideoPlayerWrapper = styled.div`
   .link-to-dashboard, .link-to-dashboard-lineal {
     position: absolute;
     z-index: 100;
-    top: 60px;
+    top: 30px;
     right: 30px;
     cursor: pointer;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
   }
 
   .link-to-dashboard-lineal { 
-    right: 90px;
+    right: 35px;
+
+    @media screen and (max-width: 1024px) {
+      top: 20px;
+      right: 30px;
+    }
+
     img, .internall {
       width: 40px;
       height: 40px;
@@ -155,8 +161,8 @@ export const VideoPlayerWrapper = styled.div`
     font-size: 3rem;
     font-weight: 500;
     position: absolute;
-    left: 90px;
-    top: 80px;
+    left: 40px;
+    top: 70px;
     z-index: 100;
     margin-top: 0;
 
@@ -176,9 +182,9 @@ export const VideoPlayerWrapper = styled.div`
 }
 
 .plyr--video .plyr__controls {
-  padding-left: 85px;
-  padding-right: 85px;
-  padding-bottom: 60px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 30px;
 }
 
 .plyr__video-wrapper {
@@ -253,11 +259,15 @@ export const VideoPlayerWrapper = styled.div`
 
 .marker {
   cursor: pointer;
-  top: -40px;
+  top: -20px;
   position: absolute;
   z-index: 10;
   img {
     display: none;
+  }
+
+  @media screen and (max-width: 1024px) {
+    top: -12px;
   }
 }
 
@@ -324,13 +334,20 @@ export const VideoPlayerWrapper = styled.div`
 
 .tooltip {
   background: white;
-  padding: 8px;
+  &:hover {
+    background: #E2B857;
+  }
+  padding: 7px;
   height: 0;
   border-radius: 100%;
   cursor: pointer;
   float: left;
   margin-left: -8px;
+  @media screen and (max-width: 1024px) {
+    padding: 5px;
+  }
 }
+
 .tooltip:after, .tooltip:before {
   opacity: 0;
   pointer-events: none;
@@ -347,7 +364,7 @@ width: 280px;
 //background-color: rgba(0,0,0,.5);
 //box-shadow: 0 0 0px #ddd;
 content: attr(data-tooltip);
-padding: 10px;
+padding: 5px;
 white-space: wrap;
 margin-bottom: 11px; 
 line-height: 1.2rem;
@@ -451,9 +468,9 @@ width: 260px; }
 width: 100%; }
 
 .plyr__captions {
-  font-size: 2.4vw;
+  font-size: 2.3vw;
   font-family: Arial;
-  padding-bottom: 12%;
+  padding-bottom: 4.5%;
   max-width: 90vw;
   left: auto;
   right: auto;
@@ -472,8 +489,8 @@ width: 100%; }
   width: 380px;
   height: 240px;
   position: absolute;
-  right: 90px;
-  top: 140px;
+  right: 35px;
+  top: 80px;
   direction: unset;
   float: left;
   z-index: 100;
@@ -481,6 +498,13 @@ width: 100%; }
   opacity: 0;
   visibility: hidden;
   transition: opacity .4s linear, visibility 0s linear .4s;
+
+  @media screen and (max-width: 1024px) {
+    top: 80px;
+    right: 35px;
+    padding-top: 15px;
+    height: 200px;
+  }
 }
 
 #plyr__portal.active {

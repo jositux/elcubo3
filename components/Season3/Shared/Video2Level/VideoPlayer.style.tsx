@@ -234,7 +234,7 @@ export const VideoPlayerWrapper = styled.div`
 .plyr__captions {
   font-size: 2.4vw;
   font-family: Arial;
-  padding-bottom: 10%;
+  padding-bottom: 5%;
   max-width: 90vw;
   left: auto;
   right: auto;
