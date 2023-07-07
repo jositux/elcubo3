@@ -127,9 +127,10 @@ export const VideoPlayerWrapper = styled.div`
     letter-spacing: -1px;
     font-weight: 500;
     position: absolute;
-    left: 25px;
-    top: 5vh;
+    left: 35px;
+    top: 20px;
     z-index: 100;
+    margin: 0;
   }
 
   .plyr {
@@ -147,6 +148,10 @@ export const VideoPlayerWrapper = styled.div`
 /* Hide cursor */
 .plyr--hide-controls {
   cursor:none !important;
+}
+
+.plyr--video .plyr__controls {
+  padding: 35px 30px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -232,7 +237,7 @@ export const VideoPlayerWrapper = styled.div`
 }
 
 .plyr__captions {
-  font-size: 2.4vw;
+  font-size: 2.3vw;
   font-family: Arial;
   padding-bottom: 5%;
   max-width: 90vw;
