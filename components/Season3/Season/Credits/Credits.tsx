@@ -84,7 +84,7 @@ const Credits = () => {
                   <em>
                     {
                       router.locale === "en" ?
-                        "Documentaryy direction" :
+                        "Documentary direction" :
                         "Dirección documental"
                     }
                   </em>
@@ -146,8 +146,8 @@ const Credits = () => {
                   <br /><em>
                     {
                       router.locale === "en" ?
-                        "Redacción textos narrativa web" :
-                        "Web Narrative Text Writing"
+                        "Web Narrative Copywriting" :
+                        "Redacción textos narrativa web"
                     }
                   </em></li>
 
