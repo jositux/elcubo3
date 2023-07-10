@@ -1189,8 +1189,8 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                   <p className={styles.Description}>
                     {
                       router.locale === 'en' ?
-                        'Now that you know all the characters, would you like to go into their deepest thoughts?' :
-                        'Ahora que ya conoces a todos los personajes, ¿quieres entrar en sus pensamientos más íntimos?'
+                        HtmlParser('Now that you know all the characters,<br /> would you like to go into their deepest thoughts?') :
+                        HtmlParser('Ahora que ya conoces a todos los personajes, <br />¿quieres entrar en sus pensamientos más íntimos?')
                     }
 
                     <br /> <br /></p>
