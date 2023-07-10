@@ -208,7 +208,7 @@ const Ending = ({ name }) => {
 
                       {
                         router.locale === 'en' ?
-                          'Remember, when you complete all the five stories, you will get the final award."' :
+                          'Remember, when you complete all the five stories, you will get the final award.' :
                           'Recuerda que una vez completes las cinco historias, abrirás la recompensa final.'
                       }
 

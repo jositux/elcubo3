@@ -14,7 +14,7 @@ const Credits = () => {
           <h2 >
             {
               router.locale === "en" ?
-                "This content was financed with resources from Fondo Único de Tecnologías de la Información y las Comunicaciones de MinTic" :
+                "This content was financed with resources from the 'Fondo Único de Tecnologías de la Información y las Comunicaciones de MinTic'" :
                 "Este contenido fue financiado con recursos del Fondo Único de Tecnologías de la Información y las Comunicaciones de MinTic"
             }
 
@@ -380,7 +380,7 @@ const Credits = () => {
 
                     {
                       router.locale === "en" ?
-                        "Montage" :
+                        "Postproduction" :
                         "Montaje"
                     }
                   </em></li>
@@ -429,7 +429,7 @@ const Credits = () => {
 
                     {
                       router.locale === "en" ?
-                        "Feeding" :
+                        "Food Suply" :
                         "Alimentación"
                     }
                   </em></li>
@@ -496,7 +496,7 @@ const Credits = () => {
               </h2>
               {
                 router.locale === "en" ?
-                  "A special thanks to poeple and families who participated in Caminos de Jordán" :
+                  "A special thanks to people and families who participated in Caminos de Jordán" :
                   "Un agradecimiento especial a las personas y familias que participaron en Caminos de Jordán"
               }
 
@@ -525,11 +525,13 @@ const Credits = () => {
                 }
               </h2>
               <ul>
-                <li>Municipio Jordán Sube, Santander
-                </li>
-                <li>Alcaldía Municipal de Jordán Sube
-                </li>
-                <li>Concejo Municipal de Jordán Sube</li>
+
+                {
+                  router.locale === "en" ?
+                    HtmlParser("<li>Jordán Sube Municipality, Santander</li><li>Jordán Sube Municipal Mayor's Office</li><li>Jordán Sube Municipal Council</li>")
+                    :
+                    HtmlParser('<li>Municipio Jordán Sube, Santander</li><li>Alcaldía Municipal de Jordán Sube</li><li>Concejo Municipal de Jordán Sube</li>')
+                }
 
               </ul>
             </div>
@@ -694,9 +696,12 @@ const Credits = () => {
 
 
                 </li>
-                <li>Oculto en el Cañón. Especial multimedia por Nicole Acuña y Silvia Corredor. Programa en Periodismo y Opinión Pública PO04. Escuela de Ciencias Humanas. Universidad del Rosario. 2019
-                  Semana
-
+                <li>
+                  {
+                    router.locale === "en" ?
+                      "Oculto en el Cañón. Multimedia special by Nicole Acuña and Silvia Corredor. Program in Journalism and Public Opinion PO04. School of Human Sciences. Universidad del Rosario.  2019 Semana" :
+                      "Oculto en el Cañón. Especial multimedia por Nicole Acuña y Silvia Corredor. Programa en Periodismo y Opinión Pública PO04. Escuela de Ciencias Humanas. Universidad del Rosario. 2019 Semana"
+                  }
                 </li>
 
               </ul>
@@ -716,14 +721,14 @@ const Credits = () => {
 
               </h2>
               <h2>
-                RTVC
+                RTVCPlay
               </h2>
               <ul>
                 <li>ADRIANA VASQUEZ SÁNCHEZ
                   <br /><em>
                     {
                       router.locale === "en" ?
-                        "Manager (E) " :
+                        "RTVC Manager (E) " :
                         "Gerente (E) "
                     }
 
@@ -731,39 +736,40 @@ const Credits = () => {
                 <li>JUAN CARLOS BAQUERO
 
                   <br /><em>
-                    Director RTVCPlay
+                    {
+                      router.locale === "en" ?
+                        " RTVCPlay Director" :
+                        "Director RTVCPlay"
+                    }
+
 
                   </em></li>
                 <li>PILAR CUBILLOS CRUZ
 
                   <br /><em>
-                    Productora general
                     {
                       router.locale === "en" ?
-                        "General Producer " :
-                        "Productora general  "
+                        "RTVCPlay General Producer" :
+                        "Productora general RTVCPlay"
                     }
-
-                    RTVCPlay
                   </em></li>
                 <li>LUISA MAYORGA MAYORGA<br />
                   <em>
                     {
                       router.locale === "en" ?
-                        "Executive Producer " :
-                        "Productora Ejecutiva  "
+                        "RTVCPlay Executive Producer " :
+                        "Productora Ejecutiva RTVCPlay"
                     }
-                    RTVCPlay
+
                   </em></li>
                 <li>CAMILO GALVIS GUERRA<br />
 
                   <em>
                     {
                       router.locale === "en" ?
-                        "Creative Producer of audiovisual projects " :
-                        "Productor Creativo proyectos audiovisuales  "
+                        "RTVCPlay Creative Producer of audiovisual projects" :
+                        "Productor Creativo proyectos audiovisuales RTVCPlay"
                     }
-                    RTVCPlay
 
                   </em></li>
 
@@ -785,22 +791,22 @@ const Credits = () => {
 
                     {
                       router.locale === "en" ?
-                        "Delegate Producer of Original Contents of " :
-                        "Productora Delegada de Contenidos Originales de  "
+                        "RTVCPlay Delegate Producer of Original Contents" :
+                        "Productora Delegada de Contenidos Originales de RTVCPlay"
                     }
-                    RTVCPlay
+
 
                   </em></li>
 
                 <li>PAULA ANDREA ARIAS GÓMEZ
-
+                  <br />
                   <em>
                     {
                       router.locale === "en" ?
-                        "Executive Producer of Original Contents of " :
-                        "Productora Ejecutiva de Contenidos Originales de  "
+                        "RTVCPlay Executive Producer of Original Contents" :
+                        "Productora Ejecutiva de Contenidos Originales de  RTVCPlay"
                     }
-                    RTVCPlay
+
 
                   </em></li>
 
@@ -824,7 +830,7 @@ const Credits = () => {
 
                     {
                       router.locale === "en" ?
-                        "Technoly director (E)." :
+                        "Technology director (E)." :
                         "Director de tecnologías (E)."
                     }
                     <br />
@@ -838,8 +844,8 @@ const Credits = () => {
                   <br /><em>
                     {
                       router.locale === "en" ?
-                        "Product Owner. RTVC IT Coordination." :
-                        "Dueño de producto. Coordinación de TI RTVC."
+                        "Product Owner. RTVC IT Coordination" :
+                        "Dueño de producto. Coordinación de TI RTVC"
                     }
                   </em></li>
                 <li>JUAN JORGE HERNÁNDEZ
@@ -847,8 +853,8 @@ const Credits = () => {
                   <em>
                     {
                       router.locale === "en" ?
-                        "Website developer. RTVC IT Coordination." :
-                        "Desarrollador de sitios web. Coordinación de TI RTVC."
+                        "Website developer. RTVC IT Coordination" :
+                        "Desarrollador de sitios web. Coordinación de TI RTVC"
                     }
                   </em></li>
                 <li>IVÁN DARÍO ROLDÁN<br />
@@ -856,8 +862,8 @@ const Credits = () => {
                   <em>
                     {
                       router.locale === "en" ?
-                        "Cloud infrastructure administrator. RTVC IT Coordination." :
-                        "Administrador infraestructura nube. Coordinación de TI RTVC."
+                        "Cloud infrastructure administrator. RTVC IT Coordination" :
+                        "Administrador infraestructura nube. Coordinación de TI RTVC"
                     }
 
                   </em></li>
