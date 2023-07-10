@@ -540,7 +540,19 @@ const Timeline = () => {
                   </div>
 
                   <div className={styles.LinkItem}>
-                    <a onClick={() => { setVideo('482203'); handleOnPlayVideo(); }} className={styles.Link} >
+                    <a
+                      onClick=
+                      {() => {
+                        setVideo('482203');
+                        setVideoTitle(
+                          router.locale === 'en' ?
+                            'timeline-hidden-0en' :
+                            'huyendo-de-la-violencia'
+                        );
+                        handleOnPlayVideo();
+                      }
+                      }
+                      className={styles.Link} >
                       <div>
                         <PlayIconTimeline />
                       </div>
