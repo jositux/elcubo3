@@ -371,7 +371,7 @@ const VideoPlayer = ({
     let video_duration = duration;
 
     const calculatePercent = (num1, total) => {
-      return ((num1 / total) * 100).toFixed(2);
+      return ((num1 / total) * 100).toFixed(0);
     };
 
     const createPoint = (pClassElement, pSeconds, pUrl, pText) => {

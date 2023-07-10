@@ -540,7 +540,19 @@ const Timeline = () => {
                   </div>
 
                   <div className={styles.LinkItem}>
-                    <a onClick={() => { setVideo('482203'); handleOnPlayVideo(); }} className={styles.Link} >
+                    <a
+                      onClick=
+                      {() => {
+                        setVideo('482203');
+                        setVideoTitle(
+                          router.locale === 'en' ?
+                            'timeline-hidden-0en' :
+                            'huyendo-de-la-violencia'
+                        );
+                        handleOnPlayVideo();
+                      }
+                      }
+                      className={styles.Link} >
                       <div>
                         <PlayIconTimeline />
                       </div>
@@ -1189,8 +1201,8 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                   <p className={styles.Description}>
                     {
                       router.locale === 'en' ?
-                        'Now that you know all the characters, would you like to go into their deepest thoughts?' :
-                        'Ahora que ya conoces a todos los personajes, ¿quieres entrar en sus pensamientos más íntimos?'
+                        HtmlParser('Now that you know all the characters,<br /> would you like to go into their deepest thoughts?') :
+                        HtmlParser('Ahora que ya conoces a todos los personajes, <br />¿quieres entrar en sus pensamientos más íntimos?')
                     }
 
                     <br /> <br /></p>
