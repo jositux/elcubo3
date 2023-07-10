@@ -298,10 +298,6 @@ const VideoPlayer = ({
     }
   }, [muted, videoRef.current]);
 
-
-
-
-
   React.useEffect(() => {
     const container: HTMLElement = wrapperRef.current;
     const playControl = container.querySelector('[data-plyr="play"]');

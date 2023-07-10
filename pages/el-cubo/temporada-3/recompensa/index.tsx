@@ -1311,7 +1311,7 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                 onClick={
                   () => {
                     setVideo('485851');
-                    setVideoTitle('');
+                    setVideoTitle('all');
                     handleOnPlayVideo();
                   }
                 }
