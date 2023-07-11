@@ -59,7 +59,7 @@ const Personaje = (props) => {
     if (router.locale === 'en') {
       // Yenny
       if (i?.id === '1687') { titleCustom = 'The patriarchal as the origin of matriarchal' }
-      if (i?.id === '1690') { titleCustom = '"The young ladys"' }
+      if (i?.id === '1690') { titleCustom = '"Las señoritas"' }
       if (i?.id === '1688') { titleCustom = 'the first dream come true' }
       if (i?.id === '1689') { titleCustom = 'First Time in town' }
 
