@@ -9,7 +9,7 @@
 }
 
 .containerCover .container {
-  max-width: 35%;
+  max-width: 40%;
   background: #6B5F43;
   position: absolute;
   right: 0;
@@ -22,8 +22,6 @@
   @media screen and (max-width: 1024px) {
     max-width: 100%;
   }
-
-
 }
 
 .containerCover.open .container {
