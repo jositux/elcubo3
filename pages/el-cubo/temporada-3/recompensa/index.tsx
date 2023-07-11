@@ -939,6 +939,7 @@ sube-en-el-canon-del-chicamocha-se-convirtio-en-un-pueblo-fantasma-101032' targe
                   <div className={styles.LinkItem}>
                     <a onClick={() => { setImage(imagen3); handleOnOpenImage(); }} className={styles.Link} >
                       <GalleryIconTimeline />
+
                       <p className={styles.LinkText}>
                         {
                           router.locale === 'en' ?
