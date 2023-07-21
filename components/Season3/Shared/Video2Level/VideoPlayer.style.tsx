@@ -236,6 +236,7 @@ export const VideoPlayerWrapper = styled.div`
 }
 
 .plyr__captions .plyr__caption {
+  font-size: 2.3vw;
   line-height: 1.3;
   background: transparent;
   text-shadow: rgba(0, 0, 0, 1) 0em 0em .2em !important;
