@@ -276,6 +276,10 @@ const Personajes = ({ text }) => {
             {openVideo &&
               <Video2Level
                 title=""
+                subtitle={
+                  router.locale === 'en' ?
+                    'init' :
+                    ''}
                 source={srcVideo}
                 showPrevButton={false}
                 showNextButton={false}

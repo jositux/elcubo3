@@ -246,7 +246,7 @@ const Timeline = () => {
                 <div className={styles.LinksContent}>
                   <div className={styles.LinkItem}>
                     <a onClick={() => {
-                      setVideo('517926');
+                      setVideo('517928');
                       setVideoTitle('diego0-es');
                       handleOnPlayVideo();
                     }} className={styles.Link} >
