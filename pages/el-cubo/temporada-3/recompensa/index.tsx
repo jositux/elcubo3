@@ -245,6 +245,29 @@ const Timeline = () => {
               <div className={styles.columnLink}>
                 <div className={styles.LinksContent}>
                   <div className={styles.LinkItem}>
+                    <a onClick={() => {
+                      setVideo('517926');
+                      setVideoTitle('diego0-es');
+                      handleOnPlayVideo();
+                    }} className={styles.Link} >
+                      <div>
+                        <PlayIconTimeline />
+                      </div>
+
+                      <p className={styles.LinkText}>
+                        <span>
+                          {
+                            router.locale === 'en' ?
+                              'LINK TEST DIEGO'
+                              : 'LINK TEST DIEGO'
+                          }
+
+                        </span>
+                      </p>
+                    </a>
+                  </div>
+
+                  <div className={styles.LinkItem}>
                     <a onClick={() => { setImages(imagenes1); setImagesZoom(imagenes1Zoom); handleOnOpenGallery(); }} className={styles.Link} >
                       <p className={styles.LinkText}>
                         {
