@@ -5,6 +5,7 @@ import disableScroll from 'disable-scroll';
 import styles from './season3.videoModal.module.scss';
 import FadeModal from '../FadeModal/FadeModal';
 import PlayInteractive from 'components/Season3/Svg/PlayInteractive';
+import AudioInteractive from 'components/Season3/Svg/AudioInteractive';
 import Ripple from 'components/Season3/Shared/Ripple/Ripple';
 import { stringify } from "querystring";
 import { useRouter } from 'next/router';
@@ -25,6 +26,8 @@ const VideoModal = ({
 
   const router = useRouter();
 
+  console.log(data?.id)
+
   if (router.locale === 'en') {
     // Yenny
     if (data?.id === '1689') { title = 'First Time in town' }
@@ -32,10 +35,12 @@ const VideoModal = ({
     // Juan
     if (data?.id === '1683') { title = 'A vocation is born from violence' }
     if (data?.id === '1686') { title = "Santa Rosa de Lima, Jordan's caretaker" }
+    if (data?.id === '1831') { title = 'A shepherd without herd' }
 
     // Diego
     if (data?.id === '1695') { title = 'And the inheritance continues' }
     if (data?.id === '1696') { title = 'No road, out of the map' }
+    if (data?.id === '1830') { title = "Rural artist´s dream" }
 
     // Guillermo
     if (data?.id === '1692') { title = 'Escaping from violence' }
@@ -84,7 +89,10 @@ const VideoModal = ({
               {title}
             </h2>
             <Ripple />
-            <PlayInteractive />
+            {data?.id === '1830' || data?.id === '1831' ?
+              <AudioInteractive /> :
+              <PlayInteractive />
+            }
             <span className={styles.marker}>
             </span>
           </div>
