@@ -26,8 +26,6 @@ const VideoModal = ({
 
   const router = useRouter();
 
-  console.log(data?.id)
-
   if (router.locale === 'en') {
     // Yenny
     if (data?.id === '1689') { title = 'First Time in town' }
