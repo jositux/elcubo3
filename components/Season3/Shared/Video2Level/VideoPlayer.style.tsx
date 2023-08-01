@@ -242,4 +242,8 @@ export const VideoPlayerWrapper = styled.div`
   text-shadow: rgba(0, 0, 0, 1) 0em 0em .2em !important;
 }
 
+.plyr__menu {
+  display: none;
+}
+
 `;

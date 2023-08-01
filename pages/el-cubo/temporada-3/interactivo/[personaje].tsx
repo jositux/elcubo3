@@ -66,13 +66,13 @@ const Personaje = (props) => {
       // Juan
       if (i?.id === '1684') { titleCustom = 'The curse of the cemetery' }
       if (i?.id === '1683') { titleCustom = 'A vocation is born from violence' }
-      if (i?.id === '1685') { titleCustom = 'A shepherd without herd' }
+      if (i?.id === '1831') { titleCustom = 'A shepherd without herd' }
       if (i?.id === '1686') { titleCustom = 'Santa Rosa de Lima, Jordan´s caretaker' }
 
       // Diego
       if (i?.id === '1695') { titleCustom = 'And the inheritance continues' }
       if (i?.id === '1696') { titleCustom = 'No road, out of the map' }
-      if (i?.id === '1697') { titleCustom = 'Rural artist´s dream' }
+      if (i?.id === '1830') { titleCustom = 'Rural artist´s dream' }
 
       // Guillermo
       if (i?.id === '1691') { titleCustom = 'Guillermo Prada, a child of violence' }
