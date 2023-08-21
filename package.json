@@ -16,7 +16,7 @@
     "html-react-parser": "^1.4.8",
     "js-cookie": "^2.2.1",
     "next": "12.0.7",
-    "plyr": "3.6.4",
+    "plyr": "3.7.8",
     "plyr-react": "^3.2.1",
     "prop-types": "^15.7.2",
     "react": "17.0.2",
